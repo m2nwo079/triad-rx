@@ -1,0 +1,9 @@
+{
+  "design_version": "v0.3",
+  "design_section": "10.2",
+  "timepoints": {
+    "T1": {"role": "train", "build": [2014, 2018], "buffer": [2019, 2019], "label": [2020, 2021]},
+    "T2": {"role": "evaluate", "build": [2017, 2021], "buffer": [2022, 2022], "label": [2023, 2024]}
+  },
+  "applied": {"build_years": 5, "anchor": "snapshot_date"}
+}

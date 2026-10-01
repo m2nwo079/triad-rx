@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "survey": "stage1_scope",
+    "snapshot_date": "2026-10-01",
+    "git_commit": "c891afa0d83d5e1b49c29f9caddce2fa0a694dcc",
+    "source_files_sha256": {
+      "methods.parquet": "85c28648f762d79565a878ccaf08b5757782d4de4876446cb06de1ada3ae4abf",
+      "links.parquet": "c845ff642112a345f6271bf954d007c6698088d7de525f3f8d5f7d975f142c76",
+      "pwa_0.parquet": "766ec93cbc01de98519801886e98d5b2d9005a9f4e3dc3e60d1319a69383cda0",
+      "pwa_1.parquet": "3c8e9c492f8ef5bbd7eb51e67918627b2b59ae7b7ecb4ad2e5c2f5837a263dfd",
+      "pwa_2.parquet": "2b94e7b4bdea3a8b754a40edaf4899a4f308f9b043e7651ae25246bbb5a26302",
+      "pwa_3.parquet": "0a2252584e69d93f7e0a3d2fbf62cec7a7b57c9a7f5781fd4a13f9881ea60af4"
+    },
+    "scripts": [
+      "01_arxiv_counts.py",
+      "02_pwc_download.sh",
+      "03_pwc_profile.py",
+      "04_match_scope.py",
+      "05_build_results.py",
+      "06_render_report.py"
+    ]
+  },
+  "arxiv_counts_by_year": {
+    "2014": 4541,
+    "2015": 6309,
+    "2016": 9922,
+    "2017": 14696,
+    "2018": 22533,
+    "2019": 32601,
+    "2020": 43699,
+    "2021": 48302,
+    "2022": 53342,
+    "2023": 66911,
+    "2024": 86667,
+    "2025": 106859,
+    "2026": 103216
+  },
+  "pwc_vocab": {
+    "methods_rows": 8725,
+    "methods_num_papers_ge10": 695,
+    "methods_spam_like_rows": 2902,
+    "methods_introduced_year_share_2000": 0.995,
+    "tasks_unique_in_annotations": 4796,
+    "tasks_ge10_papers": 2578,
+    "tasks_ge50_papers": 1433,
+    "methods_unique_in_annotations": 14827,
+    "methods_ge10_papers_in_annotations": 896
+  },
+  "pwc_annotations_by_year": {
+    "2016": {
+      "n": 16275,
+      "mean_terms": 2.012,
+      "share_ge3": 0.308,
+      "share_zero": 0.275
+    },
+    "2018": {
+      "n": 31527,
+      "mean_terms": 2.633,
+      "share_ge3": 0.394,
+      "share_zero": 0.208
+    },
+    "2020": {
+      "n": 59014,
+      "mean_terms": 3.224,
+      "share_ge3": 0.413,
+      "share_zero": 0.199
+    },
+    "2022": {
+      "n": 68562,
+      "mean_terms": 3.499,
+      "share_ge3": 0.436,
+      "share_zero": 0.175
+    },
+    "2024": {
+      "n": 100322,
+      "mean_terms": 3.855,
+      "share_ge3": 0.482,
+      "share_zero": 0.142
+    },
+    "2025": {
+      "n": 52967,
+      "mean_terms": 3.397,
+      "share_ge3": 0.454,
+      "share_zero": 0.153
+    }
+  },
+  "pwc_arxiv_papers_by_year": {
+    "2014": 4834,
+    "2015": 8121,
+    "2016": 11869,
+    "2017": 16570,
+    "2018": 26062,
+    "2019": 36939,
+    "2020": 51230,
+    "2021": 57514,
+    "2022": 62891,
+    "2023": 77533,
+    "2024": 98799,
+    "2025": 51798
+  },
+  "pwc_code_link_share_by_year": {
+    "2016": 0.132,
+    "2017": 0.203,
+    "2018": 0.232,
+    "2019": 0.267,
+    "2020": 0.282,
+    "2021": 0.285,
+    "2022": 0.318,
+    "2023": 0.34,
+    "2024": 0.318,
+    "2025": 0.252
+  },
+  "dictionary_matching_by_year": {
+    "2016": {
+      "n": 10000,
+      "generic_removed": [
+        "M:LSTM",
+        "T:classification",
+        "T:clustering",
+        "T:deep learning",
+        "T:form",
+        "T:machine translation",
+        "T:model",
+        "T:object",
+        "T:prediction",
+        "T:regression",
+        "T:segmentation",
+        "T:sentence",
+        "T:translation"
+      ],
+      "mean": 1.0029,
+      "ge3": 0.1054,
+      "zero": 0.4211,
+      "vocab_used": 1016
+    },
+    "2020": {
+      "n": 10000,
+      "generic_removed": [
+        "M:BERT",
+        "M:LSTM",
+        "T:classification",
+        "T:clustering",
+        "T:deep learning",
+        "T:diversity",
+        "T:form",
+        "T:model",
+        "T:object",
+        "T:prediction",
+        "T:regression",
+        "T:reinforcement learning",
+        "T:segmentation",
+        "T:sentence",
+        "T:translation"
+      ],
+      "mean": 1.3745,
+      "ge3": 0.1793,
+      "zero": 0.2897,
+      "vocab_used": 1332
+    },
+    "2024": {
+      "n": 10000,
+      "generic_removed": [
+        "M:GPT",
+        "T:classification",
+        "T:decision making",
+        "T:decoder",
+        "T:deep learning",
+        "T:diversity",
+        "T:form",
+        "T:large language model",
+        "T:management",
+        "T:model",
+        "T:object",
+        "T:prediction",
+        "T:regression",
+        "T:reinforcement learning",
+        "T:retrieval",
+        "T:segmentation",
+        "T:survey",
+        "T:time series"
+      ],
+      "mean": 1.4954,
+      "ge3": 0.2043,
+      "zero": 0.2612,
+      "vocab_used": 1325
+    }
+  },
+  "external_facts": {
+    "checked_on": "2026-10-01",
+    "patents": {
+      "status": "PatentsView migrated to USPTO Open Data Portal on 2026-03-20",
+      "access": "ODP requires registration and sign-in since 2026-06-18",
+      "bulk_same_file_downloads_per_year_per_key": 20,
+      "source": "https://data.uspto.gov/apis/api-rate-limits",
+      "tables": {
+        "release_date": "2026-04-10",
+        "source": [
+          "https://data.uspto.gov/bulkdata/datasets/pvgpatdis",
+          "https://data.uspto.gov/bulkdata/datasets/pvpgpubdis"
+        ],
+        "zip_bytes": {
+          "g_patent": 232076712,
+          "g_patent_abstract": 1708330746,
+          "g_cpc_at_issue": 338958464,
+          "g_assignee_disambiguated": 362741666,
+          "pg_published_application": 301006689,
+          "pg_published_application_abstract": 1597376724,
+          "pg_cpc_at_issue": 202652269,
+          "pg_assignee_disambiguated": 122366357,
+          "pg_granted_pgpubs_crosswalk": 112671324
+        }
+      }
+    },
+    "pypi": {
+      "pypistats_overall_history_days": 186,
+      "source": "https://pypistats.org/api/"
+    },
+    "github": {
+      "search_requests_per_min_authenticated": 30,
+      "search_requests_per_min_unauthenticated": 10,
+      "code_search_requests_per_min": 10,
+      "source": "https://docs.github.com/rest/search/search"
+    },
+    "gemini": {
+      "public_free_tier_table": false,
+      "limits_location": "Google AI Studio, per project",
+      "source": "https://ai.google.dev/gemini-api/docs/rate-limits",
+      "free_tier_limits": {
+        "project": "Default Gemini Project",
+        "text_models": {
+          "gemini-3.5-flash-lite": {
+            "rpm": 15,
+            "tpm": 250000,
+            "rpd": 500
+          },
+          "gemini-3.1-flash-lite": {
+            "rpm": 15,
+            "tpm": 250000,
+            "rpd": 500
+          },
+          "gemini-2.5-flash-lite": {
+            "rpm": 10,
+            "tpm": 250000,
+            "rpd": 20
+          },
+          "gemini-3.8-flash": {
+            "rpm": 5,
+            "tpm": 250000,
+            "rpd": 20
+          },
+          "gemini-3.7-flash": {
+            "rpm": 5,
+            "tpm": 250000,
+            "rpd": 20
+          },
+          "gemini-3.6-flash": {
+            "rpm": 5,
+            "tpm": 250000,
+            "rpd": 20
+          },
+          "gemini-3.5-flash": {
+            "rpm": 5,
+            "tpm": 250000,
+            "rpd": 20
+          },
+          "gemini-3-flash": {
+            "rpm": 5,
+            "tpm": 250000,
+            "rpd": 20
+          },
+          "gemini-2.5-flash": {
+            "rpm": 5,
+            "tpm": 250000,
+            "rpd": 20
+          },
+          "gemma-4-26b": {
+            "rpm": 30,
+            "tpm": 16000,
+            "rpd": 14400
+          },
+          "gemma-4-31b": {
+            "rpm": 30,
+            "tpm": 16000,
+            "rpd": 14400
+          }
+        },
+        "pro_models_available": false,
+        "embedding_models": {
+          "rpm": 100,
+          "rpd": 1000
+        }
+      }
+    }
+  }
+}

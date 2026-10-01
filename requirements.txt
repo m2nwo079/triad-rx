@@ -1,0 +1,9 @@
+# Stage 1 (scope survey): parquet reading for the Papers with Code archive
+pandas>=2.2
+pyarrow>=15.0
+
+# Testing (leakage checks and report-vs-JSON checks)
+pytest>=8.0
+
+# Report generation from results JSON
+jinja2>=3.1

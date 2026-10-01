@@ -1,0 +1,114 @@
+# 1단계 범위 조사 보고서
+
+이 문서는 `scripts/scope/06_render_report.py`가 결과 파일과 설정 파일을 읽어 자동 생성합니다. 직접 수정하지 마세요.
+
+| 항목 | 값 |
+|---|---|
+| 결과 파일 | `{{ results_path }}` |
+| 스냅샷 날짜 | {{ r.meta.snapshot_date }} |
+| 결과를 만든 코드 | `{{ r.meta.git_commit }}` |
+| 설계서 버전 | {{ study.design_version }} |
+
+## 1. 원본 데이터
+
+| 파일 | SHA-256 |
+|---|---|
+{% for name, digest in r.meta.source_files_sha256.items() -%}
+| `{{ name }}` | `{{ digest }}` |
+{% endfor %}
+
+## 2. arXiv 연도별 논문 수
+
+대상 카테고리 합산 기준입니다. 마지막 연도는 스냅샷 날짜까지의 값입니다.
+
+| 연도 | 논문 수 | PWC arXiv 논문 수 |
+|---|---|---|
+{% for year, n in r.arxiv_counts_by_year.items() -%}
+| {{ year }} | {{ "{:,}".format(n) }} | {{ "{:,}".format(r.pwc_arxiv_papers_by_year[year]) if year in r.pwc_arxiv_papers_by_year else "—" }} |
+{% endfor %}
+
+## 3. PWC 어휘
+
+| 항목 | 값 |
+|---|---|
+{% for key, value in r.pwc_vocab.items() -%}
+| `{{ key }}` | {{ value }} |
+{% endfor %}
+
+## 4. 논문당 용어 수
+
+### 4.1 PWC 주석 기준
+
+| 연도 | 논문 수 | 평균 용어 수 | 3개 이상 비율 | 0개 비율 |
+|---|---|---|---|---|
+{% for year, v in r.pwc_annotations_by_year.items() -%}
+| {{ year }} | {{ "{:,}".format(v.n) }} | {{ v.mean_terms }} | {{ v.share_ge3 }} | {{ v.share_zero }} |
+{% endfor %}
+
+### 4.2 사전 매칭 기준 (탐색용 엄격 규칙)
+
+| 연도 | 표본 | 평균 용어 수 | 3개 이상 비율 | 0개 비율 | 제거된 일반어 수 | 사용 어휘 수 |
+|---|---|---|---|---|---|---|
+{% for year, v in r.dictionary_matching_by_year.items() -%}
+| {{ year }} | {{ "{:,}".format(v.n) }} | {{ "%.3f"|format(v.mean) }} | {{ "%.3f"|format(v.ge3) }} | {{ "%.3f"|format(v.zero) }} | {{ v.generic_removed|length }} | {{ v.vocab_used }} |
+{% endfor %}
+
+## 5. PWC 논문–코드 연결 비율
+
+| 연도 | 비율 |
+|---|---|
+{% for year, v in r.pwc_code_link_share_by_year.items() -%}
+| {{ year }} | {{ v }} |
+{% endfor %}
+
+## 6. 외부 문서에서 확인한 사실
+
+확인 날짜: {{ r.external_facts.checked_on }}
+
+### 6.1 특허 (USPTO Open Data Portal)
+
+- 상태: {{ r.external_facts.patents.status }}
+- 접근: {{ r.external_facts.patents.access }}
+- 같은 파일의 연간 다운로드 한도(API 키당): {{ r.external_facts.patents.bulk_same_file_downloads_per_year_per_key }}
+- 테이블 릴리스: {{ r.external_facts.patents.tables.release_date }}
+
+| 테이블 | 압축 크기(바이트) |
+|---|---|
+{% for name, size in r.external_facts.patents.tables.zip_bytes.items() -%}
+| `{{ name }}` | {{ "{:,}".format(size) }} |
+{% endfor %}
+
+### 6.2 Gemini 무료 등급
+
+프로젝트: {{ r.external_facts.gemini.free_tier_limits.project }}
+
+| 모델 | RPM | TPM | RPD |
+|---|---|---|---|
+{% for name, v in r.external_facts.gemini.free_tier_limits.text_models.items() -%}
+| `{{ name }}` | {{ v.rpm }} | {{ "{:,}".format(v.tpm) }} | {{ "{:,}".format(v.rpd) }} |
+{% endfor %}
+
+### 6.3 기타
+
+- pypistats 이력 기간(일): {{ r.external_facts.pypi.pypistats_overall_history_days }}
+- GitHub 검색(분당, 인증/비인증): {{ r.external_facts.github.search_requests_per_min_authenticated }} / {{ r.external_facts.github.search_requests_per_min_unauthenticated }}
+
+## 7. 확정된 시점 배치
+
+설정 파일 `config/study.json`의 값입니다. 근거는 설계서 {{ study.design_section }}절과 연구 과정 기록을 참고하세요.
+
+| 시점 | 용도 | 구축 구간 | 버퍼 | 레이블 구간 |
+|---|---|---|---|---|
+{% for name, t in study.timepoints.items() -%}
+| {{ name }} | {{ t.role }} | {{ t.build[0] }}–{{ t.build[1] }} | {{ t.buffer[0] }}{% if t.buffer[1] != t.buffer[0] %}–{{ t.buffer[1] }}{% endif %} | {{ t.label[0] }}–{{ t.label[1] }} |
+{% endfor %}
+
+적용 모드는 스냅샷 날짜 기준 최근 {{ study.applied.build_years }}년을 구축 구간으로 씁니다.
+
+## 8. 자동 점검
+
+| 점검 | 결과 |
+|---|---|
+{% for name, ok in checks.items() -%}
+| {{ name }} | {{ "통과" if ok else "실패" }} |
+{% endfor %}
