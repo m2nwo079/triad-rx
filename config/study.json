@@ -1,6 +1,7 @@
 {
   "design_version": "v0.3",
   "design_section": "10.2",
+  "arxiv_categories": ["cs.LG", "cs.AI", "cs.CV", "cs.CL", "stat.ML"],
   "timepoints": {
     "T1": {"role": "train", "build": [2014, 2018], "buffer": [2019, 2019], "label": [2020, 2021]},
     "T2": {"role": "evaluate", "build": [2017, 2021], "buffer": [2022, 2022], "label": [2023, 2024]}

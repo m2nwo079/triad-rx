@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "step": "collect_arxiv_filter",
+    "snapshot_date": "2026-09-26",
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "git_commit": "de835a7db287ba324000902e6db6151c37d1bf9c",
+    "source_zip": "data/arxiv/raw/arxiv.zip",
+    "source_zip_sha256": "090fbaaed7e1e5ca546145b40be6f59140991a943c084ed2c63bf8216b4c4de8",
+    "source_member": "arxiv-metadata-oai-snapshot.json",
+    "source_member_bytes": 5564500040,
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.CV",
+      "cs.LG",
+      "stat.ML"
+    ],
+    "date_definition": "v1 submission time (UTC) from versions; announcement is usually the next business day"
+  },
+  "counts": {
+    "lines": 3182867,
+    "matched": 610204,
+    "kept": 610204
+  },
+  "skipped": {},
+  "kept_by_first_year": {
+    "1993": 6,
+    "1994": 237,
+    "1995": 252,
+    "1996": 230,
+    "1997": 184,
+    "1998": 146,
+    "1999": 97,
+    "2000": 261,
+    "2001": 150,
+    "2002": 215,
+    "2003": 216,
+    "2004": 251,
+    "2005": 238,
+    "2006": 305,
+    "2007": 390,
+    "2008": 586,
+    "2009": 894,
+    "2010": 1254,
+    "2011": 1856,
+    "2012": 3154,
+    "2013": 4315,
+    "2014": 4541,
+    "2015": 6309,
+    "2016": 9922,
+    "2017": 14696,
+    "2018": 22533,
+    "2019": 32601,
+    "2020": 43699,
+    "2021": 48302,
+    "2022": 53342,
+    "2023": 66911,
+    "2024": 86664,
+    "2025": 106856,
+    "2026": 98591
+  },
+  "comparison_with_api_counts": {
+    "2014": {
+      "snapshot": 4541,
+      "api": 4541,
+      "ratio": 1.0
+    },
+    "2015": {
+      "snapshot": 6309,
+      "api": 6309,
+      "ratio": 1.0
+    },
+    "2016": {
+      "snapshot": 9922,
+      "api": 9922,
+      "ratio": 1.0
+    },
+    "2017": {
+      "snapshot": 14696,
+      "api": 14696,
+      "ratio": 1.0
+    },
+    "2018": {
+      "snapshot": 22533,
+      "api": 22533,
+      "ratio": 1.0
+    },
+    "2019": {
+      "snapshot": 32601,
+      "api": 32601,
+      "ratio": 1.0
+    },
+    "2020": {
+      "snapshot": 43699,
+      "api": 43699,
+      "ratio": 1.0
+    },
+    "2021": {
+      "snapshot": 48302,
+      "api": 48302,
+      "ratio": 1.0
+    },
+    "2022": {
+      "snapshot": 53342,
+      "api": 53342,
+      "ratio": 1.0
+    },
+    "2023": {
+      "snapshot": 66911,
+      "api": 66911,
+      "ratio": 1.0
+    },
+    "2024": {
+      "snapshot": 86664,
+      "api": 86667,
+      "ratio": 1.0
+    },
+    "2025": {
+      "snapshot": 106856,
+      "api": 106859,
+      "ratio": 1.0
+    },
+    "2026": {
+      "snapshot": 98591,
+      "api": 103216,
+      "ratio": 0.955
+    }
+  }
+}
