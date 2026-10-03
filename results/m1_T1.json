@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "step": "m1_T1",
+    "created": "2026-10-04",
+    "git_commit": "5dda8d2a923930841f510fea9e403d438bd2918d",
+    "quality_m1": {
+      "seed": 20261003,
+      "n_per_stratum": 100,
+      "strata": [
+        "method_ci",
+        "task_ci",
+        "acronym_cs"
+      ],
+      "pass_rule": {
+        "statistic": "wilson_lower_95",
+        "pass": 0.8,
+        "conditional": 0.75
+      },
+      "max_remeasure": 2
+    }
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "seed": 20261003,
+      "stage": "after_r6",
+      "sample_git_commit": "548682edc2ce711761a7238fab53aab45266fb4e",
+      "sheet_sha256": "6c5ef8f450b524d8dddb8821db09d87b1006331c16ab94b546bfb3cfe7c119f3",
+      "strata": {
+        "method_ci": {
+          "n": 100,
+          "correct": 66,
+          "precision": 0.66,
+          "wilson_lower": 0.5627772885472463,
+          "wilson_upper": 0.7453847920265184,
+          "status": "fail"
+        },
+        "task_ci": {
+          "n": 100,
+          "correct": 84,
+          "precision": 0.84,
+          "wilson_lower": 0.7557973061072975,
+          "wilson_upper": 0.8990471151119521,
+          "status": "conditional"
+        },
+        "acronym_cs": {
+          "n": 100,
+          "correct": 70,
+          "precision": 0.7,
+          "wilson_lower": 0.6041514536665332,
+          "wilson_upper": 0.7810511470506724,
+          "status": "fail"
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "seed": 20261004,
+      "stage": "after_m1fix",
+      "sample_git_commit": "3d434407c92368dc2feb84a9aac5661154dd90b0",
+      "sheet_sha256": "cdb65fc3e10b9a0f3845d7ee2ef37c5c81238411bce7bff8a03eeebe0f3cc23f",
+      "strata": {
+        "method_ci": {
+          "n": 100,
+          "correct": 83,
+          "precision": 0.83,
+          "wilson_lower": 0.7445199523239887,
+          "wilson_upper": 0.8910643388594006,
+          "status": "fail"
+        },
+        "task_ci": {
+          "n": 100,
+          "correct": 80,
+          "precision": 0.8,
+          "wilson_lower": 0.7111708344068411,
+          "wilson_upper": 0.8666330666689674,
+          "status": "fail"
+        },
+        "acronym_cs": {
+          "n": 100,
+          "correct": 83,
+          "precision": 0.83,
+          "wilson_lower": 0.7445199523239887,
+          "wilson_upper": 0.8910643388594006,
+          "status": "fail"
+        }
+      }
+    },
+    {
+      "attempt": 2,
+      "seed": 20261005,
+      "stage": "after_m1fix",
+      "sample_git_commit": "6d866f346e80fdbf4a89c32ec6d0ec4f82ef27c1",
+      "sheet_sha256": "b9a773d71378cff9eadaa4d5f13a8bf65fd11c883292c6518c9121324a3e07d2",
+      "strata": {
+        "acronym_cs": {
+          "n": 100,
+          "correct": 74,
+          "precision": 0.74,
+          "wilson_lower": 0.6462901055081282,
+          "wilson_upper": 0.8159530153525187,
+          "status": "fail"
+        }
+      }
+    }
+  ],
+  "final_by_stratum": {
+    "method_ci": {
+      "n": 100,
+      "correct": 83,
+      "precision": 0.83,
+      "wilson_lower": 0.7445199523239887,
+      "wilson_upper": 0.8910643388594006,
+      "status": "fail",
+      "attempt": 1
+    },
+    "task_ci": {
+      "n": 100,
+      "correct": 80,
+      "precision": 0.8,
+      "wilson_lower": 0.7111708344068411,
+      "wilson_upper": 0.8666330666689674,
+      "status": "fail",
+      "attempt": 1
+    },
+    "acronym_cs": {
+      "n": 100,
+      "correct": 74,
+      "precision": 0.74,
+      "wilson_lower": 0.6462901055081282,
+      "wilson_upper": 0.8159530153525187,
+      "status": "fail",
+      "attempt": 2
+    }
+  },
+  "final_failed_strata": [
+    "method_ci",
+    "task_ci",
+    "acronym_cs"
+  ]
+}

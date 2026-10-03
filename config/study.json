@@ -1,10 +1,160 @@
 {
-  "design_version": "v0.3",
+  "design_version": "v0.3.9",
   "design_section": "10.2",
-  "arxiv_categories": ["cs.LG", "cs.AI", "cs.CV", "cs.CL", "stat.ML"],
+  "arxiv_categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CV",
+    "cs.CL",
+    "stat.ML"
+  ],
   "timepoints": {
-    "T1": {"role": "train", "build": [2014, 2018], "buffer": [2019, 2019], "label": [2020, 2021]},
-    "T2": {"role": "evaluate", "build": [2017, 2021], "buffer": [2022, 2022], "label": [2023, 2024]}
+    "T1": {
+      "role": "train",
+      "build": [
+        2014,
+        2018
+      ],
+      "buffer": [
+        2019,
+        2019
+      ],
+      "label": [
+        2020,
+        2021
+      ]
+    },
+    "T2": {
+      "role": "evaluate",
+      "build": [
+        2017,
+        2021
+      ],
+      "buffer": [
+        2022,
+        2022
+      ],
+      "label": [
+        2023,
+        2024
+      ]
+    }
   },
-  "applied": {"build_years": 5, "anchor": "snapshot_date"}
+  "applied": {
+    "build_years": 5,
+    "anchor": "data_cutoff"
+  },
+  "vocab": {
+    "r4_wordlist": "/usr/share/dict/words",
+    "r3_min_acronym_len": 3,
+    "restore_min_support": 2,
+    "r5_rule": {
+      "method": "resampling_stability_with_matching_noise",
+      "stability": 0.95,
+      "precision": "m1_stratum_wilson_lower_95"
+    },
+    "r6_rule": {
+      "method": "chung_lu_validity",
+      "paper_degree_quantile": 0.99
+    },
+    "m1_fix": {
+      "junk_pattern": "[<>\"{}\\[\\]|\\\\`]",
+      "r3_exclude": [
+        {
+          "term_id": "M:linear discriminant analysis",
+          "surface": "LDA"
+        },
+        {
+          "term_id": "M:energy based model",
+          "surface": "EBM"
+        },
+        {
+          "term_id": "M:slime mould algorithm",
+          "surface": "SMA"
+        },
+        {
+          "term_id": "M:conditional random field",
+          "surface": "CRF"
+        },
+        {
+          "term_id": "M:diffusion convolutional neural networks",
+          "surface": "DCNN"
+        },
+        {
+          "term_id": "M:semantic cross attention",
+          "surface": "SCA"
+        },
+        {
+          "term_id": "M:switchable atrous convolution",
+          "surface": "SAC"
+        },
+        {
+          "term_id": "M:g3d",
+          "surface": "G3D"
+        },
+        {
+          "term_id": "M:region proposal network",
+          "surface": "RPN"
+        },
+        {
+          "term_id": "M:approximate bayesian computation",
+          "surface": "ABC"
+        },
+        {
+          "term_id": "M:masked autoencoder",
+          "surface": "MAE"
+        }
+      ]
+    }
+  },
+  "r4_review": {
+    "seed": 20261002,
+    "n_per_stratum": 3,
+    "allow_threshold": 0.6
+  },
+  "quality": {
+    "m1": {
+      "seed": 20261003,
+      "n_per_stratum": 100,
+      "strata": [
+        "method_ci",
+        "task_ci",
+        "acronym_cs"
+      ],
+      "pass_rule": {
+        "statistic": "wilson_lower_95",
+        "pass": 0.8,
+        "conditional": 0.75
+      },
+      "max_remeasure": 2
+    },
+    "m2": {
+      "seed": 20261004,
+      "n_per_category": 100,
+      "categories": [
+        "company",
+        "academic",
+        "government",
+        "individual"
+      ],
+      "pass_rule": {
+        "statistic": "wilson_lower_95",
+        "pass": 0.8,
+        "conditional": 0.75
+      },
+      "max_remeasure": 2
+    },
+    "q1": {
+      "seed": 20261005,
+      "n_sentences": 100
+    }
+  },
+  "secondary_analyses": {
+    "S1": {
+      "description": "V1 and V2 recomputed with all case-sensitive acronym surfaces removed",
+      "drop_match_modes": [
+        "cs"
+      ]
+    }
+  }
 }

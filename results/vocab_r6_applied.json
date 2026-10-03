@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "step": "apply_r4_r6",
+    "timepoint": "applied",
+    "created": "2026-10-03",
+    "git_commit": "a437f4395b528cd0d05a93ff04f4b6cced1fac27",
+    "window": [
+      "2021-09-24T17:59:54+00:00",
+      "2026-09-24T17:59:54+00:00"
+    ],
+    "r6_rule": {
+      "method": "chung_lu_validity",
+      "paper_degree_quantile": 0.99
+    },
+    "papers_sha256": "f1cf789f7b470b6d2d7ffb269d65add6131e0f56058833889ab1759dfd859f31",
+    "vocab_sha256": "b90fcd78264a33e2d3dc30be26b579fd7864ab967211c8db1bcba15f6325deb0",
+    "r4_decisions_sha256": "472f3e5e40fe9dd47bb185901fe36450f441311fb5b9ebdaf8d716c089609127"
+  },
+  "stats": {
+    "window_papers": 426139,
+    "papers_with_matches": 370262,
+    "total_links": 1014614,
+    "paper_degree_quantile_value": 8.0,
+    "max_term_docs": 126826.75,
+    "terms_matched": 4726,
+    "terms_removed_r6": 0,
+    "terms_kept": 4726,
+    "r4_allowed": 52
+  }
+}

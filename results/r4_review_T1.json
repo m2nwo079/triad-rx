@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "step": "r4_review_sheet_T1",
+    "created": "2026-10-02",
+    "git_commit": "1446227d77bb26f51b2721800c2707d2e4e35894",
+    "timepoint": "T1",
+    "build_years": [
+      2014,
+      2018
+    ],
+    "review_config": {
+      "seed": 20261002,
+      "n_per_stratum": 3,
+      "allow_threshold": 0.6
+    },
+    "papers_sha256": "f1cf789f7b470b6d2d7ffb269d65add6131e0f56058833889ab1759dfd859f31",
+    "vocab_sha256": "b90fcd78264a33e2d3dc30be26b579fd7864ab967211c8db1bcba15f6325deb0",
+    "sampling": "per term, stratum A = sentence also contains another active term, stratum B = otherwise; one sentence per paper; uniform random within stratum with the configured seed"
+  },
+  "t1_papers": 58001,
+  "candidates": 286,
+  "candidates_with_t1_docs": 193,
+  "ambiguous_sequences": {
+    "ci": 4,
+    "cs": 0
+  }
+}

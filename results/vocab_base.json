@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "step": "vocab_base",
+    "git_commit": "8622709eb09ba3ee1d5c37474eb30115e9d56f74",
+    "rules": [
+      "R1",
+      "R2",
+      "R3",
+      "R4_candidates",
+      "restoration"
+    ],
+    "config": {
+      "r4_wordlist": "/usr/share/dict/words",
+      "r3_min_acronym_len": 3,
+      "restore_min_support": 2
+    },
+    "wordlist_sha256": "be41ad97963bf8dabedd5871d5d691596175269d540956b0f9965a885c2bbab9",
+    "source_files_sha256": {
+      "methods.parquet": "85c28648f762d79565a878ccaf08b5757782d4de4876446cb06de1ada3ae4abf",
+      "pwa_0.parquet": "766ec93cbc01de98519801886e98d5b2d9005a9f4e3dc3e60d1319a69383cda0",
+      "pwa_1.parquet": "3c8e9c492f8ef5bbd7eb51e67918627b2b59ae7b7ecb4ad2e5c2f5837a263dfd",
+      "pwa_2.parquet": "2b94e7b4bdea3a8b754a40edaf4899a4f308f9b043e7651ae25246bbb5a26302",
+      "pwa_3.parquet": "0a2252584e69d93f7e0a3d2fbf62cec7a7b57c9a7f5781fd4a13f9881ea60af4"
+    },
+    "note": "PWC paper counts (num_papers, task counts) are not used; frequency rules R5 and R6 are applied per timepoint later"
+  },
+  "terms_by_type_status": {
+    "M:active": 2425,
+    "M:r4_candidate": 63,
+    "T:active": 4439,
+    "T:r4_candidate": 223
+  },
+  "surfaces_by_match_mode": {
+    "ci": 7418,
+    "cs": 634
+  },
+  "removed_by_rule_reason": {
+    "R1:spam_pattern": 20668,
+    "R2:ambiguous_acronym": 3,
+    "R3:acronym_too_short": 22
+  },
+  "restored": 4,
+  "merged_group_sizes": {
+    "1": 7119,
+    "2": 29,
+    "4": 1,
+    "5": 1
+  }
+}

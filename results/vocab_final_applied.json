@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "step": "apply_r5",
+    "timepoint": "applied",
+    "created": "2026-10-04",
+    "git_commit": "5dda8d2a923930841f510fea9e403d438bd2918d",
+    "stage": "after_m1fix",
+    "stage_sha256": "1fbb24c647fb82ae7085af0794d06cf8ee044d998a6e2faf98d2563aeee94edc",
+    "m1_final_attempts": {
+      "method_ci": 1,
+      "task_ci": 1,
+      "acronym_cs": 2
+    },
+    "r5_rule": {
+      "method": "resampling_stability_with_matching_noise",
+      "stability": 0.95,
+      "precision": "m1_stratum_wilson_lower_95"
+    },
+    "stratum_lower": {
+      "method_ci": 0.7445199523239887,
+      "task_ci": 0.7111708344068411,
+      "acronym_cs": 0.6462901055081282
+    }
+  },
+  "stats": {
+    "terms_in": 4724,
+    "terms_removed_r5": 1492,
+    "terms_final": 3232
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "step": "r4_decisions_T1",
+    "created": "2026-10-03",
+    "git_commit": "7ac2587f196e701634c66b6ec5af2d59f85ffeb9",
+    "timepoint": "T1",
+    "review_config": {
+      "seed": 20261002,
+      "n_per_stratum": 3,
+      "allow_threshold": 0.6
+    },
+    "review_sheet_git_commit": "1446227d77bb26f51b2721800c2707d2e4e35894",
+    "sheet_sha256": "d3bd3c7fc6988dfd92e137624ae2b626a598017c80f5c6738c31dac45bdf93b6",
+    "vocab_sha256": "b90fcd78264a33e2d3dc30be26b579fd7864ab967211c8db1bcba15f6325deb0",
+    "rule": "share = sum over strata of size * technical / shown, divided by t1_docs; allow when share >= allow_threshold; candidates without T1 documents are excluded"
+  },
+  "counts": {
+    "allow": 52,
+    "reject": 141,
+    "excluded_no_t1_docs": 93
+  }
+}

@@ -1,0 +1,5646 @@
+{
+  "meta": {
+    "step": "r4_decisions_T1",
+    "created": "2026-10-03",
+    "git_commit": "7ac2587f196e701634c66b6ec5af2d59f85ffeb9",
+    "timepoint": "T1",
+    "review_config": {
+      "seed": 20261002,
+      "n_per_stratum": 3,
+      "allow_threshold": 0.6
+    },
+    "review_sheet_git_commit": "1446227d77bb26f51b2721800c2707d2e4e35894",
+    "sheet_sha256": "d3bd3c7fc6988dfd92e137624ae2b626a598017c80f5c6738c31dac45bdf93b6",
+    "vocab_sha256": "b90fcd78264a33e2d3dc30be26b579fd7864ab967211c8db1bcba15f6325deb0",
+    "rule": "share = sum over strata of size * technical / shown, divided by t1_docs; allow when share >= allow_threshold; candidates without T1 documents are excluded"
+  },
+  "decisions": [
+    {
+      "term_id": "T:model",
+      "key": "model",
+      "t1_docs": 21065,
+      "stratum_size": {
+        "a": 6631,
+        "b": 14434
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 1
+      },
+      "technical_share": 0.4382625207690482,
+      "technical_share_exact": "9232/21065",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:all",
+      "key": "all",
+      "t1_docs": 7783,
+      "stratum_size": {
+        "a": 1490,
+        "b": 6293
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:classification",
+      "key": "classification",
+      "t1_docs": 7061,
+      "stratum_size": {
+        "a": 2421,
+        "b": 4640
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:prediction",
+      "key": "prediction",
+      "t1_docs": 4253,
+      "stratum_size": {
+        "a": 1187,
+        "b": 3066
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 2
+      },
+      "technical_share": 0.6666666666666666,
+      "technical_share_exact": "2/3",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:form",
+      "key": "form",
+      "t1_docs": 3336,
+      "stratum_size": {
+        "a": 707,
+        "b": 2629
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:object",
+      "key": "object",
+      "t1_docs": 3224,
+      "stratum_size": {
+        "a": 1008,
+        "b": 2216
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 2
+      },
+      "technical_share": 0.770885028949545,
+      "technical_share_exact": "932/1209",
+      "decision": "allow"
+    },
+    {
+      "term_id": "M:focus",
+      "key": "focus",
+      "t1_docs": 2848,
+      "stratum_size": {
+        "a": 826,
+        "b": 2022
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:segmentation",
+      "key": "segmentation",
+      "t1_docs": 2496,
+      "stratum_size": {
+        "a": 840,
+        "b": 1656
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 1
+      },
+      "technical_share": 0.5576923076923077,
+      "technical_share_exact": "29/52",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:regression",
+      "key": "regression",
+      "t1_docs": 2379,
+      "stratum_size": {
+        "a": 838,
+        "b": 1541
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 2
+      },
+      "technical_share": 0.7840829480173742,
+      "technical_share_exact": "5596/7137",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:clustering",
+      "key": "clustering",
+      "t1_docs": 2211,
+      "stratum_size": {
+        "a": 528,
+        "b": 1683
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 2
+      },
+      "technical_share": 0.746268656716418,
+      "technical_share_exact": "50/67",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:reconstruction",
+      "key": "reconstruction",
+      "t1_docs": 1574,
+      "stratum_size": {
+        "a": 397,
+        "b": 1177
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:sentence",
+      "key": "sentence",
+      "t1_docs": 1248,
+      "stratum_size": {
+        "a": 448,
+        "b": 800
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 0
+      },
+      "technical_share": 0.11965811965811966,
+      "technical_share_exact": "14/117",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:translation",
+      "key": "translation",
+      "t1_docs": 1190,
+      "stratum_size": {
+        "a": 412,
+        "b": 778
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 3
+      },
+      "technical_share": 0.884593837535014,
+      "technical_share_exact": "1579/1785",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:decoder",
+      "key": "decoder",
+      "t1_docs": 1033,
+      "stratum_size": {
+        "a": 485,
+        "b": 548
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "M:zero",
+      "key": "zero",
+      "t1_docs": 1008,
+      "stratum_size": {
+        "a": 235,
+        "b": 773
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:retrieval",
+      "key": "retrieval",
+      "t1_docs": 970,
+      "stratum_size": {
+        "a": 280,
+        "b": 690
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 2
+      },
+      "technical_share": 0.7628865979381443,
+      "technical_share_exact": "74/97",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:relation",
+      "key": "relation",
+      "t1_docs": 904,
+      "stratum_size": {
+        "a": 184,
+        "b": 720
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 0
+      },
+      "technical_share": 0.13569321533923304,
+      "technical_share_exact": "46/339",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:convolution",
+      "key": "convolution",
+      "t1_docs": 894,
+      "stratum_size": {
+        "a": 392,
+        "b": 502
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 2
+      },
+      "technical_share": 0.8128262490678598,
+      "technical_share_exact": "1090/1341",
+      "decision": "allow"
+    },
+    {
+      "term_id": "M:fail",
+      "key": "fail",
+      "t1_docs": 851,
+      "stratum_size": {
+        "a": 185,
+        "b": 666
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:diversity",
+      "key": "diversity",
+      "t1_docs": 757,
+      "stratum_size": {
+        "a": 169,
+        "b": 588
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:survey",
+      "key": "survey",
+      "t1_docs": 745,
+      "stratum_size": {
+        "a": 248,
+        "b": 497
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:position",
+      "key": "position",
+      "t1_docs": 743,
+      "stratum_size": {
+        "a": 148,
+        "b": 595
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:sensitivity",
+      "key": "sensitivity",
+      "t1_docs": 653,
+      "stratum_size": {
+        "a": 119,
+        "b": 534
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:gpu",
+      "key": "gpu",
+      "t1_docs": 597,
+      "stratum_size": {
+        "a": 184,
+        "b": 413
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:attribute",
+      "key": "attribute",
+      "t1_docs": 583,
+      "stratum_size": {
+        "a": 172,
+        "b": 411
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 1
+      },
+      "technical_share": 0.23499142367066894,
+      "technical_share_exact": "137/583",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:interpretability",
+      "key": "interpretability",
+      "t1_docs": 570,
+      "stratum_size": {
+        "a": 164,
+        "b": 406
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 1
+      },
+      "technical_share": 0.5251461988304094,
+      "technical_share_exact": "449/855",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:denoising",
+      "key": "denoising",
+      "t1_docs": 554,
+      "stratum_size": {
+        "a": 184,
+        "b": 370
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 2
+      },
+      "technical_share": 0.7773766546329723,
+      "technical_share_exact": "646/831",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:management",
+      "key": "management",
+      "t1_docs": 542,
+      "stratum_size": {
+        "a": 117,
+        "b": 425
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:valid",
+      "key": "valid",
+      "t1_docs": 399,
+      "stratum_size": {
+        "a": 58,
+        "b": 341
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:diffusion",
+      "key": "diffusion",
+      "t1_docs": 396,
+      "stratum_size": {
+        "a": 77,
+        "b": 319
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 0
+      },
+      "technical_share": 0.12962962962962962,
+      "technical_share_exact": "7/54",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:ontology",
+      "key": "ontology",
+      "t1_docs": 388,
+      "stratum_size": {
+        "a": 60,
+        "b": 328
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 3
+      },
+      "technical_share": 0.9484536082474226,
+      "technical_share_exact": "92/97",
+      "decision": "allow"
+    },
+    {
+      "term_id": "M:library",
+      "key": "library",
+      "t1_docs": 378,
+      "stratum_size": {
+        "a": 94,
+        "b": 284
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:dialogue",
+      "key": "dialogue",
+      "t1_docs": 368,
+      "stratum_size": {
+        "a": 133,
+        "b": 235
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "M:dropout",
+      "key": "dropout",
+      "t1_docs": 359,
+      "stratum_size": {
+        "a": 156,
+        "b": 203
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "M:pruning",
+      "key": "pruning",
+      "t1_docs": 359,
+      "stratum_size": {
+        "a": 95,
+        "b": 264
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 2
+      },
+      "technical_share": 0.6666666666666666,
+      "technical_share_exact": "2/3",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:quantization",
+      "key": "quantization",
+      "t1_docs": 353,
+      "stratum_size": {
+        "a": 80,
+        "b": 273
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 3
+      },
+      "technical_share": 0.8489140698772427,
+      "technical_share_exact": "899/1059",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:articles",
+      "key": "articles",
+      "t1_docs": 324,
+      "stratum_size": {
+        "a": 71,
+        "b": 253
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:cpu",
+      "key": "cpu",
+      "t1_docs": 303,
+      "stratum_size": {
+        "a": 72,
+        "b": 231
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:diagnostic",
+      "key": "diagnostic",
+      "t1_docs": 302,
+      "stratum_size": {
+        "a": 62,
+        "b": 240
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:summarization",
+      "key": "summarization",
+      "t1_docs": 294,
+      "stratum_size": {
+        "a": 111,
+        "b": 183
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:nmt",
+      "key": "nmt",
+      "t1_docs": 287,
+      "stratum_size": {
+        "a": 248,
+        "b": 39
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:benchmarking",
+      "key": "benchmarking",
+      "t1_docs": 226,
+      "stratum_size": {
+        "a": 77,
+        "b": 149
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:electroencephalogram",
+      "key": "electroencephalogram",
+      "t1_docs": 217,
+      "stratum_size": {
+        "a": 66,
+        "b": 151
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:sketch",
+      "key": "sketch",
+      "t1_docs": 214,
+      "stratum_size": {
+        "a": 46,
+        "b": 168
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 2
+      },
+      "technical_share": 0.6666666666666666,
+      "technical_share_exact": "2/3",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:eeg",
+      "key": "eeg",
+      "t1_docs": 213,
+      "stratum_size": {
+        "a": 62,
+        "b": 151
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:fairness",
+      "key": "fairness",
+      "t1_docs": 211,
+      "stratum_size": {
+        "a": 23,
+        "b": 188
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 1
+      },
+      "technical_share": 0.3333333333333333,
+      "technical_share_exact": "1/3",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:none",
+      "key": "none",
+      "t1_docs": 208,
+      "stratum_size": {
+        "a": 48,
+        "b": 160
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:scheduling",
+      "key": "scheduling",
+      "t1_docs": 208,
+      "stratum_size": {
+        "a": 30,
+        "b": 178
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 1
+      },
+      "technical_share": 0.28525641025641024,
+      "technical_share_exact": "89/312",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:specificity",
+      "key": "specificity",
+      "t1_docs": 189,
+      "stratum_size": {
+        "a": 33,
+        "b": 156
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:descriptive",
+      "key": "descriptive",
+      "t1_docs": 171,
+      "stratum_size": {
+        "a": 23,
+        "b": 148
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:tag",
+      "key": "tag",
+      "t1_docs": 171,
+      "stratum_size": {
+        "a": 55,
+        "b": 116
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 1
+      },
+      "technical_share": 0.22612085769980506,
+      "technical_share_exact": "116/513",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:navigate",
+      "key": "navigate",
+      "t1_docs": 138,
+      "stratum_size": {
+        "a": 25,
+        "b": 113
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:triplet",
+      "key": "triplet",
+      "t1_docs": 132,
+      "stratum_size": {
+        "a": 55,
+        "b": 77
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:marketing",
+      "key": "marketing",
+      "t1_docs": 127,
+      "stratum_size": {
+        "a": 17,
+        "b": 110
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:ner",
+      "key": "ner",
+      "t1_docs": 124,
+      "stratum_size": {
+        "a": 101,
+        "b": 23
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:anatomy",
+      "key": "anatomy",
+      "t1_docs": 120,
+      "stratum_size": {
+        "a": 21,
+        "b": 99
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:ultrasound",
+      "key": "ultrasound",
+      "t1_docs": 120,
+      "stratum_size": {
+        "a": 34,
+        "b": 86
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:transformer",
+      "key": "transformer",
+      "t1_docs": 115,
+      "stratum_size": {
+        "a": 58,
+        "b": 57
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 2
+      },
+      "technical_share": 0.8347826086956521,
+      "technical_share_exact": "96/115",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:superpixels",
+      "key": "superpixels",
+      "t1_docs": 112,
+      "stratum_size": {
+        "a": 27,
+        "b": 85
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:transferability",
+      "key": "transferability",
+      "t1_docs": 111,
+      "stratum_size": {
+        "a": 32,
+        "b": 79
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:poly",
+      "key": "poly",
+      "t1_docs": 102,
+      "stratum_size": {
+        "a": 7,
+        "b": 95
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:imputation",
+      "key": "imputation",
+      "t1_docs": 101,
+      "stratum_size": {
+        "a": 37,
+        "b": 64
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:counterfactual",
+      "key": "counterfactual",
+      "t1_docs": 99,
+      "stratum_size": {
+        "a": 13,
+        "b": 86
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 1
+      },
+      "technical_share": 0.3771043771043771,
+      "technical_share_exact": "112/297",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:deblurring",
+      "key": "deblurring",
+      "t1_docs": 99,
+      "stratum_size": {
+        "a": 42,
+        "b": 57
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 3
+      },
+      "technical_share": 0.8585858585858586,
+      "technical_share_exact": "85/99",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:philosophy",
+      "key": "philosophy",
+      "t1_docs": 88,
+      "stratum_size": {
+        "a": 15,
+        "b": 73
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:adam",
+      "key": "adam",
+      "t1_docs": 87,
+      "stratum_size": {
+        "a": 53,
+        "b": 34
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 2
+      },
+      "technical_share": 0.8697318007662835,
+      "technical_share_exact": "227/261",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:ssim",
+      "key": "ssim",
+      "t1_docs": 86,
+      "stratum_size": {
+        "a": 23,
+        "b": 63
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:pos",
+      "key": "pos",
+      "t1_docs": 83,
+      "stratum_size": {
+        "a": 23,
+        "b": 60
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 0
+      },
+      "technical_share": 0.09236947791164658,
+      "technical_share_exact": "23/249",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:binarization",
+      "key": "binarization",
+      "t1_docs": 76,
+      "stratum_size": {
+        "a": 19,
+        "b": 57
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:lemma",
+      "key": "lemma",
+      "t1_docs": 76,
+      "stratum_size": {
+        "a": 20,
+        "b": 56
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:negation",
+      "key": "negation",
+      "t1_docs": 75,
+      "stratum_size": {
+        "a": 9,
+        "b": 66
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:electrocardiography",
+      "key": "electrocardiography",
+      "t1_docs": 74,
+      "stratum_size": {
+        "a": 22,
+        "b": 52
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:prognosis",
+      "key": "prognosis",
+      "t1_docs": 74,
+      "stratum_size": {
+        "a": 9,
+        "b": 65
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:electric",
+      "key": "electric",
+      "t1_docs": 71,
+      "stratum_size": {
+        "a": 9,
+        "b": 62
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:american",
+      "key": "american",
+      "t1_docs": 69,
+      "stratum_size": {
+        "a": 9,
+        "b": 60
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:informativeness",
+      "key": "informativeness",
+      "t1_docs": 65,
+      "stratum_size": {
+        "a": 18,
+        "b": 47
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:repair",
+      "key": "repair",
+      "t1_docs": 62,
+      "stratum_size": {
+        "a": 3,
+        "b": 59
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 1
+      },
+      "technical_share": 0.3172043010752688,
+      "technical_share_exact": "59/186",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:memorization",
+      "key": "memorization",
+      "t1_docs": 61,
+      "stratum_size": {
+        "a": 20,
+        "b": 41
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 1
+      },
+      "technical_share": 0.22404371584699453,
+      "technical_share_exact": "41/183",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:arc",
+      "key": "arc",
+      "t1_docs": 59,
+      "stratum_size": {
+        "a": 15,
+        "b": 44
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 3
+      },
+      "technical_share": 0.7457627118644068,
+      "technical_share_exact": "44/59",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:colorization",
+      "key": "colorization",
+      "t1_docs": 56,
+      "stratum_size": {
+        "a": 19,
+        "b": 37
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 2
+      },
+      "technical_share": 0.7797619047619048,
+      "technical_share_exact": "131/168",
+      "decision": "allow"
+    },
+    {
+      "term_id": "M:tucker",
+      "key": "tucker",
+      "t1_docs": 55,
+      "stratum_size": {
+        "a": 13,
+        "b": 42
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 3
+      },
+      "technical_share": 0.8424242424242424,
+      "technical_share_exact": "139/165",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:blocking",
+      "key": "blocking",
+      "t1_docs": 53,
+      "stratum_size": {
+        "a": 4,
+        "b": 49
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 1
+      },
+      "technical_share": 0.3333333333333333,
+      "technical_share_exact": "1/3",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:astronomy",
+      "key": "astronomy",
+      "t1_docs": 52,
+      "stratum_size": {
+        "a": 16,
+        "b": 36
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:disentanglement",
+      "key": "disentanglement",
+      "t1_docs": 52,
+      "stratum_size": {
+        "a": 14,
+        "b": 38
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 1
+      },
+      "technical_share": 0.4230769230769231,
+      "technical_share_exact": "11/26",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:reranking",
+      "key": "reranking",
+      "t1_docs": 50,
+      "stratum_size": {
+        "a": 15,
+        "b": 35
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:chatbot",
+      "key": "chatbot",
+      "t1_docs": 40,
+      "stratum_size": {
+        "a": 15,
+        "b": 25
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:math",
+      "key": "math",
+      "t1_docs": 39,
+      "stratum_size": {
+        "a": 12,
+        "b": 27
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 0
+      },
+      "technical_share": 0.10256410256410256,
+      "technical_share_exact": "4/39",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:mujoco",
+      "key": "mujoco",
+      "t1_docs": 39,
+      "stratum_size": {
+        "a": 24,
+        "b": 15
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:ethics",
+      "key": "ethics",
+      "t1_docs": 38,
+      "stratum_size": {
+        "a": 2,
+        "b": 36
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:gravity",
+      "key": "gravity",
+      "t1_docs": 37,
+      "stratum_size": {
+        "a": 6,
+        "b": 31
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:smc\u4f1a\u8bae",
+      "key": "smc\u4f1a\u8bae",
+      "t1_docs": 37,
+      "stratum_size": {
+        "a": 14,
+        "b": 23
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 3
+      },
+      "technical_share": 0.8738738738738738,
+      "technical_share_exact": "97/111",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:chunking",
+      "key": "chunking",
+      "t1_docs": 34,
+      "stratum_size": {
+        "a": 26,
+        "b": 8
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 3
+      },
+      "technical_share": 0.7450980392156863,
+      "technical_share_exact": "38/51",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:rhythm",
+      "key": "rhythm",
+      "t1_docs": 33,
+      "stratum_size": {
+        "a": 3,
+        "b": 30
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:friction",
+      "key": "friction",
+      "t1_docs": 32,
+      "stratum_size": {
+        "a": 3,
+        "b": 29
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:starcraft",
+      "key": "starcraft",
+      "t1_docs": 30,
+      "stratum_size": {
+        "a": 9,
+        "b": 21
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:2k",
+      "key": "2k",
+      "t1_docs": 29,
+      "stratum_size": {
+        "a": 4,
+        "b": 25
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:morph",
+      "key": "morph",
+      "t1_docs": 29,
+      "stratum_size": {
+        "a": 2,
+        "b": 27
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:epidemiology",
+      "key": "epidemiology",
+      "t1_docs": 27,
+      "stratum_size": {
+        "a": 5,
+        "b": 22
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:transliteration",
+      "key": "transliteration",
+      "t1_docs": 27,
+      "stratum_size": {
+        "a": 8,
+        "b": 19
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 2
+      },
+      "technical_share": 0.7654320987654321,
+      "technical_share_exact": "62/81",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:electromyography",
+      "key": "electromyography",
+      "t1_docs": 26,
+      "stratum_size": {
+        "a": 7,
+        "b": 19
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:synthesizer",
+      "key": "synthesizer",
+      "t1_docs": 25,
+      "stratum_size": {
+        "a": 6,
+        "b": 19
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 1
+      },
+      "technical_share": 0.49333333333333335,
+      "technical_share_exact": "37/75",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:gpr",
+      "key": "gpr",
+      "t1_docs": 25,
+      "stratum_size": {
+        "a": 17,
+        "b": 8
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 0
+      },
+      "technical_share": 0.68,
+      "technical_share_exact": "17/25",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:hallucination",
+      "key": "hallucination",
+      "t1_docs": 25,
+      "stratum_size": {
+        "a": 9,
+        "b": 16
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 0
+      },
+      "technical_share": 0.24,
+      "technical_share_exact": "6/25",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:hippocampus",
+      "key": "hippocampus",
+      "t1_docs": 25,
+      "stratum_size": {
+        "a": 2,
+        "b": 23
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:unity",
+      "key": "unity",
+      "t1_docs": 25,
+      "stratum_size": {
+        "a": 5,
+        "b": 20
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:lipreading",
+      "key": "lipreading",
+      "t1_docs": 22,
+      "stratum_size": {
+        "a": 6,
+        "b": 16
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 2
+      },
+      "technical_share": 0.7575757575757576,
+      "technical_share_exact": "25/33",
+      "decision": "allow"
+    },
+    {
+      "term_id": "M:rotate",
+      "key": "rotate",
+      "t1_docs": 21,
+      "stratum_size": {
+        "a": 6,
+        "b": 15
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:econometrics",
+      "key": "econometrics",
+      "t1_docs": 21,
+      "stratum_size": {
+        "a": 10,
+        "b": 11
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:misinformation",
+      "key": "misinformation",
+      "t1_docs": 21,
+      "stratum_size": {
+        "a": 3,
+        "b": 18
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 2
+      },
+      "technical_share": 0.5714285714285714,
+      "technical_share_exact": "4/7",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:sarsa",
+      "key": "sarsa",
+      "t1_docs": 20,
+      "stratum_size": {
+        "a": 12,
+        "b": 8
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:lemmatization",
+      "key": "lemmatization",
+      "t1_docs": 20,
+      "stratum_size": {
+        "a": 10,
+        "b": 10
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:sociology",
+      "key": "sociology",
+      "t1_docs": 19,
+      "stratum_size": {
+        "a": 2,
+        "b": 17
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:fragmentation",
+      "key": "fragmentation",
+      "t1_docs": 18,
+      "stratum_size": {
+        "a": 3,
+        "b": 15
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:4k",
+      "key": "4k",
+      "t1_docs": 18,
+      "stratum_size": {
+        "a": 7,
+        "b": 11
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:automl",
+      "key": "automl",
+      "t1_docs": 18,
+      "stratum_size": {
+        "a": 7,
+        "b": 11
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 1
+      },
+      "technical_share": 0.3333333333333333,
+      "technical_share_exact": "1/3",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:sand",
+      "key": "sand",
+      "t1_docs": 17,
+      "stratum_size": {
+        "a": 1,
+        "b": 16
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:procrustes",
+      "key": "procrustes",
+      "t1_docs": 16,
+      "stratum_size": {
+        "a": 4,
+        "b": 12
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 3,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "M:performer",
+      "key": "performer",
+      "t1_docs": 15,
+      "stratum_size": {
+        "a": 2,
+        "b": 13
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:humanitarian",
+      "key": "humanitarian",
+      "t1_docs": 15,
+      "stratum_size": {
+        "a": 7,
+        "b": 8
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:minecraft",
+      "key": "minecraft",
+      "t1_docs": 15,
+      "stratum_size": {
+        "a": 5,
+        "b": 10
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:pharmacovigilance",
+      "key": "pharmacovigilance",
+      "t1_docs": 15,
+      "stratum_size": {
+        "a": 1,
+        "b": 14
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:sts",
+      "key": "sts",
+      "t1_docs": 15,
+      "stratum_size": {
+        "a": 13,
+        "b": 2
+      },
+      "shown": {
+        "a": 3,
+        "b": 2
+      },
+      "technical": {
+        "a": 1,
+        "b": 0
+      },
+      "technical_share": 0.28888888888888886,
+      "technical_share_exact": "13/45",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:fever",
+      "key": "fever",
+      "t1_docs": 14,
+      "stratum_size": {
+        "a": 2,
+        "b": 12
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:demon",
+      "key": "demon",
+      "t1_docs": 13,
+      "stratum_size": {
+        "a": 5,
+        "b": 8
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:8k",
+      "key": "8k",
+      "t1_docs": 13,
+      "stratum_size": {
+        "a": 4,
+        "b": 9
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:photoplethysmography",
+      "key": "photoplethysmography",
+      "t1_docs": 13,
+      "stratum_size": {
+        "a": 2,
+        "b": 11
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:rte",
+      "key": "rte",
+      "t1_docs": 13,
+      "stratum_size": {
+        "a": 3,
+        "b": 10
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 3
+      },
+      "technical_share": 0.9230769230769231,
+      "technical_share_exact": "12/13",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:steganalysis",
+      "key": "steganalysis",
+      "t1_docs": 13,
+      "stratum_size": {
+        "a": 5,
+        "b": 8
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 1
+      },
+      "technical_share": 0.46153846153846156,
+      "technical_share_exact": "6/13",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:triviaqa",
+      "key": "triviaqa",
+      "t1_docs": 12,
+      "stratum_size": {
+        "a": 3,
+        "b": 9
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:nest",
+      "key": "nest",
+      "t1_docs": 11,
+      "stratum_size": {
+        "a": 0,
+        "b": 11
+      },
+      "shown": {
+        "a": 0,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:caricature",
+      "key": "caricature",
+      "t1_docs": 11,
+      "stratum_size": {
+        "a": 2,
+        "b": 9
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 1
+      },
+      "technical_share": 0.36363636363636365,
+      "technical_share_exact": "4/11",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:tar",
+      "key": "tar",
+      "t1_docs": 11,
+      "stratum_size": {
+        "a": 2,
+        "b": 9
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:primer",
+      "key": "primer",
+      "t1_docs": 10,
+      "stratum_size": {
+        "a": 1,
+        "b": 9
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:demosaicking",
+      "key": "demosaicking",
+      "t1_docs": 10,
+      "stratum_size": {
+        "a": 2,
+        "b": 8
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:erp",
+      "key": "erp",
+      "t1_docs": 10,
+      "stratum_size": {
+        "a": 2,
+        "b": 8
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:misconceptions",
+      "key": "misconceptions",
+      "t1_docs": 10,
+      "stratum_size": {
+        "a": 0,
+        "b": 10
+      },
+      "shown": {
+        "a": 0,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:nutrition",
+      "key": "nutrition",
+      "t1_docs": 10,
+      "stratum_size": {
+        "a": 0,
+        "b": 10
+      },
+      "shown": {
+        "a": 0,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:16k",
+      "key": "16k",
+      "t1_docs": 8,
+      "stratum_size": {
+        "a": 1,
+        "b": 7
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:pansharpening",
+      "key": "pansharpening",
+      "t1_docs": 8,
+      "stratum_size": {
+        "a": 2,
+        "b": 6
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "M:cutout",
+      "key": "cutout",
+      "t1_docs": 7,
+      "stratum_size": {
+        "a": 1,
+        "b": 6
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 2
+      },
+      "technical_share": 0.7142857142857143,
+      "technical_share_exact": "5/7",
+      "decision": "allow"
+    },
+    {
+      "term_id": "M:deflation",
+      "key": "deflation",
+      "t1_docs": 7,
+      "stratum_size": {
+        "a": 2,
+        "b": 5
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 2
+      },
+      "technical_share": 0.7619047619047619,
+      "technical_share_exact": "16/21",
+      "decision": "allow"
+    },
+    {
+      "term_id": "M:grab",
+      "key": "grab",
+      "t1_docs": 7,
+      "stratum_size": {
+        "a": 0,
+        "b": 7
+      },
+      "shown": {
+        "a": 0,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 1
+      },
+      "technical_share": 0.3333333333333333,
+      "technical_share_exact": "1/3",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:retrace",
+      "key": "retrace",
+      "t1_docs": 7,
+      "stratum_size": {
+        "a": 1,
+        "b": 6
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 0
+      },
+      "technical_share": 0.14285714285714285,
+      "technical_share_exact": "1/7",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:adapter",
+      "key": "adapter",
+      "t1_docs": 6,
+      "stratum_size": {
+        "a": 1,
+        "b": 5
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 2
+      },
+      "technical_share": 0.7222222222222222,
+      "technical_share_exact": "13/18",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:lambada",
+      "key": "lambada",
+      "t1_docs": 6,
+      "stratum_size": {
+        "a": 3,
+        "b": 3
+      },
+      "shown": {
+        "a": 3,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:pico",
+      "key": "pico",
+      "t1_docs": 6,
+      "stratum_size": {
+        "a": 1,
+        "b": 5
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 1
+      },
+      "technical_share": 0.2777777777777778,
+      "technical_share_exact": "5/18",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:srf",
+      "key": "srf",
+      "t1_docs": 6,
+      "stratum_size": {
+        "a": 1,
+        "b": 5
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 1
+      },
+      "technical_share": 0.4444444444444444,
+      "technical_share_exact": "4/9",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:parrot",
+      "key": "parrot",
+      "t1_docs": 5,
+      "stratum_size": {
+        "a": 3,
+        "b": 2
+      },
+      "shown": {
+        "a": 3,
+        "b": 2
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:decipherment",
+      "key": "decipherment",
+      "t1_docs": 5,
+      "stratum_size": {
+        "a": 2,
+        "b": 3
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 2,
+        "b": 2
+      },
+      "technical_share": 0.8,
+      "technical_share_exact": "4/5",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:foveation",
+      "key": "foveation",
+      "t1_docs": 5,
+      "stratum_size": {
+        "a": 2,
+        "b": 3
+      },
+      "shown": {
+        "a": 2,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 2
+      },
+      "technical_share": 0.6,
+      "technical_share_exact": "3/5",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:miscellaneous",
+      "key": "miscellaneous",
+      "t1_docs": 5,
+      "stratum_size": {
+        "a": 0,
+        "b": 5
+      },
+      "shown": {
+        "a": 0,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:persuasiveness",
+      "key": "persuasiveness",
+      "t1_docs": 5,
+      "stratum_size": {
+        "a": 1,
+        "b": 4
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:resynthesis",
+      "key": "resynthesis",
+      "t1_docs": 5,
+      "stratum_size": {
+        "a": 3,
+        "b": 2
+      },
+      "shown": {
+        "a": 3,
+        "b": 2
+      },
+      "technical": {
+        "a": 3,
+        "b": 1
+      },
+      "technical_share": 0.8,
+      "technical_share_exact": "4/5",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:ssvep",
+      "key": "ssvep",
+      "t1_docs": 5,
+      "stratum_size": {
+        "a": 1,
+        "b": 4
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:hydra",
+      "key": "hydra",
+      "t1_docs": 4,
+      "stratum_size": {
+        "a": 1,
+        "b": 3
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:avg",
+      "key": "avg",
+      "t1_docs": 4,
+      "stratum_size": {
+        "a": 1,
+        "b": 3
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:htr",
+      "key": "htr",
+      "t1_docs": 4,
+      "stratum_size": {
+        "a": 2,
+        "b": 2
+      },
+      "shown": {
+        "a": 2,
+        "b": 2
+      },
+      "technical": {
+        "a": 2,
+        "b": 2
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:ingenuity",
+      "key": "ingenuity",
+      "t1_docs": 4,
+      "stratum_size": {
+        "a": 0,
+        "b": 4
+      },
+      "shown": {
+        "a": 0,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:landmine",
+      "key": "landmine",
+      "t1_docs": 4,
+      "stratum_size": {
+        "a": 1,
+        "b": 3
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 1,
+        "b": 3
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:sokoban",
+      "key": "sokoban",
+      "t1_docs": 4,
+      "stratum_size": {
+        "a": 1,
+        "b": 3
+      },
+      "shown": {
+        "a": 1,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:delight",
+      "key": "delight",
+      "t1_docs": 3,
+      "stratum_size": {
+        "a": 0,
+        "b": 3
+      },
+      "shown": {
+        "a": 0,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:michael",
+      "key": "michael",
+      "t1_docs": 3,
+      "stratum_size": {
+        "a": 1,
+        "b": 2
+      },
+      "shown": {
+        "a": 1,
+        "b": 2
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:cryptanalysis",
+      "key": "cryptanalysis",
+      "t1_docs": 3,
+      "stratum_size": {
+        "a": 0,
+        "b": 3
+      },
+      "shown": {
+        "a": 0,
+        "b": 3
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:geophysics",
+      "key": "geophysics",
+      "t1_docs": 3,
+      "stratum_size": {
+        "a": 1,
+        "b": 2
+      },
+      "shown": {
+        "a": 1,
+        "b": 2
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:bigg",
+      "key": "bigg",
+      "t1_docs": 2,
+      "stratum_size": {
+        "a": 0,
+        "b": 2
+      },
+      "shown": {
+        "a": 0,
+        "b": 2
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:chimera",
+      "key": "chimera",
+      "t1_docs": 2,
+      "stratum_size": {
+        "a": 0,
+        "b": 2
+      },
+      "shown": {
+        "a": 0,
+        "b": 2
+      },
+      "technical": {
+        "a": 0,
+        "b": 1
+      },
+      "technical_share": 0.5,
+      "technical_share_exact": "1/2",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:clarinet",
+      "key": "clarinet",
+      "t1_docs": 2,
+      "stratum_size": {
+        "a": 1,
+        "b": 1
+      },
+      "shown": {
+        "a": 1,
+        "b": 1
+      },
+      "technical": {
+        "a": 1,
+        "b": 0
+      },
+      "technical_share": 0.5,
+      "technical_share_exact": "1/2",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:hello",
+      "key": "hello",
+      "t1_docs": 2,
+      "stratum_size": {
+        "a": 1,
+        "b": 1
+      },
+      "shown": {
+        "a": 1,
+        "b": 1
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:reformer",
+      "key": "reformer",
+      "t1_docs": 2,
+      "stratum_size": {
+        "a": 0,
+        "b": 2
+      },
+      "shown": {
+        "a": 0,
+        "b": 2
+      },
+      "technical": {
+        "a": 0,
+        "b": 2
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "M:uphold",
+      "key": "uphold",
+      "t1_docs": 2,
+      "stratum_size": {
+        "a": 0,
+        "b": 2
+      },
+      "shown": {
+        "a": 0,
+        "b": 2
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:cola",
+      "key": "cola",
+      "t1_docs": 2,
+      "stratum_size": {
+        "a": 2,
+        "b": 0
+      },
+      "shown": {
+        "a": 2,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:decompensation",
+      "key": "decompensation",
+      "t1_docs": 2,
+      "stratum_size": {
+        "a": 0,
+        "b": 2
+      },
+      "shown": {
+        "a": 0,
+        "b": 2
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:implicatures",
+      "key": "implicatures",
+      "t1_docs": 2,
+      "stratum_size": {
+        "a": 0,
+        "b": 2
+      },
+      "shown": {
+        "a": 0,
+        "b": 2
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:metamerism",
+      "key": "metamerism",
+      "t1_docs": 2,
+      "stratum_size": {
+        "a": 1,
+        "b": 1
+      },
+      "shown": {
+        "a": 1,
+        "b": 1
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:pathfinder",
+      "key": "pathfinder",
+      "t1_docs": 2,
+      "stratum_size": {
+        "a": 1,
+        "b": 1
+      },
+      "shown": {
+        "a": 1,
+        "b": 1
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:retrosynthesis",
+      "key": "retrosynthesis",
+      "t1_docs": 2,
+      "stratum_size": {
+        "a": 0,
+        "b": 2
+      },
+      "shown": {
+        "a": 0,
+        "b": 2
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:accordion",
+      "key": "accordion",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 0,
+        "b": 1
+      },
+      "shown": {
+        "a": 0,
+        "b": 1
+      },
+      "technical": {
+        "a": 0,
+        "b": 1
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "M:pythia",
+      "key": "pythia",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 1,
+        "b": 0
+      },
+      "shown": {
+        "a": 1,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:tofu",
+      "key": "tofu",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 0,
+        "b": 1
+      },
+      "shown": {
+        "a": 0,
+        "b": 1
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:tst",
+      "key": "tst",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 0,
+        "b": 1
+      },
+      "shown": {
+        "a": 0,
+        "b": 1
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:yellowfin",
+      "key": "yellowfin",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 0,
+        "b": 1
+      },
+      "shown": {
+        "a": 0,
+        "b": 1
+      },
+      "technical": {
+        "a": 0,
+        "b": 1
+      },
+      "technical_share": 1.0,
+      "technical_share_exact": "1",
+      "decision": "allow"
+    },
+    {
+      "term_id": "T:acrobot",
+      "key": "acrobot",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 0,
+        "b": 1
+      },
+      "shown": {
+        "a": 0,
+        "b": 1
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:birl",
+      "key": "birl",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 1,
+        "b": 0
+      },
+      "shown": {
+        "a": 1,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:fad",
+      "key": "fad",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 0,
+        "b": 1
+      },
+      "shown": {
+        "a": 0,
+        "b": 1
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:jurisprudence",
+      "key": "jurisprudence",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 0,
+        "b": 1
+      },
+      "shown": {
+        "a": 0,
+        "b": 1
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:listops",
+      "key": "listops",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 0,
+        "b": 1
+      },
+      "shown": {
+        "a": 0,
+        "b": 1
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:medqa",
+      "key": "medqa",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 1,
+        "b": 0
+      },
+      "shown": {
+        "a": 1,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:mrpc",
+      "key": "mrpc",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 0,
+        "b": 1
+      },
+      "shown": {
+        "a": 0,
+        "b": 1
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:nethack",
+      "key": "nethack",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 0,
+        "b": 1
+      },
+      "shown": {
+        "a": 0,
+        "b": 1
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:rag",
+      "key": "rag",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 1,
+        "b": 0
+      },
+      "shown": {
+        "a": 1,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:rllib",
+      "key": "rllib",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 1,
+        "b": 0
+      },
+      "shown": {
+        "a": 1,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:solitaire",
+      "key": "solitaire",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 0,
+        "b": 1
+      },
+      "shown": {
+        "a": 0,
+        "b": 1
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "T:vnla",
+      "key": "vnla",
+      "t1_docs": 1,
+      "stratum_size": {
+        "a": 1,
+        "b": 0
+      },
+      "shown": {
+        "a": 1,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": 0.0,
+      "technical_share_exact": "0",
+      "decision": "reject"
+    },
+    {
+      "term_id": "M:bidet",
+      "key": "bidet",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "M:bort",
+      "key": "bort",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "M:chinchilla",
+      "key": "chinchilla",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "M:crossbow",
+      "key": "crossbow",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "M:florence",
+      "key": "florence",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "M:hamburger",
+      "key": "hamburger",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "M:involution",
+      "key": "involution",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "M:jukebox",
+      "key": "jukebox",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "M:llama",
+      "key": "llama",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "M:macaw",
+      "key": "macaw",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "M:nebula",
+      "key": "nebula",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "M:relic",
+      "key": "relic",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "M:roberta",
+      "key": "roberta",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "M:serf",
+      "key": "serf",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "M:test",
+      "key": "test",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:3dgs",
+      "key": "3dgs",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:abbreviationdetection",
+      "key": "abbreviationdetection",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:anachronisms",
+      "key": "anachronisms",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:arabicmmlu",
+      "key": "arabicmmlu",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:audiocaps",
+      "key": "audiocaps",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:belebele",
+      "key": "belebele",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:bench2drive",
+      "key": "bench2drive",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:brats2021",
+      "key": "brats2021",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:contextner",
+      "key": "contextner",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:cyberbattlesim",
+      "key": "cyberbattlesim",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:d4rl",
+      "key": "d4rl",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:demoire",
+      "key": "demoire",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:derendering",
+      "key": "derendering",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:drugprot",
+      "key": "drugprot",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:editcompletion",
+      "key": "editcompletion",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:egoschema",
+      "key": "egoschema",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:elasticity3d",
+      "key": "elasticity3d",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:flue",
+      "key": "flue",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:focusnews",
+      "key": "focusnews",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:fquad",
+      "key": "fquad",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:geochemistry",
+      "key": "geochemistry",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:glinear",
+      "key": "glinear",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:goop2d",
+      "key": "goop2d",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:gsm8k",
+      "key": "gsm8k",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:haerae",
+      "key": "haerae",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:hellaswag",
+      "key": "hellaswag",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:humaneval",
+      "key": "humaneval",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:hyperbaton",
+      "key": "hyperbaton",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:ifun",
+      "key": "ifun",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:im2spec",
+      "key": "im2spec",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:isac",
+      "key": "isac",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:isvr",
+      "key": "isvr",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:klondike",
+      "key": "klondike",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:kmmlu",
+      "key": "kmmlu",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:lightfield",
+      "key": "lightfield",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:mamba",
+      "key": "mamba",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:mbpp",
+      "key": "mbpp",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:mme",
+      "key": "mme",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:mmlu",
+      "key": "mmlu",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:mono3dvg",
+      "key": "mono3dvg",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:multimaterial2d",
+      "key": "multimaterial2d",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:mvbench",
+      "key": "mvbench",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:navsim",
+      "key": "navsim",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:nerf",
+      "key": "nerf",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:netsecgame",
+      "key": "netsecgame",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:orangesum",
+      "key": "orangesum",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:panop",
+      "key": "panop",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:phmbench",
+      "key": "phmbench",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:plan2scene",
+      "key": "plan2scene",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:plasticine3d",
+      "key": "plasticine3d",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:prehistory",
+      "key": "prehistory",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:qnli",
+      "key": "qnli",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:qqp",
+      "key": "qqp",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:sand2d",
+      "key": "sand2d",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:senter",
+      "key": "senter",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:sents",
+      "key": "sents",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:singleeq",
+      "key": "singleeq",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:smac",
+      "key": "smac",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:smac+",
+      "key": "smac+",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:snarks",
+      "key": "snarks",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:sstod",
+      "key": "sstod",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:steganographics",
+      "key": "steganographics",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:strategyqa",
+      "key": "strategyqa",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:text2sparql",
+      "key": "text2sparql",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:textvqa",
+      "key": "textvqa",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:timedial",
+      "key": "timedial",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:tirod",
+      "key": "tirod",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:truthfulqa",
+      "key": "truthfulqa",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:uie",
+      "key": "uie",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:uncropping",
+      "key": "uncropping",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:valnov",
+      "key": "valnov",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:vgsi",
+      "key": "vgsi",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:virology",
+      "key": "virology",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:visu",
+      "key": "visu",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:waterdrop2d",
+      "key": "waterdrop2d",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:winogrande",
+      "key": "winogrande",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:winowhy",
+      "key": "winowhy",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    },
+    {
+      "term_id": "T:wnli",
+      "key": "wnli",
+      "t1_docs": 0,
+      "stratum_size": {
+        "a": 0,
+        "b": 0
+      },
+      "shown": {
+        "a": 0,
+        "b": 0
+      },
+      "technical": {
+        "a": 0,
+        "b": 0
+      },
+      "technical_share": null,
+      "decision": "excluded_no_t1_docs"
+    }
+  ]
+}

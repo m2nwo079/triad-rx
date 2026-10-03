@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "step": "apply_m1_fix",
+    "timepoint": "T1",
+    "created": "2026-10-04",
+    "git_commit": "a6666cf2e3dcca9fbb590aa61d3e26afeccea7e4",
+    "window": [
+      "2014-01-01T00:00:00+00:00",
+      "2018-12-31T23:59:59+00:00"
+    ],
+    "m1_fix": {
+      "junk_pattern": "[<>\"{}\\[\\]|\\\\`]",
+      "r3_exclude": [
+        {
+          "term_id": "M:linear discriminant analysis",
+          "surface": "LDA"
+        },
+        {
+          "term_id": "M:energy based model",
+          "surface": "EBM"
+        },
+        {
+          "term_id": "M:slime mould algorithm",
+          "surface": "SMA"
+        },
+        {
+          "term_id": "M:conditional random field",
+          "surface": "CRF"
+        },
+        {
+          "term_id": "M:diffusion convolutional neural networks",
+          "surface": "DCNN"
+        },
+        {
+          "term_id": "M:semantic cross attention",
+          "surface": "SCA"
+        },
+        {
+          "term_id": "M:switchable atrous convolution",
+          "surface": "SAC"
+        },
+        {
+          "term_id": "M:g3d",
+          "surface": "G3D"
+        },
+        {
+          "term_id": "M:region proposal network",
+          "surface": "RPN"
+        },
+        {
+          "term_id": "M:approximate bayesian computation",
+          "surface": "ABC"
+        },
+        {
+          "term_id": "M:masked autoencoder",
+          "surface": "MAE"
+        }
+      ]
+    },
+    "papers_sha256": "f1cf789f7b470b6d2d7ffb269d65add6131e0f56058833889ab1759dfd859f31",
+    "vocab_sha256": "b90fcd78264a33e2d3dc30be26b579fd7864ab967211c8db1bcba15f6325deb0",
+    "r4_decisions_sha256": "472f3e5e40fe9dd47bb185901fe36450f441311fb5b9ebdaf8d716c089609127",
+    "after_r6_sha256": "dfd8bc3c40d8fc2c4e9bbee773715892357f74542e8e4bf2e3d1f34cbf1d0528"
+  },
+  "stats": {
+    "window_papers": 58001,
+    "terms_in": 2885,
+    "surfaces_removed": 12,
+    "terms_removed": 2,
+    "terms_matched": 2880
+  }
+}

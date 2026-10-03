@@ -2,6 +2,9 @@
 pandas>=2.2
 pyarrow>=15.0
 
+# Numerical routines used directly (quantiles in rule R6)
+numpy>=1.26
+
 # Testing (leakage checks and report-vs-JSON checks)
 pytest>=8.0
 

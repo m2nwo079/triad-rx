@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "step": "m1_sample_T1",
+    "attempt": 1,
+    "seed": 20261004,
+    "created": "2026-10-04",
+    "git_commit": "3d434407c92368dc2feb84a9aac5661154dd90b0",
+    "quality_m1": {
+      "seed": 20261003,
+      "n_per_stratum": 100,
+      "strata": [
+        "method_ci",
+        "task_ci",
+        "acronym_cs"
+      ],
+      "pass_rule": {
+        "statistic": "wilson_lower_95",
+        "pass": 0.8,
+        "conditional": 0.75
+      },
+      "max_remeasure": 2
+    },
+    "stage": "after_m1fix",
+    "stage_sha256": "7a801b30a2bad79753756e425e9ef2f2b037fd1690df2aa6222102d52bdd78c1",
+    "matches_sha256": "6a54148583322ce7da50a0e55ee824474406edf5c4c959612fd204d71998e33f",
+    "sampling": "per stratum, uniform over matches of the stage vocabulary with at most one match per paper"
+  },
+  "sampled": {
+    "method_ci": 100,
+    "task_ci": 100,
+    "acronym_cs": 100
+  },
+  "stratum_match_counts": {
+    "method_ci": 20389,
+    "task_ci": 88747,
+    "acronym_cs": 11048
+  },
+  "missing_sentence": 0
+}
