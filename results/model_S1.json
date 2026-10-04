@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "step": "train",
+    "variant": "S1",
+    "created": "2026-10-04",
+    "git_commit": "a9990cd7d33297a46b71df59e432b5cb1c51347f",
+    "model_config": {
+      "type": "lightgbm_binary",
+      "params": {
+        "num_leaves": 7,
+        "min_data_in_leaf": 20,
+        "learning_rate": 0.05,
+        "feature_fraction": 0.8,
+        "bagging_fraction": 0.8,
+        "bagging_freq": 1,
+        "lambda_l2": 1.0
+      },
+      "n_estimators_max": 2000,
+      "early_stopping_rounds": 100,
+      "cv_folds": 5,
+      "cv_metric": "average_precision",
+      "seeds": [
+        20261011,
+        20261012,
+        20261013,
+        20261014,
+        20261015
+      ],
+      "engine_sets": [
+        "P",
+        "H",
+        "T",
+        "R"
+      ],
+      "v2_baseline_sets": [
+        "P",
+        "T",
+        "R"
+      ]
+    },
+    "lightgbm": "4.7.0",
+    "train_features_sha256": "8ab586a07d58058ea19094deb27196cbab35bf1f48ad14e269f4385e04d0c4b4",
+    "train_labels_sha256": "1d37d7dbb3c2170a6905533a1b0ed8edbf480a0e77c62e8b3a67cdadf111dd62"
+  },
+  "train": {
+    "candidates": 5228,
+    "positives": 47
+  },
+  "models": {
+    "engine": {
+      "sets": [
+        "P",
+        "H",
+        "T",
+        "R"
+      ],
+      "features": [
+        "P_aa_min",
+        "P_aa_mean",
+        "P_aa_gmean",
+        "P_cn_min",
+        "P_cn_mean",
+        "P_cn_gmean",
+        "P_npmi_min",
+        "P_npmi_mean",
+        "P_npmi_max",
+        "P_logfreq_min",
+        "P_logfreq_mean",
+        "H_pairedges_min",
+        "H_pairedges_mean",
+        "H_pairedges_gmean",
+        "H_triad_cn",
+        "H_size_weighted_aa",
+        "H_related_edge_size_mean",
+        "H_open_triangle",
+        "T_cos_mean",
+        "T_cos_min",
+        "T_volume",
+        "R_growth_min",
+        "R_growth_mean"
+      ],
+      "rounds": 72,
+      "cv_average_precision_mean": 0.40305170240852295,
+      "cv_average_precision_sd": 0.13120418185180777,
+      "importance_gain_mean": {
+        "P_npmi_max": 1328.784877872467,
+        "P_npmi_mean": 646.5936598300934,
+        "R_growth_min": 358.5980702638626,
+        "T_volume": 226.59099943637847,
+        "P_npmi_min": 146.0420603275299,
+        "R_growth_mean": 133.89724147319794,
+        "T_cos_min": 118.63308341503144,
+        "P_logfreq_mean": 97.99960861206054,
+        "P_aa_min": 84.95916233062744,
+        "H_related_edge_size_mean": 80.81305365562439,
+        "P_cn_gmean": 63.18648784160614,
+        "H_pairedges_min": 62.95714993476868,
+        "P_logfreq_min": 62.89014186859131,
+        "T_cos_mean": 54.405952072143556,
+        "P_aa_mean": 42.38760995864868,
+        "H_pairedges_gmean": 38.780085825920104,
+        "H_size_weighted_aa": 35.58329615592957,
+        "P_aa_gmean": 33.439677715301514,
+        "P_cn_min": 28.290410017967226,
+        "H_pairedges_mean": 24.45386383533478,
+        "H_triad_cn": 21.47324380874634,
+        "P_cn_mean": 16.025119733810424,
+        "H_open_triangle": 0.0
+      }
+    },
+    "baseline": {
+      "sets": [
+        "P",
+        "T",
+        "R"
+      ],
+      "features": [
+        "P_aa_min",
+        "P_aa_mean",
+        "P_aa_gmean",
+        "P_cn_min",
+        "P_cn_mean",
+        "P_cn_gmean",
+        "P_npmi_min",
+        "P_npmi_mean",
+        "P_npmi_max",
+        "P_logfreq_min",
+        "P_logfreq_mean",
+        "T_cos_mean",
+        "T_cos_min",
+        "T_volume",
+        "R_growth_min",
+        "R_growth_mean"
+      ],
+      "rounds": 51,
+      "cv_average_precision_mean": 0.40630326534692884,
+      "cv_average_precision_sd": 0.12488814202921858,
+      "importance_gain_mean": {
+        "P_npmi_max": 1319.2993368387222,
+        "P_npmi_mean": 584.8209772109985,
+        "R_growth_min": 338.62899789810183,
+        "T_volume": 212.3202953338623,
+        "P_npmi_min": 170.29944212436675,
+        "R_growth_mean": 132.93241786956787,
+        "P_aa_min": 116.47554123401642,
+        "T_cos_min": 109.7732572555542,
+        "P_logfreq_mean": 81.91207599639893,
+        "T_cos_mean": 52.34114606380463,
+        "P_cn_gmean": 50.711349678039554,
+        "P_logfreq_min": 50.43248016834259,
+        "P_aa_mean": 46.03406400680542,
+        "P_aa_gmean": 31.668134355545043,
+        "P_cn_min": 19.063171911239625,
+        "P_cn_mean": 16.381276154518126
+      }
+    }
+  },
+  "scored": {
+    "T2": {
+      "candidates": 33860,
+      "features_sha256": "e5098f0f7b43fc3b3d67aebe6d6ab865cf70f61666ba288cd117ede0eb02210e"
+    }
+  }
+}

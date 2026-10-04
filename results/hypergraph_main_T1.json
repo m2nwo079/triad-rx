@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "step": "hypergraph",
+    "timepoint": "T1",
+    "variant": "main",
+    "papers_sha256": "f1cf789f7b470b6d2d7ffb269d65add6131e0f56058833889ab1759dfd859f31",
+    "final_vocab_sha256": "a5bfa78f8458156765ce0e6180ffa83e3d6f5ffe4f7763ebbddc611eb8cc3198"
+  },
+  "windows": {
+    "build": {
+      "window": [
+        "2014-01-01T00:00:00+00:00",
+        "2018-12-31T23:59:59+00:00"
+      ],
+      "created": "2026-10-04",
+      "git_commit": "e4fc4d23b52ecd523c9e845cfaa23c0150402ad8",
+      "papers_in_window": 58001,
+      "papers_with_terms": 46796,
+      "hyperedges_size_ge2": 31536,
+      "hyperedges_size_ge3": 18527,
+      "mean_size": 2.4336695444055048,
+      "total_links": 113886,
+      "nodes_in_vocabulary": 1439,
+      "nodes_matched": 1439
+    },
+    "label": {
+      "window": [
+        "2020-01-01T00:00:00+00:00",
+        "2021-12-31T23:59:59+00:00"
+      ],
+      "created": "2026-10-04",
+      "git_commit": "e4fc4d23b52ecd523c9e845cfaa23c0150402ad8",
+      "papers_in_window": 92001,
+      "papers_with_terms": 78673,
+      "hyperedges_size_ge2": 57171,
+      "hyperedges_size_ge3": 35426,
+      "mean_size": 2.6228439235824235,
+      "total_links": 206347,
+      "nodes_in_vocabulary": 1439,
+      "nodes_matched": 1426
+    }
+  }
+}

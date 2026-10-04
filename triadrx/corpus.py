@@ -3,7 +3,7 @@ import datetime
 
 import pandas as pd
 
-from triadrx.study import build_window, data_cutoff
+from triadrx.study import build_window, data_cutoff, label_window
 from triadrx.text import Matcher
 
 PAPERS_COLUMNS = ["id", "title", "abstract", "first_date"]
@@ -27,3 +27,11 @@ def match_papers(window: pd.DataFrame, terms: list[dict]) -> pd.DataFrame:
         for tid, mode in sorted({(s["id"], s["mode"]) for s in spans}):
             rows.append((pid, tid, mode))
     return pd.DataFrame(rows, columns=["paper_id", "term_id", "mode"])
+
+
+def label_papers(papers_path, timepoint: str, study: dict) -> tuple[pd.DataFrame, datetime.datetime, datetime.datetime]:
+    """Papers first submitted inside the timepoint's label window, sorted by id."""
+    start, end = label_window(timepoint, study)
+    papers = pd.read_parquet(papers_path, columns=PAPERS_COLUMNS)
+    window = papers[(papers["first_date"] >= start) & (papers["first_date"] <= end)].sort_values("id")
+    return window, start, end

@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "step": "candidates",
+    "timepoint": "T1",
+    "variant": "S1",
+    "created": "2026-10-04",
+    "git_commit": "a9990cd7d33297a46b71df59e432b5cb1c51347f",
+    "candidates_config": {
+      "pair_rule": "pair_stability_with_r5_stability",
+      "two_hop": {
+        "score": "adamic_adar_missing_pair",
+        "tie_break": [
+          "weakest_pair_count",
+          "triad_id"
+        ],
+        "n_ratio_to_open_triangles": 1.0
+      },
+      "coherence": "exclude_all_task_triads"
+    },
+    "stability": 0.95,
+    "hypergraph_sha256": "f48eea3c086f9ed68c95ceeaf78036524fa895a50c0cc9ac21dc0a488e542a25",
+    "m1_sha256": "3ca5da9f01fd1dd31c70e3ee8b7c65b8def4d3d8cfe4fbe6b026c5b98f7139ef"
+  },
+  "stats": {
+    "nodes_linked": 739,
+    "pair_edges": 3472,
+    "open_triangles_before_filter": 4991,
+    "open_triangles": 2614,
+    "two_hop_space_after_filter": 103247,
+    "two_hop_selected": 2614,
+    "candidates": 5228,
+    "type_mix": {
+      "MMM": 144,
+      "MMT": 1157,
+      "MTT": 3927
+    }
+  }
+}

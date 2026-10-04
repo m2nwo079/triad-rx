@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "step": "hypergraph",
+    "timepoint": "T2",
+    "variant": "S1",
+    "papers_sha256": "f1cf789f7b470b6d2d7ffb269d65add6131e0f56058833889ab1759dfd859f31",
+    "final_vocab_sha256": "53e10a323134540b7907e1c9be0ddcc8a0b2e5b74d692305efd64e77148182ed"
+  },
+  "windows": {
+    "build": {
+      "window": [
+        "2017-01-01T00:00:00+00:00",
+        "2021-12-31T23:59:59+00:00"
+      ],
+      "created": "2026-10-04",
+      "git_commit": "a9990cd7d33297a46b71df59e432b5cb1c51347f",
+      "papers_in_window": 161831,
+      "papers_with_terms": 136436,
+      "hyperedges_size_ge2": 96860,
+      "hyperedges_size_ge3": 58695,
+      "mean_size": 2.5426427042716,
+      "total_links": 346908,
+      "nodes_in_vocabulary": 2316,
+      "nodes_matched": 2316,
+      "s1_terms_before_r5": 2434,
+      "s1_terms_after_r5": 2316
+    }
+  }
+}

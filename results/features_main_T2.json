@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "step": "features",
+    "timepoint": "T2",
+    "variant": "main",
+    "created": "2026-10-04",
+    "git_commit": "ee8052ce4ccb67047316ebe24deb7cca05e6ef8c",
+    "features_config": {
+      "recent_years": 2,
+      "text": {
+        "min_df": 5,
+        "max_df": 0.5,
+        "max_features": 50000,
+        "svd_dims": 100,
+        "seed": 20261004
+      },
+      "sets": {
+        "P": [
+          "P_aa_min",
+          "P_aa_mean",
+          "P_aa_gmean",
+          "P_cn_min",
+          "P_cn_mean",
+          "P_cn_gmean",
+          "P_npmi_min",
+          "P_npmi_mean",
+          "P_npmi_max",
+          "P_logfreq_min",
+          "P_logfreq_mean"
+        ],
+        "H": [
+          "H_pairedges_min",
+          "H_pairedges_mean",
+          "H_pairedges_gmean",
+          "H_triad_cn",
+          "H_size_weighted_aa",
+          "H_related_edge_size_mean",
+          "H_open_triangle"
+        ],
+        "T": [
+          "T_cos_mean",
+          "T_cos_min",
+          "T_volume"
+        ],
+        "R": [
+          "R_growth_min",
+          "R_growth_mean"
+        ]
+      }
+    },
+    "build_window": [
+      "2017-01-01T00:00:00+00:00",
+      "2021-12-31T23:59:59+00:00"
+    ],
+    "recent_start": "2020-01-01T00:00:00+00:00",
+    "hypergraph_sha256": "bdc988660a6a184102fde269596f4e2fc1c379f33b86c4cc5a8c8ef0f1c9586d",
+    "candidates_sha256": "2f4d83386c782dab1b9d86b90eac1959b7e16446c4b977c4ae4359430ac05244"
+  },
+  "stats": {
+    "candidates": 40792,
+    "features": 23,
+    "nan_cells": 0,
+    "svd_explained_variance": 0.3546089136165304
+  }
+}

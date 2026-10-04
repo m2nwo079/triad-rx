@@ -1,5 +1,5 @@
 {
-  "design_version": "v0.3.9",
+  "design_version": "v0.3.14",
   "design_section": "10.2",
   "arxiv_categories": [
     "cs.LG",
@@ -156,5 +156,114 @@
         "cs"
       ]
     }
+  },
+  "candidates": {
+    "pair_rule": "pair_stability_with_r5_stability",
+    "two_hop": {
+      "score": "adamic_adar_missing_pair",
+      "tie_break": [
+        "weakest_pair_count",
+        "triad_id"
+      ],
+      "n_ratio_to_open_triangles": 1.0
+    },
+    "coherence": "exclude_all_task_triads"
+  },
+  "labels": {
+    "null_model": "chung_lu_triadic",
+    "probability_cap": 1.0,
+    "test": "poisson_binomial_upper_tail_exact_by_degree",
+    "correction": "benjamini_hochberg",
+    "fdr": 0.05,
+    "scope": "all candidates of the timepoint"
+  },
+  "features": {
+    "recent_years": 2,
+    "text": {
+      "min_df": 5,
+      "max_df": 0.5,
+      "max_features": 50000,
+      "svd_dims": 100,
+      "seed": 20261004
+    },
+    "sets": {
+      "P": [
+        "P_aa_min",
+        "P_aa_mean",
+        "P_aa_gmean",
+        "P_cn_min",
+        "P_cn_mean",
+        "P_cn_gmean",
+        "P_npmi_min",
+        "P_npmi_mean",
+        "P_npmi_max",
+        "P_logfreq_min",
+        "P_logfreq_mean"
+      ],
+      "H": [
+        "H_pairedges_min",
+        "H_pairedges_mean",
+        "H_pairedges_gmean",
+        "H_triad_cn",
+        "H_size_weighted_aa",
+        "H_related_edge_size_mean",
+        "H_open_triangle"
+      ],
+      "T": [
+        "T_cos_mean",
+        "T_cos_min",
+        "T_volume"
+      ],
+      "R": [
+        "R_growth_min",
+        "R_growth_mean"
+      ]
+    }
+  },
+  "model": {
+    "type": "lightgbm_binary",
+    "params": {
+      "num_leaves": 7,
+      "min_data_in_leaf": 20,
+      "learning_rate": 0.05,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambda_l2": 1.0
+    },
+    "n_estimators_max": 2000,
+    "early_stopping_rounds": 100,
+    "cv_folds": 5,
+    "cv_metric": "average_precision",
+    "seeds": [
+      20261011,
+      20261012,
+      20261013,
+      20261014,
+      20261015
+    ],
+    "engine_sets": [
+      "P",
+      "H",
+      "T",
+      "R"
+    ],
+    "v2_baseline_sets": [
+      "P",
+      "T",
+      "R"
+    ]
+  },
+  "evaluation": {
+    "top_k": 100,
+    "secondary_k": [
+      50,
+      500
+    ],
+    "bootstrap_n": 1000,
+    "bootstrap_seed": 20261016,
+    "ci_level": 0.95,
+    "rule": "pass only if both candidate and term-block bootstrap lower bounds exceed the threshold",
+    "score": "mean predicted probability over model seeds"
   }
 }

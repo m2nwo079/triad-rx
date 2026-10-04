@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "step": "candidate_scale",
+    "created": "2026-10-04",
+    "git_commit": "495d9e659a3fe10ec855bbc6a6bdb3089f2ae40a",
+    "list_limit": 20000000
+  },
+  "timepoints": {
+    "T1": {
+      "closed_triads": 76742,
+      "by_min_support": [
+        {
+          "min_support": 1,
+          "nodes": 1439,
+          "pair_edges": 34970,
+          "wedges": 7090822,
+          "triangles": 425172,
+          "open_triangles": 348430,
+          "open_triangles_with_task": 342725,
+          "listed": true,
+          "seconds": 0.5
+        },
+        {
+          "min_support": 2,
+          "nodes": 1378,
+          "pair_edges": 14301,
+          "wedges": 2311359,
+          "triangles": 110350,
+          "open_triangles": 74306,
+          "open_triangles_with_task": 73125,
+          "listed": true,
+          "seconds": 0.1
+        },
+        {
+          "min_support": 3,
+          "nodes": 1232,
+          "pair_edges": 8823,
+          "wedges": 1197368,
+          "triangles": 53257,
+          "open_triangles": 29821,
+          "open_triangles_with_task": 29369,
+          "listed": true,
+          "seconds": 0.1
+        },
+        {
+          "min_support": 5,
+          "nodes": 897,
+          "pair_edges": 4832,
+          "wedges": 476956,
+          "triangles": 21876,
+          "open_triangles": 8795,
+          "open_triangles_with_task": 8649,
+          "listed": true,
+          "seconds": 0.0
+        }
+      ],
+      "pair_stability": {
+        "rule": "pair_stability",
+        "stability": 0.95,
+        "nodes": 763,
+        "pair_edges": 3764,
+        "open_triangles": 5274,
+        "open_triangles_mixed_method_task": 2760,
+        "two_hop_wedges_with_missing_pair": 270751
+      }
+    },
+    "T2": {
+      "closed_triads": 273260,
+      "by_min_support": [
+        {
+          "min_support": 1,
+          "nodes": 2489,
+          "pair_edges": 94256,
+          "wedges": 32916651,
+          "triangles": 1946055,
+          "open_triangles": 1672795,
+          "open_triangles_with_task": 1638842,
+          "listed": true,
+          "seconds": 2.4
+        },
+        {
+          "min_support": 2,
+          "nodes": 2440,
+          "pair_edges": 41013,
+          "wedges": 11867725,
+          "triangles": 557340,
+          "open_triangles": 408589,
+          "open_triangles_with_task": 401802,
+          "listed": true,
+          "seconds": 0.6
+        },
+        {
+          "min_support": 3,
+          "nodes": 2273,
+          "pair_edges": 26392,
+          "wedges": 6527053,
+          "triangles": 289253,
+          "open_triangles": 183425,
+          "open_triangles_with_task": 180722,
+          "listed": true,
+          "seconds": 0.3
+        },
+        {
+          "min_support": 5,
+          "nodes": 1839,
+          "pair_edges": 15529,
+          "wedges": 3016706,
+          "triangles": 130712,
+          "open_triangles": 63970,
+          "open_triangles_with_task": 63159,
+          "listed": true,
+          "seconds": 0.1
+        }
+      ],
+      "pair_stability": {
+        "rule": "pair_stability",
+        "stability": 0.95,
+        "nodes": 1596,
+        "pair_edges": 12449,
+        "open_triangles": 39754,
+        "open_triangles_mixed_method_task": 19943,
+        "two_hop_wedges_with_missing_pair": 1898617
+      }
+    },
+    "applied": {
+      "closed_triads": 659349,
+      "by_min_support": [
+        {
+          "min_support": 1,
+          "nodes": 3232,
+          "pair_edges": 188177,
+          "wedges": 93028211,
+          "triangles": 6716029,
+          "open_triangles": 6056680,
+          "open_triangles_with_task": 5922469,
+          "listed": true,
+          "seconds": 9.3
+        },
+        {
+          "min_support": 2,
+          "nodes": 3179,
+          "pair_edges": 86421,
+          "wedges": 34773869,
+          "triangles": 2124019,
+          "open_triangles": 1713876,
+          "open_triangles_with_task": 1683178,
+          "listed": true,
+          "seconds": 2.8
+        },
+        {
+          "min_support": 3,
+          "nodes": 2977,
+          "pair_edges": 57652,
+          "wedges": 20142061,
+          "triangles": 1148982,
+          "open_triangles": 835943,
+          "open_triangles_with_task": 822824,
+          "listed": true,
+          "seconds": 1.5
+        },
+        {
+          "min_support": 5,
+          "nodes": 2503,
+          "pair_edges": 35446,
+          "wedges": 10194511,
+          "triangles": 545938,
+          "open_triangles": 329797,
+          "open_triangles_with_task": 325313,
+          "listed": true,
+          "seconds": 0.6
+        }
+      ],
+      "pair_stability": {
+        "rule": "pair_stability",
+        "stability": 0.95,
+        "nodes": 2286,
+        "pair_edges": 28945,
+        "open_triangles": 217412,
+        "open_triangles_mixed_method_task": 107403,
+        "two_hop_wedges_with_missing_pair": 6463163
+      }
+    }
+  }
+}

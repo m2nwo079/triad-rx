@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "step": "labels",
+    "timepoint": "T1",
+    "variant": "main",
+    "created": "2026-10-04",
+    "git_commit": "ea57066ca24bc0af98962ccbf3f9fed478eab041",
+    "labels_config": {
+      "null_model": "chung_lu_triadic",
+      "probability_cap": 1.0,
+      "test": "poisson_binomial_upper_tail_exact_by_degree",
+      "correction": "benjamini_hochberg",
+      "fdr": 0.05,
+      "scope": "all candidates of the timepoint"
+    },
+    "label_hypergraph_sha256": "108d4d1d9f9a645c50043a565c926f72d1756bd7603ca2176bcba4c1ce57f344",
+    "candidates_sha256": "6aa149df9bb84f0c866f789c31f5c598e6f9033d3f2e03b414188606c8f207ba"
+  },
+  "stats": {
+    "candidates": 5700,
+    "observed_ge1": 1905,
+    "positives": 59,
+    "positive_rate": 0.010350877192982456,
+    "positives_by_kind": {
+      "open_triangle": 43,
+      "two_hop": 16
+    },
+    "candidates_by_kind": {
+      "open_triangle": 2850,
+      "two_hop": 2850
+    },
+    "label_window_papers": 78673,
+    "label_window_links": 206347
+  }
+}

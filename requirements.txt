@@ -10,3 +10,11 @@ pytest>=8.0
 
 # Report generation from results JSON
 jinja2>=3.1
+
+# Exploratory and report figures
+networkx>=3.2
+matplotlib>=3.8
+
+# Features and model (design 5.3, 5.5)
+scikit-learn>=1.4
+lightgbm>=4.3

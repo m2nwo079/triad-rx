@@ -39,3 +39,12 @@ def build_window(timepoint: str, study: dict, cutoff: datetime.datetime | None =
         start = cutoff.replace(year=cutoff.year - years)
         return start, cutoff
     raise ValueError(f"unknown timepoint {timepoint!r}")
+
+
+def label_window(timepoint: str, study: dict):
+    """Inclusive label window for T1 or T2 as timezone-aware datetimes (start, end)."""
+    if timepoint not in study["timepoints"]:
+        raise ValueError(f"{timepoint!r} has no label window")
+    utc = datetime.timezone.utc
+    first, last = study["timepoints"][timepoint]["label"]
+    return datetime.datetime(first, 1, 1, tzinfo=utc), datetime.datetime(last, 12, 31, 23, 59, 59, tzinfo=utc)
