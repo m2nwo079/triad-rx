@@ -1,0 +1,1070 @@
+{
+  "meta": {
+    "step": "applied",
+    "created": "2026-10-04",
+    "git_commit": "7736c336a60a9e27a906493ae0daca6292c6cb2d",
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "feature_sets": [
+      "P",
+      "T",
+      "R"
+    ],
+    "reliability_flag": "engine reliability not established (V1 failed)",
+    "applied_config": {
+      "build_years": 5,
+      "anchor": "data_cutoff",
+      "prescription": {
+        "redundancy_rules": [
+          "D1_same_name_ignoring_spaces",
+          "D2_method_name_within_task_name",
+          "D3_same_type_text_cosine"
+        ],
+        "d3_same_type_cosine_quantile": 0.985,
+        "training": "T1+T2 labels, feature sets by V2 verdict, trees by stratified CV on the combined set",
+        "calibration": "none (ranking only; expected hit rate is the T2 Precision@k of the engine used)"
+      }
+    },
+    "model_params": {
+      "num_leaves": 7,
+      "min_data_in_leaf": 20,
+      "learning_rate": 0.05,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambda_l2": 1.0
+    },
+    "seeds": [
+      20261011,
+      20261012,
+      20261013,
+      20261014,
+      20261015
+    ],
+    "applied_features_sha256": "7adcd33e71dce35adb3ff8874935cdcd0e06a60fc9550ae9807f7d791b90b7aa"
+  },
+  "training": {
+    "candidates": 46492,
+    "positives": 154,
+    "rounds": 39,
+    "cv_average_precision_mean": 0.12914802564877248,
+    "cv_average_precision_sd": 0.04386026023924605
+  },
+  "redundancy": {
+    "d3_threshold": 0.9402252990559918,
+    "triads_flagged": 1174,
+    "triads_flagged_by_rule": {
+      "D3": 1151,
+      "D2": 19,
+      "D1": 5
+    },
+    "candidates": 219328,
+    "kept": 218154
+  },
+  "expected_hit_rate_at_k": {
+    "k": 100,
+    "value": 0.06,
+    "source": "T2 Precision@100 of baseline (reference only)"
+  },
+  "top_k_prescription": [
+    {
+      "rank": 1,
+      "rank_engine": 2,
+      "triad": [
+        "M:detr",
+        "M:yolov8",
+        "T:robust object detection"
+      ],
+      "score": 0.2252021677376713
+    },
+    {
+      "rank": 2,
+      "rank_engine": 3,
+      "triad": [
+        "M:proximal policy optimization",
+        "T:trajectory planning",
+        "T:vision language action"
+      ],
+      "score": 0.2134873358140527
+    },
+    {
+      "rank": 3,
+      "rank_engine": 4,
+      "triad": [
+        "M:dialogue adaptive pre training objective",
+        "T:mathematical reasoning",
+        "T:multimodal reasoning"
+      ],
+      "score": 0.21194527287182452
+    },
+    {
+      "rank": 4,
+      "rank_engine": 5,
+      "triad": [
+        "M:attention sinks",
+        "M:pruning",
+        "M:softmax"
+      ],
+      "score": 0.20349863313398378
+    },
+    {
+      "rank": 5,
+      "rank_engine": 6,
+      "triad": [
+        "M:patching",
+        "M:sparse autoencoder",
+        "T:large language model"
+      ],
+      "score": 0.19837120433377015
+    },
+    {
+      "rank": 6,
+      "rank_engine": 8,
+      "triad": [
+        "M:layer normalization",
+        "M:rmsnorm",
+        "T:decoder"
+      ],
+      "score": 0.19031918120938682
+    },
+    {
+      "rank": 7,
+      "rank_engine": 9,
+      "triad": [
+        "M:pruning",
+        "T:quantization",
+        "T:token reduction"
+      ],
+      "score": 0.1863271314603008
+    },
+    {
+      "rank": 8,
+      "rank_engine": 10,
+      "triad": [
+        "M:rag",
+        "T:entity linking",
+        "T:reranking"
+      ],
+      "score": 0.1823863594103104
+    },
+    {
+      "rank": 9,
+      "rank_engine": 13,
+      "triad": [
+        "M:class activation map",
+        "M:convnext",
+        "M:deit"
+      ],
+      "score": 0.17713939174864798
+    },
+    {
+      "rank": 10,
+      "rank_engine": 14,
+      "triad": [
+        "M:pruning",
+        "T:chunking",
+        "T:vision language action"
+      ],
+      "score": 0.17560760829287725
+    },
+    {
+      "rank": 11,
+      "rank_engine": 15,
+      "triad": [
+        "M:adamw",
+        "M:gpt 2",
+        "T:mixture of experts"
+      ],
+      "score": 0.17364185686129444
+    },
+    {
+      "rank": 12,
+      "rank_engine": 16,
+      "triad": [
+        "M:rag",
+        "T:mathematical reasoning",
+        "T:multi hop question answering"
+      ],
+      "score": 0.17302493034445235
+    },
+    {
+      "rank": 13,
+      "rank_engine": 17,
+      "triad": [
+        "M:rag",
+        "T:code generation",
+        "T:multi hop question answering"
+      ],
+      "score": 0.16657849680254472
+    },
+    {
+      "rank": 14,
+      "rank_engine": 19,
+      "triad": [
+        "M:rag",
+        "T:cross modal retrieval",
+        "T:natural language queries"
+      ],
+      "score": 0.16281939570448362
+    },
+    {
+      "rank": 15,
+      "rank_engine": 21,
+      "triad": [
+        "M:shapley additive explanations",
+        "M:synthetic minority over sampling technique",
+        "T:intrusion detection"
+      ],
+      "score": 0.1540184957227263
+    },
+    {
+      "rank": 16,
+      "rank_engine": 23,
+      "triad": [
+        "M:gpt",
+        "T:natural language queries",
+        "T:text to sql"
+      ],
+      "score": 0.15281779649181915
+    },
+    {
+      "rank": 17,
+      "rank_engine": 25,
+      "triad": [
+        "M:mixing adam and sgd",
+        "T:question answering",
+        "T:retrieval augmented generation"
+      ],
+      "score": 0.15173205370245707
+    },
+    {
+      "rank": 18,
+      "rank_engine": 27,
+      "triad": [
+        "M:rag",
+        "T:in context learning",
+        "T:semantic retrieval"
+      ],
+      "score": 0.14841553442726588
+    },
+    {
+      "rank": 19,
+      "rank_engine": 28,
+      "triad": [
+        "M:proximal policy optimization",
+        "T:efficient exploration",
+        "T:multi agent reinforcement learning"
+      ],
+      "score": 0.14815118152533302
+    },
+    {
+      "rank": 20,
+      "rank_engine": 29,
+      "triad": [
+        "M:dialogue adaptive pre training objective",
+        "M:direct preference optimization",
+        "T:multimodal reasoning"
+      ],
+      "score": 0.14514317377016545
+    },
+    {
+      "rank": 21,
+      "rank_engine": 30,
+      "triad": [
+        "M:mixing adam and sgd",
+        "T:large language model",
+        "T:multi agent reinforcement learning"
+      ],
+      "score": 0.13938410740017898
+    },
+    {
+      "rank": 22,
+      "rank_engine": 31,
+      "triad": [
+        "M:proximal policy optimization",
+        "T:autonomous navigation",
+        "T:collision avoidance"
+      ],
+      "score": 0.13934072231729014
+    },
+    {
+      "rank": 23,
+      "rank_engine": 32,
+      "triad": [
+        "M:segment anything model",
+        "T:open vocabulary semantic segmentation",
+        "T:zero shot segmentation"
+      ],
+      "score": 0.13719606670302084
+    },
+    {
+      "rank": 24,
+      "rank_engine": 33,
+      "triad": [
+        "M:attention",
+        "T:human animation",
+        "T:motion synthesis"
+      ],
+      "score": 0.13681977676599894
+    },
+    {
+      "rank": 25,
+      "rank_engine": 34,
+      "triad": [
+        "M:class activation map",
+        "M:efficientnet",
+        "T:deepfake detection"
+      ],
+      "score": 0.13598747133988082
+    },
+    {
+      "rank": 26,
+      "rank_engine": 36,
+      "triad": [
+        "M:detr",
+        "M:yolov8",
+        "T:multi object tracking"
+      ],
+      "score": 0.1344642788688612
+    },
+    {
+      "rank": 27,
+      "rank_engine": 37,
+      "triad": [
+        "M:r cnn",
+        "M:segment anything model",
+        "T:defect detection"
+      ],
+      "score": 0.13228821289380707
+    },
+    {
+      "rank": 28,
+      "rank_engine": 38,
+      "triad": [
+        "M:proximal policy optimization",
+        "T:continuous control",
+        "T:vision language action"
+      ],
+      "score": 0.13209113565759328
+    },
+    {
+      "rank": 29,
+      "rank_engine": 39,
+      "triad": [
+        "M:ontology",
+        "T:graph construction",
+        "T:graph generation"
+      ],
+      "score": 0.13138217823181014
+    },
+    {
+      "rank": 30,
+      "rank_engine": 41,
+      "triad": [
+        "M:transformer",
+        "T:crack segmentation",
+        "T:structural health monitoring"
+      ],
+      "score": 0.1302345477368683
+    },
+    {
+      "rank": 31,
+      "rank_engine": 42,
+      "triad": [
+        "M:codegen",
+        "T:code completion",
+        "T:code generation"
+      ],
+      "score": 0.13013482372049895
+    },
+    {
+      "rank": 32,
+      "rank_engine": 43,
+      "triad": [
+        "M:local interpretable model agnostic explanations",
+        "T:feature selection",
+        "T:interpretable machine learning"
+      ],
+      "score": 0.12978714005351022
+    },
+    {
+      "rank": 33,
+      "rank_engine": 44,
+      "triad": [
+        "M:batch normalization",
+        "M:group normalization",
+        "T:reinforcement learning"
+      ],
+      "score": 0.12907648777620348
+    },
+    {
+      "rank": 34,
+      "rank_engine": 45,
+      "triad": [
+        "M:gpt",
+        "T:chunking",
+        "T:reranking"
+      ],
+      "score": 0.1280500462660825
+    },
+    {
+      "rank": 35,
+      "rank_engine": 46,
+      "triad": [
+        "M:thinned u shape module",
+        "T:camera pose estimation",
+        "T:visual odometry"
+      ],
+      "score": 0.12776913577302318
+    },
+    {
+      "rank": 36,
+      "rank_engine": 47,
+      "triad": [
+        "M:efficientnet",
+        "M:feature pyramid network",
+        "M:focal loss"
+      ],
+      "score": 0.12726281107134899
+    },
+    {
+      "rank": 37,
+      "rank_engine": 48,
+      "triad": [
+        "M:lookahead",
+        "M:monte carlo tree search",
+        "T:large language model"
+      ],
+      "score": 0.12634797080906943
+    },
+    {
+      "rank": 38,
+      "rank_engine": 49,
+      "triad": [
+        "M:gpt",
+        "T:multimodal reasoning",
+        "T:video mme"
+      ],
+      "score": 0.12571233940414966
+    },
+    {
+      "rank": 39,
+      "rank_engine": 50,
+      "triad": [
+        "M:rag",
+        "T:chunking",
+        "T:success rate"
+      ],
+      "score": 0.1252464205851822
+    },
+    {
+      "rank": 40,
+      "rank_engine": 52,
+      "triad": [
+        "M:adamw",
+        "M:gpt 2",
+        "T:parameter efficient fine tuning"
+      ],
+      "score": 0.12364547217107646
+    },
+    {
+      "rank": 41,
+      "rank_engine": 53,
+      "triad": [
+        "M:shrink and fine tune",
+        "T:mathematical reasoning",
+        "T:multi hop question answering"
+      ],
+      "score": 0.12096088300104864
+    },
+    {
+      "rank": 42,
+      "rank_engine": 54,
+      "triad": [
+        "M:synthetic minority over sampling technique",
+        "T:explainable artificial intelligence",
+        "T:intrusion detection"
+      ],
+      "score": 0.12001441065643788
+    },
+    {
+      "rank": 43,
+      "rank_engine": 55,
+      "triad": [
+        "M:vision transformer",
+        "T:disaster response",
+        "T:earth observation"
+      ],
+      "score": 0.11987472421195652
+    },
+    {
+      "rank": 44,
+      "rank_engine": 56,
+      "triad": [
+        "M:shrink and fine tune",
+        "T:vector graphics",
+        "T:visual reasoning"
+      ],
+      "score": 0.11955434891308023
+    },
+    {
+      "rank": 45,
+      "rank_engine": 57,
+      "triad": [
+        "M:gpt",
+        "T:answer generation",
+        "T:chunking"
+      ],
+      "score": 0.11923004442283702
+    },
+    {
+      "rank": 46,
+      "rank_engine": 58,
+      "triad": [
+        "M:adamw",
+        "M:gpt 2",
+        "T:quantization"
+      ],
+      "score": 0.11868899057665443
+    },
+    {
+      "rank": 47,
+      "rank_engine": 59,
+      "triad": [
+        "M:blip: bootstrapping language image pre training",
+        "T:cross modal alignment",
+        "T:image captioning"
+      ],
+      "score": 0.11851007684883241
+    },
+    {
+      "rank": 48,
+      "rank_engine": 60,
+      "triad": [
+        "M:shrink and fine tune",
+        "T:mathematical reasoning",
+        "T:text to sql"
+      ],
+      "score": 0.11825323236733351
+    },
+    {
+      "rank": 49,
+      "rank_engine": 61,
+      "triad": [
+        "M:gpt",
+        "T:action generation",
+        "T:success rate"
+      ],
+      "score": 0.11735681192900116
+    },
+    {
+      "rank": 50,
+      "rank_engine": 62,
+      "triad": [
+        "M:grouped query attention",
+        "M:pruning",
+        "T:mixture of experts"
+      ],
+      "score": 0.11694960401988852
+    },
+    {
+      "rank": 51,
+      "rank_engine": 63,
+      "triad": [
+        "M:blip: bootstrapping language image pre training",
+        "T:cross modal alignment",
+        "T:image text retrieval"
+      ],
+      "score": 0.11684847840350479
+    },
+    {
+      "rank": 52,
+      "rank_engine": 64,
+      "triad": [
+        "M:distilbert",
+        "T:classification",
+        "T:sst 2"
+      ],
+      "score": 0.11683816479669376
+    },
+    {
+      "rank": 53,
+      "rank_engine": 65,
+      "triad": [
+        "M:patching",
+        "M:sparse autoencoder",
+        "T:decoder"
+      ],
+      "score": 0.11661236972020439
+    },
+    {
+      "rank": 54,
+      "rank_engine": 66,
+      "triad": [
+        "M:lookahead",
+        "M:monte carlo tree search",
+        "M:pruning"
+      ],
+      "score": 0.11571593542005428
+    },
+    {
+      "rank": 55,
+      "rank_engine": 67,
+      "triad": [
+        "M:class activation map",
+        "T:brain tumor classification",
+        "T:medical image classification"
+      ],
+      "score": 0.11564499747425624
+    },
+    {
+      "rank": 56,
+      "rank_engine": 68,
+      "triad": [
+        "M:lookahead",
+        "M:monte carlo tree search",
+        "T:mathematical reasoning"
+      ],
+      "score": 0.11555310643995131
+    },
+    {
+      "rank": 57,
+      "rank_engine": 69,
+      "triad": [
+        "M:logistic regression",
+        "M:radial basis function",
+        "T:quantum machine learning"
+      ],
+      "score": 0.11520569314765008
+    },
+    {
+      "rank": 58,
+      "rank_engine": 70,
+      "triad": [
+        "M:consistency models",
+        "T:computational efficiency",
+        "T:denoising"
+      ],
+      "score": 0.114668500451093
+    },
+    {
+      "rank": 59,
+      "rank_engine": 71,
+      "triad": [
+        "M:rag",
+        "T:evidence selection",
+        "T:video understanding"
+      ],
+      "score": 0.11446035797448988
+    },
+    {
+      "rank": 60,
+      "rank_engine": 72,
+      "triad": [
+        "M:class activation map",
+        "M:convolutional block attention module",
+        "T:computational efficiency"
+      ],
+      "score": 0.1144327673771484
+    },
+    {
+      "rank": 61,
+      "rank_engine": 73,
+      "triad": [
+        "M:gaussian process",
+        "M:radial basis function",
+        "T:kolmogorov arnold networks"
+      ],
+      "score": 0.11398191013574284
+    },
+    {
+      "rank": 62,
+      "rank_engine": 74,
+      "triad": [
+        "M:shapley additive explanations",
+        "M:synthetic minority over sampling technique",
+        "T:fraud detection"
+      ],
+      "score": 0.11324379906614881
+    },
+    {
+      "rank": 63,
+      "rank_engine": 77,
+      "triad": [
+        "M:proximal policy optimization",
+        "T:continuous control",
+        "T:multi objective reinforcement learning"
+      ],
+      "score": 0.11206018186181692
+    },
+    {
+      "rank": 64,
+      "rank_engine": 78,
+      "triad": [
+        "M:features explanation method",
+        "T:computational efficiency",
+        "T:operator learning"
+      ],
+      "score": 0.11205327310656873
+    },
+    {
+      "rank": 65,
+      "rank_engine": 79,
+      "triad": [
+        "M:synthetic minority over sampling technique",
+        "T:intrusion detection",
+        "T:privacy preserving"
+      ],
+      "score": 0.11197987525353865
+    },
+    {
+      "rank": 66,
+      "rank_engine": 80,
+      "triad": [
+        "M:carla: an open urban driving simulator",
+        "T:motion planning",
+        "T:vision language action"
+      ],
+      "score": 0.11192513736925067
+    },
+    {
+      "rank": 67,
+      "rank_engine": 81,
+      "triad": [
+        "M:pruning",
+        "M:rag",
+        "T:chunking"
+      ],
+      "score": 0.1109586567784421
+    },
+    {
+      "rank": 68,
+      "rank_engine": 82,
+      "triad": [
+        "M:shapley additive explanations",
+        "T:feature engineering",
+        "T:interpretable machine learning"
+      ],
+      "score": 0.11044566285517296
+    },
+    {
+      "rank": 69,
+      "rank_engine": 83,
+      "triad": [
+        "M:attention",
+        "M:layer normalization",
+        "M:rmsnorm"
+      ],
+      "score": 0.11032329017537516
+    },
+    {
+      "rank": 70,
+      "rank_engine": 84,
+      "triad": [
+        "M:synthetic minority over sampling technique",
+        "T:feature engineering",
+        "T:intrusion detection"
+      ],
+      "score": 0.10988603099037468
+    },
+    {
+      "rank": 71,
+      "rank_engine": 85,
+      "triad": [
+        "M:long short term memory",
+        "M:synthetic minority over sampling technique",
+        "T:fraud detection"
+      ],
+      "score": 0.10976040656498443
+    },
+    {
+      "rank": 72,
+      "rank_engine": 86,
+      "triad": [
+        "M:mpnet",
+        "T:retrieval",
+        "T:sentence embedding"
+      ],
+      "score": 0.10968770365417901
+    },
+    {
+      "rank": 73,
+      "rank_engine": 87,
+      "triad": [
+        "M:synthetic minority over sampling technique",
+        "T:explainable artificial intelligence",
+        "T:feature importance"
+      ],
+      "score": 0.10946492220254433
+    },
+    {
+      "rank": 74,
+      "rank_engine": 88,
+      "triad": [
+        "M:shrink and fine tune",
+        "T:document understanding",
+        "T:visual reasoning"
+      ],
+      "score": 0.10854450312552193
+    },
+    {
+      "rank": 75,
+      "rank_engine": 89,
+      "triad": [
+        "M:class activation map",
+        "M:efficientnet",
+        "T:medical image classification"
+      ],
+      "score": 0.10848781986923325
+    },
+    {
+      "rank": 76,
+      "rank_engine": 90,
+      "triad": [
+        "M:pruning",
+        "T:chunking",
+        "T:retrieval augmented generation"
+      ],
+      "score": 0.10809393810790721
+    },
+    {
+      "rank": 77,
+      "rank_engine": 91,
+      "triad": [
+        "M:u net",
+        "T:computational efficiency",
+        "T:crack segmentation"
+      ],
+      "score": 0.10808592444548926
+    },
+    {
+      "rank": 78,
+      "rank_engine": 92,
+      "triad": [
+        "M:variational auto encoder",
+        "T:3d generation",
+        "T:image editing"
+      ],
+      "score": 0.10769926055407435
+    },
+    {
+      "rank": 79,
+      "rank_engine": 93,
+      "triad": [
+        "M:detr",
+        "T:autonomous driving",
+        "T:small object detection"
+      ],
+      "score": 0.10740489875786703
+    },
+    {
+      "rank": 80,
+      "rank_engine": 95,
+      "triad": [
+        "M:layer normalization",
+        "M:rmsnorm",
+        "M:softmax"
+      ],
+      "score": 0.10700247036299845
+    },
+    {
+      "rank": 81,
+      "rank_engine": 96,
+      "triad": [
+        "M:attention",
+        "M:dense prediction transformer",
+        "T:decoder"
+      ],
+      "score": 0.10692390437150079
+    },
+    {
+      "rank": 82,
+      "rank_engine": 97,
+      "triad": [
+        "M:coop",
+        "T:prompt learning",
+        "T:retrieval"
+      ],
+      "score": 0.10687487376487279
+    },
+    {
+      "rank": 83,
+      "rank_engine": 98,
+      "triad": [
+        "M:gpt",
+        "T:code generation",
+        "T:program repair"
+      ],
+      "score": 0.10675456075554499
+    },
+    {
+      "rank": 84,
+      "rank_engine": 99,
+      "triad": [
+        "M:deberta",
+        "M:gpt",
+        "T:task 2"
+      ],
+      "score": 0.10648256361320137
+    },
+    {
+      "rank": 85,
+      "rank_engine": 100,
+      "triad": [
+        "M:monte carlo dropout",
+        "M:softmax",
+        "T:conformal prediction"
+      ],
+      "score": 0.10583502468338997
+    },
+    {
+      "rank": 86,
+      "rank_engine": 101,
+      "triad": [
+        "M:cot prompting",
+        "T:mathematical reasoning",
+        "T:multi hop question answering"
+      ],
+      "score": 0.10545954188422546
+    },
+    {
+      "rank": 87,
+      "rank_engine": 102,
+      "triad": [
+        "M:distilbert",
+        "M:xlm",
+        "T:sentiment classification"
+      ],
+      "score": 0.10544625146498596
+    },
+    {
+      "rank": 88,
+      "rank_engine": 105,
+      "triad": [
+        "M:shapley additive explanations",
+        "T:computational efficiency",
+        "T:interpretable machine learning"
+      ],
+      "score": 0.10467167742781665
+    },
+    {
+      "rank": 89,
+      "rank_engine": 106,
+      "triad": [
+        "M:byte pair encoding",
+        "M:gpt 2",
+        "M:pruning"
+      ],
+      "score": 0.10433897534239303
+    },
+    {
+      "rank": 90,
+      "rank_engine": 107,
+      "triad": [
+        "M:shrink and fine tune",
+        "T:continual pretraining",
+        "T:retrieval"
+      ],
+      "score": 0.10355429629425132
+    },
+    {
+      "rank": 91,
+      "rank_engine": 108,
+      "triad": [
+        "M:latent diffusion model",
+        "M:variational auto encoder",
+        "T:scene generation"
+      ],
+      "score": 0.10350644442479384
+    },
+    {
+      "rank": 92,
+      "rank_engine": 110,
+      "triad": [
+        "M:convolutional block attention module",
+        "M:efficientnet",
+        "M:feature pyramid network"
+      ],
+      "score": 0.10272917863494288
+    },
+    {
+      "rank": 93,
+      "rank_engine": 111,
+      "triad": [
+        "M:synthetic minority over sampling technique",
+        "T:ensemble learning",
+        "T:explainable artificial intelligence"
+      ],
+      "score": 0.10223139823014393
+    },
+    {
+      "rank": 94,
+      "rank_engine": 112,
+      "triad": [
+        "M:gpt",
+        "T:semantic retrieval",
+        "T:semantic similarity"
+      ],
+      "score": 0.10183300657421619
+    },
+    {
+      "rank": 95,
+      "rank_engine": 114,
+      "triad": [
+        "M:rag",
+        "T:fact checking",
+        "T:re ranking"
+      ],
+      "score": 0.10174661522893676
+    },
+    {
+      "rank": 96,
+      "rank_engine": 118,
+      "triad": [
+        "M:logistic regression",
+        "M:synthetic minority over sampling technique",
+        "T:text classification"
+      ],
+      "score": 0.1005051604987052
+    },
+    {
+      "rank": 97,
+      "rank_engine": 119,
+      "triad": [
+        "M:distilbert",
+        "M:shapley additive explanations",
+        "M:support vector machine"
+      ],
+      "score": 0.1000379602012154
+    },
+    {
+      "rank": 98,
+      "rank_engine": 121,
+      "triad": [
+        "M:attention",
+        "T:moment retrieval",
+        "T:temporal localization"
+      ],
+      "score": 0.09919875872453691
+    },
+    {
+      "rank": 99,
+      "rank_engine": 123,
+      "triad": [
+        "M:distilbert",
+        "M:local interpretable model agnostic explanations",
+        "T:computational efficiency"
+      ],
+      "score": 0.09899436238915776
+    },
+    {
+      "rank": 100,
+      "rank_engine": 124,
+      "triad": [
+        "M:trades",
+        "M:transformer",
+        "T:algorithmic trading"
+      ],
+      "score": 0.09886796888843258
+    }
+  ]
+}

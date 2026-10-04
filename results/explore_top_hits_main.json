@@ -1,0 +1,294 @@
+{
+  "meta": {
+    "step": "explore_top_hits",
+    "variant": "main",
+    "post_hoc": true,
+    "note": "Exploratory, after the verdict; not used for any judgement.",
+    "created": "2026-10-04",
+    "git_commit": "c21150b4460d83474e817f99233431729bafc1d7"
+  },
+  "top_k": 100,
+  "hits_in_top_k": [
+    {
+      "rank": 9,
+      "triad": [
+        "M:transformer",
+        "T:document understanding",
+        "T:information extraction"
+      ],
+      "kind": "open_triangle",
+      "observed": 4,
+      "expected": 0.10714774039458323,
+      "q_value": 0.004781568289130128
+    },
+    {
+      "rank": 61,
+      "triad": [
+        "M:transformer",
+        "T:hate speech detection",
+        "T:sentiment analysis"
+      ],
+      "kind": "open_triangle",
+      "observed": 4,
+      "expected": 0.17696463970793724,
+      "q_value": 0.018794254940572998
+    },
+    {
+      "rank": 70,
+      "triad": [
+        "M:k means clustering",
+        "M:principal components analysis",
+        "T:clustering"
+      ],
+      "kind": "open_triangle",
+      "observed": 6,
+      "expected": 0.03159528415719158,
+      "q_value": 6.87078871575153e-09
+    },
+    {
+      "rank": 72,
+      "triad": [
+        "M:hyper parameter optimization",
+        "T:hyperparameter optimization",
+        "T:prediction"
+      ],
+      "kind": "open_triangle",
+      "observed": 3,
+      "expected": 0.040840539921846504,
+      "q_value": 0.008165761177510915
+    },
+    {
+      "rank": 77,
+      "triad": [
+        "M:bilstm",
+        "T:sentiment analysis",
+        "T:sentiment classification"
+      ],
+      "kind": "open_triangle",
+      "observed": 4,
+      "expected": 0.0023869425639230484,
+      "q_value": 6.87078871575153e-09
+    },
+    {
+      "rank": 79,
+      "triad": [
+        "M:local interpretable model agnostic explanations",
+        "T:decision making",
+        "T:feature importance"
+      ],
+      "kind": "open_triangle",
+      "observed": 3,
+      "expected": 0.03048212533331338,
+      "q_value": 0.004589911777880863
+    }
+  ],
+  "terms_most_frequent_in_top_k": [
+    [
+      "M:transformer",
+      21
+    ],
+    [
+      "M:convolution",
+      11
+    ],
+    [
+      "M:gpt 2",
+      10
+    ],
+    [
+      "M:bert",
+      8
+    ],
+    [
+      "T:prediction",
+      7
+    ],
+    [
+      "T:classification",
+      7
+    ],
+    [
+      "M:vision transformer",
+      7
+    ],
+    [
+      "M:attention",
+      6
+    ],
+    [
+      "T:deep learning",
+      5
+    ],
+    [
+      "T:data augmentation",
+      5
+    ],
+    [
+      "M:feature pyramid network",
+      5
+    ],
+    [
+      "M:xlnet",
+      5
+    ],
+    [
+      "M:mask r cnn",
+      5
+    ],
+    [
+      "M:gpt",
+      4
+    ],
+    [
+      "T:object",
+      4
+    ]
+  ],
+  "terms_in_hits": [
+    [
+      "M:transformer",
+      2
+    ],
+    [
+      "T:sentiment analysis",
+      2
+    ],
+    [
+      "T:document understanding",
+      1
+    ],
+    [
+      "T:information extraction",
+      1
+    ],
+    [
+      "T:hate speech detection",
+      1
+    ],
+    [
+      "M:k means clustering",
+      1
+    ],
+    [
+      "M:principal components analysis",
+      1
+    ],
+    [
+      "T:clustering",
+      1
+    ],
+    [
+      "M:hyper parameter optimization",
+      1
+    ],
+    [
+      "T:hyperparameter optimization",
+      1
+    ],
+    [
+      "T:prediction",
+      1
+    ],
+    [
+      "M:bilstm",
+      1
+    ],
+    [
+      "T:sentiment classification",
+      1
+    ],
+    [
+      "M:local interpretable model agnostic explanations",
+      1
+    ],
+    [
+      "T:decision making",
+      1
+    ],
+    [
+      "T:feature importance",
+      1
+    ]
+  ],
+  "greedy_cover_of_hits": [
+    "M:transformer",
+    "M:k means clustering",
+    "M:hyper parameter optimization",
+    "M:bilstm",
+    "M:local interpretable model agnostic explanations"
+  ],
+  "term_block_resamples_with_no_hit_in_top_k": {
+    "count": 205,
+    "of": 1000
+  },
+  "top_k_kind_mix": {
+    "open_triangle": 92,
+    "two_hop": 8
+  },
+  "all_t2_positives": {
+    "count": 95,
+    "distinct_terms": 147,
+    "terms_most_frequent": [
+      [
+        "M:transformer",
+        19
+      ],
+      [
+        "M:attention",
+        14
+      ],
+      [
+        "M:bert",
+        8
+      ],
+      [
+        "M:bilstm",
+        8
+      ],
+      [
+        "M:u net",
+        7
+      ],
+      [
+        "T:sentiment analysis",
+        6
+      ],
+      [
+        "M:inpainting",
+        5
+      ],
+      [
+        "M:long short term memory",
+        5
+      ],
+      [
+        "T:deep learning",
+        5
+      ],
+      [
+        "T:image editing",
+        4
+      ],
+      [
+        "T:medical image segmentation",
+        4
+      ],
+      [
+        "M:ontology",
+        4
+      ],
+      [
+        "T:classification",
+        4
+      ],
+      [
+        "M:convolution",
+        4
+      ],
+      [
+        "T:decision making",
+        4
+      ]
+    ]
+  }
+}

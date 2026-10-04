@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "step": "validation",
+    "variant": "main",
+    "created": "2026-10-04",
+    "git_commit": "816d6cf555d7a93a4977d26182e9e942e322b4d7",
+    "evaluation_config": {
+      "top_k": 100,
+      "secondary_k": [
+        50,
+        500
+      ],
+      "bootstrap_n": 1000,
+      "bootstrap_seed": 20261016,
+      "ci_level": 0.95,
+      "rule": "pass only if both candidate and term-block bootstrap lower bounds exceed the threshold",
+      "score": "mean predicted probability over model seeds"
+    },
+    "scores_sha256": "967b22582ce23adf964bf47751f45b7ebad154c321217b536929b64a8a6bd3b2",
+    "labels_sha256": "ebbbae64bf95b71c3e94d4e95dbeff655b3004f29aae5bf2505dae2ae36b6a6f"
+  },
+  "t2": {
+    "candidates": 40792,
+    "positives": 95,
+    "base_rate": 0.002328888017258286
+  },
+  "point": {
+    "precision_at_k": 0.06,
+    "lift": 25.763368421052633,
+    "auprc_diff": -0.0024031578389997962
+  },
+  "ci": {
+    "candidate": {
+      "lift": {
+        "lower": 8.585553070175441,
+        "upper": 49.15103852773732,
+        "valid_resamples": 1000
+      },
+      "auprc_diff": {
+        "lower": -0.0097382681221287,
+        "upper": 0.007445688648910499,
+        "valid_resamples": 1000
+      }
+    },
+    "term_block": {
+      "lift": {
+        "lower": 0.0,
+        "upper": 84.66397507331376,
+        "valid_resamples": 1000
+      },
+      "auprc_diff": {
+        "lower": -0.036734694599557624,
+        "upper": 0.029275040017281182,
+        "valid_resamples": 1000
+      }
+    }
+  },
+  "verdict": {
+    "V1": false,
+    "V2": false
+  },
+  "per_seed": {
+    "engine": {
+      "auprc": {
+        "mean": 0.03326888217896299,
+        "sd": 0.0009449201821334748
+      },
+      "auroc": {
+        "mean": 0.9190760989753544,
+        "sd": 0.002741811563990507
+      },
+      "precision_at_100": {
+        "mean": 0.06000000000000001,
+        "sd": 0.015811388300841896
+      },
+      "precision_at_50": {
+        "mean": 0.032,
+        "sd": 0.010954451150103323
+      },
+      "precision_at_500": {
+        "mean": 0.0492,
+        "sd": 0.0041472882706655445
+      }
+    },
+    "baseline": {
+      "auprc": {
+        "mean": 0.03573247947516279,
+        "sd": 0.0013245236588187708
+      },
+      "auroc": {
+        "mean": 0.9147330658020829,
+        "sd": 0.005803602303746998
+      },
+      "precision_at_100": {
+        "mean": 0.06,
+        "sd": 0.01414213562373095
+      },
+      "precision_at_50": {
+        "mean": 0.048,
+        "sd": 0.010954451150103319
+      },
+      "precision_at_500": {
+        "mean": 0.0484,
+        "sd": 0.003286335345030997
+      }
+    }
+  },
+  "secondary": {
+    "engine_auroc": 0.921238213601675,
+    "engine_precision_at_50": 0.02,
+    "engine_precision_at_500": 0.054
+  }
+}

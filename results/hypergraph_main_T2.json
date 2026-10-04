@@ -22,6 +22,22 @@
       "total_links": 370613,
       "nodes_in_vocabulary": 2489,
       "nodes_matched": 2489
+    },
+    "label": {
+      "window": [
+        "2023-01-01T00:00:00+00:00",
+        "2024-12-31T23:59:59+00:00"
+      ],
+      "created": "2026-10-04",
+      "git_commit": "816d6cf555d7a93a4977d26182e9e942e322b4d7",
+      "papers_in_window": 153575,
+      "papers_with_terms": 132190,
+      "hyperedges_size_ge2": 96424,
+      "hyperedges_size_ge3": 60608,
+      "mean_size": 2.662962402602315,
+      "total_links": 352017,
+      "nodes_in_vocabulary": 2489,
+      "nodes_matched": 2415
     }
   }
 }

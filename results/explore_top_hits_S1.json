@@ -1,0 +1,323 @@
+{
+  "meta": {
+    "step": "explore_top_hits",
+    "variant": "S1",
+    "post_hoc": true,
+    "note": "Exploratory, after the verdict; not used for any judgement.",
+    "created": "2026-10-04",
+    "git_commit": "c21150b4460d83474e817f99233431729bafc1d7"
+  },
+  "top_k": 100,
+  "hits_in_top_k": [
+    {
+      "rank": 21,
+      "triad": [
+        "M:inpainting",
+        "T:image editing",
+        "T:image generation"
+      ],
+      "kind": "open_triangle",
+      "observed": 9,
+      "expected": 0.08182664718604293,
+      "q_value": 4.755407179146687e-09
+    },
+    {
+      "rank": 39,
+      "triad": [
+        "M:transformer",
+        "M:triplet loss",
+        "T:triplet"
+      ],
+      "kind": "two_hop",
+      "observed": 3,
+      "expected": 0.0427516372828908,
+      "q_value": 0.010414767619495554
+    },
+    {
+      "rank": 83,
+      "triad": [
+        "M:bilstm",
+        "T:sentiment analysis",
+        "T:sentiment classification"
+      ],
+      "kind": "open_triangle",
+      "observed": 4,
+      "expected": 0.0024645901011196396,
+      "q_value": 7.501245339166677e-09
+    },
+    {
+      "rank": 84,
+      "triad": [
+        "M:inpainting",
+        "T:image inpainting",
+        "T:image reconstruction"
+      ],
+      "kind": "open_triangle",
+      "observed": 2,
+      "expected": 0.00859733022722873,
+      "q_value": 0.021928020345383638
+    },
+    {
+      "rank": 85,
+      "triad": [
+        "M:gaussian process",
+        "T:bayesian inference",
+        "T:bayesian optimization"
+      ],
+      "kind": "two_hop",
+      "observed": 4,
+      "expected": 0.019824632981198166,
+      "q_value": 1.5317547815854988e-05
+    },
+    {
+      "rank": 95,
+      "triad": [
+        "M:attention",
+        "T:image enhancement",
+        "T:low light image enhancement"
+      ],
+      "kind": "open_triangle",
+      "observed": 6,
+      "expected": 0.06288904712459112,
+      "q_value": 2.865209889346687e-07
+    },
+    {
+      "rank": 97,
+      "triad": [
+        "M:bigru",
+        "M:gated recurrent unit",
+        "T:deep learning"
+      ],
+      "kind": "open_triangle",
+      "observed": 6,
+      "expected": 0.007251997781184383,
+      "q_value": 9.961920177659067e-10
+    }
+  ],
+  "terms_most_frequent_in_top_k": [
+    [
+      "M:graph convolutional network",
+      13
+    ],
+    [
+      "M:attention",
+      9
+    ],
+    [
+      "M:transformer",
+      9
+    ],
+    [
+      "T:data augmentation",
+      7
+    ],
+    [
+      "M:vision transformer",
+      7
+    ],
+    [
+      "M:experience replay",
+      6
+    ],
+    [
+      "M:triplet loss",
+      6
+    ],
+    [
+      "M:stylegan",
+      5
+    ],
+    [
+      "T:image editing",
+      5
+    ],
+    [
+      "T:node classification",
+      5
+    ],
+    [
+      "T:graph representation learning",
+      5
+    ],
+    [
+      "T:inductive bias",
+      5
+    ],
+    [
+      "T:continuous control",
+      5
+    ],
+    [
+      "T:image manipulation",
+      4
+    ],
+    [
+      "T:medical image segmentation",
+      4
+    ]
+  ],
+  "terms_in_hits": [
+    [
+      "M:inpainting",
+      2
+    ],
+    [
+      "T:image editing",
+      1
+    ],
+    [
+      "T:image generation",
+      1
+    ],
+    [
+      "M:transformer",
+      1
+    ],
+    [
+      "M:triplet loss",
+      1
+    ],
+    [
+      "T:triplet",
+      1
+    ],
+    [
+      "M:bilstm",
+      1
+    ],
+    [
+      "T:sentiment analysis",
+      1
+    ],
+    [
+      "T:sentiment classification",
+      1
+    ],
+    [
+      "T:image inpainting",
+      1
+    ],
+    [
+      "T:image reconstruction",
+      1
+    ],
+    [
+      "M:gaussian process",
+      1
+    ],
+    [
+      "T:bayesian inference",
+      1
+    ],
+    [
+      "T:bayesian optimization",
+      1
+    ],
+    [
+      "M:attention",
+      1
+    ],
+    [
+      "T:image enhancement",
+      1
+    ],
+    [
+      "T:low light image enhancement",
+      1
+    ],
+    [
+      "M:bigru",
+      1
+    ],
+    [
+      "M:gated recurrent unit",
+      1
+    ],
+    [
+      "T:deep learning",
+      1
+    ]
+  ],
+  "greedy_cover_of_hits": [
+    "M:inpainting",
+    "M:transformer",
+    "M:bilstm",
+    "M:gaussian process",
+    "M:attention",
+    "M:bigru"
+  ],
+  "term_block_resamples_with_no_hit_in_top_k": {
+    "count": 207,
+    "of": 1000
+  },
+  "top_k_kind_mix": {
+    "open_triangle": 92,
+    "two_hop": 8
+  },
+  "all_t2_positives": {
+    "count": 74,
+    "distinct_terms": 119,
+    "terms_most_frequent": [
+      [
+        "M:transformer",
+        19
+      ],
+      [
+        "M:attention",
+        13
+      ],
+      [
+        "M:bilstm",
+        6
+      ],
+      [
+        "M:u net",
+        6
+      ],
+      [
+        "M:inpainting",
+        5
+      ],
+      [
+        "T:medical image segmentation",
+        5
+      ],
+      [
+        "M:convolution",
+        5
+      ],
+      [
+        "T:image editing",
+        4
+      ],
+      [
+        "T:deep learning",
+        4
+      ],
+      [
+        "M:long short term memory",
+        4
+      ],
+      [
+        "T:sentiment analysis",
+        3
+      ],
+      [
+        "T:image classification",
+        3
+      ],
+      [
+        "T:bayesian inference",
+        3
+      ],
+      [
+        "T:image reconstruction",
+        3
+      ],
+      [
+        "M:logistic regression",
+        3
+      ]
+    ]
+  }
+}

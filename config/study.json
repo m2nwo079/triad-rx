@@ -1,5 +1,5 @@
 {
-  "design_version": "v0.3.14",
+  "design_version": "v0.3.15",
   "design_section": "10.2",
   "arxiv_categories": [
     "cs.LG",
@@ -42,7 +42,17 @@
   },
   "applied": {
     "build_years": 5,
-    "anchor": "data_cutoff"
+    "anchor": "data_cutoff",
+    "prescription": {
+      "redundancy_rules": [
+        "D1_same_name_ignoring_spaces",
+        "D2_method_name_within_task_name",
+        "D3_same_type_text_cosine"
+      ],
+      "d3_same_type_cosine_quantile": 0.985,
+      "training": "T1+T2 labels, feature sets by V2 verdict, trees by stratified CV on the combined set",
+      "calibration": "none (ranking only; expected hit rate is the T2 Precision@k of the engine used)"
+    }
   },
   "vocab": {
     "r4_wordlist": "/usr/share/dict/words",

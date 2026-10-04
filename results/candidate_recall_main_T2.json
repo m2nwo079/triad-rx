@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "step": "candidate_recall",
+    "timepoint": "T2",
+    "variant": "main",
+    "created": "2026-10-04",
+    "git_commit": "816d6cf555d7a93a4977d26182e9e942e322b4d7"
+  },
+  "realised_new_triads_observed": 120028,
+  "realised_new_triads_significant": 65511,
+  "significant_in_candidates": 779,
+  "candidate_recall": 0.011891132786860222
+}
