@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "step": "evidence_patents",
+    "created": "2026-10-04",
+    "git_commit": "8bdc3de7bd8305b106f99b049fb56503feacae84",
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "window": [
+      "2021-09-24T17:59:54+00:00",
+      "2026-09-24T17:59:54+00:00"
+    ],
+    "window_rule": "build_window",
+    "cpc_subclass": "G06N",
+    "release_date": "2026-04-10",
+    "inventory_sha256": "9ad5c494135448641c526386d7792223519feb881ba2c946023a58a51145a1f2",
+    "vocab_sha256": "b90fcd78264a33e2d3dc30be26b579fd7864ab967211c8db1bcba15f6325deb0",
+    "final_terms": 3232,
+    "ambiguous_surfaces": {
+      "ci": 0,
+      "cs": 0
+    },
+    "patents_parquet_sha256": "c581dec9480d854f2ffca0218a48778cea199f3615bcae228de887fd327a7e8b",
+    "assignees_parquet_sha256": "7eec99066a5a666b6b8e7e8645451736301acf9359cb087520f31f589917f1fa"
+  },
+  "stats": {
+    "steps": {
+      "grant": {
+        "rows": 9454161,
+        "utility": 8531961,
+        "not_withdrawn": 8512858,
+        "g06n": 81810,
+        "in_window": 56005,
+        "max_date_all_utility": "2025-12-30",
+        "with_abstract": 56005,
+        "matched": 22960
+      },
+      "pgpub": {
+        "rows": 8402596,
+        "utility": 7634909,
+        "not_withdrawn": 7634909,
+        "g06n": 113264,
+        "in_window": 60342,
+        "max_date_all_utility": "2025-12-25",
+        "with_abstract": 60342,
+        "matched": 26809
+      }
+    },
+    "documents": 49769,
+    "inventions": 38699,
+    "inventions_with_grant_and_pgpub": 10992,
+    "grants_without_crosswalk": 0,
+    "pgpub_applications": 26731,
+    "pgpub_applications_in_crosswalk": 26731,
+    "grants_with_several_applications": 0,
+    "documents_without_assignee": 18823,
+    "matched_terms": 1538,
+    "matched_terms_by_type": {
+      "M": 383,
+      "T": 1155
+    }
+  }
+}

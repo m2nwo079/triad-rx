@@ -1,0 +1,1226 @@
+{
+ "meta": {
+  "step": "evidence_pypi_downloads",
+  "created": "2026-10-05",
+  "git_commit": "0109fcc9e92117b3001f390dfb29b928b7412dfb",
+  "data_cutoff": "2026-09-24T17:59:54+00:00",
+  "source": "pypistats.org /api/packages/<name>/overall?mirrors=false, category without_mirrors",
+  "verdict": "6_months_pypistats",
+  "half_weeks_configured": 12,
+  "half_weeks_used": 12,
+  "first_half": [
+   "2026-04-10",
+   "2026-07-02"
+  ],
+  "second_half": [
+   "2026-07-03",
+   "2026-09-24"
+  ],
+  "earliest_date_served": "2026-04-07",
+  "latest_date_served": "2026-10-04",
+  "fetched_from": "2026-10-05T06:44:45+00:00",
+  "fetched_to": "2026-10-05T07:17:50+00:00",
+  "pypi_links_sha256": "febe6b251d86a7fe0ac2a39e9977e5261a3c2b6cae172deb0d66eb28f6769677",
+  "pypi_downloads_parquet_sha256": "4866134d0109cd1f8c0024336f3a7a9d6172e3a1fc8464869623f933882101c1"
+ },
+ "stats": {
+  "packages": 300,
+  "fetched_ok": 298,
+  "not_found": 2,
+  "zero_in_both_halves": 0
+ },
+ "half_sums": {
+  "actnova-yolo": [
+   27,
+   1
+  ],
+  "adafactor8bit": [
+   2006,
+   2047
+  ],
+  "adaptive-oci-chunking": [
+   430,
+   768
+  ],
+  "adeepspeed": [
+   136,
+   54
+  ],
+  "agentmem-core": [
+   0,
+   217
+  ],
+  "agentuniverse": [
+   3766,
+   1324
+  ],
+  "ai2-scholar-qa": [
+   4185,
+   1479
+  ],
+  "ale-py": [
+   921815,
+   624698
+  ],
+  "angelslim": [
+   19684,
+   20500
+  ],
+  "angelslim-fork": [
+   179,
+   39
+  ],
+  "annobel": [
+   382,
+   67
+  ],
+  "apollo-torch": [
+   11965,
+   8589
+  ],
+  "appworld": [
+   7005,
+   50864
+  ],
+  "arctic-training": [
+   3789,
+   2131
+  ],
+  "astchunk": [
+   8804,
+   6106
+  ],
+  "astchunk-extended": [
+   172,
+   111
+  ],
+  "audiolm-pytorch": [
+   15464,
+   5477
+  ],
+  "avi-mmdet": [
+   471,
+   252
+  ],
+  "aworld": [
+   744,
+   409
+  ],
+  "bettertransformers": [
+   1,
+   0
+  ],
+  "bitbudget": [
+   553,
+   119
+  ],
+  "c-mteb": [
+   273,
+   113
+  ],
+  "calibrated-explanations": [
+   5477,
+   8068
+  ],
+  "coca-pytorch": [
+   7839,
+   4612
+  ],
+  "cpath": [
+   102,
+   73
+  ],
+  "crisperwhisper": [
+   0,
+   15901
+  ],
+  "ctranslate2-crisperwhisper": [
+   0,
+   9636
+  ],
+  "ctxray": [
+   286,
+   97
+  ],
+  "dbgpt": [
+   9599,
+   7419
+  ],
+  "dbgpt-acc-auto": [
+   4178,
+   2185
+  ],
+  "dbgpt-app": [
+   3971,
+   2375
+  ],
+  "dbgpt-client": [
+   3920,
+   2074
+  ],
+  "dbgpt-ext": [
+   5419,
+   3650
+  ],
+  "dbgpt-sandbox": [
+   3365,
+   2002
+  ],
+  "dbgpt-serve": [
+   2909,
+   1854
+  ],
+  "deberta": [
+   4288,
+   587
+  ],
+  "deepspeed": [
+   3551350,
+   3139795
+  ],
+  "deltakg": [
+   178,
+   101
+  ],
+  "dgenerate-ultralytics-headless": [
+   13852,
+   11938
+  ],
+  "dhondtxai": [
+   987,
+   196
+  ],
+  "distmetrics": [
+   464,
+   726
+  ],
+  "divyanx-transformers": [
+   1004,
+   147
+  ],
+  "doxastica": [
+   0,
+   354
+  ],
+  "eagle-embodied": [
+   0,
+   140
+  ],
+  "eiseg": [
+   944,
+   547
+  ],
+  "falcon-perception": [
+   867,
+   362
+  ],
+  "finaltrygist": [
+   1,
+   0
+  ],
+  "fingpt": [
+   1155,
+   323
+  ],
+  "fla-core": [
+   1465849,
+   2490065
+  ],
+  "flag-embedding": [
+   2,
+   0
+  ],
+  "flagembedding": [
+   1467348,
+   1561413
+  ],
+  "flash-linear-attention": [
+   1243665,
+   2025322
+  ],
+  "flashoptim-jax": [
+   92,
+   37
+  ],
+  "flashrag": [
+   117,
+   191
+  ],
+  "flashrag-dev": [
+   2478,
+   2196
+  ],
+  "flowcut": [
+   104,
+   39
+  ],
+  "flying-delta": [
+   90,
+   41
+  ],
+  "flying-delta-core": [
+   398,
+   1362
+  ],
+  "flying-delta-legacy": [
+   98,
+   38
+  ],
+  "fsner": [
+   158,
+   34
+  ],
+  "funasr": [
+   1058612,
+   1140698
+  ],
+  "funasr-onnx": [
+   20363,
+   20835
+  ],
+  "funasr-python": [
+   781,
+   351
+  ],
+  "funasr-runtime": [
+   382,
+   195
+  ],
+  "funasr-torch": [
+   1784,
+   563
+  ],
+  "funaudio": [
+   271,
+   75
+  ],
+  "fungpt": [
+   429,
+   90
+  ],
+  "funllm": [
+   291,
+   79
+  ],
+  "funnmt": [
+   137,
+   50
+  ],
+  "funspeaker": [
+   98,
+   40
+  ],
+  "funspeech": [
+   272,
+   107
+  ],
+  "funtts": [
+   82,
+   33
+  ],
+  "fusion-bench": [
+   1607,
+   838
+  ],
+  "gaea-paddledet": [
+   5,
+   5
+  ],
+  "gefen": [
+   1302,
+   1139
+  ],
+  "gem-llm": [
+   193355,
+   485436
+  ],
+  "getitune": [
+   432,
+   544
+  ],
+  "gisting": [
+   120,
+   27
+  ],
+  "gisting-test": [
+   190,
+   73
+  ],
+  "gistingv10": [
+   1,
+   0
+  ],
+  "gistingv2": [
+   1,
+   0
+  ],
+  "gistingv3": [
+   1,
+   0
+  ],
+  "gistingv4": [
+   1,
+   0
+  ],
+  "gistingv5": [
+   1,
+   0
+  ],
+  "gistingv6": [
+   1,
+   0
+  ],
+  "gistsrc": [
+   1,
+   0
+  ],
+  "graphrag": [
+   205421,
+   169880
+  ],
+  "graphrag-cache": [
+   91216,
+   87746
+  ],
+  "graphrag-chunking": [
+   90630,
+   87355
+  ],
+  "graphrag-common": [
+   92908,
+   88921
+  ],
+  "graphrag-input": [
+   91308,
+   87692
+  ],
+  "graphrag-llm": [
+   91179,
+   88181
+  ],
+  "graphrag-storage": [
+   90003,
+   87886
+  ],
+  "graphrag-vectors": [
+   90482,
+   87246
+  ],
+  "graphragkhoj": [
+   143,
+   60
+  ],
+  "grouse": [
+   256,
+   154
+  ],
+  "hift": [
+   127,
+   65
+  ],
+  "hipporag": [
+   15248,
+   3465
+  ],
+  "hipporag-nyabot": [
+   94,
+   74
+  ],
+  "ibrf": [
+   115,
+   37
+  ],
+  "imagedetect": [
+   766,
+   136
+  ],
+  "in-transformers": [
+   3,
+   3
+  ],
+  "infinity-parser2": [
+   18828,
+   74777
+  ],
+  "instances": [
+   3,
+   4
+  ],
+  "intel-extension-for-transformers": [
+   8971,
+   2971
+  ],
+  "kani-tts-2": [
+   1062,
+   395
+  ],
+  "kgeditor": [
+   77,
+   51
+  ],
+  "kronecker-embeddings": [
+   1484,
+   298
+  ],
+  "kumiho-memory": [
+   853,
+   6436
+  ],
+  "laplace-bayesopt": [
+   157,
+   63
+  ],
+  "lazyllm-llamafactory": [
+   1258,
+   254
+  ],
+  "lbrain": [
+   0,
+   1555
+  ],
+  "lime-ndt": [
+   134,
+   229
+  ],
+  "lindex-patch": [
+   73,
+   32
+  ],
+  "llama-index": [
+   28507560,
+   16127044
+  ],
+  "llama-index-bundle": [
+   455,
+   77
+  ],
+  "llama-index-core": [
+   33470158,
+   34032005
+  ],
+  "llama-index-guardrails-icephi": [
+   0,
+   287
+  ],
+  "llama-index-instrumentation": [
+   15160081,
+   18945253
+  ],
+  "llama-index-legacy": [
+   5320363,
+   5202718
+  ],
+  "llama-index-node-parser-chonkie": [
+   857,
+   1021
+  ],
+  "llama-index-readers-builtsimple": [
+   299,
+   64
+  ],
+  "llama-index-readers-decodo": [
+   0,
+   30
+  ],
+  "llama-index-retrievers-superlinked": [
+   574,
+   194
+  ],
+  "llama-index-retrievers-vectorize": [
+   1317,
+   362
+  ],
+  "llama-index-test-starter": [
+   845,
+   144
+  ],
+  "llama-index-tools-querit": [
+   295,
+   62
+  ],
+  "llamafactory": [
+   1114510,
+   56700
+  ],
+  "llamafactory-songlab": [
+   341,
+   57
+  ],
+  "llm2vec": [
+   22190,
+   9554
+  ],
+  "llmtuner": [
+   2248,
+   721
+  ],
+  "lm-cocktail": [
+   1347,
+   1060
+  ],
+  "locoformer": [
+   1716,
+   2574
+  ],
+  "lux-explainer": [
+   326,
+   96
+  ],
+  "make-a-video-pytorch": [
+   1197,
+   193
+  ],
+  "maniscope": [
+   127,
+   55
+  ],
+  "marl-aquarium": [
+   326,
+   92
+  ],
+  "mcw-transformer": [
+   0,
+   1
+  ],
+  "mcwtimesformer": [
+   1,
+   1
+  ],
+  "mcwtransformers": [
+   992,
+   125
+  ],
+  "med-clip-weixiong": [
+   2782,
+   271
+  ],
+  "micro-sam": [
+   1988,
+   6918
+  ],
+  "mirage-bench": [
+   507,
+   189
+  ],
+  "mkdocs-ultralytics-plugin": [
+   35140,
+   20448
+  ],
+  "ml2": [
+   249,
+   97
+  ],
+  "mmdet": [
+   1045205,
+   1082708
+  ],
+  "mmdet-open": [
+   228,
+   55
+  ],
+  "mmdet-protobuf-upgraded": [
+   0,
+   1
+  ],
+  "mmdet-taeuk4958": [
+   522,
+   31
+  ],
+  "mmps": [
+   1,
+   0
+  ],
+  "mmsegmentation": [
+   167271,
+   110984
+  ],
+  "mmsegmentation-zzb": [
+   386,
+   70
+  ],
+  "mobilesam-mirror": [
+   716,
+   25342
+  ],
+  "model-logger-dp": [
+   1750,
+   149
+  ],
+  "modelscope": [
+   13354819,
+   13069341
+  ],
+  "momahub": [
+   206,
+   58
+  ],
+  "muon-optimizer": [
+   10341,
+   16560
+  ],
+  "my-transformers": [
+   1647,
+   180
+  ],
+  "mytowhee": [
+   47,
+   21
+  ],
+  "nano-graphrag": [
+   5726,
+   3223
+  ],
+  "needle-rs": [
+   1164,
+   1091
+  ],
+  "nemo-asr": [
+   1995,
+   1147
+  ],
+  "nemo-nlp": [
+   1890,
+   172
+  ],
+  "nemo-simple-gan": [
+   0,
+   1
+  ],
+  "nemo-toolkit": [
+   2587108,
+   2678862
+  ],
+  "nemo-toolkit-asr": [
+   2223,
+   4117
+  ],
+  "nemo-tts": [
+   129,
+   64
+  ],
+  "nuggetizer": [
+   226,
+   302
+  ],
+  "nuwa-pytorch": [
+   3086,
+   610
+  ],
+  "nvidia-modelopt": [
+   1356073,
+   1067841
+  ],
+  "nvidia-modelopt-core": [
+   139120,
+   43916
+  ],
+  "omnixai": [
+   1589,
+   752
+  ],
+  "open-clip-torch": [
+   8047646,
+   7228057
+  ],
+  "open-clip-torch-any-py3": [
+   5779,
+   1432
+  ],
+  "opencompass": [
+   19040,
+   13823
+  ],
+  "openocr-python": [
+   17950,
+   16546
+  ],
+  "opentau-transformers": [
+   37,
+   3
+  ],
+  "optillm": [
+   17451,
+   4839
+  ],
+  "otx": [
+   3558,
+   2087
+  ],
+  "owais-roger1": [
+   1,
+   0
+  ],
+  "paddledet": [
+   5875,
+   2802
+  ],
+  "paddleseg": [
+   6912,
+   4856
+  ],
+  "paddlespatial": [
+   78,
+   29
+  ],
+  "pai-easynlp": [
+   545,
+   88
+  ],
+  "peftfactory": [
+   247,
+   78
+  ],
+  "phenaki-pytorch": [
+   2329,
+   284
+  ],
+  "piml": [
+   1919,
+   1099
+  ],
+  "ppdet": [
+   0,
+   1
+  ],
+  "ppdet-notebook": [
+   122,
+   21
+  ],
+  "ppdet-test": [
+   4,
+   1
+  ],
+  "ppmmvehicle": [
+   5,
+   3
+  ],
+  "pquant-ml": [
+   968,
+   1425
+  ],
+  "ps-sues": [
+   66,
+   29
+  ],
+  "psvis": [
+   102,
+   23
+  ],
+  "psvision": [
+   1,
+   0
+  ],
+  "pulsevad": [
+   0,
+   526
+  ],
+  "py-sues": [
+   133,
+   47
+  ],
+  "pyiann": [
+   0,
+   230
+  ],
+  "pyntbci": [
+   386,
+   420
+  ],
+  "pyraws": [
+   100,
+   54
+  ],
+  "qiskit-data-reuploading": [
+   238,
+   53
+  ],
+  "qsparse": [
+   167,
+   81
+  ],
+  "ragelo": [
+   1075,
+   1749
+  ],
+  "rankify": [
+   1029,
+   359
+  ],
+  "refactx": [
+   113,
+   46
+  ],
+  "reprompt-cli": [
+   896,
+   355
+  ],
+  "rfdetr": [
+   761259,
+   1031656
+  ],
+  "rfdetr-isarsoft": [
+   335,
+   73
+  ],
+  "richads-transformers": [
+   1,
+   1
+  ],
+  "rknn-yolov8": [
+   4,
+   5
+  ],
+  "rlinf-transformer-openpi": [
+   0,
+   4424
+  ],
+  "roar-yolo": [
+   920,
+   196
+  ],
+  "rwkv-fla": [
+   2390,
+   908
+  ],
+  "s5-pytorch": [
+   2704,
+   2729
+  ],
+  "salesforce-lavis": [
+   30266,
+   14264
+  ],
+  "search-as-code": [
+   0,
+   289
+  ],
+  "seeact": [
+   312,
+   139
+  ],
+  "seeact-bot": [
+   79,
+   26
+  ],
+  "sequence-layers": [
+   220,
+   105
+  ],
+  "sgd-sai": [
+   98,
+   132
+  ],
+  "shap-select": [
+   2909,
+   2566
+  ],
+  "shapg": [
+   487,
+   103
+  ],
+  "skythought": [
+   70,
+   175
+  ],
+  "slalom-explanations": [
+   78,
+   38
+  ],
+  "sleepsweet": [
+   0,
+   258
+  ],
+  "slice-score": [
+   108,
+   31
+  ],
+  "slot-attention": [
+   1300,
+   295
+  ],
+  "sme-rl": [
+   191,
+   32
+  ],
+  "spach-transformer": [
+   1512,
+   135
+  ],
+  "sparseml": [
+   5566,
+   3919
+  ],
+  "sparseml-nightly": [
+   64,
+   185
+  ],
+  "spectral-model-explainer": [
+   3875,
+   241
+  ],
+  "speeq": [
+   4,
+   2
+  ],
+  "squeezeformer": [
+   358,
+   299
+  ],
+  "stump-cli": [
+   106,
+   36
+  ],
+  "syftr": [
+   324,
+   98
+  ],
+  "syml-ultralytics": [
+   844,
+   195
+  ],
+  "synapt": [
+   1904,
+   2136
+  ],
+  "syndrilla": [
+   749,
+   375
+  ],
+  "t-draft-123": [
+   96,
+   40
+  ],
+  "tactis": [
+   287,
+   199
+  ],
+  "tensormesh-fem": [
+   678,
+   709
+  ],
+  "thingstuff": [
+   3,
+   0
+  ],
+  "timm": [
+   36292555,
+   37760749
+  ],
+  "timm-eidl": [
+   142,
+   72
+  ],
+  "torch-cfd": [
+   1058,
+   175
+  ],
+  "torchcp": [
+   2684,
+   1704
+  ],
+  "torchmultimodal-nightly": [
+   14991,
+   7438
+  ],
+  "towhee": [
+   4480,
+   3542
+  ],
+  "towhee-models": [
+   3070,
+   940
+  ],
+  "towhee-test": [
+   68,
+   18
+  ],
+  "transformer-tricks": [
+   4313,
+   372
+  ],
+  "transformers": [
+   427049679,
+   426616387
+  ],
+  "transformers-kt": [
+   5473,
+   5580
+  ],
+  "transformers-machinify": [
+   1010,
+   155
+  ],
+  "transformers-mcw": [
+   970,
+   144
+  ],
+  "transformers-openpi": [
+   1003,
+   154
+  ],
+  "transformers-phobert": [
+   1729,
+   182
+  ],
+  "transformers-qwenomni": [
+   992,
+   132
+  ],
+  "transformers-usf-om-vl-exp-v0": [
+   977,
+   123
+  ],
+  "transformers-v4-55-0-glm-4-5v-preview": [
+   10436,
+   3970
+  ],
+  "transformers-v5-pre-rc0": [
+   967,
+   142
+  ],
+  "transformers4576": [
+   0,
+   10097
+  ],
+  "true-colon": [
+   0,
+   257
+  ],
+  "trustrag": [
+   126,
+   56
+  ],
+  "turbo-dllm": [
+   0,
+   233
+  ],
+  "ultralytics": [
+   27400180,
+   18828123
+  ],
+  "ultralytics-copy": [
+   111,
+   66
+  ],
+  "ultralytics-custom": [
+   154,
+   77
+  ],
+  "ultralytics-dev": [
+   1318,
+   196
+  ],
+  "ultralytics-dist-yolo": [
+   1070,
+   237
+  ],
+  "ultralytics-opencv-headless": [
+   47346,
+   75144
+  ],
+  "ultralytics-rknn": [
+   737,
+   147
+  ],
+  "ultralytics-sam3-batch": [
+   251,
+   101
+  ],
+  "ultralyticsutils": [
+   352,
+   109
+  ],
+  "unlimited-ocr-max": [
+   0,
+   390
+  ],
+  "versatil": [
+   166,
+   291
+  ],
+  "vidore-benchmark": [
+   8174,
+   1975
+  ],
+  "visaionyoloe": [
+   958,
+   199
+  ],
+  "visdet": [
+   66,
+   28
+  ],
+  "vitpose-infer": [
+   620,
+   50
+  ],
+  "vmas": [
+   9033,
+   13257
+  ],
+  "vtracer": [
+   428229,
+   969712
+  ],
+  "wenet": [
+   6,
+   5
+  ],
+  "wenetrt": [
+   0,
+   1
+  ],
+  "wenetruntime": [
+   23,
+   40
+  ],
+  "wiola": [
+   0,
+   279
+  ],
+  "x-unet": [
+   636,
+   517
+  ],
+  "xai-agg": [
+   118,
+   29
+  ],
+  "xaisuite": [
+   960,
+   293
+  ],
+  "xmersawitransformers": [
+   962,
+   124
+  ],
+  "xn-ultralytics": [
+   354,
+   88
+  ],
+  "yolotest": [
+   908,
+   198
+  ],
+  "yolov10-onnx": [
+   2890,
+   497
+  ],
+  "yolov8-pose-triton": [
+   1736,
+   315
+  ],
+  "yolov8-rknn": [
+   1046,
+   233
+  ],
+  "youtu-agent": [
+   121,
+   64
+  ],
+  "zmkj-rknn-yolov8": [
+   2562,
+   327
+  ]
+ }
+}

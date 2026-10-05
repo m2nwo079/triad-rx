@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "step": "m2_scores",
+    "attempt": 1,
+    "created": "2026-10-05",
+    "git_commit": "da6ab5ca1c1755e78abdf6d7f52b7f1e23ab67d6",
+    "review_sha256": "31cecc57a36c5ba2dc0a67da13f4337b49e9b02dfb74d0c418fba97357860c45",
+    "original_sha256": "373a77974166f045c30db3a53cbd0f238e08309ef09e66c7d2320f52535b3e0c",
+    "pass_rule": {
+      "statistic": "wilson_lower_95",
+      "pass": 0.8,
+      "conditional": 0.75
+    }
+  },
+  "categories": {
+    "company": {
+      "n": 100,
+      "correct": 98,
+      "unsure_notes": 1,
+      "precision": 0.98,
+      "wilson_lower": 0.929988209271456,
+      "wilson_upper": 0.9944980324498376,
+      "verdict": "pass"
+    },
+    "academic": {
+      "n": 100,
+      "correct": 99,
+      "unsure_notes": 0,
+      "precision": 0.99,
+      "wilson_lower": 0.9455138038212946,
+      "wilson_upper": 0.9982325679358593,
+      "verdict": "pass"
+    },
+    "government": {
+      "n": 34,
+      "correct": 18,
+      "unsure_notes": 0,
+      "precision": 0.5294117647058824,
+      "wilson_lower": 0.3673671298006892,
+      "wilson_upper": 0.6854849552491152,
+      "verdict": "fail"
+    },
+    "individual": {
+      "n": 57,
+      "correct": 57,
+      "unsure_notes": 0,
+      "precision": 1.0,
+      "wilson_lower": 0.9368611651470209,
+      "wilson_upper": 0.9999999999999998,
+      "verdict": "pass"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "step": "evidence_readme_search",
+    "created": "2026-10-05",
+    "git_commit": "f77219799c9ccd7fe8dd8656f5b0d9ed753eea91",
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "pwc_snapshot_latest_paper": "2025-07-21T14:03:08+00:00",
+    "query_template": "\"<arXiv id>\" in:readme created:<=<data_cutoff date>",
+    "first_page_only": 100,
+    "queried_from": "2026-10-04T14:33:13+00:00",
+    "queried_to": "2026-10-04T17:56:38+00:00",
+    "pair_evidence_sha256": "38a9f9588aa45c7659d48c4faa31572d2fd01f40e21870c99da79b030422e47e",
+    "readme_links_parquet_sha256": "99f05072d13ceaaaa48f174b40ade83832a51e6b87af4c2d04932154a0c867c0"
+  },
+  "stats": {
+    "papers_searched": 4695,
+    "papers_with_hits": 2165,
+    "papers_truncated": 0,
+    "hit_pairs": 4063,
+    "hit_repos": 2356,
+    "readme_unavailable": 0,
+    "verified_pairs": 4040,
+    "verified_repos": 2334,
+    "verified_papers": 2154
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "step": "m2_sample",
+    "attempt": 1,
+    "created": "2026-10-05",
+    "git_commit": "8b43c81208fc798873484c2b9f9b2c77d0625293",
+    "population": "all_patent_evidence_assignees",
+    "seed": 20261005,
+    "n_per_category": 100,
+    "sampling": "numpy default_rng(quality.m2.seed + attempt).choice without replacement per category in config order, members sorted by assignee_id",
+    "patents_sha256": "c581dec9480d854f2ffca0218a48778cea199f3615bcae228de887fd327a7e8b",
+    "assignees_sha256": "7eec99066a5a666b6b8e7e8645451736301acf9359cb087520f31f589917f1fa",
+    "review_file": "data/review/m2_review_attempt1.csv",
+    "review_original_sha256": "373a77974166f045c30db3a53cbd0f238e08309ef09e66c7d2320f52535b3e0c"
+  },
+  "stats": {
+    "assignee_ids_all": 4616,
+    "categories_all": {
+      "company": 4027,
+      "academic": 381,
+      "government": 34,
+      "individual": 57,
+      "ambiguous": 114,
+      "unknown": 3
+    },
+    "assignee_ids_with_type_conflict": 0,
+    "related_inventions": 149,
+    "dvf_related_assignees": 52,
+    "population": 4616,
+    "categories_population": {
+      "company": 4027,
+      "academic": 381,
+      "government": 34,
+      "individual": 57,
+      "ambiguous": 114,
+      "unknown": 3
+    },
+    "sample": {
+      "company": 100,
+      "academic": 100,
+      "government": 34,
+      "individual": 57
+    }
+  }
+}

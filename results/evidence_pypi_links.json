@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "step": "evidence_pypi_links",
+    "created": "2026-10-05",
+    "git_commit": "13b4f9dcaae67983ea3d34bd2f6f3bc3eddf1591",
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "table": "bigquery-public-data.pypi.distribution_metadata",
+    "rule": "home_page, download_url or project_urls points to a repository; distributions uploaded on or before data_cutoff; PEP 503 names",
+    "dry_run_bytes": 2737716395,
+    "bytes_processed": 2737716395,
+    "cache_hit": false,
+    "repo_stars_sha256": "6780d5b24efb5aad417697a0eb85b1f9aed5915bbc8c94a129793393e37940be",
+    "pypi_links_parquet_sha256": "febe6b251d86a7fe0ac2a39e9977e5261a3c2b6cae172deb0d66eb28f6769677"
+  },
+  "stats": {
+    "repositories_searched": 4098,
+    "links": 302,
+    "packages": 300,
+    "repositories_with_package": 147,
+    "packages_with_several_repositories": 2
+  }
+}

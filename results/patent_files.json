@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "step": "patent_files",
+    "created": "2026-10-04",
+    "git_commit": "4743ecdffd87ba099fd38ea91afc9738ca1ca3a4",
+    "source": "USPTO Open Data Portal bulk datasets, downloaded manually",
+    "release_date": "2026-04-10"
+  },
+  "files": [
+    {
+      "product": "PVGPATDIS",
+      "table": "g_patent",
+      "file": "g_patent.tsv.zip",
+      "bytes": 232076712,
+      "sha256": "66fa35c7a035ae72ca8af6fa38594510239f8b52aae06418170dbcdad6fcc9a4"
+    },
+    {
+      "product": "PVGPATDIS",
+      "table": "g_patent_abstract",
+      "file": "g_patent_abstract.tsv.zip",
+      "bytes": 1708330746,
+      "sha256": "1c94c05931a23226743549cb4c3fd9432184089a07b7eec08ff78d38598ac6c7"
+    },
+    {
+      "product": "PVGPATDIS",
+      "table": "g_cpc_at_issue",
+      "file": "g_cpc_at_issue.tsv.zip",
+      "bytes": 338958464,
+      "sha256": "93cee584977097a858a6a4adea6c07d90d145f981c655cdc469bdc2418706f6c"
+    },
+    {
+      "product": "PVGPATDIS",
+      "table": "g_assignee_disambiguated",
+      "file": "g_assignee_disambiguated.tsv.zip",
+      "bytes": 362741666,
+      "sha256": "96d3f3c97abd80c82e326d5def9e01cfc431daa46d4bab80e8ccb2c32044a11e"
+    },
+    {
+      "product": "PVPGPUBDIS",
+      "table": "pg_published_application",
+      "file": "pg_published_application.tsv.zip",
+      "bytes": 301006689,
+      "sha256": "1532967ca9a67e5d24a49d48334a15d0e760c4237c6fcf15efd3aacefb0558e4"
+    },
+    {
+      "product": "PVPGPUBDIS",
+      "table": "pg_published_application_abstract",
+      "file": "pg_published_application_abstract.tsv.zip",
+      "bytes": 1597376724,
+      "sha256": "78ead8df11b271965a88d874caef4815c6f76d78a2903f6c4dd25f35a97a7546"
+    },
+    {
+      "product": "PVPGPUBDIS",
+      "table": "pg_cpc_at_issue",
+      "file": "pg_cpc_at_issue.tsv.zip",
+      "bytes": 202652269,
+      "sha256": "bb675bc33453b1e32010057b4ecc8c9593040a871252f99fa2aea4e86227213f"
+    },
+    {
+      "product": "PVPGPUBDIS",
+      "table": "pg_assignee_disambiguated",
+      "file": "pg_assignee_disambiguated.tsv.zip",
+      "bytes": 122366357,
+      "sha256": "125803b7cbade9848e5f5e166a871646241f512aafa4c1006bc429f2c364345c"
+    },
+    {
+      "product": "PVPGPUBDIS",
+      "table": "pg_granted_pgpubs_crosswalk",
+      "file": "pg_granted_pgpubs_crosswalk.tsv.zip",
+      "bytes": 112671324,
+      "sha256": "21d682ebecf9e62eea8cfeb8f5759b32200e4ee0f041448a213e439103e87441"
+    }
+  ],
+  "unexpected_files": []
+}

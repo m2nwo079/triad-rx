@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "step": "m2_scores",
+    "attempt": 2,
+    "created": "2026-10-05",
+    "git_commit": "049b86e660a7ec3ab6727104f5898149d544b79f",
+    "review_sha256": "6d3ba67c5bfb8194fe7ed914081e9816dbdbe10b508d35e8c516cfa86c2d1848",
+    "original_sha256": "c37c512290b04f6c1bbc96aaf51c26bd97aab895db94f93d1119f67b1d7861b2",
+    "pass_rule": {
+      "statistic": "wilson_lower_95",
+      "pass": 0.8,
+      "conditional": 0.75
+    }
+  },
+  "categories": {
+    "government": {
+      "n": 16,
+      "correct": 15,
+      "unsure_notes": 0,
+      "precision": 0.9375,
+      "wilson_lower": 0.7167126242970107,
+      "wilson_upper": 0.9888806552353576,
+      "verdict": "fail"
+    }
+  }
+}

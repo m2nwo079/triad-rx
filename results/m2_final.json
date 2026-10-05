@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "step": "m2_final",
+    "created": "2026-10-05",
+    "git_commit": "049b86e660a7ec3ab6727104f5898149d544b79f",
+    "scored_attempts": [
+      1,
+      2
+    ],
+    "rule": "per category, the latest scored attempt that measured it"
+  },
+  "categories": {
+    "company": {
+      "attempt": 1,
+      "n": 100,
+      "correct": 98,
+      "unsure_notes": 1,
+      "precision": 0.98,
+      "wilson_lower": 0.929988209271456,
+      "wilson_upper": 0.9944980324498376,
+      "verdict": "pass"
+    },
+    "academic": {
+      "attempt": 1,
+      "n": 100,
+      "correct": 99,
+      "unsure_notes": 0,
+      "precision": 0.99,
+      "wilson_lower": 0.9455138038212946,
+      "wilson_upper": 0.9982325679358593,
+      "verdict": "pass"
+    },
+    "government": {
+      "attempt": 2,
+      "n": 16,
+      "correct": 15,
+      "unsure_notes": 0,
+      "precision": 0.9375,
+      "wilson_lower": 0.7167126242970107,
+      "wilson_upper": 0.9888806552353576,
+      "verdict": "fail"
+    },
+    "individual": {
+      "attempt": 1,
+      "n": 57,
+      "correct": 57,
+      "unsure_notes": 0,
+      "precision": 1.0,
+      "wilson_lower": 0.9368611651470209,
+      "wilson_upper": 0.9999999999999998,
+      "verdict": "pass"
+    }
+  },
+  "attempts_per_category": {
+    "company": [
+      1
+    ],
+    "academic": [
+      1
+    ],
+    "government": [
+      1,
+      2
+    ],
+    "individual": [
+      1
+    ]
+  },
+  "not_measured": []
+}

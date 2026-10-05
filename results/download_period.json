@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "step": "download_period",
+    "created": "2026-10-05",
+    "git_commit": "b6e393d052473cf440692f4be603887691cf8b50",
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "rule": "preregistration 6: 12 months if the dry-run estimate is at most half of the sandbox monthly free query volume, else 6 months (pypistats)",
+    "free_bytes_per_month": 1099511627776,
+    "threshold_bytes": 549755813888,
+    "checked_at": "2026-10-05T06:38:27+00:00",
+    "query": "SELECT\n  project,\n  COUNTIF(timestamp <= @mid) AS downloads_first_half,\n  COUNTIF(timestamp > @mid) AS downloads_second_half\nFROM `bigquery-public-data.pypi.file_downloads`\nWHERE timestamp > @start\n  AND timestamp <= @cutoff\n  AND project IN UNNEST(@packages)\nGROUP BY project\nORDER BY project",
+    "parameters": {
+      "start": "2025-09-24T17:59:54+00:00",
+      "mid": "2026-03-26T05:59:54+00:00",
+      "cutoff": "2026-09-24T17:59:54+00:00",
+      "packages": "300 packages from data/derived/evidence/pypi_links.parquet"
+    },
+    "pypi_links_sha256": "febe6b251d86a7fe0ac2a39e9977e5261a3c2b6cae172deb0d66eb28f6769677"
+  },
+  "estimate_bytes": 2575407893034,
+  "estimate_tib": 2.342,
+  "threshold_tib": 0.5,
+  "verdict": "6_months_pypistats"
+}

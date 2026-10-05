@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "step": "evidence_repo_stars",
+    "created": "2026-10-05",
+    "git_commit": "b05f97b5c1ee8ef7a2c4001dfc6647cabe2bcae1",
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "window_days": [
+      "2025-09-24",
+      "2026-09-24"
+    ],
+    "window_rule": "start < day <= cutoff, UTC dates; GitHub day boundaries may not align with UTC",
+    "api_version": "2026-03-10",
+    "settings": {
+      "patent_window": "build_window",
+      "repo_unit": "pair_evidence_papers",
+      "readme_max_arxiv_ids": 10,
+      "star_window_days": 365,
+      "star_aggregate": "sum"
+    },
+    "fetched_from": "2026-10-05T02:25:14+00:00",
+    "fetched_to": "2026-10-05T04:38:39+00:00",
+    "pwc_links_sha256": "20a2d377dd95b0268bbdf0078c40215037e91d0b4b5e0578e6c065452e45f850",
+    "readme_links_sha256": "99f05072d13ceaaaa48f174b40ade83832a51e6b87af4c2d04932154a0c867c0",
+    "repo_stars_parquet_sha256": "6780d5b24efb5aad417697a0eb85b1f9aed5915bbc8c94a129793393e37940be"
+  },
+  "stats": {
+    "repositories": 4116,
+    "from_pwc": 2114,
+    "from_readme": 2003,
+    "in_both": 1,
+    "readme_list_repos_excluded": 331,
+    "fetched_ok": 4098,
+    "unavailable": 18,
+    "unavailable_status": {
+      "404": 18
+    },
+    "zero_stars_in_window": 1570
+  }
+}

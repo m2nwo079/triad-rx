@@ -1,5 +1,5 @@
 {
-  "design_version": "v0.3.15",
+  "design_version": "v0.3.27",
   "design_section": "10.2",
   "arxiv_categories": [
     "cs.LG",
@@ -52,6 +52,96 @@
       "d3_same_type_cosine_quantile": 0.985,
       "training": "T1+T2 labels, feature sets by V2 verdict, trees by stratified CV on the combined set",
       "calibration": "none (ranking only; expected hit rate is the T2 Precision@k of the engine used)"
+    },
+    "dvf": {
+      "population": "prospective_registration",
+      "prospective_file": "prospective/2026-10-04.json",
+      "patent_unit": "pair",
+      "missing_assignee": "exclude_and_report",
+      "f_pair_aggregate": "min",
+      "f_implementation": "terms_with_repo",
+      "percentile_ties": "average",
+      "riskiest": {
+        "missing_axis": "first",
+        "tie_break": "axis_mean_percentile",
+        "axis_order": [
+          "F",
+          "V",
+          "D"
+        ]
+      },
+      "bootstrap": {
+        "method": "poisson",
+        "replicates": 1000,
+        "seed": 20261006
+      }
+    },
+    "briefing": {
+      "top_n": 20,
+      "order": "rank_prescription"
+    },
+    "evidence": {
+      "patent_window": "build_window",
+      "repo_unit": "pair_evidence_papers",
+      "readme_max_arxiv_ids": 10,
+      "star_window_days": 365,
+      "star_aggregate": "sum",
+      "package_link": "pypi_metadata_urls",
+      "download_growth": "half_over_half",
+      "growth_smoothing": 1,
+      "download_half_weeks": 12
+    },
+    "assignee_classes": {
+      "academic_patterns": [
+        "University",
+        "Universität",
+        "Université",
+        "Universidad",
+        "Università",
+        "College",
+        "Institute of Technology",
+        "Polytechnic",
+        "Academy of Sciences"
+      ],
+      "ambiguous_words": [
+        "Institute",
+        "Research",
+        "Laboratory",
+        "Foundation",
+        "Hospital"
+      ],
+      "company_suffixes": [
+        "Inc",
+        "Corp",
+        "Co.",
+        "Ltd",
+        "LLC",
+        "GmbH",
+        "AG",
+        "S.A.",
+        "K.K.",
+        "Corporation",
+        "Incorporated",
+        "Limited",
+        "Company"
+      ],
+      "codes": {
+        "company_or_academic": [
+          "2",
+          "3"
+        ],
+        "individual": [
+          "4",
+          "5"
+        ],
+        "government": [
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "partial_interest_prefix": "1"
     }
   },
   "vocab": {
@@ -152,7 +242,8 @@
         "pass": 0.8,
         "conditional": 0.75
       },
-      "max_remeasure": 2
+      "max_remeasure": 2,
+      "population": "all_patent_evidence_assignees"
     },
     "q1": {
       "seed": 20261005,
