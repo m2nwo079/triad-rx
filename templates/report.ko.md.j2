@@ -1,0 +1,187 @@
+# TriadRx 결과 보고서
+
+> 이 보고서는 `scripts/report/build_report.py`가 결과 파일(`results/*.json`)에서 자동으로 생성했습니다. 본문의 모든 수치는 결과 파일에서 읽은 값이며, 손으로 고치지 않습니다. 설계서 {{ V.v('config', 'design_version') }}, 기준 시점 {{ V.v('applied_main', 'meta.data_cutoff') }}.
+
+**엔진 신뢰도 표시:** {% if verdicts.validation_main.V1 %}엔진 신뢰도 확인(V1 통과){% else %}엔진 신뢰도 미확보(V1 불통과){% endif %}. DVF 점수는 투명한 지표 기반 우선순위이며 미래 성과 예측력은 검증하지 않았습니다(설계서 7.1절). 브리핑과 MVP는 검증된 사업 기회가 아니라 근거가 추적 가능한 가설입니다(설계서 8.7절).
+
+**연구의 성격:** 유망한 세 기술 결합을 처방하기 위한 프레임워크를 제안하고 머신러닝·딥러닝에 적용한 첫 평가입니다. {% if not verdicts.validation_main.V1 %}이 평가에서 후보 발굴 엔진의 신뢰도는 확보하지 못했습니다. {% endif %}처방의 효능은 결과가 존재하기 전에 고정한 전향적 검증(11절)으로 {{ V.v('derived', 'prospective_verdict_date') }}에 판정합니다.
+
+## 1. 주장 범위
+
+| 주장하는 것 | 주장하지 않는 것 |
+|---|---|
+| 처방 절차의 근거가 추적 가능하고 충실성이 측정되었다 | 후보 발굴 엔진이 무작위보다 낫다 (V1 불통과) |
+| 결정 시점·누수 통제를 갖춘 처방 절차를 실행했다. 사전 등록은 경량 검증 판정을 보호하고, 처방 단계 규칙은 그 판정 이후에 정했다 | DVF 점수가 미래 성과를 예측한다 |
+| 고차 특징의 기여를 사전 등록 규칙으로 확인했다 | 브리핑·MVP가 검증된 사업 기회다 |
+| 처방의 효능을 판정할 전향적 검증 절차와 기준선을 결과가 존재하기 전에 고정했다 | 엔진이 단순 근접도 기준선보다 낫다 |
+
+## 2. 데이터와 어휘
+
+- 적용 모드 구축 구간의 논문은 {{ V.v('hypergraph_main_applied', 'windows.build.papers_in_window', 'int') }}편이며, 그중 어휘 용어가 매칭된 논문은 {{ V.v('hypergraph_main_applied', 'windows.build.papers_with_terms', 'int') }}편입니다.
+- 기본 어휘는 기법 {{ V.v('vocab_base', 'terms_by_type_status.M:active', 'int') }}개, 과제 {{ V.v('vocab_base', 'terms_by_type_status.T:active', 'int') }}개입니다. 스팸 규칙(R1)으로 제거된 항목은 {{ V.v('vocab_base', 'removed_by_rule_reason.R1:spam_pattern', 'int') }}개입니다.
+- R4 단일어 판정: 허용 {{ V.v('r4_decisions_T1', 'counts.allow', 'int') }}개, 거부 {{ V.v('r4_decisions_T1', 'counts.reject', 'int') }}개.
+- R5 적용 후 적용 모드 최종 어휘는 {{ V.v('vocab_final_applied', 'stats.terms_final', 'int') }}개입니다(R5로 {{ V.v('vocab_final_applied', 'stats.terms_removed_r5', 'int') }}개 제거).
+
+**M1 매칭 정밀도** (층별 최종 시도, Wilson 하한):
+
+| 층 | 맞음 / 표본 | 하한 | 판정 |
+|---|---|---|---|
+| 기법 | {{ V.v('m1_T1', 'final_by_stratum.method_ci.correct', 'int') }} / {{ V.v('m1_T1', 'final_by_stratum.method_ci.n', 'int') }} | {{ V.v('m1_T1', 'final_by_stratum.method_ci.wilson_lower', 'd3') }} | {{ word[V.raw('m1_T1', 'final_by_stratum.method_ci.status')] }} |
+| 과제 | {{ V.v('m1_T1', 'final_by_stratum.task_ci.correct', 'int') }} / {{ V.v('m1_T1', 'final_by_stratum.task_ci.n', 'int') }} | {{ V.v('m1_T1', 'final_by_stratum.task_ci.wilson_lower', 'd3') }} | {{ word[V.raw('m1_T1', 'final_by_stratum.task_ci.status')] }} |
+| 약어 | {{ V.v('m1_T1', 'final_by_stratum.acronym_cs.correct', 'int') }} / {{ V.v('m1_T1', 'final_by_stratum.acronym_cs.n', 'int') }} | {{ V.v('m1_T1', 'final_by_stratum.acronym_cs.wilson_lower', 'd3') }} | {{ word[V.raw('m1_T1', 'final_by_stratum.acronym_cs.status')] }} |
+
+M1은 모든 층에서 합격 기준에 이르지 못했습니다. 층별 하한은 사전 등록대로 R5의 정밀도(π)로 쓰였으며, 매칭 오탐은 결과 해석의 한계로 남습니다(설계서 16절 11·14·15번).
+
+## 3. 경량 검증
+
+T2 평가 후보 {{ V.v('validation_main', 't2.candidates', 'int') }}개 중 실현 결합(양성)은 {{ V.v('validation_main', 't2.positives', 'int') }}개입니다.
+
+| 지표 | 점 추정 | 후보 단위 구간 | 용어 블록 구간 |
+|---|---|---|---|
+| Precision@k 리프트 | {{ V.v('validation_main', 'point.lift', 'd2') }} | {{ V.ci('validation_main', 'ci.candidate.lift.lower', 'ci.candidate.lift.upper', 'd2') }} | {{ V.ci('validation_main', 'ci.term_block.lift.lower', 'ci.term_block.lift.upper', 'd2') }} |
+| AUPRC 차이 (고차 특징 포함 − 제외) | {{ V.v('validation_main', 'point.auprc_diff', 'd3') }} | {{ V.ci('validation_main', 'ci.candidate.auprc_diff.lower', 'ci.candidate.auprc_diff.upper', 'd3') }} | {{ V.ci('validation_main', 'ci.term_block.auprc_diff.lower', 'ci.term_block.auprc_diff.upper', 'd3') }} |
+
+{% if verdicts.validation_main.V1 -%}
+**V1 결론:** 두 부트스트랩 방식 모두에서 리프트의 하한이 기준을 넘어, 엔진은 무작위보다 높은 상위 정밀도를 보였습니다.
+{%- else -%}
+**V1 결론:** 두 부트스트랩 방식 중 하나 이상에서 리프트의 하한이 기준을 넘지 못해, 엔진이 무작위보다 낫다고 판정하지 않습니다. {% if verdicts.validation_main.V1_by.candidate and not verdicts.validation_main.V1_by.term_block %}후보 단위 구간은 기준을 넘지만 용어 블록 구간은 넘지 못합니다. {% elif not verdicts.validation_main.V1_by.candidate and not verdicts.validation_main.V1_by.term_block %}두 구간 모두 기준을 넘지 못합니다. {% else %}용어 블록 구간은 기준을 넘지만 후보 단위 구간은 넘지 못합니다. {% endif %}후보들이 용어를 공유해 후보 단위 구간이 낙관적일 수 있기 때문에 두 방식을 모두 요구했습니다(설계서 10.4절).
+{%- endif %}
+
+{% if verdicts.validation_main.V2 -%}
+**V2 결론:** 고차 특징을 넣은 엔진의 AUPRC가 쌍 특징만 쓴 엔진보다 높았습니다.
+{%- else -%}
+**V2 결론:** 고차 특징을 넣은 엔진의 AUPRC 차이 구간이 기준을 넘지 못해, 고차 특징이 순위 성능에 보탬이 된다고 판정하지 않습니다. 적용 모드는 고차 특징을 뺀 엔진(특징 세트 {{ V.v('applied_main', 'meta.feature_sets', 'join') }})으로 실행했습니다(설계서 10.6절).
+{%- endif %}
+
+**보조 지표(설계서 10.4절):** 판정에 쓰지 않는 참고값입니다. 고차 특징을 넣은 엔진(P+H+T+R) 기준이며, 괄호는 시드 사이의 표준편차입니다.
+
+| 지표 | 시드 평균 점수 | 시드별 값의 평균 (표준편차) |
+|---|---|---|
+| AUROC | {{ V.v('validation_main', 'secondary.engine_auroc', 'd3') }} | {{ V.v('validation_main', 'per_seed.engine.auroc.mean', 'd3') }} ({{ V.v('validation_main', 'per_seed.engine.auroc.sd', 'd3') }}) |
+{% set top_k = V.raw('validation_main', 'meta.evaluation_config.top_k') -%}
+| Precision@{{ V.v('validation_main', 'meta.evaluation_config.top_k', 'int') }} | {{ V.v('validation_main', 'point.precision_at_k', 'd3') }} | {{ V.v('validation_main', 'per_seed.engine.precision_at_' ~ top_k ~ '.mean', 'd3') }} ({{ V.v('validation_main', 'per_seed.engine.precision_at_' ~ top_k ~ '.sd', 'd3') }}) |
+{% for k in V.raw('validation_main', 'meta.evaluation_config.secondary_k') -%}
+| Precision@{{ V.v('validation_main', 'meta.evaluation_config.secondary_k.' ~ loop.index0, 'int') }} | {{ V.v('validation_main', 'secondary.engine_precision_at_' ~ k, 'd3') }} | {{ V.v('validation_main', 'per_seed.engine.precision_at_' ~ k ~ '.mean', 'd3') }} ({{ V.v('validation_main', 'per_seed.engine.precision_at_' ~ k ~ '.sd', 'd3') }}) |
+{% endfor %}
+AUROC는 전체 순위의 변별을, V1은 최상위 후보의 정밀도를 봅니다. 둘은 다르게 나올 수 있으므로 V1 판정을 AUROC로 대신하지 않습니다.
+
+**보조 분석 S1 (약어 표기 제외):** 리프트 {{ V.v('validation_S1', 'point.lift', 'd2') }}, 용어 블록 구간 {{ V.ci('validation_S1', 'ci.term_block.lift.lower', 'ci.term_block.lift.upper', 'd2') }}. {% if verdicts.validation_S1.V1 == verdicts.validation_main.V1 and verdicts.validation_S1.V2 == verdicts.validation_main.V2 %}판정이 주 분석과 같아, 약어 잡음이 결론을 바꾸지 않았습니다.{% else %}판정이 주 분석과 달라, 약어 매칭의 영향 가능성을 한계로 남깁니다.{% endif %}
+
+**후보 생성 재현율:** T2 레이블 구간에서 유의하게 실현된 새 결합 {{ V.v('candidate_recall_main_T2', 'realised_new_triads_significant', 'int') }}개 중 후보에 들어간 것은 {{ V.v('candidate_recall_main_T2', 'significant_in_candidates', 'int') }}개({{ V.v('candidate_recall_main_T2', 'candidate_recall', 'pct1') }})입니다. 엔진이 다루는 범위(열린 삼각형과 근접도 상위 two-hop 결합)가 실현되는 결합 전체에 비해 좁다는 뜻입니다(설계서 16절 16번).
+
+## 4. 적용 모드 처방
+
+- 후보 {{ V.v('candidates_main_applied', 'stats.candidates', 'int') }}개(열린 삼각형 {{ V.v('candidates_main_applied', 'stats.open_triangles', 'int') }}개, two-hop {{ V.v('candidates_main_applied', 'stats.two_hop_selected', 'int') }}개).
+- 중복 필터로 {{ V.v('applied_main', 'redundancy.triads_flagged', 'int') }}개를 제외했습니다(D1 {{ V.v('applied_main', 'redundancy.triads_flagged_by_rule.D1', 'int') }}, D2 {{ V.v('applied_main', 'redundancy.triads_flagged_by_rule.D2', 'int') }}, D3 {{ V.v('applied_main', 'redundancy.triads_flagged_by_rule.D3', 'int') }}).
+- 기대 적중률(참고값, 보장값 아님): {{ V.v('applied_main', 'expected_hit_rate_at_k.value', 'd3') }}. 출처: 적용 모드에 쓴 특징 세트({{ V.v('applied_main', 'meta.feature_sets', 'join') }})의 T2 Precision@{{ V.v('applied_main', 'expected_hit_rate_at_k.k', 'int') }}.
+- 처방 상위 후보는 전향적 등록 파일에 고정했습니다(설계서 11절).
+
+| 처방 순위 | 결합 |
+|---|---|
+{% for i in range(V.raw('config', 'applied.briefing.top_n')) -%}
+| {{ V.v('prospective', 'top_k_prescription.' ~ i ~ '.rank', 'int') }} | {{ V.v('prospective', 'top_k_prescription.' ~ i ~ '.triad', 'triad') }} |
+{% endfor %}
+
+## 5. 근거 수집
+
+| 층 | 규모 |
+|---|---|
+| 논문 | 구성 쌍 {{ V.v('evidence_papers', 'stats.pairs', 'int') }}개, 쌍 근거 논문 {{ V.v('evidence_papers', 'stats.distinct_papers', 'int') }}편 |
+| 특허 | 문서 {{ V.v('evidence_patents', 'stats.documents', 'int') }}건, 발명 {{ V.v('evidence_patents', 'stats.inventions', 'int') }}개, 마지막 등록일 {{ V.v('evidence_patents', 'stats.steps.grant.max_date_all_utility', 'date') }} |
+| 저장소 | 대상 {{ V.v('evidence_repo_stars', 'stats.repositories', 'int') }}개, 스타 이력 수집 {{ V.v('evidence_repo_stars', 'stats.fetched_ok', 'int') }}개 |
+| 패키지 | 연결 {{ V.v('evidence_pypi_links', 'stats.packages', 'int') }}개, 다운로드 수집 {{ V.v('evidence_pypi_downloads', 'stats.fetched_ok', 'int') }}개 |
+
+**D 다운로드 기간 판정(설계서 7.4절):** 열두 달 조회의 추정 처리량 {{ V.v('download_period', 'estimate_tib', 'd3') }} TiB가 기준 {{ V.v('download_period', 'threshold_tib', 'd3') }} TiB를 넘어 pypistats로 바꿨고, 실제 기간은 {{ V.v('evidence_pypi_downloads', 'meta.half_weeks_used', 'int') }}주 대 {{ V.v('evidence_pypi_downloads', 'meta.half_weeks_used', 'int') }}주입니다.
+
+## 6. DVF
+
+DVF 대상 후보 {{ V.v('derived', 'dvf_candidates', 'int') }}개에서 축이 결측인 후보 수는 D {{ V.v('dvf', 'summary.axis_missing.D', 'int') }}, F {{ V.v('dvf', 'summary.axis_missing.F', 'int') }}, V {{ V.v('dvf', 'summary.axis_missing.V', 'int') }}입니다. 가장 위험한 축은 V {{ V.v('dvf', 'summary.riskiest_axis.V', 'int') }}, F {{ V.v('dvf', 'summary.riskiest_axis.F', 'int') }}, D {{ V.v('dvf', 'summary.riskiest_axis.D', 'int') }}개이며, 그중 결측 때문에 지정된 경우가 {{ V.v('dvf', 'summary.riskiest_by_missing', 'int') }}개입니다. 관련 특허가 적어 V가 대부분 결측이고, 결측 축을 먼저 지정하는 규칙(설계서 8.4절) 때문에 MVP 유형이 고객 인터뷰 쪽으로 쏠립니다(설계서 16절 20번).
+
+**순위 안정성(근거 단위 포아송 부트스트랩, 설계서 7.3절):** 결측이 아닌 축 점수 {{ V.v('derived', 'dvf_axis_scores', 'int') }}개 중 {{ V.v('derived', 'dvf_axis_wide', 'int') }}개는 부트스트랩 구간이 점수 구간 {{ V.v('derived', 'dvf_wide_levels', 'int') }}개 이상에 걸칩니다. 세 축이 모두 있는 후보 {{ V.v('derived', 'dvf_full_axes', 'int') }}개 중 {{ V.v('derived', 'dvf_unstable_riskiest', 'int') }}개는 가장 위험한 축으로 지정된 축이 부트스트랩에서 같은 축으로 뽑힌 비율이 {{ V.v('derived', 'dvf_stable_share', 'd2') }} 미만이며(가장 낮은 비율 {{ V.v('derived', 'dvf_min_riskiest_share', 'd2') }}), 그중 브리핑 대상은 {{ V.v('derived', 'dvf_unstable_briefing', 'int') }}개입니다. 결측 축으로 지정된 후보는 지정이 고정되지만, 점수를 비교해 지정한 후보의 MVP 유형은 근거 표본에 민감합니다(설계서 16절 23번).
+
+**M2 출원인 분류 정밀도:**
+
+| 범주 | 맞음 / 표본 | 하한 | 판정 |
+|---|---|---|---|
+{% for cat, name in [('company', '기업'), ('academic', '학술'), ('government', '정부'), ('individual', '개인')] -%}
+| {{ name }} | {{ V.v('m2_final', 'categories.' ~ cat ~ '.correct', 'int') }} / {{ V.v('m2_final', 'categories.' ~ cat ~ '.n', 'int') }} | {{ V.v('m2_final', 'categories.' ~ cat ~ '.wilson_lower', 'd3') }} | {{ word[V.raw('m2_final', 'categories.' ~ cat ~ '.verdict')] }} |
+{% endfor %}
+
+## 7. 브리핑과 품질
+
+- 생성 모델 {{ V.v('briefing_generation', 'meta.model_versions.0') }}. 결합 틀 생성 {{ V.v('briefing_generation', 'summary.runs', 'int') }}회 중 완성 {{ V.v('briefing_generation', 'summary.frame_complete', 'int') }}회, 개념 불충분 {{ V.v('briefing_generation', 'summary.frame_insufficient', 'int') }}회, 형식 오류 {{ V.v('briefing_generation', 'summary.frame_invalid', 'int') }}회.
+- 개념 불충분 이유: 결합 근거 없음 {{ V.v('briefing_generation', 'summary.insufficient_reasons.no_combination_evidence', 'int') }}, 용어 뜻 불일치 {{ V.v('briefing_generation', 'summary.insufficient_reasons.term_mismatch', 'int') }}, 비교만 함 {{ V.v('briefing_generation', 'summary.insufficient_reasons.comparison_only', 'int') }}. 동시출현이 결합이 아니라 비교 관계를 반영한 조합(설계서 16절 17번), 어휘 시점 불일치와 약어 다의성(16절 15번)이 결합 틀 단계에서 걸러졌습니다.
+
+**충실성의 근거는 세 층입니다.**
+
+1. **구조적 보장:** 후보별 스키마가 근거 ID를 그 묶음 안으로 제한하고, DVF 축·MVP 유형·패키지 버전은 모델이 생성하지 않고 결과 파일에서 붙입니다. 따라서 묶음 밖 ID의 인용이나 DVF 값의 변경은 일어날 수 없습니다.
+2. **사전 등록된 측정:**
+   - Q1 충실성: 근거형 문장 표본 {{ V.v('q1', 'n', 'int') }}개 중 {{ V.v('q1', 'supported', 'int') }}개가 인용 근거로 뒷받침되었습니다({{ V.v('q1', 'rate', 'd3') }}, Wilson 구간 {{ V.ci('q1', 'wilson_95.0', 'wilson_95.1') }}).
+   - Q2 안정성: 결합 틀 일치율 {{ V.v('q2', 'frame_agreement.agreeing', 'int') }} / {{ V.v('q2', 'frame_agreement.total', 'int') }} ({{ V.v('q2', 'frame_agreement.rate', 'd3') }}, Wilson 구간 {{ V.ci('q2', 'frame_agreement.wilson_95.0', 'frame_agreement.wilson_95.1') }}). MVP 유형은 규칙으로 고정되어 구조상 일치합니다.
+   - 자동 규칙 점검: 걸린 항목 {{ V.v('briefing_checks', 'summary.flagged_items', 'int') }}개.
+3. **사후 설명(주 결론에 쓰지 않음):** 걸린 항목 {{ V.v('briefing_checks_review', 'flags_total', 'int') }}개 중 점검 규칙의 한계가 아닌 실제 위반은 {{ V.v('briefing_checks_review', 'violations', 'int') }}개로 분류되었습니다. 이 분류는 표지를 본 뒤 정했습니다.
+
+| Q1 필드 | 뒷받침 / 표본 |
+|---|---|
+{% for field, entry in V.raw('q1', 'by_field').items() -%}
+| {{ field }} | {{ V.v('q1', 'by_field.' ~ field ~ '.supported', 'int') }} / {{ V.v('q1', 'by_field.' ~ field ~ '.n', 'int') }} |
+{% endfor %}
+
+{% if V.raw('derived', 'synthesis_fields_lower') %}근거를 넘어 종합해야 하는 문장(목표 사용자, 가치 제안)의 뒷받침 비율이 근거를 요약하는 결합 틀 문장보다 낮았습니다. {% endif %}자동 점검에 걸린 표본 문장은 뒷받침되지 않은 문장 중 {{ V.v('q1', 'human_vs_auto.human_0_auto_flag', 'int') }}개, 뒷받침된 문장 중 {{ V.v('q1', 'human_vs_auto.human_1_auto_flag', 'int') }}개로, 규칙 기반 점검은 내용의 뒷받침 여부를 잡지 못했습니다.
+
+**교차 모델 점검:** {{ V.v('q1_cross_model', 'meta.judge.model_id') }}가 같은 표본을 판정했습니다. 사람 판정과의 일치율 {{ V.v('q1_cross_model', 'agreement', 'd3') }}, Cohen의 카파 {{ V.v('q1_cross_model', 'cohen_kappa', 'd3') }}, 무효 출력 {{ V.v('q1_cross_model', 'invalid_outputs', 'int') }}건. 작은 오픈 모델로는 충실성 판정을 대신할 수 없고, Q1은 검토자 한 명의 판단에 기댑니다(설계서 16절 9번).
+
+## 8. 강화학습 심화 사례
+
+브리핑 대상 중 강화학습 후보는 {{ V.v('derived', 'rl_candidates', 'int') }}개, 그중 심화 대상(결합 틀 전 반복 완성)은 {{ V.v('derived', 'rl_deep_dive', 'int') }}개입니다.
+
+{% for c in V.raw('rl_case', 'rl_candidates') -%}
+{%- set i = loop.index0 -%}
+- 처방 순위 {{ V.v('rl_case', 'rl_candidates.' ~ i ~ '.rank', 'int') }}: {{ V.v('rl_case', 'rl_candidates.' ~ i ~ '.triad', 'triad') }}. 결합 틀 완성 {{ V.v('rl_case', 'rl_candidates.' ~ i ~ '.complete_reps', 'int') }} / {{ V.v('rl_case', 'rl_candidates.' ~ i ~ '.q2.reps', 'int') }}, 가장 위험한 축 {{ V.v('rl_case', 'rl_candidates.' ~ i ~ '.dvf.riskiest_axis') }}, Q1 표본 {{ V.v('rl_case', 'rl_candidates.' ~ i ~ '.q1_sample.supported', 'int') }} / {{ V.v('rl_case', 'rl_candidates.' ~ i ~ '.q1_sample.sentences', 'int') }}.
+{% endfor %}
+
+{% if V.raw('derived', 'deep_dive_less_faithful') %}심화 대상은 결합 틀이 모든 반복에서 완성되었지만, 표본 문장의 뒷받침 비율은 전체 표본보다 낮았습니다. 같은 주장을 안정적으로 반복하는 것과 그 주장이 근거에 충실한 것은 다른 문제이며, 그래서 Q2와 Q1을 따로 잽니다. 판정 메모에 따르면 뒷받침되지 않은 문장의 대부분은 자율주행 근거를 로보틱스로 넓히거나 특정 구성요소의 효과를 결합 전체의 효과로 쓴 경우였습니다.{% endif %}
+
+**tod(선행 프로젝트)와의 대비** (출처 `external/tod/PROVENANCE.md`):
+
+| 문제 | tod | TriadRx |
+|---|---|---|
+| DVF의 변별력 | LLM 채점 DVF의 총점 중앙값이 신뢰 개념 전부에서 같음(서로 다른 값 {{ V.v('rl_case', 'comparison.dvf.tod_llm_scored.distinct_total_medians', 'int') }}개) | 지표 기반 DVF가 후보 {{ V.v('rl_case', 'comparison.dvf.triadrx_indicator_based.candidates', 'int') }}개에서 축 점수 조합 {{ V.v('rl_case', 'comparison.dvf.triadrx_indicator_based.distinct_axis_profiles', 'int') }}가지를 만듦 |
+| 판정 단계의 누수 | 시대 단서를 지우자 대형 심사 모델의 확산 순위 상관이 바뀜(원래 {{ V.v('rl_case', 'comparison.tod_leakage_spearman_reliable_concepts.g_orig', 'd2') }}, 단서 제거 후 {{ V.v('rl_case', 'comparison.tod_leakage_spearman_reliable_concepts.g_blind', 'd2') }}) | LLM이 유망성·DVF를 판정하지 않아 그 경로가 없음 |
+| 근거 없는 축 | 근거가 없어도 LLM이 점수를 매김 | 결측으로 두고 가장 위험한 가정으로 지정 |
+| 판정자 일치 | 거친 유망성 점수에서 두 모델의 순위 상관 {{ V.v('rl_case', 'comparison.judges.tod_promise_scores_qwen_vs_gemini.spearman', 'd3') }} | 문장 충실성에서 모델과 사람의 카파 {{ V.v('rl_case', 'comparison.judges.triadrx_sentence_faithfulness_human_vs_qwen.cohen_kappa', 'd3') }} |
+
+대상 수(개념 대 후보), 기간, 정답 정의가 달라 수치를 직접 비교하지 않습니다. DVF의 축 점수 조합 일부는 V 결측에서 생긴 차이이며, 그 차이가 미래 성과와 관련 있는지는 검증하지 않았습니다. tod의 표본효율 정책 최적화·로보틱스 조작 개념이 TriadRx의 PPO 기반 VLA 미세조정 결합으로 이어지는 흐름은 해석이며 측정 결과가 아닙니다.
+
+## 9. 한계
+
+설계서 16절의 한계를 모두 적용합니다. 결과 해석에 특히 중요한 것은 다음과 같습니다.
+
+- 엔진 신뢰도 미확보(V1 불통과)와 좁은 후보 범위(후보 생성 재현율).
+- M1 전 층 불합격에 따른 매칭 오탐, 어휘 공백, 어휘 시점 불일치와 약어 다의성.
+- 어휘의 생존 편향(경량 검증 성능을 부풀릴 수 있음)과 신규 용어 미보완(어휘 스냅샷 이후 등장한 기법은 후보가 될 수 없음, 설계서 16절 4·22번).
+- V 근거의 희소성과 MVP 유형의 쏠림, 점수로 지정한 가장 위험한 축의 불안정, 출원인 집중도 미제시, 정부 범주 분류 정밀도 미확보.
+- 특허 데이터 공백(기준 시점 이전 일부 기간 미수록)과 D 다운로드 기간 축소.
+- Q1은 검토자 한 명의 판단이며 교차 모델 점검으로 뒷받침되지 않음. 뒷받침되지 않은 판정의 일부는 설계(패키지 설명 공백, "근거 없음" 주장의 판정 충돌)에서 생김.
+- DVF 예측력 미검증. 검증은 전향적 등록(설계서 11절)으로 이후에 합니다.
+
+## 10. 사전 등록 변경 기록
+
+사전 등록 변경 기록은 {{ V.v('derived', 'prereg_changes', 'int') }}건이며, 그중 결과를 확인한 뒤 정한 것은 {{ V.v('derived', 'prereg_changes_after_results', 'int') }}건입니다. {{ V.v('derived', 'prereg_rows_at_freeze', 'int') }}건은 고정 커밋에 이미 들어 있던 경량 검증 이전의 결정이고, {{ V.v('derived', 'prereg_rows_after_freeze', 'int') }}건은 고정 이후에 추가되었으며 그중 {{ V.v('derived', 'prereg_after_freeze_after_results', 'int') }}건은 결과를 확인한 뒤 정했습니다. 사전 등록은 경량 검증 판정(V1·V2)을 보호하며, 적용 모드·DVF·브리핑·품질 규칙은 그 판정 이후에 정했습니다. 모든 변경과 그 이유는 `preregistration.md` 7절에 있습니다.
+
+| 영역 | 변경 | 결과 확인 후 |
+|---|---|---|
+{% for key, name in area.items() -%}
+| {{ name }} | {{ V.v('derived', 'prereg_changes_by_area.' ~ key ~ '.rows', 'int') }} | {{ V.v('derived', 'prereg_changes_by_area.' ~ key ~ '.after_seeing_results', 'int') }} |
+{% endfor %}
+## 11. 전향적 검증
+
+처방 상위 {{ V.v('config', 'prospective.top_k', 'int') }}개와, 같은 중복 필터 뒤 쌍 근접도(`{{ V.v('config', 'prospective.baseline.feature') }}`) 상위 {{ V.v('config', 'prospective.top_k', 'int') }}개의 기준선을 결과가 존재하기 전에 등록했습니다(설계서 11.1절, 사전 등록 8절). 비교 모집단은 중복 필터를 통과한 후보 {{ V.v('prospective_register', 'population', 'int') }}개이고, 두 목록의 겹침은 {{ V.v('prospective_register', 'overlap_prescription_baseline', 'int') }}개입니다. 레이블 구간은 기준 시점 {{ V.v('config', 'prospective.buffer_years', 'int') }}년 뒤부터 {{ V.v('config', 'prospective.label_years', 'int') }}년이며, 판정일은 {{ V.v('derived', 'prospective_verdict_date') }}입니다. P1은 처방 상위가 무작위보다, P2는 처방 상위가 기준선보다 상위 정밀도가 높은지를 보며, 경량 검증과 같이 두 부트스트랩의 하한이 모두 기준을 넘어야 통과합니다. 판정 스크립트는 판정일 전에는 실행되지 않고, 입력 파일의 해시가 등록과 다르면 멈춥니다.
+
+## 부록: 결과 파일의 출처
+
+| 결과 파일 | 생성 커밋 | 생성일 |
+|---|---|---|
+{% for name in report_files -%}
+| `{{ name }}.json` | {{ V.v(name, 'meta.git_commit', 'short') }} | {{ V.v(name, 'meta.created', 'date') }} |
+{% endfor %}

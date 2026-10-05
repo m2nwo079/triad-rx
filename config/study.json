@@ -1,5 +1,5 @@
 {
-  "design_version": "v0.3.37",
+  "design_version": "v0.3.41",
   "design_section": "10.2",
   "arxiv_categories": [
     "cs.LG",
@@ -455,5 +455,26 @@
     "ci_level": 0.95,
     "rule": "pass only if both candidate and term-block bootstrap lower bounds exceed the threshold",
     "score": "mean predicted probability over model seeds"
+  },
+  "prospective": {
+    "anchor": "data_cutoff",
+    "buffer_years": 1,
+    "label_years": 2,
+    "descriptive_years": [
+      1,
+      2
+    ],
+    "top_k": 100,
+    "population": "candidates passing applied.prescription redundancy filter",
+    "baseline": {
+      "feature": "P_aa_min",
+      "order": "desc",
+      "ties": "term_ids",
+      "file": "prospective/2026-10-04_baseline.json"
+    },
+    "registration": "prospective/2026-10-04.json",
+    "ranking": "data/derived/applied/ranking.parquet",
+    "vocab": "vocab/timepoints/applied_final.json",
+    "bootstrap": "evaluation"
   }
 }

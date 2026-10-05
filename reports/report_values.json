@@ -1,0 +1,2796 @@
+{
+ "ko": [
+  {
+   "file": "config",
+   "path": "design_version",
+   "text": "v0.3.41"
+  },
+  {
+   "file": "applied_main",
+   "path": "meta.data_cutoff",
+   "text": "2026-09-24T17:59:54+00:00"
+  },
+  {
+   "file": "derived",
+   "path": "prospective_verdict_date",
+   "text": "2029-09-24"
+  },
+  {
+   "file": "hypergraph_main_applied",
+   "path": "windows.build.papers_in_window",
+   "text": "426,139"
+  },
+  {
+   "file": "hypergraph_main_applied",
+   "path": "windows.build.papers_with_terms",
+   "text": "365,356"
+  },
+  {
+   "file": "vocab_base",
+   "path": "terms_by_type_status.M:active",
+   "text": "2,425"
+  },
+  {
+   "file": "vocab_base",
+   "path": "terms_by_type_status.T:active",
+   "text": "4,439"
+  },
+  {
+   "file": "vocab_base",
+   "path": "removed_by_rule_reason.R1:spam_pattern",
+   "text": "20,668"
+  },
+  {
+   "file": "r4_decisions_T1",
+   "path": "counts.allow",
+   "text": "52"
+  },
+  {
+   "file": "r4_decisions_T1",
+   "path": "counts.reject",
+   "text": "141"
+  },
+  {
+   "file": "vocab_final_applied",
+   "path": "stats.terms_final",
+   "text": "3,232"
+  },
+  {
+   "file": "vocab_final_applied",
+   "path": "stats.terms_removed_r5",
+   "text": "1,492"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.method_ci.correct",
+   "text": "83"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.method_ci.n",
+   "text": "100"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.method_ci.wilson_lower",
+   "text": "0.745"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.task_ci.correct",
+   "text": "80"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.task_ci.n",
+   "text": "100"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.task_ci.wilson_lower",
+   "text": "0.711"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.acronym_cs.correct",
+   "text": "74"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.acronym_cs.n",
+   "text": "100"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.acronym_cs.wilson_lower",
+   "text": "0.646"
+  },
+  {
+   "file": "validation_main",
+   "path": "t2.candidates",
+   "text": "40,792"
+  },
+  {
+   "file": "validation_main",
+   "path": "t2.positives",
+   "text": "95"
+  },
+  {
+   "file": "validation_main",
+   "path": "point.lift",
+   "text": "25.76"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.candidate.lift.lower",
+   "text": "8.59"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.candidate.lift.upper",
+   "text": "49.15"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.term_block.lift.lower",
+   "text": "0.00"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.term_block.lift.upper",
+   "text": "84.66"
+  },
+  {
+   "file": "validation_main",
+   "path": "point.auprc_diff",
+   "text": "-0.002"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.candidate.auprc_diff.lower",
+   "text": "-0.010"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.candidate.auprc_diff.upper",
+   "text": "0.007"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.term_block.auprc_diff.lower",
+   "text": "-0.037"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.term_block.auprc_diff.upper",
+   "text": "0.029"
+  },
+  {
+   "file": "applied_main",
+   "path": "meta.feature_sets",
+   "text": "P+T+R"
+  },
+  {
+   "file": "validation_main",
+   "path": "secondary.engine_auroc",
+   "text": "0.921"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.auroc.mean",
+   "text": "0.919"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.auroc.sd",
+   "text": "0.003"
+  },
+  {
+   "file": "validation_main",
+   "path": "meta.evaluation_config.top_k",
+   "text": "100"
+  },
+  {
+   "file": "validation_main",
+   "path": "point.precision_at_k",
+   "text": "0.060"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.precision_at_100.mean",
+   "text": "0.060"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.precision_at_100.sd",
+   "text": "0.016"
+  },
+  {
+   "file": "validation_main",
+   "path": "meta.evaluation_config.secondary_k.0",
+   "text": "50"
+  },
+  {
+   "file": "validation_main",
+   "path": "secondary.engine_precision_at_50",
+   "text": "0.020"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.precision_at_50.mean",
+   "text": "0.032"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.precision_at_50.sd",
+   "text": "0.011"
+  },
+  {
+   "file": "validation_main",
+   "path": "meta.evaluation_config.secondary_k.1",
+   "text": "500"
+  },
+  {
+   "file": "validation_main",
+   "path": "secondary.engine_precision_at_500",
+   "text": "0.054"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.precision_at_500.mean",
+   "text": "0.049"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.precision_at_500.sd",
+   "text": "0.004"
+  },
+  {
+   "file": "validation_S1",
+   "path": "point.lift",
+   "text": "32.03"
+  },
+  {
+   "file": "validation_S1",
+   "path": "ci.term_block.lift.lower",
+   "text": "0.00"
+  },
+  {
+   "file": "validation_S1",
+   "path": "ci.term_block.lift.upper",
+   "text": "99.97"
+  },
+  {
+   "file": "candidate_recall_main_T2",
+   "path": "realised_new_triads_significant",
+   "text": "65,511"
+  },
+  {
+   "file": "candidate_recall_main_T2",
+   "path": "significant_in_candidates",
+   "text": "779"
+  },
+  {
+   "file": "candidate_recall_main_T2",
+   "path": "candidate_recall",
+   "text": "1.2%"
+  },
+  {
+   "file": "candidates_main_applied",
+   "path": "stats.candidates",
+   "text": "219,328"
+  },
+  {
+   "file": "candidates_main_applied",
+   "path": "stats.open_triangles",
+   "text": "109,664"
+  },
+  {
+   "file": "candidates_main_applied",
+   "path": "stats.two_hop_selected",
+   "text": "109,664"
+  },
+  {
+   "file": "applied_main",
+   "path": "redundancy.triads_flagged",
+   "text": "1,174"
+  },
+  {
+   "file": "applied_main",
+   "path": "redundancy.triads_flagged_by_rule.D1",
+   "text": "5"
+  },
+  {
+   "file": "applied_main",
+   "path": "redundancy.triads_flagged_by_rule.D2",
+   "text": "19"
+  },
+  {
+   "file": "applied_main",
+   "path": "redundancy.triads_flagged_by_rule.D3",
+   "text": "1,151"
+  },
+  {
+   "file": "applied_main",
+   "path": "expected_hit_rate_at_k.value",
+   "text": "0.060"
+  },
+  {
+   "file": "applied_main",
+   "path": "meta.feature_sets",
+   "text": "P+T+R"
+  },
+  {
+   "file": "applied_main",
+   "path": "expected_hit_rate_at_k.k",
+   "text": "100"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.0.rank",
+   "text": "1"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.0.triad",
+   "text": "detr · yolov8 · robust object detection"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.1.rank",
+   "text": "2"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.1.triad",
+   "text": "proximal policy optimization · trajectory planning · vision language action"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.2.rank",
+   "text": "3"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.2.triad",
+   "text": "dialogue adaptive pre training objective · mathematical reasoning · multimodal reasoning"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.3.rank",
+   "text": "4"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.3.triad",
+   "text": "attention sinks · pruning · softmax"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.4.rank",
+   "text": "5"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.4.triad",
+   "text": "patching · sparse autoencoder · large language model"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.5.rank",
+   "text": "6"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.5.triad",
+   "text": "layer normalization · rmsnorm · decoder"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.6.rank",
+   "text": "7"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.6.triad",
+   "text": "pruning · quantization · token reduction"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.7.rank",
+   "text": "8"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.7.triad",
+   "text": "rag · entity linking · reranking"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.8.rank",
+   "text": "9"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.8.triad",
+   "text": "class activation map · convnext · deit"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.9.rank",
+   "text": "10"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.9.triad",
+   "text": "pruning · chunking · vision language action"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.10.rank",
+   "text": "11"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.10.triad",
+   "text": "adamw · gpt 2 · mixture of experts"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.11.rank",
+   "text": "12"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.11.triad",
+   "text": "rag · mathematical reasoning · multi hop question answering"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.12.rank",
+   "text": "13"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.12.triad",
+   "text": "rag · code generation · multi hop question answering"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.13.rank",
+   "text": "14"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.13.triad",
+   "text": "rag · cross modal retrieval · natural language queries"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.14.rank",
+   "text": "15"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.14.triad",
+   "text": "shapley additive explanations · synthetic minority over sampling technique · intrusion detection"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.15.rank",
+   "text": "16"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.15.triad",
+   "text": "gpt · natural language queries · text to sql"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.16.rank",
+   "text": "17"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.16.triad",
+   "text": "mixing adam and sgd · question answering · retrieval augmented generation"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.17.rank",
+   "text": "18"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.17.triad",
+   "text": "rag · in context learning · semantic retrieval"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.18.rank",
+   "text": "19"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.18.triad",
+   "text": "proximal policy optimization · efficient exploration · multi agent reinforcement learning"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.19.rank",
+   "text": "20"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.19.triad",
+   "text": "dialogue adaptive pre training objective · direct preference optimization · multimodal reasoning"
+  },
+  {
+   "file": "evidence_papers",
+   "path": "stats.pairs",
+   "text": "268"
+  },
+  {
+   "file": "evidence_papers",
+   "path": "stats.distinct_papers",
+   "text": "9,743"
+  },
+  {
+   "file": "evidence_patents",
+   "path": "stats.documents",
+   "text": "49,769"
+  },
+  {
+   "file": "evidence_patents",
+   "path": "stats.inventions",
+   "text": "38,699"
+  },
+  {
+   "file": "evidence_patents",
+   "path": "stats.steps.grant.max_date_all_utility",
+   "text": "2025-12-30"
+  },
+  {
+   "file": "evidence_repo_stars",
+   "path": "stats.repositories",
+   "text": "4,116"
+  },
+  {
+   "file": "evidence_repo_stars",
+   "path": "stats.fetched_ok",
+   "text": "4,098"
+  },
+  {
+   "file": "evidence_pypi_links",
+   "path": "stats.packages",
+   "text": "300"
+  },
+  {
+   "file": "evidence_pypi_downloads",
+   "path": "stats.fetched_ok",
+   "text": "298"
+  },
+  {
+   "file": "download_period",
+   "path": "estimate_tib",
+   "text": "2.342"
+  },
+  {
+   "file": "download_period",
+   "path": "threshold_tib",
+   "text": "0.500"
+  },
+  {
+   "file": "evidence_pypi_downloads",
+   "path": "meta.half_weeks_used",
+   "text": "12"
+  },
+  {
+   "file": "evidence_pypi_downloads",
+   "path": "meta.half_weeks_used",
+   "text": "12"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_candidates",
+   "text": "100"
+  },
+  {
+   "file": "dvf",
+   "path": "summary.axis_missing.D",
+   "text": "0"
+  },
+  {
+   "file": "dvf",
+   "path": "summary.axis_missing.F",
+   "text": "0"
+  },
+  {
+   "file": "dvf",
+   "path": "summary.axis_missing.V",
+   "text": "90"
+  },
+  {
+   "file": "dvf",
+   "path": "summary.riskiest_axis.V",
+   "text": "91"
+  },
+  {
+   "file": "dvf",
+   "path": "summary.riskiest_axis.F",
+   "text": "4"
+  },
+  {
+   "file": "dvf",
+   "path": "summary.riskiest_axis.D",
+   "text": "5"
+  },
+  {
+   "file": "dvf",
+   "path": "summary.riskiest_by_missing",
+   "text": "90"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_axis_scores",
+   "text": "210"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_axis_wide",
+   "text": "115"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_wide_levels",
+   "text": "2"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_full_axes",
+   "text": "10"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_unstable_riskiest",
+   "text": "10"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_stable_share",
+   "text": "0.95"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_min_riskiest_share",
+   "text": "0.23"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_unstable_briefing",
+   "text": "2"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.company.correct",
+   "text": "98"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.company.n",
+   "text": "100"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.company.wilson_lower",
+   "text": "0.930"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.academic.correct",
+   "text": "99"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.academic.n",
+   "text": "100"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.academic.wilson_lower",
+   "text": "0.946"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.government.correct",
+   "text": "15"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.government.n",
+   "text": "16"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.government.wilson_lower",
+   "text": "0.717"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.individual.correct",
+   "text": "57"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.individual.n",
+   "text": "57"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.individual.wilson_lower",
+   "text": "0.937"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "meta.model_versions.0",
+   "text": "gemini-3.5-flash-lite"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "summary.runs",
+   "text": "100"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "summary.frame_complete",
+   "text": "56"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "summary.frame_insufficient",
+   "text": "44"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "summary.frame_invalid",
+   "text": "0"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "summary.insufficient_reasons.no_combination_evidence",
+   "text": "20"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "summary.insufficient_reasons.term_mismatch",
+   "text": "14"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "summary.insufficient_reasons.comparison_only",
+   "text": "10"
+  },
+  {
+   "file": "q1",
+   "path": "n",
+   "text": "100"
+  },
+  {
+   "file": "q1",
+   "path": "supported",
+   "text": "61"
+  },
+  {
+   "file": "q1",
+   "path": "rate",
+   "text": "0.610"
+  },
+  {
+   "file": "q1",
+   "path": "wilson_95.0",
+   "text": "0.512"
+  },
+  {
+   "file": "q1",
+   "path": "wilson_95.1",
+   "text": "0.700"
+  },
+  {
+   "file": "q2",
+   "path": "frame_agreement.agreeing",
+   "text": "92"
+  },
+  {
+   "file": "q2",
+   "path": "frame_agreement.total",
+   "text": "100"
+  },
+  {
+   "file": "q2",
+   "path": "frame_agreement.rate",
+   "text": "0.920"
+  },
+  {
+   "file": "q2",
+   "path": "frame_agreement.wilson_95.0",
+   "text": "0.850"
+  },
+  {
+   "file": "q2",
+   "path": "frame_agreement.wilson_95.1",
+   "text": "0.959"
+  },
+  {
+   "file": "briefing_checks",
+   "path": "summary.flagged_items",
+   "text": "31"
+  },
+  {
+   "file": "briefing_checks_review",
+   "path": "flags_total",
+   "text": "31"
+  },
+  {
+   "file": "briefing_checks_review",
+   "path": "violations",
+   "text": "7"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.concept_frame.supported",
+   "text": "32"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.concept_frame.n",
+   "text": "43"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.target_user.supported",
+   "text": "1"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.target_user.n",
+   "text": "7"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.value_prop.supported",
+   "text": "1"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.value_prop.n",
+   "text": "5"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.building_blocks.supported",
+   "text": "8"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.building_blocks.n",
+   "text": "16"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.jtbd.supported",
+   "text": "4"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.jtbd.n",
+   "text": "8"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.summary.supported",
+   "text": "15"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.summary.n",
+   "text": "21"
+  },
+  {
+   "file": "q1",
+   "path": "human_vs_auto.human_0_auto_flag",
+   "text": "0"
+  },
+  {
+   "file": "q1",
+   "path": "human_vs_auto.human_1_auto_flag",
+   "text": "0"
+  },
+  {
+   "file": "q1_cross_model",
+   "path": "meta.judge.model_id",
+   "text": "Qwen/Qwen3.5-9B"
+  },
+  {
+   "file": "q1_cross_model",
+   "path": "agreement",
+   "text": "0.580"
+  },
+  {
+   "file": "q1_cross_model",
+   "path": "cohen_kappa",
+   "text": "0.156"
+  },
+  {
+   "file": "q1_cross_model",
+   "path": "invalid_outputs",
+   "text": "1"
+  },
+  {
+   "file": "derived",
+   "path": "rl_candidates",
+   "text": "2"
+  },
+  {
+   "file": "derived",
+   "path": "rl_deep_dive",
+   "text": "1"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.0.rank",
+   "text": "2"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.0.triad",
+   "text": "proximal policy optimization · trajectory planning · vision language action"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.0.complete_reps",
+   "text": "5"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.0.q2.reps",
+   "text": "5"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.0.dvf.riskiest_axis",
+   "text": "V"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.0.q1_sample.supported",
+   "text": "5"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.0.q1_sample.sentences",
+   "text": "12"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.1.rank",
+   "text": "19"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.1.triad",
+   "text": "proximal policy optimization · efficient exploration · multi agent reinforcement learning"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.1.complete_reps",
+   "text": "2"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.1.q2.reps",
+   "text": "5"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.1.dvf.riskiest_axis",
+   "text": "V"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.1.q1_sample.supported",
+   "text": "3"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.1.q1_sample.sentences",
+   "text": "4"
+  },
+  {
+   "file": "rl_case",
+   "path": "comparison.dvf.tod_llm_scored.distinct_total_medians",
+   "text": "1"
+  },
+  {
+   "file": "rl_case",
+   "path": "comparison.dvf.triadrx_indicator_based.candidates",
+   "text": "100"
+  },
+  {
+   "file": "rl_case",
+   "path": "comparison.dvf.triadrx_indicator_based.distinct_axis_profiles",
+   "text": "25"
+  },
+  {
+   "file": "rl_case",
+   "path": "comparison.tod_leakage_spearman_reliable_concepts.g_orig",
+   "text": "-0.95"
+  },
+  {
+   "file": "rl_case",
+   "path": "comparison.tod_leakage_spearman_reliable_concepts.g_blind",
+   "text": "0.63"
+  },
+  {
+   "file": "rl_case",
+   "path": "comparison.judges.tod_promise_scores_qwen_vs_gemini.spearman",
+   "text": "0.907"
+  },
+  {
+   "file": "rl_case",
+   "path": "comparison.judges.triadrx_sentence_faithfulness_human_vs_qwen.cohen_kappa",
+   "text": "0.156"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes",
+   "text": "34"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_after_results",
+   "text": "19"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_rows_at_freeze",
+   "text": "10"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_rows_after_freeze",
+   "text": "24"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_after_freeze_after_results",
+   "text": "13"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.어휘·매칭.rows",
+   "text": "6"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.어휘·매칭.after_seeing_results",
+   "text": "6"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.엔진.rows",
+   "text": "5"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.엔진.after_seeing_results",
+   "text": "1"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.적용 모드·근거.rows",
+   "text": "9"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.적용 모드·근거.after_seeing_results",
+   "text": "3"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.DVF·출원인.rows",
+   "text": "6"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.DVF·출원인.after_seeing_results",
+   "text": "3"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.브리핑·품질.rows",
+   "text": "8"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.브리핑·품질.after_seeing_results",
+   "text": "6"
+  },
+  {
+   "file": "config",
+   "path": "prospective.top_k",
+   "text": "100"
+  },
+  {
+   "file": "config",
+   "path": "prospective.baseline.feature",
+   "text": "P_aa_min"
+  },
+  {
+   "file": "config",
+   "path": "prospective.top_k",
+   "text": "100"
+  },
+  {
+   "file": "prospective_register",
+   "path": "population",
+   "text": "218,154"
+  },
+  {
+   "file": "prospective_register",
+   "path": "overlap_prescription_baseline",
+   "text": "0"
+  },
+  {
+   "file": "config",
+   "path": "prospective.buffer_years",
+   "text": "1"
+  },
+  {
+   "file": "config",
+   "path": "prospective.label_years",
+   "text": "2"
+  },
+  {
+   "file": "derived",
+   "path": "prospective_verdict_date",
+   "text": "2029-09-24"
+  },
+  {
+   "file": "vocab_final_applied",
+   "path": "meta.git_commit",
+   "text": "5dda8d2"
+  },
+  {
+   "file": "vocab_final_applied",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "m1_T1",
+   "path": "meta.git_commit",
+   "text": "5dda8d2"
+  },
+  {
+   "file": "m1_T1",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "validation_main",
+   "path": "meta.git_commit",
+   "text": "816d6cf"
+  },
+  {
+   "file": "validation_main",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "validation_S1",
+   "path": "meta.git_commit",
+   "text": "816d6cf"
+  },
+  {
+   "file": "validation_S1",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "candidate_recall_main_T2",
+   "path": "meta.git_commit",
+   "text": "816d6cf"
+  },
+  {
+   "file": "candidate_recall_main_T2",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "applied_main",
+   "path": "meta.git_commit",
+   "text": "7736c33"
+  },
+  {
+   "file": "applied_main",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "candidates_main_applied",
+   "path": "meta.git_commit",
+   "text": "6ef650d"
+  },
+  {
+   "file": "candidates_main_applied",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "evidence_papers",
+   "path": "meta.git_commit",
+   "text": "b80f415"
+  },
+  {
+   "file": "evidence_papers",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "evidence_patents",
+   "path": "meta.git_commit",
+   "text": "8bdc3de"
+  },
+  {
+   "file": "evidence_patents",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "evidence_repo_stars",
+   "path": "meta.git_commit",
+   "text": "b05f97b"
+  },
+  {
+   "file": "evidence_repo_stars",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "evidence_pypi_links",
+   "path": "meta.git_commit",
+   "text": "13b4f9d"
+  },
+  {
+   "file": "evidence_pypi_links",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "evidence_pypi_downloads",
+   "path": "meta.git_commit",
+   "text": "0109fcc"
+  },
+  {
+   "file": "evidence_pypi_downloads",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "download_period",
+   "path": "meta.git_commit",
+   "text": "b6e393d"
+  },
+  {
+   "file": "download_period",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "dvf",
+   "path": "meta.git_commit",
+   "text": "1dcb504"
+  },
+  {
+   "file": "dvf",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "m2_final",
+   "path": "meta.git_commit",
+   "text": "049b86e"
+  },
+  {
+   "file": "m2_final",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "briefing_bundles",
+   "path": "meta.git_commit",
+   "text": "92e300f"
+  },
+  {
+   "file": "briefing_bundles",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "meta.git_commit",
+   "text": "2b4ce57"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "briefing_checks",
+   "path": "meta.git_commit",
+   "text": "368208a"
+  },
+  {
+   "file": "briefing_checks",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "briefing_checks_review",
+   "path": "meta.git_commit",
+   "text": "3cb8dec"
+  },
+  {
+   "file": "briefing_checks_review",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "q1",
+   "path": "meta.git_commit",
+   "text": "68a952f"
+  },
+  {
+   "file": "q1",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "q2",
+   "path": "meta.git_commit",
+   "text": "368208a"
+  },
+  {
+   "file": "q2",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "q1_cross_model",
+   "path": "meta.git_commit",
+   "text": "b0c0c66"
+  },
+  {
+   "file": "q1_cross_model",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "rl_case",
+   "path": "meta.git_commit",
+   "text": "d6e5c9a"
+  },
+  {
+   "file": "rl_case",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "prospective_register",
+   "path": "meta.git_commit",
+   "text": "f812c49"
+  },
+  {
+   "file": "prospective_register",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  }
+ ],
+ "en": [
+  {
+   "file": "config",
+   "path": "design_version",
+   "text": "v0.3.41"
+  },
+  {
+   "file": "applied_main",
+   "path": "meta.data_cutoff",
+   "text": "2026-09-24T17:59:54+00:00"
+  },
+  {
+   "file": "derived",
+   "path": "prospective_verdict_date",
+   "text": "2029-09-24"
+  },
+  {
+   "file": "hypergraph_main_applied",
+   "path": "windows.build.papers_in_window",
+   "text": "426,139"
+  },
+  {
+   "file": "hypergraph_main_applied",
+   "path": "windows.build.papers_with_terms",
+   "text": "365,356"
+  },
+  {
+   "file": "vocab_base",
+   "path": "terms_by_type_status.M:active",
+   "text": "2,425"
+  },
+  {
+   "file": "vocab_base",
+   "path": "terms_by_type_status.T:active",
+   "text": "4,439"
+  },
+  {
+   "file": "vocab_base",
+   "path": "removed_by_rule_reason.R1:spam_pattern",
+   "text": "20,668"
+  },
+  {
+   "file": "r4_decisions_T1",
+   "path": "counts.allow",
+   "text": "52"
+  },
+  {
+   "file": "r4_decisions_T1",
+   "path": "counts.reject",
+   "text": "141"
+  },
+  {
+   "file": "vocab_final_applied",
+   "path": "stats.terms_final",
+   "text": "3,232"
+  },
+  {
+   "file": "vocab_final_applied",
+   "path": "stats.terms_removed_r5",
+   "text": "1,492"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.method_ci.correct",
+   "text": "83"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.method_ci.n",
+   "text": "100"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.method_ci.wilson_lower",
+   "text": "0.745"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.task_ci.correct",
+   "text": "80"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.task_ci.n",
+   "text": "100"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.task_ci.wilson_lower",
+   "text": "0.711"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.acronym_cs.correct",
+   "text": "74"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.acronym_cs.n",
+   "text": "100"
+  },
+  {
+   "file": "m1_T1",
+   "path": "final_by_stratum.acronym_cs.wilson_lower",
+   "text": "0.646"
+  },
+  {
+   "file": "validation_main",
+   "path": "t2.candidates",
+   "text": "40,792"
+  },
+  {
+   "file": "validation_main",
+   "path": "t2.positives",
+   "text": "95"
+  },
+  {
+   "file": "validation_main",
+   "path": "point.lift",
+   "text": "25.76"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.candidate.lift.lower",
+   "text": "8.59"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.candidate.lift.upper",
+   "text": "49.15"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.term_block.lift.lower",
+   "text": "0.00"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.term_block.lift.upper",
+   "text": "84.66"
+  },
+  {
+   "file": "validation_main",
+   "path": "point.auprc_diff",
+   "text": "-0.002"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.candidate.auprc_diff.lower",
+   "text": "-0.010"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.candidate.auprc_diff.upper",
+   "text": "0.007"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.term_block.auprc_diff.lower",
+   "text": "-0.037"
+  },
+  {
+   "file": "validation_main",
+   "path": "ci.term_block.auprc_diff.upper",
+   "text": "0.029"
+  },
+  {
+   "file": "applied_main",
+   "path": "meta.feature_sets",
+   "text": "P+T+R"
+  },
+  {
+   "file": "validation_main",
+   "path": "secondary.engine_auroc",
+   "text": "0.921"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.auroc.mean",
+   "text": "0.919"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.auroc.sd",
+   "text": "0.003"
+  },
+  {
+   "file": "validation_main",
+   "path": "meta.evaluation_config.top_k",
+   "text": "100"
+  },
+  {
+   "file": "validation_main",
+   "path": "point.precision_at_k",
+   "text": "0.060"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.precision_at_100.mean",
+   "text": "0.060"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.precision_at_100.sd",
+   "text": "0.016"
+  },
+  {
+   "file": "validation_main",
+   "path": "meta.evaluation_config.secondary_k.0",
+   "text": "50"
+  },
+  {
+   "file": "validation_main",
+   "path": "secondary.engine_precision_at_50",
+   "text": "0.020"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.precision_at_50.mean",
+   "text": "0.032"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.precision_at_50.sd",
+   "text": "0.011"
+  },
+  {
+   "file": "validation_main",
+   "path": "meta.evaluation_config.secondary_k.1",
+   "text": "500"
+  },
+  {
+   "file": "validation_main",
+   "path": "secondary.engine_precision_at_500",
+   "text": "0.054"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.precision_at_500.mean",
+   "text": "0.049"
+  },
+  {
+   "file": "validation_main",
+   "path": "per_seed.engine.precision_at_500.sd",
+   "text": "0.004"
+  },
+  {
+   "file": "validation_S1",
+   "path": "point.lift",
+   "text": "32.03"
+  },
+  {
+   "file": "validation_S1",
+   "path": "ci.term_block.lift.lower",
+   "text": "0.00"
+  },
+  {
+   "file": "validation_S1",
+   "path": "ci.term_block.lift.upper",
+   "text": "99.97"
+  },
+  {
+   "file": "candidate_recall_main_T2",
+   "path": "realised_new_triads_significant",
+   "text": "65,511"
+  },
+  {
+   "file": "candidate_recall_main_T2",
+   "path": "significant_in_candidates",
+   "text": "779"
+  },
+  {
+   "file": "candidate_recall_main_T2",
+   "path": "candidate_recall",
+   "text": "1.2%"
+  },
+  {
+   "file": "candidates_main_applied",
+   "path": "stats.candidates",
+   "text": "219,328"
+  },
+  {
+   "file": "candidates_main_applied",
+   "path": "stats.open_triangles",
+   "text": "109,664"
+  },
+  {
+   "file": "candidates_main_applied",
+   "path": "stats.two_hop_selected",
+   "text": "109,664"
+  },
+  {
+   "file": "applied_main",
+   "path": "redundancy.triads_flagged",
+   "text": "1,174"
+  },
+  {
+   "file": "applied_main",
+   "path": "redundancy.triads_flagged_by_rule.D1",
+   "text": "5"
+  },
+  {
+   "file": "applied_main",
+   "path": "redundancy.triads_flagged_by_rule.D2",
+   "text": "19"
+  },
+  {
+   "file": "applied_main",
+   "path": "redundancy.triads_flagged_by_rule.D3",
+   "text": "1,151"
+  },
+  {
+   "file": "applied_main",
+   "path": "expected_hit_rate_at_k.value",
+   "text": "0.060"
+  },
+  {
+   "file": "applied_main",
+   "path": "expected_hit_rate_at_k.k",
+   "text": "100"
+  },
+  {
+   "file": "applied_main",
+   "path": "meta.feature_sets",
+   "text": "P+T+R"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.0.rank",
+   "text": "1"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.0.triad",
+   "text": "detr · yolov8 · robust object detection"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.1.rank",
+   "text": "2"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.1.triad",
+   "text": "proximal policy optimization · trajectory planning · vision language action"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.2.rank",
+   "text": "3"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.2.triad",
+   "text": "dialogue adaptive pre training objective · mathematical reasoning · multimodal reasoning"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.3.rank",
+   "text": "4"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.3.triad",
+   "text": "attention sinks · pruning · softmax"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.4.rank",
+   "text": "5"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.4.triad",
+   "text": "patching · sparse autoencoder · large language model"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.5.rank",
+   "text": "6"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.5.triad",
+   "text": "layer normalization · rmsnorm · decoder"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.6.rank",
+   "text": "7"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.6.triad",
+   "text": "pruning · quantization · token reduction"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.7.rank",
+   "text": "8"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.7.triad",
+   "text": "rag · entity linking · reranking"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.8.rank",
+   "text": "9"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.8.triad",
+   "text": "class activation map · convnext · deit"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.9.rank",
+   "text": "10"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.9.triad",
+   "text": "pruning · chunking · vision language action"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.10.rank",
+   "text": "11"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.10.triad",
+   "text": "adamw · gpt 2 · mixture of experts"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.11.rank",
+   "text": "12"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.11.triad",
+   "text": "rag · mathematical reasoning · multi hop question answering"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.12.rank",
+   "text": "13"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.12.triad",
+   "text": "rag · code generation · multi hop question answering"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.13.rank",
+   "text": "14"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.13.triad",
+   "text": "rag · cross modal retrieval · natural language queries"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.14.rank",
+   "text": "15"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.14.triad",
+   "text": "shapley additive explanations · synthetic minority over sampling technique · intrusion detection"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.15.rank",
+   "text": "16"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.15.triad",
+   "text": "gpt · natural language queries · text to sql"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.16.rank",
+   "text": "17"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.16.triad",
+   "text": "mixing adam and sgd · question answering · retrieval augmented generation"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.17.rank",
+   "text": "18"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.17.triad",
+   "text": "rag · in context learning · semantic retrieval"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.18.rank",
+   "text": "19"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.18.triad",
+   "text": "proximal policy optimization · efficient exploration · multi agent reinforcement learning"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.19.rank",
+   "text": "20"
+  },
+  {
+   "file": "prospective",
+   "path": "top_k_prescription.19.triad",
+   "text": "dialogue adaptive pre training objective · direct preference optimization · multimodal reasoning"
+  },
+  {
+   "file": "evidence_papers",
+   "path": "stats.pairs",
+   "text": "268"
+  },
+  {
+   "file": "evidence_papers",
+   "path": "stats.distinct_papers",
+   "text": "9,743"
+  },
+  {
+   "file": "evidence_patents",
+   "path": "stats.documents",
+   "text": "49,769"
+  },
+  {
+   "file": "evidence_patents",
+   "path": "stats.inventions",
+   "text": "38,699"
+  },
+  {
+   "file": "evidence_patents",
+   "path": "stats.steps.grant.max_date_all_utility",
+   "text": "2025-12-30"
+  },
+  {
+   "file": "evidence_repo_stars",
+   "path": "stats.repositories",
+   "text": "4,116"
+  },
+  {
+   "file": "evidence_repo_stars",
+   "path": "stats.fetched_ok",
+   "text": "4,098"
+  },
+  {
+   "file": "evidence_pypi_links",
+   "path": "stats.packages",
+   "text": "300"
+  },
+  {
+   "file": "evidence_pypi_downloads",
+   "path": "stats.fetched_ok",
+   "text": "298"
+  },
+  {
+   "file": "download_period",
+   "path": "estimate_tib",
+   "text": "2.342"
+  },
+  {
+   "file": "download_period",
+   "path": "threshold_tib",
+   "text": "0.500"
+  },
+  {
+   "file": "evidence_pypi_downloads",
+   "path": "meta.half_weeks_used",
+   "text": "12"
+  },
+  {
+   "file": "evidence_pypi_downloads",
+   "path": "meta.half_weeks_used",
+   "text": "12"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_candidates",
+   "text": "100"
+  },
+  {
+   "file": "dvf",
+   "path": "summary.axis_missing.D",
+   "text": "0"
+  },
+  {
+   "file": "dvf",
+   "path": "summary.axis_missing.F",
+   "text": "0"
+  },
+  {
+   "file": "dvf",
+   "path": "summary.axis_missing.V",
+   "text": "90"
+  },
+  {
+   "file": "dvf",
+   "path": "summary.riskiest_axis.V",
+   "text": "91"
+  },
+  {
+   "file": "dvf",
+   "path": "summary.riskiest_axis.F",
+   "text": "4"
+  },
+  {
+   "file": "dvf",
+   "path": "summary.riskiest_axis.D",
+   "text": "5"
+  },
+  {
+   "file": "dvf",
+   "path": "summary.riskiest_by_missing",
+   "text": "90"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_axis_scores",
+   "text": "210"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_axis_wide",
+   "text": "115"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_wide_levels",
+   "text": "2"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_full_axes",
+   "text": "10"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_unstable_riskiest",
+   "text": "10"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_stable_share",
+   "text": "0.95"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_min_riskiest_share",
+   "text": "0.23"
+  },
+  {
+   "file": "derived",
+   "path": "dvf_unstable_briefing",
+   "text": "2"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.company.correct",
+   "text": "98"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.company.n",
+   "text": "100"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.company.wilson_lower",
+   "text": "0.930"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.academic.correct",
+   "text": "99"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.academic.n",
+   "text": "100"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.academic.wilson_lower",
+   "text": "0.946"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.government.correct",
+   "text": "15"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.government.n",
+   "text": "16"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.government.wilson_lower",
+   "text": "0.717"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.individual.correct",
+   "text": "57"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.individual.n",
+   "text": "57"
+  },
+  {
+   "file": "m2_final",
+   "path": "categories.individual.wilson_lower",
+   "text": "0.937"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "meta.model_versions.0",
+   "text": "gemini-3.5-flash-lite"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "summary.runs",
+   "text": "100"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "summary.frame_complete",
+   "text": "56"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "summary.frame_insufficient",
+   "text": "44"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "summary.frame_invalid",
+   "text": "0"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "summary.insufficient_reasons.no_combination_evidence",
+   "text": "20"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "summary.insufficient_reasons.term_mismatch",
+   "text": "14"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "summary.insufficient_reasons.comparison_only",
+   "text": "10"
+  },
+  {
+   "file": "q1",
+   "path": "supported",
+   "text": "61"
+  },
+  {
+   "file": "q1",
+   "path": "n",
+   "text": "100"
+  },
+  {
+   "file": "q1",
+   "path": "rate",
+   "text": "0.610"
+  },
+  {
+   "file": "q1",
+   "path": "wilson_95.0",
+   "text": "0.512"
+  },
+  {
+   "file": "q1",
+   "path": "wilson_95.1",
+   "text": "0.700"
+  },
+  {
+   "file": "q2",
+   "path": "frame_agreement.agreeing",
+   "text": "92"
+  },
+  {
+   "file": "q2",
+   "path": "frame_agreement.total",
+   "text": "100"
+  },
+  {
+   "file": "q2",
+   "path": "frame_agreement.rate",
+   "text": "0.920"
+  },
+  {
+   "file": "q2",
+   "path": "frame_agreement.wilson_95.0",
+   "text": "0.850"
+  },
+  {
+   "file": "q2",
+   "path": "frame_agreement.wilson_95.1",
+   "text": "0.959"
+  },
+  {
+   "file": "briefing_checks",
+   "path": "summary.flagged_items",
+   "text": "31"
+  },
+  {
+   "file": "briefing_checks_review",
+   "path": "flags_total",
+   "text": "31"
+  },
+  {
+   "file": "briefing_checks_review",
+   "path": "violations",
+   "text": "7"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.concept_frame.supported",
+   "text": "32"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.concept_frame.n",
+   "text": "43"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.target_user.supported",
+   "text": "1"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.target_user.n",
+   "text": "7"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.value_prop.supported",
+   "text": "1"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.value_prop.n",
+   "text": "5"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.building_blocks.supported",
+   "text": "8"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.building_blocks.n",
+   "text": "16"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.jtbd.supported",
+   "text": "4"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.jtbd.n",
+   "text": "8"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.summary.supported",
+   "text": "15"
+  },
+  {
+   "file": "q1",
+   "path": "by_field.summary.n",
+   "text": "21"
+  },
+  {
+   "file": "q1",
+   "path": "human_vs_auto.human_0_auto_flag",
+   "text": "0"
+  },
+  {
+   "file": "q1",
+   "path": "human_vs_auto.human_1_auto_flag",
+   "text": "0"
+  },
+  {
+   "file": "q1_cross_model",
+   "path": "meta.judge.model_id",
+   "text": "Qwen/Qwen3.5-9B"
+  },
+  {
+   "file": "q1_cross_model",
+   "path": "agreement",
+   "text": "0.580"
+  },
+  {
+   "file": "q1_cross_model",
+   "path": "cohen_kappa",
+   "text": "0.156"
+  },
+  {
+   "file": "q1_cross_model",
+   "path": "invalid_outputs",
+   "text": "1"
+  },
+  {
+   "file": "derived",
+   "path": "rl_candidates",
+   "text": "2"
+  },
+  {
+   "file": "derived",
+   "path": "rl_deep_dive",
+   "text": "1"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.0.rank",
+   "text": "2"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.0.triad",
+   "text": "proximal policy optimization · trajectory planning · vision language action"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.0.complete_reps",
+   "text": "5"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.0.q2.reps",
+   "text": "5"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.0.dvf.riskiest_axis",
+   "text": "V"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.0.q1_sample.supported",
+   "text": "5"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.0.q1_sample.sentences",
+   "text": "12"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.1.rank",
+   "text": "19"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.1.triad",
+   "text": "proximal policy optimization · efficient exploration · multi agent reinforcement learning"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.1.complete_reps",
+   "text": "2"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.1.q2.reps",
+   "text": "5"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.1.dvf.riskiest_axis",
+   "text": "V"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.1.q1_sample.supported",
+   "text": "3"
+  },
+  {
+   "file": "rl_case",
+   "path": "rl_candidates.1.q1_sample.sentences",
+   "text": "4"
+  },
+  {
+   "file": "rl_case",
+   "path": "comparison.dvf.tod_llm_scored.distinct_total_medians",
+   "text": "1"
+  },
+  {
+   "file": "rl_case",
+   "path": "comparison.dvf.triadrx_indicator_based.distinct_axis_profiles",
+   "text": "25"
+  },
+  {
+   "file": "rl_case",
+   "path": "comparison.dvf.triadrx_indicator_based.candidates",
+   "text": "100"
+  },
+  {
+   "file": "rl_case",
+   "path": "comparison.tod_leakage_spearman_reliable_concepts.g_orig",
+   "text": "-0.95"
+  },
+  {
+   "file": "rl_case",
+   "path": "comparison.tod_leakage_spearman_reliable_concepts.g_blind",
+   "text": "0.63"
+  },
+  {
+   "file": "rl_case",
+   "path": "comparison.judges.tod_promise_scores_qwen_vs_gemini.spearman",
+   "text": "0.907"
+  },
+  {
+   "file": "rl_case",
+   "path": "comparison.judges.triadrx_sentence_faithfulness_human_vs_qwen.cohen_kappa",
+   "text": "0.156"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes",
+   "text": "34"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_after_results",
+   "text": "19"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_rows_at_freeze",
+   "text": "10"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_rows_after_freeze",
+   "text": "24"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_after_freeze_after_results",
+   "text": "13"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.어휘·매칭.rows",
+   "text": "6"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.어휘·매칭.after_seeing_results",
+   "text": "6"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.엔진.rows",
+   "text": "5"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.엔진.after_seeing_results",
+   "text": "1"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.적용 모드·근거.rows",
+   "text": "9"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.적용 모드·근거.after_seeing_results",
+   "text": "3"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.DVF·출원인.rows",
+   "text": "6"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.DVF·출원인.after_seeing_results",
+   "text": "3"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.브리핑·품질.rows",
+   "text": "8"
+  },
+  {
+   "file": "derived",
+   "path": "prereg_changes_by_area.브리핑·품질.after_seeing_results",
+   "text": "6"
+  },
+  {
+   "file": "config",
+   "path": "prospective.top_k",
+   "text": "100"
+  },
+  {
+   "file": "config",
+   "path": "prospective.top_k",
+   "text": "100"
+  },
+  {
+   "file": "config",
+   "path": "prospective.baseline.feature",
+   "text": "P_aa_min"
+  },
+  {
+   "file": "prospective_register",
+   "path": "population",
+   "text": "218,154"
+  },
+  {
+   "file": "prospective_register",
+   "path": "overlap_prescription_baseline",
+   "text": "0"
+  },
+  {
+   "file": "config",
+   "path": "prospective.buffer_years",
+   "text": "1"
+  },
+  {
+   "file": "config",
+   "path": "prospective.label_years",
+   "text": "2"
+  },
+  {
+   "file": "derived",
+   "path": "prospective_verdict_date",
+   "text": "2029-09-24"
+  },
+  {
+   "file": "vocab_final_applied",
+   "path": "meta.git_commit",
+   "text": "5dda8d2"
+  },
+  {
+   "file": "vocab_final_applied",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "m1_T1",
+   "path": "meta.git_commit",
+   "text": "5dda8d2"
+  },
+  {
+   "file": "m1_T1",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "validation_main",
+   "path": "meta.git_commit",
+   "text": "816d6cf"
+  },
+  {
+   "file": "validation_main",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "validation_S1",
+   "path": "meta.git_commit",
+   "text": "816d6cf"
+  },
+  {
+   "file": "validation_S1",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "candidate_recall_main_T2",
+   "path": "meta.git_commit",
+   "text": "816d6cf"
+  },
+  {
+   "file": "candidate_recall_main_T2",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "applied_main",
+   "path": "meta.git_commit",
+   "text": "7736c33"
+  },
+  {
+   "file": "applied_main",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "candidates_main_applied",
+   "path": "meta.git_commit",
+   "text": "6ef650d"
+  },
+  {
+   "file": "candidates_main_applied",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "evidence_papers",
+   "path": "meta.git_commit",
+   "text": "b80f415"
+  },
+  {
+   "file": "evidence_papers",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "evidence_patents",
+   "path": "meta.git_commit",
+   "text": "8bdc3de"
+  },
+  {
+   "file": "evidence_patents",
+   "path": "meta.created",
+   "text": "2026-10-04"
+  },
+  {
+   "file": "evidence_repo_stars",
+   "path": "meta.git_commit",
+   "text": "b05f97b"
+  },
+  {
+   "file": "evidence_repo_stars",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "evidence_pypi_links",
+   "path": "meta.git_commit",
+   "text": "13b4f9d"
+  },
+  {
+   "file": "evidence_pypi_links",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "evidence_pypi_downloads",
+   "path": "meta.git_commit",
+   "text": "0109fcc"
+  },
+  {
+   "file": "evidence_pypi_downloads",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "download_period",
+   "path": "meta.git_commit",
+   "text": "b6e393d"
+  },
+  {
+   "file": "download_period",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "dvf",
+   "path": "meta.git_commit",
+   "text": "1dcb504"
+  },
+  {
+   "file": "dvf",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "m2_final",
+   "path": "meta.git_commit",
+   "text": "049b86e"
+  },
+  {
+   "file": "m2_final",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "briefing_bundles",
+   "path": "meta.git_commit",
+   "text": "92e300f"
+  },
+  {
+   "file": "briefing_bundles",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "meta.git_commit",
+   "text": "2b4ce57"
+  },
+  {
+   "file": "briefing_generation",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "briefing_checks",
+   "path": "meta.git_commit",
+   "text": "368208a"
+  },
+  {
+   "file": "briefing_checks",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "briefing_checks_review",
+   "path": "meta.git_commit",
+   "text": "3cb8dec"
+  },
+  {
+   "file": "briefing_checks_review",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "q1",
+   "path": "meta.git_commit",
+   "text": "68a952f"
+  },
+  {
+   "file": "q1",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "q2",
+   "path": "meta.git_commit",
+   "text": "368208a"
+  },
+  {
+   "file": "q2",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "q1_cross_model",
+   "path": "meta.git_commit",
+   "text": "b0c0c66"
+  },
+  {
+   "file": "q1_cross_model",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "rl_case",
+   "path": "meta.git_commit",
+   "text": "d6e5c9a"
+  },
+  {
+   "file": "rl_case",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  },
+  {
+   "file": "prospective_register",
+   "path": "meta.git_commit",
+   "text": "f812c49"
+  },
+  {
+   "file": "prospective_register",
+   "path": "meta.created",
+   "text": "2026-10-05"
+  }
+ ]
+}

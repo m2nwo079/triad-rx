@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "step": "prospective_register",
+    "created": "2026-10-05",
+    "git_commit": "f812c496b2f7acd5422626a5bc48246c0302b2f6",
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "prospective_config": {
+      "anchor": "data_cutoff",
+      "buffer_years": 1,
+      "label_years": 2,
+      "descriptive_years": [
+        1,
+        2
+      ],
+      "top_k": 100,
+      "population": "candidates passing applied.prescription redundancy filter",
+      "baseline": {
+        "feature": "P_aa_min",
+        "order": "desc",
+        "ties": "term_ids",
+        "file": "prospective/2026-10-04_baseline.json"
+      },
+      "registration": "prospective/2026-10-04.json",
+      "ranking": "data/derived/applied/ranking.parquet",
+      "vocab": "vocab/timepoints/applied_final.json",
+      "bootstrap": "evaluation"
+    }
+  },
+  "population": 218154,
+  "top_k": 100,
+  "overlap_prescription_baseline": 0,
+  "sha256": {
+    "ranking": "0018ca5da2c5294ad039920e5ad774de898960cecde0e10cd664a3fc9d0f66a2",
+    "vocab": "ef667d80e400820547291c6624230445e81be42ed0fa7de47baff26e528092ae",
+    "registration": "34a214a6e41c1d94011418ce97059ecd12d6583aed76ddae4c1beda4faea6163",
+    "baseline": "696804a6d6d122b05c93a976fa3d0aefed7fd2f92408ccba9268c868b9065b3a"
+  }
+}
