@@ -1,0 +1,21 @@
+{
+ "rank": 3,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "term_mismatch",
+  "insufficient_explanation": "The term 'dialogue adaptive pre training objective' (DAPO) appears in the evidence papers primarily as a policy-optimization reinforcement learning algorithm (such as in GRPO/DAPO), whereas the candidate term name refers to a pre-training objective. There is no evidence in the bundle demonstrating the use of a dialogue adaptive pre-training objective combined with multimodal and mathematical reasoning in the manner of the candidate triad.",
+  "insufficient_evidence_ids": [
+   "paper:2609.15471",
+   "paper:2608.11674",
+   "paper:2605.30912"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

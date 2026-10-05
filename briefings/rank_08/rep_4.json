@@ -1,0 +1,193 @@
+{
+ "rank": 8,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:rag",
+    "role": "Serves as the overarching framework that retrieves external knowledge sources and incorporates entity grounding signals to improve domain-specific question answering and factual accuracy.",
+    "evidence_ids": [
+     "paper:2512.05967"
+    ]
+   },
+   {
+    "term_id": "T:entity linking",
+    "role": "Provides a factual signal by mapping textual mentions to structured knowledge base entities, reducing terminological ambiguity and domain mismatch.",
+    "evidence_ids": [
+     "paper:2512.05967"
+    ]
+   },
+   {
+    "term_id": "T:reranking",
+    "role": "Implements hybrid re-ranking strategies such as Reciprocal Rank Fusion to refine retrieved candidate entities and documents based on structural signals.",
+    "evidence_ids": [
+     "paper:2512.05967"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Enhancing domain-specific educational question-answering systems and retrieval-augmented generation pipelines through factual grounding.",
+   "evidence_ids": [
+    "paper:2512.05967"
+   ]
+  },
+  "limitation": {
+   "text": "RAG systems based solely on standard semantic similarity fail to ensure factual accuracy in specialized domains due to terminological ambiguity.",
+   "evidence_ids": [
+    "paper:2512.05967"
+   ]
+  },
+  "combination": {
+   "text": "The framework integrates an entity linking module to supply factual knowledge base signals and applies a hybrid re-ranking strategy using Reciprocal Rank Fusion within a retrieval-augmented generation architecture.",
+   "evidence_ids": [
+    "paper:2512.05967"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:rag",
+     "role": "Serves as the overarching framework that retrieves external knowledge sources and incorporates entity grounding signals to improve domain-specific question answering and factual accuracy.",
+     "evidence_ids": [
+      "paper:2512.05967"
+     ]
+    },
+    {
+     "term_id": "T:entity linking",
+     "role": "Provides a factual signal by mapping textual mentions to structured knowledge base entities, reducing terminological ambiguity and domain mismatch.",
+     "evidence_ids": [
+      "paper:2512.05967"
+     ]
+    },
+    {
+     "term_id": "T:reranking",
+     "role": "Implements hybrid re-ranking strategies such as Reciprocal Rank Fusion to refine retrieved candidate entities and documents based on structural signals.",
+     "evidence_ids": [
+      "paper:2512.05967"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Enhancing domain-specific educational question-answering systems and retrieval-augmented generation pipelines through factual grounding.",
+    "evidence_ids": [
+     "paper:2512.05967"
+    ]
+   },
+   "limitation": {
+    "text": "RAG systems based solely on standard semantic similarity fail to ensure factual accuracy in specialized domains due to terminological ambiguity.",
+    "evidence_ids": [
+     "paper:2512.05967"
+    ]
+   },
+   "combination": {
+    "text": "The framework integrates an entity linking module to supply factual knowledge base signals and applies a hybrid re-ranking strategy using Reciprocal Rank Fusion within a retrieval-augmented generation architecture.",
+    "evidence_ids": [
+     "paper:2512.05967"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing examines a framework combining retrieval-augmented generation, entity linking, and reranking to enhance factual precision in specialized domains. The system integrates a Wikidata-based entity linking module to generate factual signals and applies hybrid re-ranking strategies such as Reciprocal Rank Fusion. This approach addresses limitations where standard semantic similarity fails due to terminological ambiguity in educational contexts.",
+   "evidence_ids": [
+    "paper:2512.05967"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified.",
+   "evidence_ids": [
+    "dvf:8"
+   ]
+  },
+  "jtbd": {
+   "text": "When building educational question-answering systems, developers want to ground language generation in reliable knowledge sources so that factual accuracy is maintained despite terminological ambiguity.",
+   "evidence_ids": [
+    "paper:2512.05967"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrating entity linking signals into retrieval-augmented generation pipelines with hybrid reranking significantly outperforms standard semantic similarity baselines in domain-specific educational contexts.",
+   "evidence_ids": [
+    "paper:2512.05967"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is that commercial buyers will pay for a specialized entity-linked RAG solution, which was designated due to missing evidence on axis V (viability) with a score of null.",
+   "evidence_ids": [
+    "dvf:8"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews with 10 proposed target organizations and perform a price acceptance test offering a prototype package at a proposed threshold: 500 dollars per month to test willingness to pay under axis V.",
+   "evidence_ids": [
+    "dvf:8"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold: 40 percent of interviewed prospects agreeing to participate in a paid pilot at a proposed threshold: 300 dollars per month.",
+   "evidence_ids": [
+    "dvf:8"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold: 10 percent of interviewed prospective users express willingness to pay for the entity-linked RAG pipeline during validation testing.",
+    "evidence_ids": [
+     "dvf:8"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:datascienceuibk/rankify",
+     "use": "Provides a comprehensive Python toolkit for retrieval, re-ranking, and retrieval-augmented generation integrations.",
+     "evidence_ids": [
+      "repo:datascienceuibk/rankify"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:llama-index",
+     "use": "Serves as a document processing platform for AI applications and RAG framework components.",
+     "evidence_ids": [
+      "pkg:llama-index"
+     ],
+     "version": "0.14.25"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Develop a specialized Wikidata-based entity linking module to inject factual signals into candidate retrieval streams.",
+     "evidence_ids": [
+      "paper:2512.05967"
+     ]
+    },
+    {
+     "text": "Implement a hybrid re-ranking pipeline using Reciprocal Rank Fusion tailored for domain-specific educational datasets.",
+     "evidence_ids": [
+      "paper:2512.05967"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

@@ -1,0 +1,228 @@
+{
+ "meta": {
+  "step": "briefing_bundles",
+  "created": "2026-10-05",
+  "git_commit": "92e300f906f2009adc856eaa637fe2f8a9d87f24",
+  "data_cutoff": "2026-09-24T17:59:54+00:00",
+  "briefing": {
+   "top_n": 20,
+   "order": "rank_prescription",
+   "bundle": {
+    "papers_per_pair": 5,
+    "paper_order": "first_date_desc",
+    "abstract": "full",
+    "repos_max": 5,
+    "repo_order": "stars_window_desc",
+    "packages_max": 5,
+    "package_order": "second_half_downloads_desc",
+    "patents_max": 5,
+    "patent_order": "latest_document_date_desc",
+    "tie_break": "evidence_id_asc"
+   }
+  },
+  "dvf_sha256": "7316a3768c5d11821ce0fad4326ad7553768e72f25f9d4ae079f82bd18af4227",
+  "note": "repository descriptions are values at fetch time (design 16.7)"
+ },
+ "bundles": [
+  {
+   "rank": 1,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 5,
+   "patents": 0,
+   "repos_without_description": 0,
+   "packages_without_version": 0,
+   "bundle_sha256": "b7a1cf09037687f404d2e5f683286b3d923d317849b26d8168ca1bd32fbcddaf"
+  },
+  {
+   "rank": 2,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 0,
+   "patents": 0,
+   "repos_without_description": 0,
+   "packages_without_version": 0,
+   "bundle_sha256": "b9301723fc2c65b832b03d1555cc4644ed10466e39130b04f254359e1e3f3914"
+  },
+  {
+   "rank": 3,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 0,
+   "patents": 0,
+   "repos_without_description": 2,
+   "packages_without_version": 0,
+   "bundle_sha256": "411486612ae201e2dcb78cf2293629b97143c5c0e97a97dba617c9105d7f942d"
+  },
+  {
+   "rank": 4,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 0,
+   "patents": 0,
+   "repos_without_description": 0,
+   "packages_without_version": 0,
+   "bundle_sha256": "46b8be4bc605081d4cb3a0f3eb7451e624b9f0e9ee39ccc48813519d677eae5f"
+  },
+  {
+   "rank": 5,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 0,
+   "patents": 1,
+   "repos_without_description": 1,
+   "packages_without_version": 0,
+   "bundle_sha256": "622923b004666ce8f852ef5da19d0fa11f25839c83e378c013728819fc2066e4"
+  },
+  {
+   "rank": 6,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 0,
+   "patents": 0,
+   "repos_without_description": 2,
+   "packages_without_version": 0,
+   "bundle_sha256": "ce888cd4eb06aa0532150637f8731817af7e9dc157ac064fdf39259b5a73afe6"
+  },
+  {
+   "rank": 7,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 5,
+   "patents": 5,
+   "repos_without_description": 1,
+   "packages_without_version": 0,
+   "bundle_sha256": "636581e6c0b638a3921e5ed653dd0459f832da5f4dc485fa3de80e6868098ca7"
+  },
+  {
+   "rank": 8,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 5,
+   "patents": 0,
+   "repos_without_description": 1,
+   "packages_without_version": 0,
+   "bundle_sha256": "126dde6533dde1aed9c632308ab0121984951249d4762c5e033c0052daf4bc2f"
+  },
+  {
+   "rank": 9,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 5,
+   "patents": 0,
+   "repos_without_description": 0,
+   "packages_without_version": 2,
+   "bundle_sha256": "ebb231564e8eb10d9c1b428417917d338c8d40a11ee926334129ec224c3d58c6"
+  },
+  {
+   "rank": 10,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 1,
+   "patents": 0,
+   "repos_without_description": 1,
+   "packages_without_version": 0,
+   "bundle_sha256": "1c2423508e6ad1c5db47f16090887b614478bdfff62fe4506fd8957a4a1bc184"
+  },
+  {
+   "rank": 11,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 5,
+   "patents": 0,
+   "repos_without_description": 0,
+   "packages_without_version": 0,
+   "bundle_sha256": "79c8c8d0421c269ac5a6f2ea1a8c122ba9acc8abfd4793ac82c966807339c30c"
+  },
+  {
+   "rank": 12,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 3,
+   "patents": 0,
+   "repos_without_description": 0,
+   "packages_without_version": 0,
+   "bundle_sha256": "c11cc76a4bf036889cc963eb44a8985b00f6984cd28d93213c18316c16a6c1c5"
+  },
+  {
+   "rank": 13,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 5,
+   "patents": 0,
+   "repos_without_description": 0,
+   "packages_without_version": 0,
+   "bundle_sha256": "b75fe995c5d280a85cc5f5c49af34677d80685ff6ecc8a83c61dbf5590e55961"
+  },
+  {
+   "rank": 14,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 0,
+   "patents": 0,
+   "repos_without_description": 1,
+   "packages_without_version": 0,
+   "bundle_sha256": "1dfd2e4d9dbc9ae9ba287ad635c17fd1afbcb29c845ada97579dacd0d4d6d239"
+  },
+  {
+   "rank": 15,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 0,
+   "patents": 0,
+   "repos_without_description": 3,
+   "packages_without_version": 0,
+   "bundle_sha256": "07037f69cd71a0fe1a8d538e2d32cee71709873ef160405ee933d05b46dac32c"
+  },
+  {
+   "rank": 16,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 5,
+   "patents": 0,
+   "repos_without_description": 0,
+   "packages_without_version": 0,
+   "bundle_sha256": "feeb05adaa4547942bd398043f19594e115065bf97e5034f20b3ef64c9cb3646"
+  },
+  {
+   "rank": 17,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 5,
+   "patents": 0,
+   "repos_without_description": 1,
+   "packages_without_version": 0,
+   "bundle_sha256": "e9df0d748955bacde9e7e4d563d093e2ea9fc74e663a86b2b652c817b21a339a"
+  },
+  {
+   "rank": 18,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 2,
+   "patents": 0,
+   "repos_without_description": 1,
+   "packages_without_version": 1,
+   "bundle_sha256": "074fe7a596430018d2825225127c25b6280ac059860b84dc7c623d032f17c619"
+  },
+  {
+   "rank": 19,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 2,
+   "patents": 0,
+   "repos_without_description": 1,
+   "packages_without_version": 0,
+   "bundle_sha256": "129c7fe4b2844a966c3740fe6aa45301c658c23de1aebafa2bba41dbea96010f"
+  },
+  {
+   "rank": 20,
+   "papers": 15,
+   "repositories": 5,
+   "packages": 0,
+   "patents": 0,
+   "repos_without_description": 0,
+   "packages_without_version": 0,
+   "bundle_sha256": "d6f7516facb3e38803fb8de78714763cd920afe710d6b1a0e8575b04aed22b02"
+  }
+ ]
+}

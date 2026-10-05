@@ -1,0 +1,197 @@
+{
+ "rank": 18,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:rag",
+    "role": "Serves as the overarching retrieval-augmented framework that incorporates retrieved knowledge and structures generation.",
+    "evidence_ids": [
+     "paper:2604.17574"
+    ]
+   },
+   {
+    "term_id": "T:in context learning",
+    "role": "Provides training-free adaptation by prompting large language models with retrieved few-shot examples and rationales.",
+    "evidence_ids": [
+     "paper:2604.17574"
+    ]
+   },
+   {
+    "term_id": "T:semantic retrieval",
+    "role": "Performs unsupervised similarity search to select relevant few-shot examples for the generation process.",
+    "evidence_ids": [
+     "paper:2604.17574"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Reasoned distractor generation for multiple-choice questions.",
+   "evidence_ids": [
+    "paper:2604.17574"
+   ]
+  },
+  "limitation": {
+   "text": "Existing distractor generation approaches often fail to capture the underlying reasoning process that experts utilize when selecting distractors.",
+   "evidence_ids": [
+    "paper:2604.17574"
+   ]
+  },
+  "combination": {
+   "text": "Unsupervised semantic retrieval is used to select relevant few-shot examples, which are then supplied via in-context learning within a retrieval-augmented generation framework to generate reasoned distractors and their rationales.",
+   "evidence_ids": [
+    "paper:2604.17574"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:rag",
+     "role": "Serves as the overarching retrieval-augmented framework that incorporates retrieved knowledge and structures generation.",
+     "evidence_ids": [
+      "paper:2604.17574"
+     ]
+    },
+    {
+     "term_id": "T:in context learning",
+     "role": "Provides training-free adaptation by prompting large language models with retrieved few-shot examples and rationales.",
+     "evidence_ids": [
+      "paper:2604.17574"
+     ]
+    },
+    {
+     "term_id": "T:semantic retrieval",
+     "role": "Performs unsupervised similarity search to select relevant few-shot examples for the generation process.",
+     "evidence_ids": [
+      "paper:2604.17574"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Reasoned distractor generation for multiple-choice questions.",
+    "evidence_ids": [
+     "paper:2604.17574"
+    ]
+   },
+   "limitation": {
+    "text": "Existing distractor generation approaches often fail to capture the underlying reasoning process that experts utilize when selecting distractors.",
+    "evidence_ids": [
+     "paper:2604.17574"
+    ]
+   },
+   "combination": {
+    "text": "Unsupervised semantic retrieval is used to select relevant few-shot examples, which are then supplied via in-context learning within a retrieval-augmented generation framework to generate reasoned distractors and their rationales.",
+    "evidence_ids": [
+     "paper:2604.17574"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity combines retrieval-augmented generation, in-context learning, and semantic retrieval to tackle reasoned distractor generation for multiple-choice questions. Unsupervised semantic retrieval selects relevant few-shot examples, which are supplied via in-context learning to generate plausible distractors and their rationales.",
+   "evidence_ids": [
+    "paper:2604.17574"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified due to a lack of patent assignee categories, repositories, or package evidence in the bundle.",
+   "evidence_ids": [
+    "pkg:flashrag",
+    "pkg:flashrag-dev",
+    "repo:ali-bahrainian/rag_best_practices",
+    "repo:oneal2000/judge",
+    "repo:ruc-nlpir/flashrag",
+    "repo:weizhepei/instructrag",
+    "repo:yuanjianhao508/rag-driver"
+   ]
+  },
+  "jtbd": {
+   "text": "When creating assessment content, educators and exam developers want to automatically generate contextually relevant, misleading distractors and their underlying rationales so that they can reduce the manual effort of test creation.",
+   "evidence_ids": [
+    "paper:2604.17574"
+   ]
+  },
+  "value_prop": {
+   "text": "Unlike conventional models that struggle to capture expert reasoning processes when designing incorrect options, this approach leverages unsupervised semantic retrieval and in-context learning to generate reasoned distractors and rationales that align with human-labeled benchmarks.",
+   "evidence_ids": [
+    "paper:2604.17574"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is that customers will pay for an automated distractor generation API or software tool. This axis (V) was designated due to missing evidence in the bundle.",
+   "evidence_ids": [
+    "dvf:18",
+    "paper:2604.17574"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with test-prep publishers and educators using static mockup outputs of reasoned distractors to test willingness to pay.",
+   "evidence_ids": [
+    "dvf:18",
+    "paper:2604.17574"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "The success metric is a proposed threshold: at least 40 percent of interviewed educators expressing a willingness to subscribe at a proposed threshold: $50 per month.",
+   "evidence_ids": [
+    "dvf:18",
+    "paper:2604.17574"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than 10 percent of interviewed target users indicate a positive willingness to pay during price acceptance testing.",
+    "evidence_ids": [
+     "dvf:18",
+     "paper:2604.17574"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:ruc-nlpir/flashrag",
+     "use": "Used as a Python toolkit framework for managing efficient retrieval-augmented generation research tasks.",
+     "evidence_ids": [
+      "repo:ruc-nlpir/flashrag"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:flashrag",
+     "use": "Used as the underlying package dependency to handle retrieval utilities.",
+     "evidence_ids": [
+      "pkg:flashrag"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build a rationale-augmented prompt construction module that formats retrieved semantic neighbors into few-shot in-context learning templates for LLM consumption.",
+     "evidence_ids": [
+      "paper:2604.17574"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

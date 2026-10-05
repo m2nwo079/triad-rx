@@ -1,0 +1,316 @@
+{
+ "meta": {
+  "step": "q2",
+  "created": "2026-10-05",
+  "git_commit": "368208a3dcfb6f92090d0879a79323bf803bd015",
+  "definition": {
+   "frame_agreement": "modal_status_and_reason",
+   "mvp_type": "fixed_by_rule_reported_as_is",
+   "unit": "repetition"
+  }
+ },
+ "frame_agreement": {
+  "agreeing": 92,
+  "total": 100,
+  "rate": 0.92,
+  "wilson_95": [
+   0.8500189229905127,
+   0.9589065385156194
+  ]
+ },
+ "mvp_type_agreement": {
+  "candidates_consistent": 20,
+  "candidates": 20,
+  "note": "fixed by the DVF rule (design 8.4); 100 percent by construction"
+ },
+ "per_candidate": [
+  {
+   "rank": 1,
+   "keys": [
+    "insufficient_concept|comparison_only",
+    "insufficient_concept|comparison_only",
+    "insufficient_concept|comparison_only",
+    "insufficient_concept|comparison_only",
+    "insufficient_concept|comparison_only"
+   ],
+   "mode": "insufficient_concept|comparison_only",
+   "agreeing": 5,
+   "mvp_types": []
+  },
+  {
+   "rank": 2,
+   "keys": [
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none"
+   ],
+   "mode": "complete|none",
+   "agreeing": 5,
+   "mvp_types": [
+    "customer interviews and price acceptance test"
+   ]
+  },
+  {
+   "rank": 3,
+   "keys": [
+    "insufficient_concept|term_mismatch",
+    "insufficient_concept|term_mismatch",
+    "insufficient_concept|term_mismatch",
+    "insufficient_concept|term_mismatch",
+    "insufficient_concept|term_mismatch"
+   ],
+   "mode": "insufficient_concept|term_mismatch",
+   "agreeing": 5,
+   "mvp_types": []
+  },
+  {
+   "rank": 4,
+   "keys": [
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none"
+   ],
+   "mode": "complete|none",
+   "agreeing": 5,
+   "mvp_types": [
+    "customer interviews and price acceptance test"
+   ]
+  },
+  {
+   "rank": 5,
+   "keys": [
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none"
+   ],
+   "mode": "complete|none",
+   "agreeing": 5,
+   "mvp_types": [
+    "demand landing page and problem interviews"
+   ]
+  },
+  {
+   "rank": 6,
+   "keys": [
+    "insufficient_concept|comparison_only",
+    "insufficient_concept|comparison_only",
+    "complete|none",
+    "insufficient_concept|comparison_only",
+    "insufficient_concept|comparison_only"
+   ],
+   "mode": "insufficient_concept|comparison_only",
+   "agreeing": 4,
+   "mvp_types": [
+    "customer interviews and price acceptance test"
+   ]
+  },
+  {
+   "rank": 7,
+   "keys": [
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none"
+   ],
+   "mode": "complete|none",
+   "agreeing": 5,
+   "mvp_types": [
+    "technical proof of concept from existing packages"
+   ]
+  },
+  {
+   "rank": 8,
+   "keys": [
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none"
+   ],
+   "mode": "complete|none",
+   "agreeing": 5,
+   "mvp_types": [
+    "customer interviews and price acceptance test"
+   ]
+  },
+  {
+   "rank": 9,
+   "keys": [
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none"
+   ],
+   "mode": "complete|none",
+   "agreeing": 5,
+   "mvp_types": [
+    "customer interviews and price acceptance test"
+   ]
+  },
+  {
+   "rank": 10,
+   "keys": [
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "insufficient_concept|no_combination_evidence"
+   ],
+   "mode": "complete|none",
+   "agreeing": 4,
+   "mvp_types": [
+    "customer interviews and price acceptance test"
+   ]
+  },
+  {
+   "rank": 11,
+   "keys": [
+    "complete|none",
+    "insufficient_concept|no_combination_evidence",
+    "complete|none",
+    "complete|none",
+    "insufficient_concept|comparison_only"
+   ],
+   "mode": "complete|none",
+   "agreeing": 3,
+   "mvp_types": [
+    "customer interviews and price acceptance test"
+   ]
+  },
+  {
+   "rank": 12,
+   "keys": [
+    "insufficient_concept|no_combination_evidence",
+    "insufficient_concept|no_combination_evidence",
+    "insufficient_concept|no_combination_evidence",
+    "complete|none",
+    "insufficient_concept|no_combination_evidence"
+   ],
+   "mode": "insufficient_concept|no_combination_evidence",
+   "agreeing": 4,
+   "mvp_types": [
+    "customer interviews and price acceptance test"
+   ]
+  },
+  {
+   "rank": 13,
+   "keys": [
+    "insufficient_concept|no_combination_evidence",
+    "insufficient_concept|no_combination_evidence",
+    "insufficient_concept|no_combination_evidence",
+    "insufficient_concept|no_combination_evidence",
+    "insufficient_concept|no_combination_evidence"
+   ],
+   "mode": "insufficient_concept|no_combination_evidence",
+   "agreeing": 5,
+   "mvp_types": []
+  },
+  {
+   "rank": 14,
+   "keys": [
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none"
+   ],
+   "mode": "complete|none",
+   "agreeing": 5,
+   "mvp_types": [
+    "customer interviews and price acceptance test"
+   ]
+  },
+  {
+   "rank": 15,
+   "keys": [
+    "insufficient_concept|no_combination_evidence",
+    "insufficient_concept|no_combination_evidence",
+    "insufficient_concept|no_combination_evidence",
+    "insufficient_concept|no_combination_evidence",
+    "insufficient_concept|no_combination_evidence"
+   ],
+   "mode": "insufficient_concept|no_combination_evidence",
+   "agreeing": 5,
+   "mvp_types": []
+  },
+  {
+   "rank": 16,
+   "keys": [
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none"
+   ],
+   "mode": "complete|none",
+   "agreeing": 5,
+   "mvp_types": [
+    "customer interviews and price acceptance test"
+   ]
+  },
+  {
+   "rank": 17,
+   "keys": [
+    "insufficient_concept|term_mismatch",
+    "insufficient_concept|term_mismatch",
+    "insufficient_concept|term_mismatch",
+    "insufficient_concept|term_mismatch",
+    "insufficient_concept|term_mismatch"
+   ],
+   "mode": "insufficient_concept|term_mismatch",
+   "agreeing": 5,
+   "mvp_types": []
+  },
+  {
+   "rank": 18,
+   "keys": [
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none",
+    "complete|none"
+   ],
+   "mode": "complete|none",
+   "agreeing": 5,
+   "mvp_types": [
+    "customer interviews and price acceptance test"
+   ]
+  },
+  {
+   "rank": 19,
+   "keys": [
+    "insufficient_concept|no_combination_evidence",
+    "insufficient_concept|no_combination_evidence",
+    "insufficient_concept|no_combination_evidence",
+    "complete|none",
+    "complete|none"
+   ],
+   "mode": "insufficient_concept|no_combination_evidence",
+   "agreeing": 3,
+   "mvp_types": [
+    "customer interviews and price acceptance test"
+   ]
+  },
+  {
+   "rank": 20,
+   "keys": [
+    "insufficient_concept|term_mismatch",
+    "insufficient_concept|no_combination_evidence",
+    "insufficient_concept|term_mismatch",
+    "insufficient_concept|term_mismatch",
+    "insufficient_concept|term_mismatch"
+   ],
+   "mode": "insufficient_concept|term_mismatch",
+   "agreeing": 4,
+   "mvp_types": []
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "rank": 19,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "The evidence bundle contains papers discussing pairs of these terms, such as proximal policy optimization with efficient exploration or multi-agent reinforcement learning with efficient exploration, but lacks a single study combining all three terms (proximal policy optimization, efficient exploration, and multi-agent reinforcement learning) together into a unified framework.",
+  "insufficient_evidence_ids": [
+   "paper:2511.12123",
+   "paper:2511.17165",
+   "paper:2609.18639"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

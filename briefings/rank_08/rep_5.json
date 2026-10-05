@@ -1,0 +1,197 @@
+{
+ "rank": 8,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:rag",
+    "role": "Serves as the overarching framework that grounds language generation or retrieves initial domain-specific knowledge using structured representations.",
+    "evidence_ids": [
+     "paper:2512.05967"
+    ]
+   },
+   {
+    "term_id": "T:entity linking",
+    "role": "Provides factual signals by mapping textual mentions to corresponding entities in knowledge bases to improve retrieval relevance.",
+    "evidence_ids": [
+     "paper:2512.05967"
+    ]
+   },
+   {
+    "term_id": "T:reranking",
+    "role": "Refines and re-scores retrieved candidates using hybrid strategies like Reciprocal Rank Fusion to enhance factual precision.",
+    "evidence_ids": [
+     "paper:2512.05967"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Educational question-answering and domain-specific retrieval-augmented generation.",
+   "evidence_ids": [
+    "paper:2512.05967"
+   ]
+  },
+  "limitation": {
+   "text": "RAG systems based solely on semantic similarity fail to ensure factual accuracy in specialized domains due to terminological ambiguity.",
+   "evidence_ids": [
+    "paper:2512.05967"
+   ]
+  },
+  "combination": {
+   "text": "The combination integrates an entity linking module to inject factual signals into the RAG architecture and applies a hybrid re-ranking strategy based on Reciprocal Rank Fusion to improve retrieval relevance and factual precision in specialized domain QA.",
+   "evidence_ids": [
+    "paper:2512.05967"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:rag",
+     "role": "Serves as the overarching framework that grounds language generation or retrieves initial domain-specific knowledge using structured representations.",
+     "evidence_ids": [
+      "paper:2512.05967"
+     ]
+    },
+    {
+     "term_id": "T:entity linking",
+     "role": "Provides factual signals by mapping textual mentions to corresponding entities in knowledge bases to improve retrieval relevance.",
+     "evidence_ids": [
+      "paper:2512.05967"
+     ]
+    },
+    {
+     "term_id": "T:reranking",
+     "role": "Refines and re-scores retrieved candidates using hybrid strategies like Reciprocal Rank Fusion to enhance factual precision.",
+     "evidence_ids": [
+      "paper:2512.05967"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Educational question-answering and domain-specific retrieval-augmented generation.",
+    "evidence_ids": [
+     "paper:2512.05967"
+    ]
+   },
+   "limitation": {
+    "text": "RAG systems based solely on semantic similarity fail to ensure factual accuracy in specialized domains due to terminological ambiguity.",
+    "evidence_ids": [
+     "paper:2512.05967"
+    ]
+   },
+   "combination": {
+    "text": "The combination integrates an entity linking module to inject factual signals into the RAG architecture and applies a hybrid re-ranking strategy based on Reciprocal Rank Fusion to improve retrieval relevance and factual precision in specialized domain QA.",
+    "evidence_ids": [
+     "paper:2512.05967"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining RAG, entity linking, and reranking for educational question-answering and domain-specific retrieval-augmented generation. The approach integrates an entity linking module to inject factual signals into the RAG architecture and applies a hybrid re-ranking strategy based on Reciprocal Rank Fusion to improve retrieval relevance and factual precision in specialized domain QA.",
+   "evidence_ids": [
+    "paper:2512.05967"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as the bundle gives no explicit patent assignee categories, but repositories and packages such as LlamaIndex suggest developers and platform engineers building document processing and AI tutoring tools.",
+   "evidence_ids": [
+    "pkg:llama-index",
+    "repo:run-llama/llama_index"
+   ]
+  },
+  "jtbd": {
+   "text": "When building specialized domain QA systems, the user wants to ground language generation in reliable knowledge sources so that factual accuracy is maintained despite terminological ambiguity.",
+   "evidence_ids": [
+    "paper:2512.05967"
+   ]
+  },
+  "value_prop": {
+   "text": "The combination significantly outperforms standard baselines and Cross-Encoder configurations in domain-specific contexts by leveraging entity linking for factual signals and Reciprocal Rank Fusion for hybrid re-ranking.",
+   "evidence_ids": [
+    "paper:2512.05967"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence in the DVF table. We assume that enterprise users will pay for a domain-specific entity-linked RAG solution that solves terminological ambiguity.",
+   "evidence_ids": [
+    "dvf:8",
+    "paper:2512.05967"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "To test the riskiest assumption regarding commercial viability, conduct customer interviews and a price acceptance test with a mock-up of the entity-linked RAG and hybrid reranking pipeline.",
+   "evidence_ids": [
+    "dvf:8",
+    "paper:2512.05967"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "A successful MVP test requires a proposed threshold of 40 percent of interviewed domain-expert customers expressing willingness to pay for the solution.",
+   "evidence_ids": [
+    "dvf:8",
+    "paper:2512.05967"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Kill the project if fewer than a proposed threshold of 15 percent of interviewed customers confirm willingness to pay during the price acceptance test.",
+    "evidence_ids": [
+     "dvf:8"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:llama-index",
+     "use": "Serves as the foundational document processing platform for AI to manage the retrieval and data components.",
+     "evidence_ids": [
+      "repo:run-llama/llama_index"
+     ],
+     "version": "0.14.25"
+    },
+    {
+     "id": "repo:datascienceuibk/rankify",
+     "use": "Provides pre-retrieved datasets and state-of-the-art reranking models for the hybrid re-ranking pipeline.",
+     "evidence_ids": [
+      "repo:datascienceuibk/rankify"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Develop a domain-specific entity linking module that maps specialized text mentions to external knowledge bases like Wikidata to inject factual signals into the RAG workflow.",
+     "evidence_ids": [
+      "paper:2512.05967"
+     ]
+    },
+    {
+     "text": "Implement a Reciprocal Rank Fusion hybrid re-ranking wrapper to combine dense retrieval scores with entity linking signals.",
+     "evidence_ids": [
+      "paper:2512.05967"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

@@ -1,0 +1,211 @@
+{
+ "rank": 9,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:class activation map",
+    "role": "Provides visual explanations and localized attribution maps (such as Grad-CAM or BiCAM) to identify regions influencing the model's predictions.",
+    "evidence_ids": [
+     "paper:2603.01605",
+     "paper:2608.11280",
+     "paper:2504.04549"
+    ]
+   },
+   {
+    "term_id": "M:convnext",
+    "role": "Serves as a convolutional neural network (CNN) backbone or part of a hybrid multi-branch architecture for image classification tasks.",
+    "evidence_ids": [
+     "paper:2608.11280",
+     "paper:2511.18691"
+    ]
+   },
+   {
+    "term_id": "M:deit",
+    "role": "Acts as a Vision Transformer model or backbone providing global context and feature representations for visual recognition tasks.",
+    "evidence_ids": [
+     "paper:2603.01605",
+     "paper:2511.18691"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Image classification and diagnostic visual recognition tasks such as multi-class skin lesion classification.",
+   "evidence_ids": [
+    "paper:2608.11280",
+    "paper:2511.18691"
+   ]
+  },
+  "limitation": {
+   "text": "Deep learning models often suffer from limited interpretability and high computational costs when attempting to combine global transformer context with local CNN features.",
+   "evidence_ids": [
+    "paper:2608.11280",
+    "paper:2511.18691"
+   ]
+  },
+  "combination": {
+   "text": "The combination integrates ConvNeXt and DeiT architectures—frequently within hybrid frameworks or ensembles—to leverage both local convolutional details and global transformer representations, while employing class activation mapping techniques to generate visual explanations for the models' decisions.",
+   "evidence_ids": [
+    "paper:2603.01605",
+    "paper:2608.11280",
+    "paper:2511.18691"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:class activation map",
+     "role": "Provides visual explanations and localized attribution maps (such as Grad-CAM or BiCAM) to identify regions influencing the model's predictions.",
+     "evidence_ids": [
+      "paper:2603.01605",
+      "paper:2608.11280",
+      "paper:2504.04549"
+     ]
+    },
+    {
+     "term_id": "M:convnext",
+     "role": "Serves as a convolutional neural network (CNN) backbone or part of a hybrid multi-branch architecture for image classification tasks.",
+     "evidence_ids": [
+      "paper:2608.11280",
+      "paper:2511.18691"
+     ]
+    },
+    {
+     "term_id": "M:deit",
+     "role": "Acts as a Vision Transformer model or backbone providing global context and feature representations for visual recognition tasks.",
+     "evidence_ids": [
+      "paper:2603.01605",
+      "paper:2511.18691"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Image classification and diagnostic visual recognition tasks such as multi-class skin lesion classification.",
+    "evidence_ids": [
+     "paper:2608.11280",
+     "paper:2511.18691"
+    ]
+   },
+   "limitation": {
+    "text": "Deep learning models often suffer from limited interpretability and high computational costs when attempting to combine global transformer context with local CNN features.",
+    "evidence_ids": [
+     "paper:2608.11280",
+     "paper:2511.18691"
+    ]
+   },
+   "combination": {
+    "text": "The combination integrates ConvNeXt and DeiT architectures—frequently within hybrid frameworks or ensembles—to leverage both local convolutional details and global transformer representations, while employing class activation mapping techniques to generate visual explanations for the models' decisions.",
+    "evidence_ids": [
+     "paper:2603.01605",
+     "paper:2608.11280",
+     "paper:2511.18691"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This briefing explores combining Class Activation Maps, ConvNeXt, and DeiT for image classification and diagnostic visual recognition tasks. By integrating ConvNeXt and DeiT architectures within hybrid frameworks or ensembles, systems can leverage both local convolutional details and global transformer representations. Furthermore, class activation mapping techniques provide visual explanations and localized attribution maps to highlight regions influencing model predictions.",
+   "evidence_ids": [
+    "paper:2603.01605",
+    "paper:2608.11280",
+    "paper:2511.18691"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified based on the available patent assignee categories, but developers and researchers leverage PyTorch image encoders and packages such as timm and model-logger-dp for training and deploying vision models.",
+   "evidence_ids": [
+    "repo:huggingface/pytorch-image-models",
+    "pkg:timm",
+    "pkg:model-logger-dp"
+   ]
+  },
+  "jtbd": {
+   "text": "When building visual recognition systems, practitioners need to combine global transformer context with local CNN features while maintaining model interpretability, but deep learning models often suffer from limited interpretability and high computational costs.",
+   "evidence_ids": [
+    "paper:2608.11280",
+    "paper:2511.18691"
+   ]
+  },
+  "value_prop": {
+   "text": "The integration of ConvNeXt and DeiT architectures balances the accuracy-efficiency trade-off by capturing local details, global context, and hierarchical features, while class activation mapping provides localized explanations for trustworthy decision-making.",
+   "evidence_ids": [
+    "paper:2603.01605",
+    "paper:2608.11280",
+    "paper:2511.18691"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated due to missing evidence on axis V (viability). Specifically, we assume that enterprise customers are willing to pay for a hybrid ConvNeXt and DeiT classification framework that includes class activation map interpretability.",
+   "evidence_ids": [
+    "dvf:9"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with at least a proposed threshold of 10 prospective enterprise users in diagnostic imaging to validate commercial viability and willingness to pay.",
+   "evidence_ids": [
+    "dvf:9"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent of interviewed prospective users expressing active willingness to adopt and pay for the hybrid model framework.",
+   "evidence_ids": [
+    "dvf:9"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed prospective users express any willingness to adopt or pay for the proposed system.",
+    "evidence_ids": [
+     "dvf:9"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:huggingface/pytorch-image-models",
+     "use": "Serves as the repository providing pretrained weights and implementations for ConvNeXt and vision transformer backbones.",
+     "evidence_ids": [
+      "repo:huggingface/pytorch-image-models"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:timm",
+     "use": "Provides the Python package collection of PyTorch image encoders and backbones for model construction.",
+     "evidence_ids": [
+      "pkg:timm"
+     ],
+     "version": "1.0.30"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Develop a unified wrapper combining ConvNeXt and DeiT feature outputs with integrated class activation map generation.",
+     "evidence_ids": [
+      "paper:2603.01605",
+      "paper:2511.18691"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

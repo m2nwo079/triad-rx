@@ -1,0 +1,19 @@
+{
+ "rank": 17,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "term_mismatch",
+  "insufficient_explanation": "The term 'mixing adam and sgd' appears as a candidate concept name, but none of the papers or repositories in the evidence bundle discuss mixing Adam and SGD as a method; the bundle exclusively discusses retrieval-augmented generation, multi-agent systems, and question answering.",
+  "insufficient_evidence_ids": [
+   "paper:2609.30009"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

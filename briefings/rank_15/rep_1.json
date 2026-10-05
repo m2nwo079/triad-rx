@@ -1,0 +1,20 @@
+{
+ "rank": 15,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "The evidence bundle contains papers combining SHAP with intrusion detection, and papers combining SMOTE with intrusion detection, but no single paper combines all three terms (SHAP, SMOTE, and intrusion detection) together in a unified pipeline.",
+  "insufficient_evidence_ids": [
+   "paper:2608.11291",
+   "paper:2606.00161"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

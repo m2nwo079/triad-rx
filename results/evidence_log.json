@@ -59382,5 +59382,699 @@
    "status": 200,
    "body_sha256": "4e344fc222d64a1c5ec9e98d76d2102a85c321a7911bbcdf4405f42075461155"
   }
+ ],
+ "github_repo_meta": [
+  {
+   "url": "GET /repos/achelousace/three-phase-transformer",
+   "fetched_at": "2026-10-05T09:23:42+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/agi-arena/mars",
+   "fetched_at": "2026-10-05T09:23:43+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/aigeeksgroup/remomask",
+   "fetched_at": "2026-10-05T09:23:44+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/akashghosh/m3retrieve",
+   "fetched_at": "2026-10-05T09:23:45+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/ali-bahrainian/rag_best_practices",
+   "fetched_at": "2026-10-05T09:23:47+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/apple-aiml-research/ml-clara",
+   "fetched_at": "2026-10-05T09:23:48+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/ath-maas/ovis",
+   "fetched_at": "2026-10-05T09:23:49+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/ayanami1314/swe-pruner",
+   "fetched_at": "2026-10-05T09:23:50+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/binaryblitz08/fingerprints-under-fire",
+   "fetched_at": "2026-10-05T09:23:51+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/buaadreamer/easyrag",
+   "fetched_at": "2026-10-05T09:23:53+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/caglarmert/lale",
+   "fetched_at": "2026-10-05T09:23:54+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/chenqing-lin/fair-pruner",
+   "fetched_at": "2026-10-05T09:23:55+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/chi2liu/abc-grpo",
+   "fetched_at": "2026-10-05T09:23:56+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/circlemind-ai/fast-graphrag",
+   "fetched_at": "2026-10-05T09:23:57+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/cvlab-kaist/deepforcing",
+   "fetched_at": "2026-10-05T09:23:58+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/datascienceuibk/rankify",
+   "fetched_at": "2026-10-05T09:24:00+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/drivevla/opendrivevla",
+   "fetched_at": "2026-10-05T09:24:01+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/eit-nlp/mcmr",
+   "fetched_at": "2026-10-05T09:24:02+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/eleutherai/sae-auto-interp",
+   "fetched_at": "2026-10-05T09:24:04+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/eosphoros-ai/db-gpt",
+   "fetched_at": "2026-10-05T09:24:05+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/ernie-research/menvagent",
+   "fetched_at": "2026-10-05T09:24:06+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/fluxvla/fluxvla",
+   "fetched_at": "2026-10-05T09:24:08+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/gnueaj/unlearning-depth-score",
+   "fetched_at": "2026-10-05T09:24:09+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/gnurt1106/fraud-detection-cies",
+   "fetched_at": "2026-10-05T09:24:10+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/hannight/merrin",
+   "fetched_at": "2026-10-05T09:24:11+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/hiyouga/llama-factory",
+   "fetched_at": "2026-10-05T09:24:13+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/hkustdial/nl2sql_handbook",
+   "fetched_at": "2026-10-05T09:24:14+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/huggingface/pytorch-image-models",
+   "fetched_at": "2026-10-05T09:24:15+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/huggingface/transformers",
+   "fetched_at": "2026-10-05T09:24:16+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/idea-research/rex-omni",
+   "fetched_at": "2026-10-05T09:24:17+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/illuin-tech/vidore-benchmark",
+   "fetched_at": "2026-10-05T09:24:19+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/innovator-zero/faster",
+   "fetched_at": "2026-10-05T09:24:20+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/internlm/opencompass",
+   "fetched_at": "2026-10-05T09:24:22+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/ist-daslab/rco",
+   "fetched_at": "2026-10-05T09:24:23+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/jingkun-liu/krause-synchronization-transformers",
+   "fetched_at": "2026-10-05T09:24:24+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/kafuuchikai/dashing-for-the-golden-snitch-multi-drone-rl",
+   "fetched_at": "2026-10-05T09:24:25+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/karansehgal7/pinkmate-agentic-gtm",
+   "fetched_at": "2026-10-05T09:24:26+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/kasvii/pmce",
+   "fetched_at": "2026-10-05T09:24:28+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/kellerjordan/muon",
+   "fetched_at": "2026-10-05T09:24:29+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/laqcce-cao/rsl-sql",
+   "fetched_at": "2026-10-05T09:24:30+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/leaplabthu/efficienttrain",
+   "fetched_at": "2026-10-05T09:24:31+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/leilibrk/explainability-of-vits",
+   "fetched_at": "2026-10-05T09:24:32+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/lyuwenyu/rt-detr",
+   "fetched_at": "2026-10-05T09:24:33+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/mateolopez00/imbalanced-learning-empirical-evaluation",
+   "fetched_at": "2026-10-05T09:24:34+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/mickelliu/selfplay-redteaming",
+   "fetched_at": "2026-10-05T09:24:36+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/microsoft/archscale",
+   "fetched_at": "2026-10-05T09:24:37+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/microsoft/deepspeed",
+   "fetched_at": "2026-10-05T09:24:38+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/microsoft/graphrag",
+   "fetched_at": "2026-10-05T09:24:40+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/mililab/pearl",
+   "fetched_at": "2026-10-05T09:24:41+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/mit-han-lab/duo-attention",
+   "fetched_at": "2026-10-05T09:24:43+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/moojink/openvla-oft",
+   "fetched_at": "2026-10-05T09:24:44+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/moonshotai/kimi-vl",
+   "fetched_at": "2026-10-05T09:24:46+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/nrel/powergridworld",
+   "fetched_at": "2026-10-05T09:24:47+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/nvidia/tensorrt-model-optimizer",
+   "fetched_at": "2026-10-05T09:24:49+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/nvlabs/alpamayo",
+   "fetched_at": "2026-10-05T09:24:50+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/nvlabs/alpamayo1.5",
+   "fetched_at": "2026-10-05T09:24:51+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/nvlabs/fast-dllm",
+   "fetched_at": "2026-10-05T09:24:53+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/oneal2000/judge",
+   "fetched_at": "2026-10-05T09:24:54+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/open-compass/opencompass",
+   "fetched_at": "2026-10-05T09:24:55+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/opendcai/dataflow",
+   "fetched_at": "2026-10-05T09:24:56+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/opendcai/dataflow-webui",
+   "fetched_at": "2026-10-05T09:24:58+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/opendcai/one-eval",
+   "fetched_at": "2026-10-05T09:24:59+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/openspg/kag",
+   "fetched_at": "2026-10-05T09:25:00+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/osu-nlp-group/hipporag",
+   "fetched_at": "2026-10-05T09:25:01+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/pd-perry/expo-ft",
+   "fetched_at": "2026-10-05T09:25:02+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/physical-intelligence/real-time-chunking-kinetix",
+   "fetched_at": "2026-10-05T09:25:04+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/proroklab/hetgppo",
+   "fetched_at": "2026-10-05T09:25:05+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/proroklab/vectorizedmultiagentsimulator",
+   "fetched_at": "2026-10-05T09:25:06+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/raven-july/cfpo",
+   "fetched_at": "2026-10-05T09:25:07+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/roboflow/rf-detr",
+   "fetched_at": "2026-10-05T09:25:08+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/ruc-nlpir/flashrag",
+   "fetched_at": "2026-10-05T09:25:10+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/ruckbreasoning/omnisql",
+   "fetched_at": "2026-10-05T09:25:11+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/run-llama/llama_index",
+   "fetched_at": "2026-10-05T09:25:12+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/sail-sg/attention-sink",
+   "fetched_at": "2026-10-05T09:25:13+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/sec-bench/sec-bench",
+   "fetched_at": "2026-10-05T09:25:14+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/skyworkai/skywork-r1v",
+   "fetched_at": "2026-10-05T09:25:16+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/snowflakedb/arcticinference",
+   "fetched_at": "2026-10-05T09:25:17+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/snowflakedb/arctictraining",
+   "fetched_at": "2026-10-05T09:25:18+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/ssam18/zta-federated-learning",
+   "fetched_at": "2026-10-05T09:25:19+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/tencent/angelslim",
+   "fetched_at": "2026-10-05T09:25:21+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/ucla-mobility/autovla",
+   "fetched_at": "2026-10-05T09:25:22+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/ultralytics/ultralytics",
+   "fetched_at": "2026-10-05T09:25:23+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/vainf/isomorphic-pruning",
+   "fetched_at": "2026-10-05T09:25:24+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/vectrayx/vectrayx-nano-paper",
+   "fetched_at": "2026-10-05T09:25:26+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/visual-agent/deepeyes",
+   "fetched_at": "2026-10-05T09:25:27+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/visual-agent/deepeyesv2",
+   "fetched_at": "2026-10-05T09:25:28+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/weizhepei/instructrag",
+   "fetched_at": "2026-10-05T09:25:29+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/xiao4579/prism",
+   "fetched_at": "2026-10-05T09:25:30+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/xingtulab/binseek",
+   "fetched_at": "2026-10-05T09:25:32+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/xuekai-zhu/flowrl",
+   "fetched_at": "2026-10-05T09:25:33+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/xzxxntxdy/pepo",
+   "fetched_at": "2026-10-05T09:25:34+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/yilinjz/astchunk",
+   "fetched_at": "2026-10-05T09:25:35+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/ykumards/eclip",
+   "fetched_at": "2026-10-05T09:25:36+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/yuanjianhao508/rag-driver",
+   "fetched_at": "2026-10-05T09:25:37+00:00",
+   "status": 200
+  },
+  {
+   "url": "GET /repos/zixuanjiang/pre-rmsnorm-transformer",
+   "fetched_at": "2026-10-05T09:25:38+00:00",
+   "status": 200
+  }
+ ],
+ "pypi_json": [
+  {
+   "url": "https://pypi.org/pypi/angelslim/json",
+   "fetched_at": "2026-10-05T09:25:39+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/arctic-training/json",
+   "fetched_at": "2026-10-05T09:25:40+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/astchunk/json",
+   "fetched_at": "2026-10-05T09:25:41+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/astchunk-extended/json",
+   "fetched_at": "2026-10-05T09:25:42+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/dbgpt/json",
+   "fetched_at": "2026-10-05T09:25:44+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/dbgpt-acc-auto/json",
+   "fetched_at": "2026-10-05T09:25:45+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/dbgpt-app/json",
+   "fetched_at": "2026-10-05T09:25:46+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/dbgpt-client/json",
+   "fetched_at": "2026-10-05T09:25:47+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/dbgpt-ext/json",
+   "fetched_at": "2026-10-05T09:25:47+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/deepspeed/json",
+   "fetched_at": "2026-10-05T09:25:48+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/flashrag/json",
+   "fetched_at": "2026-10-05T09:25:50+00:00",
+   "status": 404
+  },
+  {
+   "url": "https://pypi.org/pypi/flashrag-dev/json",
+   "fetched_at": "2026-10-05T09:25:51+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/graphrag/json",
+   "fetched_at": "2026-10-05T09:25:52+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/graphrag-cache/json",
+   "fetched_at": "2026-10-05T09:25:53+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/graphrag-common/json",
+   "fetched_at": "2026-10-05T09:25:54+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/graphrag-llm/json",
+   "fetched_at": "2026-10-05T09:25:54+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/graphrag-storage/json",
+   "fetched_at": "2026-10-05T09:25:56+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/hipporag/json",
+   "fetched_at": "2026-10-05T09:25:57+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/hipporag-nyabot/json",
+   "fetched_at": "2026-10-05T09:25:58+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/instances/json",
+   "fetched_at": "2026-10-05T09:25:59+00:00",
+   "status": 404
+  },
+  {
+   "url": "https://pypi.org/pypi/llama-index/json",
+   "fetched_at": "2026-10-05T09:26:00+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/llama-index-core/json",
+   "fetched_at": "2026-10-05T09:26:02+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/llama-index-instrumentation/json",
+   "fetched_at": "2026-10-05T09:26:03+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/llama-index-legacy/json",
+   "fetched_at": "2026-10-05T09:26:04+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/llamafactory/json",
+   "fetched_at": "2026-10-05T09:26:04+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/marl-aquarium/json",
+   "fetched_at": "2026-10-05T09:26:05+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/mkdocs-ultralytics-plugin/json",
+   "fetched_at": "2026-10-05T09:26:06+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/model-logger-dp/json",
+   "fetched_at": "2026-10-05T09:26:07+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/muon-optimizer/json",
+   "fetched_at": "2026-10-05T09:26:08+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/nvidia-modelopt/json",
+   "fetched_at": "2026-10-05T09:26:09+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/nvidia-modelopt-core/json",
+   "fetched_at": "2026-10-05T09:26:10+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/rfdetr/json",
+   "fetched_at": "2026-10-05T09:26:11+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/search-as-code/json",
+   "fetched_at": "2026-10-05T09:26:12+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/sgd-sai/json",
+   "fetched_at": "2026-10-05T09:26:13+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/thingstuff/json",
+   "fetched_at": "2026-10-05T09:26:14+00:00",
+   "status": 404
+  },
+  {
+   "url": "https://pypi.org/pypi/timm/json",
+   "fetched_at": "2026-10-05T09:26:15+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/timm-eidl/json",
+   "fetched_at": "2026-10-05T09:26:16+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/transformers/json",
+   "fetched_at": "2026-10-05T09:26:17+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/ultralytics/json",
+   "fetched_at": "2026-10-05T09:26:18+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/ultralytics-opencv-headless/json",
+   "fetched_at": "2026-10-05T09:26:19+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/versatil/json",
+   "fetched_at": "2026-10-05T09:26:20+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/vidore-benchmark/json",
+   "fetched_at": "2026-10-05T09:26:21+00:00",
+   "status": 200
+  },
+  {
+   "url": "https://pypi.org/pypi/vmas/json",
+   "fetched_at": "2026-10-05T09:26:22+00:00",
+   "status": 200
+  }
  ]
 }

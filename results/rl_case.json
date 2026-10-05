@@ -1,0 +1,307 @@
+{
+ "meta": {
+  "step": "rl_case",
+  "created": "2026-10-05",
+  "git_commit": "d6e5c9a2ddc274b970b03078b6a4be963c67766d",
+  "descriptive": true,
+  "note": "Descriptive case analysis (design 8.6); not a pre-registered metric.",
+  "settings": {
+   "term_patterns": [
+    "reinforcement learning",
+    "policy optimization",
+    "actor critic",
+    "actor-critic",
+    "q learning",
+    "q-learning",
+    "deep q",
+    "temporal difference",
+    "markov decision"
+   ],
+   "deep_dive": "all_reps_complete",
+   "scope": "briefing_targets",
+   "tod_dir": "external/tod"
+  },
+  "tod_files_sha256": {
+   "briefs.json": "398de2ceaa7e18a346690eb409c53168ab4d7f8bb904ff53a587172dc4435cf7",
+   "judge_agreement.json": "6882e5778d6594c8e40cc4ce3a5833eaea1fef5e4f41ffc1535d77b7459dafcf",
+   "leakage_compare.json": "94f26ca142b58a6e1a91eb78ad3b9b71781d4da576fd2e398cd428100eef87d2",
+   "three_way.json": "52ba9d1cc056e0a1619563ba53c51cdeb5dd4ff37f8861569ef7e9876bb946e2",
+   "diffusion.json": "659296881658467653545d0e32612ce6302ed179e94c81925783c1dba5d6290c"
+  }
+ },
+ "rl_candidates": [
+  {
+   "rank": 2,
+   "triad": [
+    "M:proximal policy optimization",
+    "T:trajectory planning",
+    "T:vision language action"
+   ],
+   "matched_terms": [
+    "M:proximal policy optimization"
+   ],
+   "frames": [
+    {
+     "rep": 1,
+     "status": "complete",
+     "reason": "none",
+     "valid": true
+    },
+    {
+     "rep": 2,
+     "status": "complete",
+     "reason": "none",
+     "valid": true
+    },
+    {
+     "rep": 3,
+     "status": "complete",
+     "reason": "none",
+     "valid": true
+    },
+    {
+     "rep": 4,
+     "status": "complete",
+     "reason": "none",
+     "valid": true
+    },
+    {
+     "rep": 5,
+     "status": "complete",
+     "reason": "none",
+     "valid": true
+    }
+   ],
+   "complete_reps": 5,
+   "deep_dive": true,
+   "q2": {
+    "mode": "complete|none",
+    "agreeing": 5,
+    "reps": 5
+   },
+   "dvf": {
+    "axes": {
+     "D": {
+      "score": 4.0,
+      "missing": false
+     },
+     "F": {
+      "score": 3.0,
+      "missing": false
+     },
+     "V": {
+      "score": null,
+      "missing": true
+     }
+    },
+    "riskiest_axis": "V",
+    "riskiest_reason": "missing",
+    "riskiest_bootstrap_share": {
+     "F": 0.0,
+     "V": 1.0,
+     "D": 0.0
+    }
+   },
+   "evidence": {
+    "papers": 15,
+    "repositories": 5,
+    "packages": 0,
+    "patents": 0
+   },
+   "q1_sample": {
+    "sentences": 12,
+    "supported": 5
+   },
+   "briefing_files": [
+    "briefings/rank_02/rep_1.json",
+    "briefings/rank_02/rep_2.json",
+    "briefings/rank_02/rep_3.json",
+    "briefings/rank_02/rep_4.json",
+    "briefings/rank_02/rep_5.json"
+   ]
+  },
+  {
+   "rank": 19,
+   "triad": [
+    "M:proximal policy optimization",
+    "T:efficient exploration",
+    "T:multi agent reinforcement learning"
+   ],
+   "matched_terms": [
+    "M:proximal policy optimization",
+    "T:multi agent reinforcement learning"
+   ],
+   "frames": [
+    {
+     "rep": 1,
+     "status": "insufficient_concept",
+     "reason": "no_combination_evidence",
+     "valid": true
+    },
+    {
+     "rep": 2,
+     "status": "insufficient_concept",
+     "reason": "no_combination_evidence",
+     "valid": true
+    },
+    {
+     "rep": 3,
+     "status": "insufficient_concept",
+     "reason": "no_combination_evidence",
+     "valid": true
+    },
+    {
+     "rep": 4,
+     "status": "complete",
+     "reason": "none",
+     "valid": true
+    },
+    {
+     "rep": 5,
+     "status": "complete",
+     "reason": "none",
+     "valid": true
+    }
+   ],
+   "complete_reps": 2,
+   "deep_dive": false,
+   "q2": {
+    "mode": "insufficient_concept|no_combination_evidence",
+    "agreeing": 3,
+    "reps": 5
+   },
+   "dvf": {
+    "axes": {
+     "D": {
+      "score": 4.0,
+      "missing": false
+     },
+     "F": {
+      "score": 3.0,
+      "missing": false
+     },
+     "V": {
+      "score": null,
+      "missing": true
+     }
+    },
+    "riskiest_axis": "V",
+    "riskiest_reason": "missing",
+    "riskiest_bootstrap_share": {
+     "F": 0.0,
+     "V": 1.0,
+     "D": 0.0
+    }
+   },
+   "evidence": {
+    "papers": 15,
+    "repositories": 5,
+    "packages": 2,
+    "patents": 0
+   },
+   "q1_sample": {
+    "sentences": 4,
+    "supported": 3
+   },
+   "briefing_files": [
+    "briefings/rank_19/rep_1.json",
+    "briefings/rank_19/rep_2.json",
+    "briefings/rank_19/rep_3.json",
+    "briefings/rank_19/rep_4.json",
+    "briefings/rank_19/rep_5.json"
+   ]
+  }
+ ],
+ "comparison": {
+  "dvf": {
+   "tod_llm_scored": {
+    "concepts": [
+     {
+      "concept_id": "C05",
+      "rel_growth": 3.259,
+      "total_median": 9,
+      "total_std": 0.71,
+      "F_median": 2
+     },
+     {
+      "concept_id": "C06",
+      "rel_growth": 2.236,
+      "total_median": 9,
+      "total_std": 0.0,
+      "F_median": 2
+     },
+     {
+      "concept_id": "C00",
+      "rel_growth": 2.098,
+      "total_median": 9,
+      "total_std": 1.14,
+      "F_median": 2
+     },
+     {
+      "concept_id": "C02",
+      "rel_growth": 1.977,
+      "total_median": 9,
+      "total_std": 0.0,
+      "F_median": 2
+     }
+    ],
+    "distinct_total_medians": 1,
+    "distinct_F_medians": 1
+   },
+   "triadrx_indicator_based": {
+    "candidates": 100,
+    "distinct_axis_profiles": 25,
+    "axis_score_counts": {
+     "D": {
+      "4.0": 26,
+      "3.0": 20,
+      "2.0": 22,
+      "1.0": 21,
+      "5.0": 11
+     },
+     "F": {
+      "3.0": 55,
+      "4.0": 21,
+      "2.0": 21,
+      "1.0": 3
+     },
+     "V": {
+      "None": 90,
+      "3.0": 8,
+      "1.0": 1,
+      "4.0": 1
+     }
+    }
+   }
+  },
+  "judges": {
+   "tod_promise_scores_qwen_vs_gemini": {
+    "spearman": 0.9074852129730302,
+    "exact_match": 0.7142857142857143
+   },
+   "triadrx_sentence_faithfulness_human_vs_qwen": {
+    "agreement": 0.58,
+    "cohen_kappa": 0.15628766572920846
+   }
+  },
+  "tod_leakage_spearman_reliable_concepts": {
+   "concepts": [
+    "C05",
+    "C06",
+    "C00",
+    "C02"
+   ],
+   "g_orig": -0.9486832980505139,
+   "g_blind": 0.632455532033676,
+   "q_orig": -0.7745966692414834,
+   "q_blind": -0.7745966692414834
+  },
+  "triadrx_q1": {
+   "rate": 0.61,
+   "wilson_95": [
+    0.5120301704584073,
+    0.6998312599360558
+   ]
+  }
+ }
+}

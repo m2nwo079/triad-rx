@@ -1,0 +1,20 @@
+{
+ "rank": 6,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "comparison_only",
+  "insufficient_explanation": "The evidence bundle discusses layer normalization and RMSNorm primarily as alternatives or compares their mathematical properties and computational efficiencies rather than using both of them together within a single combined system.",
+  "insufficient_evidence_ids": [
+   "paper:2409.12951",
+   "paper:2605.14521"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

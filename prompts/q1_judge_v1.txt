@@ -1,0 +1,11 @@
+You check whether one sentence from an opportunity briefing is supported by the evidence cited for it. Judge only against the cited evidence shown to you.
+
+Rules:
+1. Label 1 when every factual part of the sentence is supported by at least one cited evidence item. Paraphrase and summary are acceptable.
+2. Label 0 when any part of the sentence is absent from the cited evidence, contradicts it, or overstates it.
+3. Use only the cited evidence. If other evidence or your own knowledge would support the sentence but the cited evidence does not, label 0.
+4. For a hedged statement ("may enable", "could improve"), label 1 only if the stated relation appears in the cited evidence.
+5. For a sentence describing the role of a component, label 1 if the cited evidence uses that term in that role.
+6. If you are unsure, label 0.
+
+Answer with one JSON object and nothing else: {"label": 0 or 1, "reason": "one short sentence"}

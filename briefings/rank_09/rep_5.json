@@ -1,0 +1,203 @@
+{
+ "rank": 9,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:class activation map",
+    "role": "Provides visual explanations and localized attribution maps (such as Grad-CAM) to highlight regions influencing the model's decisions.",
+    "evidence_ids": [
+     "paper:2608.11280"
+    ]
+   },
+   {
+    "term_id": "M:convnext",
+    "role": "Serves as a robust convolutional backbone within an ensemble framework to capture local image features.",
+    "evidence_ids": [
+     "paper:2608.11280"
+    ]
+   },
+   {
+    "term_id": "M:deit",
+    "role": "Acts as a vision transformer backbone or model variant evaluated alongside or combined with other architectures for visual recognition and explainability.",
+    "evidence_ids": [
+     "paper:2603.01605"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Multi-class medical image classification and visual explainability.",
+   "evidence_ids": [
+    "paper:2608.11280"
+   ]
+  },
+  "limitation": {
+   "text": "Deep learning models often suffer from limited interpretability, making it challenging to understand the basis of their decisions in critical diagnostic tasks.",
+   "evidence_ids": [
+    "paper:2608.11280"
+   ]
+  },
+  "combination": {
+   "text": "Combining convolutional backbones like ConvNeXt and vision transformer architectures allows class activation mapping techniques to generate visual explanations that highlight the specific regions influencing classification decisions.",
+   "evidence_ids": [
+    "paper:2608.11280"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:class activation map",
+     "role": "Provides visual explanations and localized attribution maps (such as Grad-CAM) to highlight regions influencing the model's decisions.",
+     "evidence_ids": [
+      "paper:2608.11280"
+     ]
+    },
+    {
+     "term_id": "M:convnext",
+     "role": "Serves as a robust convolutional backbone within an ensemble framework to capture local image features.",
+     "evidence_ids": [
+      "paper:2608.11280"
+     ]
+    },
+    {
+     "term_id": "M:deit",
+     "role": "Acts as a vision transformer backbone or model variant evaluated alongside or combined with other architectures for visual recognition and explainability.",
+     "evidence_ids": [
+      "paper:2603.01605"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Multi-class medical image classification and visual explainability.",
+    "evidence_ids": [
+     "paper:2608.11280"
+    ]
+   },
+   "limitation": {
+    "text": "Deep learning models often suffer from limited interpretability, making it challenging to understand the basis of their decisions in critical diagnostic tasks.",
+    "evidence_ids": [
+     "paper:2608.11280"
+    ]
+   },
+   "combination": {
+    "text": "Combining convolutional backbones like ConvNeXt and vision transformer architectures allows class activation mapping techniques to generate visual explanations that highlight the specific regions influencing classification decisions.",
+    "evidence_ids": [
+     "paper:2608.11280"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing evaluates the combination of class activation mapping, ConvNeXt, and DeiT for multi-class medical image classification and visual explainability. The integration addresses limited model interpretability in critical diagnostic tasks by combining convolutional backbones and vision transformers with localized attribution maps. Evidence from the bundle indicates strong performance and explainability in domains such as skin lesion and chest disease classification.",
+   "evidence_ids": [
+    "paper:2608.11280",
+    "paper:2603.01605",
+    "paper:2603.13392"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as the bundle provides no direct patent assignee categories, but repositories and packages like PyTorch image models and explainability toolkits indicate usage by computer vision researchers and clinical AI developers.",
+   "evidence_ids": [
+    "repo:huggingface/pytorch-image-models",
+    "repo:leilibrk/explainability-of-vits",
+    "pkg:timm"
+   ]
+  },
+  "jtbd": {
+   "text": "When deploying deep learning models for medical image classification, users need to generate reliable diagnostic classifications while simultaneously obtaining interpretable visual explanations of the underlying decision regions.",
+   "evidence_ids": [
+    "paper:2608.11280",
+    "paper:2603.13392"
+   ]
+  },
+  "value_prop": {
+   "text": "Combining ConvNeXt and transformer architectures with class activation mapping delivers high classification accuracy alongside transparent visual explanations, helping clinicians verify model focus areas and supporting trustworthy computer-aided diagnosis.",
+   "evidence_ids": [
+    "paper:2608.11280",
+    "paper:2603.01605",
+    "paper:2603.13392"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence in the bundle. We assume that clinical diagnostic facilities are willing to pay for an explainable multi-model imaging pipeline.",
+   "evidence_ids": [
+    "dvf:9"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews with clinical department heads paired with a price acceptance test to evaluate willingness to pay for explainable multi-class imaging diagnostics.",
+   "evidence_ids": [
+    "dvf:9"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 70 percent positive willingness-to-pay responses during customer interviews and a proposed threshold validation of software budget allocation.",
+   "evidence_ids": [
+    "dvf:9"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Kill the project if fewer than 20 percent of interviewed clinical stakeholders confirm a budget for diagnostic explainability tools, or if willingness-to-pay falls below a proposed threshold of 500 dollars per month.",
+    "evidence_ids": [
+     "dvf:9"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:huggingface/pytorch-image-models",
+     "use": "Provides pretrained PyTorch image encoders and backbones such as ConvNeXt and transformer variants for feature extraction.",
+     "evidence_ids": [
+      "repo:huggingface/pytorch-image-models"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:timm",
+     "use": "Supplies standardized computer vision architectures and model weights to support multi-model classification ensembles.",
+     "evidence_ids": [
+      "pkg:timm"
+     ],
+     "version": "1.0.30"
+    },
+    {
+     "id": "repo:leilibrk/explainability-of-vits",
+     "use": "Evaluates explainability methods and attribution metrics for vision transformers and convolutional backbones.",
+     "evidence_ids": [
+      "repo:leilibrk/explainability-of-vits"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A clinical workflow integration wrapper that unifies ensemble predictions from ConvNeXt and DeiT with real-time class activation mapping visual explanations.",
+     "evidence_ids": [
+      "paper:2608.11280",
+      "paper:2603.01605"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

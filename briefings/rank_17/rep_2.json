@@ -1,0 +1,19 @@
+{
+ "rank": 17,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "term_mismatch",
+  "insufficient_explanation": "The term 'mixing adam and sgd' appears as a candidate concept in the triad, but none of the provided papers or repositories discuss optimizer mixing strategies such as mixing Adam and SGD in the context of retrieval-augmented generation or question answering.",
+  "insufficient_evidence_ids": [
+   "paper:2609.30009"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

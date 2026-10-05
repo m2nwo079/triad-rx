@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "step": "q1_sample",
+    "created": "2026-10-05",
+    "git_commit": "c74728fe3a6b56d4059711db8a9dc14dc24739e7",
+    "settings": {
+      "seed": 20261005,
+      "n_sentences": 100,
+      "population": "evidential_fields",
+      "judging": "cited_evidence_only"
+    },
+    "population_order": "rank, repetition, field order, sentence order",
+    "sampling": "numpy default_rng(seed).choice without replacement",
+    "review_original_sha256": "90213d8233cfb742cbf9754db32c0984ae328a5fe973f61ae1cfdea5f45a63ea"
+  },
+  "stats": {
+    "population_sentences": 926,
+    "sample": 100,
+    "sample_by_field": {
+      "concept_frame": 43,
+      "target_user": 7,
+      "value_prop": 5,
+      "building_blocks": 16,
+      "jtbd": 8,
+      "summary": 21
+    }
+  }
+}

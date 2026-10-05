@@ -1,0 +1,19 @@
+{
+ "rank": 20,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "term_mismatch",
+  "insufficient_explanation": "The term dialogue adaptive pre training objective does not appear in any of the provided papers or repositories, preventing any valid evidence-backed combination.",
+  "insufficient_evidence_ids": [
+   "paper:2607.26094"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

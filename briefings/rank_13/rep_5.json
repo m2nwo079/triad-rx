@@ -1,0 +1,21 @@
+{
+ "rank": 13,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "Although individual papers discuss retrieval-augmented generation (rag) in the context of either code generation or multi-hop question answering, the evidence bundle lacks papers demonstrating the direct combination or joint integration of all three components (rag, code generation, and multi-hop question answering) into a unified system.",
+  "insufficient_evidence_ids": [
+   "paper:2609.01601",
+   "paper:2608.21417",
+   "paper:2609.27225"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

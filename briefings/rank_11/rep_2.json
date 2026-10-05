@@ -1,0 +1,33 @@
+{
+ "rank": 11,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "The evidence bundle discusses studies that reference subsets of these components or compare them individually, but does not provide a scenario where AdamW, GPT-2, and Mixture of Experts are combined together as an integrated method or model configuration.",
+  "insufficient_evidence_ids": [
+   "paper:2609.12123",
+   "paper:2609.01244",
+   "paper:2608.28442",
+   "paper:2608.06283",
+   "paper:2608.05088",
+   "paper:2608.04407",
+   "paper:2608.01284",
+   "paper:2609.16179",
+   "paper:2607.27940",
+   "paper:2607.20652",
+   "paper:2607.19058",
+   "paper:2607.17146",
+   "paper:2607.22577",
+   "paper:2606.00371",
+   "paper:2602.22988"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

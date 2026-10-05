@@ -1,0 +1,203 @@
+{
+ "rank": 4,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:attention sinks",
+    "role": "Serves to protect high-importance initial tokens and key context elements from aggressive elimination during long-context processing.",
+    "evidence_ids": [
+     "paper:2609.20888",
+     "paper:2606.08635"
+    ]
+   },
+   {
+    "term_id": "M:pruning",
+    "role": "Selectively discards uninformative or redundant tokens and KV blocks to reduce memory-bandwidth and computation overhead.",
+    "evidence_ids": [
+     "paper:2609.20888",
+     "paper:2606.08635"
+    ]
+   },
+   {
+    "term_id": "M:softmax",
+    "role": "Computes normalized attention probabilities over tokens, which can cause attention sinks and concentration behaviors when combined with routing.",
+    "evidence_ids": [
+     "paper:2606.22325",
+     "paper:2606.06160"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Long-context decoding and efficient key-value cache transfer in transformer models.",
+   "evidence_ids": [
+    "paper:2609.20888",
+    "paper:2606.08635"
+   ]
+  },
+  "limitation": {
+   "text": "Massive KV caches create severe memory-bandwidth bottlenecks during long-context decoding, and rigid token pruning heuristics drop necessary context, leading to quality degradation.",
+   "evidence_ids": [
+    "paper:2609.20888"
+   ]
+  },
+  "combination": {
+   "text": "By incorporating attention sink preservation into token pruning strategies, models can prune routine tokens and uninformative KV blocks while retaining critical initial tokens induced by softmax attention. This prevents quality degradation during long-context generation and optimizes memory transfer.",
+   "evidence_ids": [
+    "paper:2609.20888",
+    "paper:2606.08635"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:attention sinks",
+     "role": "Serves to protect high-importance initial tokens and key context elements from aggressive elimination during long-context processing.",
+     "evidence_ids": [
+      "paper:2609.20888",
+      "paper:2606.08635"
+     ]
+    },
+    {
+     "term_id": "M:pruning",
+     "role": "Selectively discards uninformative or redundant tokens and KV blocks to reduce memory-bandwidth and computation overhead.",
+     "evidence_ids": [
+      "paper:2609.20888",
+      "paper:2606.08635"
+     ]
+    },
+    {
+     "term_id": "M:softmax",
+     "role": "Computes normalized attention probabilities over tokens, which can cause attention sinks and concentration behaviors when combined with routing.",
+     "evidence_ids": [
+      "paper:2606.22325",
+      "paper:2606.06160"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Long-context decoding and efficient key-value cache transfer in transformer models.",
+    "evidence_ids": [
+     "paper:2609.20888",
+     "paper:2606.08635"
+    ]
+   },
+   "limitation": {
+    "text": "Massive KV caches create severe memory-bandwidth bottlenecks during long-context decoding, and rigid token pruning heuristics drop necessary context, leading to quality degradation.",
+    "evidence_ids": [
+     "paper:2609.20888"
+    ]
+   },
+   "combination": {
+    "text": "By incorporating attention sink preservation into token pruning strategies, models can prune routine tokens and uninformative KV blocks while retaining critical initial tokens induced by softmax attention. This prevents quality degradation during long-context generation and optimizes memory transfer.",
+    "evidence_ids": [
+     "paper:2609.20888",
+     "paper:2606.08635"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination addresses long-context decoding bottlenecks by coupling pruning techniques with attention sink preservation and softmax routing. According to dvf:4, the feasibility score is 4.0 and the desirability score is 3.0. Papers such as paper:2609.20888 and paper:2606.08635 show that preserving attention sinks while pruning uninformative KV blocks maintains model quality during long-context generation.",
+   "evidence_ids": [
+    "dvf:4",
+    "paper:2606.08635",
+    "paper:2609.20888"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as the bundle provides no patent assignee categories or package registries, but it is aimed at developers and organizations deploying long-context transformer models.",
+   "evidence_ids": [
+    "paper:2609.20888",
+    "repo:mit-han-lab/duo-attention"
+   ]
+  },
+  "jtbd": {
+   "text": "When executing long-context decoding or disaggregated server transfers, developers want to prune redundant key-value tokens without sacrificing crucial information, so that memory-bandwidth bottlenecks and compute overhead are reduced.",
+   "evidence_ids": [
+    "paper:2606.08635",
+    "paper:2609.20888"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrating attention sink protection into token pruning reduces KV-cache memory footprints and accelerates inference speed while preserving the retrieval quality of long-context models.",
+   "evidence_ids": [
+    "paper:2606.08635",
+    "paper:2609.20888"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence in the bundle as stated by dvf:4. We assume that enterprise customers will pay a premium for inference acceleration software that combines attention sink protection and pruning.",
+   "evidence_ids": [
+    "dvf:4"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with ML engineering leads to validate willingness to pay for accelerated long-context inference tools, directly testing axis V viability as designated by dvf:4.",
+   "evidence_ids": [
+    "dvf:4"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness-to-pay responses among interviewed ML engineering leads during the price acceptance test.",
+   "evidence_ids": [
+    "dvf:4"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed enterprise prospects express a willingness to pay for the combined optimization approach.",
+    "evidence_ids": [
+     "dvf:4"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:mit-han-lab/duo-attention",
+     "use": "Used to implement efficient long-context LLM inference with retrieval and streaming heads.",
+     "evidence_ids": [
+      "repo:mit-han-lab/duo-attention"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:sail-sg/attention-sink",
+     "use": "Used to study and manage attention sink emergence in language models.",
+     "evidence_ids": [
+      "repo:sail-sg/attention-sink"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified deployment wrapper combining attention-sink protection and dynamic threshold pruning for production inference engines, addressing the viability gap noted in dvf:4.",
+     "evidence_ids": [
+      "dvf:4",
+      "paper:2609.20888"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

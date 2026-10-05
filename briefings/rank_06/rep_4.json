@@ -1,0 +1,23 @@
+{
+ "rank": 6,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "comparison_only",
+  "insufficient_explanation": "The evidence bundle discusses layer normalization and RMSNorm primarily as comparative alternatives or theoretical equivalents rather than showing how all three components (layer normalization, RMSNorm, and decoder) are used together in a single integrated method.",
+  "insufficient_evidence_ids": [
+   "paper:2409.12951",
+   "paper:2503.21708",
+   "paper:2505.13142",
+   "paper:2601.09719",
+   "paper:2605.14521"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

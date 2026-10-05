@@ -1,0 +1,230 @@
+{
+ "rank": 10,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:pruning",
+    "role": "Performs adaptive MLP pruning ratios or token/layer compression based on flow-matching trajectory importance scores.",
+    "evidence_ids": [
+     "paper:2608.29208"
+    ]
+   },
+   {
+    "term_id": "T:chunking",
+    "role": "Generates action chunks or adjusts action horizons adaptively to manage action continuity and closed-loop control.",
+    "evidence_ids": [
+     "paper:2609.20776"
+    ]
+   },
+   {
+    "term_id": "T:vision language action",
+    "role": "Serves as the foundational policy framework that processes multimodal inputs for robotic manipulation and control.",
+    "evidence_ids": [
+     "paper:2608.29208",
+     "paper:2609.20776"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Efficient and adaptive robot control using flow-based vision-language-action policies.",
+   "evidence_ids": [
+    "paper:2608.29208",
+    "paper:2609.20776"
+   ]
+  },
+  "limitation": {
+   "text": "Vision-language-action models suffer from intensive computational overhead hindering real-time on-device responses, while existing action chunking approaches often rely on fixed action horizons that cannot accommodate changing control requirements during execution.",
+   "evidence_ids": [
+    "paper:2608.29208",
+    "paper:2609.20776"
+   ]
+  },
+  "combination": {
+   "text": "The combination integrates pruning techniques to accelerate flow-matching vision-language-action inference with adaptive action chunking methods that dynamically adjust the action horizon from trajectory geometry. Together, they address both computational overhead and varying control continuity requirements without requiring additional training.",
+   "evidence_ids": [
+    "paper:2608.29208",
+    "paper:2609.20776"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:pruning",
+     "role": "Performs adaptive MLP pruning ratios or token/layer compression based on flow-matching trajectory importance scores.",
+     "evidence_ids": [
+      "paper:2608.29208"
+     ]
+    },
+    {
+     "term_id": "T:chunking",
+     "role": "Generates action chunks or adjusts action horizons adaptively to manage action continuity and closed-loop control.",
+     "evidence_ids": [
+      "paper:2609.20776"
+     ]
+    },
+    {
+     "term_id": "T:vision language action",
+     "role": "Serves as the foundational policy framework that processes multimodal inputs for robotic manipulation and control.",
+     "evidence_ids": [
+      "paper:2608.29208",
+      "paper:2609.20776"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Efficient and adaptive robot control using flow-based vision-language-action policies.",
+    "evidence_ids": [
+     "paper:2608.29208",
+     "paper:2609.20776"
+    ]
+   },
+   "limitation": {
+    "text": "Vision-language-action models suffer from intensive computational overhead hindering real-time on-device responses, while existing action chunking approaches often rely on fixed action horizons that cannot accommodate changing control requirements during execution.",
+    "evidence_ids": [
+     "paper:2608.29208",
+     "paper:2609.20776"
+    ]
+   },
+   "combination": {
+    "text": "The combination integrates pruning techniques to accelerate flow-matching vision-language-action inference with adaptive action chunking methods that dynamically adjust the action horizon from trajectory geometry. Together, they address both computational overhead and varying control continuity requirements without requiring additional training.",
+    "evidence_ids": [
+     "paper:2608.29208",
+     "paper:2609.20776"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates pruning techniques to accelerate flow-matching vision-language-action inference with adaptive action chunking methods that dynamically adjust the action horizon from trajectory geometry. Together, they address both computational overhead and varying control continuity requirements without requiring additional training.",
+   "evidence_ids": [
+    "paper:2608.29208",
+    "paper:2609.20776"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified.",
+   "evidence_ids": [
+    "dvf:10"
+   ]
+  },
+  "jtbd": {
+   "text": "Enable efficient and adaptive robot control using flow-based vision-language-action policies by reducing intensive computational overhead and accommodating changing control requirements during execution.",
+   "evidence_ids": [
+    "paper:2608.29208",
+    "paper:2609.20776"
+   ]
+  },
+  "value_prop": {
+   "text": "By combining adaptive MLP pruning ratios with geometry-based adaptive action chunking, the system achieves dynamic reduction of inference steps and adjusts action horizons from a single generation without additional training.",
+   "evidence_ids": [
+    "paper:2608.29208",
+    "paper:2609.20776"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence. We assume that enterprise robotics users are willing to pay for an integrated pruning and adaptive chunking platform for vision-language-action models.",
+   "evidence_ids": [
+    "dvf:10"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and price acceptance tests with robotics engineering teams to validate commercial viability and willingness to pay for the combined optimization framework, adhering to the mandated MVP type for axis V.",
+   "evidence_ids": [
+    "dvf:10"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: at least 40 percent of interviewed robotics teams express willingness to adopt and pay for the integrated framework at a proposed threshold price of $500 per robot license per month.",
+   "evidence_ids": [
+    "dvf:10"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: fewer than 15 percent of interviewed robotics teams confirm a willingness to pay for the combined framework during the price acceptance test.",
+    "evidence_ids": [
+     "dvf:10"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:fluxvla/fluxvla",
+     "use": "Used as an all-in-one VLA engineering platform for embodied AI from data to real-robot deployment.",
+     "evidence_ids": [
+      "paper:2609.17210"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:moojink/openvla-oft",
+     "use": "Used for fine-tuning vision-language-action models to optimize speed and success.",
+     "evidence_ids": [
+      "paper:2608.18410"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:physical-intelligence/real-time-chunking-kinetix",
+     "use": "Used for simulated experiments involving real-time execution of action chunking flow policies.",
+     "evidence_ids": [
+      "paper:2609.20776"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:innovator-zero/faster",
+     "use": "Used for rethinking real-time flow VLAs and accelerating inference.",
+     "evidence_ids": [
+      "paper:2608.29208"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:pd-perry/expo-ft",
+     "use": "Used as an additional open-source repository component in the embodied intelligence stack.",
+     "evidence_ids": [
+      "paper:2609.17210"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:versatil",
+     "use": "Used as a supporting software package within the deployment environment.",
+     "evidence_ids": [
+      "pkg:versatil"
+     ],
+     "version": "0.4.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Develop a commercial pricing wrapper and a dedicated customer interview feedback ingestion pipeline to evaluate market viability and price acceptance.",
+     "evidence_ids": [
+      "dvf:10"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

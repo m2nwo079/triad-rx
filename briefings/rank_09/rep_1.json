@@ -1,0 +1,213 @@
+{
+ "rank": 9,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:class activation map",
+    "role": "Serves as an explainability and visual attribution tool to generate heatmaps and highlight model focus regions for predictions.",
+    "evidence_ids": [
+     "paper:2603.01605",
+     "paper:2504.04549"
+    ]
+   },
+   {
+    "term_id": "M:convnext",
+    "role": "Acts as a convolutional neural network backbone used for feature extraction and image classification tasks.",
+    "evidence_ids": [
+     "paper:2608.11280",
+     "paper:2603.13392"
+    ]
+   },
+   {
+    "term_id": "M:deit",
+    "role": "Acts as a vision transformer backbone that captures global context and visual representations for recognition and classification.",
+    "evidence_ids": [
+     "paper:2603.01605",
+     "paper:2504.04549"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Image-based medical and visual classification tasks requiring model interpretability and decision explanation.",
+   "evidence_ids": [
+    "paper:2608.11280",
+    "paper:2504.04549"
+   ]
+  },
+  "limitation": {
+   "text": "Deep learning models often act as black boxes with complex internal mechanisms, making their decision-making difficult to interpret and hindering trust in critical domains.",
+   "evidence_ids": [
+    "paper:2603.01605",
+    "paper:2504.04549"
+   ]
+  },
+  "combination": {
+   "text": "Class activation mapping methods are applied to both ConvNeXt and DeiT architectures to generate visual explanations and uncover decision logic. This combination allows researchers to evaluate and validate the statistical association between model focus areas and domain-specific anatomical structures across diverse backbone types.",
+   "evidence_ids": [
+    "paper:2603.01605",
+    "paper:2504.04549"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:class activation map",
+     "role": "Serves as an explainability and visual attribution tool to generate heatmaps and highlight model focus regions for predictions.",
+     "evidence_ids": [
+      "paper:2603.01605",
+      "paper:2504.04549"
+     ]
+    },
+    {
+     "term_id": "M:convnext",
+     "role": "Acts as a convolutional neural network backbone used for feature extraction and image classification tasks.",
+     "evidence_ids": [
+      "paper:2608.11280",
+      "paper:2603.13392"
+     ]
+    },
+    {
+     "term_id": "M:deit",
+     "role": "Acts as a vision transformer backbone that captures global context and visual representations for recognition and classification.",
+     "evidence_ids": [
+      "paper:2603.01605",
+      "paper:2504.04549"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Image-based medical and visual classification tasks requiring model interpretability and decision explanation.",
+    "evidence_ids": [
+     "paper:2608.11280",
+     "paper:2504.04549"
+    ]
+   },
+   "limitation": {
+    "text": "Deep learning models often act as black boxes with complex internal mechanisms, making their decision-making difficult to interpret and hindering trust in critical domains.",
+    "evidence_ids": [
+     "paper:2603.01605",
+     "paper:2504.04549"
+    ]
+   },
+   "combination": {
+    "text": "Class activation mapping methods are applied to both ConvNeXt and DeiT architectures to generate visual explanations and uncover decision logic. This combination allows researchers to evaluate and validate the statistical association between model focus areas and domain-specific anatomical structures across diverse backbone types.",
+    "evidence_ids": [
+     "paper:2603.01605",
+     "paper:2504.04549"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining class activation mapping with ConvNeXt and DeiT architectures for image-based classification tasks requiring model interpretability. By applying attribution methods to these distinct backbones, researchers can generate visual explanations and uncover decision logic. Evidence shows this approach provides reliable classification and interpretable heatmaps across multiple medical and visual domains.",
+   "evidence_ids": [
+    "paper:2603.01605",
+    "paper:2504.04549",
+    "paper:2608.11280"
+   ]
+  },
+  "target_user": {
+   "text": "The target user includes machine learning practitioners and researchers utilizing repositories and packages such as pytorch-image-models and timm for image classification tasks.",
+   "evidence_ids": [
+    "repo:huggingface/pytorch-image-models",
+    "pkg:timm"
+   ]
+  },
+  "jtbd": {
+   "text": "When building image classification models using ConvNeXt and DeiT, users want to generate faithful visual explanations using class activation mapping so that they can validate decision logic and establish clinical trust.",
+   "evidence_ids": [
+    "paper:2603.01605",
+    "paper:2504.04549"
+   ]
+  },
+  "value_prop": {
+   "text": "Combining class activation mapping with ConvNeXt and DeiT architectures enables developers to produce interpretable visual heatmaps from complex models without sacrificing classification performance.",
+   "evidence_ids": [
+    "paper:2603.01605",
+    "paper:2504.04549"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence in the bundle. We assume that enterprise customers are willing to pay for an interpretable ConvNeXt and DeiT classification pipeline.",
+   "evidence_ids": [
+    "dvf:9"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and price acceptance tests with a proposed threshold of 10 target users to evaluate commercial viability and willingness to pay for the interpretable classification pipeline.",
+   "evidence_ids": [
+    "dvf:9"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 70 percent positive willingness-to-pay responses during customer interviews and price acceptance testing.",
+   "evidence_ids": [
+    "dvf:9"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 20 percent of interviewed users express a willingness to pay for the proposed solution.",
+    "evidence_ids": [
+     "dvf:9"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:huggingface/pytorch-image-models",
+     "use": "Provides pretrained ConvNeXt and DeiT backbones and image encoders.",
+     "evidence_ids": [
+      "repo:huggingface/pytorch-image-models"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:timm",
+     "use": "Supplies PyTorch image models and pretrained weights for feature extraction.",
+     "evidence_ids": [
+      "pkg:timm"
+     ],
+     "version": "1.0.30"
+    },
+    {
+     "id": "repo:leilibrk/explainability-of-vits",
+     "use": "Provides evaluation routines for Vision Transformer explainability using Grad-CAM and attention rollout.",
+     "evidence_ids": [
+      "repo:leilibrk/explainability-of-vits"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified class activation mapping pipeline that integrates seamlessly with both ConvNeXt and DeiT architectures to generate standardized attribution heatmaps.",
+     "evidence_ids": [
+      "paper:2603.01605",
+      "paper:2504.04549"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

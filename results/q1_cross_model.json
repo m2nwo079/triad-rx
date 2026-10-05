@@ -1,0 +1,368 @@
+{
+ "meta": {
+  "step": "q1_cross_model",
+  "created": "2026-10-05",
+  "git_commit": "b0c0c665571adb6ef2f3ef80e95242a9c8d28227",
+  "judge": {
+   "model_id": "Qwen/Qwen3.5-9B",
+   "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+   "primary_model": "Qwen/Qwen3.5-9B",
+   "primary_load_error": null,
+   "quantization": "bitsandbytes 4-bit nf4, compute float16",
+   "decoding": "greedy, max_new_tokens 256, thinking disabled",
+   "input_sha256": "2cf48be5d3ed0825184cbac0945fe6b0973ccc9238ded8f763bf284e26f5e665",
+   "prompt_sha256": "b0627d2bc4dc359b7e7c7117b32b8fdf4a7fb46a9fed1657db34a778538b2775",
+   "started": "2026-10-05T12:59:57+00:00",
+   "finished": "2026-10-05T13:13:05+00:00",
+   "transformers": "5.18.0",
+   "torch": "2.11.0+cu130",
+   "gpu": "Tesla T4",
+   "python": "3.13.15"
+  },
+  "review_sha256": "226bf823d5540f8ce19d11be5153bb5eed6d6a24a5b32606b23db8893b129df8",
+  "output_sha256": "de62c023c7587c788793dd7306618a015a8dfb6f47eb4f3d2bbdf3e3ff4ee493",
+  "invalid_rule": "outputs without a valid label count as label 0"
+ },
+ "n": 100,
+ "invalid_outputs": 1,
+ "agreement": 0.58,
+ "agreement_wilson_95": [
+  0.4820648670304296,
+  0.6720161732564526
+ ],
+ "cohen_kappa": 0.15628766572920846,
+ "table": {
+  "human_0_model_0": 23,
+  "human_0_model_1": 16,
+  "human_1_model_0": 26,
+  "human_1_model_1": 35
+ },
+ "human_supported_rate": 0.61,
+ "model_supported_rate": 0.51,
+ "model_supported_wilson_95": [
+  0.4134801193402717,
+  0.6057800106955886
+ ],
+ "by_field": {
+  "concept_frame": {
+   "n": 43,
+   "agree": 21
+  },
+  "target_user": {
+   "n": 7,
+   "agree": 4
+  },
+  "value_prop": {
+   "n": 5,
+   "agree": 3
+  },
+  "building_blocks": {
+   "n": 16,
+   "agree": 11
+  },
+  "jtbd": {
+   "n": 8,
+   "agree": 7
+  },
+  "summary": {
+   "n": 21,
+   "agree": 12
+  }
+ },
+ "disagreements": [
+  {
+   "review_id": "q1-001",
+   "field": "concept_frame.components[M:proximal policy optimization].role",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The sentence is supported by the first cited evidence, which describes fine-tuning the policy with Proximal Policy Optimization (PPO) and using a hybrid reward combining environmental feedback and IRL rewards to align with expert goals."
+  },
+  {
+   "review_id": "q1-002",
+   "field": "target_user",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The cited evidence confirms that the listed repositories (nvlabs/alpamayo, ucla-mobility/autovla, drivevla/opendrivevla) are VLA models for autonomous vehicles, which supports the sentence's identification of the target users and specific repositories."
+  },
+  {
+   "review_id": "q1-003",
+   "field": "concept_frame.components[M:proximal policy optimization].role",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The sentence claims the system uses 'task-success rewards or hybrid environmental feedback' for fine-tuning, but the cited evidence describes distinct systems: one uses uncertainty-gated noise without explicit task-success/hybrid reward mentions for fine-tuning, another uses binary task-success rewards alongside synthetic demonstrations, and a third uses a hybrid reward for planning rather than the specific fine-tuning mechanism described; no single cited evidence supports the exact phrasing of the sentence."
+  },
+  {
+   "review_id": "q1-007",
+   "field": "value_prop",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The sentence is supported by the second cited evidence, which explicitly states that an uncertainty-gated exploration noise controller suppresses task collapse during online RL fine-tuning of a flow-matching VLA policy."
+  },
+  {
+   "review_id": "q1-008",
+   "field": "concept_frame.components[T:vision language action].role",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The cited evidence describes specific RL fine-tuning methods (uncertainty-gated noise, SynthDemo-RL teacher-student framework) and their effects on task collapse or reward coverage, but does not contain the sentence's claim that the system acts as a multimodal policy framework integrating visual perception and language instructions to generate actions or guide decisions."
+  },
+  {
+   "review_id": "q1-010",
+   "field": "concept_frame.components[T:trajectory planning].role",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The cited evidence describes path generation and obstacle avoidance for specific scenarios (robotic soccer, UAV crowdsensing, and fixed-wing aircraft) but does not explicitly state that the proposed methods provide 'multi-agent or agent-specific' path generation and obstacle avoidance capabilities as a unified feature; the first paper focuses on multi-agent cooperation via HRL/Mean-field theory rather than explicit path generation/avoidance mechanisms, while the third paper focuses on single aircraft routing."
+  },
+  {
+   "review_id": "q1-013",
+   "field": "concept_frame.insufficient_explanation",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The cited evidence confirms that DAPO is an acronym for a policy-optimization objective (specifically 'token-level' in paper 2609.15471 and listed among RL methods in papers 2608.11674 and 2608.28447), supporting the sentence's claim that it refers to optimization rather than pre-training."
+  },
+  {
+   "review_id": "q1-018",
+   "field": "concept_frame.target_task",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The sentence claims both 'long-context decoding' and 'KV cache transfer' are addressed, but the cited evidence only discusses long-context decoding (ETA) and KV cache transfer (SpectrumKV) as separate, distinct papers without evidence supporting a single solution covering both aspects simultaneously."
+  },
+  {
+   "review_id": "q1-019",
+   "field": "concept_frame.combination",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The sentence claims the method prevents quality degradation and optimizes memory transfer, but the cited evidence only describes preventing quality degradation via a specific training technique (multiplicative suppression) and optimizing memory transfer via mixed-precision quantization; it does not support the specific claim of optimizing 'memory transfer' in the context of the 'long-context generation' quality preservation mechanism described in the first paper, nor does the second paper address long-context generation quality degradation."
+  },
+  {
+   "review_id": "q1-023",
+   "field": "summary",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The sentence is fully supported by the cited evidence, which states that existing approaches struggle with complex multi-step reasoning tasks and that mechanistic interpretability tools have been used to understand behavior rather than extract hidden knowledge."
+  },
+  {
+   "review_id": "q1-031",
+   "field": "concept_frame.components[M:sparse autoencoder].role",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The sentence claims the method decomposes activations to 'manipulate' concepts, but the cited evidence only describes identifying, isolating, and verifying latent knowledge without modifying model weights; it does not support the ability to manipulate concepts."
+  },
+  {
+   "review_id": "q1-035",
+   "field": "building_blocks.open_source[pkg:llamafactory].use",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The sentence is supported because the evidence explicitly describes the repository as a 'Unified Efficient Fine-Tuning' tool for LLMs, which aligns with the claim of efficient fine-tuning."
+  },
+  {
+   "review_id": "q1-036",
+   "field": "concept_frame.components[T:quantization].role",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The cited evidence explicitly states that the method reduces the storage bit width of weights and activations through low-bit quantization, which lowers storage requirements and relieves transmission bandwidth pressure."
+  },
+  {
+   "review_id": "q1-040",
+   "field": "summary",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The cited evidence lists the DVF scores (D=4.0, F=2.0, V=3.0) but does not specify that these scores correspond to a specific 'combination' or define the scoring criteria for such a combination."
+  },
+  {
+   "review_id": "q1-041",
+   "field": "concept_frame.target_task",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The sentence is supported by the cited evidence, which describes methods for reducing inference time and computational overhead in multimodal models and a patent for accelerating neural networks via pruning and quantization to improve efficiency on hardware."
+  },
+  {
+   "review_id": "q1-042",
+   "field": "concept_frame.limitation",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The cited evidence mentions high transmission bandwidth pressure and computational overhead in the context of structured pruning and low-bit quantization, but it does not explicitly cite 'dense activations' or 'uncompressed sequences' as the specific causes for the pressure and overhead described in the sentence."
+  },
+  {
+   "review_id": "q1-043",
+   "field": "summary",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The sentence claims the briefing evaluates a combination of pruning, quantization, and token reduction, but the cited evidence only describes token reduction in one paper and pruning/quantization in a separate patent, with no evidence supporting the evaluation of their combined application."
+  },
+  {
+   "review_id": "q1-046",
+   "field": "concept_frame.components[M:rag].role",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The cited evidence describes an enhanced RAG architecture (ELERAG) that integrates Entity Linking to improve accuracy, but it does not state that the system serves as an 'overarching framework' or explicitly describe the mechanism of 'retrieving knowledge sources' as a primary function; it focuses on enhancing existing RAG systems with a factual signal."
+  },
+  {
+   "review_id": "q1-049",
+   "field": "summary",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The sentence is supported because the cited evidence confirms that the hybrid ELERAG pipeline significantly outperforms semantic-only baselines (Cross-Encoder) on domain-specific educational benchmarks."
+  },
+  {
+   "review_id": "q1-053",
+   "field": "summary",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The sentence claims the briefing explores combining CAM with ConvNeXt and DeiT, but the cited evidence only supports combining ConvNeXt with MaxViT (paper 2608.11280) and using CAM with DeiT in a separate study on glaucoma (paper 2504.04549); no single evidence item supports the specific combination of all three components (CAM, ConvNeXt, and DeiT) for the stated purpose."
+  },
+  {
+   "review_id": "q1-056",
+   "field": "summary",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The sentence claims the briefing explores combining Class Activation Maps (CAM), ConvNeXt, and DeiT, but the cited evidence does not support a combination of all three; Paper 2603.01605 combines BiCAM with DeiT (not ConvNeXt), Paper 2608.11280 combines Grad-CAM++ with ConvNeXt (not DeiT), and Paper 2511.18691 combines ConvNeXt with DeiT (but uses CoAtNet instead of CAM). No single evidence item supports the specific combination of CAM, ConvNeXt, and DeiT together."
+  },
+  {
+   "review_id": "q1-061",
+   "field": "building_blocks.open_source[repo:leilibrk/explainability-of-vits].use",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The sentence is supported because the evidence confirms the evaluation of explainability methods (GradCAM, Gradient Attention Rollout) and metrics (insertion/deletion AUC) for Vision Transformers, which covers the core claim despite the sentence omitting specific model names like DeiT and DINO."
+  },
+  {
+   "review_id": "q1-062",
+   "field": "summary",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The cited evidence describes AdaVLA as using flow-matching trajectory curvature to adjust MLP pruning ratios and GeoAAC as using geometry-based adaptive action chunking to adjust action horizons, but no evidence supports the claim that a single combination integrates both adaptive action chunking and inference-time pruning together."
+  },
+  {
+   "review_id": "q1-063",
+   "field": "concept_frame.components[T:chunking].role",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The cited evidence describes adaptive action chunking based on prediction reliability (GeoAAC) and a platform using Real-Time Chunking for responsive execution (FluxVLA), but neither explicitly states that action horizons or chunks are generated specifically to execute motion trajectories over time steps."
+  },
+  {
+   "review_id": "q1-065",
+   "field": "summary",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The sentence incorrectly claims a 'combination' of adaptive action chunking and pruning-based inference acceleration exists; the cited evidence presents GeoAAC (adaptive chunking) and AdaVLA (pruning-based acceleration) as two separate, distinct methods addressing different problems, not a single merged approach."
+  },
+  {
+   "review_id": "q1-066",
+   "field": "building_blocks.open_source[repo:innovator-zero/faster].use",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The cited evidence describes AdaVLA as an adaptive framework for flow-matching-based VLAs that reduces inference steps and prunes MLPs, but it does not mention 'fast real-time flow VLA mechanisms' as a specific implemented component; the evidence focuses on the adaptive nature and step reduction rather than a distinct 'fast real-time flow VLA mechanism' entity."
+  },
+  {
+   "review_id": "q1-068",
+   "field": "concept_frame.components[T:vision language action].role",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The cited evidence describes adaptive action chunking and flow matching acceleration for VLA models but does not mention a 'foundation policy framework' or explicitly state that the system processes multimodal inputs to predict robotic actions as a foundational framework."
+  },
+  {
+   "review_id": "q1-069",
+   "field": "concept_frame.combination",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The cited evidence discusses adaptive action chunking for control precision and flow matching acceleration for latency, but does not mention a 'combination' of these two specific methods jointly addressing both latency bottlenecks and control precision requirements."
+  },
+  {
+   "review_id": "q1-070",
+   "field": "target_user",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The cited evidence describes the repositories' functions but does not explicitly identify 'robotics engineers and researchers' as the target users."
+  },
+  {
+   "review_id": "q1-074",
+   "field": "summary",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The sentence claims the briefing explores combining RAG with mathematical reasoning and multi-hop QA to address prompt sensitivity and scaling limitations, but the cited evidence describes two separate, distinct frameworks (RASPRef and RA-RFT) rather than a single combined approach exploring both together."
+  },
+  {
+   "review_id": "q1-076",
+   "field": "building_blocks.open_source[repo:circlemind-ai/fast-graphrag].use",
+   "human": 1,
+   "model": 0,
+   "model_reason": null
+  },
+  {
+   "review_id": "q1-077",
+   "field": "concept_frame.components[T:cross modal retrieval].role",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The cited evidence describes a benchmark (CrossModalQA) designed to evaluate retrieval capabilities and identifies bottlenecks in existing systems, but it does not state that the benchmark itself provides the cross-modal retrieval capability to bridge heterogeneous modalities; rather, it assesses how well other systems perform this task."
+  },
+  {
+   "review_id": "q1-078",
+   "field": "concept_frame.combination",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The sentence is supported because the cited evidence states that CrossModalQA requires retrieving and composing distributed textual and visual evidence with an average reasoning depth of 3.50 hops, which enables multi-hop reasoning and evidence discovery across these modalities."
+  },
+  {
+   "review_id": "q1-079",
+   "field": "building_blocks.open_source[repo:aigeeksgroup/remomask].use",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The sentence accurately reflects the repository description which explicitly states 'Retrieval-Augmented Masked Motion Generation'."
+  },
+  {
+   "review_id": "q1-080",
+   "field": "concept_frame.components[M:rag].role",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The cited evidence describes specific retrieval frameworks (mean pooling, attention pooling, MG^2-RAG) and their performance on specific tasks, but does not contain the specific claim that the system acts as an 'overarching framework' designed to 'retrieve external multimodal or domain-specific evidence' to 'ground generation' in the manner described in the sentence."
+  },
+  {
+   "review_id": "q1-081",
+   "field": "concept_frame.limitation",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The sentence is fully supported by the second cited evidence, which explicitly states that existing systems struggle with complex cross-modal reasoning due to flat vector retrieval ignoring structural dependencies and graph-based methods relying on pipelines that discard visual information."
+  },
+  {
+   "review_id": "q1-086",
+   "field": "target_user",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The sentence is supported because the evidence confirms the repositories are for healthcare data benchmarking and medical multimodal contrastive learning, and the lack of specific patent assignee categories in the evidence supports the claim that the target user is unverified based on those categories."
+  },
+  {
+   "review_id": "q1-087",
+   "field": "concept_frame.components[M:gpt].role",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The sentence claims the system serves as the underlying LLM backbone, but the cited evidence describes the system as a separate framework that uses an LLM backbone (e.g., GPT-5) to correct SQL errors, rather than the system itself being the backbone."
+  },
+  {
+   "review_id": "q1-090",
+   "field": "concept_frame.components[M:gpt].role",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The cited evidence describes systems that use LLMs for interpretation and generation but does not explicitly state that the LLM serves as the 'underlying backbone' to 'generate structured queries' in the manner described; instead, it details specific components like 'deep schema explorator', 'rule creator', and 'semantic path compilation' that modify or replace direct LLM generation."
+  },
+  {
+   "review_id": "q1-094",
+   "field": "concept_frame.insufficient_explanation",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The sentence is supported because the cited evidence describes retrieval-augmented generation and multi-agent/deterministic QA systems without mentioning or discussing any concept of mixing Adam and SGD."
+  },
+  {
+   "review_id": "q1-095",
+   "field": "value_prop",
+   "human": 0,
+   "model": 1,
+   "model_reason": "The sentence is fully supported by the cited evidence, which describes a framework using unsupervised semantic retrieval for in-context few-shot examples to generate reasoned distractors that align with human-labeled benchmarks without fine-tuning."
+  },
+  {
+   "review_id": "q1-099",
+   "field": "jtbd",
+   "human": 1,
+   "model": 0,
+   "model_reason": "The sentence claims agents need to discover strategies to avoid being trapped by weak exploration incentives, but the cited evidence describes MIR as a method that 'stimulates team exploration' and 'improves algorithm performance' in sparse reward settings, rather than stating that agents are trapped by weak incentives."
+  }
+ ]
+}

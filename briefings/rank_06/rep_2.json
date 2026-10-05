@@ -1,0 +1,20 @@
+{
+ "rank": 6,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "comparison_only",
+  "insufficient_explanation": "The evidence bundle discusses layer normalization, rmsnorm, and decoder architectures, but compares or substitutes layer normalization with rmsnorm as alternatives rather than combining all three components together in a single integrated framework.",
+  "insufficient_evidence_ids": [
+   "paper:2409.12951",
+   "paper:2605.14521"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

@@ -1,0 +1,257 @@
+{
+ "meta": {
+  "step": "briefing_checks_review",
+  "created": "2026-10-05",
+  "git_commit": "3cb8dec2c516accefe02e2b6d6b78d276c1ecb11",
+  "post_hoc": true,
+  "note": "Descriptive classification defined after viewing the flags; not a pre-registered metric and not used for the main conclusions.",
+  "checks_sha256": "d13685bdf8bf614e0ce9a53546d6412452e781d73af73708d9e6622c4eb684e9",
+  "violation_categories": [
+   "no_marker",
+   "not_named",
+   "not_stated",
+   "violation"
+  ]
+ },
+ "flags_total": 31,
+ "violations": 7,
+ "by_flag": {
+  "dvf_number_mismatch": {
+   "order_artifact": 1
+  },
+  "missing_designation_not_stated": {
+   "other_wording": 1
+  },
+  "number_not_in_cited_evidence": {
+   "term_name_digit": 4
+  },
+  "riskiest_axis_not_named": {
+   "letter_form": 4,
+   "not_named": 1
+  },
+  "unmarked_threshold": {
+   "dvf_score_only": 7,
+   "no_marker": 6,
+   "other_wording": 7
+  }
+ },
+ "items": [
+  {
+   "rank": 2,
+   "rep": 2,
+   "field": "kill_criteria[0]",
+   "flag": "unmarked_threshold",
+   "category": "no_marker"
+  },
+  {
+   "rank": 2,
+   "rep": 4,
+   "field": "kill_criteria[0]",
+   "flag": "unmarked_threshold",
+   "category": "other_wording"
+  },
+  {
+   "rank": 4,
+   "rep": 3,
+   "field": "mvp",
+   "flag": "unmarked_threshold",
+   "category": "other_wording"
+  },
+  {
+   "rank": 4,
+   "rep": 3,
+   "field": "success_metric",
+   "flag": "unmarked_threshold",
+   "category": "other_wording"
+  },
+  {
+   "rank": 4,
+   "rep": 3,
+   "field": "kill_criteria[0]",
+   "flag": "unmarked_threshold",
+   "category": "other_wording"
+  },
+  {
+   "rank": 5,
+   "rep": 1,
+   "field": "riskiest_assumption/mvp",
+   "flag": "riskiest_axis_not_named",
+   "category": "not_named"
+  },
+  {
+   "rank": 5,
+   "rep": 2,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 5,
+   "rep": 3,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 5,
+   "rep": 4,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "no_marker"
+  },
+  {
+   "rank": 5,
+   "rep": 5,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 5,
+   "rep": 5,
+   "field": "riskiest_assumption/mvp",
+   "flag": "riskiest_axis_not_named",
+   "category": "letter_form"
+  },
+  {
+   "rank": 7,
+   "rep": 1,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 7,
+   "rep": 2,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "no_marker"
+  },
+  {
+   "rank": 7,
+   "rep": 3,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 7,
+   "rep": 3,
+   "field": "riskiest_assumption/mvp",
+   "flag": "riskiest_axis_not_named",
+   "category": "letter_form"
+  },
+  {
+   "rank": 7,
+   "rep": 4,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 7,
+   "rep": 5,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 11,
+   "rep": 1,
+   "field": "concept_frame.components[M:adamw].role",
+   "flag": "number_not_in_cited_evidence",
+   "category": "term_name_digit"
+  },
+  {
+   "rank": 11,
+   "rep": 3,
+   "field": "building_blocks.to_build[0]",
+   "flag": "unmarked_threshold",
+   "category": "no_marker"
+  },
+  {
+   "rank": 11,
+   "rep": 4,
+   "field": "concept_frame.combination",
+   "flag": "number_not_in_cited_evidence",
+   "category": "term_name_digit"
+  },
+  {
+   "rank": 11,
+   "rep": 4,
+   "field": "summary",
+   "flag": "number_not_in_cited_evidence",
+   "category": "term_name_digit"
+  },
+  {
+   "rank": 11,
+   "rep": 4,
+   "field": "summary",
+   "flag": "number_not_in_cited_evidence",
+   "category": "term_name_digit"
+  },
+  {
+   "rank": 14,
+   "rep": 1,
+   "field": "mvp",
+   "flag": "unmarked_threshold",
+   "category": "other_wording"
+  },
+  {
+   "rank": 14,
+   "rep": 2,
+   "field": "mvp",
+   "flag": "unmarked_threshold",
+   "category": "other_wording"
+  },
+  {
+   "rank": 14,
+   "rep": 3,
+   "field": "kill_criteria[0]",
+   "flag": "unmarked_threshold",
+   "category": "no_marker"
+  },
+  {
+   "rank": 16,
+   "rep": 2,
+   "field": "summary",
+   "flag": "dvf_number_mismatch",
+   "category": "order_artifact"
+  },
+  {
+   "rank": 16,
+   "rep": 5,
+   "field": "riskiest_assumption/mvp",
+   "flag": "riskiest_axis_not_named",
+   "category": "letter_form"
+  },
+  {
+   "rank": 18,
+   "rep": 1,
+   "field": "riskiest_assumption/mvp",
+   "flag": "missing_designation_not_stated",
+   "category": "other_wording"
+  },
+  {
+   "rank": 18,
+   "rep": 3,
+   "field": "kill_criteria[0]",
+   "flag": "unmarked_threshold",
+   "category": "no_marker"
+  },
+  {
+   "rank": 18,
+   "rep": 3,
+   "field": "riskiest_assumption/mvp",
+   "flag": "riskiest_axis_not_named",
+   "category": "letter_form"
+  },
+  {
+   "rank": 19,
+   "rep": 4,
+   "field": "mvp",
+   "flag": "unmarked_threshold",
+   "category": "other_wording"
+  }
+ ]
+}

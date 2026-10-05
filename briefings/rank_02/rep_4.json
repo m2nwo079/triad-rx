@@ -1,0 +1,234 @@
+{
+ "rank": 2,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "components": [
+   {
+    "term_id": "M:proximal policy optimization",
+    "role": "Serves as an on-policy reinforcement learning algorithm to optimize and fine-tune policies for trajectory planning or robot actions.",
+    "evidence_ids": [
+     "paper:2601.23266",
+     "paper:2512.11862",
+     "paper:2412.20098"
+    ]
+   },
+   {
+    "term_id": "T:trajectory planning",
+    "role": "Provides the path generation framework for navigation, obstacle avoidance, or ego-motion control.",
+    "evidence_ids": [
+     "paper:2601.23266",
+     "paper:2512.11862",
+     "paper:2412.20098"
+    ]
+   },
+   {
+    "term_id": "T:vision language action",
+    "role": "Acts as the multimodal policy framework that integrates visual perception and language instructions to generate actions or guide decisions.",
+    "evidence_ids": [
+     "paper:2609.28838",
+     "paper:2609.21650"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets robotic manipulation or autonomous navigation tasks where vision-language-action policies require adaptive fine-tuning for safe trajectory planning and action generation.",
+   "evidence_ids": [
+    "paper:2609.28838",
+    "paper:2601.23266"
+   ]
+  },
+  "limitation": {
+   "text": "Direct application of reinforcement learning or imitation policies to vision-language-action models and trajectory planning often suffers from task collapse, poor exploration under sparse rewards, or failure to satisfy complex dynamic constraints.",
+   "evidence_ids": [
+    "paper:2609.28838",
+    "paper:2609.21650",
+    "paper:2412.20098"
+   ]
+  },
+  "combination": {
+   "text": "Proximal policy optimization is employed to fine-tune vision-language-action or trajectory planning policies, improving adaptation and success rates in complex environments. By updating policies using reward signals or integrated state-action dynamics, the combined framework refines continuous motion and decision-making.",
+   "evidence_ids": [
+    "paper:2609.28838",
+    "paper:2601.23266",
+    "paper:2412.20098"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "components": [
+    {
+     "term_id": "M:proximal policy optimization",
+     "role": "Serves as an on-policy reinforcement learning algorithm to optimize and fine-tune policies for trajectory planning or robot actions.",
+     "evidence_ids": [
+      "paper:2601.23266",
+      "paper:2512.11862",
+      "paper:2412.20098"
+     ]
+    },
+    {
+     "term_id": "T:trajectory planning",
+     "role": "Provides the path generation framework for navigation, obstacle avoidance, or ego-motion control.",
+     "evidence_ids": [
+      "paper:2601.23266",
+      "paper:2512.11862",
+      "paper:2412.20098"
+     ]
+    },
+    {
+     "term_id": "T:vision language action",
+     "role": "Acts as the multimodal policy framework that integrates visual perception and language instructions to generate actions or guide decisions.",
+     "evidence_ids": [
+      "paper:2609.28838",
+      "paper:2609.21650"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets robotic manipulation or autonomous navigation tasks where vision-language-action policies require adaptive fine-tuning for safe trajectory planning and action generation.",
+    "evidence_ids": [
+     "paper:2609.28838",
+     "paper:2601.23266"
+    ]
+   },
+   "limitation": {
+    "text": "Direct application of reinforcement learning or imitation policies to vision-language-action models and trajectory planning often suffers from task collapse, poor exploration under sparse rewards, or failure to satisfy complex dynamic constraints.",
+    "evidence_ids": [
+     "paper:2609.28838",
+     "paper:2609.21650",
+     "paper:2412.20098"
+    ]
+   },
+   "combination": {
+    "text": "Proximal policy optimization is employed to fine-tune vision-language-action or trajectory planning policies, improving adaptation and success rates in complex environments. By updating policies using reward signals or integrated state-action dynamics, the combined framework refines continuous motion and decision-making.",
+    "evidence_ids": [
+     "paper:2609.28838",
+     "paper:2601.23266",
+     "paper:2412.20098"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates proximal policy optimization, trajectory planning, and vision-language-action policies to adapt robotic manipulation and autonomous navigation systems. By applying on-policy reinforcement learning to multimodal policies, the system refines continuous motion and decision-making in complex environments.",
+   "evidence_ids": [
+    "paper:2609.28838",
+    "paper:2601.23266",
+    "paper:2412.20098"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as the bundle provides no patent assignee categories, but repositories and packages indicate developers of autonomous vehicle and robotic systems.",
+   "evidence_ids": [
+    "repo:nvlabs/alpamayo",
+    "repo:ucla-mobility/autovla"
+   ]
+  },
+  "jtbd": {
+   "text": "When deploying vision-language-action models for robotic manipulation or autonomous driving, engineers need to fine-tune policies without causing task collapse or violating dynamic constraints so that the agents achieve high success rates and safe trajectory planning.",
+   "evidence_ids": [
+    "paper:2609.28838",
+    "paper:2412.20098"
+   ]
+  },
+  "value_prop": {
+   "text": "Combining proximal policy optimization with vision-language-action and trajectory planning allows systems to overcome sparse reward barriers and adapt their policies safely. This prevents task collapse during online fine-tuning while respecting complex dynamic constraints.",
+   "evidence_ids": [
+    "paper:2609.28838",
+    "paper:2609.21650",
+    "paper:2412.20098"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated on axis V (viability) due to missing evidence in the evidence bundle. We assume that prospective customers are willing to pay for an integrated PPO-tuned VLA trajectory planning framework.",
+   "evidence_ids": [
+    "dvf:2"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with robotics and autonomous driving developers to validate commercial viability and willingness to pay for the combined framework.",
+   "evidence_ids": [
+    "dvf:2"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive response in customer willingness-to-pay interviews and secure a proposed threshold of 3 paid pilot commitments.",
+   "evidence_ids": [
+    "dvf:2"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than 10 percent of interviewed prospective customers express interest in paying for the proposed framework during the price acceptance test.",
+    "evidence_ids": [
+     "dvf:2"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:nvlabs/alpamayo",
+     "use": "Provides a 10B reasoning VLA model for autonomous vehicles that pairs driving trajectories with Chain-of-Causation reasoning.",
+     "evidence_ids": [
+      "repo:nvlabs/alpamayo"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:ucla-mobility/autovla",
+     "use": "Supplies a Vision-Language-Action model for end-to-end autonomous driving with adaptive reasoning and reinforcement fine-tuning.",
+     "evidence_ids": [
+      "repo:ucla-mobility/autovla"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:drivevla/opendrivevla",
+     "use": "Acts as an open-source framework towards end-to-end autonomous driving with large vision language action models.",
+     "evidence_ids": [
+      "repo:drivevla/opendrivevla"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:nvlabs/fast-dllm",
+     "use": "Enables training-free acceleration of diffusion LLM by facilitating KV cache and parallel decoding for efficient inference.",
+     "evidence_ids": [
+      "repo:nvlabs/fast-dllm"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:nvlabs/alpamayo1.5",
+     "use": "Offers reinforcement-learning enhanced reasoning, navigation guidance, and visual question answering capabilities.",
+     "evidence_ids": [
+      "repo:nvlabs/alpamayo1.5"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A commercial packaging and licensing wrapper to bundle the open-source VLA models and PPO fine-tuning pipelines into a deployable enterprise product.",
+     "evidence_ids": [
+      "dvf:2",
+      "repo:nvlabs/alpamayo"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

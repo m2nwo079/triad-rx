@@ -1,0 +1,38 @@
+{
+ "rank": 20,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "The evidence bundle does not contain any occurrences or discussions of 'dialogue adaptive pre training objective' combined with the other terms.",
+  "insufficient_evidence_ids": [
+   "paper:2510.23868",
+   "paper:2601.22432",
+   "paper:2602.19519",
+   "paper:2603.08011",
+   "paper:2603.22847",
+   "paper:2604.10228",
+   "paper:2604.28123",
+   "paper:2605.16411",
+   "paper:2605.22211",
+   "paper:2605.27906",
+   "paper:2605.30912",
+   "paper:2606.23206",
+   "paper:2607.13712",
+   "paper:2607.13931",
+   "paper:2607.26094",
+   "repo:ath-maas/ovis",
+   "repo:mililab/pearl",
+   "repo:raven-july/cfpo",
+   "repo:xiao4579/prism",
+   "repo:xzxxntxdy/pepo"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

@@ -1,0 +1,205 @@
+{
+ "rank": 9,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:class activation map",
+    "role": "Serves as an explainable AI technique to generate visual attributions and heatmaps, highlighting region-specific evidence that influences model predictions.",
+    "evidence_ids": [
+     "paper:2608.11280"
+    ]
+   },
+   {
+    "term_id": "M:convnext",
+    "role": "Provides a CNN-based backbone architecture combined within deep ensemble frameworks to extract local visual features and process image inputs.",
+    "evidence_ids": [
+     "paper:2608.11280"
+    ]
+   },
+   {
+    "term_id": "M:deit",
+    "role": "Acts as a vision transformer backbone architecture evaluated alongside CNNs or incorporated into hybrid systems for visual representation and classification.",
+    "evidence_ids": [
+     "paper:2608.18544"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Multi-class medical and pattern classification tasks, such as skin lesion classification from dermoscopic images.",
+   "evidence_ids": [
+    "paper:2608.11280"
+   ]
+  },
+  "limitation": {
+   "text": "Deep learning models often suffer from limited interpretability, making it difficult to trust or explain their decision-making in critical classification tasks.",
+   "evidence_ids": [
+    "paper:2608.11280"
+   ]
+  },
+  "combination": {
+   "text": "By integrating class activation map techniques with deep models like ConvNeXt and transformer architectures such as DeiT within ensemble or comparative diagnostic pipelines, researchers can produce interpretable visual explanations alongside strong classification performance. This combination addresses black-box limitations by highlighting influential regions that support the model predictions.",
+   "evidence_ids": [
+    "paper:2608.11280",
+    "paper:2608.18544"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:class activation map",
+     "role": "Serves as an explainable AI technique to generate visual attributions and heatmaps, highlighting region-specific evidence that influences model predictions.",
+     "evidence_ids": [
+      "paper:2608.11280"
+     ]
+    },
+    {
+     "term_id": "M:convnext",
+     "role": "Provides a CNN-based backbone architecture combined within deep ensemble frameworks to extract local visual features and process image inputs.",
+     "evidence_ids": [
+      "paper:2608.11280"
+     ]
+    },
+    {
+     "term_id": "M:deit",
+     "role": "Acts as a vision transformer backbone architecture evaluated alongside CNNs or incorporated into hybrid systems for visual representation and classification.",
+     "evidence_ids": [
+      "paper:2608.18544"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Multi-class medical and pattern classification tasks, such as skin lesion classification from dermoscopic images.",
+    "evidence_ids": [
+     "paper:2608.11280"
+    ]
+   },
+   "limitation": {
+    "text": "Deep learning models often suffer from limited interpretability, making it difficult to trust or explain their decision-making in critical classification tasks.",
+    "evidence_ids": [
+     "paper:2608.11280"
+    ]
+   },
+   "combination": {
+    "text": "By integrating class activation map techniques with deep models like ConvNeXt and transformer architectures such as DeiT within ensemble or comparative diagnostic pipelines, researchers can produce interpretable visual explanations alongside strong classification performance. This combination addresses black-box limitations by highlighting influential regions that support the model predictions.",
+    "evidence_ids": [
+     "paper:2608.11280",
+     "paper:2608.18544"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This briefing evaluates the combination of class activation maps, ConvNeXt, and DeiT for multi-class medical and pattern classification tasks. By integrating explainable AI visualization techniques with CNN and transformer backbones, the approach addresses black-box limitations and supports trustworthy diagnostics. The DVF assessment yields a desirability score of 4.0, a feasibility score of 3.0, and an unscored viability axis.",
+   "evidence_ids": [
+    "paper:2608.11280",
+    "paper:2608.18544",
+    "dvf:9"
+   ]
+  },
+  "target_user": {
+   "text": "The target user includes machine learning engineers, researchers, and clinical diagnosticians utilizing repositories like huggingface/pytorch-image-models and packages like timm for image classification tasks.",
+   "evidence_ids": [
+    "repo:huggingface/pytorch-image-models",
+    "pkg:timm",
+    "paper:2608.11280"
+   ]
+  },
+  "jtbd": {
+   "text": "When deploying deep learning models for critical image classification, users need to generate reliable visual explanations so they can verify model decisions and overcome black-box limitations.",
+   "evidence_ids": [
+    "paper:2608.11280",
+    "paper:2608.18544"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrating class activation maps with ConvNeXt and DeiT architectures provides both strong discriminative classification performance and transparent visual heatmaps highlighting influential image regions.",
+   "evidence_ids": [
+    "paper:2608.11280",
+    "paper:2608.18544"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated as axis V (viability) due to missing evidence in the bundle. It is assumed that clinical institutions will willingly pay for an interpretable multi-model diagnostic pipeline despite integration friction.",
+   "evidence_ids": [
+    "dvf:9"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and price acceptance tests with medical imaging stakeholders, presenting a prototype workflow combining class activation maps with ConvNeXt and DeiT to evaluate willingness to pay under a proposed threshold of 500 dollars per month.",
+   "evidence_ids": [
+    "dvf:9",
+    "paper:2608.11280"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a positive willingness-to-pay response from a proposed threshold of 40 percent of interviewed clinical stakeholders at the specified price point.",
+   "evidence_ids": [
+    "dvf:9"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed stakeholders express willingness to adopt and pay for the integrated pipeline.",
+    "evidence_ids": [
+     "dvf:9"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:huggingface/pytorch-image-models",
+     "use": "Provides pretrained ConvNeXt and transformer model weights and architectures for image feature extraction.",
+     "evidence_ids": [
+      "repo:huggingface/pytorch-image-models"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:timm",
+     "use": "Supplies foundational PyTorch image encoders and utility functions to build the classification ensemble.",
+     "evidence_ids": [
+      "pkg:timm"
+     ],
+     "version": "1.0.30"
+    },
+    {
+     "id": "repo:leilibrk/explainability-of-vits",
+     "use": "Offers evaluation code and metrics for assessing explainability heatmaps across vision transformer variants.",
+     "evidence_ids": [
+      "repo:leilibrk/explainability-of-vits"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A clinical integration wrapper that unifies class activation map generation with ConvNeXt and DeiT inference outputs into a single reporting dashboard.",
+     "evidence_ids": [
+      "paper:2608.11280",
+      "paper:2608.18544"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

@@ -1,0 +1,22 @@
+{
+ "rank": 1,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "comparison_only",
+  "insufficient_explanation": "The provided evidence papers compare YOLOv8 and DETR models or benchmark them as alternative architectures for various object detection tasks, but do not present a combination or integration of YOLOv8 and DETR working together for robust object detection.",
+  "insufficient_evidence_ids": [
+   "paper:2609.25515",
+   "paper:2608.27633",
+   "paper:2608.17917",
+   "paper:2608.13711"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

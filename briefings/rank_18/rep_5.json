@@ -1,0 +1,189 @@
+{
+ "rank": 18,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:rag",
+    "role": "Acts as the overarching retrieval-augmented generation framework that coordinates document or passage integration into language generation.",
+    "evidence_ids": [
+     "paper:2604.17574"
+    ]
+   },
+   {
+    "term_id": "T:in context learning",
+    "role": "Provides the training-free prompting mechanism where retrieved demonstrations guide the language model to generate structured outputs or answers.",
+    "evidence_ids": [
+     "paper:2604.17574"
+    ]
+   },
+   {
+    "term_id": "T:semantic retrieval",
+    "role": "Performs unsupervised embedding-based selection of relevant few-shot examples or context passages for the prompt.",
+    "evidence_ids": [
+     "paper:2604.17574"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Targeting tasks such as reasoned distractor generation for multiple-choice questions.",
+   "evidence_ids": [
+    "paper:2604.17574"
+   ]
+  },
+  "limitation": {
+   "text": "Existing models often fail to capture the underlying reasoning process that experts utilize when selecting distractors and struggle with domain-specific knowledge integration.",
+   "evidence_ids": [
+    "paper:2604.17574"
+   ]
+  },
+  "combination": {
+   "text": "The approach combines retrieval-augmented generation and in-context learning by using unsupervised semantic retrieval to select appropriate few-shot examples, prompting large language models to jointly generate answers and their rationales.",
+   "evidence_ids": [
+    "paper:2604.17574"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:rag",
+     "role": "Acts as the overarching retrieval-augmented generation framework that coordinates document or passage integration into language generation.",
+     "evidence_ids": [
+      "paper:2604.17574"
+     ]
+    },
+    {
+     "term_id": "T:in context learning",
+     "role": "Provides the training-free prompting mechanism where retrieved demonstrations guide the language model to generate structured outputs or answers.",
+     "evidence_ids": [
+      "paper:2604.17574"
+     ]
+    },
+    {
+     "term_id": "T:semantic retrieval",
+     "role": "Performs unsupervised embedding-based selection of relevant few-shot examples or context passages for the prompt.",
+     "evidence_ids": [
+      "paper:2604.17574"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Targeting tasks such as reasoned distractor generation for multiple-choice questions.",
+    "evidence_ids": [
+     "paper:2604.17574"
+    ]
+   },
+   "limitation": {
+    "text": "Existing models often fail to capture the underlying reasoning process that experts utilize when selecting distractors and struggle with domain-specific knowledge integration.",
+    "evidence_ids": [
+     "paper:2604.17574"
+    ]
+   },
+   "combination": {
+    "text": "The approach combines retrieval-augmented generation and in-context learning by using unsupervised semantic retrieval to select appropriate few-shot examples, prompting large language models to jointly generate answers and their rationales.",
+    "evidence_ids": [
+     "paper:2604.17574"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing examines the integration of retrieval-augmented generation, in-context learning, and semantic retrieval for tasks such as reasoned distractor generation for multiple-choice questions. The combination leverages unsupervised semantic retrieval to select few-shot examples that guide large language models to jointly generate answers and their underlying rationales. DVF axis scores are recorded as D: 3.0, F: 3.0, and V: missing.",
+   "evidence_ids": [
+    "dvf:18",
+    "paper:2604.17574"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as the evidence bundle does not provide explicit patent assignee categories or user descriptions from repositories and packages.",
+   "evidence_ids": [
+    "repo:ruc-nlpir/flashrag"
+   ]
+  },
+  "jtbd": {
+   "text": "When creating multiple-choice questions and educational assessments, the user wants to generate plausible yet incorrect distractors along with their underlying reasoning processes without relying on intensive manual expert authoring. The system accomplishes this by combining retrieval-augmented generation and in-context learning to select and prompt models with relevant examples.",
+   "evidence_ids": [
+    "paper:2604.17574"
+   ]
+  },
+  "value_prop": {
+   "text": "Prompting large language models with few-shot examples via unsupervised semantic retrieval substantially improves performance compared to recent distractor generation models. It enables the generation of reasoned distractors that align with human-labeled benchmarks by capturing the reasoning processes that experts utilize.",
+   "evidence_ids": [
+    "paper:2604.17574"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption focuses on axis V (viability), which was designated due to missing evidence in the bundle. We assume that organizations will pay for a retrieval-augmented in-context learning pipeline to automate educational assessment generation.",
+   "evidence_ids": [
+    "dvf:18"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "To test the riskiest assumption, conduct customer interviews and a price acceptance test with educational content creators, presenting them with mocked-up automated distractor generation workflows and eliciting willingness-to-pay signals with a proposed threshold of 500 dollars per month.",
+   "evidence_ids": [
+    "dvf:18",
+    "paper:2604.17574"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "The success metric for the MVP is achieving a positive price acceptance confirmation from at least a proposed threshold of 30 percent of interviewed educational content creators.",
+   "evidence_ids": [
+    "dvf:18"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The opportunity should be killed if fewer than a proposed threshold of 10 percent of interviewed customers express any willingness to pay for the proposed solution.",
+    "evidence_ids": [
+     "dvf:18"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:ruc-nlpir/flashrag",
+     "use": "Serves as a Python toolkit to support efficient retrieval-augmented generation research and pipeline experimentation.",
+     "evidence_ids": [
+      "repo:ruc-nlpir/flashrag"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:flashrag",
+     "use": "Provides package dependencies for executing retrieval and generation routines within the framework.",
+     "evidence_ids": [
+      "pkg:flashrag"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build a rationale-augmented pipeline module that jointly prompts large language models to generate multiple-choice distractors alongside their explanatory reasoning chains.",
+     "evidence_ids": [
+      "paper:2604.17574"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

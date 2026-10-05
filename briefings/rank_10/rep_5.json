@@ -1,0 +1,21 @@
+{
+ "rank": 10,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "Although individual papers discuss subsets of these terms—such as pruning for vision-language-action models or chunking with vision-language-action models—no cited paper in the evidence bundle demonstrates the combination of all three terms (pruning, chunking, and vision-language-action) working together within a single framework.",
+  "insufficient_evidence_ids": [
+   "paper:2609.20776",
+   "paper:2608.29208",
+   "paper:2608.21247"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

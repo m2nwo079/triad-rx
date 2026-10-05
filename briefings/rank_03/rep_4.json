@@ -1,0 +1,21 @@
+{
+ "rank": 3,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "term_mismatch",
+  "insufficient_explanation": "The term 'dialogue adaptive pre training objective' (DAPO) is used in the literature (e.g., paper:2609.15471, paper:2608.11674, paper:2608.28447) as an acronym for a policy-optimization objective (often referring to decentralized average policy optimization or similar rollout RL objectives) rather than a dialogue adaptive pre-training objective, creating a clear term mismatch with the provided text where DAPO represents reinforcement learning optimization.",
+  "insufficient_evidence_ids": [
+   "paper:2609.15471",
+   "paper:2608.11674",
+   "paper:2608.28447"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

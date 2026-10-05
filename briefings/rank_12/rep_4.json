@@ -1,0 +1,214 @@
+{
+ "rank": 12,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:rag",
+    "role": "Retrieves external knowledge or demonstration examples to ground language models in structured facts and reasoning patterns.",
+    "evidence_ids": [
+     "paper:2603.27008",
+     "paper:2606.13680"
+    ]
+   },
+   {
+    "term_id": "T:mathematical reasoning",
+    "role": "Provides structured, multi-step problem-solving domains and benchmarks where models must execute complex inferences and calculations.",
+    "evidence_ids": [
+     "paper:2603.27008",
+     "paper:2606.13680"
+    ]
+   },
+   {
+    "term_id": "T:multi hop question answering",
+    "role": "Targets tasks requiring the synthesis of information scattered across multiple passages or reasoning steps.",
+    "evidence_ids": [
+     "paper:2603.27008",
+     "paper:2606.29296"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Multi-hop question answering and structured mathematical reasoning where models must process compound queries and generate multi-step solutions.",
+   "evidence_ids": [
+    "paper:2603.27008",
+    "paper:2606.29296"
+   ]
+  },
+  "limitation": {
+   "text": "Language models struggle with sensitivity to prompt formulations and require iterative or manual prompt designs that do not scale well across reasoning tasks.",
+   "evidence_ids": [
+    "paper:2603.27008"
+   ]
+  },
+  "combination": {
+   "text": "By incorporating retrieval mechanisms into prompt refinement and reinforcement fine-tuning, the framework retrieves relevant examples and reasoning trajectories to iteratively improve prompt formulations and scaffold complex mathematical and multi-hop reasoning tasks.",
+   "evidence_ids": [
+    "paper:2603.27008",
+    "paper:2606.13680"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:rag",
+     "role": "Retrieves external knowledge or demonstration examples to ground language models in structured facts and reasoning patterns.",
+     "evidence_ids": [
+      "paper:2603.27008",
+      "paper:2606.13680"
+     ]
+    },
+    {
+     "term_id": "T:mathematical reasoning",
+     "role": "Provides structured, multi-step problem-solving domains and benchmarks where models must execute complex inferences and calculations.",
+     "evidence_ids": [
+      "paper:2603.27008",
+      "paper:2606.13680"
+     ]
+    },
+    {
+     "term_id": "T:multi hop question answering",
+     "role": "Targets tasks requiring the synthesis of information scattered across multiple passages or reasoning steps.",
+     "evidence_ids": [
+      "paper:2603.27008",
+      "paper:2606.29296"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Multi-hop question answering and structured mathematical reasoning where models must process compound queries and generate multi-step solutions.",
+    "evidence_ids": [
+     "paper:2603.27008",
+     "paper:2606.29296"
+    ]
+   },
+   "limitation": {
+    "text": "Language models struggle with sensitivity to prompt formulations and require iterative or manual prompt designs that do not scale well across reasoning tasks.",
+    "evidence_ids": [
+     "paper:2603.27008"
+    ]
+   },
+   "combination": {
+    "text": "By incorporating retrieval mechanisms into prompt refinement and reinforcement fine-tuning, the framework retrieves relevant examples and reasoning trajectories to iteratively improve prompt formulations and scaffold complex mathematical and multi-hop reasoning tasks.",
+    "evidence_ids": [
+     "paper:2603.27008",
+     "paper:2606.13680"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This briefing explores combining retrieval-augmented generation (RAG) with mathematical reasoning and multi-hop question answering to address prompt sensitivity and scaling limitations. By retrieving relevant examples and reasoning trajectories, the system iteratively refines prompt formulations and scaffolds complex reasoning tasks. The Daxes score is 3.0, and the Faxes score is 4.0, while viability remains unevaluated.",
+   "evidence_ids": [
+    "dvf:12",
+    "paper:2603.27008",
+    "paper:2606.13680"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as the bundle lacks patent assignee categories and explicit organization tags, but based on repositories and packages such as repo:opendcai/dataflow and pkg:hipporag, the prospective users are developers and researchers building data pipelines and retrieval-augmented systems.",
+   "evidence_ids": [
+    "repo:opendcai/dataflow",
+    "pkg:hipporag"
+   ]
+  },
+  "jtbd": {
+   "text": "When developers and data scientists construct reasoning pipelines for multi-hop question answering and mathematical reasoning, they want to automatically refine prompts and retrieve relevant reasoning traces so that language models avoid manual, non-scalable prompt crafting.",
+   "evidence_ids": [
+    "paper:2603.27008",
+    "paper:2606.29296"
+   ]
+  },
+  "value_prop": {
+   "text": "Unlike manual prompt tuning or static retrieval pipelines, this combination integrates retrieval-guided prompt refinement and reasoning trajectories to automatically scale performance across complex multi-step tasks without human annotations.",
+   "evidence_ids": [
+    "paper:2603.27008",
+    "paper:2606.13680"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated due to missing evidence on axis V (viability). Specifically, we assume that enterprises and developers are willing to pay for a specialized retrieval-guided prompt refinement and reasoning framework.",
+   "evidence_ids": [
+    "dvf:12"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "To test the viability and price acceptance of the retrieval-guided prompt refinement framework, conduct customer interviews with proposed target users and present mock pricing tiers.",
+   "evidence_ids": [
+    "dvf:12",
+    "paper:2603.27008"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "A successful price acceptance test and customer interview phase will achieve a proposed threshold: 40 percent of interviewed prospective users expressing willingness to adopt and pay for the system.",
+   "evidence_ids": [
+    "dvf:12",
+    "paper:2603.27008"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The project is killed if fewer than a proposed threshold: 10 percent of interviewed prospective users confirm a willingness to pay or adopt the system during customer interviews.",
+    "evidence_ids": [
+     "dvf:12",
+     "paper:2603.27008"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:osu-nlp-group/hipporag",
+     "use": "Used as a retrieval framework inspired by human long-term memory to integrate knowledge across documents via personalized PageRank.",
+     "evidence_ids": [
+      "repo:osu-nlp-group/hipporag"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:opendcai/dataflow",
+     "use": "Used as an LLM-driven data preparation framework to construct modular, reusable, and composable data pipelines.",
+     "evidence_ids": [
+      "repo:opendcai/dataflow"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:circlemind-ai/fast-graphrag",
+     "use": "Used to adapt retrieval dynamically to use cases, data, and queries.",
+     "evidence_ids": [
+      "repo:circlemind-ai/fast-graphrag"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build a self-supervised prompt refinement module that coordinates retrieval-guided trajectory selection and model-generated critiques as motivated by paper:2603.27008 and dvf:12.",
+     "evidence_ids": [
+      "dvf:12",
+      "paper:2603.27008"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

@@ -1,0 +1,21 @@
+{
+ "rank": 13,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "The evidence bundle discusses retrieval-augmented generation (RAG) applied to code generation or multi-hop question answering separately or lists both tasks together in multi-task benchmarks (e.g., TSDS, Periodic Table of LLM Reasoning, LeaF), but does not show how RAG is combined with both code generation and multi-hop question answering simultaneously within a unified framework.",
+  "insufficient_evidence_ids": [
+   "paper:2607.26865",
+   "paper:2606.11470",
+   "paper:2506.07851"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

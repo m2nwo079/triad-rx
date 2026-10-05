@@ -1,0 +1,19 @@
+{
+ "rank": 12,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "The evidence bundle discusses combinations of RAG with mathematical reasoning and multi-hop question answering separately or pairwise, but does not provide evidence demonstrating a single framework combining all three terms together.",
+  "insufficient_evidence_ids": [
+   "paper:2603.27008"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

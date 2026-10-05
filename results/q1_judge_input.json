@@ -1,0 +1,26 @@
+{
+  "step": "q1_judge_input",
+  "created": "2026-10-05",
+  "git_commit": "23cc378bc476a7c00c2751ba0db8c6cb01f35d21",
+  "settings": {
+    "model": "Qwen/Qwen3.5-9B",
+    "fallback": "Qwen/Qwen3-8B",
+    "quantization": "bitsandbytes 4-bit nf4, compute float16",
+    "decoding": "greedy",
+    "thinking": false,
+    "max_new_tokens": 256,
+    "prompt_version": "v1",
+    "invalid_output": "label_0",
+    "metrics": [
+      "agreement",
+      "cohen_kappa",
+      "table",
+      "model_supported_rate"
+    ]
+  },
+  "records": 100,
+  "input_sha256": "2cf48be5d3ed0825184cbac0945fe6b0973ccc9238ded8f763bf284e26f5e665",
+  "prompt_sha256": "b0627d2bc4dc359b7e7c7117b32b8fdf4a7fb46a9fed1657db34a778538b2775",
+  "original_sha256": "90213d8233cfb742cbf9754db32c0984ae328a5fe973f61ae1cfdea5f45a63ea",
+  "note": "built from the read-only original; human labels and notes are not included"
+}

@@ -1,5 +1,5 @@
 {
-  "design_version": "v0.3.27",
+  "design_version": "v0.3.37",
   "design_section": "10.2",
   "arxiv_categories": [
     "cs.LG",
@@ -78,7 +78,29 @@
     },
     "briefing": {
       "top_n": 20,
-      "order": "rank_prescription"
+      "order": "rank_prescription",
+      "bundle": {
+        "papers_per_pair": 5,
+        "paper_order": "first_date_desc",
+        "abstract": "full",
+        "repos_max": 5,
+        "repo_order": "stars_window_desc",
+        "packages_max": 5,
+        "package_order": "second_half_downloads_desc",
+        "patents_max": 5,
+        "patent_order": "latest_document_date_desc",
+        "tie_break": "evidence_id_asc"
+      },
+      "generation": {
+        "model": "gemini-3.5-flash-lite",
+        "temperature": 1.0,
+        "seed_base": 20261007,
+        "repetitions": 5,
+        "pause_seconds": 4.5,
+        "prompt_version": "v3",
+        "output_language": "en",
+        "max_sentences_per_text": 3
+      }
     },
     "evidence": {
       "patent_window": "build_window",
@@ -142,6 +164,22 @@
         ]
       },
       "partial_interest_prefix": "1"
+    },
+    "rl_case": {
+      "term_patterns": [
+        "reinforcement learning",
+        "policy optimization",
+        "actor critic",
+        "actor-critic",
+        "q learning",
+        "q-learning",
+        "deep q",
+        "temporal difference",
+        "markov decision"
+      ],
+      "deep_dive": "all_reps_complete",
+      "scope": "briefing_targets",
+      "tod_dir": "external/tod"
     }
   },
   "vocab": {
@@ -247,7 +285,58 @@
     },
     "q1": {
       "seed": 20261005,
-      "n_sentences": 100
+      "n_sentences": 100,
+      "population": "evidential_fields",
+      "judging": "cited_evidence_only"
+    },
+    "q2": {
+      "frame_agreement": "modal_status_and_reason",
+      "mvp_type": "fixed_by_rule_reported_as_is",
+      "unit": "repetition"
+    },
+    "checks": {
+      "superiority_phrases": [
+        "outperform",
+        "state-of-the-art",
+        "state of the art",
+        "sota",
+        "surpass",
+        "superior",
+        "best-in-class",
+        "beats"
+      ],
+      "threshold_marker": "proposed threshold",
+      "mvp_keywords": {
+        "F": [
+          "proof of concept",
+          "poc",
+          "prototype"
+        ],
+        "V": [
+          "interview",
+          "price"
+        ],
+        "D": [
+          "landing page",
+          "interview"
+        ]
+      }
+    },
+    "cross_model": {
+      "model": "Qwen/Qwen3.5-9B",
+      "fallback": "Qwen/Qwen3-8B",
+      "quantization": "bitsandbytes 4-bit nf4, compute float16",
+      "decoding": "greedy",
+      "thinking": false,
+      "max_new_tokens": 256,
+      "prompt_version": "v1",
+      "invalid_output": "label_0",
+      "metrics": [
+        "agreement",
+        "cohen_kappa",
+        "table",
+        "model_supported_rate"
+      ]
     }
   },
   "secondary_analyses": {

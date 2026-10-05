@@ -1,0 +1,394 @@
+{
+ "meta": {
+  "step": "briefing_checks",
+  "created": "2026-10-05",
+  "git_commit": "368208a3dcfb6f92090d0879a79323bf803bd015",
+  "data_cutoff": "2026-09-24T17:59:54+00:00",
+  "checks": {
+   "superiority_phrases": [
+    "outperform",
+    "state-of-the-art",
+    "state of the art",
+    "sota",
+    "surpass",
+    "superior",
+    "best-in-class",
+    "beats"
+   ],
+   "threshold_marker": "proposed threshold",
+   "mvp_keywords": {
+    "F": [
+     "proof of concept",
+     "poc",
+     "prototype"
+    ],
+    "V": [
+     "interview",
+     "price"
+    ],
+    "D": [
+     "landing page",
+     "interview"
+    ]
+   }
+  },
+  "outputs": 100
+ },
+ "summary": {
+  "sentences": {
+   "evidential": 926,
+   "prescriptive": 340
+  },
+  "flagged_items": 31,
+  "flag_counts": {
+   "unmarked_threshold": 20,
+   "riskiest_axis_not_named": 5,
+   "number_not_in_cited_evidence": 4,
+   "dvf_number_mismatch": 1,
+   "missing_designation_not_stated": 1
+  }
+ },
+ "flags": [
+  {
+   "rank": 2,
+   "rep": 2,
+   "kind": "prescriptive",
+   "field": "kill_criteria[0]",
+   "sentence_index": 0,
+   "sentence": "Kill the project if fewer than 10 percent of interviewed stakeholders express commercial interest during price acceptance testing.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 2,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "kill_criteria[0]",
+   "sentence_index": 0,
+   "sentence": "Fewer than 10 percent of interviewed prospective customers express interest in paying for the proposed framework during the price acceptance test.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 4,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "mvp",
+   "sentence_index": 0,
+   "sentence": "To test the riskiest assumption, we will conduct customer interviews and price acceptance tests targeting potential deployers of long-context LLM inference infrastructure, proposing a threshold price premium of 20 percent for optimized memory-bandwidth savings.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 4,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "success_metric",
+   "sentence_index": 0,
+   "sentence": "Proposed success metric is a price acceptance rate of at least 30 percent among interviewed infrastructure decision makers.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 4,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "kill_criteria[0]",
+   "sentence_index": 0,
+   "sentence": "Proposed kill criteria: fewer than 10 percent of interviewed customers accept the proposed price premium of 20 percent for long-context inference optimization.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "riskiest_axis_not_named"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 2,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Users are willing to adopt a complex interpretability-based pipeline rather than standard weight-modification techniques to elicit latent knowledge, reflecting the lowest DVF score on axis D (desirability: 2.0).",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The riskiest assumption, driven by desirability (DVF axis score 2.0), is that AI practitioners and security engineers will actively demand and adopt a complex mechanistic interpretability pipeline over simpler weight-based or surface-level elicitation methods.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The riskiest assumption, driven by a low desirability axis score of 2.0 on a scale up to 5, is that enterprise development teams building security applications actually experience a painful, unsolved workflow bottleneck around eliciting hidden model knowledge that they are willing to pay for or adopt a specialized interpretability framework to solve.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 5,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The riskiest assumption, driven by axis D score 2.0, is that enterprise users will actively demand and adopt a specialized latent knowledge elicitation tool rather than relying on standard prompting or fine-tuning techniques.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 5,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "riskiest_axis_not_named"
+   ]
+  },
+  {
+   "rank": 7,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Due to feasibility concerns (score 2.0), the riskiest assumption is that token reduction, pruning, and quantization can be applied concurrently without compounding errors that cause unacceptable degradation in task accuracy.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 7,
+   "rep": 2,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Combining token reduction, pruning, and low-bit quantization simultaneously will introduce severe compounded accuracy degradation or instability due to conflicting approximation errors across different model components (feasibility score 2.0 out of 5.0).",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 7,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The riskiest assumption, identified by axis F with a score of 2.0, is that combining aggressive token reduction with low-bit quantization and pruning will not cause catastrophic accuracy degradation or unstable instance-level outputs during inference.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 7,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "riskiest_axis_not_named"
+   ]
+  },
+  {
+   "rank": 7,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Based on a feasibility score of 2.0 from the DVF table, the riskiest assumption is that applying simultaneous pruning, low-bit quantization, and token reduction can preserve acceptable task accuracy and avoid catastrophic error propagation or instance-level behavioral drift across diverse edge workloads.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 7,
+   "rep": 5,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Given a feasibility score of 2.0 on the DVF axis, the riskiest assumption is that combining pruning, quantization, and token reduction pipelines into a unified inference flow will not introduce catastrophic accuracy degradation or incompatible gradient and token routing errors across diverse multimodal architectures.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 11,
+   "rep": 1,
+   "kind": "evidential",
+   "field": "concept_frame.components[M:adamw].role",
+   "sentence_index": 0,
+   "sentence": "Serves as a standard baseline optimizer used to update network weights and is studied alongside Mixture-of-Experts architectures and GPT-2 models.",
+   "flags": [
+    "number_not_in_cited_evidence"
+   ]
+  },
+  {
+   "rank": 11,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "building_blocks.to_build[0]",
+   "sentence_index": 0,
+   "sentence": "Build a specialized adapter layer that seamlessly integrates mixture-of-experts routing blocks into GPT-2-style architectures while supporting standard optimizers like AdamW.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 11,
+   "rep": 4,
+   "kind": "evidential",
+   "field": "concept_frame.combination",
+   "sentence_index": 0,
+   "sentence": "By adapting optimizer update mechanisms and state allocation specifically for mixture-of-experts layers within architectures such as GPT-2-style models, the training process manages routed expert gradients with specialized momentum or tiered state strategies while utilizing AdamW-style components as baselines or complementary routers.",
+   "flags": [
+    "number_not_in_cited_evidence"
+   ]
+  },
+  {
+   "rank": 11,
+   "rep": 4,
+   "kind": "evidential",
+   "field": "summary",
+   "sentence_index": 0,
+   "sentence": "This briefing evaluates combining AdamW, GPT-2, and mixture of experts for training large language models.",
+   "flags": [
+    "number_not_in_cited_evidence"
+   ]
+  },
+  {
+   "rank": 11,
+   "rep": 4,
+   "kind": "evidential",
+   "field": "summary",
+   "sentence_index": 2,
+   "sentence": "The proposed combination adapts optimizer update mechanisms and state allocation specifically for mixture-of-experts layers within architectures such as GPT-2-style models, managing routed expert gradients with specialized momentum or tiered state strategies while utilizing AdamW-style components as baselines or complementary routers.",
+   "flags": [
+    "number_not_in_cited_evidence"
+   ]
+  },
+  {
+   "rank": 14,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "mvp",
+   "sentence_index": 1,
+   "sentence": "We propose a pricing threshold of 500 US dollars per month to test willingness to pay, motivated by dvf:14 and paper:2609.05518.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 14,
+   "rep": 2,
+   "kind": "prescriptive",
+   "field": "mvp",
+   "sentence_index": 0,
+   "sentence": "Conduct customer interviews and a price acceptance test with a proposed target sample of 15 potential enterprise users to test the viability and willingness to pay for the unified audio-video-text retrieval-augmented generation system, addressing the missing evidence on axis V.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 14,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "kill_criteria[0]",
+   "sentence_index": 0,
+   "sentence": "Fewer than 15 percent of interviewed prospective target users indicate a willingness to pay above the projected operational cost threshold during the MVP evaluation (dvf:14).",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 16,
+   "rep": 2,
+   "kind": "evidential",
+   "field": "summary",
+   "sentence_index": 1,
+   "sentence": "Per dvf:16, the design scores 3.0 on Desirability and 4.0 on Feasibility, while Viability is unassessed due to missing evidence.",
+   "flags": [
+    "dvf_number_mismatch"
+   ]
+  },
+  {
+   "rank": 16,
+   "rep": 5,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "riskiest_axis_not_named"
+   ]
+  },
+  {
+   "rank": 18,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "missing_designation_not_stated"
+   ]
+  },
+  {
+   "rank": 18,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "kill_criteria[0]",
+   "sentence_index": 0,
+   "sentence": "Fewer than 10 percent of interviewed target users indicate a positive willingness to pay during price acceptance testing.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 18,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "riskiest_axis_not_named"
+   ]
+  },
+  {
+   "rank": 19,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "mvp",
+   "sentence_index": 0,
+   "sentence": "Customer interviews and price acceptance test: conduct 10 discovery interviews with simulation engineers to test willingness to pay for an efficient multi-agent exploration toolkit, targeting a proposed price threshold of 500 dollars per month per developer as motivated by dvf:19.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  }
+ ]
+}

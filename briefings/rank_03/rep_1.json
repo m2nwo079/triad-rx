@@ -1,0 +1,26 @@
+{
+ "rank": 3,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": "engine reliability not established (V1 failed)",
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "term_mismatch",
+  "insufficient_explanation": "The evidence bundle mentions DAPO (Dialogue-Adaptive Policy Optimization or similar acronyms in the context of policy optimization like GRPO/DAPO), but the term 'dialogue adaptive pre training objective' specifically as a pre-training objective for dialogue does not match the actual concepts discussed in the papers, which focus on reinforcement learning policy optimization or reinforcement learning with verifiable rewards (RLVR).",
+  "insufficient_evidence_ids": [
+   "paper:2609.15471",
+   "paper:2608.28447",
+   "paper:2608.11674",
+   "paper:2608.02087",
+   "paper:2606.23206",
+   "paper:2605.30912",
+   "paper:2604.28123",
+   "paper:2603.22847"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

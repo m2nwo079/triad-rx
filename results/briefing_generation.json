@@ -1,0 +1,4023 @@
+{
+ "meta": {
+  "step": "briefing_generation",
+  "created": "2026-10-05",
+  "git_commit": "2b4ce57df6423cd81f66a92305eeb7da7e4d4929",
+  "generation": {
+   "model": "gemini-3.5-flash-lite",
+   "temperature": 1.0,
+   "seed_base": 20261007,
+   "repetitions": 5,
+   "pause_seconds": 4.5,
+   "prompt_version": "v3",
+   "output_language": "en",
+   "max_sentences_per_text": 3
+  },
+  "model_versions": [
+   "gemini-3.5-flash-lite"
+  ],
+  "frame_prompt_sha256": "7c0e72a87390a06248ff31a40a3f30cc1bbd613cbf17baeed6e0fba551e636a0",
+  "briefing_template_sha256": "5b12806bdc51a9d511b1f0b21f725a1ba75258246f210c83f9f7c1b4b330e1d3",
+  "bundles_result_sha256": "def550fca455c80c53f8e1dc9efb0e5697e45a1114e383b228cd99346179301b"
+ },
+ "summary": {
+  "runs": 100,
+  "frame_complete": 56,
+  "frame_insufficient": 44,
+  "frame_invalid": 0,
+  "briefing_valid": 56,
+  "briefing_invalid": 0,
+  "insufficient_reasons": {
+   "comparison_only": 10,
+   "term_mismatch": 14,
+   "no_combination_evidence": 20,
+   "other": 0
+  },
+  "prompt_tokens": 1114304,
+  "output_tokens": 98202
+ },
+ "runs": [
+  {
+   "rank": 1,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7059,
+     "candidatesTokenCount": 160,
+     "totalTokenCount": 7219,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7059
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "comparison_only",
+   "frame_problems": []
+  },
+  {
+   "rank": 1,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7059,
+     "candidatesTokenCount": 207,
+     "totalTokenCount": 7266,
+     "cachedContentTokenCount": 3072,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7059
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3072
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "comparison_only",
+   "frame_problems": []
+  },
+  {
+   "rank": 1,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7059,
+     "candidatesTokenCount": 130,
+     "totalTokenCount": 7189,
+     "cachedContentTokenCount": 3072,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7059
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3072
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "comparison_only",
+   "frame_problems": []
+  },
+  {
+   "rank": 1,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7059,
+     "candidatesTokenCount": 160,
+     "totalTokenCount": 7219,
+     "cachedContentTokenCount": 3072,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7059
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3072
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "comparison_only",
+   "frame_problems": []
+  },
+  {
+   "rank": 1,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7059,
+     "candidatesTokenCount": 160,
+     "totalTokenCount": 7219,
+     "cachedContentTokenCount": 3072,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7059
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3072
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "comparison_only",
+   "frame_problems": []
+  },
+  {
+   "rank": 2,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6789,
+     "candidatesTokenCount": 574,
+     "totalTokenCount": 7363,
+     "cachedContentTokenCount": 3109,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6789
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3109
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7447,
+     "candidatesTokenCount": 1199,
+     "totalTokenCount": 8646,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7447
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 2,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6789,
+     "candidatesTokenCount": 665,
+     "totalTokenCount": 7454,
+     "cachedContentTokenCount": 3109,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6789
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3109
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7532,
+     "candidatesTokenCount": 1060,
+     "totalTokenCount": 8592,
+     "cachedContentTokenCount": 5253,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7532
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5253
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 2,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6789,
+     "candidatesTokenCount": 421,
+     "totalTokenCount": 7210,
+     "cachedContentTokenCount": 3109,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6789
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3109
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7310,
+     "candidatesTokenCount": 1191,
+     "totalTokenCount": 8501,
+     "cachedContentTokenCount": 5196,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7310
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5196
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 2,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6789,
+     "candidatesTokenCount": 661,
+     "totalTokenCount": 7450,
+     "cachedContentTokenCount": 3109,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6789
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3109
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7530,
+     "candidatesTokenCount": 1192,
+     "totalTokenCount": 8722,
+     "cachedContentTokenCount": 5252,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7530
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5252
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 2,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6789,
+     "candidatesTokenCount": 647,
+     "totalTokenCount": 7436,
+     "cachedContentTokenCount": 3109,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6789
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3109
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7514,
+     "candidatesTokenCount": 1092,
+     "totalTokenCount": 8606,
+     "cachedContentTokenCount": 5248,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7514
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5248
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 3,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6246,
+     "candidatesTokenCount": 258,
+     "totalTokenCount": 6504,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6246
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "term_mismatch",
+   "frame_problems": []
+  },
+  {
+   "rank": 3,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6246,
+     "candidatesTokenCount": 108,
+     "totalTokenCount": 6354,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6246
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "term_mismatch",
+   "frame_problems": []
+  },
+  {
+   "rank": 3,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6246,
+     "candidatesTokenCount": 206,
+     "totalTokenCount": 6452,
+     "cachedContentTokenCount": 3039,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6246
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3039
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "term_mismatch",
+   "frame_problems": []
+  },
+  {
+   "rank": 3,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6246,
+     "candidatesTokenCount": 213,
+     "totalTokenCount": 6459,
+     "cachedContentTokenCount": 3039,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6246
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3039
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "term_mismatch",
+   "frame_problems": []
+  },
+  {
+   "rank": 3,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6246,
+     "candidatesTokenCount": 184,
+     "totalTokenCount": 6430,
+     "cachedContentTokenCount": 3039,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6246
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3039
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "term_mismatch",
+   "frame_problems": []
+  },
+  {
+   "rank": 4,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6941,
+     "candidatesTokenCount": 591,
+     "totalTokenCount": 7532,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6941
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7616,
+     "candidatesTokenCount": 1094,
+     "totalTokenCount": 8710,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7616
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 4,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6941,
+     "candidatesTokenCount": 580,
+     "totalTokenCount": 7521,
+     "cachedContentTokenCount": 3117,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6941
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3117
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7609,
+     "candidatesTokenCount": 1189,
+     "totalTokenCount": 8798,
+     "cachedContentTokenCount": 5242,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7609
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5242
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 4,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6941,
+     "candidatesTokenCount": 592,
+     "totalTokenCount": 7533,
+     "cachedContentTokenCount": 3117,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6941
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3117
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7619,
+     "candidatesTokenCount": 998,
+     "totalTokenCount": 8617,
+     "cachedContentTokenCount": 5245,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7619
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5245
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 4,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6941,
+     "candidatesTokenCount": 568,
+     "totalTokenCount": 7509,
+     "cachedContentTokenCount": 3117,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6941
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3117
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7595,
+     "candidatesTokenCount": 981,
+     "totalTokenCount": 8576,
+     "cachedContentTokenCount": 5239,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7595
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5239
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 4,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6941,
+     "candidatesTokenCount": 581,
+     "totalTokenCount": 7522,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6941
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7610,
+     "candidatesTokenCount": 1325,
+     "totalTokenCount": 8935,
+     "cachedContentTokenCount": 5243,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7610
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5243
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 5,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7024,
+     "candidatesTokenCount": 502,
+     "totalTokenCount": 7526,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7024
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7602,
+     "candidatesTokenCount": 1011,
+     "totalTokenCount": 8613,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7602
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 5,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7024,
+     "candidatesTokenCount": 490,
+     "totalTokenCount": 7514,
+     "cachedContentTokenCount": 3074,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7024
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3074
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7591,
+     "candidatesTokenCount": 1214,
+     "totalTokenCount": 8805,
+     "cachedContentTokenCount": 5108,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7591
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5108
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 5,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7024,
+     "candidatesTokenCount": 514,
+     "totalTokenCount": 7538,
+     "cachedContentTokenCount": 3074,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7024
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3074
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7615,
+     "candidatesTokenCount": 1064,
+     "totalTokenCount": 8679,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7615
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 5,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7024,
+     "candidatesTokenCount": 477,
+     "totalTokenCount": 7501,
+     "cachedContentTokenCount": 3074,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7024
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3074
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7577,
+     "candidatesTokenCount": 1321,
+     "totalTokenCount": 8898,
+     "cachedContentTokenCount": 5104,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7577
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5104
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 5,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7024,
+     "candidatesTokenCount": 538,
+     "totalTokenCount": 7562,
+     "cachedContentTokenCount": 3074,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7024
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3074
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7633,
+     "candidatesTokenCount": 1051,
+     "totalTokenCount": 8684,
+     "cachedContentTokenCount": 5118,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7633
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5118
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 6,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6550,
+     "candidatesTokenCount": 169,
+     "totalTokenCount": 6719,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6550
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "comparison_only",
+   "frame_problems": []
+  },
+  {
+   "rank": 6,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6550,
+     "candidatesTokenCount": 120,
+     "totalTokenCount": 6670,
+     "cachedContentTokenCount": 3072,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6550
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3072
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "comparison_only",
+   "frame_problems": []
+  },
+  {
+   "rank": 6,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6550,
+     "candidatesTokenCount": 479,
+     "totalTokenCount": 7029,
+     "cachedContentTokenCount": 3072,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6550
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3072
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7117,
+     "candidatesTokenCount": 1124,
+     "totalTokenCount": 8241,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7117
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 6,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6550,
+     "candidatesTokenCount": 172,
+     "totalTokenCount": 6722,
+     "cachedContentTokenCount": 3072,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6550
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3072
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "comparison_only",
+   "frame_problems": []
+  },
+  {
+   "rank": 6,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6550,
+     "candidatesTokenCount": 115,
+     "totalTokenCount": 6665,
+     "cachedContentTokenCount": 3072,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6550
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3072
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "comparison_only",
+   "frame_problems": []
+  },
+  {
+   "rank": 7,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7656,
+     "candidatesTokenCount": 536,
+     "totalTokenCount": 8192,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7656
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8260,
+     "candidatesTokenCount": 1095,
+     "totalTokenCount": 9355,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8260
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 7,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7656,
+     "candidatesTokenCount": 522,
+     "totalTokenCount": 8178,
+     "cachedContentTokenCount": 5997,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7656
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5997
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8246,
+     "candidatesTokenCount": 1272,
+     "totalTokenCount": 9518,
+     "cachedContentTokenCount": 4897,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8246
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 4897
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 7,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7656,
+     "candidatesTokenCount": 545,
+     "totalTokenCount": 8201,
+     "cachedContentTokenCount": 5997,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7656
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5997
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8269,
+     "candidatesTokenCount": 1236,
+     "totalTokenCount": 9505,
+     "cachedContentTokenCount": 4902,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8269
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 4902
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 7,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7656,
+     "candidatesTokenCount": 563,
+     "totalTokenCount": 8219,
+     "cachedContentTokenCount": 5997,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7656
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5997
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8285,
+     "candidatesTokenCount": 1225,
+     "totalTokenCount": 9510,
+     "cachedContentTokenCount": 4906,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8285
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 4906
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 7,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7656,
+     "candidatesTokenCount": 515,
+     "totalTokenCount": 8171,
+     "cachedContentTokenCount": 5997,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7656
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5997
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8239,
+     "candidatesTokenCount": 1262,
+     "totalTokenCount": 9501,
+     "cachedContentTokenCount": 4895,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8239
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 4895
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 8,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6886,
+     "candidatesTokenCount": 485,
+     "totalTokenCount": 7371,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6886
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7467,
+     "candidatesTokenCount": 1234,
+     "totalTokenCount": 8701,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7467
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 8,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6886,
+     "candidatesTokenCount": 474,
+     "totalTokenCount": 7360,
+     "cachedContentTokenCount": 3039,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6886
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3039
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7456,
+     "candidatesTokenCount": 1018,
+     "totalTokenCount": 8474,
+     "cachedContentTokenCount": 5002,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7456
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5002
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 8,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6886,
+     "candidatesTokenCount": 490,
+     "totalTokenCount": 7376,
+     "cachedContentTokenCount": 3039,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6886
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3039
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7472,
+     "candidatesTokenCount": 1099,
+     "totalTokenCount": 8571,
+     "cachedContentTokenCount": 5007,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7472
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5007
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 8,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6886,
+     "candidatesTokenCount": 487,
+     "totalTokenCount": 7373,
+     "cachedContentTokenCount": 3039,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6886
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3039
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7469,
+     "candidatesTokenCount": 885,
+     "totalTokenCount": 8354,
+     "cachedContentTokenCount": 5006,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7469
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5006
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 8,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6886,
+     "candidatesTokenCount": 473,
+     "totalTokenCount": 7359,
+     "cachedContentTokenCount": 3039,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6886
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3039
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7455,
+     "candidatesTokenCount": 1001,
+     "totalTokenCount": 8456,
+     "cachedContentTokenCount": 5002,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7455
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5002
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 9,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7453,
+     "candidatesTokenCount": 583,
+     "totalTokenCount": 8036,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7453
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8120,
+     "candidatesTokenCount": 998,
+     "totalTokenCount": 9118,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8120
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 9,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7453,
+     "candidatesTokenCount": 525,
+     "totalTokenCount": 7978,
+     "cachedContentTokenCount": 3113,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7453
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3113
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8072,
+     "candidatesTokenCount": 1062,
+     "totalTokenCount": 9134,
+     "cachedContentTokenCount": 5196,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8072
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5196
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 9,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7453,
+     "candidatesTokenCount": 623,
+     "totalTokenCount": 8076,
+     "cachedContentTokenCount": 3113,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7453
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3113
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8156,
+     "candidatesTokenCount": 997,
+     "totalTokenCount": 9153,
+     "cachedContentTokenCount": 5215,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8156
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5215
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 9,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7453,
+     "candidatesTokenCount": 517,
+     "totalTokenCount": 7970,
+     "cachedContentTokenCount": 3113,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7453
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3113
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8060,
+     "candidatesTokenCount": 998,
+     "totalTokenCount": 9058,
+     "cachedContentTokenCount": 5193,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8060
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5193
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 9,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7453,
+     "candidatesTokenCount": 467,
+     "totalTokenCount": 7920,
+     "cachedContentTokenCount": 3113,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7453
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3113
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8016,
+     "candidatesTokenCount": 1082,
+     "totalTokenCount": 9098,
+     "cachedContentTokenCount": 5182,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8016
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5182
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 10,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6448,
+     "candidatesTokenCount": 538,
+     "totalTokenCount": 6986,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6448
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7076,
+     "candidatesTokenCount": 1253,
+     "totalTokenCount": 8329,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7076
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 10,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6448,
+     "candidatesTokenCount": 571,
+     "totalTokenCount": 7019,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6448
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7105,
+     "candidatesTokenCount": 1140,
+     "totalTokenCount": 8245,
+     "cachedContentTokenCount": 5078,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7105
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5078
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 10,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6448,
+     "candidatesTokenCount": 564,
+     "totalTokenCount": 7012,
+     "cachedContentTokenCount": 3049,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6448
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3049
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7102,
+     "candidatesTokenCount": 1148,
+     "totalTokenCount": 8250,
+     "cachedContentTokenCount": 5077,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7102
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5077
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 10,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6448,
+     "candidatesTokenCount": 570,
+     "totalTokenCount": 7018,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6448
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7104,
+     "candidatesTokenCount": 1139,
+     "totalTokenCount": 8243,
+     "cachedContentTokenCount": 5078,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7104
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5078
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 10,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6448,
+     "candidatesTokenCount": 165,
+     "totalTokenCount": 6613,
+     "cachedContentTokenCount": 3049,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6448
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3049
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 11,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7114,
+     "candidatesTokenCount": 526,
+     "totalTokenCount": 7640,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7114
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7736,
+     "candidatesTokenCount": 1132,
+     "totalTokenCount": 8868,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7736
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 11,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7114,
+     "candidatesTokenCount": 337,
+     "totalTokenCount": 7451,
+     "cachedContentTokenCount": 3095,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7114
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3095
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 11,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7114,
+     "candidatesTokenCount": 478,
+     "totalTokenCount": 7592,
+     "cachedContentTokenCount": 3095,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7114
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3095
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7689,
+     "candidatesTokenCount": 987,
+     "totalTokenCount": 8676,
+     "cachedContentTokenCount": 5149,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7689
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5149
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 11,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7114,
+     "candidatesTokenCount": 594,
+     "totalTokenCount": 7708,
+     "cachedContentTokenCount": 3095,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7114
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3095
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7794,
+     "candidatesTokenCount": 1111,
+     "totalTokenCount": 8905,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7794
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 11,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7114,
+     "candidatesTokenCount": 143,
+     "totalTokenCount": 7257,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7114
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "comparison_only",
+   "frame_problems": []
+  },
+  {
+   "rank": 12,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6886,
+     "candidatesTokenCount": 104,
+     "totalTokenCount": 6990,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6886
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 12,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6886,
+     "candidatesTokenCount": 150,
+     "totalTokenCount": 7036,
+     "cachedContentTokenCount": 3071,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6886
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3071
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 12,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6886,
+     "candidatesTokenCount": 126,
+     "totalTokenCount": 7012,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6886
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 12,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6886,
+     "candidatesTokenCount": 555,
+     "totalTokenCount": 7441,
+     "cachedContentTokenCount": 3071,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6886
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3071
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7529,
+     "candidatesTokenCount": 1133,
+     "totalTokenCount": 8662,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7529
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 12,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6886,
+     "candidatesTokenCount": 104,
+     "totalTokenCount": 6990,
+     "cachedContentTokenCount": 3071,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6886
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3071
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 13,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7079,
+     "candidatesTokenCount": 137,
+     "totalTokenCount": 7216,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7079
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 13,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7079,
+     "candidatesTokenCount": 135,
+     "totalTokenCount": 7214,
+     "cachedContentTokenCount": 3076,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7079
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3076
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 13,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7079,
+     "candidatesTokenCount": 176,
+     "totalTokenCount": 7255,
+     "cachedContentTokenCount": 3076,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7079
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3076
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 13,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7079,
+     "candidatesTokenCount": 118,
+     "totalTokenCount": 7197,
+     "cachedContentTokenCount": 3076,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7079
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3076
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 13,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7079,
+     "candidatesTokenCount": 160,
+     "totalTokenCount": 7239,
+     "cachedContentTokenCount": 3076,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7079
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3076
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 14,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6731,
+     "candidatesTokenCount": 500,
+     "totalTokenCount": 7231,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6731
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7329,
+     "candidatesTokenCount": 1275,
+     "totalTokenCount": 8604,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7329
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 14,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6731,
+     "candidatesTokenCount": 492,
+     "totalTokenCount": 7223,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6731
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7319,
+     "candidatesTokenCount": 1092,
+     "totalTokenCount": 8411,
+     "cachedContentTokenCount": 5204,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7319
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5204
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 14,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6731,
+     "candidatesTokenCount": 585,
+     "totalTokenCount": 7316,
+     "cachedContentTokenCount": 3107,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6731
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3107
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7402,
+     "candidatesTokenCount": 1242,
+     "totalTokenCount": 8644,
+     "cachedContentTokenCount": 5225,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7402
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5225
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 14,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6731,
+     "candidatesTokenCount": 621,
+     "totalTokenCount": 7352,
+     "cachedContentTokenCount": 3107,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6731
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3107
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7438,
+     "candidatesTokenCount": 1383,
+     "totalTokenCount": 8821,
+     "cachedContentTokenCount": 5234,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7438
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5234
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 14,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6731,
+     "candidatesTokenCount": 479,
+     "totalTokenCount": 7210,
+     "cachedContentTokenCount": 3107,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6731
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3107
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7308,
+     "candidatesTokenCount": 940,
+     "totalTokenCount": 8248,
+     "cachedContentTokenCount": 5201,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7308
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5201
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 15,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7035,
+     "candidatesTokenCount": 130,
+     "totalTokenCount": 7165,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7035
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 15,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7035,
+     "candidatesTokenCount": 128,
+     "totalTokenCount": 7163,
+     "cachedContentTokenCount": 3093,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7035
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3093
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 15,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7035,
+     "candidatesTokenCount": 115,
+     "totalTokenCount": 7150,
+     "cachedContentTokenCount": 3093,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7035
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3093
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 15,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7035,
+     "candidatesTokenCount": 129,
+     "totalTokenCount": 7164,
+     "cachedContentTokenCount": 3093,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7035
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3093
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 15,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7035,
+     "candidatesTokenCount": 135,
+     "totalTokenCount": 7170,
+     "cachedContentTokenCount": 3093,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7035
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3093
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 16,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7579,
+     "candidatesTokenCount": 572,
+     "totalTokenCount": 8151,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7579
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8241,
+     "candidatesTokenCount": 1024,
+     "totalTokenCount": 9265,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8241
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 16,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7579,
+     "candidatesTokenCount": 524,
+     "totalTokenCount": 8103,
+     "cachedContentTokenCount": 3119,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7579
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3119
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8195,
+     "candidatesTokenCount": 940,
+     "totalTokenCount": 9135,
+     "cachedContentTokenCount": 5202,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8195
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5202
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 16,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7579,
+     "candidatesTokenCount": 618,
+     "totalTokenCount": 8197,
+     "cachedContentTokenCount": 3119,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7579
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3119
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8275,
+     "candidatesTokenCount": 1086,
+     "totalTokenCount": 9361,
+     "cachedContentTokenCount": 5221,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8275
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5221
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 16,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7579,
+     "candidatesTokenCount": 613,
+     "totalTokenCount": 8192,
+     "cachedContentTokenCount": 3119,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7579
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3119
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8274,
+     "candidatesTokenCount": 1176,
+     "totalTokenCount": 9450,
+     "cachedContentTokenCount": 5221,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8274
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5221
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 16,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 7579,
+     "candidatesTokenCount": 699,
+     "totalTokenCount": 8278,
+     "cachedContentTokenCount": 3119,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7579
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3119
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 8350,
+     "candidatesTokenCount": 987,
+     "totalTokenCount": 9337,
+     "cachedContentTokenCount": 5238,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 8350
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5238
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 17,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6630,
+     "candidatesTokenCount": 158,
+     "totalTokenCount": 6788,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6630
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "term_mismatch",
+   "frame_problems": []
+  },
+  {
+   "rank": 17,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6630,
+     "candidatesTokenCount": 115,
+     "totalTokenCount": 6745,
+     "cachedContentTokenCount": 3036,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6630
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3036
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "term_mismatch",
+   "frame_problems": []
+  },
+  {
+   "rank": 17,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6630,
+     "candidatesTokenCount": 121,
+     "totalTokenCount": 6751,
+     "cachedContentTokenCount": 3036,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6630
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3036
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "term_mismatch",
+   "frame_problems": []
+  },
+  {
+   "rank": 17,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6630,
+     "candidatesTokenCount": 118,
+     "totalTokenCount": 6748,
+     "cachedContentTokenCount": 3036,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6630
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3036
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "term_mismatch",
+   "frame_problems": []
+  },
+  {
+   "rank": 17,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6630,
+     "candidatesTokenCount": 137,
+     "totalTokenCount": 6767,
+     "cachedContentTokenCount": 3036,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6630
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3036
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "term_mismatch",
+   "frame_problems": []
+  },
+  {
+   "rank": 18,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6698,
+     "candidatesTokenCount": 473,
+     "totalTokenCount": 7171,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6698
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7268,
+     "candidatesTokenCount": 926,
+     "totalTokenCount": 8194,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7268
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 18,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6698,
+     "candidatesTokenCount": 466,
+     "totalTokenCount": 7164,
+     "cachedContentTokenCount": 3069,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6698
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3069
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7262,
+     "candidatesTokenCount": 885,
+     "totalTokenCount": 8147,
+     "cachedContentTokenCount": 5091,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7262
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5091
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 18,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6698,
+     "candidatesTokenCount": 462,
+     "totalTokenCount": 7160,
+     "cachedContentTokenCount": 3069,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6698
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3069
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7258,
+     "candidatesTokenCount": 969,
+     "totalTokenCount": 8227,
+     "cachedContentTokenCount": 5090,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7258
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5090
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 18,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6698,
+     "candidatesTokenCount": 479,
+     "totalTokenCount": 7177,
+     "cachedContentTokenCount": 3069,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6698
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3069
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7275,
+     "candidatesTokenCount": 774,
+     "totalTokenCount": 8049,
+     "cachedContentTokenCount": 5095,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7275
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5095
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 18,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6698,
+     "candidatesTokenCount": 475,
+     "totalTokenCount": 7173,
+     "cachedContentTokenCount": 3069,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6698
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3069
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 7271,
+     "candidatesTokenCount": 955,
+     "totalTokenCount": 8226,
+     "cachedContentTokenCount": 5093,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 7271
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 5093
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 19,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6300,
+     "candidatesTokenCount": 126,
+     "totalTokenCount": 6426,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6300
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 19,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6300,
+     "candidatesTokenCount": 151,
+     "totalTokenCount": 6451,
+     "cachedContentTokenCount": 2995,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6300
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 2995
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 19,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6300,
+     "candidatesTokenCount": 160,
+     "totalTokenCount": 6460,
+     "cachedContentTokenCount": 2995,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6300
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 2995
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 19,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6300,
+     "candidatesTokenCount": 594,
+     "totalTokenCount": 6894,
+     "cachedContentTokenCount": 2995,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6300
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 2995
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 6980,
+     "candidatesTokenCount": 941,
+     "totalTokenCount": 7921,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6980
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 19,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6300,
+     "candidatesTokenCount": 553,
+     "totalTokenCount": 6853,
+     "cachedContentTokenCount": 2995,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6300
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 2995
+      }
+     ],
+     "serviceTier": "standard"
+    },
+    {
+     "promptTokenCount": 6945,
+     "candidatesTokenCount": 1027,
+     "totalTokenCount": 7972,
+     "cachedContentTokenCount": 4938,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6945
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 4938
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "complete",
+   "insufficient_reason": "none",
+   "frame_problems": [],
+   "briefing_http": 200,
+   "briefing_problems": []
+  },
+  {
+   "rank": 20,
+   "rep": 1,
+   "seed": 20261008,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6340,
+     "candidatesTokenCount": 109,
+     "totalTokenCount": 6449,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6340
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "term_mismatch",
+   "frame_problems": []
+  },
+  {
+   "rank": 20,
+   "rep": 2,
+   "seed": 20261009,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6340,
+     "candidatesTokenCount": 325,
+     "totalTokenCount": 6665,
+     "cachedContentTokenCount": 3065,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6340
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3065
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "no_combination_evidence",
+   "frame_problems": []
+  },
+  {
+   "rank": 20,
+   "rep": 3,
+   "seed": 20261010,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6340,
+     "candidatesTokenCount": 121,
+     "totalTokenCount": 6461,
+     "cachedContentTokenCount": 3065,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6340
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3065
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "term_mismatch",
+   "frame_problems": []
+  },
+  {
+   "rank": 20,
+   "rep": 4,
+   "seed": 20261011,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6340,
+     "candidatesTokenCount": 94,
+     "totalTokenCount": 6434,
+     "cachedContentTokenCount": 3065,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6340
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3065
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "term_mismatch",
+   "frame_problems": []
+  },
+  {
+   "rank": 20,
+   "rep": 5,
+   "seed": 20261012,
+   "frame_http": 200,
+   "model_version": "gemini-3.5-flash-lite",
+   "tokens": [
+    {
+     "promptTokenCount": 6340,
+     "candidatesTokenCount": 92,
+     "totalTokenCount": 6432,
+     "cachedContentTokenCount": 3065,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 6340
+      }
+     ],
+     "cacheTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 3065
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   ],
+   "frame_status": "insufficient_concept",
+   "insufficient_reason": "term_mismatch",
+   "frame_problems": []
+  }
+ ]
+}
