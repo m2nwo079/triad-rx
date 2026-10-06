@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "step": "label_evidence_score",
+    "timepoint": "T1",
+    "created": "2026-10-06",
+    "git_commit": "c8761de43e87d51defe3f5b9837a66b8296d3642",
+    "rule": "adopt when the Wilson lower bound of rule positives exceeds the upper bound of rule negatives",
+    "files_sha256": {
+      "review": "6ef6d857c6200218d430997066ac48d4ac2a2f387acd1959f3be54c96e8c9354",
+      "original": "752143ddc7ba61ec96d77b37a8ecebbc3e84e6d6c8a80ac8c31a6caa710f72f3",
+      "key": "6d23fce90698a211c4b880be3275faf5f0f9d0d36481367028a6c83395038b6c"
+    }
+  },
+  "rule_positive": {
+    "n": 100,
+    "judgements": {
+      "combination": 48,
+      "comparison": 18,
+      "mention": 34
+    },
+    "term_errors": 13,
+    "combination_share": 0.48,
+    "wilson_lower": 0.38464551758051896,
+    "wilson_upper": 0.5768342223477603
+  },
+  "rule_negative": {
+    "n": 50,
+    "judgements": {
+      "combination": 16,
+      "comparison": 8,
+      "mention": 26
+    },
+    "term_errors": 9,
+    "combination_share": 0.32,
+    "wilson_lower": 0.20758216260656845,
+    "wilson_upper": 0.45810297308144077
+  },
+  "adopted": false
+}

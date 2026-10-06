@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "step": "conditional_coverage",
+    "created": "2026-10-06",
+    "git_commit": "0e9096182ddd1c13927298c2d78a96fac1a861c2",
+    "conditional_config": {
+      "timepoints": [
+        "T1",
+        "T2"
+      ],
+      "pair_min_counts": [
+        1,
+        5
+      ],
+      "stable_pairs": true
+    },
+    "stability": 0.95,
+    "inputs_sha256": {
+      "T1": {
+        "build": "8341d847af667956b9dd384b484dfb31d699a941f43d1991607d61c5002f9cdd",
+        "labels_v2": "54dd9da777403cd48ac3b6899127029f5c3d09751b86765073c1288683dc73f2",
+        "candidates": "6aa149df9bb84f0c866f789c31f5c598e6f9033d3f2e03b414188606c8f207ba"
+      },
+      "T2": {
+        "build": "bdc988660a6a184102fde269596f4e2fc1c379f33b86c4cc5a8c8ef0f1c9586d",
+        "labels_v2": "9cbb0ab582e8ccbef55bd82104dd6adbaf4cd8f8637caa44ceda370060801e13",
+        "candidates": "2f4d83386c782dab1b9d86b90eac1959b7e16446c4b977c4ae4359430ac05244"
+      }
+    },
+    "note": "Descriptive development diagnostics; never a verdict."
+  },
+  "timepoints": {
+    "T1": {
+      "label_v2": {
+        "min_1": {
+          "triads": 5506,
+          "by_qualifying_pairs": {
+            "0": 721,
+            "1": 1731,
+            "2": 2103,
+            "3": 951
+          },
+          "coverage": 0.8690519433345442,
+          "candidate_recall": 0.01580094442426444
+        },
+        "min_5": {
+          "triads": 5506,
+          "by_qualifying_pairs": {
+            "0": 2412,
+            "1": 2238,
+            "2": 750,
+            "3": 106
+          },
+          "coverage": 0.5619324373410824,
+          "candidate_recall": 0.01580094442426444
+        },
+        "stable": {
+          "triads": 5506,
+          "by_qualifying_pairs": {
+            "0": 2692,
+            "1": 2167,
+            "2": 578,
+            "3": 69
+          },
+          "coverage": 0.5110788231020704,
+          "candidate_recall": 0.01580094442426444
+        }
+      },
+      "realised_all": {
+        "min_1": {
+          "triads": 33078,
+          "by_qualifying_pairs": {
+            "0": 5152,
+            "1": 11833,
+            "2": 12152,
+            "3": 3941
+          },
+          "coverage": 0.8442469314952536,
+          "candidate_recall": 0.005834693754156841
+        },
+        "min_5": {
+          "triads": 33078,
+          "by_qualifying_pairs": {
+            "0": 17155,
+            "1": 12607,
+            "2": 3068,
+            "3": 248
+          },
+          "coverage": 0.4813773505048673,
+          "candidate_recall": 0.005834693754156841
+        },
+        "stable": {
+          "triads": 33078,
+          "by_qualifying_pairs": {
+            "0": 19103,
+            "1": 11673,
+            "2": 2152,
+            "3": 150
+          },
+          "coverage": 0.4224862446338956,
+          "candidate_recall": 0.005834693754156841
+        }
+      }
+    },
+    "T2": {
+      "label_v2": {
+        "min_1": {
+          "triads": 9262,
+          "by_qualifying_pairs": {
+            "0": 746,
+            "1": 2319,
+            "2": 3994,
+            "3": 2203
+          },
+          "coverage": 0.919455841071043,
+          "candidate_recall": 0.02278125674800259
+        },
+        "min_5": {
+          "triads": 9262,
+          "by_qualifying_pairs": {
+            "0": 2686,
+            "1": 4075,
+            "2": 2223,
+            "3": 278
+          },
+          "coverage": 0.7099978406391708,
+          "candidate_recall": 0.02278125674800259
+        },
+        "stable": {
+          "triads": 9262,
+          "by_qualifying_pairs": {
+            "0": 3124,
+            "1": 4106,
+            "2": 1852,
+            "3": 180
+          },
+          "coverage": 0.66270783847981,
+          "candidate_recall": 0.02278125674800259
+        }
+      },
+      "realised_all": {
+        "min_1": {
+          "triads": 65511,
+          "by_qualifying_pairs": {
+            "0": 6677,
+            "1": 18954,
+            "2": 28216,
+            "3": 11664
+          },
+          "coverage": 0.8980781853429195,
+          "candidate_recall": 0.011891132786860222
+        },
+        "min_5": {
+          "triads": 65511,
+          "by_qualifying_pairs": {
+            "0": 22878,
+            "1": 29230,
+            "2": 12328,
+            "3": 1075
+          },
+          "coverage": 0.6507762055227366,
+          "candidate_recall": 0.011891132786860222
+        },
+        "stable": {
+          "triads": 65511,
+          "by_qualifying_pairs": {
+            "0": 26362,
+            "1": 28711,
+            "2": 9804,
+            "3": 634
+          },
+          "coverage": 0.5975942971409381,
+          "candidate_recall": 0.011891132786860222
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "step": "candidates_learned",
+    "timepoint": "T1",
+    "created": "2026-10-06",
+    "git_commit": "a91868c280dee37151c78062cb99bbe463d63be3",
+    "environment": {
+      "python": "3.13.15",
+      "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+      "packages": {
+        "numpy": "2.1.3",
+        "pandas": "2.3.3",
+        "pyarrow": "23.0.1",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "lightgbm": "4.6.0"
+      }
+    },
+    "output_sha256": "af534e19b1452b0425caeeb949008d7f16cf27a0fa5bcf08e73985bccbb43a6f"
+  },
+  "budget": 28500,
+  "candidates": 28500,
+  "kind": {
+    "completion": 27802,
+    "open_triangle": 698
+  },
+  "label_v2_positive": 983,
+  "realised": 2881
+}

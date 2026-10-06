@@ -1,0 +1,3122 @@
+{
+  "meta": {
+    "step": "engine_signals",
+    "created": "2026-10-06",
+    "git_commit": "eb282538157435ecf4afd11d4ec2a46c3174e22d",
+    "environment": {
+      "python": "3.13.15",
+      "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+      "packages": {
+        "numpy": "2.1.3",
+        "pandas": "2.3.3",
+        "pyarrow": "23.0.1",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "lightgbm": "4.6.0"
+      }
+    },
+    "signals_config": {
+      "timepoints": [
+        "T1",
+        "T2"
+      ],
+      "sets": {
+        "E": [
+          "E_share_min",
+          "E_share_mean",
+          "E_pairs"
+        ],
+        "S": [
+          "S_ctx_max",
+          "S_ctx_mean"
+        ]
+      },
+      "models": {
+        "engine": [
+          "P",
+          "H",
+          "T",
+          "R"
+        ],
+        "engine_E": [
+          "P",
+          "H",
+          "T",
+          "R",
+          "E"
+        ],
+        "engine_S": [
+          "P",
+          "H",
+          "T",
+          "R",
+          "S"
+        ],
+        "engine_ES": [
+          "P",
+          "H",
+          "T",
+          "R",
+          "E",
+          "S"
+        ]
+      },
+      "diversify_caps": [
+        5,
+        10
+      ],
+      "learned_generator": {
+        "oof_folds": 5,
+        "chunk_rows": 2000000
+      }
+    },
+    "rediagnosis_config": {
+      "train_timepoint": "T1",
+      "eval_timepoint": "T2",
+      "models": {
+        "engine": [
+          "P",
+          "H",
+          "T",
+          "R"
+        ],
+        "engine_no_h": [
+          "P",
+          "T",
+          "R"
+        ]
+      },
+      "feature_rankings": {
+        "P_npmi_mean": "P_npmi_mean"
+      },
+      "k": [
+        100,
+        500,
+        1000,
+        5000
+      ]
+    },
+    "model_config": {
+      "type": "lightgbm_binary",
+      "params": {
+        "num_leaves": 7,
+        "min_data_in_leaf": 20,
+        "learning_rate": 0.05,
+        "feature_fraction": 0.8,
+        "bagging_fraction": 0.8,
+        "bagging_freq": 1,
+        "lambda_l2": 1.0
+      },
+      "n_estimators_max": 2000,
+      "early_stopping_rounds": 100,
+      "cv_folds": 5,
+      "cv_metric": "average_precision",
+      "seeds": [
+        20261011,
+        20261012,
+        20261013,
+        20261014,
+        20261015
+      ],
+      "engine_sets": [
+        "P",
+        "H",
+        "T",
+        "R"
+      ],
+      "v2_baseline_sets": [
+        "P",
+        "T",
+        "R"
+      ]
+    },
+    "evaluation_config": {
+      "top_k": 100,
+      "secondary_k": [
+        50,
+        500
+      ],
+      "bootstrap_n": 1000,
+      "bootstrap_seed": 20261016,
+      "ci_level": 0.95,
+      "rule": "pass only if both candidate and term-block bootstrap lower bounds exceed the threshold",
+      "score": "mean predicted probability over model seeds"
+    },
+    "inputs_sha256": {
+      "T1": {
+        "features": "847072f18971bc18520817f25a7cbb5f586128ef6ad2f5f2eacecf9cd409b454",
+        "pair_evidence": "e13afaf1ed035185e6e880b493d21f444d178b32ffa1cc4c607bbcd000fb95cd"
+      },
+      "T2": {
+        "features": "62a4566fd1b02584fb961f742680dae96cfd1583accf0783b4f63d3c3d164e12",
+        "pair_evidence": "dabad239a1cc26263457d26ae2cefa44389635eebd9185335332c507a6324893"
+      }
+    },
+    "note": "Descriptive development diagnostics; never a verdict."
+  },
+  "train": {
+    "timepoint": "T1",
+    "candidates": 28500,
+    "positives": 465
+  },
+  "eval": {
+    "timepoint": "T2",
+    "candidates": 203960,
+    "positives": 1330,
+    "base_rate": 0.006520886448323201
+  },
+  "signal_summary": {
+    "T1": {
+      "E_share_min": {
+        "count": 28500.0,
+        "mean": 0.09941624121405745,
+        "std": 0.1731498504986095,
+        "min": 0.0,
+        "25%": 0.0,
+        "50%": 0.0,
+        "75%": 0.16666666666666666,
+        "max": 1.0
+      },
+      "E_share_mean": {
+        "count": 28500.0,
+        "mean": 0.3597220962082844,
+        "std": 0.20394082437747127,
+        "min": 0.0,
+        "25%": 0.19047619047619047,
+        "50%": 0.3452380952380952,
+        "75%": 0.5,
+        "max": 1.0
+      },
+      "E_pairs": {
+        "count": 28500.0,
+        "mean": 2.044456140350877,
+        "std": 0.7580040420273919,
+        "min": 0.0,
+        "25%": 2.0,
+        "50%": 2.0,
+        "75%": 3.0,
+        "max": 3.0
+      },
+      "S_ctx_max": {
+        "count": 28500.0,
+        "mean": 0.40432056586680337,
+        "std": 0.20021955255111432,
+        "min": 0.0,
+        "25%": 0.2672612419124244,
+        "50%": 0.4082482904638631,
+        "75%": 0.545017228134852,
+        "max": 1.0
+      },
+      "S_ctx_mean": {
+        "count": 28500.0,
+        "mean": 0.24347470438219754,
+        "std": 0.1592376390361057,
+        "min": 0.0,
+        "25%": 0.12198744660907981,
+        "50%": 0.22118931499230984,
+        "75%": 0.3442079307083088,
+        "max": 0.924829508188019
+      }
+    },
+    "T2": {
+      "E_share_min": {
+        "count": 203960.0,
+        "mean": 0.09802687165740426,
+        "std": 0.1669869931133931,
+        "min": 0.0,
+        "25%": 0.0,
+        "50%": 0.0,
+        "75%": 0.18181818181818182,
+        "max": 1.0
+      },
+      "E_share_mean": {
+        "count": 203960.0,
+        "mean": 0.3441742568389047,
+        "std": 0.19816936703906962,
+        "min": 0.0,
+        "25%": 0.1818181818181818,
+        "50%": 0.32608695652173914,
+        "75%": 0.48333333333333334,
+        "max": 1.0
+      },
+      "E_pairs": {
+        "count": 203960.0,
+        "mean": 2.039198862522063,
+        "std": 0.7735395410333873,
+        "min": 0.0,
+        "25%": 1.0,
+        "50%": 2.0,
+        "75%": 3.0,
+        "max": 3.0
+      },
+      "S_ctx_max": {
+        "count": 203960.0,
+        "mean": 0.40875530108346486,
+        "std": 0.18725190711752393,
+        "min": 0.0,
+        "25%": 0.28005601680560194,
+        "50%": 0.40881490876633847,
+        "75%": 0.5401715883072107,
+        "max": 1.0
+      },
+      "S_ctx_mean": {
+        "count": 203960.0,
+        "mean": 0.2523521155513038,
+        "std": 0.152040731120622,
+        "min": 0.0,
+        "25%": 0.13706761778821194,
+        "50%": 0.23394935235251066,
+        "75%": 0.34980704446358124,
+        "max": 0.9696180963091111
+      }
+    }
+  },
+  "models": {
+    "engine": {
+      "sets": [
+        "P",
+        "H",
+        "T",
+        "R"
+      ],
+      "rounds": 320,
+      "cv_average_precision_mean": 0.1070169039003229,
+      "cv_average_precision_sd": 0.028640756452901546,
+      "importance_gain_mean": {
+        "P_npmi_max": 2207.5150472402574,
+        "R_growth_mean": 1953.8733714103698,
+        "T_volume": 1926.0638528108598,
+        "P_logfreq_min": 1212.0850890398026,
+        "H_pairedges_gmean": 1118.8120599985123,
+        "H_related_edge_size_mean": 1002.206439447403,
+        "P_npmi_mean": 996.3272217988967,
+        "H_pairedges_min": 993.8418009996415,
+        "R_growth_min": 863.557585144043,
+        "P_npmi_min": 809.6962337255478,
+        "T_cos_mean": 807.4178422927856,
+        "T_cos_min": 702.3181781053543,
+        "P_aa_min": 696.1127555131912,
+        "P_aa_mean": 632.1361865997314,
+        "P_aa_gmean": 538.5255614757538,
+        "H_size_weighted_aa": 477.8094318628311,
+        "P_logfreq_mean": 381.4169901847839,
+        "H_pairedges_mean": 358.34239082336427,
+        "P_cn_gmean": 328.99769978523256,
+        "P_cn_mean": 255.9317281961441,
+        "P_cn_min": 154.4547894001007,
+        "H_triad_cn": 64.97002201080322,
+        "H_open_triangle": 16.780404376983643
+      }
+    },
+    "engine_E": {
+      "sets": [
+        "P",
+        "H",
+        "T",
+        "R",
+        "E"
+      ],
+      "rounds": 169,
+      "cv_average_precision_mean": 0.12114995990469937,
+      "cv_average_precision_sd": 0.035195116997678674,
+      "importance_gain_mean": {
+        "P_npmi_max": 1878.7758919239045,
+        "T_volume": 1654.339998149872,
+        "R_growth_mean": 1551.0258529663085,
+        "E_share_min": 1109.7884991168976,
+        "E_share_mean": 863.5644419193268,
+        "H_pairedges_gmean": 762.5463101387024,
+        "P_logfreq_min": 754.8725700378418,
+        "R_growth_min": 724.1667304515838,
+        "H_pairedges_min": 669.6698130130768,
+        "P_npmi_mean": 592.0361319541931,
+        "H_related_edge_size_mean": 518.0042009353638,
+        "P_npmi_min": 507.9963119029999,
+        "T_cos_mean": 447.44033513069155,
+        "P_aa_min": 429.4005722999573,
+        "T_cos_min": 387.6455164909363,
+        "P_aa_gmean": 364.07520599365233,
+        "P_aa_mean": 299.00755271911623,
+        "H_size_weighted_aa": 239.86894416809082,
+        "P_logfreq_mean": 194.74803042411804,
+        "H_pairedges_mean": 169.13366823196412,
+        "P_cn_gmean": 140.25025854110717,
+        "P_cn_mean": 117.66806764602661,
+        "P_cn_min": 58.88107604980469,
+        "E_pairs": 45.09150185585022,
+        "H_triad_cn": 26.429588413238527,
+        "H_open_triangle": 3.3611800193786623
+      }
+    },
+    "engine_S": {
+      "sets": [
+        "P",
+        "H",
+        "T",
+        "R",
+        "S"
+      ],
+      "rounds": 143,
+      "cv_average_precision_mean": 0.10520413844994499,
+      "cv_average_precision_sd": 0.031181421185109724,
+      "importance_gain_mean": {
+        "P_npmi_max": 1829.5777714252472,
+        "R_growth_mean": 1601.002083683014,
+        "T_volume": 1501.6152440547944,
+        "H_pairedges_min": 918.4992559432983,
+        "P_logfreq_min": 795.8484532356263,
+        "R_growth_min": 759.7789584636688,
+        "H_pairedges_gmean": 741.562397146225,
+        "P_npmi_mean": 632.0973973751068,
+        "H_related_edge_size_mean": 575.2598944664002,
+        "T_cos_mean": 477.6407591819763,
+        "P_aa_min": 415.9183424472809,
+        "P_npmi_min": 365.76128726005555,
+        "S_ctx_max": 357.6083884716034,
+        "P_aa_gmean": 343.9216752052307,
+        "S_ctx_mean": 315.86941089630125,
+        "P_aa_mean": 290.6076910018921,
+        "T_cos_min": 270.2862542629242,
+        "H_size_weighted_aa": 205.5383388519287,
+        "H_pairedges_mean": 184.19185075759887,
+        "P_logfreq_mean": 152.54700779914856,
+        "P_cn_gmean": 114.72044792175294,
+        "P_cn_min": 92.60064835548401,
+        "P_cn_mean": 91.75813412666321,
+        "H_triad_cn": 17.13190622329712,
+        "H_open_triangle": 6.120741987228394
+      }
+    },
+    "engine_ES": {
+      "sets": [
+        "P",
+        "H",
+        "T",
+        "R",
+        "E",
+        "S"
+      ],
+      "rounds": 249,
+      "cv_average_precision_mean": 0.1242902828272926,
+      "cv_average_precision_sd": 0.031605242127792976,
+      "importance_gain_mean": {
+        "P_npmi_max": 1952.9862162590027,
+        "T_volume": 1746.2278329372407,
+        "R_growth_mean": 1640.839285850525,
+        "E_share_min": 1220.1266357421875,
+        "E_share_mean": 971.8853688240051,
+        "P_logfreq_min": 902.0113759994507,
+        "H_pairedges_gmean": 840.142202425003,
+        "R_growth_min": 823.7279059410096,
+        "H_related_edge_size_mean": 710.5818576812744,
+        "H_pairedges_min": 687.759997844696,
+        "P_npmi_min": 670.2510678768158,
+        "P_npmi_mean": 662.8391545772553,
+        "T_cos_mean": 523.9448855876923,
+        "T_cos_min": 522.8993781089782,
+        "S_ctx_max": 502.54607372283937,
+        "S_ctx_mean": 462.9587118625641,
+        "P_aa_min": 435.20061779022217,
+        "P_aa_gmean": 422.01434726715087,
+        "P_aa_mean": 363.88026490211485,
+        "H_size_weighted_aa": 329.95820384025575,
+        "H_pairedges_mean": 290.68492765426635,
+        "P_logfreq_mean": 284.1091497898102,
+        "P_cn_gmean": 185.2066562652588,
+        "P_cn_mean": 141.49033846855164,
+        "P_cn_min": 118.43947257995606,
+        "E_pairs": 38.20891399383545,
+        "H_triad_cn": 36.63568205833435,
+        "H_open_triangle": 7.684949970245361
+      }
+    }
+  },
+  "rankings": {
+    "engine": {
+      "by_k": {
+        "100": {
+          "precision": 0.18,
+          "lift": 27.60360902255639,
+          "distinct_terms": 144,
+          "top_terms": [
+            [
+              "M:bert",
+              14
+            ],
+            [
+              "T:deep reinforcement learning",
+              11
+            ],
+            [
+              "M:deep q network",
+              9
+            ],
+            [
+              "T:reinforcement learning",
+              9
+            ],
+            [
+              "T:multi agent reinforcement learning",
+              9
+            ]
+          ],
+          "top_terms_slot_share": 0.17333333333333334,
+          "max_term_triad_share": 0.14,
+          "hits": 18,
+          "hit_distinct_terms": 42
+        },
+        "500": {
+          "precision": 0.114,
+          "lift": 17.482285714285716,
+          "distinct_terms": 325,
+          "top_terms": [
+            [
+              "M:bert",
+              59
+            ],
+            [
+              "M:transformer",
+              57
+            ],
+            [
+              "M:gpt 2",
+              30
+            ],
+            [
+              "M:deep q network",
+              29
+            ],
+            [
+              "T:deep reinforcement learning",
+              29
+            ]
+          ],
+          "top_terms_slot_share": 0.136,
+          "max_term_triad_share": 0.118,
+          "hits": 57,
+          "hit_distinct_terms": 101
+        },
+        "1000": {
+          "precision": 0.081,
+          "lift": 12.421624060150377,
+          "distinct_terms": 499,
+          "top_terms": [
+            [
+              "M:transformer",
+              132
+            ],
+            [
+              "M:bert",
+              126
+            ],
+            [
+              "M:gpt 2",
+              54
+            ],
+            [
+              "T:deep reinforcement learning",
+              49
+            ],
+            [
+              "T:contrastive learning",
+              46
+            ]
+          ],
+          "top_terms_slot_share": 0.13566666666666666,
+          "max_term_triad_share": 0.132,
+          "hits": 81,
+          "hit_distinct_terms": 130
+        },
+        "5000": {
+          "precision": 0.049,
+          "lift": 7.5143157894736845,
+          "distinct_terms": 1102,
+          "top_terms": [
+            [
+              "M:transformer",
+              709
+            ],
+            [
+              "M:bert",
+              542
+            ],
+            [
+              "M:attention",
+              289
+            ],
+            [
+              "T:contrastive learning",
+              184
+            ],
+            [
+              "M:gpt 2",
+              150
+            ]
+          ],
+          "top_terms_slot_share": 0.12493333333333333,
+          "max_term_triad_share": 0.1418,
+          "hits": 245,
+          "hit_distinct_terms": 287
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 15.532712360074278,
+            "upper": 38.89919373236371,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 3.1184916917787477,
+            "upper": 67.77247363171193,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 13.232288849861881,
+            "upper": 21.740032489513936,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 6.470038302696133,
+            "upper": 30.42555287040078,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 10.069980583961541,
+            "upper": 15.103308816363114,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 6.2411062832900726,
+            "upper": 22.134993875436088,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 6.7180630317025525,
+            "upper": 8.321163246525604,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 5.053940755405406,
+            "upper": 10.612676308799113,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine_cap5": {
+      "by_k": {
+        "100": {
+          "precision": 0.15,
+          "lift": 23.00300751879699,
+          "distinct_terms": 147,
+          "top_terms": [
+            [
+              "T:prediction",
+              5
+            ],
+            [
+              "T:regression",
+              5
+            ],
+            [
+              "M:transformer",
+              5
+            ],
+            [
+              "M:bert",
+              5
+            ],
+            [
+              "M:deep q network",
+              5
+            ]
+          ],
+          "top_terms_slot_share": 0.08333333333333333,
+          "max_term_triad_share": 0.05,
+          "hits": 15,
+          "hit_distinct_terms": 38
+        },
+        "500": {
+          "precision": 0.062,
+          "lift": 9.50790977443609,
+          "distinct_terms": 525,
+          "top_terms": [
+            [
+              "M:hyper parameter optimization",
+              5
+            ],
+            [
+              "T:hyperparameter optimization",
+              5
+            ],
+            [
+              "T:prediction",
+              5
+            ],
+            [
+              "M:k nn",
+              5
+            ],
+            [
+              "M:linear regression",
+              5
+            ]
+          ],
+          "top_terms_slot_share": 0.016666666666666666,
+          "max_term_triad_share": 0.01,
+          "hits": 31,
+          "hit_distinct_terms": 71
+        },
+        "1000": {
+          "precision": 0.054,
+          "lift": 8.281082706766917,
+          "distinct_terms": 815,
+          "top_terms": [
+            [
+              "M:bert",
+              39
+            ],
+            [
+              "M:transformer",
+              26
+            ],
+            [
+              "M:soft actor critic",
+              18
+            ],
+            [
+              "M:gpt 2",
+              18
+            ],
+            [
+              "M:deep q network",
+              17
+            ]
+          ],
+          "top_terms_slot_share": 0.03933333333333333,
+          "max_term_triad_share": 0.039,
+          "hits": 54,
+          "hit_distinct_terms": 112
+        },
+        "5000": {
+          "precision": 0.0464,
+          "lift": 7.115596992481202,
+          "distinct_terms": 1186,
+          "top_terms": [
+            [
+              "M:transformer",
+              659
+            ],
+            [
+              "M:bert",
+              504
+            ],
+            [
+              "M:attention",
+              259
+            ],
+            [
+              "T:contrastive learning",
+              172
+            ],
+            [
+              "M:gpt 2",
+              138
+            ]
+          ],
+          "top_terms_slot_share": 0.11546666666666666,
+          "max_term_triad_share": 0.1318,
+          "hits": 232,
+          "hit_distinct_terms": 280
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 12.676451688445509,
+            "upper": 35.00242235249948,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 1.5580612485233853,
+            "upper": 63.97897480134708,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 6.16181727184632,
+            "upper": 12.690457133670005,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 2.1147087718551467,
+            "upper": 21.71191742797495,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 6.0442925566533505,
+            "upper": 10.317591385895389,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 2.9033494502481703,
+            "upper": 15.38494510231989,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 6.3699120430107525,
+            "upper": 7.963317252821491,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.902587469402165,
+            "upper": 10.28407372409921,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_engine_ci": {
+        "100": {
+          "candidate": {
+            "lower": -0.06999999999999998,
+            "upper": 0.03,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.18,
+            "upper": 0.08000000000000002,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": -0.07799999999999999,
+            "upper": -0.025950000000000042,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.12804999999999997,
+            "upper": 0.034,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": -0.041999999999999996,
+            "upper": -0.013999999999999999,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.08502499999999998,
+            "upper": 0.006999999999999999,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": -0.004400000000000001,
+            "upper": -0.0005999999999999964,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.006804999999999996,
+            "upper": 0.001999999999999995,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine_cap10": {
+      "by_k": {
+        "100": {
+          "precision": 0.17,
+          "lift": 26.070075187969927,
+          "distinct_terms": 144,
+          "top_terms": [
+            [
+              "M:bert",
+              10
+            ],
+            [
+              "T:deep reinforcement learning",
+              10
+            ],
+            [
+              "T:reinforcement learning",
+              10
+            ],
+            [
+              "T:multi agent reinforcement learning",
+              9
+            ],
+            [
+              "M:transformer",
+              8
+            ]
+          ],
+          "top_terms_slot_share": 0.15666666666666668,
+          "max_term_triad_share": 0.1,
+          "hits": 17,
+          "hit_distinct_terms": 40
+        },
+        "500": {
+          "precision": 0.094,
+          "lift": 14.415218045112782,
+          "distinct_terms": 395,
+          "top_terms": [
+            [
+              "T:hyperparameter optimization",
+              10
+            ],
+            [
+              "T:prediction",
+              10
+            ],
+            [
+              "M:logistic regression",
+              10
+            ],
+            [
+              "M:normalizing flows",
+              10
+            ],
+            [
+              "T:regression",
+              10
+            ]
+          ],
+          "top_terms_slot_share": 0.03333333333333333,
+          "max_term_triad_share": 0.02,
+          "hits": 47,
+          "hit_distinct_terms": 91
+        },
+        "1000": {
+          "precision": 0.058,
+          "lift": 8.894496240601503,
+          "distinct_terms": 663,
+          "top_terms": [
+            [
+              "M:hyper parameter optimization",
+              10
+            ],
+            [
+              "T:hyperparameter optimization",
+              10
+            ],
+            [
+              "T:prediction",
+              10
+            ],
+            [
+              "M:k nn",
+              10
+            ],
+            [
+              "M:linear regression",
+              10
+            ]
+          ],
+          "top_terms_slot_share": 0.016666666666666666,
+          "max_term_triad_share": 0.01,
+          "hits": 58,
+          "hit_distinct_terms": 117
+        },
+        "5000": {
+          "precision": 0.045,
+          "lift": 6.900902255639098,
+          "distinct_terms": 1199,
+          "top_terms": [
+            [
+              "M:transformer",
+              600
+            ],
+            [
+              "M:bert",
+              457
+            ],
+            [
+              "M:attention",
+              229
+            ],
+            [
+              "T:contrastive learning",
+              161
+            ],
+            [
+              "M:gpt 2",
+              132
+            ]
+          ],
+          "top_terms_slot_share": 0.10526666666666666,
+          "max_term_triad_share": 0.12,
+          "hits": 225,
+          "hit_distinct_terms": 278
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 15.0401919573139,
+            "upper": 38.2253622836469,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 2.959486566054911,
+            "upper": 67.5790478184799,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 10.467183783260767,
+            "upper": 18.211392777304663,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.165788195689762,
+            "upper": 28.050887849599345,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 6.686964334504294,
+            "upper": 11.157697781388784,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 3.244206458954958,
+            "upper": 16.675806718677045,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 6.111051196513207,
+            "upper": 7.658548184293359,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.621274563467894,
+            "upper": 9.645209014120667,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_engine_ci": {
+        "100": {
+          "candidate": {
+            "lower": -0.03,
+            "upper": 0.020000000000000018,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.06000000000000001,
+            "upper": 0.04000000000000001,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": -0.04200000000000001,
+            "upper": 0.0040000000000000036,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.082,
+            "upper": 0.05600000000000001,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": -0.038,
+            "upper": -0.008000000000000007,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.07500000000000001,
+            "upper": 0.015,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": -0.006604999999999997,
+            "upper": -0.001800000000000003,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.010799999999999997,
+            "upper": 0.0010049999999999963,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine_E": {
+      "by_k": {
+        "100": {
+          "precision": 0.16,
+          "lift": 24.53654135338346,
+          "distinct_terms": 125,
+          "top_terms": [
+            [
+              "M:bert",
+              20
+            ],
+            [
+              "M:gpt 2",
+              15
+            ],
+            [
+              "M:transformer",
+              9
+            ],
+            [
+              "M:attention",
+              7
+            ],
+            [
+              "M:mixup",
+              7
+            ]
+          ],
+          "top_terms_slot_share": 0.19333333333333333,
+          "max_term_triad_share": 0.2,
+          "hits": 16,
+          "hit_distinct_terms": 40
+        },
+        "500": {
+          "precision": 0.116,
+          "lift": 17.788992481203007,
+          "distinct_terms": 344,
+          "top_terms": [
+            [
+              "M:transformer",
+              83
+            ],
+            [
+              "M:bert",
+              80
+            ],
+            [
+              "M:gpt 2",
+              44
+            ],
+            [
+              "M:graph convolutional network",
+              29
+            ],
+            [
+              "M:gpt 3",
+              25
+            ]
+          ],
+          "top_terms_slot_share": 0.174,
+          "max_term_triad_share": 0.166,
+          "hits": 58,
+          "hit_distinct_terms": 107
+        },
+        "1000": {
+          "precision": 0.091,
+          "lift": 13.95515789473684,
+          "distinct_terms": 512,
+          "top_terms": [
+            [
+              "M:transformer",
+              186
+            ],
+            [
+              "M:bert",
+              159
+            ],
+            [
+              "M:gpt 2",
+              66
+            ],
+            [
+              "M:attention",
+              53
+            ],
+            [
+              "M:graph convolutional network",
+              50
+            ]
+          ],
+          "top_terms_slot_share": 0.17133333333333334,
+          "max_term_triad_share": 0.186,
+          "hits": 91,
+          "hit_distinct_terms": 146
+        },
+        "5000": {
+          "precision": 0.0578,
+          "lift": 8.863825563909774,
+          "distinct_terms": 1126,
+          "top_terms": [
+            [
+              "M:transformer",
+              773
+            ],
+            [
+              "M:bert",
+              606
+            ],
+            [
+              "M:attention",
+              358
+            ],
+            [
+              "M:graph convolutional network",
+              174
+            ],
+            [
+              "M:gpt 2",
+              163
+            ]
+          ],
+          "top_terms_slot_share": 0.13826666666666668,
+          "max_term_triad_share": 0.1546,
+          "hits": 289,
+          "hit_distinct_terms": 320
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 15.589143846548883,
+            "upper": 37.6337817278987,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.400741199210809,
+            "upper": 59.78267100226205,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 13.358890347511323,
+            "upper": 21.600559461702495,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 7.460457251262117,
+            "upper": 31.206219383008218,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 11.405128816590866,
+            "upper": 16.685373619244782,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 7.6486612769769415,
+            "upper": 22.682197276433598,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 7.960112989653206,
+            "upper": 9.685792294015435,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 5.942147699446767,
+            "upper": 11.903037277593215,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_engine_ci": {
+        "100": {
+          "candidate": {
+            "lower": -0.07999999999999999,
+            "upper": 0.07,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.18000000000000002,
+            "upper": 0.19999999999999998,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": -0.02004999999999997,
+            "upper": 0.02600000000000001,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.062,
+            "upper": 0.08399999999999999,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": -0.0040000000000000036,
+            "upper": 0.024999999999999994,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.03502499999999998,
+            "upper": 0.047999999999999994,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 0.004199999999999995,
+            "upper": 0.013400000000000002,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.004004999999999992,
+            "upper": 0.020604999999999995,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine_E_cap5": {
+      "by_k": {
+        "100": {
+          "precision": 0.2,
+          "lift": 30.670676691729327,
+          "distinct_terms": 141,
+          "top_terms": [
+            [
+              "M:attention",
+              5
+            ],
+            [
+              "M:mixup",
+              5
+            ],
+            [
+              "T:data augmentation",
+              5
+            ],
+            [
+              "M:transformer",
+              5
+            ],
+            [
+              "M:bert",
+              5
+            ]
+          ],
+          "top_terms_slot_share": 0.08333333333333333,
+          "max_term_triad_share": 0.05,
+          "hits": 20,
+          "hit_distinct_terms": 51
+        },
+        "500": {
+          "precision": 0.072,
+          "lift": 11.041443609022556,
+          "distinct_terms": 497,
+          "top_terms": [
+            [
+              "M:attention",
+              5
+            ],
+            [
+              "M:moco",
+              5
+            ],
+            [
+              "M:simclr",
+              5
+            ],
+            [
+              "M:mixup",
+              5
+            ],
+            [
+              "T:data augmentation",
+              5
+            ]
+          ],
+          "top_terms_slot_share": 0.016666666666666666,
+          "max_term_triad_share": 0.01,
+          "hits": 36,
+          "hit_distinct_terms": 89
+        },
+        "1000": {
+          "precision": 0.062,
+          "lift": 9.50790977443609,
+          "distinct_terms": 803,
+          "top_terms": [
+            [
+              "M:bert",
+              47
+            ],
+            [
+              "M:transformer",
+              40
+            ],
+            [
+              "M:gpt 2",
+              32
+            ],
+            [
+              "T:data augmentation",
+              15
+            ],
+            [
+              "M:graph convolutional network",
+              15
+            ]
+          ],
+          "top_terms_slot_share": 0.049666666666666665,
+          "max_term_triad_share": 0.047,
+          "hits": 62,
+          "hit_distinct_terms": 133
+        },
+        "5000": {
+          "precision": 0.055,
+          "lift": 8.434436090225564,
+          "distinct_terms": 1217,
+          "top_terms": [
+            [
+              "M:transformer",
+              720
+            ],
+            [
+              "M:bert",
+              570
+            ],
+            [
+              "M:attention",
+              328
+            ],
+            [
+              "M:graph convolutional network",
+              167
+            ],
+            [
+              "M:gpt 2",
+              153
+            ]
+          ],
+          "top_terms_slot_share": 0.1292,
+          "max_term_triad_share": 0.144,
+          "hits": 275,
+          "hit_distinct_terms": 311
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 17.864133609071725,
+            "upper": 41.40697247259716,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 3.5046067214817525,
+            "upper": 63.799391010888705,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 7.747779103458079,
+            "upper": 14.526964794120117,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 3.224705789671503,
+            "upper": 21.87919400292417,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 7.123036441093799,
+            "upper": 11.749671146297805,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 3.941792264991335,
+            "upper": 15.639530949519228,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 7.644359780976458,
+            "upper": 9.301702121250933,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 5.6639806730892746,
+            "upper": 11.443756326159212,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_engine_ci": {
+        "100": {
+          "candidate": {
+            "lower": -0.06,
+            "upper": 0.09,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.18999999999999997,
+            "upper": 0.1902499999999998,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": -0.06600000000000002,
+            "upper": -0.016,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.118,
+            "upper": 0.03799999999999999,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": -0.036,
+            "upper": -0.0040000000000000036,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.077025,
+            "upper": 0.015,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 0.0019949999999999994,
+            "upper": 0.010605,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.005999999999999998,
+            "upper": 0.016805000000000004,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine_E_cap10": {
+      "by_k": {
+        "100": {
+          "precision": 0.2,
+          "lift": 30.670676691729327,
+          "distinct_terms": 134,
+          "top_terms": [
+            [
+              "M:transformer",
+              10
+            ],
+            [
+              "M:bert",
+              10
+            ],
+            [
+              "M:gpt 2",
+              10
+            ],
+            [
+              "M:attention",
+              8
+            ],
+            [
+              "T:contrastive learning",
+              8
+            ]
+          ],
+          "top_terms_slot_share": 0.15333333333333332,
+          "max_term_triad_share": 0.1,
+          "hits": 20,
+          "hit_distinct_terms": 47
+        },
+        "500": {
+          "precision": 0.122,
+          "lift": 18.709112781954886,
+          "distinct_terms": 394,
+          "top_terms": [
+            [
+              "M:attention",
+              10
+            ],
+            [
+              "M:simclr",
+              10
+            ],
+            [
+              "M:mixup",
+              10
+            ],
+            [
+              "T:data augmentation",
+              10
+            ],
+            [
+              "M:transformer",
+              10
+            ]
+          ],
+          "top_terms_slot_share": 0.03333333333333333,
+          "max_term_triad_share": 0.02,
+          "hits": 61,
+          "hit_distinct_terms": 122
+        },
+        "1000": {
+          "precision": 0.07,
+          "lift": 10.734736842105264,
+          "distinct_terms": 648,
+          "top_terms": [
+            [
+              "M:attention",
+              10
+            ],
+            [
+              "M:moco",
+              10
+            ],
+            [
+              "M:simclr",
+              10
+            ],
+            [
+              "M:mixup",
+              10
+            ],
+            [
+              "T:data augmentation",
+              10
+            ]
+          ],
+          "top_terms_slot_share": 0.016666666666666666,
+          "max_term_triad_share": 0.01,
+          "hits": 70,
+          "hit_distinct_terms": 141
+        },
+        "5000": {
+          "precision": 0.052,
+          "lift": 7.974375939849623,
+          "distinct_terms": 1239,
+          "top_terms": [
+            [
+              "M:transformer",
+              657
+            ],
+            [
+              "M:bert",
+              525
+            ],
+            [
+              "M:attention",
+              294
+            ],
+            [
+              "M:graph convolutional network",
+              154
+            ],
+            [
+              "M:gpt 2",
+              147
+            ]
+          ],
+          "top_terms_slot_share": 0.11846666666666666,
+          "max_term_triad_share": 0.1314,
+          "hits": 260,
+          "hit_distinct_terms": 303
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 19.153465754805758,
+            "upper": 42.36103946587537,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 5.596270803106226,
+            "upper": 61.89514324532821,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 14.404207398241038,
+            "upper": 23.035168938166212,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 7.566268011784958,
+            "upper": 32.16438770225532,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 8.638829177997644,
+            "upper": 13.394242969415622,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.964727590901295,
+            "upper": 19.0347413552471,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 7.18596677452072,
+            "upper": 8.810071086522074,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 5.414603100206624,
+            "upper": 11.069187967727492,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_engine_ci": {
+        "100": {
+          "candidate": {
+            "lower": -0.05000000000000002,
+            "upper": 0.10999999999999999,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.16000000000000003,
+            "upper": 0.21,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": -0.016,
+            "upper": 0.036000000000000004,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.062,
+            "upper": 0.09,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": -0.024999999999999994,
+            "upper": 0.006024999999999983,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.06302499999999998,
+            "upper": 0.03202499999999998,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": -0.0013999999999999985,
+            "upper": 0.007200000000000005,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.008604999999999993,
+            "upper": 0.015399999999999997,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine_S": {
+      "by_k": {
+        "100": {
+          "precision": 0.18,
+          "lift": 27.60360902255639,
+          "distinct_terms": 140,
+          "top_terms": [
+            [
+              "M:bert",
+              11
+            ],
+            [
+              "M:gpt 2",
+              9
+            ],
+            [
+              "M:transformer",
+              8
+            ],
+            [
+              "T:contrastive learning",
+              8
+            ],
+            [
+              "T:prediction",
+              7
+            ]
+          ],
+          "top_terms_slot_share": 0.14333333333333334,
+          "max_term_triad_share": 0.11,
+          "hits": 18,
+          "hit_distinct_terms": 43
+        },
+        "500": {
+          "precision": 0.116,
+          "lift": 17.788992481203007,
+          "distinct_terms": 323,
+          "top_terms": [
+            [
+              "M:bert",
+              74
+            ],
+            [
+              "M:transformer",
+              48
+            ],
+            [
+              "M:gpt 2",
+              37
+            ],
+            [
+              "T:contrastive learning",
+              28
+            ],
+            [
+              "M:deep q network",
+              23
+            ]
+          ],
+          "top_terms_slot_share": 0.14,
+          "max_term_triad_share": 0.148,
+          "hits": 58,
+          "hit_distinct_terms": 106
+        },
+        "1000": {
+          "precision": 0.081,
+          "lift": 12.421624060150377,
+          "distinct_terms": 460,
+          "top_terms": [
+            [
+              "M:bert",
+              125
+            ],
+            [
+              "M:transformer",
+              114
+            ],
+            [
+              "M:gpt 2",
+              55
+            ],
+            [
+              "T:contrastive learning",
+              55
+            ],
+            [
+              "M:attention",
+              42
+            ]
+          ],
+          "top_terms_slot_share": 0.13033333333333333,
+          "max_term_triad_share": 0.125,
+          "hits": 81,
+          "hit_distinct_terms": 129
+        },
+        "5000": {
+          "precision": 0.054,
+          "lift": 8.281082706766917,
+          "distinct_terms": 1041,
+          "top_terms": [
+            [
+              "M:transformer",
+              610
+            ],
+            [
+              "M:bert",
+              515
+            ],
+            [
+              "M:attention",
+              275
+            ],
+            [
+              "T:contrastive learning",
+              169
+            ],
+            [
+              "M:graph convolutional network",
+              162
+            ]
+          ],
+          "top_terms_slot_share": 0.1154,
+          "max_term_triad_share": 0.122,
+          "hits": 270,
+          "hit_distinct_terms": 299
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 16.92998778751292,
+            "upper": 39.225176659528906,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.2992277594240145,
+            "upper": 64.1585771458238,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 13.566444113411787,
+            "upper": 22.02622907673387,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 7.320882148790803,
+            "upper": 32.41642962450292,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 10.228794100797277,
+            "upper": 15.324777612977238,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 6.521486224607459,
+            "upper": 22.742742380000134,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 7.416653046073223,
+            "upper": 9.12251257355364,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 5.411166650174072,
+            "upper": 11.216300478206719,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_engine_ci": {
+        "100": {
+          "candidate": {
+            "lower": -0.05000000000000002,
+            "upper": 0.060000000000000026,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.15,
+            "upper": 0.16,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": -0.016,
+            "upper": 0.022000000000000006,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.032,
+            "upper": 0.060049999999999965,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": -0.006999999999999992,
+            "upper": 0.009999999999999995,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.021024999999999995,
+            "upper": 0.030024999999999982,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 0.0015999999999999973,
+            "upper": 0.007800000000000001,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.003799999999999998,
+            "upper": 0.012199999999999996,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine_S_cap5": {
+      "by_k": {
+        "100": {
+          "precision": 0.19,
+          "lift": 29.13714285714286,
+          "distinct_terms": 156,
+          "top_terms": [
+            [
+              "M:soft actor critic",
+              5
+            ],
+            [
+              "T:multi agent reinforcement learning",
+              5
+            ],
+            [
+              "M:gpt 2",
+              5
+            ],
+            [
+              "M:bert",
+              5
+            ],
+            [
+              "M:hyper parameter optimization",
+              5
+            ]
+          ],
+          "top_terms_slot_share": 0.08333333333333333,
+          "max_term_triad_share": 0.05,
+          "hits": 19,
+          "hit_distinct_terms": 50
+        },
+        "500": {
+          "precision": 0.072,
+          "lift": 11.041443609022556,
+          "distinct_terms": 522,
+          "top_terms": [
+            [
+              "M:k nn",
+              5
+            ],
+            [
+              "M:linear regression",
+              5
+            ],
+            [
+              "M:logistic regression",
+              5
+            ],
+            [
+              "T:bayesian optimization",
+              5
+            ],
+            [
+              "T:neural architecture search",
+              5
+            ]
+          ],
+          "top_terms_slot_share": 0.016666666666666666,
+          "max_term_triad_share": 0.01,
+          "hits": 36,
+          "hit_distinct_terms": 84
+        },
+        "1000": {
+          "precision": 0.057,
+          "lift": 8.741142857142858,
+          "distinct_terms": 810,
+          "top_terms": [
+            [
+              "M:bert",
+              38
+            ],
+            [
+              "M:transformer",
+              31
+            ],
+            [
+              "M:gpt 2",
+              21
+            ],
+            [
+              "M:deep q network",
+              19
+            ],
+            [
+              "M:soft actor critic",
+              18
+            ]
+          ],
+          "top_terms_slot_share": 0.042333333333333334,
+          "max_term_triad_share": 0.038,
+          "hits": 57,
+          "hit_distinct_terms": 115
+        },
+        "5000": {
+          "precision": 0.0526,
+          "lift": 8.066387969924811,
+          "distinct_terms": 1128,
+          "top_terms": [
+            [
+              "M:transformer",
+              552
+            ],
+            [
+              "M:bert",
+              478
+            ],
+            [
+              "M:attention",
+              252
+            ],
+            [
+              "T:contrastive learning",
+              164
+            ],
+            [
+              "M:graph convolutional network",
+              150
+            ]
+          ],
+          "top_terms_slot_share": 0.1064,
+          "max_term_triad_share": 0.1104,
+          "hits": 263,
+          "hit_distinct_terms": 297
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 16.864789988747003,
+            "upper": 41.29696761208436,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.120455179603995,
+            "upper": 64.98059897429142,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 7.553348279101546,
+            "upper": 14.656416236439831,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 2.9580976698029073,
+            "upper": 24.00213341042036,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 6.579354838709678,
+            "upper": 11.146801583710923,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 3.3039876812295677,
+            "upper": 15.662627118393456,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 7.221123548940215,
+            "upper": 8.863953048392162,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 5.248888944900255,
+            "upper": 10.960460549410756,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_engine_ci": {
+        "100": {
+          "candidate": {
+            "lower": -0.04999999999999999,
+            "upper": 0.08000000000000002,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.15000000000000002,
+            "upper": 0.19,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": -0.066,
+            "upper": -0.016,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.112,
+            "upper": 0.044000000000000004,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": -0.038000000000000006,
+            "upper": -0.009999999999999995,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.077,
+            "upper": 0.008024999999999984,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 0.00020000000000000557,
+            "upper": 0.006400000000000003,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.005999999999999998,
+            "upper": 0.009999999999999995,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine_S_cap10": {
+      "by_k": {
+        "100": {
+          "precision": 0.17,
+          "lift": 26.070075187969927,
+          "distinct_terms": 140,
+          "top_terms": [
+            [
+              "M:bert",
+              10
+            ],
+            [
+              "M:gpt 2",
+              9
+            ],
+            [
+              "M:transformer",
+              8
+            ],
+            [
+              "T:contrastive learning",
+              8
+            ],
+            [
+              "M:deep q network",
+              7
+            ]
+          ],
+          "top_terms_slot_share": 0.14,
+          "max_term_triad_share": 0.1,
+          "hits": 17,
+          "hit_distinct_terms": 41
+        },
+        "500": {
+          "precision": 0.106,
+          "lift": 16.255458646616542,
+          "distinct_terms": 379,
+          "top_terms": [
+            [
+              "M:logistic regression",
+              10
+            ],
+            [
+              "T:neural architecture search",
+              10
+            ],
+            [
+              "T:regression",
+              10
+            ],
+            [
+              "M:soft actor critic",
+              10
+            ],
+            [
+              "T:continuous control",
+              10
+            ]
+          ],
+          "top_terms_slot_share": 0.03333333333333333,
+          "max_term_triad_share": 0.02,
+          "hits": 53,
+          "hit_distinct_terms": 105
+        },
+        "1000": {
+          "precision": 0.069,
+          "lift": 10.581383458646618,
+          "distinct_terms": 655,
+          "top_terms": [
+            [
+              "M:k nn",
+              10
+            ],
+            [
+              "M:linear regression",
+              10
+            ],
+            [
+              "M:logistic regression",
+              10
+            ],
+            [
+              "T:bayesian optimization",
+              10
+            ],
+            [
+              "T:neural architecture search",
+              10
+            ]
+          ],
+          "top_terms_slot_share": 0.016666666666666666,
+          "max_term_triad_share": 0.01,
+          "hits": 69,
+          "hit_distinct_terms": 138
+        },
+        "5000": {
+          "precision": 0.0504,
+          "lift": 7.72901052631579,
+          "distinct_terms": 1156,
+          "top_terms": [
+            [
+              "M:transformer",
+              504
+            ],
+            [
+              "M:bert",
+              431
+            ],
+            [
+              "M:attention",
+              229
+            ],
+            [
+              "T:contrastive learning",
+              158
+            ],
+            [
+              "T:deep reinforcement learning",
+              140
+            ]
+          ],
+          "top_terms_slot_share": 0.09746666666666666,
+          "max_term_triad_share": 0.1008,
+          "hits": 252,
+          "hit_distinct_terms": 296
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 16.532020291551632,
+            "upper": 38.25713925036733,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.127317665465808,
+            "upper": 64.24613515773842,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 12.182013762613284,
+            "upper": 20.474749034749035,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 5.659349733121405,
+            "upper": 29.99864339285714,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 8.075641962771146,
+            "upper": 12.894135070577029,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.496960133450987,
+            "upper": 18.761175753293315,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 6.919201359192306,
+            "upper": 8.51353646801837,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 5.074690448624754,
+            "upper": 10.480187194440894,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_engine_ci": {
+        "100": {
+          "candidate": {
+            "lower": -0.06,
+            "upper": 0.06999999999999998,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.15000000000000002,
+            "upper": 0.16,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": -0.029999999999999985,
+            "upper": 0.016,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.07,
+            "upper": 0.06404999999999995,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": -0.026999999999999996,
+            "upper": 0.0030000000000000027,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.06402499999999998,
+            "upper": 0.02802499999999998,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": -0.0020049999999999972,
+            "upper": 0.003999999999999997,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.00820999999999999,
+            "upper": 0.008,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine_ES": {
+      "by_k": {
+        "100": {
+          "precision": 0.2,
+          "lift": 30.670676691729327,
+          "distinct_terms": 132,
+          "top_terms": [
+            [
+              "M:bert",
+              14
+            ],
+            [
+              "M:gpt 2",
+              11
+            ],
+            [
+              "M:transformer",
+              8
+            ],
+            [
+              "T:data augmentation",
+              8
+            ],
+            [
+              "T:contrastive learning",
+              7
+            ]
+          ],
+          "top_terms_slot_share": 0.16,
+          "max_term_triad_share": 0.14,
+          "hits": 20,
+          "hit_distinct_terms": 49
+        },
+        "500": {
+          "precision": 0.126,
+          "lift": 19.322526315789474,
+          "distinct_terms": 349,
+          "top_terms": [
+            [
+              "M:transformer",
+              76
+            ],
+            [
+              "M:bert",
+              75
+            ],
+            [
+              "M:gpt 2",
+              39
+            ],
+            [
+              "M:graph convolutional network",
+              26
+            ],
+            [
+              "M:attention",
+              25
+            ]
+          ],
+          "top_terms_slot_share": 0.16066666666666668,
+          "max_term_triad_share": 0.152,
+          "hits": 63,
+          "hit_distinct_terms": 113
+        },
+        "1000": {
+          "precision": 0.09,
+          "lift": 13.801804511278196,
+          "distinct_terms": 524,
+          "top_terms": [
+            [
+              "M:transformer",
+              164
+            ],
+            [
+              "M:bert",
+              155
+            ],
+            [
+              "M:gpt 2",
+              59
+            ],
+            [
+              "M:attention",
+              56
+            ],
+            [
+              "M:graph convolutional network",
+              48
+            ]
+          ],
+          "top_terms_slot_share": 0.16066666666666668,
+          "max_term_triad_share": 0.164,
+          "hits": 90,
+          "hit_distinct_terms": 138
+        },
+        "5000": {
+          "precision": 0.055,
+          "lift": 8.434436090225564,
+          "distinct_terms": 1149,
+          "top_terms": [
+            [
+              "M:transformer",
+              777
+            ],
+            [
+              "M:bert",
+              574
+            ],
+            [
+              "M:attention",
+              395
+            ],
+            [
+              "M:graph convolutional network",
+              166
+            ],
+            [
+              "M:gpt 2",
+              161
+            ]
+          ],
+          "top_terms_slot_share": 0.1382,
+          "max_term_triad_share": 0.1554,
+          "hits": 275,
+          "hit_distinct_terms": 305
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 18.196836735032065,
+            "upper": 42.52330603127327,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 5.473673378015637,
+            "upper": 66.88920665585805,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 15.083190344846352,
+            "upper": 23.77177496942519,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 8.119178740168744,
+            "upper": 32.56632591519866,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 11.287316802343597,
+            "upper": 16.317096885007278,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 7.342694277107558,
+            "upper": 22.75894107335175,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 7.63709054914203,
+            "upper": 9.30409263253827,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 5.740280058817273,
+            "upper": 11.859687377543558,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_engine_ci": {
+        "100": {
+          "candidate": {
+            "lower": -0.04999999999999999,
+            "upper": 0.09,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.16,
+            "upper": 0.21000000000000002,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": -0.009999999999999981,
+            "upper": 0.03799999999999999,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.05,
+            "upper": 0.092,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": -0.0050000000000000044,
+            "upper": 0.023999999999999994,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.03502499999999998,
+            "upper": 0.04602499999999996,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 0.001600000000000004,
+            "upper": 0.010205000000000002,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.0049999999999999975,
+            "upper": 0.019004999999999998,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine_ES_cap5": {
+      "by_k": {
+        "100": {
+          "precision": 0.21,
+          "lift": 32.20421052631579,
+          "distinct_terms": 145,
+          "top_terms": [
+            [
+              "M:transformer",
+              5
+            ],
+            [
+              "M:gpt 2",
+              5
+            ],
+            [
+              "T:contrastive learning",
+              5
+            ],
+            [
+              "M:bert",
+              5
+            ],
+            [
+              "M:attention",
+              5
+            ]
+          ],
+          "top_terms_slot_share": 0.08333333333333333,
+          "max_term_triad_share": 0.05,
+          "hits": 21,
+          "hit_distinct_terms": 54
+        },
+        "500": {
+          "precision": 0.086,
+          "lift": 13.188390977443609,
+          "distinct_terms": 504,
+          "top_terms": [
+            [
+              "M:k nn",
+              5
+            ],
+            [
+              "M:linear regression",
+              5
+            ],
+            [
+              "M:logistic regression",
+              5
+            ],
+            [
+              "M:transformer",
+              5
+            ],
+            [
+              "T:natural language understanding",
+              5
+            ]
+          ],
+          "top_terms_slot_share": 0.016666666666666666,
+          "max_term_triad_share": 0.01,
+          "hits": 43,
+          "hit_distinct_terms": 103
+        },
+        "1000": {
+          "precision": 0.063,
+          "lift": 9.661263157894737,
+          "distinct_terms": 810,
+          "top_terms": [
+            [
+              "M:bert",
+              41
+            ],
+            [
+              "M:transformer",
+              33
+            ],
+            [
+              "M:gpt 2",
+              28
+            ],
+            [
+              "T:contrastive learning",
+              14
+            ],
+            [
+              "M:xlnet",
+              14
+            ]
+          ],
+          "top_terms_slot_share": 0.043333333333333335,
+          "max_term_triad_share": 0.041,
+          "hits": 63,
+          "hit_distinct_terms": 129
+        },
+        "5000": {
+          "precision": 0.0532,
+          "lift": 8.1584,
+          "distinct_terms": 1221,
+          "top_terms": [
+            [
+              "M:transformer",
+              717
+            ],
+            [
+              "M:bert",
+              534
+            ],
+            [
+              "M:attention",
+              358
+            ],
+            [
+              "M:graph convolutional network",
+              153
+            ],
+            [
+              "M:gpt 2",
+              151
+            ]
+          ],
+          "top_terms_slot_share": 0.12753333333333333,
+          "max_term_triad_share": 0.1434,
+          "hits": 266,
+          "hit_distinct_terms": 298
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 19.59523975521587,
+            "upper": 44.5060938404452,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.840597854811969,
+            "upper": 64.92501013098358,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 9.351842588262802,
+            "upper": 16.922726014094216,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.582326822043667,
+            "upper": 24.376056287690613,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 7.603639701438753,
+            "upper": 12.104750653700385,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.269226655116048,
+            "upper": 16.421474744878886,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 7.371470907858426,
+            "upper": 8.991816547364506,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 5.547379075148269,
+            "upper": 11.27257394320341,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_engine_ci": {
+        "100": {
+          "candidate": {
+            "lower": -0.05000000000000002,
+            "upper": 0.11000000000000001,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.2,
+            "upper": 0.22,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": -0.055999999999999994,
+            "upper": 0.0020000000000000018,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.10604999999999996,
+            "upper": 0.05604999999999995,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": -0.032999999999999995,
+            "upper": -0.0020000000000000018,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.07302499999999999,
+            "upper": 0.01902499999999998,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 0.0,
+            "upper": 0.008600000000000003,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.00741499999999999,
+            "upper": 0.016,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine_ES_cap10": {
+      "by_k": {
+        "100": {
+          "precision": 0.18,
+          "lift": 27.60360902255639,
+          "distinct_terms": 130,
+          "top_terms": [
+            [
+              "M:gpt 2",
+              10
+            ],
+            [
+              "M:bert",
+              10
+            ],
+            [
+              "M:transformer",
+              8
+            ],
+            [
+              "T:data augmentation",
+              8
+            ],
+            [
+              "M:attention",
+              7
+            ]
+          ],
+          "top_terms_slot_share": 0.14333333333333334,
+          "max_term_triad_share": 0.1,
+          "hits": 18,
+          "hit_distinct_terms": 46
+        },
+        "500": {
+          "precision": 0.112,
+          "lift": 17.17557894736842,
+          "distinct_terms": 408,
+          "top_terms": [
+            [
+              "M:k nn",
+              10
+            ],
+            [
+              "M:linear regression",
+              10
+            ],
+            [
+              "M:logistic regression",
+              10
+            ],
+            [
+              "M:transformer",
+              10
+            ],
+            [
+              "M:gpt 2",
+              10
+            ]
+          ],
+          "top_terms_slot_share": 0.03333333333333333,
+          "max_term_triad_share": 0.02,
+          "hits": 56,
+          "hit_distinct_terms": 115
+        },
+        "1000": {
+          "precision": 0.069,
+          "lift": 10.581383458646618,
+          "distinct_terms": 665,
+          "top_terms": [
+            [
+              "M:k nn",
+              10
+            ],
+            [
+              "M:linear regression",
+              10
+            ],
+            [
+              "M:logistic regression",
+              10
+            ],
+            [
+              "M:transformer",
+              10
+            ],
+            [
+              "T:natural language understanding",
+              10
+            ]
+          ],
+          "top_terms_slot_share": 0.016666666666666666,
+          "max_term_triad_share": 0.01,
+          "hits": 69,
+          "hit_distinct_terms": 142
+        },
+        "5000": {
+          "precision": 0.0514,
+          "lift": 7.882363909774436,
+          "distinct_terms": 1238,
+          "top_terms": [
+            [
+              "M:transformer",
+              662
+            ],
+            [
+              "M:bert",
+              494
+            ],
+            [
+              "M:attention",
+              319
+            ],
+            [
+              "M:graph convolutional network",
+              143
+            ],
+            [
+              "M:gpt 2",
+              140
+            ]
+          ],
+          "top_terms_slot_share": 0.1172,
+          "max_term_triad_share": 0.1324,
+          "hits": 257,
+          "hit_distinct_terms": 299
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 16.944359497264575,
+            "upper": 40.23400417513401,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.919793975145539,
+            "upper": 64.06823640083438,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 13.127031471939842,
+            "upper": 21.596559837130727,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 6.659506297438916,
+            "upper": 29.26742964835941,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 8.260334855746722,
+            "upper": 12.995141224842126,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.848784457953764,
+            "upper": 18.291125632384706,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 7.053512108707327,
+            "upper": 8.713044985214779,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 5.283850731078633,
+            "upper": 10.792128569267994,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_engine_ci": {
+        "100": {
+          "candidate": {
+            "lower": -0.06,
+            "upper": 0.09,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.17024999999999982,
+            "upper": 0.20999999999999996,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": -0.025999999999999995,
+            "upper": 0.025999999999999995,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.07004999999999996,
+            "upper": 0.07799999999999999,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": -0.027999999999999997,
+            "upper": 0.0050000000000000044,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.06999999999999999,
+            "upper": 0.032,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": -0.0018049999999999982,
+            "upper": 0.006404999999999998,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.009599999999999997,
+            "upper": 0.013214999999999989,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    }
+  }
+}

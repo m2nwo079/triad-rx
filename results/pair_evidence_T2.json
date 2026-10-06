@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "step": "pair_evidence",
+    "timepoint": "T2",
+    "created": "2026-10-06",
+    "git_commit": "eb282538157435ecf4afd11d4ec2a46c3174e22d",
+    "label_v2_config": {
+      "design_timepoint": "T1",
+      "window_sentences": 2,
+      "min_evidence_papers": 1,
+      "title_as_first_sentence": true,
+      "abbreviations": [
+        "et al.",
+        "e.g.",
+        "i.e.",
+        "vs.",
+        "cf.",
+        "Fig.",
+        "Eq.",
+        "etc.",
+        "approx."
+      ],
+      "comparison_cues": [
+        "compared with",
+        "compared to",
+        "comparison",
+        "compare",
+        "comparing",
+        "outperform",
+        "outperforms",
+        "outperformed",
+        "outperforming",
+        "versus",
+        "vs.",
+        "baseline",
+        "baselines",
+        "superior to",
+        "better than",
+        "competitive with",
+        "in contrast to",
+        "unlike",
+        "instead of",
+        "rather than",
+        "alternative to",
+        "benchmark",
+        "benchmarks",
+        "benchmarking",
+        "compared",
+        "competing",
+        "alternatives",
+        "existing",
+        "previous",
+        "prior",
+        "state-of-the-art",
+        "state of the art",
+        "survey",
+        "review"
+      ],
+      "evidence_matching": {
+        "drop_nested": true,
+        "acronym_needs_full_name": true,
+        "skip_surface_chars": [
+          "+"
+        ]
+      },
+      "attempt": 1,
+      "previous_review_keys": [
+        "data/review/label_evidence_T1_attempt0_key.csv"
+      ],
+      "sample": {
+        "positive": 100,
+        "negative": 50,
+        "seed": 20261022
+      },
+      "review_file": "data/review/label_evidence_T1_attempt1.csv",
+      "review_key_file": "data/review/label_evidence_T1_attempt1_key.csv"
+    },
+    "environment": {
+      "python": "3.13.15",
+      "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+      "packages": {
+        "numpy": "2.1.3",
+        "pandas": "2.3.3",
+        "pyarrow": "23.0.1",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "lightgbm": "4.6.0"
+      }
+    },
+    "inputs_sha256": {
+      "build": "bdc988660a6a184102fde269596f4e2fc1c379f33b86c4cc5a8c8ef0f1c9586d"
+    },
+    "output_sha256": "dabad239a1cc26263457d26ae2cefa44389635eebd9185335332c507a6324893"
+  },
+  "pairs": 94256,
+  "pairs_with_evidence": 48604,
+  "pair_paper_links": 483997,
+  "pair_paper_links_with_evidence": 194676
+}

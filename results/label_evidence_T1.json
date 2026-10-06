@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "step": "label_evidence",
+    "timepoint": "T1",
+    "created": "2026-10-06",
+    "git_commit": "be7dfe18d22941da289f003671617d508f3c59d6",
+    "label_v2_config": {
+      "design_timepoint": "T1",
+      "window_sentences": 2,
+      "min_evidence_papers": 1,
+      "title_as_first_sentence": true,
+      "abbreviations": [
+        "et al.",
+        "e.g.",
+        "i.e.",
+        "vs.",
+        "cf.",
+        "Fig.",
+        "Eq.",
+        "etc.",
+        "approx."
+      ],
+      "comparison_cues": [
+        "compared with",
+        "compared to",
+        "comparison",
+        "compare",
+        "comparing",
+        "outperform",
+        "outperforms",
+        "outperformed",
+        "outperforming",
+        "versus",
+        "vs.",
+        "baseline",
+        "baselines",
+        "superior to",
+        "better than",
+        "competitive with",
+        "in contrast to",
+        "unlike",
+        "instead of",
+        "rather than",
+        "alternative to",
+        "benchmark",
+        "benchmarks",
+        "benchmarking"
+      ],
+      "sample": {
+        "positive": 100,
+        "negative": 50,
+        "seed": 20261021
+      },
+      "review_file": "data/review/label_evidence_T1_attempt0.csv",
+      "review_key_file": "data/review/label_evidence_T1_attempt0_key.csv"
+    },
+    "inputs_sha256": {
+      "build": "8341d847af667956b9dd384b484dfb31d699a941f43d1991607d61c5002f9cdd",
+      "label": "108d4d1d9f9a645c50043a565c926f72d1756bd7603ca2176bcba4c1ce57f344"
+    },
+    "review_sha256": "752143ddc7ba61ec96d77b37a8ecebbc3e84e6d6c8a80ac8c31a6caa710f72f3",
+    "key_sha256": "6d23fce90698a211c4b880be3275faf5f0f9d0d36481367028a6c83395038b6c"
+  },
+  "realised_significant_triads": 33078,
+  "triad_paper_pairs": 47554,
+  "pairs_with_evidence": 10803,
+  "pair_evidence_share": 0.22717331875341717,
+  "triads_meeting_min_evidence": 8482,
+  "sample": {
+    "positive": 100,
+    "negative": 50
+  }
+}

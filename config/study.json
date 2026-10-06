@@ -1,5 +1,5 @@
 {
-  "design_version": "v0.3.41",
+  "design_version": "v0.4.4",
   "design_section": "10.2",
   "arxiv_categories": [
     "cs.LG",
@@ -476,5 +476,254 @@
     "ranking": "data/derived/applied/ranking.parquet",
     "vocab": "vocab/timepoints/applied_final.json",
     "bootstrap": "evaluation"
+  },
+  "engine_reliability": {
+    "prereg_file": "preregistration_engine.md",
+    "timepoints": {
+      "T3": {
+        "role": "evaluate",
+        "build": [
+          2019,
+          2023
+        ],
+        "buffer": [
+          2024,
+          2024
+        ],
+        "label_start": 2025,
+        "label_end": "data_cutoff"
+      },
+      "R2": {
+        "role": "train",
+        "build": [
+          2015,
+          2019
+        ],
+        "buffer": [
+          2020,
+          2020
+        ],
+        "label": [
+          2021,
+          2022
+        ]
+      },
+      "R3": {
+        "role": "train",
+        "build": [
+          2016,
+          2020
+        ],
+        "buffer": [
+          2021,
+          2021
+        ],
+        "label": [
+          2022,
+          2023
+        ]
+      }
+    },
+    "dev_eval": {
+      "timepoints": [
+        "T2"
+      ],
+      "k": [
+        50,
+        100,
+        300,
+        500
+      ],
+      "rankings": {
+        "engine": "engine_mean",
+        "engine_ptr": "baseline_mean",
+        "proximity": "P_aa_min",
+        "popularity": "P_logfreq_mean",
+        "npmi_min": "P_npmi_min",
+        "npmi_mean": "P_npmi_mean",
+        "recency": "R_growth_mean",
+        "text": "T_cos_mean"
+      },
+      "top_terms": 5,
+      "bootstrap": "evaluation",
+      "power": {
+        "rankings": [
+          "engine",
+          "engine_ptr",
+          "engine_cap3",
+          "engine_cap5",
+          "engine_cap10"
+        ],
+        "outer": 200,
+        "inner": 200,
+        "seed": 20261020,
+        "method": "nested bootstrap: outer term-block resample as a pseudo replication, inner candidate and term-block bootstraps as in the verdict"
+      },
+      "diversify": {
+        "base": "engine",
+        "caps": [
+          3,
+          5,
+          10
+        ]
+      }
+    },
+    "training": {
+      "rule": "label window must end by the decision time (end of the evaluated timepoint's build window)",
+      "T3": [
+        "T1",
+        "R2",
+        "R3"
+      ]
+    },
+    "label_v2": {
+      "design_timepoint": "T1",
+      "window_sentences": 2,
+      "min_evidence_papers": 1,
+      "title_as_first_sentence": true,
+      "abbreviations": [
+        "et al.",
+        "e.g.",
+        "i.e.",
+        "vs.",
+        "cf.",
+        "Fig.",
+        "Eq.",
+        "etc.",
+        "approx."
+      ],
+      "comparison_cues": [
+        "compared with",
+        "compared to",
+        "comparison",
+        "compare",
+        "comparing",
+        "outperform",
+        "outperforms",
+        "outperformed",
+        "outperforming",
+        "versus",
+        "vs.",
+        "baseline",
+        "baselines",
+        "superior to",
+        "better than",
+        "competitive with",
+        "in contrast to",
+        "unlike",
+        "instead of",
+        "rather than",
+        "alternative to",
+        "benchmark",
+        "benchmarks",
+        "benchmarking",
+        "compared",
+        "competing",
+        "alternatives",
+        "existing",
+        "previous",
+        "prior",
+        "state-of-the-art",
+        "state of the art",
+        "survey",
+        "review"
+      ],
+      "evidence_matching": {
+        "drop_nested": true,
+        "acronym_needs_full_name": true,
+        "skip_surface_chars": ["+"]
+      },
+      "attempt": 1,
+      "previous_review_keys": ["data/review/label_evidence_T1_attempt0_key.csv"],
+      "sample": {
+        "positive": 100,
+        "negative": 50,
+        "seed": 20261022
+      },
+      "review_file": "data/review/label_evidence_T1_attempt1.csv",
+      "review_key_file": "data/review/label_evidence_T1_attempt1_key.csv"
+    },
+    "conditional": {
+      "timepoints": ["T1", "T2"],
+      "pair_min_counts": [1, 5],
+      "stable_pairs": true,
+      "generator": {
+        "seed_pairs": ["stable", "min_5"],
+        "scores": ["npmi_mean", "min_count", "adamic_adar"],
+        "budget_multiples_of_first_candidates": [1, 5, 25, 100],
+        "tune_timepoint": "T1",
+        "confirm_timepoint": "T2",
+        "selected": {"seed_pairs": "stable", "score": "npmi_mean"},
+        "diagnosis_budget_multiple": 5
+      },
+      "rediagnosis": {
+        "train_timepoint": "T1",
+        "eval_timepoint": "T2",
+        "models": {"engine": ["P", "H", "T", "R"], "engine_no_h": ["P", "T", "R"]},
+        "feature_rankings": {"P_npmi_mean": "P_npmi_mean"},
+        "k": [100, 500, 1000, 5000]
+      }
+    },
+    "signals": {
+      "timepoints": ["T1", "T2"],
+      "sets": {
+        "E": ["E_share_min", "E_share_mean", "E_pairs"],
+        "S": ["S_ctx_max", "S_ctx_mean"]
+      },
+      "models": {
+        "engine": ["P", "H", "T", "R"],
+        "engine_E": ["P", "H", "T", "R", "E"],
+        "engine_S": ["P", "H", "T", "R", "S"],
+        "engine_ES": ["P", "H", "T", "R", "E", "S"]
+      },
+      "diversify_caps": [5, 10],
+      "learned_generator": {
+        "oof_folds": 5,
+        "chunk_rows": 2000000
+      }
+    },
+    "pipeline_compare": {
+      "reference": "npmi_engine",
+      "pipelines": {
+        "npmi_engine": {"features": "data/derived/features_v2/main", "order": "engine"},
+        "learned_generator": {"features": "data/derived/features_learned/main", "order": "generator"},
+        "learned_engine": {"features": "data/derived/features_learned/main", "order": "engine"},
+        "learned_engine_no_h": {"features": "data/derived/features_learned/main", "order": "engine_no_h"}
+      },
+      "k": [100, 500, 1000, 5000]
+    },
+    "verdict_pipeline": {
+      "primary": "npmi_engine",
+      "secondary": {
+        "learned_generator_recall": "recall at the fixed budget of the learned third-term score against the nPMI generator; reported, never part of the primary verdict"
+      }
+    },
+    "power_v2": {
+      "eval_timepoint": "T2",
+      "train_timepoint": "T1",
+      "budget_multiples_of_first_candidates": [1, 5],
+      "k": [100, 500, 1000, 5000],
+      "baseline_feature": "P_npmi_mean",
+      "outer": 200,
+      "inner": 200,
+      "seed": 20261023,
+      "minimum_sequence_power": 0.8,
+      "rule": "choose the budget and k with the highest power of passing the recall and random-precision steps in sequence under the conservative scenario; record any shortfall below minimum_sequence_power before T3 is opened",
+      "conservative_scenario": "keep each positive with probability equal to the T3 label window length over the evaluation label window length"
+    },
+    "verdict": {
+      "budget_multiple_of_first_candidates": 5,
+      "k": 5000,
+      "descriptive_k": [100, 500, 1000],
+      "sequence": [
+        {"step": "S1_recall", "statistic": "recall of the generator's top B minus that of the first-study candidates", "threshold": 0.0},
+        {"step": "S2_random", "statistic": "lift of the engine's top k inside the pool", "threshold": 1.0},
+        {"step": "S3_npmi", "statistic": "engine precision at k minus P_npmi_mean precision at k inside the pool", "threshold": 0.0},
+        {"step": "S4_h_contribution", "statistic": "engine precision at k minus engine without H precision at k inside the pool", "threshold": 0.0}
+      ],
+      "rule": "a step passes only if both the candidate and the term-block bootstrap lower bounds exceed its threshold; a step is tested only if every earlier step passed",
+      "calibration": {"method": "platt", "fit_on": "out-of-fold engine scores of the training timepoints", "metrics": ["brier", "reliability_curve"], "role": "secondary"},
+      "power_result": {"file": "results/engine_power.json", "sha256": "d4838302fa0ba635e85e2c1959929a073073fe880f0bb4732af8d03b6cc13181"}
+    }
   }
 }

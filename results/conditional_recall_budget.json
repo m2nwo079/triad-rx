@@ -1,0 +1,875 @@
+{
+  "meta": {
+    "step": "conditional_recall_budget",
+    "created": "2026-10-06",
+    "git_commit": "e7617b01a3ef96dd954d9fdd0d3180c745179267",
+    "conditional_config": {
+      "timepoints": [
+        "T1",
+        "T2"
+      ],
+      "pair_min_counts": [
+        1,
+        5
+      ],
+      "stable_pairs": true,
+      "generator": {
+        "seed_pairs": [
+          "stable",
+          "min_5"
+        ],
+        "scores": [
+          "npmi_mean",
+          "min_count",
+          "adamic_adar"
+        ],
+        "budget_multiples_of_first_candidates": [
+          1,
+          5,
+          25,
+          100
+        ],
+        "tune_timepoint": "T1",
+        "confirm_timepoint": "T2"
+      }
+    },
+    "stability": 0.95,
+    "inputs_sha256": {
+      "T1": {
+        "build": "8341d847af667956b9dd384b484dfb31d699a941f43d1991607d61c5002f9cdd",
+        "labels_v2": "54dd9da777403cd48ac3b6899127029f5c3d09751b86765073c1288683dc73f2"
+      },
+      "T2": {
+        "build": "bdc988660a6a184102fde269596f4e2fc1c379f33b86c4cc5a8c8ef0f1c9586d",
+        "labels_v2": "9cbb0ab582e8ccbef55bd82104dd6adbaf4cd8f8637caa44ceda370060801e13"
+      }
+    },
+    "note": "Descriptive development diagnostics; never a verdict. Tune on generator.tune_timepoint, read generator.confirm_timepoint only to confirm."
+  },
+  "timepoints": {
+    "T1": {
+      "terms": 1439,
+      "first_study_candidates": 5700,
+      "budgets": [
+        5700,
+        28500,
+        142500,
+        570000
+      ],
+      "by_seed_rule": {
+        "stable": {
+          "seed_pairs": 3764,
+          "candidates": 2672616,
+          "sets": {
+            "label_v2": {
+              "positives": 5506,
+              "reached_by_all_candidates": 2814,
+              "ceiling_recall": 0.5110788231020704,
+              "by_score": {
+                "npmi_mean": [
+                  {
+                    "budget": 5700,
+                    "capped": false,
+                    "hits": 194,
+                    "recall": 0.03523428986560116,
+                    "precision": 0.034035087719298245
+                  },
+                  {
+                    "budget": 28500,
+                    "capped": false,
+                    "hits": 465,
+                    "recall": 0.08445332364693062,
+                    "precision": 0.01631578947368421
+                  },
+                  {
+                    "budget": 142500,
+                    "capped": false,
+                    "hits": 1087,
+                    "recall": 0.19742099527787868,
+                    "precision": 0.007628070175438597
+                  },
+                  {
+                    "budget": 570000,
+                    "capped": false,
+                    "hits": 1762,
+                    "recall": 0.3200145296040683,
+                    "precision": 0.0030912280701754385
+                  }
+                ],
+                "min_count": [
+                  {
+                    "budget": 5700,
+                    "capped": false,
+                    "hits": 116,
+                    "recall": 0.021067925899019253,
+                    "precision": 0.020350877192982456
+                  },
+                  {
+                    "budget": 28500,
+                    "capped": false,
+                    "hits": 356,
+                    "recall": 0.06465673810388667,
+                    "precision": 0.012491228070175438
+                  },
+                  {
+                    "budget": 142500,
+                    "capped": false,
+                    "hits": 812,
+                    "recall": 0.14747548129313476,
+                    "precision": 0.005698245614035088
+                  },
+                  {
+                    "budget": 570000,
+                    "capped": false,
+                    "hits": 1224,
+                    "recall": 0.22230294224482383,
+                    "precision": 0.0021473684210526318
+                  }
+                ],
+                "adamic_adar": [
+                  {
+                    "budget": 5700,
+                    "capped": false,
+                    "hits": 73,
+                    "recall": 0.01325826371231384,
+                    "precision": 0.012807017543859649
+                  },
+                  {
+                    "budget": 28500,
+                    "capped": false,
+                    "hits": 194,
+                    "recall": 0.03523428986560116,
+                    "precision": 0.006807017543859649
+                  },
+                  {
+                    "budget": 142500,
+                    "capped": false,
+                    "hits": 640,
+                    "recall": 0.11623683254631312,
+                    "precision": 0.004491228070175438
+                  },
+                  {
+                    "budget": 570000,
+                    "capped": false,
+                    "hits": 1391,
+                    "recall": 0.2526334907373774,
+                    "precision": 0.0024403508771929823
+                  }
+                ]
+              }
+            },
+            "realised_all": {
+              "positives": 33078,
+              "reached_by_all_candidates": 13975,
+              "ceiling_recall": 0.4224862446338956,
+              "by_score": {
+                "npmi_mean": [
+                  {
+                    "budget": 5700,
+                    "capped": false,
+                    "hits": 772,
+                    "recall": 0.023338775016627365,
+                    "precision": 0.13543859649122808
+                  },
+                  {
+                    "budget": 28500,
+                    "capped": false,
+                    "hits": 1863,
+                    "recall": 0.05632142209323417,
+                    "precision": 0.06536842105263158
+                  },
+                  {
+                    "budget": 142500,
+                    "capped": false,
+                    "hits": 4360,
+                    "recall": 0.1318096620110043,
+                    "precision": 0.030596491228070174
+                  },
+                  {
+                    "budget": 570000,
+                    "capped": false,
+                    "hits": 7871,
+                    "recall": 0.23795271781848962,
+                    "precision": 0.013808771929824562
+                  }
+                ],
+                "min_count": [
+                  {
+                    "budget": 5700,
+                    "capped": false,
+                    "hits": 272,
+                    "recall": 0.008222988088759901,
+                    "precision": 0.047719298245614036
+                  },
+                  {
+                    "budget": 28500,
+                    "capped": false,
+                    "hits": 1107,
+                    "recall": 0.03346635225829857,
+                    "precision": 0.03884210526315789
+                  },
+                  {
+                    "budget": 142500,
+                    "capped": false,
+                    "hits": 3215,
+                    "recall": 0.0971945099461878,
+                    "precision": 0.02256140350877193
+                  },
+                  {
+                    "budget": 570000,
+                    "capped": false,
+                    "hits": 4899,
+                    "recall": 0.14810448031924542,
+                    "precision": 0.008594736842105263
+                  }
+                ],
+                "adamic_adar": [
+                  {
+                    "budget": 5700,
+                    "capped": false,
+                    "hits": 129,
+                    "recall": 0.003899873027389806,
+                    "precision": 0.022631578947368423
+                  },
+                  {
+                    "budget": 28500,
+                    "capped": false,
+                    "hits": 480,
+                    "recall": 0.014511155450752766,
+                    "precision": 0.016842105263157894
+                  },
+                  {
+                    "budget": 142500,
+                    "capped": false,
+                    "hits": 2152,
+                    "recall": 0.06505834693754158,
+                    "precision": 0.015101754385964913
+                  },
+                  {
+                    "budget": 570000,
+                    "capped": false,
+                    "hits": 6073,
+                    "recall": 0.18359634802587824,
+                    "precision": 0.010654385964912281
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "min_5": {
+          "seed_pairs": 4832,
+          "candidates": 3486222,
+          "sets": {
+            "label_v2": {
+              "positives": 5506,
+              "reached_by_all_candidates": 3094,
+              "ceiling_recall": 0.5619324373410824,
+              "by_score": {
+                "npmi_mean": [
+                  {
+                    "budget": 5700,
+                    "capped": false,
+                    "hits": 190,
+                    "recall": 0.03450780966218671,
+                    "precision": 0.03333333333333333
+                  },
+                  {
+                    "budget": 28500,
+                    "capped": false,
+                    "hits": 476,
+                    "recall": 0.08645114420632037,
+                    "precision": 0.016701754385964912
+                  },
+                  {
+                    "budget": 142500,
+                    "capped": false,
+                    "hits": 1045,
+                    "recall": 0.18979295314202688,
+                    "precision": 0.007333333333333333
+                  },
+                  {
+                    "budget": 570000,
+                    "capped": false,
+                    "hits": 1825,
+                    "recall": 0.331456592807846,
+                    "precision": 0.003201754385964912
+                  }
+                ],
+                "min_count": [
+                  {
+                    "budget": 5700,
+                    "capped": false,
+                    "hits": 117,
+                    "recall": 0.021249545949872866,
+                    "precision": 0.020526315789473684
+                  },
+                  {
+                    "budget": 28500,
+                    "capped": false,
+                    "hits": 354,
+                    "recall": 0.06429349800217944,
+                    "precision": 0.012421052631578947
+                  },
+                  {
+                    "budget": 142500,
+                    "capped": false,
+                    "hits": 852,
+                    "recall": 0.15474028332727932,
+                    "precision": 0.005978947368421052
+                  },
+                  {
+                    "budget": 570000,
+                    "capped": false,
+                    "hits": 1202,
+                    "recall": 0.21830730112604432,
+                    "precision": 0.0021087719298245613
+                  }
+                ],
+                "adamic_adar": [
+                  {
+                    "budget": 5700,
+                    "capped": false,
+                    "hits": 59,
+                    "recall": 0.01071558300036324,
+                    "precision": 0.010350877192982456
+                  },
+                  {
+                    "budget": 28500,
+                    "capped": false,
+                    "hits": 182,
+                    "recall": 0.033054849255357795,
+                    "precision": 0.0063859649122807016
+                  },
+                  {
+                    "budget": 142500,
+                    "capped": false,
+                    "hits": 599,
+                    "recall": 0.10879041046131493,
+                    "precision": 0.004203508771929825
+                  },
+                  {
+                    "budget": 570000,
+                    "capped": false,
+                    "hits": 1408,
+                    "recall": 0.25572103160188886,
+                    "precision": 0.0024701754385964914
+                  }
+                ]
+              }
+            },
+            "realised_all": {
+              "positives": 33078,
+              "reached_by_all_candidates": 15923,
+              "ceiling_recall": 0.4813773505048673,
+              "by_score": {
+                "npmi_mean": [
+                  {
+                    "budget": 5700,
+                    "capped": false,
+                    "hits": 756,
+                    "recall": 0.022855069834935605,
+                    "precision": 0.13263157894736843
+                  },
+                  {
+                    "budget": 28500,
+                    "capped": false,
+                    "hits": 1915,
+                    "recall": 0.05789346393373239,
+                    "precision": 0.06719298245614035
+                  },
+                  {
+                    "budget": 142500,
+                    "capped": false,
+                    "hits": 4241,
+                    "recall": 0.12821210472217184,
+                    "precision": 0.02976140350877193
+                  },
+                  {
+                    "budget": 570000,
+                    "capped": false,
+                    "hits": 8251,
+                    "recall": 0.2494407158836689,
+                    "precision": 0.014475438596491228
+                  }
+                ],
+                "min_count": [
+                  {
+                    "budget": 5700,
+                    "capped": false,
+                    "hits": 275,
+                    "recall": 0.008313682810327105,
+                    "precision": 0.04824561403508772
+                  },
+                  {
+                    "budget": 28500,
+                    "capped": false,
+                    "hits": 1119,
+                    "recall": 0.033829131144567384,
+                    "precision": 0.03926315789473684
+                  },
+                  {
+                    "budget": 142500,
+                    "capped": false,
+                    "hits": 3377,
+                    "recall": 0.10209202491081686,
+                    "precision": 0.023698245614035086
+                  },
+                  {
+                    "budget": 570000,
+                    "capped": false,
+                    "hits": 4905,
+                    "recall": 0.14828586976237984,
+                    "precision": 0.008605263157894737
+                  }
+                ],
+                "adamic_adar": [
+                  {
+                    "budget": 5700,
+                    "capped": false,
+                    "hits": 123,
+                    "recall": 0.0037184835842553965,
+                    "precision": 0.02157894736842105
+                  },
+                  {
+                    "budget": 28500,
+                    "capped": false,
+                    "hits": 471,
+                    "recall": 0.014239071286051152,
+                    "precision": 0.016526315789473684
+                  },
+                  {
+                    "budget": 142500,
+                    "capped": false,
+                    "hits": 1990,
+                    "recall": 0.06016083197291251,
+                    "precision": 0.013964912280701755
+                  },
+                  {
+                    "budget": 570000,
+                    "capped": false,
+                    "hits": 6091,
+                    "recall": 0.18414051635528145,
+                    "precision": 0.010685964912280702
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "T2": {
+      "terms": 2489,
+      "first_study_candidates": 40792,
+      "budgets": [
+        40792,
+        203960,
+        1019800,
+        4079200
+      ],
+      "by_seed_rule": {
+        "stable": {
+          "seed_pairs": 12449,
+          "candidates": 16408136,
+          "sets": {
+            "label_v2": {
+              "positives": 9262,
+              "reached_by_all_candidates": 6138,
+              "ceiling_recall": 0.66270783847981,
+              "by_score": {
+                "npmi_mean": [
+                  {
+                    "budget": 40792,
+                    "capped": false,
+                    "hits": 472,
+                    "recall": 0.05096091556899158,
+                    "precision": 0.011570896254167485
+                  },
+                  {
+                    "budget": 203960,
+                    "capped": false,
+                    "hits": 1330,
+                    "recall": 0.14359749514143813,
+                    "precision": 0.006520886448323201
+                  },
+                  {
+                    "budget": 1019800,
+                    "capped": false,
+                    "hits": 2860,
+                    "recall": 0.3087885985748218,
+                    "precision": 0.002804471464993136
+                  },
+                  {
+                    "budget": 4079200,
+                    "capped": false,
+                    "hits": 4247,
+                    "recall": 0.45854027207946446,
+                    "precision": 0.0010411355167679937
+                  }
+                ],
+                "min_count": [
+                  {
+                    "budget": 40792,
+                    "capped": false,
+                    "hits": 320,
+                    "recall": 0.034549773267112935,
+                    "precision": 0.007844675426554227
+                  },
+                  {
+                    "budget": 203960,
+                    "capped": false,
+                    "hits": 994,
+                    "recall": 0.10732023321096955,
+                    "precision": 0.004873504608746813
+                  },
+                  {
+                    "budget": 1019800,
+                    "capped": false,
+                    "hits": 2165,
+                    "recall": 0.23375080976031096,
+                    "precision": 0.0021229652873112374
+                  },
+                  {
+                    "budget": 4079200,
+                    "capped": false,
+                    "hits": 3138,
+                    "recall": 0.3388037141006262,
+                    "precision": 0.0007692684840164739
+                  }
+                ],
+                "adamic_adar": [
+                  {
+                    "budget": 40792,
+                    "capped": false,
+                    "hits": 188,
+                    "recall": 0.02029799179442885,
+                    "precision": 0.004608746813100608
+                  },
+                  {
+                    "budget": 203960,
+                    "capped": false,
+                    "hits": 670,
+                    "recall": 0.0723385877780177,
+                    "precision": 0.003284957834869582
+                  },
+                  {
+                    "budget": 1019800,
+                    "capped": false,
+                    "hits": 1991,
+                    "recall": 0.21496437054631828,
+                    "precision": 0.001952343596783683
+                  },
+                  {
+                    "budget": 4079200,
+                    "capped": false,
+                    "hits": 3908,
+                    "recall": 0.4219391060246167,
+                    "precision": 0.0009580309864679349
+                  }
+                ]
+              }
+            },
+            "realised_all": {
+              "positives": 65511,
+              "reached_by_all_candidates": 39149,
+              "ceiling_recall": 0.5975942971409381,
+              "by_score": {
+                "npmi_mean": [
+                  {
+                    "budget": 40792,
+                    "capped": false,
+                    "hits": 2449,
+                    "recall": 0.037383034910167756,
+                    "precision": 0.06003628162384781
+                  },
+                  {
+                    "budget": 203960,
+                    "capped": false,
+                    "hits": 6753,
+                    "recall": 0.10308192517287174,
+                    "precision": 0.03310943322220043
+                  },
+                  {
+                    "budget": 1019800,
+                    "capped": false,
+                    "hits": 14820,
+                    "recall": 0.22622155057929202,
+                    "precision": 0.014532261227691703
+                  },
+                  {
+                    "budget": 4079200,
+                    "capped": false,
+                    "hits": 24941,
+                    "recall": 0.3807146891361756,
+                    "precision": 0.0061141890566777796
+                  }
+                ],
+                "min_count": [
+                  {
+                    "budget": 40792,
+                    "capped": false,
+                    "hits": 1275,
+                    "recall": 0.01946238036360306,
+                    "precision": 0.031256128652677
+                  },
+                  {
+                    "budget": 203960,
+                    "capped": false,
+                    "hits": 4721,
+                    "recall": 0.07206423348750592,
+                    "precision": 0.023146695430476562
+                  },
+                  {
+                    "budget": 1019800,
+                    "capped": false,
+                    "hits": 11009,
+                    "recall": 0.16804811405718123,
+                    "precision": 0.010795253971366934
+                  },
+                  {
+                    "budget": 4079200,
+                    "capped": false,
+                    "hits": 16708,
+                    "recall": 0.25504113812947443,
+                    "precision": 0.004095901157089625
+                  }
+                ],
+                "adamic_adar": [
+                  {
+                    "budget": 40792,
+                    "capped": false,
+                    "hits": 537,
+                    "recall": 0.008197096670788112,
+                    "precision": 0.01316434595018631
+                  },
+                  {
+                    "budget": 203960,
+                    "capped": false,
+                    "hits": 2235,
+                    "recall": 0.03411640793149242,
+                    "precision": 0.010958030986467936
+                  },
+                  {
+                    "budget": 1019800,
+                    "capped": false,
+                    "hits": 9855,
+                    "recall": 0.15043275175161425,
+                    "precision": 0.009663659541086488
+                  },
+                  {
+                    "budget": 4079200,
+                    "capped": false,
+                    "hits": 22994,
+                    "recall": 0.35099448947504996,
+                    "precision": 0.005636889586193372
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "min_5": {
+          "seed_pairs": 15529,
+          "candidates": 20759601,
+          "sets": {
+            "label_v2": {
+              "positives": 9262,
+              "reached_by_all_candidates": 6576,
+              "ceiling_recall": 0.7099978406391708,
+              "by_score": {
+                "npmi_mean": [
+                  {
+                    "budget": 40792,
+                    "capped": false,
+                    "hits": 479,
+                    "recall": 0.05171669185920967,
+                    "precision": 0.011742498529123357
+                  },
+                  {
+                    "budget": 203960,
+                    "capped": false,
+                    "hits": 1327,
+                    "recall": 0.14327359101705894,
+                    "precision": 0.006506177681898411
+                  },
+                  {
+                    "budget": 1019800,
+                    "capped": false,
+                    "hits": 2911,
+                    "recall": 0.314294968689268,
+                    "precision": 0.002854481270837419
+                  },
+                  {
+                    "budget": 4079200,
+                    "capped": false,
+                    "hits": 4341,
+                    "recall": 0.4686892679766789,
+                    "precision": 0.0010641792508334967
+                  }
+                ],
+                "min_count": [
+                  {
+                    "budget": 40792,
+                    "capped": false,
+                    "hits": 320,
+                    "recall": 0.034549773267112935,
+                    "precision": 0.007844675426554227
+                  },
+                  {
+                    "budget": 203960,
+                    "capped": false,
+                    "hits": 989,
+                    "recall": 0.10678039300367091,
+                    "precision": 0.004848989998038831
+                  },
+                  {
+                    "budget": 1019800,
+                    "capped": false,
+                    "hits": 2111,
+                    "recall": 0.22792053552148564,
+                    "precision": 0.0020700137281819964
+                  },
+                  {
+                    "budget": 4079200,
+                    "capped": false,
+                    "hits": 3081,
+                    "recall": 0.33264953573742173,
+                    "precision": 0.0007552951559129241
+                  }
+                ],
+                "adamic_adar": [
+                  {
+                    "budget": 40792,
+                    "capped": false,
+                    "hits": 181,
+                    "recall": 0.019542215504210755,
+                    "precision": 0.004437144538144734
+                  },
+                  {
+                    "budget": 203960,
+                    "capped": false,
+                    "hits": 659,
+                    "recall": 0.0711509393219607,
+                    "precision": 0.003231025691312022
+                  },
+                  {
+                    "budget": 1019800,
+                    "capped": false,
+                    "hits": 1974,
+                    "recall": 0.21312891384150293,
+                    "precision": 0.0019356736615022553
+                  },
+                  {
+                    "budget": 4079200,
+                    "capped": false,
+                    "hits": 3921,
+                    "recall": 0.4233426905635932,
+                    "precision": 0.0009612178858599725
+                  }
+                ]
+              }
+            },
+            "realised_all": {
+              "positives": 65511,
+              "reached_by_all_candidates": 42633,
+              "ceiling_recall": 0.6507762055227366,
+              "by_score": {
+                "npmi_mean": [
+                  {
+                    "budget": 40792,
+                    "capped": false,
+                    "hits": 2437,
+                    "recall": 0.03719985956556914,
+                    "precision": 0.05974210629535203
+                  },
+                  {
+                    "budget": 203960,
+                    "capped": false,
+                    "hits": 6821,
+                    "recall": 0.1041199187922639,
+                    "precision": 0.033442831927828987
+                  },
+                  {
+                    "budget": 1019800,
+                    "capped": false,
+                    "hits": 15109,
+                    "recall": 0.23063302346170872,
+                    "precision": 0.014815650127475976
+                  },
+                  {
+                    "budget": 4079200,
+                    "capped": false,
+                    "hits": 25206,
+                    "recall": 0.3847598113293951,
+                    "precision": 0.006179152775053932
+                  }
+                ],
+                "min_count": [
+                  {
+                    "budget": 40792,
+                    "capped": false,
+                    "hits": 1272,
+                    "recall": 0.019416586527453403,
+                    "precision": 0.03118258482055305
+                  },
+                  {
+                    "budget": 203960,
+                    "capped": false,
+                    "hits": 4671,
+                    "recall": 0.07130100288501168,
+                    "precision": 0.022901549323396744
+                  },
+                  {
+                    "budget": 1019800,
+                    "capped": false,
+                    "hits": 10970,
+                    "recall": 0.16745279418723574,
+                    "precision": 0.010757011178662483
+                  },
+                  {
+                    "budget": 4079200,
+                    "capped": false,
+                    "hits": 16432,
+                    "recall": 0.25082810520370624,
+                    "precision": 0.004028240831535595
+                  }
+                ],
+                "adamic_adar": [
+                  {
+                    "budget": 40792,
+                    "capped": false,
+                    "hits": 529,
+                    "recall": 0.008074979774389033,
+                    "precision": 0.012968229064522455
+                  },
+                  {
+                    "budget": 203960,
+                    "capped": false,
+                    "hits": 2192,
+                    "recall": 0.033460029613347375,
+                    "precision": 0.010747205334379291
+                  },
+                  {
+                    "budget": 1019800,
+                    "capped": false,
+                    "hits": 9841,
+                    "recall": 0.15021904718291584,
+                    "precision": 0.009649931359090017
+                  },
+                  {
+                    "budget": 4079200,
+                    "capped": false,
+                    "hits": 23208,
+                    "recall": 0.3542611164537253,
+                    "precision": 0.005689350853108453
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

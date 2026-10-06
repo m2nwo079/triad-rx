@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "step": "label_v2",
+    "timepoint": "T2",
+    "created": "2026-10-06",
+    "git_commit": "0e9096182ddd1c13927298c2d78a96fac1a861c2",
+    "label_v2_config": {
+      "design_timepoint": "T1",
+      "window_sentences": 2,
+      "min_evidence_papers": 1,
+      "title_as_first_sentence": true,
+      "abbreviations": [
+        "et al.",
+        "e.g.",
+        "i.e.",
+        "vs.",
+        "cf.",
+        "Fig.",
+        "Eq.",
+        "etc.",
+        "approx."
+      ],
+      "comparison_cues": [
+        "compared with",
+        "compared to",
+        "comparison",
+        "compare",
+        "comparing",
+        "outperform",
+        "outperforms",
+        "outperformed",
+        "outperforming",
+        "versus",
+        "vs.",
+        "baseline",
+        "baselines",
+        "superior to",
+        "better than",
+        "competitive with",
+        "in contrast to",
+        "unlike",
+        "instead of",
+        "rather than",
+        "alternative to",
+        "benchmark",
+        "benchmarks",
+        "benchmarking",
+        "compared",
+        "competing",
+        "alternatives",
+        "existing",
+        "previous",
+        "prior",
+        "state-of-the-art",
+        "state of the art",
+        "survey",
+        "review"
+      ],
+      "evidence_matching": {
+        "drop_nested": true,
+        "acronym_needs_full_name": true,
+        "skip_surface_chars": [
+          "+"
+        ]
+      },
+      "attempt": 1,
+      "previous_review_keys": [
+        "data/review/label_evidence_T1_attempt0_key.csv"
+      ],
+      "sample": {
+        "positive": 100,
+        "negative": 50,
+        "seed": 20261022
+      },
+      "review_file": "data/review/label_evidence_T1_attempt1.csv",
+      "review_key_file": "data/review/label_evidence_T1_attempt1_key.csv"
+    },
+    "realised_set": "significant new triads with BH over all realised new triads (as in candidate recall)",
+    "inputs_sha256": {
+      "build": "bdc988660a6a184102fde269596f4e2fc1c379f33b86c4cc5a8c8ef0f1c9586d",
+      "label": "661e5ccd0a7ed9b98fa61da5164d8d437578f29d2c09f3897973acefb9adb853"
+    },
+    "output_sha256": "9cbb0ab582e8ccbef55bd82104dd6adbaf4cd8f8637caa44ceda370060801e13"
+  },
+  "realised_significant_triads": 65511,
+  "triad_paper_pairs": 85305,
+  "pairs_with_evidence": 11079,
+  "label_v2_positive": 9262,
+  "label_v2_share": 0.14138083680603258
+}

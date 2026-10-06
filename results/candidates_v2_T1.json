@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "step": "candidates_v2",
+    "timepoint": "T1",
+    "created": "2026-10-06",
+    "git_commit": "552d780e51d97e99bc020764baaa4ce6dfb56896",
+    "generator": {
+      "seed_pairs": [
+        "stable",
+        "min_5"
+      ],
+      "scores": [
+        "npmi_mean",
+        "min_count",
+        "adamic_adar"
+      ],
+      "budget_multiples_of_first_candidates": [
+        1,
+        5,
+        25,
+        100
+      ],
+      "tune_timepoint": "T1",
+      "confirm_timepoint": "T2",
+      "selected": {
+        "seed_pairs": "stable",
+        "score": "npmi_mean"
+      },
+      "diagnosis_budget_multiple": 5
+    },
+    "stability": 0.95,
+    "inputs_sha256": {
+      "build": "8341d847af667956b9dd384b484dfb31d699a941f43d1991607d61c5002f9cdd",
+      "labels_v2": "54dd9da777403cd48ac3b6899127029f5c3d09751b86765073c1288683dc73f2"
+    },
+    "output_sha256": "8c5a910d087c5e9d4a8c87c734ce5445a37f12c8482d68dbe48cd0cc2272b294"
+  },
+  "budget": 28500,
+  "candidates": 28500,
+  "kind": {
+    "completion": 27817,
+    "open_triangle": 683
+  },
+  "label_v2_positive": 465,
+  "realised": 1863
+}

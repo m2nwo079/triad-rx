@@ -1,0 +1,306 @@
+{
+  "meta": {
+    "step": "learned_generator",
+    "created": "2026-10-06",
+    "git_commit": "a91868c280dee37151c78062cb99bbe463d63be3",
+    "environment": {
+      "python": "3.13.15",
+      "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+      "packages": {
+        "numpy": "2.1.3",
+        "pandas": "2.3.3",
+        "pyarrow": "23.0.1",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "lightgbm": "4.6.0"
+      }
+    },
+    "signals_config": {
+      "timepoints": [
+        "T1",
+        "T2"
+      ],
+      "sets": {
+        "E": [
+          "E_share_min",
+          "E_share_mean",
+          "E_pairs"
+        ],
+        "S": [
+          "S_ctx_max",
+          "S_ctx_mean"
+        ]
+      },
+      "models": {
+        "engine": [
+          "P",
+          "H",
+          "T",
+          "R"
+        ],
+        "engine_E": [
+          "P",
+          "H",
+          "T",
+          "R",
+          "E"
+        ],
+        "engine_S": [
+          "P",
+          "H",
+          "T",
+          "R",
+          "S"
+        ],
+        "engine_ES": [
+          "P",
+          "H",
+          "T",
+          "R",
+          "E",
+          "S"
+        ]
+      },
+      "diversify_caps": [
+        5,
+        10
+      ],
+      "learned_generator": {
+        "oof_folds": 5,
+        "chunk_rows": 2000000
+      }
+    },
+    "generator": {
+      "seed_pairs": [
+        "stable",
+        "min_5"
+      ],
+      "scores": [
+        "npmi_mean",
+        "min_count",
+        "adamic_adar"
+      ],
+      "budget_multiples_of_first_candidates": [
+        1,
+        5,
+        25,
+        100
+      ],
+      "tune_timepoint": "T1",
+      "confirm_timepoint": "T2",
+      "selected": {
+        "seed_pairs": "stable",
+        "score": "npmi_mean"
+      },
+      "diagnosis_budget_multiple": 5
+    },
+    "model_config": {
+      "type": "lightgbm_binary",
+      "params": {
+        "num_leaves": 7,
+        "min_data_in_leaf": 20,
+        "learning_rate": 0.05,
+        "feature_fraction": 0.8,
+        "bagging_fraction": 0.8,
+        "bagging_freq": 1,
+        "lambda_l2": 1.0
+      },
+      "n_estimators_max": 2000,
+      "early_stopping_rounds": 100,
+      "cv_folds": 5,
+      "cv_metric": "average_precision",
+      "seeds": [
+        20261011,
+        20261012,
+        20261013,
+        20261014,
+        20261015
+      ],
+      "engine_sets": [
+        "P",
+        "H",
+        "T",
+        "R"
+      ],
+      "v2_baseline_sets": [
+        "P",
+        "T",
+        "R"
+      ]
+    },
+    "features": [
+      "log_count_min",
+      "log_count_mean",
+      "log_count_max",
+      "npmi_min",
+      "npmi_mean",
+      "npmi_max",
+      "adamic_adar_min",
+      "adamic_adar_mean",
+      "adamic_adar_max",
+      "evidence_share_min",
+      "evidence_share_mean",
+      "evidence_share_max",
+      "log_docs_min",
+      "log_docs_mean",
+      "log_docs_max",
+      "gen_score"
+    ],
+    "note": "Descriptive development diagnostics; never a verdict. Choose on the train timepoint (out-of-fold), confirm on the evaluation timepoint."
+  },
+  "model": {
+    "rounds": 1784,
+    "cv_average_precision_mean": 0.053347825942602414,
+    "cv_average_precision_sd": 0.008298576423546665,
+    "importance_gain_mean": {
+      "npmi_mean": 32409.400891375542,
+      "npmi_max": 18070.334255385398,
+      "evidence_share_mean": 10883.457039475441,
+      "log_count_mean": 10208.4882925272,
+      "log_docs_min": 9637.101746129989,
+      "gen_score": 8679.67084145546,
+      "adamic_adar_min": 7918.297368955612,
+      "log_docs_max": 7851.5222680568695,
+      "adamic_adar_max": 6149.0617919683455,
+      "evidence_share_max": 5870.207272362709,
+      "log_docs_mean": 5672.9524851799015,
+      "log_count_max": 5433.208969306946,
+      "adamic_adar_mean": 5196.124626636505,
+      "evidence_share_min": 2025.8597738981248,
+      "npmi_min": 1837.6364599466324,
+      "log_count_min": 1572.5246775388719
+    }
+  },
+  "train": {
+    "timepoint": "T1",
+    "completions": 2672616,
+    "by_order": {
+      "generator": [
+        {
+          "budget": 5700,
+          "capped": false,
+          "hits": 194,
+          "recall": 0.03523428986560116,
+          "precision": 0.034035087719298245
+        },
+        {
+          "budget": 28500,
+          "capped": false,
+          "hits": 465,
+          "recall": 0.08445332364693062,
+          "precision": 0.01631578947368421
+        },
+        {
+          "budget": 142500,
+          "capped": false,
+          "hits": 1087,
+          "recall": 0.19742099527787868,
+          "precision": 0.007628070175438597
+        },
+        {
+          "budget": 570000,
+          "capped": false,
+          "hits": 1762,
+          "recall": 0.3200145296040683,
+          "precision": 0.0030912280701754385
+        }
+      ],
+      "learned": [
+        {
+          "budget": 5700,
+          "capped": false,
+          "hits": 467,
+          "recall": 0.08481656374863784,
+          "precision": 0.0819298245614035
+        },
+        {
+          "budget": 28500,
+          "capped": false,
+          "hits": 983,
+          "recall": 0.1785325099891028,
+          "precision": 0.03449122807017544
+        },
+        {
+          "budget": 142500,
+          "capped": false,
+          "hits": 1655,
+          "recall": 0.30058118416273155,
+          "precision": 0.011614035087719299
+        },
+        {
+          "budget": 570000,
+          "capped": false,
+          "hits": 2276,
+          "recall": 0.413367235742826,
+          "precision": 0.003992982456140351
+        }
+      ]
+    }
+  },
+  "eval": {
+    "timepoint": "T2",
+    "completions": 16408136,
+    "by_order": {
+      "generator": [
+        {
+          "budget": 40792,
+          "capped": false,
+          "hits": 472,
+          "recall": 0.05096091556899158,
+          "precision": 0.011570896254167485
+        },
+        {
+          "budget": 203960,
+          "capped": false,
+          "hits": 1330,
+          "recall": 0.14359749514143813,
+          "precision": 0.006520886448323201
+        },
+        {
+          "budget": 1019800,
+          "capped": false,
+          "hits": 2860,
+          "recall": 0.3087885985748218,
+          "precision": 0.002804471464993136
+        },
+        {
+          "budget": 4079200,
+          "capped": false,
+          "hits": 4247,
+          "recall": 0.45854027207946446,
+          "precision": 0.0010411355167679937
+        }
+      ],
+      "learned": [
+        {
+          "budget": 40792,
+          "capped": false,
+          "hits": 817,
+          "recall": 0.08820988987259772,
+          "precision": 0.02002843694842126
+        },
+        {
+          "budget": 203960,
+          "capped": false,
+          "hits": 1816,
+          "recall": 0.1960699632908659,
+          "precision": 0.008903706609139047
+        },
+        {
+          "budget": 1019800,
+          "capped": false,
+          "hits": 3243,
+          "recall": 0.3501403584538976,
+          "precision": 0.0031800353010394194
+        },
+        {
+          "budget": 4079200,
+          "capped": false,
+          "hits": 4648,
+          "recall": 0.5018354567048153,
+          "precision": 0.0011394391057070014
+        }
+      ]
+    }
+  }
+}

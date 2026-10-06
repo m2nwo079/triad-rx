@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "timepoint": "T3",
+    "created": "2026-10-06",
+    "git_commit": "cbedb149610a7ac03c2a94f5143a803e79d82eb0",
+    "papers_sha256": "dc7f3abba003e23ba1769855fb5481feea8ab75528b1ba91f3f98de270c8b6ea",
+    "vocab_sha256": "b90fcd78264a33e2d3dc30be26b579fd7864ab967211c8db1bcba15f6325deb0",
+    "r4_decisions_sha256": "472f3e5e40fe9dd47bb185901fe36450f441311fb5b9ebdaf8d716c089609127",
+    "m1_sha256": "3ca5da9f01fd1dd31c70e3ee8b7c65b8def4d3d8cfe4fbe6b026c5b98f7139ef",
+    "step": "engine_prep",
+    "environment": {
+      "python": "3.13.15",
+      "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+      "packages": {
+        "numpy": "2.1.3",
+        "pandas": "2.3.3",
+        "pyarrow": "23.0.1",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "lightgbm": "4.6.0"
+      }
+    },
+    "window": [
+      "2019-01-01T00:00:00+00:00",
+      "2023-12-31T23:59:59+00:00"
+    ],
+    "timepoint_config": {
+      "role": "evaluate",
+      "build": [
+        2019,
+        2023
+      ],
+      "buffer": [
+        2024,
+        2024
+      ],
+      "label_start": 2025,
+      "label_end": "data_cutoff"
+    }
+  },
+  "vocabulary": {
+    "after_r6": 4822,
+    "after_m1fix": 4820,
+    "final": 2935
+  },
+  "build_hyperedges": 212084,
+  "first_study_candidates": 85278,
+  "budget": 426390,
+  "conditional_candidates": 426390
+}

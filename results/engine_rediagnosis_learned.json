@@ -1,0 +1,1038 @@
+{
+  "meta": {
+    "step": "engine_rediagnosis",
+    "created": "2026-10-06",
+    "git_commit": "a91868c280dee37151c78062cb99bbe463d63be3",
+    "rediagnosis_config": {
+      "train_timepoint": "T1",
+      "eval_timepoint": "T2",
+      "models": {
+        "engine": [
+          "P",
+          "H",
+          "T",
+          "R"
+        ],
+        "engine_no_h": [
+          "P",
+          "T",
+          "R"
+        ]
+      },
+      "feature_rankings": {
+        "P_npmi_mean": "P_npmi_mean"
+      },
+      "k": [
+        100,
+        500,
+        1000,
+        5000
+      ]
+    },
+    "model_config": {
+      "type": "lightgbm_binary",
+      "params": {
+        "num_leaves": 7,
+        "min_data_in_leaf": 20,
+        "learning_rate": 0.05,
+        "feature_fraction": 0.8,
+        "bagging_fraction": 0.8,
+        "bagging_freq": 1,
+        "lambda_l2": 1.0
+      },
+      "n_estimators_max": 2000,
+      "early_stopping_rounds": 100,
+      "cv_folds": 5,
+      "cv_metric": "average_precision",
+      "seeds": [
+        20261011,
+        20261012,
+        20261013,
+        20261014,
+        20261015
+      ],
+      "engine_sets": [
+        "P",
+        "H",
+        "T",
+        "R"
+      ],
+      "v2_baseline_sets": [
+        "P",
+        "T",
+        "R"
+      ]
+    },
+    "evaluation_config": {
+      "top_k": 100,
+      "secondary_k": [
+        50,
+        500
+      ],
+      "bootstrap_n": 1000,
+      "bootstrap_seed": 20261016,
+      "ci_level": 0.95,
+      "rule": "pass only if both candidate and term-block bootstrap lower bounds exceed the threshold",
+      "score": "mean predicted probability over model seeds"
+    },
+    "candidates": "data/derived/candidates_learned/main",
+    "environment": {
+      "python": "3.13.15",
+      "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+      "packages": {
+        "numpy": "2.1.3",
+        "pandas": "2.3.3",
+        "pyarrow": "23.0.1",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "lightgbm": "4.6.0"
+      }
+    },
+    "inputs_sha256": {
+      "T1": "af534e19b1452b0425caeeb949008d7f16cf27a0fa5bcf08e73985bccbb43a6f",
+      "T2": "5d3170140863ba89c24cd6ffb6e38285d6ca87af615a62532a4ac33d521b62c2"
+    },
+    "note": "Descriptive development diagnostics; never a verdict."
+  },
+  "train": {
+    "timepoint": "T1",
+    "candidates": 28500,
+    "positives": 983
+  },
+  "eval": {
+    "timepoint": "T2",
+    "candidates": 203960,
+    "positives": 1816,
+    "base_rate": 0.008903706609139047
+  },
+  "models": {
+    "engine": {
+      "sets": [
+        "P",
+        "H",
+        "T",
+        "R"
+      ],
+      "rounds": 769,
+      "cv_average_precision_mean": 0.10375162310468729,
+      "cv_average_precision_sd": 0.009241677383397697,
+      "importance_gain_mean": {
+        "R_growth_mean": 3089.1951025009157,
+        "T_cos_min": 2705.957804131508,
+        "P_npmi_max": 2257.533844161034,
+        "T_cos_mean": 2192.3126023054124,
+        "P_logfreq_min": 2180.3262677431107,
+        "H_related_edge_size_mean": 2143.7872438669206,
+        "T_volume": 2032.0150777578353,
+        "P_npmi_mean": 1944.2423750162125,
+        "P_logfreq_mean": 1504.1547788143157,
+        "H_pairedges_gmean": 1359.0992010116577,
+        "P_aa_min": 1185.5894091129303,
+        "H_size_weighted_aa": 1147.5485503673553,
+        "R_growth_min": 1120.9274882793427,
+        "P_cn_gmean": 1044.7491990327835,
+        "P_aa_mean": 1005.7614054679871,
+        "H_pairedges_mean": 964.6628131389618,
+        "P_npmi_min": 880.7886640310287,
+        "P_aa_gmean": 863.0164687871933,
+        "P_cn_mean": 719.2105483055115,
+        "H_pairedges_min": 603.0945385456085,
+        "H_triad_cn": 191.30148289203643,
+        "P_cn_min": 155.18112156391143,
+        "H_open_triangle": 18.963214445114136
+      }
+    },
+    "engine_no_h": {
+      "sets": [
+        "P",
+        "T",
+        "R"
+      ],
+      "rounds": 432,
+      "cv_average_precision_mean": 0.09674126215895162,
+      "cv_average_precision_sd": 0.013562083323271128,
+      "importance_gain_mean": {
+        "R_growth_mean": 2637.7395884752273,
+        "T_cos_min": 2163.1203740119936,
+        "P_logfreq_min": 1938.5871917009354,
+        "P_npmi_max": 1857.27911028862,
+        "T_cos_mean": 1726.3890330076217,
+        "T_volume": 1693.546643948555,
+        "P_npmi_mean": 1591.3159276723861,
+        "P_logfreq_mean": 1194.1940063476563,
+        "P_aa_min": 1156.5218350172042,
+        "R_growth_min": 1149.6744889974593,
+        "P_cn_gmean": 800.1430660009385,
+        "P_aa_mean": 768.0999336719512,
+        "P_aa_gmean": 692.7371015071869,
+        "P_npmi_min": 674.7284558534623,
+        "P_cn_mean": 580.6843337297439,
+        "P_cn_min": 166.62606468200684
+      }
+    }
+  },
+  "rankings": {
+    "generator": {
+      "by_k": {
+        "100": {
+          "precision": 0.09,
+          "lift": 10.108149779735681,
+          "distinct_terms": 159,
+          "top_terms": [
+            [
+              "M:transformer",
+              17
+            ],
+            [
+              "M:attention",
+              11
+            ],
+            [
+              "T:image inpainting",
+              9
+            ],
+            [
+              "M:long short term memory",
+              9
+            ],
+            [
+              "M:inpainting",
+              8
+            ]
+          ],
+          "top_terms_slot_share": 0.18,
+          "max_term_triad_share": 0.17,
+          "hits": 9,
+          "hit_distinct_terms": 24
+        },
+        "500": {
+          "precision": 0.066,
+          "lift": 7.412643171806168,
+          "distinct_terms": 418,
+          "top_terms": [
+            [
+              "M:transformer",
+              94
+            ],
+            [
+              "M:bert",
+              42
+            ],
+            [
+              "M:attention",
+              42
+            ],
+            [
+              "M:seq2seq",
+              39
+            ],
+            [
+              "M:long short term memory",
+              32
+            ]
+          ],
+          "top_terms_slot_share": 0.166,
+          "max_term_triad_share": 0.188,
+          "hits": 33,
+          "hit_distinct_terms": 78
+        },
+        "1000": {
+          "precision": 0.059,
+          "lift": 6.626453744493391,
+          "distinct_terms": 602,
+          "top_terms": [
+            [
+              "M:transformer",
+              182
+            ],
+            [
+              "M:bert",
+              105
+            ],
+            [
+              "M:attention",
+              71
+            ],
+            [
+              "M:long short term memory",
+              62
+            ],
+            [
+              "M:seq2seq",
+              60
+            ]
+          ],
+          "top_terms_slot_share": 0.16,
+          "max_term_triad_share": 0.182,
+          "hits": 59,
+          "hit_distinct_terms": 119
+        },
+        "5000": {
+          "precision": 0.0424,
+          "lift": 4.762061674008811,
+          "distinct_terms": 1201,
+          "top_terms": [
+            [
+              "M:transformer",
+              758
+            ],
+            [
+              "M:bert",
+              481
+            ],
+            [
+              "M:attention",
+              403
+            ],
+            [
+              "M:seq2seq",
+              254
+            ],
+            [
+              "T:decoder",
+              244
+            ]
+          ],
+          "top_terms_slot_share": 0.14266666666666666,
+          "max_term_triad_share": 0.1516,
+          "hits": 212,
+          "hit_distinct_terms": 282
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 3.512463971022683,
+            "upper": 16.894246845579456,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.0,
+            "upper": 31.775200188978616,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 4.914296390803388,
+            "upper": 9.761128907264737,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 2.6221904737017154,
+            "upper": 14.604450982798438,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 5.037247935682027,
+            "upper": 8.386054505649717,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 2.886012622937537,
+            "upper": 11.352233305311996,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 4.179116141580055,
+            "upper": 5.379952907827186,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 2.8953088592648175,
+            "upper": 6.591131916968095,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine": {
+      "by_k": {
+        "100": {
+          "precision": 0.06,
+          "lift": 6.738766519823788,
+          "distinct_terms": 129,
+          "top_terms": [
+            [
+              "M:transformer",
+              50
+            ],
+            [
+              "T:representation learning",
+              17
+            ],
+            [
+              "T:retrieval",
+              15
+            ],
+            [
+              "T:data augmentation",
+              8
+            ],
+            [
+              "T:multi agent reinforcement learning",
+              6
+            ]
+          ],
+          "top_terms_slot_share": 0.32,
+          "max_term_triad_share": 0.5,
+          "hits": 6,
+          "hit_distinct_terms": 17
+        },
+        "500": {
+          "precision": 0.078,
+          "lift": 8.760396475770925,
+          "distinct_terms": 363,
+          "top_terms": [
+            [
+              "M:transformer",
+              194
+            ],
+            [
+              "T:representation learning",
+              65
+            ],
+            [
+              "T:retrieval",
+              51
+            ],
+            [
+              "M:bert",
+              51
+            ],
+            [
+              "T:data augmentation",
+              47
+            ]
+          ],
+          "top_terms_slot_share": 0.272,
+          "max_term_triad_share": 0.388,
+          "hits": 39,
+          "hit_distinct_terms": 77
+        },
+        "1000": {
+          "precision": 0.069,
+          "lift": 7.749581497797357,
+          "distinct_terms": 539,
+          "top_terms": [
+            [
+              "M:transformer",
+              378
+            ],
+            [
+              "M:bert",
+              131
+            ],
+            [
+              "T:representation learning",
+              110
+            ],
+            [
+              "T:retrieval",
+              87
+            ],
+            [
+              "T:data augmentation",
+              79
+            ]
+          ],
+          "top_terms_slot_share": 0.26166666666666666,
+          "max_term_triad_share": 0.378,
+          "hits": 69,
+          "hit_distinct_terms": 113
+        },
+        "5000": {
+          "precision": 0.0446,
+          "lift": 5.009149779735683,
+          "distinct_terms": 1192,
+          "top_terms": [
+            [
+              "M:transformer",
+              1461
+            ],
+            [
+              "M:bert",
+              707
+            ],
+            [
+              "T:representation learning",
+              317
+            ],
+            [
+              "T:data augmentation",
+              277
+            ],
+            [
+              "M:attention",
+              255
+            ]
+          ],
+          "top_terms_slot_share": 0.20113333333333333,
+          "max_term_triad_share": 0.2922,
+          "hits": 223,
+          "hit_distinct_terms": 254
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 2.2060167512337934,
+            "upper": 12.514461573908497,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.0,
+            "upper": 29.233434426888756,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 6.058134558755491,
+            "upper": 11.396274286028985,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 2.1447425266903926,
+            "upper": 17.29677095991317,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 6.094841053835073,
+            "upper": 9.55184573002755,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 3.0466540484254234,
+            "upper": 13.191837101688987,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 4.422346522665173,
+            "upper": 5.633543401965073,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 3.2891447838033265,
+            "upper": 6.894249376506806,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_generator_ci": {
+        "100": {
+          "candidate": {
+            "lower": -0.09999999999999999,
+            "upper": 0.039999999999999994,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.19024999999999978,
+            "upper": 0.15,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": -0.01404999999999996,
+            "upper": 0.03804999999999996,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.08199999999999999,
+            "upper": 0.09004999999999995,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": -0.006999999999999999,
+            "upper": 0.028000000000000004,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.04502499999999997,
+            "upper": 0.06004999999999995,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": -0.003799999999999998,
+            "upper": 0.008405,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.019204999999999996,
+            "upper": 0.02261499999999999,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine_no_h": {
+      "by_k": {
+        "100": {
+          "precision": 0.1,
+          "lift": 11.231277533039648,
+          "distinct_terms": 127,
+          "top_terms": [
+            [
+              "M:bert",
+              33
+            ],
+            [
+              "M:transformer",
+              29
+            ],
+            [
+              "M:soft actor critic",
+              10
+            ],
+            [
+              "M:deep q network",
+              10
+            ],
+            [
+              "T:multi agent reinforcement learning",
+              7
+            ]
+          ],
+          "top_terms_slot_share": 0.2966666666666667,
+          "max_term_triad_share": 0.33,
+          "hits": 10,
+          "hit_distinct_terms": 21
+        },
+        "500": {
+          "precision": 0.096,
+          "lift": 10.78202643171806,
+          "distinct_terms": 355,
+          "top_terms": [
+            [
+              "M:transformer",
+              189
+            ],
+            [
+              "M:bert",
+              132
+            ],
+            [
+              "T:representation learning",
+              30
+            ],
+            [
+              "M:deep q network",
+              25
+            ],
+            [
+              "T:data augmentation",
+              25
+            ]
+          ],
+          "top_terms_slot_share": 0.2673333333333333,
+          "max_term_triad_share": 0.378,
+          "hits": 48,
+          "hit_distinct_terms": 82
+        },
+        "1000": {
+          "precision": 0.076,
+          "lift": 8.535770925110132,
+          "distinct_terms": 546,
+          "top_terms": [
+            [
+              "M:transformer",
+              378
+            ],
+            [
+              "M:bert",
+              268
+            ],
+            [
+              "T:representation learning",
+              57
+            ],
+            [
+              "T:self supervised learning",
+              45
+            ],
+            [
+              "T:data augmentation",
+              44
+            ]
+          ],
+          "top_terms_slot_share": 0.264,
+          "max_term_triad_share": 0.378,
+          "hits": 76,
+          "hit_distinct_terms": 114
+        },
+        "5000": {
+          "precision": 0.047,
+          "lift": 5.278700440528634,
+          "distinct_terms": 1221,
+          "top_terms": [
+            [
+              "M:transformer",
+              1518
+            ],
+            [
+              "M:bert",
+              873
+            ],
+            [
+              "T:representation learning",
+              295
+            ],
+            [
+              "T:self supervised learning",
+              243
+            ],
+            [
+              "M:attention",
+              234
+            ]
+          ],
+          "top_terms_slot_share": 0.21086666666666667,
+          "max_term_triad_share": 0.3036,
+          "hits": 235,
+          "hit_distinct_terms": 251
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 4.588397543003754,
+            "upper": 18.016011888658703,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.0,
+            "upper": 34.46254992024589,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 7.962411484528426,
+            "upper": 13.636727184748485,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 3.9421035347808893,
+            "upper": 20.356827391005467,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 6.915771860072922,
+            "upper": 10.480292979203758,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 4.124647210947708,
+            "upper": 14.563429315590806,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 4.694301956273154,
+            "upper": 5.959719665723571,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 3.555458481465655,
+            "upper": 7.249649819752274,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_generator_ci": {
+        "100": {
+          "candidate": {
+            "lower": -0.07,
+            "upper": 0.09,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.2,
+            "upper": 0.21000000000000002,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 0.0019500000000000472,
+            "upper": 0.06,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.04804999999999997,
+            "upper": 0.11399999999999999,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 0.0,
+            "upper": 0.037024999999999975,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.035,
+            "upper": 0.07700000000000001,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": -0.001799999999999996,
+            "upper": 0.010599999999999998,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.015409999999999995,
+            "upper": 0.0266,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "P_npmi_mean": {
+      "by_k": {
+        "100": {
+          "precision": 0.06,
+          "lift": 6.738766519823788,
+          "distinct_terms": 167,
+          "top_terms": [
+            [
+              "T:speech synthesis",
+              10
+            ],
+            [
+              "M:vos",
+              7
+            ],
+            [
+              "M:wavenet",
+              7
+            ],
+            [
+              "T:text to speech",
+              7
+            ],
+            [
+              "M:vision transformer",
+              7
+            ]
+          ],
+          "top_terms_slot_share": 0.12666666666666668,
+          "max_term_triad_share": 0.1,
+          "hits": 6,
+          "hit_distinct_terms": 16
+        },
+        "500": {
+          "precision": 0.03,
+          "lift": 3.369383259911894,
+          "distinct_terms": 542,
+          "top_terms": [
+            [
+              "M:xlm",
+              30
+            ],
+            [
+              "M:faster r cnn",
+              25
+            ],
+            [
+              "M:retinanet",
+              24
+            ],
+            [
+              "T:speech synthesis",
+              22
+            ],
+            [
+              "M:mbert",
+              21
+            ]
+          ],
+          "top_terms_slot_share": 0.08133333333333333,
+          "max_term_triad_share": 0.06,
+          "hits": 15,
+          "hit_distinct_terms": 33
+        },
+        "1000": {
+          "precision": 0.035,
+          "lift": 3.930947136563877,
+          "distinct_terms": 824,
+          "top_terms": [
+            [
+              "M:faster r cnn",
+              60
+            ],
+            [
+              "M:retinanet",
+              42
+            ],
+            [
+              "M:mbert",
+              40
+            ],
+            [
+              "M:xlm",
+              39
+            ],
+            [
+              "M:feature pyramid network",
+              34
+            ]
+          ],
+          "top_terms_slot_share": 0.07166666666666667,
+          "max_term_triad_share": 0.06,
+          "hits": 35,
+          "hit_distinct_terms": 69
+        },
+        "5000": {
+          "precision": 0.0238,
+          "lift": 2.6730440528634363,
+          "distinct_terms": 1562,
+          "top_terms": [
+            [
+              "M:bert",
+              227
+            ],
+            [
+              "M:faster r cnn",
+              209
+            ],
+            [
+              "M:feature pyramid network",
+              159
+            ],
+            [
+              "T:object detection",
+              149
+            ],
+            [
+              "M:retinanet",
+              141
+            ]
+          ],
+          "top_terms_slot_share": 0.059,
+          "max_term_triad_share": 0.0454,
+          "hits": 119,
+          "hit_distinct_terms": 196
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 2.1906159441759963,
+            "upper": 13.076467741935481,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.0,
+            "upper": 26.590990274142335,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 1.8694339642667046,
+            "upper": 5.444989898494297,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.4008606496143978,
+            "upper": 10.388137674451832,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 2.6851195325807664,
+            "upper": 5.207586066658309,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.9738816900433201,
+            "upper": 8.567085304744161,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 2.222121155648577,
+            "upper": 3.1400046384844056,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 1.3685169316558443,
+            "upper": 4.328157483905579,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_generator_ci": {
+        "100": {
+          "candidate": {
+            "lower": -0.1,
+            "upper": 0.05,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.24,
+            "upper": 0.16999999999999998,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": -0.06,
+            "upper": -0.007950000000000042,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.10204999999999996,
+            "upper": 0.03804999999999996,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": -0.04300000000000001,
+            "upper": -0.005999999999999998,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.074,
+            "upper": 0.028999999999999998,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": -0.02500999999999999,
+            "upper": -0.012599999999999997,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.042205,
+            "upper": 0.00461499999999999,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    }
+  }
+}
