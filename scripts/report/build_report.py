@@ -5,8 +5,8 @@ Usage: python scripts/report/build_report.py
 Renders templates/report.<lang>.md.j2 into reports/report.<lang>.md. Numbers enter
 the text only through Values.v (triadrx.report), which records every value used;
 the records are written to reports/report_values.json for the consistency tests.
-V1/V2 verdicts are recomputed from the bootstrap lower bounds and must equal the
-stored verdicts.
+V1/V2 verdicts and the engine verdict sequence are recomputed from the bootstrap lower
+bounds and must equal the stored verdicts.
 """
 import json
 import sys
@@ -16,7 +16,7 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
 # Shared code lives in the triadrx package at the project root
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from triadrx.report import AREA_WORDS, VERDICT_WORDS, Values, verdicts
+from triadrx.report import AREA_WORDS, STEP_WORDS, VERDICT_WORDS, Values, engine_verdicts, verdicts
 
 TEMPLATES = Path("templates")
 OUT = Path("reports")
@@ -28,6 +28,8 @@ REPORT_FILES = [
     "evidence_pypi_links", "evidence_pypi_downloads", "download_period", "dvf", "m2_final",
     "briefing_bundles", "briefing_generation", "briefing_checks", "briefing_checks_review",
     "q1", "q2", "q1_cross_model", "rl_case", "prospective_register",
+    "label_evidence_T1_attempt1_score", "conditional_coverage", "pipeline_compare", "engine_power",
+    "engine_verdict_T3", "engine_secondary_T3",
 ]
 
 
@@ -36,8 +38,8 @@ def render(lang: str, root: Path = Path(".")) -> tuple[str, list]:
     env = Environment(loader=FileSystemLoader(str(root / TEMPLATES)), undefined=StrictUndefined,
                       keep_trailing_newline=True, trim_blocks=False)
     template = env.get_template(f"report.{lang}.md.j2")
-    text = template.render(V=values, verdicts=verdicts(values), report_files=REPORT_FILES, word=VERDICT_WORDS[lang],
-                           area=AREA_WORDS[lang])
+    text = template.render(V=values, verdicts=verdicts(values), engine=engine_verdicts(values), report_files=REPORT_FILES,
+                           word=VERDICT_WORDS[lang], step_word=STEP_WORDS[lang], area=AREA_WORDS[lang])
     return text, values.records
 
 

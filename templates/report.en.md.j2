@@ -6,6 +6,8 @@
 
 **Nature of the study:** a framework for prescribing promising technology triads is proposed and evaluated for the first time on machine learning and deep learning. {% if not verdicts.validation_main.V1 %}This evaluation did not establish the reliability of the candidate engine. {% endif %}The efficacy of the prescriptions is judged on {{ V.v('derived', 'prospective_verdict_date') }} by a prospective check fixed before any outcome existed (section 11).
 
+**Engine reliability (follow-up study):** after the lightweight validation, an engine that addresses why V1 failed was preregistered and judged on a new timepoint T3 (section 12). The applied-mode prescriptions were made with the lightweight-validation engine, so the engine reliability flag above stays as it is.
+
 ## 1. Scope of claims
 
 | Claimed | Not claimed |
@@ -14,6 +16,8 @@
 | A prescriptive procedure with decision-time data and leakage controls was carried out; the preregistration protects the lightweight-validation verdicts, and the prescription-stage rules were set after them | DVF scores predict future outcomes |
 | The contribution of higher-order features was tested with a preregistered rule | Briefings and MVPs are validated business opportunities |
 | The prospective check of efficacy and its baseline were fixed before any outcome existed | The engine beats a simple proximity baseline |
+
+**Claims of the follow-up study (section 12):** {% if engine.S1_recall == 'pass' %}on the new timepoint T3, the conditional generator was judged to hold more realised combinations than the lightweight-validation candidate rule. {% endif %}{% if engine.S2_random == 'pass' %}The engine's top {{ V.v('config', 'engine_reliability.verdict.k', 'int') }} was judged to hold more realised combinations than random ranking. {% endif %}{% if engine.S3_npmi == 'pass' %}It also passed the step against the simple proximity (nPMI) baseline (term-block lower bound {{ V.v('engine_verdict_T3', 'by_k.' ~ (V.raw('config', 'engine_reliability.verdict.k') | string) ~ '.S3_diff_ci.term_block.lower', 'd3') }}). {% endif %}{% if engine.S4_h_contribution != 'pass' %}The added value of the higher-order features (H) was not established. {% endif %}The quality of the very top of a prescription, prediction of real combinations independent of label noise, and prescriptions made with this engine are not claimed. The engine entries of the table above refer to the lightweight-validation engine.
 
 ## 2. Data and vocabulary
 
@@ -164,6 +168,7 @@ All limitations of design §16 apply. The most important for reading the results
 - A patent data gap before the data cutoff and a shortened D download window.
 - Q1 rests on one reviewer and was not corroborated by the cross-model check; some unsupported judgments come from the design (missing package descriptions, claims of absent evidence that citations cannot support).
 - DVF predictive validity not tested; it will be checked through the prospective registration (design §11).
+- Follow-up study (section 12): matching errors and synonym combinations remaining in the label (vocabulary matching precision was not revised), concentration of the top candidates on hub terms, repeated use of T2 during development, part of the T3 combinations already seen in the applied mode, and a verdict limited to the top k.
 
 ## 10. Preregistration change log
 
@@ -177,6 +182,46 @@ The change log has {{ V.v('derived', 'prereg_changes', 'int') }} entries, {{ V.v
 ## 11. Prospective check
 
 The prescription top {{ V.v('config', 'prospective.top_k', 'int') }} and a baseline of the top {{ V.v('config', 'prospective.top_k', 'int') }} by pair proximity (`{{ V.v('config', 'prospective.baseline.feature') }}`) after the same redundancy filter were registered before any outcome existed (design §11.1, preregistration section 8). The comparison population is the {{ V.v('prospective_register', 'population', 'int') }} candidates passing the redundancy filter, and the two lists share {{ V.v('prospective_register', 'overlap_prescription_baseline', 'int') }} triads. The label window starts {{ V.v('config', 'prospective.buffer_years', 'int') }} year(s) after the data cutoff and lasts {{ V.v('config', 'prospective.label_years', 'int') }} years; the verdict date is {{ V.v('derived', 'prospective_verdict_date') }}. P1 asks whether the prescription top beats random ranking and P2 whether it beats the baseline in top precision; as in the lightweight validation, the lower bounds of both bootstraps must clear the threshold. The check script does not run before the verdict date and stops if an input file differs from its registered hash.
+
+## 12. Engine reliability (follow-up study)
+
+{% set vk = V.raw('config', 'engine_reliability.verdict.k') -%}
+{% set kk = vk | string -%}
+**Purpose:** V1 of the lightweight validation stays not passed and is never judged again. This study asked the same kind of question on a new timepoint T3 with an engine that addresses why V1 failed (a label that counted co-mention as realisation, the candidate-generation bottleneck, low power, and reuse of the verdict data for development). Labels, candidates and k differ, so the numbers are not compared with V1 (design §18, `preregistration_engine.md`). The verdict rules were fixed at the engine preregistration freeze commit {{ V.v('engine_verdict_T3', 'meta.preregistration_freeze_commit') }} before T3 was opened once.
+
+**Label redefinition:** among triads realised significantly under the null model, only those with a paper whose title and abstract hold all three terms in a window of adjacent sentences without a comparison cue count as positive. The rule was checked against human judgements. The first attempt missed the adoption criterion (the lower bound of the combination share among rule positives above the upper bound among rule negatives); after one revision the combination share was {{ V.v('label_evidence_T1_attempt1_score', 'rule_positive.combination_share', 'd2') }} {{ V.ci('label_evidence_T1_attempt1_score', 'rule_positive.wilson_lower', 'rule_positive.wilson_upper', 'd2') }} among rule positives and {{ V.v('label_evidence_T1_attempt1_score', 'rule_negative.combination_share', 'd2') }} {{ V.ci('label_evidence_T1_attempt1_score', 'rule_negative.wilson_lower', 'rule_negative.wilson_upper', 'd2') }} among rule negatives. Nearly half of the rule positives are still not combinations, so the label stays noisy.
+
+**Candidate generation:** a conditional generator adds a third term to pairs that co-occurred stably in the build window. On the development timepoint T2 the share of positives it can reach (its ceiling) is {{ V.v('conditional_coverage', 'timepoints.T2.label_v2.stable.coverage', 'pct1') }}, far above the recall of the lightweight-validation candidate rule, {{ V.v('conditional_coverage', 'timepoints.T2.label_v2.stable.candidate_recall', 'pct1') }}. The verdict covers one pipeline, this generator and the engine (P, H, T, R) on its candidates; the learned third-term score is a secondary analysis.
+
+**How the verdict values were set:** the budget B and k came from a rule fixed before the power analysis on the development data (T2): the values with the highest power of passing the recall and random steps in sequence. This gives k = {{ V.v('config', 'engine_reliability.verdict.k', 'int') }} and B = {{ V.v('config', 'engine_reliability.verdict.budget_multiple_of_first_candidates', 'int') }} times the candidate count of the lightweight-validation rule. Power through the nPMI-baseline step is at most {{ V.v('derived', 'engine_power_max_through_s3', 'd3') }}; this was recorded before T3 was opened. T2 was looked at many times during development, so development numbers may be optimistic.
+
+**T3 verdict** ({{ V.v('engine_verdict_T3', 'labels.label_v2_positive', 'int') }} positives among {{ V.v('engine_verdict_T3', 'labels.realised_significant_triads', 'int') }} significant realised triads on T3, {{ V.v('engine_verdict_T3', 'labels.pool_positive', 'int') }} positives among {{ V.v('engine_verdict_T3', 'labels.pool_candidates', 'int') }} candidates, trained on {{ V.v('engine_verdict_T3', 'meta.training_timepoints', 'join') }}). A step is tested only if every earlier step passed, and passes only if the lower bounds of both bootstraps clear its threshold.
+
+| Step | Statistic | Point | Candidate lower | Term-block lower | Verdict |
+|---|---|---|---|---|---|
+| S1 recall | recall of the generator's candidates − recall of the lightweight-validation rule | {{ V.v('engine_verdict_T3', 'S1_recall.point', 'd3') }} | {{ V.v('engine_verdict_T3', 'S1_recall.candidate.lower', 'd3') }} | {{ V.v('engine_verdict_T3', 'S1_recall.term_block.lower', 'd3') }} | {{ step_word[engine.S1_recall] }} |
+| S2 against random | top-k lift | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.engine.lift', 'd2') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.S2_lift_ci.candidate.lower', 'd2') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.S2_lift_ci.term_block.lower', 'd2') }} | {{ step_word[engine.S2_random] }} |
+| S3 against the nPMI baseline | top-k precision difference | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.engine.precision', 'd3') }} − {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.baseline_precision', 'd3') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.S3_diff_ci.candidate.lower', 'd3') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.S3_diff_ci.term_block.lower', 'd3') }} | {{ step_word[engine.S3_npmi] }} |
+| S4 contribution of H | top-k precision difference (against the engine without H) | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.engine.precision', 'd3') }} − {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.engine_no_h_precision', 'd3') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.S4_diff_ci.candidate.lower', 'd3') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.S4_diff_ci.term_block.lower', 'd3') }} | {{ step_word[engine.S4_h_contribution] }} |
+
+The threshold is {{ V.v('config', 'engine_reliability.verdict.sequence.0.threshold', 'd1') }} for S1, S3 and S4 and {{ V.v('config', 'engine_reliability.verdict.sequence.1.threshold', 'd1') }} for S2. {% if engine.S3_npmi == 'pass' %}Read S3 together with its term-block lower bound, {{ V.v('engine_verdict_T3', 'by_k.' ~ (V.raw('config', 'engine_reliability.verdict.k') | string) ~ '.S3_diff_ci.term_block.lower', 'd3') }}, against the threshold. {% endif %}{% if engine.S4_h_contribution != 'pass' %}As with V2 of the lightweight validation, the higher-order features (H) were not shown to add top precision. {% endif %}
+
+**Descriptive k** (never judged): the smaller k, the wider the interval, so these are no basis for a decision.
+
+| k | Precision | Lift | Lift term-block lower | nPMI baseline precision |
+|---|---|---|---|---|
+{% for dk in V.raw('config', 'engine_reliability.verdict.descriptive_k') -%}
+| {{ V.v('config', 'engine_reliability.verdict.descriptive_k.' ~ loop.index0, 'int') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ dk ~ '.engine.precision', 'd3') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ dk ~ '.engine.lift', 'd2') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ dk ~ '.S2_lift_ci.term_block.lower', 'd2') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ dk ~ '.baseline_precision', 'd3') }} |
+{% endfor %}
+**Concentration:** the most frequent term in the top {{ V.v('config', 'engine_reliability.verdict.k', 'int') }} is `{{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.engine.top_terms.0.0') }}` ({{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.engine.top_terms.0.1', 'int') }} triads), and the largest share of candidates holding one term is {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.engine.max_term_triad_share', 'pct1') }}.
+
+**Calibration (secondary):** the Brier score of probabilities fitted on out-of-fold scores of the training data is {{ V.v('engine_verdict_T3', 'calibration.brier', 'd3') }}. It is not used in the verdict.
+
+**Secondary analysis (not a verdict):** at the verdict budget the recall of the learned third-term score is {% for row in V.raw('engine_secondary_T3', 'by_order.learned') %}{% if row.budget == V.raw('engine_secondary_T3', 'verdict_budget') %}{{ V.v('engine_secondary_T3', 'by_order.learned.' ~ loop.index0 ~ '.recall', 'd3') }}{% endif %}{% endfor %} and that of the nPMI generator {% for row in V.raw('engine_secondary_T3', 'by_order.generator') %}{% if row.budget == V.raw('engine_secondary_T3', 'verdict_budget') %}{{ V.v('engine_secondary_T3', 'by_order.generator.' ~ loop.index0 ~ '.recall', 'd3') }}{% endif %}{% endfor %}.
+
+**Limitations:** part of the T3 combinations was already seen in the applied-mode briefings. Matching errors and synonym combinations may remain in the label, so the engine may have hit vocabulary overlap rather than real combinations. The verdict concerns the top {{ V.v('config', 'engine_reliability.verdict.k', 'int') }} and does not guarantee the quality of the very top of a prescription. No prescription was produced with this engine.
+
+**Engine preregistration change log:** {{ V.v('derived', 'engine_prereg_changes', 'int') }} entries, {{ V.v('derived', 'engine_prereg_changes_after_results', 'int') }} of them decided after seeing results. {% if V.raw('derived', 'engine_prereg_rows_after_freeze') == 0 %}All were recorded before the freeze, before T3 was opened. {% else %}Some entries were added after the freeze. {% endif %}(`preregistration_engine.md` section 4)
 
 ## Appendix: provenance of result files
 

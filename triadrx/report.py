@@ -138,6 +138,36 @@ def verdicts(values: Values) -> dict:
     return out
 
 
+def engine_change_rows(text: str) -> list[list[str]]:
+    """Cells of the dated rows in the engine preregistration change log (section 4)."""
+    section = text.split("## 4.", 1)[1]
+    lines = [line for line in section.splitlines() if re.match(r"^\| \d{4}-\d{2}-\d{2} \|", line)]
+    return [[c.strip() for c in line.strip().strip("|").split("|")] for line in lines]
+
+
+def engine_verdicts(values: Values) -> dict:
+    """Engine verdict sequence recomputed from the bootstrap lower bounds (engine preregistration 3.2).
+
+    A step passes when both lower bounds exceed its threshold and is tested only if every earlier
+    step passed; the result must equal the stored sequence.
+    """
+    verdict = values.raw("config", "engine_reliability.verdict")
+    k = str(verdict["k"])
+    by_k = values.raw("engine_verdict_T3", f"by_k.{k}")
+    cis = {"S1_recall": values.raw("engine_verdict_T3", "S1_recall"), "S2_random": by_k["S2_lift_ci"],
+           "S3_npmi": by_k["S3_diff_ci"], "S4_h_contribution": by_k["S4_diff_ci"]}
+    sequence, open_ = {}, True
+    for step in verdict["sequence"]:
+        ci = cis[step["step"]]
+        ok = ci["candidate"]["lower"] > step["threshold"] and ci["term_block"]["lower"] > step["threshold"]
+        sequence[step["step"]] = ("pass" if ok else "fail") if open_ else "not tested"
+        open_ = open_ and ok
+    stored = values.raw("engine_verdict_T3", "sequence")
+    if sequence != stored:
+        raise ValueError(f"recomputed engine verdicts {sequence} differ from the stored {stored}")
+    return sequence
+
+
 def derived(values: Values) -> dict:
     prereg_text = (values.root / PREREG).read_text()
     changes = prereg_changes(prereg_text)
@@ -168,7 +198,18 @@ def derived(values: Values) -> dict:
     unstable = [c for c in full if c["riskiest_bootstrap_share"][c["riskiest_axis"]] < STABLE_SHARE]
     intervals = [a["bootstrap_score_95"] for c in dvf for a in c["axes"].values() if a["bootstrap_score_95"]]
     briefing_top = study["applied"]["briefing"]["top_n"]
+    engine_prereg = study["engine_reliability"]["prereg_file"]
+    engine_text = (values.root / engine_prereg).read_text()
+    engine_rows = engine_change_rows(engine_text)
+    engine_freeze = re.search(r"^고정 커밋:\s*(\S+)", engine_text, flags=re.M).group(1)
+    engine_frozen_text = subprocess.run(["git", "show", f"{engine_freeze}:{engine_prereg}"], cwd=values.root,
+                                        capture_output=True, text=True, check=True).stdout
+    conservative = values.raw("engine_power", "power.t3_conservative")
     return {
+        "engine_power_max_through_s3": max(r["S1_S2_S3"] for b in conservative.values() for r in b["by_k"].values()),
+        "engine_prereg_changes": len(engine_rows),
+        "engine_prereg_rows_after_freeze": len(engine_rows) - len(engine_change_rows(engine_frozen_text)),
+        "engine_prereg_changes_after_results": sum(1 for cells in engine_rows if cells[-2].startswith("예")),
         # Conditions for interpretive sentences; they are not printed as numbers
         "synthesis_fields_lower": bool(summary_rates and synthesis_rates and max(synthesis_rates) < min(summary_rates)),
         "deep_dive_less_faithful": bool(deep) and all(c["q1_sample"]["supported"] / c["q1_sample"]["sentences"] < q1_rate for c in deep),
@@ -198,6 +239,12 @@ def derived(values: Values) -> dict:
 VERDICT_WORDS = {
     "ko": {"pass": "합격", "conditional": "조건부 합격", "fail": "불합격"},
     "en": {"pass": "pass", "conditional": "conditional pass", "fail": "fail"},
+}
+
+# Display words for the engine verdict steps
+STEP_WORDS = {
+    "ko": {"pass": "통과", "fail": "불통과", "not tested": "검정하지 않음"},
+    "en": {"pass": "pass", "fail": "fail", "not tested": "not tested"},
 }
 
 # Areas of the preregistration change log, in report order (Korean key as written in the log)

@@ -26,6 +26,9 @@ INPUTS = [
     "data/derived/pair_evidence/main/T1.parquet", "data/derived/pair_evidence/main/T2.parquet",
     "data/derived/features_learned/main/T1.parquet", "data/derived/features_learned/main/T2.parquet",
     "data/derived/candidates/main/T2.parquet",
+    "data/derived/hypergraph/main/T3_build.parquet", "data/derived/candidates/main/T3.parquet",
+    "data/derived/features_v2/main/R2.parquet", "data/derived/features_v2/main/R3.parquet",
+    "data/derived/features_v2/main/T3.parquet",
 ]
 DATASET = "triad-rx-engine-step4-data"
 

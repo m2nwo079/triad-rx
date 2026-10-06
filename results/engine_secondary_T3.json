@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "step": "engine_secondary_T3",
+    "created": "2026-10-06",
+    "git_commit": "c257c44069b46352d32b57d5fbb91338251f96a9",
+    "environment": {
+      "python": "3.13.15",
+      "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+      "packages": {
+        "numpy": "2.1.3",
+        "pandas": "2.3.3",
+        "pyarrow": "23.0.1",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "lightgbm": "4.6.0"
+      }
+    },
+    "train_timepoint": "T1",
+    "rounds": 1784,
+    "secondary": {
+      "learned_generator_recall": "recall at the fixed budget of the learned third-term score against the nPMI generator; reported, never part of the primary verdict"
+    },
+    "note": "Secondary analysis; reported, never part of the verdict."
+  },
+  "verdict_budget": 426390,
+  "completions": 29877159,
+  "label_v2_positive": 10222,
+  "by_order": {
+    "generator": [
+      {
+        "budget": 85278,
+        "capped": false,
+        "hits": 653,
+        "recall": 0.06388182351790256,
+        "precision": 0.007657309036328244
+      },
+      {
+        "budget": 426390,
+        "capped": false,
+        "hits": 1823,
+        "recall": 0.17834083349638036,
+        "precision": 0.004275428598231666
+      },
+      {
+        "budget": 2131950,
+        "capped": false,
+        "hits": 3652,
+        "recall": 0.3572686362747016,
+        "precision": 0.0017129857642064776
+      },
+      {
+        "budget": 8527800,
+        "capped": false,
+        "hits": 5484,
+        "recall": 0.5364899236939934,
+        "precision": 0.0006430732428058819
+      }
+    ],
+    "learned": [
+      {
+        "budget": 85278,
+        "capped": false,
+        "hits": 1043,
+        "recall": 0.10203482684406183,
+        "precision": 0.012230587021271605
+      },
+      {
+        "budget": 426390,
+        "capped": false,
+        "hits": 2134,
+        "recall": 0.20876540794365095,
+        "precision": 0.005004807805061094
+      },
+      {
+        "budget": 2131950,
+        "capped": false,
+        "hits": 3816,
+        "recall": 0.37331246331441986,
+        "precision": 0.0017899106451839866
+      },
+      {
+        "budget": 8527800,
+        "capped": false,
+        "hits": 5512,
+        "recall": 0.5392291136763843,
+        "precision": 0.0006463566218719951
+      }
+    ]
+  }
+}

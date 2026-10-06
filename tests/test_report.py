@@ -96,3 +96,32 @@ def test_prereg_changes_counts_by_area():
     assert sum(a["rows"] for a in out["by_area"].values()) == out["rows"]
     with pytest.raises(ValueError):
         prereg_changes(head + "| 2026-10-04 | 기타 | a | 예 | |\n")
+
+
+def test_engine_change_rows_and_verdict_recompute():
+    import sys
+    sys.path.insert(0, str(ROOT))
+    from triadrx.report import engine_change_rows, engine_verdicts
+    text = "## 4. 변경 기록\n|날짜|항목|전|후|사유|결과 확인 후 변경 여부|커밋|\n| 2026-10-06 | a | b | c | d | 예 (x) | |\n| 2026-10-07 | a | b | c | d | 아니오 | |\n"
+    rows = engine_change_rows(text)
+    assert len(rows) == 2 and rows[0][-2].startswith("예") and not rows[1][-2].startswith("예")
+
+    class Fake:
+        def __init__(self, stored):
+            ci = lambda lo: {"candidate": {"lower": lo}, "term_block": {"lower": lo}}
+            self.data = {"config": {"engine_reliability": {"verdict": {"k": 5, "sequence": [
+                {"step": "S1_recall", "threshold": 0.0}, {"step": "S2_random", "threshold": 1.0},
+                {"step": "S3_npmi", "threshold": 0.0}, {"step": "S4_h_contribution", "threshold": 0.0}]}}},
+                "engine_verdict_T3": {"S1_recall": ci(0.1), "by_k": {"5": {"S2_lift_ci": ci(0.5), "S3_diff_ci": ci(0.1),
+                                                                             "S4_diff_ci": ci(0.1)}}, "sequence": stored}}
+
+        def raw(self, name, path):
+            obj = self.data[name]
+            for part in path.split("."):
+                obj = obj[part]
+            return obj
+
+    expected = {"S1_recall": "pass", "S2_random": "fail", "S3_npmi": "not tested", "S4_h_contribution": "not tested"}
+    assert engine_verdicts(Fake(expected)) == expected
+    with pytest.raises(ValueError):
+        engine_verdicts(Fake({**expected, "S2_random": "pass"}))

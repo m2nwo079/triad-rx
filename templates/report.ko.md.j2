@@ -6,6 +6,8 @@
 
 **연구의 성격:** 유망한 세 기술 결합을 처방하기 위한 프레임워크를 제안하고 머신러닝·딥러닝에 적용한 첫 평가입니다. {% if not verdicts.validation_main.V1 %}이 평가에서 후보 발굴 엔진의 신뢰도는 확보하지 못했습니다. {% endif %}처방의 효능은 결과가 존재하기 전에 고정한 전향적 검증(11절)으로 {{ V.v('derived', 'prospective_verdict_date') }}에 판정합니다.
 
+**엔진 신뢰도 확보 (후속 연구):** 경량 검증 이후, V1이 불통과한 원인을 보완한 엔진을 사전 등록한 뒤 새 시점 T3에서 판정했습니다(12절). 적용 모드 처방은 경량 검증 때의 엔진으로 만들었으므로 위의 엔진 신뢰도 표시는 그대로입니다.
+
 ## 1. 주장 범위
 
 | 주장하는 것 | 주장하지 않는 것 |
@@ -14,6 +16,8 @@
 | 결정 시점·누수 통제를 갖춘 처방 절차를 실행했다. 사전 등록은 경량 검증 판정을 보호하고, 처방 단계 규칙은 그 판정 이후에 정했다 | DVF 점수가 미래 성과를 예측한다 |
 | 고차 특징의 기여를 사전 등록 규칙으로 확인했다 | 브리핑·MVP가 검증된 사업 기회다 |
 | 처방의 효능을 판정할 전향적 검증 절차와 기준선을 결과가 존재하기 전에 고정했다 | 엔진이 단순 근접도 기준선보다 낫다 |
+
+**후속 연구(12절)의 주장 범위:** {% if engine.S1_recall == 'pass' %}새 시점 T3에서, 조건부 생성기가 경량 검증의 후보 규칙보다 실현 결합을 더 많이 담는다고 판정했습니다. {% endif %}{% if engine.S2_random == 'pass' %}엔진의 상위 {{ V.v('config', 'engine_reliability.verdict.k', 'int') }}개가 무작위보다 실현 결합을 더 많이 담는다고 판정했습니다. {% endif %}{% if engine.S3_npmi == 'pass' %}단순 근접도(nPMI) 기준선보다 낫다는 판정도 통과했습니다(용어 블록 하한 {{ V.v('engine_verdict_T3', 'by_k.' ~ (V.raw('config', 'engine_reliability.verdict.k') | string) ~ '.S3_diff_ci.term_block.lower', 'd3') }}). {% endif %}{% if engine.S4_h_contribution != 'pass' %}고차 특징(H)의 추가 가치는 판정되지 않았습니다. {% endif %}처방 최상위의 품질, 레이블 잡음과 무관한 실제 결합의 예측, 이 엔진으로 만든 처방은 주장하지 않습니다. 위 표의 엔진 관련 칸은 경량 검증 당시의 엔진에 대한 것입니다.
 
 ## 2. 데이터와 어휘
 
@@ -164,6 +168,7 @@ DVF 대상 후보 {{ V.v('derived', 'dvf_candidates', 'int') }}개에서 축이 
 - 특허 데이터 공백(기준 시점 이전 일부 기간 미수록)과 D 다운로드 기간 축소.
 - Q1은 검토자 한 명의 판단이며 교차 모델 점검으로 뒷받침되지 않음. 뒷받침되지 않은 판정의 일부는 설계(패키지 설명 공백, "근거 없음" 주장의 판정 충돌)에서 생김.
 - DVF 예측력 미검증. 검증은 전향적 등록(설계서 11절)으로 이후에 합니다.
+- 후속 연구(12절): 레이블에 남은 매칭 오류와 동의어 조합(어휘 매칭 정밀도는 손대지 않음), 상위 후보의 허브 용어 쏠림, 개발 중 T2의 반복 사용, T3 조합의 일부를 적용 모드에서 이미 봄, 판정이 상위 k개에 한정됨.
 
 ## 10. 사전 등록 변경 기록
 
@@ -177,6 +182,46 @@ DVF 대상 후보 {{ V.v('derived', 'dvf_candidates', 'int') }}개에서 축이 
 ## 11. 전향적 검증
 
 처방 상위 {{ V.v('config', 'prospective.top_k', 'int') }}개와, 같은 중복 필터 뒤 쌍 근접도(`{{ V.v('config', 'prospective.baseline.feature') }}`) 상위 {{ V.v('config', 'prospective.top_k', 'int') }}개의 기준선을 결과가 존재하기 전에 등록했습니다(설계서 11.1절, 사전 등록 8절). 비교 모집단은 중복 필터를 통과한 후보 {{ V.v('prospective_register', 'population', 'int') }}개이고, 두 목록의 겹침은 {{ V.v('prospective_register', 'overlap_prescription_baseline', 'int') }}개입니다. 레이블 구간은 기준 시점 {{ V.v('config', 'prospective.buffer_years', 'int') }}년 뒤부터 {{ V.v('config', 'prospective.label_years', 'int') }}년이며, 판정일은 {{ V.v('derived', 'prospective_verdict_date') }}입니다. P1은 처방 상위가 무작위보다, P2는 처방 상위가 기준선보다 상위 정밀도가 높은지를 보며, 경량 검증과 같이 두 부트스트랩의 하한이 모두 기준을 넘어야 통과합니다. 판정 스크립트는 판정일 전에는 실행되지 않고, 입력 파일의 해시가 등록과 다르면 멈춥니다.
+
+## 12. 엔진 신뢰도 확보 (후속 연구)
+
+{% set vk = V.raw('config', 'engine_reliability.verdict.k') -%}
+{% set kk = vk | string -%}
+**목적:** 경량 검증의 V1은 불통과로 고정되며 다시 판정하지 않습니다. 이 연구는 V1이 불통과한 원인(함께 언급됨까지 실현으로 센 레이블, 후보 생성 병목, 검정력 부족, 판정 데이터의 개발 재사용)을 보완한 엔진으로 같은 유형의 질문을 새 시점 T3에서 다시 물었습니다. 레이블·후보·k가 달라 수치를 V1과 직접 비교하지 않습니다(설계서 18절, `preregistration_engine.md`). 판정 규칙은 엔진 사전 등록의 고정 커밋 {{ V.v('engine_verdict_T3', 'meta.preregistration_freeze_commit') }}에 고정한 뒤 T3를 한 번 열었습니다.
+
+**레이블 재정의:** 귀무모형으로 유의하게 실현된 결합 중, 제목·초록의 인접 문장 창에 세 용어가 비교 표현 없이 함께 나오는 논문이 있는 결합만 양성으로 봅니다. 사람 판정으로 규칙을 검증했습니다. 첫 시도는 채택 기준(규칙 양성의 결합 비율 하한이 규칙 음성의 상한보다 큼)을 넘지 못했고, 한 번 보완한 규칙의 측정에서 규칙 양성의 결합 비율은 {{ V.v('label_evidence_T1_attempt1_score', 'rule_positive.combination_share', 'd2') }} {{ V.ci('label_evidence_T1_attempt1_score', 'rule_positive.wilson_lower', 'rule_positive.wilson_upper', 'd2') }}, 규칙 음성은 {{ V.v('label_evidence_T1_attempt1_score', 'rule_negative.combination_share', 'd2') }} {{ V.ci('label_evidence_T1_attempt1_score', 'rule_negative.wilson_lower', 'rule_negative.wilson_upper', 'd2') }}였습니다. 규칙 양성도 절반 가까이는 결합이 아니므로 레이블에는 잡음이 남습니다.
+
+**후보 생성:** 구축 구간에 안정적으로 함께 나온 쌍에 셋째 용어를 붙이는 조건부 생성기를 썼습니다. 개발 시점 T2에서 이 방식이 닿을 수 있는 양성의 비율(상한)은 {{ V.v('conditional_coverage', 'timepoints.T2.label_v2.stable.coverage', 'pct1') }}로, 경량 검증 후보 규칙의 재현율 {{ V.v('conditional_coverage', 'timepoints.T2.label_v2.stable.candidate_recall', 'pct1') }}보다 훨씬 넓습니다. 판정 대상은 이 생성기와 그 후보 위의 엔진(P·H·T·R) 한 파이프라인이며, 학습형 셋째 요소 점수는 보조 분석으로 두었습니다.
+
+**판정 값을 정한 과정:** 예산 B와 k는 개발 데이터(T2)의 검정력 분석에 미리 정한 규칙(재현율과 무작위 대비 단계를 순서대로 통과할 확률이 가장 높은 값)을 적용해 정했습니다. 그 결과 k는 {{ V.v('config', 'engine_reliability.verdict.k', 'int') }}, B는 경량 검증 후보 규칙의 후보 수의 {{ V.v('config', 'engine_reliability.verdict.budget_multiple_of_first_candidates', 'int') }}배입니다. nPMI 기준선 대비 단계까지 통과할 검정력은 최대 {{ V.v('derived', 'engine_power_max_through_s3', 'd3') }}로 낮다는 사실을 T3를 열기 전에 기록했습니다. T2는 개발 중 여러 번 보았으므로 개발 수치는 낙관적일 수 있습니다.
+
+**T3 판정** (T3 유의 실현 결합 {{ V.v('engine_verdict_T3', 'labels.realised_significant_triads', 'int') }}개 중 양성 {{ V.v('engine_verdict_T3', 'labels.label_v2_positive', 'int') }}개, 후보 {{ V.v('engine_verdict_T3', 'labels.pool_candidates', 'int') }}개 중 양성 {{ V.v('engine_verdict_T3', 'labels.pool_positive', 'int') }}개, 학습은 {{ V.v('engine_verdict_T3', 'meta.training_timepoints', 'join') }}). 앞 단계가 통과할 때만 다음 단계를 검정하며, 두 부트스트랩의 하한이 모두 기준을 넘어야 통과입니다.
+
+| 단계 | 통계량 | 점 추정 | 후보 단위 하한 | 용어 블록 하한 | 판정 |
+|---|---|---|---|---|---|
+| S1 재현율 | 생성기 후보의 재현율 − 경량 검증 후보 규칙의 재현율 | {{ V.v('engine_verdict_T3', 'S1_recall.point', 'd3') }} | {{ V.v('engine_verdict_T3', 'S1_recall.candidate.lower', 'd3') }} | {{ V.v('engine_verdict_T3', 'S1_recall.term_block.lower', 'd3') }} | {{ step_word[engine.S1_recall] }} |
+| S2 무작위 대비 | 상위 k 리프트 | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.engine.lift', 'd2') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.S2_lift_ci.candidate.lower', 'd2') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.S2_lift_ci.term_block.lower', 'd2') }} | {{ step_word[engine.S2_random] }} |
+| S3 nPMI 기준선 대비 | 상위 k 정밀도 차이 | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.engine.precision', 'd3') }} − {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.baseline_precision', 'd3') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.S3_diff_ci.candidate.lower', 'd3') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.S3_diff_ci.term_block.lower', 'd3') }} | {{ step_word[engine.S3_npmi] }} |
+| S4 H 특징의 기여 | 상위 k 정밀도 차이 (H 제외 대비) | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.engine.precision', 'd3') }} − {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.engine_no_h_precision', 'd3') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.S4_diff_ci.candidate.lower', 'd3') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.S4_diff_ci.term_block.lower', 'd3') }} | {{ step_word[engine.S4_h_contribution] }} |
+
+기준값은 S1·S3·S4가 {{ V.v('config', 'engine_reliability.verdict.sequence.0.threshold', 'd1') }}, S2가 {{ V.v('config', 'engine_reliability.verdict.sequence.1.threshold', 'd1') }}입니다. {% if engine.S3_npmi == 'pass' %}S3의 용어 블록 하한은 {{ V.v('engine_verdict_T3', 'by_k.' ~ (V.raw('config', 'engine_reliability.verdict.k') | string) ~ '.S3_diff_ci.term_block.lower', 'd3') }}로 기준값과의 차이를 함께 보아야 합니다. {% endif %}{% if engine.S4_h_contribution != 'pass' %}고차 특징(H)이 상위 정밀도에 보탬이 된다는 판정은 경량 검증의 V2와 마찬가지로 얻지 못했습니다. {% endif %}
+
+**서술용 k** (판정하지 않음): 상위 k가 작을수록 구간이 넓어 판단 근거가 되지 않습니다.
+
+| k | 정밀도 | 리프트 | 리프트 용어 블록 하한 | nPMI 기준선 정밀도 |
+|---|---|---|---|---|
+{% for dk in V.raw('config', 'engine_reliability.verdict.descriptive_k') -%}
+| {{ V.v('config', 'engine_reliability.verdict.descriptive_k.' ~ loop.index0, 'int') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ dk ~ '.engine.precision', 'd3') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ dk ~ '.engine.lift', 'd2') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ dk ~ '.S2_lift_ci.term_block.lower', 'd2') }} | {{ V.v('engine_verdict_T3', 'by_k.' ~ dk ~ '.baseline_precision', 'd3') }} |
+{% endfor %}
+**쏠림:** 상위 {{ V.v('config', 'engine_reliability.verdict.k', 'int') }}개에서 가장 많이 나온 용어는 `{{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.engine.top_terms.0.0') }}`({{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.engine.top_terms.0.1', 'int') }}건)이며, 한 용어가 차지하는 후보 비중의 최댓값은 {{ V.v('engine_verdict_T3', 'by_k.' ~ kk ~ '.engine.max_term_triad_share', 'pct1') }}입니다.
+
+**보정 (보조 지표):** 학습 데이터의 교차 검증 밖 점수로 맞춘 확률의 브라이어 점수는 {{ V.v('engine_verdict_T3', 'calibration.brier', 'd3') }}입니다. 판정에 쓰지 않습니다.
+
+**보조 분석 (판정 아님):** 판정 예산에서 학습형 셋째 요소 점수의 재현율은 {% for row in V.raw('engine_secondary_T3', 'by_order.learned') %}{% if row.budget == V.raw('engine_secondary_T3', 'verdict_budget') %}{{ V.v('engine_secondary_T3', 'by_order.learned.' ~ loop.index0 ~ '.recall', 'd3') }}{% endif %}{% endfor %}, nPMI 생성기는 {% for row in V.raw('engine_secondary_T3', 'by_order.generator') %}{% if row.budget == V.raw('engine_secondary_T3', 'verdict_budget') %}{{ V.v('engine_secondary_T3', 'by_order.generator.' ~ loop.index0 ~ '.recall', 'd3') }}{% endif %}{% endfor %}입니다.
+
+**한계:** T3의 일부 조합은 적용 모드 브리핑에서 이미 보았습니다. 레이블에는 매칭 오류와 동의어 조합이 남을 수 있어, 엔진이 실제 결합이 아닌 어휘 중복을 맞혔을 가능성을 배제하지 못합니다. 판정은 상위 {{ V.v('config', 'engine_reliability.verdict.k', 'int') }}개에 대한 것이며 처방 최상위의 품질을 보장하지 않습니다. 이 엔진으로 처방을 다시 내지 않았습니다.
+
+**사전 등록(엔진) 변경 기록:** {{ V.v('derived', 'engine_prereg_changes', 'int') }}건, 그중 결과를 확인한 뒤 정한 것은 {{ V.v('derived', 'engine_prereg_changes_after_results', 'int') }}건입니다. {% if V.raw('derived', 'engine_prereg_rows_after_freeze') == 0 %}모두 고정 전, T3를 열기 전에 기록되었습니다. {% else %}고정 이후 추가된 기록이 있습니다. {% endif %}(`preregistration_engine.md` 4절)
 
 ## 부록: 결과 파일의 출처
 

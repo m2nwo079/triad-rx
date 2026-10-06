@@ -3,7 +3,7 @@
   {
    "file": "config",
    "path": "design_version",
-   "text": "v0.4.1"
+   "text": "v0.4.5"
   },
   {
    "file": "applied_main",
@@ -14,6 +14,16 @@
    "file": "derived",
    "path": "prospective_verdict_date",
    "text": "2029-09-24"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.k",
+   "text": "5,000"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.term_block.lower",
+   "text": "0.001"
   },
   {
    "file": "hypergraph_main_applied",
@@ -1156,6 +1166,301 @@
    "text": "2029-09-24"
   },
   {
+   "file": "engine_verdict_T3",
+   "path": "meta.preregistration_freeze_commit",
+   "text": "eabee61"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "rule_positive.combination_share",
+   "text": "0.57"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "rule_positive.wilson_lower",
+   "text": "0.47"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "rule_positive.wilson_upper",
+   "text": "0.66"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "rule_negative.combination_share",
+   "text": "0.30"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "rule_negative.wilson_lower",
+   "text": "0.19"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "rule_negative.wilson_upper",
+   "text": "0.44"
+  },
+  {
+   "file": "conditional_coverage",
+   "path": "timepoints.T2.label_v2.stable.coverage",
+   "text": "66.3%"
+  },
+  {
+   "file": "conditional_coverage",
+   "path": "timepoints.T2.label_v2.stable.candidate_recall",
+   "text": "2.3%"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.k",
+   "text": "5,000"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.budget_multiple_of_first_candidates",
+   "text": "5"
+  },
+  {
+   "file": "derived",
+   "path": "engine_power_max_through_s3",
+   "text": "0.495"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "labels.realised_significant_triads",
+   "text": "87,524"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "labels.label_v2_positive",
+   "text": "10,222"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "labels.pool_candidates",
+   "text": "426,390"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "labels.pool_positive",
+   "text": "1,823"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "meta.training_timepoints",
+   "text": "T1+R2+R3"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "S1_recall.point",
+   "text": "0.142"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "S1_recall.candidate.lower",
+   "text": "0.135"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "S1_recall.term_block.lower",
+   "text": "0.113"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine.lift",
+   "text": "8.37"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S2_lift_ci.candidate.lower",
+   "text": "7.28"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S2_lift_ci.term_block.lower",
+   "text": "4.94"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine.precision",
+   "text": "0.036"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.baseline_precision",
+   "text": "0.017"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.candidate.lower",
+   "text": "0.013"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.term_block.lower",
+   "text": "0.001"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine.precision",
+   "text": "0.036"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine_no_h_precision",
+   "text": "0.031"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S4_diff_ci.candidate.lower",
+   "text": "0.001"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S4_diff_ci.term_block.lower",
+   "text": "-0.003"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.sequence.0.threshold",
+   "text": "0.0"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.sequence.1.threshold",
+   "text": "1.0"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.term_block.lower",
+   "text": "0.001"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.descriptive_k.0",
+   "text": "100"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.100.engine.precision",
+   "text": "0.080"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.100.engine.lift",
+   "text": "18.71"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.100.S2_lift_ci.term_block.lower",
+   "text": "0.00"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.100.baseline_precision",
+   "text": "0.090"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.descriptive_k.1",
+   "text": "500"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.500.engine.precision",
+   "text": "0.068"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.500.engine.lift",
+   "text": "15.90"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.500.S2_lift_ci.term_block.lower",
+   "text": "4.49"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.500.baseline_precision",
+   "text": "0.038"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.descriptive_k.2",
+   "text": "1,000"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.1000.engine.precision",
+   "text": "0.059"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.1000.engine.lift",
+   "text": "13.80"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.1000.S2_lift_ci.term_block.lower",
+   "text": "6.05"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.1000.baseline_precision",
+   "text": "0.026"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.k",
+   "text": "5,000"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine.top_terms.0.0",
+   "text": "M:contrastive language image pre training"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine.top_terms.0.1",
+   "text": "664"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine.max_term_triad_share",
+   "text": "13.3%"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "calibration.brier",
+   "text": "0.004"
+  },
+  {
+   "file": "engine_secondary_T3",
+   "path": "by_order.learned.1.recall",
+   "text": "0.209"
+  },
+  {
+   "file": "engine_secondary_T3",
+   "path": "by_order.generator.1.recall",
+   "text": "0.178"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.k",
+   "text": "5,000"
+  },
+  {
+   "file": "derived",
+   "path": "engine_prereg_changes",
+   "text": "3"
+  },
+  {
+   "file": "derived",
+   "path": "engine_prereg_changes_after_results",
+   "text": "3"
+  },
+  {
    "file": "vocab_final_applied",
    "path": "meta.git_commit",
    "text": "5dda8d2"
@@ -1394,13 +1699,73 @@
    "file": "prospective_register",
    "path": "meta.created",
    "text": "2026-10-05"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "meta.git_commit",
+   "text": "7798d7f"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "meta.created",
+   "text": "2026-10-06"
+  },
+  {
+   "file": "conditional_coverage",
+   "path": "meta.git_commit",
+   "text": "0e90961"
+  },
+  {
+   "file": "conditional_coverage",
+   "path": "meta.created",
+   "text": "2026-10-06"
+  },
+  {
+   "file": "pipeline_compare",
+   "path": "meta.git_commit",
+   "text": "2b54e12"
+  },
+  {
+   "file": "pipeline_compare",
+   "path": "meta.created",
+   "text": "2026-10-06"
+  },
+  {
+   "file": "engine_power",
+   "path": "meta.git_commit",
+   "text": "17669d7"
+  },
+  {
+   "file": "engine_power",
+   "path": "meta.created",
+   "text": "2026-10-06"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "meta.git_commit",
+   "text": "c257c44"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "meta.created",
+   "text": "2026-10-06"
+  },
+  {
+   "file": "engine_secondary_T3",
+   "path": "meta.git_commit",
+   "text": "c257c44"
+  },
+  {
+   "file": "engine_secondary_T3",
+   "path": "meta.created",
+   "text": "2026-10-06"
   }
  ],
  "en": [
   {
    "file": "config",
    "path": "design_version",
-   "text": "v0.4.1"
+   "text": "v0.4.5"
   },
   {
    "file": "applied_main",
@@ -1411,6 +1776,16 @@
    "file": "derived",
    "path": "prospective_verdict_date",
    "text": "2029-09-24"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.k",
+   "text": "5,000"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.term_block.lower",
+   "text": "0.001"
   },
   {
    "file": "hypergraph_main_applied",
@@ -2553,6 +2928,301 @@
    "text": "2029-09-24"
   },
   {
+   "file": "engine_verdict_T3",
+   "path": "meta.preregistration_freeze_commit",
+   "text": "eabee61"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "rule_positive.combination_share",
+   "text": "0.57"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "rule_positive.wilson_lower",
+   "text": "0.47"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "rule_positive.wilson_upper",
+   "text": "0.66"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "rule_negative.combination_share",
+   "text": "0.30"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "rule_negative.wilson_lower",
+   "text": "0.19"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "rule_negative.wilson_upper",
+   "text": "0.44"
+  },
+  {
+   "file": "conditional_coverage",
+   "path": "timepoints.T2.label_v2.stable.coverage",
+   "text": "66.3%"
+  },
+  {
+   "file": "conditional_coverage",
+   "path": "timepoints.T2.label_v2.stable.candidate_recall",
+   "text": "2.3%"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.k",
+   "text": "5,000"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.budget_multiple_of_first_candidates",
+   "text": "5"
+  },
+  {
+   "file": "derived",
+   "path": "engine_power_max_through_s3",
+   "text": "0.495"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "labels.label_v2_positive",
+   "text": "10,222"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "labels.realised_significant_triads",
+   "text": "87,524"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "labels.pool_positive",
+   "text": "1,823"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "labels.pool_candidates",
+   "text": "426,390"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "meta.training_timepoints",
+   "text": "T1+R2+R3"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "S1_recall.point",
+   "text": "0.142"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "S1_recall.candidate.lower",
+   "text": "0.135"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "S1_recall.term_block.lower",
+   "text": "0.113"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine.lift",
+   "text": "8.37"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S2_lift_ci.candidate.lower",
+   "text": "7.28"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S2_lift_ci.term_block.lower",
+   "text": "4.94"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine.precision",
+   "text": "0.036"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.baseline_precision",
+   "text": "0.017"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.candidate.lower",
+   "text": "0.013"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.term_block.lower",
+   "text": "0.001"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine.precision",
+   "text": "0.036"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine_no_h_precision",
+   "text": "0.031"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S4_diff_ci.candidate.lower",
+   "text": "0.001"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S4_diff_ci.term_block.lower",
+   "text": "-0.003"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.sequence.0.threshold",
+   "text": "0.0"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.sequence.1.threshold",
+   "text": "1.0"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.term_block.lower",
+   "text": "0.001"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.descriptive_k.0",
+   "text": "100"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.100.engine.precision",
+   "text": "0.080"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.100.engine.lift",
+   "text": "18.71"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.100.S2_lift_ci.term_block.lower",
+   "text": "0.00"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.100.baseline_precision",
+   "text": "0.090"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.descriptive_k.1",
+   "text": "500"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.500.engine.precision",
+   "text": "0.068"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.500.engine.lift",
+   "text": "15.90"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.500.S2_lift_ci.term_block.lower",
+   "text": "4.49"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.500.baseline_precision",
+   "text": "0.038"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.descriptive_k.2",
+   "text": "1,000"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.1000.engine.precision",
+   "text": "0.059"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.1000.engine.lift",
+   "text": "13.80"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.1000.S2_lift_ci.term_block.lower",
+   "text": "6.05"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.1000.baseline_precision",
+   "text": "0.026"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.k",
+   "text": "5,000"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine.top_terms.0.0",
+   "text": "M:contrastive language image pre training"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine.top_terms.0.1",
+   "text": "664"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine.max_term_triad_share",
+   "text": "13.3%"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "calibration.brier",
+   "text": "0.004"
+  },
+  {
+   "file": "engine_secondary_T3",
+   "path": "by_order.learned.1.recall",
+   "text": "0.209"
+  },
+  {
+   "file": "engine_secondary_T3",
+   "path": "by_order.generator.1.recall",
+   "text": "0.178"
+  },
+  {
+   "file": "config",
+   "path": "engine_reliability.verdict.k",
+   "text": "5,000"
+  },
+  {
+   "file": "derived",
+   "path": "engine_prereg_changes",
+   "text": "3"
+  },
+  {
+   "file": "derived",
+   "path": "engine_prereg_changes_after_results",
+   "text": "3"
+  },
+  {
    "file": "vocab_final_applied",
    "path": "meta.git_commit",
    "text": "5dda8d2"
@@ -2791,6 +3461,66 @@
    "file": "prospective_register",
    "path": "meta.created",
    "text": "2026-10-05"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "meta.git_commit",
+   "text": "7798d7f"
+  },
+  {
+   "file": "label_evidence_T1_attempt1_score",
+   "path": "meta.created",
+   "text": "2026-10-06"
+  },
+  {
+   "file": "conditional_coverage",
+   "path": "meta.git_commit",
+   "text": "0e90961"
+  },
+  {
+   "file": "conditional_coverage",
+   "path": "meta.created",
+   "text": "2026-10-06"
+  },
+  {
+   "file": "pipeline_compare",
+   "path": "meta.git_commit",
+   "text": "2b54e12"
+  },
+  {
+   "file": "pipeline_compare",
+   "path": "meta.created",
+   "text": "2026-10-06"
+  },
+  {
+   "file": "engine_power",
+   "path": "meta.git_commit",
+   "text": "17669d7"
+  },
+  {
+   "file": "engine_power",
+   "path": "meta.created",
+   "text": "2026-10-06"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "meta.git_commit",
+   "text": "c257c44"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "meta.created",
+   "text": "2026-10-06"
+  },
+  {
+   "file": "engine_secondary_T3",
+   "path": "meta.git_commit",
+   "text": "c257c44"
+  },
+  {
+   "file": "engine_secondary_T3",
+   "path": "meta.created",
+   "text": "2026-10-06"
   }
  ]
 }
