@@ -57,15 +57,21 @@ def test_t3_label_guard(tmp_path):
     require_t3_label_unlocked(study, tmp_path)
 
 
-def test_t3_label_guard_blocks_now():
-    with pytest.raises(SystemExit):
-        require_t3_label_unlocked(load_study(ROOT / "config/study.json"), ROOT)
+def test_t3_label_guard_opens_after_the_freeze():
+    require_t3_label_unlocked(load_study(ROOT / "config/study.json"), ROOT)
 
 
-def test_engine_preregistration_is_not_frozen_yet():
+def test_engine_preregistration_is_frozen_and_config_unchanged_since():
+    """The freeze line names a real commit, and the engine settings still equal those at that commit."""
+    import json
+    import re
+    import subprocess
     study = load_study(ROOT / "config/study.json")
     text = (ROOT / study["engine_reliability"]["prereg_file"]).read_text()
-    assert not engine_prereg_frozen(text)
+    assert engine_prereg_frozen(text)
+    commit = re.search(r"^고정 커밋:\s*(\S+)", text, flags=re.M).group(1)
+    frozen = subprocess.run(["git", "show", f"{commit}:config/study.json"], cwd=ROOT, capture_output=True, text=True, check=True).stdout
+    assert json.loads(frozen)["engine_reliability"] == study["engine_reliability"]
 
 
 def test_config_t3_label_does_not_overlap_dev_labels():

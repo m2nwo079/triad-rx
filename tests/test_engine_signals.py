@@ -160,14 +160,6 @@ def test_timepoint_prep_merges_windows_in_memory_and_keeps_t3_labels_closed():
         label_window("T3", merged)
 
 
-def test_t3_verdict_and_secondary_are_locked_before_the_freeze(monkeypatch):
-    monkeypatch.chdir(ROOT)
-    for rel in ("scripts/engine/15_t3_verdict.py", "scripts/engine/16_t3_secondary.py"):
-        module = load(rel.split("/")[-1][:-3], rel)
-        with pytest.raises(SystemExit):
-            module.main()
-
-
 def test_t3_verdict_helpers():
     tv = load("t3_verdict", "scripts/engine/15_t3_verdict.py")
     pos = pd.DataFrame({"a": list("pqrs"), "b": list("tuvw"), "c": list("xxyy")})
