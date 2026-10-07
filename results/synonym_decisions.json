@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "step": "synonym_decisions",
+    "created": "2026-10-07",
+    "git_commit": "28b5d27b3345a1ee0850ee188943061b8995b051",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "files_sha256": {
+      "review": "f8036e23cb7f82b48214bfda01bc5e97fef31ccba6fbf581b900920b0c763c86",
+      "original": "6ff8197b947981e95e60313c44f8b0615c9dbdf1182d3eab4d85aba6add62d9a"
+    },
+    "output_sha256": "4da7abed7d5973fb6f1530c7c591c8a750cb1f727b734b66d933cfd2823c54ae"
+  },
+  "pairs": 355,
+  "by_decision": {
+    "same": 23,
+    "hierarchy": 89,
+    "different": 243
+  },
+  "merge_groups": 23,
+  "terms_merged": 46
+}

@@ -4,8 +4,8 @@ Usage: python kaggle/step4/package.py <output dir> <kaggle user>
 
 Writes repo.bundle (the current branch as committed), data.tar.gz (the derived inputs and the papers
 first submitted in the years of the development build and label windows and the T3 build window,
-plus the T3 label window only once the engine preregistration is frozen) and dataset-metadata.json. Nothing is written inside
-the repository.
+plus the T3 label window only once the engine preregistration is frozen) and dataset-metadata.json, and writes the untracked kaggle/step4/kernel-metadata.json for the
+same account. Nothing else is written inside the repository.
 """
 import io
 import json
@@ -31,6 +31,7 @@ INPUTS = [
     "data/derived/features_v2/main/T3.parquet",
 ]
 DATASET = "triad-rx-engine-step4-data"
+KERNEL = "triad-rx-engine-step4"
 
 
 def main() -> None:
@@ -61,6 +62,11 @@ def main() -> None:
         tar.addfile(info, buf)
     meta = {"title": DATASET, "id": f"{user}/{DATASET}", "licenses": [{"name": "other"}]}
     (out / "dataset-metadata.json").write_text(json.dumps(meta, indent=2))
+    # The kernel metadata names the account and private resources, so it is generated here and not tracked
+    kernel = {"id": f"{user}/{KERNEL}", "title": KERNEL, "code_file": "run.py", "language": "python",
+              "kernel_type": "script", "is_private": True, "enable_gpu": False, "enable_internet": True,
+              "dataset_sources": [f"{user}/{DATASET}"], "competition_sources": [], "kernel_sources": []}
+    (Path(__file__).parent / "kernel-metadata.json").write_text(json.dumps(kernel, indent=2) + "\n")
     print(f"{branch}: {len(subset)} papers from {first} to {last}, files in {out}")
 
 

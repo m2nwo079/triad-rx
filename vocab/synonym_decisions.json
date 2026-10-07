@@ -1,0 +1,475 @@
+{
+ "meta": {
+  "step": "synonym_decisions",
+  "created": "2026-10-07",
+  "git_commit": "28b5d27b3345a1ee0850ee188943061b8995b051",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "macOS-15.7.9-arm64-arm-64bit",
+   "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "pyarrow": "25.0.1",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "lightgbm": "4.7.0"
+   }
+  },
+  "files_sha256": {
+   "review": "f8036e23cb7f82b48214bfda01bc5e97fef31ccba6fbf581b900920b0c763c86",
+   "original": "6ff8197b947981e95e60313c44f8b0615c9dbdf1182d3eab4d85aba6add62d9a"
+  }
+ },
+ "merge_groups": {
+  "T:clustering ensemble": [
+   "M:ensemble clustering",
+   "T:clustering ensemble"
+  ],
+  "M:gaussian process": [
+   "M:gaussian process",
+   "T:gaussian processes"
+  ],
+  "M:hyper parameter optimization": [
+   "M:hyper parameter optimization",
+   "T:hyperparameter optimization"
+  ],
+  "T:video object segmentation": [
+   "M:vos",
+   "T:video object segmentation"
+  ],
+  "T:depth estimation": [
+   "T:depth estimation",
+   "T:depth prediction"
+  ],
+  "T:left ventricle segmentation": [
+   "T:left ventricle segmentation",
+   "T:lv segmentation"
+  ],
+  "T:lip reading": [
+   "T:lip reading",
+   "T:lipreading"
+  ],
+  "T:multi view learning": [
+   "T:multi view learning",
+   "T:multiview learning"
+  ],
+  "T:named entity recognition": [
+   "T:named entity recognition",
+   "T:ner"
+  ],
+  "T:no reference image quality assessment": [
+   "T:no reference image quality assessment",
+   "T:nr iqa"
+  ],
+  "T:one class classification": [
+   "T:one class classification",
+   "T:one class classifier"
+  ],
+  "T:part of speech tagging": [
+   "T:part of speech tagging",
+   "T:pos tagging"
+  ],
+  "T:re ranking": [
+   "T:re ranking",
+   "T:reranking"
+  ],
+  "T:handwritten text recognition": [
+   "T:handwritten text recognition",
+   "T:htr"
+  ],
+  "M:xlm r": [
+   "M:xlm r",
+   "T:xlm r"
+  ],
+  "T:ai2 reasoning challenge": [
+   "T:ai2 reasoning challenge",
+   "T:arc"
+  ],
+  "T:aspect extraction": [
+   "T:aspect extraction",
+   "T:extract aspect"
+  ],
+  "T:multi object tracking": [
+   "T:multi object tracking",
+   "T:multiple object tracking"
+  ],
+  "M:rag": [
+   "M:rag",
+   "T:retrieval augmented generation"
+  ],
+  "T:low resource neural machine translation": [
+   "T:low resource neural machine translation",
+   "T:low resource nmt"
+  ],
+  "T:multi label text classification": [
+   "T:multi label text classification",
+   "T:multilabel text classification"
+  ],
+  "T:multi view detection": [
+   "T:multi view detection",
+   "T:multiview detection"
+  ],
+  "T:passage re ranking": [
+   "T:passage re ranking",
+   "T:passage reranking"
+  ]
+ },
+ "hierarchy_pairs": [
+  [
+   "M:atrous spatial pyramid pooling",
+   "M:deeplab"
+  ],
+  [
+   "M:beta vae",
+   "M:variational auto encoder"
+  ],
+  [
+   "M:bigru",
+   "M:gated recurrent unit"
+  ],
+  [
+   "M:deep belief network",
+   "M:restricted boltzmann machine"
+  ],
+  [
+   "M:deep deterministic policy gradient",
+   "M:maddpg"
+  ],
+  [
+   "M:deep q network",
+   "M:double dqn"
+  ],
+  [
+   "M:deep q network",
+   "T:deep reinforcement learning"
+  ],
+  [
+   "M:deepwalk",
+   "T:network embedding"
+  ],
+  [
+   "M:differentiable architecture search",
+   "M:differentiable nas"
+  ],
+  [
+   "M:differentiable architecture search",
+   "T:neural architecture search"
+  ],
+  [
+   "M:differentiable nas",
+   "T:neural architecture search"
+  ],
+  [
+   "M:end to end neural diarization",
+   "T:speaker diarization"
+  ],
+  [
+   "M:fbnet",
+   "T:hardware aware neural architecture search"
+  ],
+  [
+   "M:graph contrastive learning",
+   "M:graphcl"
+  ],
+  [
+   "M:implicit q learning",
+   "T:offline rl"
+  ],
+  [
+   "M:multi head attention",
+   "M:transformer"
+  ],
+  [
+   "M:node2vec",
+   "T:network embedding"
+  ],
+  [
+   "M:simcse",
+   "T:sentence embedding"
+  ],
+  [
+   "M:sru",
+   "M:sru++"
+  ],
+  [
+   "M:transe",
+   "T:knowledge graph embedding"
+  ],
+  [
+   "M:vos",
+   "T:referring video object segmentation"
+  ],
+  [
+   "M:vos",
+   "T:semi supervised video object segmentation"
+  ],
+  [
+   "M:yolov2",
+   "M:yolov8"
+  ],
+  [
+   "T:3d generation",
+   "T:image to 3d"
+  ],
+  [
+   "T:3d generation",
+   "T:text to 3d"
+  ],
+  [
+   "T:3d object retrieval",
+   "T:3d shape retrieval"
+  ],
+  [
+   "T:3d shape classification",
+   "T:3d shape recognition"
+  ],
+  [
+   "T:abuse detection",
+   "T:abusive language"
+  ],
+  [
+   "T:accented speech recognition",
+   "T:automatic speech recognition"
+  ],
+  [
+   "T:action detection",
+   "T:temporal action proposal generation"
+  ],
+  [
+   "T:ad hoc video search",
+   "T:video retrieval"
+  ],
+  [
+   "T:arrhythmia detection",
+   "T:ecg classification"
+  ],
+  [
+   "T:aspect based sentiment analysis",
+   "T:aspect extraction"
+  ],
+  [
+   "T:audio classification",
+   "T:environmental sound classification"
+  ],
+  [
+   "T:audio source separation",
+   "T:music source separation"
+  ],
+  [
+   "T:bilingual lexicon induction",
+   "T:word translation"
+  ],
+  [
+   "T:claim verification",
+   "T:fact checking"
+  ],
+  [
+   "T:computed tomography",
+   "T:ct reconstruction"
+  ],
+  [
+   "T:crop classification",
+   "T:crop type mapping"
+  ],
+  [
+   "T:depth prediction",
+   "T:monocular depth estimation"
+  ],
+  [
+   "T:dialogue generation",
+   "T:response generation"
+  ],
+  [
+   "T:dialogue state tracking",
+   "T:task oriented dialogue systems"
+  ],
+  [
+   "T:discourse parsing",
+   "T:implicit discourse relation classification"
+  ],
+  [
+   "T:disparity estimation",
+   "T:stereo matching"
+  ],
+  [
+   "T:document ai",
+   "T:document layout analysis"
+  ],
+  [
+   "T:earth observation",
+   "T:land cover classification"
+  ],
+  [
+   "T:entity disambiguation",
+   "T:entity linking"
+  ],
+  [
+   "T:entity linking",
+   "T:entity retrieval"
+  ],
+  [
+   "T:event based optical flow",
+   "T:optical flow estimation"
+  ],
+  [
+   "T:extreme multi label classification",
+   "T:multi label learning"
+  ],
+  [
+   "T:facial emotion recognition",
+   "T:facial expression recognition"
+  ],
+  [
+   "T:handwriting recognition",
+   "T:handwritten text recognition"
+  ],
+  [
+   "T:handwriting recognition",
+   "T:htr"
+  ],
+  [
+   "T:icu mortality",
+   "T:mortality prediction"
+  ],
+  [
+   "T:image quality assessment",
+   "T:nr iqa"
+  ],
+  [
+   "T:instance segmentation",
+   "T:panoptic segmentation"
+  ],
+  [
+   "T:intent detection",
+   "T:spoken language understanding"
+  ],
+  [
+   "T:knowledge editing",
+   "T:model editing"
+  ],
+  [
+   "T:lexical simplification",
+   "T:text simplification"
+  ],
+  [
+   "T:lip reading",
+   "T:visual speech recognition"
+  ],
+  [
+   "T:lipreading",
+   "T:visual speech recognition"
+  ],
+  [
+   "T:loop closure detection",
+   "T:simultaneous localization and mapping"
+  ],
+  [
+   "T:machine reading comprehension",
+   "T:multi choice mrc"
+  ],
+  [
+   "T:machine translation",
+   "T:nmt"
+  ],
+  [
+   "T:malware analysis",
+   "T:malware classification"
+  ],
+  [
+   "T:malware analysis",
+   "T:malware detection"
+  ],
+  [
+   "T:material classification",
+   "T:material recognition"
+  ],
+  [
+   "T:multiple object tracking",
+   "T:multiple people tracking"
+  ],
+  [
+   "T:music information retrieval",
+   "T:music transcription"
+  ],
+  [
+   "T:nmt",
+   "T:translation"
+  ],
+  [
+   "T:open domain question answering",
+   "T:passage retrieval"
+  ],
+  [
+   "T:organ segmentation",
+   "T:pancreas segmentation"
+  ],
+  [
+   "T:predicate classification",
+   "T:scene graph generation"
+  ],
+  [
+   "T:rain removal",
+   "T:single image deraining"
+  ],
+  [
+   "T:saliency detection",
+   "T:salient object detection"
+  ],
+  [
+   "T:scene text detection",
+   "T:text spotting"
+  ],
+  [
+   "T:semantic textual similarity",
+   "T:sentence similarity"
+  ],
+  [
+   "T:slot filling",
+   "T:spoken language understanding"
+  ],
+  [
+   "T:speaker recognition",
+   "T:speaker verification"
+  ],
+  [
+   "T:speaker separation",
+   "T:speech separation"
+  ],
+  [
+   "T:speech denoising",
+   "T:speech enhancement"
+  ],
+  [
+   "T:speech synthesis",
+   "T:text to speech"
+  ],
+  [
+   "T:text detection",
+   "T:text spotting"
+  ],
+  [
+   "T:video captioning",
+   "T:video description"
+  ],
+  [
+   "T:video deblurring",
+   "T:video restoration"
+  ],
+  [
+   "T:video denoising",
+   "T:video restoration"
+  ],
+  [
+   "T:video enhancement",
+   "T:video restoration"
+  ],
+  [
+   "T:video restoration",
+   "T:video super resolution"
+  ],
+  [
+   "T:zero shot classification",
+   "T:zero shot learning"
+  ]
+ ]
+}

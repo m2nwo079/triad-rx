@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "step": "synonym_sheet",
+    "created": "2026-10-07",
+    "git_commit": "5f9fbc358148d12b6246e87b9805b7b150682e20",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "synonyms_config": {
+      "timepoints": [
+        "T1",
+        "R2",
+        "R3",
+        "T3"
+      ],
+      "npmi_min": 0.6,
+      "min_cooccurrence": 5,
+      "acronym_max_letters": 6,
+      "stem_suffixes": [
+        "ional",
+        "ions",
+        "ion",
+        "al",
+        "s"
+      ],
+      "stem_min_length": 4,
+      "titles_per_pair": 3,
+      "seed": 20261026,
+      "review_file": "data/review/synonyms_attempt0.csv",
+      "decisions": [
+        "same",
+        "hierarchy",
+        "different"
+      ]
+    },
+    "review_sha256": "6ff8197b947981e95e60313c44f8b0615c9dbdf1182d3eab4d85aba6add62d9a"
+  },
+  "pairs": 355,
+  "candidates_by_timepoint": {
+    "T1": 105,
+    "R2": 138,
+    "R3": 175,
+    "T3": 261
+  },
+  "by_rule": {
+    "cooccurrence": 301,
+    "initials": 49,
+    "same_words": 6,
+    "form": 7
+  },
+  "by_first_timepoint": {
+    "T1": 105,
+    "R2": 51,
+    "R3": 56,
+    "T3": 143
+  }
+}

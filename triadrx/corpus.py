@@ -4,7 +4,7 @@ import datetime
 import pandas as pd
 
 from triadrx.study import build_window, data_cutoff, label_window
-from triadrx.text import Matcher
+from triadrx.text import Matcher, refined_spans
 
 PAPERS_COLUMNS = ["id", "title", "abstract", "first_date"]
 
@@ -35,3 +35,15 @@ def label_papers(papers_path, timepoint: str, study: dict) -> tuple[pd.DataFrame
     papers = pd.read_parquet(papers_path, columns=PAPERS_COLUMNS)
     window = papers[(papers["first_date"] >= start) & (papers["first_date"] <= end)].sort_values("id")
     return window, start, end
+
+
+def match_papers_refined(window: pd.DataFrame, terms: list[dict], cs_only: set[str], rules: dict,
+                         exclusions: dict | None = None) -> pd.DataFrame:
+    """One row per (paper, term, mode) after the refined matching rules (triadrx.text.refined_spans)."""
+    matcher = Matcher(terms)
+    rows = []
+    for pid, title, abstract in window[["id", "title", "abstract"]].itertuples(index=False):
+        spans = refined_spans(matcher, [f"{title}. {abstract}"], cs_only, rules, exclusions)[0]
+        for tid, mode in sorted({(s["id"], s["mode"]) for s in spans}):
+            rows.append((pid, tid, mode))
+    return pd.DataFrame(rows, columns=["paper_id", "term_id", "mode"])

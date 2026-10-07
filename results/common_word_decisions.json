@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "step": "common_word_decisions",
+    "created": "2026-10-07",
+    "git_commit": "50fbe775110dd7d40b015fd96d65e1939f17a4df",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "files_sha256": {
+      "review": "958d90b49a4570cfe7d643864b5ad5222f93eaf142c952506588c6eb81d8799b",
+      "original": "45245811b36510f2e4db49a6b8ef19fe143b74deaf734e7d944a27107a1c93a3"
+    },
+    "output_sha256": "c220993aa64ac3dbc0cfd7bb20fa50784af0114f341f2f1746c2759dfe71a75b"
+  },
+  "surfaces": 57,
+  "by_decision": {
+    "keep": 27,
+    "exclude": 17,
+    "keep_with_exclusions": 13
+  },
+  "exclusion_phrases": 42
+}

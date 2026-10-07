@@ -16,3 +16,6 @@ __pycache__/
 # Editors
 .vscode/
 .idea/
+# Local-only notes and generated Kaggle metadata (account and private resource ids)
+CLAUDE.local.md
+kaggle/step4/kernel-metadata.json

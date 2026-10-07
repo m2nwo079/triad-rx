@@ -1,5 +1,5 @@
 {
-  "design_version": "v0.4.5",
+  "design_version": "v0.5.0",
   "design_section": "10.2",
   "arxiv_categories": [
     "cs.LG",
@@ -724,6 +724,35 @@
       "rule": "a step passes only if both the candidate and the term-block bootstrap lower bounds exceed its threshold; a step is tested only if every earlier step passed",
       "calibration": {"method": "platt", "fit_on": "out-of-fold engine scores of the training timepoints", "metrics": ["brier", "reliability_curve"], "role": "secondary"},
       "power_result": {"file": "results/engine_power.json", "sha256": "d4838302fa0ba635e85e2c1959929a073073fe880f0bb4732af8d03b6cc13181"}
+    }
+  },
+  "matching": {
+    "prereg_file": "preregistration_matching.md",
+    "timepoints": ["T1", "R2", "R3", "T3"],
+    "t3_reuse": {"ci_level": 0.975, "note": "second test on T3 after the engine study; not an independent confirmation"},
+    "surface_rules": {"drop_nested": true, "acronym_needs_full_name": true, "skip_surface_chars": ["+"]},
+    "common_words": {
+      "wordlist": "vocab.r4_wordlist",
+      "inflections": [["ing", ""], ["ing", "e"], ["ed", ""], ["ed", "e"], ["s", ""], ["es", ""]],
+      "examples_per_surface": 8,
+      "seed": 20261024,
+      "review_file": "data/review/common_words_attempt0.csv",
+      "decisions": ["keep", "exclude", "keep_with_exclusions"]
+    },
+    "precision": {"seed": 20261025, "n_per_stratum": 100, "strata": ["method_ci", "task_ci", "acronym_cs"],
+                  "pass_rule": {"statistic": "wilson_lower_95", "pass": 0.8, "conditional": 0.75}, "max_remeasure": 2,
+                  "timepoint": "T1"},
+    "synonyms": {
+      "timepoints": ["T1", "R2", "R3", "T3"],
+      "npmi_min": 0.6,
+      "min_cooccurrence": 5,
+      "acronym_max_letters": 6,
+      "stem_suffixes": ["ional", "ions", "ion", "al", "s"],
+      "stem_min_length": 4,
+      "titles_per_pair": 3,
+      "seed": 20261026,
+      "review_file": "data/review/synonyms_attempt0.csv",
+      "decisions": ["same", "hierarchy", "different"]
     }
   }
 }

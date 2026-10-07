@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "step": "matching_rebuild",
+    "timepoint": "R2",
+    "created": "2026-10-07",
+    "git_commit": "6b8c780635fe9e2ab1d1b080d87f9852e16588ef",
+    "environment": {
+      "python": "3.13.15",
+      "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+      "packages": {
+        "numpy": "2.1.3",
+        "pandas": "2.3.3",
+        "pyarrow": "23.0.1",
+        "scikit-learn": "1.6.1",
+        "scipy": "1.16.3",
+        "lightgbm": "4.6.0"
+      }
+    },
+    "vocab_sha256": "695742ba107419ef3f813c80f28a4d917e50bd23f356f2bfa1c717169bfca59a"
+  },
+  "terms_after_r6": 3250,
+  "terms_final": 1827,
+  "terms_removed_r5": 1423,
+  "merged_groups_in_final": 20,
+  "excluded_pairs": {
+    "hierarchy": 66,
+    "containment": 774
+  },
+  "build_hyperedges": 69828,
+  "label_hyperedges": 86265
+}

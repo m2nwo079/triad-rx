@@ -1,9 +1,9 @@
-"""Kaggle runner for the engine study (design 18.9): T3 verdict and secondary analysis (step 7).
+"""Kaggle runner: third-study vocabulary and hypergraph rebuild for R2, R3 and T3 (design 19.2).
 
 Earlier runs: commit eb28253 ran pair evidence (T1, T2), the learned generator and the engine signals;
 commit a91868c ran the learned generator candidates and the engine rediagnosed on them; commit 2b54e12
 compared the candidate pipelines; commit 1725368 ran the power analysis (its output failed to save;
-the analysis was rerun locally); commit cbedb14 prepared R2, R3 and T3.
+the analysis was rerun locally); commit cbedb14 prepared R2, R3 and T3; commit c257c44 ran the engine T3 verdict and secondary analysis.
 
 The private dataset holds repo.bundle (the committed branch) and data.tar.gz (derived inputs and the
 build-window abstracts). The runner installs the pinned versions of requirements.lock when possible,
@@ -24,13 +24,12 @@ WORK = Path("/kaggle/working")
 REPO = Path("/tmp/triad-rx")
 PINNED = ("numpy", "pandas", "pyarrow", "scikit-learn", "scipy", "lightgbm")
 STEPS = [
-    ["scripts/engine/15_t3_verdict.py"],
-    ["scripts/engine/16_t3_secondary.py"],
+    ["scripts/matching/07_rebuild.py", "--timepoint", "R2"],
+    ["scripts/matching/07_rebuild.py", "--timepoint", "R3"],
+    ["scripts/matching/07_rebuild.py", "--timepoint", "T3"],
 ]
 # Glob patterns relative to the repository; matches are copied to /kaggle/working with their paths
-OUTPUTS = ["results/engine_verdict_T3.json", "results/engine_secondary_T3.json",
-           "data/derived/hypergraph/main/T3_label.parquet", "data/derived/labels_v2/main/T3.parquet",
-           "data/derived/pair_evidence/main/T3.parquet"]
+OUTPUTS = ["results/matching_rebuild_*.json", "vocab/timepoints/*_v3_final.json", "data/derived/hypergraph/v3/*.parquet"]
 
 
 def run(cmd: list[str], cwd: Path | None = None) -> dict:

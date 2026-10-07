@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "step": "precision_sample",
+    "timepoint": "T1",
+    "attempt": 0,
+    "seed": 20261025,
+    "created": "2026-10-07",
+    "git_commit": "ebdb24600a6888c322744dfdcc971a451ae5fe14",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "precision_config": {
+      "seed": 20261025,
+      "n_per_stratum": 100,
+      "strata": [
+        "method_ci",
+        "task_ci",
+        "acronym_cs"
+      ],
+      "pass_rule": {
+        "statistic": "wilson_lower_95",
+        "pass": 0.8,
+        "conditional": 0.75
+      },
+      "max_remeasure": 2,
+      "timepoint": "T1"
+    },
+    "strata": [
+      "method_ci",
+      "task_ci",
+      "acronym_cs"
+    ],
+    "stage_sha256": "ae6ed61456099320b15bcc243143d43c5dda897fbe88d76bf10059a77bfbdbcb",
+    "matches_sha256": "bdf623dc5fbdaf0c95a1964428a183b9e2bdc3336d8bf47c81b1d0789b37f5cc",
+    "review_sha256": "c86b6a5d9b83e9d2561e5441869bd076c59f25cec062857a2fd96ccd416550b6"
+  },
+  "terms_after_r6": 2736,
+  "terms_removed_r6": 0,
+  "sampled": {
+    "method_ci": 100,
+    "task_ci": 100,
+    "acronym_cs": 100
+  },
+  "missing_sentence": 0
+}

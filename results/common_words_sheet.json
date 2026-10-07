@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "step": "common_words_sheet",
+    "created": "2026-10-07",
+    "git_commit": "de1ce4513b38d98d9775572378d255c2b9a42e5f",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "common_words_config": {
+      "wordlist": "vocab.r4_wordlist",
+      "inflections": [
+        [
+          "ing",
+          ""
+        ],
+        [
+          "ing",
+          "e"
+        ],
+        [
+          "ed",
+          ""
+        ],
+        [
+          "ed",
+          "e"
+        ],
+        [
+          "s",
+          ""
+        ],
+        [
+          "es",
+          ""
+        ]
+      ],
+      "examples_per_surface": 8,
+      "seed": 20261024,
+      "review_file": "data/review/common_words_attempt0.csv",
+      "decisions": [
+        "keep",
+        "exclude",
+        "keep_with_exclusions"
+      ]
+    },
+    "wordlist_sha256": "be41ad97963bf8dabedd5871d5d691596175269d540956b0f9965a885c2bbab9",
+    "review_sha256": "45245811b36510f2e4db49a6b8ef19fe143b74deaf734e7d944a27107a1c93a3"
+  },
+  "surfaces": 57,
+  "by_first_timepoint": {
+    "T1": 44,
+    "R2": 5,
+    "R3": 2,
+    "T3": 6
+  },
+  "matching_sentences": {
+    "M:adam|adam": 179,
+    "M:adapter|adapter": 10,
+    "M:attention|attention": 5918,
+    "M:convolution|convolution": 1481,
+    "M:cutout|cutout": 17,
+    "M:deflation|deflation": 8,
+    "M:dropout|dropout": 854,
+    "M:glove|glove": 72,
+    "M:lion|lion": 16,
+    "M:oner|oner": 1,
+    "M:ontology|ontology": 969,
+    "M:palm|palm": 28,
+    "M:patching|patching": 20,
+    "M:procrustes|procrustes": 25,
+    "M:pruning|pruning": 789,
+    "M:rats|rats": 9,
+    "M:sarsa|sarsa": 34,
+    "M:strata|strata": 17,
+    "M:trades|trades": 60,
+    "M:transformer|transformer": 219,
+    "M:tucker|tucker": 85,
+    "M:wizard|wizard": 24,
+    "T:arc|arc": 109,
+    "T:chunking|chunking": 50,
+    "T:classification|classification": 12217,
+    "T:clustering|clustering": 5314,
+    "T:colorization|colorization": 117,
+    "T:decipherment|decipherment": 11,
+    "T:dialogue|dialogue": 995,
+    "T:foveation|foveation": 10,
+    "T:imputation|imputation": 200,
+    "T:mixture of experts|moe": 49,
+    "T:object|object": 6661,
+    "T:prediction|prediction": 7183,
+    "T:quantization|quantization": 831,
+    "T:regression|regression": 4315,
+    "T:reranking|reranking": 88,
+    "T:resynthesis|resynthesis": 6,
+    "T:retrieval|retrieval": 1717,
+    "T:sketch|sketch": 511,
+    "T:summarization|summarization": 548,
+    "T:translation|translation": 2245,
+    "T:transliteration|transliteration": 62,
+    "T:triplet|triplet": 223,
+    "M:apollo|apollo": 14,
+    "M:cabinet|cabinet": 14,
+    "M:coat|coat": 5,
+    "M:cove|cove": 7,
+    "M:merl|merl": 15,
+    "M:reformer|reformer": 15,
+    "M:sophia|sophia": 17,
+    "M:alibi|alibi": 18,
+    "M:aria|aria": 20,
+    "M:coop|coop": 60,
+    "M:genet|genet": 13,
+    "M:siren|siren": 40,
+    "M:soups|soups": 22
+  }
+}

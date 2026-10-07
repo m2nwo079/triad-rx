@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "step": "matching_precision",
+    "timepoint": "T1",
+    "created": "2026-10-07",
+    "git_commit": "feafd1c88f482f68a9e13de38c524c37467ec79a",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "precision_config": {
+      "seed": 20261025,
+      "n_per_stratum": 100,
+      "strata": [
+        "method_ci",
+        "task_ci",
+        "acronym_cs"
+      ],
+      "pass_rule": {
+        "statistic": "wilson_lower_95",
+        "pass": 0.8,
+        "conditional": 0.75
+      },
+      "max_remeasure": 2,
+      "timepoint": "T1"
+    },
+    "files_sha256": {
+      "attempt0": {
+        "review": "f31866f5c575dc34c31c982b89554c0247f962e5aa21dfb05b754ed07149de89",
+        "original": "c86b6a5d9b83e9d2561e5441869bd076c59f25cec062857a2fd96ccd416550b6"
+      }
+    }
+  },
+  "attempts": [
+    {
+      "acronym_cs": {
+        "attempt": 0,
+        "n": 100,
+        "correct": 90,
+        "precision": 0.9,
+        "wilson_lower": 0.8256343384950866,
+        "wilson_upper": 0.9447708629393249,
+        "status": "pass"
+      },
+      "method_ci": {
+        "attempt": 0,
+        "n": 100,
+        "correct": 83,
+        "precision": 0.83,
+        "wilson_lower": 0.7445199523239887,
+        "wilson_upper": 0.8910643388594006,
+        "status": "fail"
+      },
+      "task_ci": {
+        "attempt": 0,
+        "n": 100,
+        "correct": 93,
+        "precision": 0.93,
+        "wilson_lower": 0.862504852609265,
+        "wilson_upper": 0.9656807389327274,
+        "status": "pass"
+      }
+    }
+  ],
+  "final_by_stratum": {
+    "acronym_cs": {
+      "attempt": 0,
+      "n": 100,
+      "correct": 90,
+      "precision": 0.9,
+      "wilson_lower": 0.8256343384950866,
+      "wilson_upper": 0.9447708629393249,
+      "status": "pass"
+    },
+    "method_ci": {
+      "attempt": 0,
+      "n": 100,
+      "correct": 83,
+      "precision": 0.83,
+      "wilson_lower": 0.7445199523239887,
+      "wilson_upper": 0.8910643388594006,
+      "status": "fail"
+    },
+    "task_ci": {
+      "attempt": 0,
+      "n": 100,
+      "correct": 93,
+      "precision": 0.93,
+      "wilson_lower": 0.862504852609265,
+      "wilson_upper": 0.9656807389327274,
+      "status": "pass"
+    }
+  },
+  "final_failed_strata": [
+    "method_ci"
+  ],
+  "attempts_left": 2
+}

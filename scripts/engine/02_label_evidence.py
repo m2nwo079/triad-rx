@@ -34,7 +34,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 from triadrx.study import load_study
-from triadrx.text import Matcher
+from triadrx.text import Matcher, refine_terms, refined_spans
 
 PAPERS = Path("data/arxiv/papers.parquet")
 HYPERGRAPH = Path("data/derived/hypergraph/main")
@@ -71,35 +71,15 @@ def cue_pattern(cues: list[str]) -> re.Pattern:
 
 
 def evidence_terms(matcher: Matcher, sentences: list[str], cs_only: set[str], rules: dict) -> list[set]:
-    """Matched terms per sentence after the evidence matching rules (engine preregistration 2.1).
-
-    drop_nested: a match whose tokens lie inside a longer match of the other pass is dropped.
-    acronym_needs_full_name: a case-sensitive match counts only when the same term also has a
-    case-insensitive match in the paper, unless the term has no case-insensitive surface.
-    """
-    kept = []
-    for s in sentences:
-        spans = matcher.spans(s)
-        if rules["drop_nested"]:
-            spans = [m for m in spans if not any(o["start"] <= m["start"] and m["end"] <= o["end"]
-                                                 and o["end"] - o["start"] > m["end"] - m["start"] for o in spans)]
-        kept.append(spans)
-    full = {m["id"] for spans in kept for m in spans if m["mode"] == "ci"}
-    out = []
-    for spans in kept:
-        out.append({m["id"] for m in spans if m["mode"] == "ci" or not rules["acronym_needs_full_name"]
-                    or m["id"] in cs_only or m["id"] in full})
-    return out
+    """Matched terms per sentence after the evidence matching rules (engine preregistration 2.1),
+    computed by the shared refined matching (triadrx.text.refined_spans)."""
+    return [{m["id"] for m in spans} for spans in refined_spans(matcher, sentences, cs_only, rules)]
 
 
 def evidence_vocab(terms: list[dict], skip_chars: list[str]) -> tuple[list[dict], set[str]]:
-    """Terms without surfaces whose characters the tokenizer drops, and the ids with only acronym surfaces."""
-    out = []
-    for t in terms:
-        surfaces = [s for s in t["surfaces"] if not any(c in s["text"] for c in skip_chars)]
-        if surfaces:
-            out.append({**t, "surfaces": surfaces})
-    return out, {t["id"] for t in out if all(s["match"] == "cs" for s in t["surfaces"])}
+    """Terms without surfaces whose characters the tokenizer drops, and the ids with only acronym
+    surfaces (triadrx.text.refine_terms)."""
+    return refine_terms(terms, skip_chars)
 
 
 def has_evidence(triad: tuple, sentence_terms: list[set], sentences: list[str], size: int, cues: re.Pattern) -> bool:

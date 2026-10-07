@@ -84,3 +84,51 @@ class Matcher:
     def terms(self, text: str) -> set[str]:
         """Set of matched term ids."""
         return {m["id"] for m in self.spans(text)}
+
+
+def refine_terms(terms: list[dict], skip_chars: list[str], excluded: set[tuple[str, str]] = frozenset()) -> tuple[list[dict], set[str]]:
+    """Terms without surfaces that hold a character the tokenizer drops or that were excluded by
+    review ((term id, surface) pairs), and the ids of terms left with only case-sensitive surfaces."""
+    out = []
+    for term in terms:
+        surfaces = [s for s in term["surfaces"]
+                    if not any(c in s["text"] for c in skip_chars) and (term["id"], s["text"]) not in excluded]
+        if surfaces:
+            out.append({**term, "surfaces": surfaces})
+    return out, {t["id"] for t in out if all(s["match"] == "cs" for s in t["surfaces"])}
+
+
+def refined_spans(matcher: Matcher, texts: list[str], cs_only: set[str], rules: dict,
+                  exclusions: dict[str, list[tuple[str, ...]]] | None = None) -> list[list[dict]]:
+    """Matches of each text of one paper after the refined matching rules.
+
+    - drop_nested: a match whose tokens lie inside a longer match of the other pass is dropped
+    - exclusions: a match of a term is dropped when one of the term's excluded phrases (token
+      tuples) covers it
+    - acronym_needs_full_name: a case-sensitive match counts only when the same term also has a
+      case-insensitive match somewhere in the paper's texts, unless the term has no
+      case-insensitive surface
+    """
+    exclusions = exclusions or {}
+    kept = []
+    for text in texts:
+        spans = matcher.spans(text)
+        if rules["drop_nested"]:
+            spans = [m for m in spans if not any(o["start"] <= m["start"] and m["end"] <= o["end"]
+                                                 and o["end"] - o["start"] > m["end"] - m["start"] for o in spans)]
+        if exclusions:
+            tokens = ci_tokens(text)
+            spans = [m for m in spans if not any(_covers(tokens, phrase, m["start"], m["end"]) for phrase in exclusions.get(m["id"], ()))]
+        kept.append(spans)
+    full = {m["id"] for spans in kept for m in spans if m["mode"] == "ci"}
+    return [[m for m in spans if m["mode"] == "ci" or not rules["acronym_needs_full_name"]
+             or m["id"] in cs_only or m["id"] in full] for spans in kept]
+
+
+def _covers(tokens: tuple[str, ...], phrase: tuple[str, ...], start: int, end: int) -> bool:
+    """True when `phrase` occurs in `tokens` at a position whose span contains [start, end)."""
+    n = len(phrase)
+    for p in range(max(0, end - n), min(start, len(tokens) - n) + 1):
+        if tokens[p:p + n] == phrase:
+            return True
+    return False
