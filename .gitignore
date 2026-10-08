@@ -16,3 +16,6 @@ __pycache__/
 # Editors
 .vscode/
 .idea/
+# Local only (not published)
+CLAUDE.md
+external/tod/
