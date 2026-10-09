@@ -1,16 +1,18 @@
 """Score the label v3 review (matching preregistration 5.2).
 
-Usage: python scripts/matching/09_label_v3_score.py [--confirm]
+Usage: python scripts/matching/09_label_v3_score.py [--confirm | --confirm2]
 
 --confirm scores the relation-classifier confirmation sheet (matching.relation.confirm, attempt 1)
-instead of the sentence-window sheet (attempt 0).
+instead of the sentence-window sheet (attempt 0). --confirm2 scores the attempt 2 sheet
+(matching.relation.confirm2, matching preregistration 5.4) with the same adoption rule.
 
 Validation and the combination shares with Wilson intervals are those of the engine study
 (scripts/engine/03_label_evidence_score.py, reused through importlib). The rule is adopted when the
 rule-positive lower bound exceeds the rule-negative upper bound and reaches
 matching.label_v3.target_positive_lower.
 
-Output: results/label_v3_<tp>_score.json or results/label_v3_<tp>_attempt1_score.json (counts and hashes, no text)
+Output: results/label_v3_<tp>_score.json, results/label_v3_<tp>_attempt1_score.json or
+results/label_v3_<tp>_attempt2_score.json (counts and hashes, no text)
 """
 import argparse
 import datetime
@@ -45,11 +47,14 @@ def adopt(scored: dict, target: float) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--confirm", action="store_true")
-    confirm = parser.parse_args().confirm
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("--confirm", action="store_true")
+    group.add_argument("--confirm2", action="store_true")
+    args = parser.parse_args()
+    attempt = 2 if args.confirm2 else 1 if args.confirm else 0
     matching = load_study()["matching"]
     cfg = matching["label_v3"]
-    files = matching["relation"]["confirm"] if confirm else cfg
+    files = {0: cfg, 1: matching["relation"]["confirm"], 2: matching["relation"].get("confirm2")}[attempt]
     review_path, key_path = Path(files["review_file"]), Path(files["review_key_file"])
     original_path = review_path.with_name(review_path.stem + "_original.csv")
     review, original, key = v2score.read(review_path), v2score.read(original_path), v2score.read(key_path)
@@ -66,7 +71,8 @@ def main() -> None:
         "rule_positive": scored["rule_positive"], "rule_negative": scored["rule_negative"],
         **adopt(scored, cfg["target_positive_lower"]),
     }
-    out = RESULTS / f"label_v3_{cfg['design_timepoint']}{'_attempt1' if confirm else ''}_score.json"
+    suffix = f"_attempt{attempt}" if attempt else ""
+    out = RESULTS / f"label_v3_{cfg['design_timepoint']}{suffix}_score.json"
     out.write_text(json.dumps(result, indent=2))
     print(json.dumps({k: v for k, v in result.items() if k != "meta"}, indent=2))
 

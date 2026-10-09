@@ -1,5 +1,6 @@
 """Third-study matching steps on toy data."""
 import importlib.util
+import json
 from pathlib import Path
 
 import pytest
@@ -232,3 +233,23 @@ def test_label_from_classifier_outputs_and_missing_negatives():
     assert bool(table.loc[("x", "y", "z"), "label_v3"]) and not bool(table.loc[("u", "v", "w"), "label_v3"])
     with pytest.raises(ValueError):
         lr.label_table(frame, pd.DataFrame({"id": ["2"], "relation": ["mention"]}), 1)
+
+
+def test_attempt2_sample_size_follows_the_power_rule():
+    conf = {"confidence": 0.95, "assumed_precision": 0.78, "power": 0.8, "size_search": {"start": 50, "step": 5}}
+    assert rc.sample_size(conf, 0.7) == 240
+    z = 1.959963984540054
+    assert rc.power(240, 0.78, 0.7, z) >= 0.8 > rc.power(235, 0.78, 0.7, z)
+
+
+def test_attempt2_frame_drops_used_triads_in_any_order():
+    frame = pd.DataFrame({"id": ["1", "2", "3"], "a": ["x", "u", "m"], "b": ["y", "v", "n"], "c": ["z", "w", "o"], "paper_id": ["p", "q", "r"]})
+    kept = rc.drop_triads(frame, {("x", "y", "z"), ("m", "n", "o")})
+    assert kept["id"].tolist() == ["2"]
+    assert rc.drop_triads(frame, {tuple(sorted(("w", "v", "u")))})["id"].tolist() == ["1", "3"]
+
+
+def test_attempt2_config_matches_the_power_rule():
+    study = json.loads(Path("config/study.json").read_text())
+    conf = study["matching"]["relation"]["confirm2"]
+    assert rc.sample_size(conf, study["matching"]["label_v3"]["target_positive_lower"]) == conf["positive"]

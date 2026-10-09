@@ -777,7 +777,13 @@
         {"review": "data/review/label_v3_T1_attempt0.csv", "key": "data/review/label_v3_T1_attempt0_key.csv"}
       ],
       "confirm": {"positive": 100, "negative": 50, "seed": 20261028, "frame_triads": 1500,
-                  "review_file": "data/review/label_v3_T1_attempt1.csv", "review_key_file": "data/review/label_v3_T1_attempt1_key.csv"}
+                  "review_file": "data/review/label_v3_T1_attempt1.csv", "review_key_file": "data/review/label_v3_T1_attempt1_key.csv"},
+      "confirm2": {"positive": 240, "negative": 50, "seed": 20261029,
+                   "confidence": 0.95, "assumed_precision": 0.78, "power": 0.8, "size_search": {"start": 50, "step": 5},
+                   "outputs_sha256": "b55ccf6c857d2f965abf6209724fb50f75df4f63f8d10e77025477f7b812682a",
+                   "frame_sha256": "efcf307e7a44956d864bfe250530298628c23bebf624e4f2e89e34fd62566f23",
+                   "attempt1_frame_sha256": "e12034ecc69a95f853cd166322e0ece5626004eb10d03b4315c35fa9c05aee7c",
+                   "review_file": "data/review/label_v3_T1_attempt2.csv", "review_key_file": "data/review/label_v3_T1_attempt2_key.csv"}
     }
   }
 }
