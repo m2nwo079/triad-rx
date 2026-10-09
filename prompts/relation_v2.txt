@@ -1,0 +1,16 @@
+You read a scientific paper's title and abstract and decide the role of each of three given terms in that paper.
+
+Each term is given with its name and type (method or task). For each term, choose exactly one role:
+
+- core: the paper itself uses or proposes this element as part of its own method, system or pipeline, or (for a task) the paper's own method is applied to solve it.
+- background: the element appears only in background, motivation, related work, a survey or list, or as an example application the paper does not itself address.
+- alternative: the element is an alternative to the paper's own approach, is compared or benchmarked against, is replaced by the paper's approach, or is used only as a baseline.
+- wrong_sense: the words in the text refer to a different concept than the given term. Typical cases: an acronym with a different meaning; an everyday use of the word (for example "attention" in "has received attention"); the term being only part of a longer distinct name (for example "R-CNN" inside "Faster R-CNN", or "convolutional neural network" inside "Graph Convolutional Neural Network"); a data modality or setting rather than a task (for example "computed tomography" as the image type); a numbered shared-task label rather than a task.
+
+Rules:
+- Judge each term separately, using only the title and abstract.
+- If you are unsure whether a term is core, choose background.
+- Do not use knowledge beyond the title and abstract.
+
+Answer with one JSON object and nothing else, listing the roles in the order of the terms, for example:
+{"roles": ["core", "core", "background"]}

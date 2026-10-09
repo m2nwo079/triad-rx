@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "step": "label_v3_score",
+    "timepoint": "T1",
+    "created": "2026-10-07",
+    "git_commit": "fc6f9c700518d59905df8c509db9222b17abe6a6",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "target_positive_lower": 0.7,
+    "files_sha256": {
+      "review": "e02bfd87f7e8b35e5df1485b331187a04c34e5de0712c0fc2b66deb2b5f3ca3e",
+      "original": "1dbb755d6429589d4fcd5c0a6e6643f4a9e57790a4f10b16ebf99d22f6909715",
+      "key": "60fa7936f417bba34c923c2de91932e62e44c8bdf49a31175112d1f081a3ff51"
+    }
+  },
+  "rule_positive": {
+    "n": 100,
+    "judgements": {
+      "combination": 54,
+      "comparison": 15,
+      "mention": 31
+    },
+    "term_errors": 9,
+    "combination_share": 0.54,
+    "wilson_lower": 0.44264860323368227,
+    "wilson_upper": 0.634391916909759
+  },
+  "rule_negative": {
+    "n": 50,
+    "judgements": {
+      "combination": 22,
+      "comparison": 4,
+      "mention": 24
+    },
+    "term_errors": 7,
+    "combination_share": 0.44,
+    "wilson_lower": 0.3116219921125717,
+    "wilson_upper": 0.5769397197834315
+  },
+  "separated": false,
+  "reaches_target": false,
+  "adopted": false
+}

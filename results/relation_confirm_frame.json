@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "step": "relation_confirm_frame",
+    "created": "2026-10-07",
+    "git_commit": "1d334dbbb4a0d321d03137c43ba1a2cf9dd7d370",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "confirm_config": {
+      "positive": 100,
+      "negative": 50,
+      "seed": 20261028,
+      "frame_triads": 1500,
+      "review_file": "data/review/label_v3_T1_attempt1.csv",
+      "review_key_file": "data/review/label_v3_T1_attempt1_key.csv"
+    },
+    "inputs_sha256": "3f253742c782d6c158a6d03d987556f67985e666cdb2127117b482bad23dafd7",
+    "frame_sha256": "e12034ecc69a95f853cd166322e0ece5626004eb10d03b4315c35fa9c05aee7c"
+  },
+  "eligible_triads": 22254,
+  "frame_triads": 1500,
+  "frame_pairs": 2108
+}

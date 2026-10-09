@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "step": "relation_inputs",
+    "set": "R2",
+    "created": "2026-10-07",
+    "git_commit": "dfcd665ae49bd10d9c2b3b6e2ff716bd6abcf10e",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "relation_config": {
+      "model_id": "Qwen/Qwen3.5-9B",
+      "quantization": "bitsandbytes 4-bit nf4, compute float16",
+      "decoding": "greedy, thinking disabled",
+      "max_new_tokens": 64,
+      "batch_size": 16,
+      "prompt": "prompts/relation_v2.txt",
+      "prompt_selection": {
+        "candidates": [
+          "prompts/relation_v1.txt",
+          "prompts/relation_v2.txt"
+        ],
+        "rule": "higher development combination precision, v1 on ties",
+        "selected": "prompts/relation_v2.txt",
+        "results": [
+          "results/relation_dev_v1.json",
+          "results/relation_dev_v2.json"
+        ]
+      },
+      "max_prompt_revisions": 1,
+      "dev_reviews": [
+        {
+          "review": "data/review/label_evidence_T1_attempt0.csv",
+          "key": "data/review/label_evidence_T1_attempt0_key.csv"
+        },
+        {
+          "review": "data/review/label_evidence_T1_attempt1.csv",
+          "key": "data/review/label_evidence_T1_attempt1_key.csv"
+        },
+        {
+          "review": "data/review/label_v3_T1_attempt0.csv",
+          "key": "data/review/label_v3_T1_attempt0_key.csv"
+        }
+      ],
+      "confirm": {
+        "positive": 100,
+        "negative": 50,
+        "seed": 20261028,
+        "frame_triads": 1500,
+        "review_file": "data/review/label_v3_T1_attempt1.csv",
+        "review_key_file": "data/review/label_v3_T1_attempt1_key.csv"
+      }
+    },
+    "inputs_sha256": "54d116bbb5279dbe1f3c5326cdcfe18c87342899b209672491b1f19beabf609a",
+    "truth_sha256": "45bdb8ac52939d6639efbe10c31b37ac9deab788796221dbea18d75c925ed546"
+  },
+  "records": 36857,
+  "by_source": null,
+  "groups": 28580
+}

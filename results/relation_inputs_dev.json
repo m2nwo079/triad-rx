@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "step": "relation_inputs",
+    "set": "dev",
+    "created": "2026-10-07",
+    "git_commit": "8fd48639c5c91be046a8462fee6306f569e5c6e8",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "relation_config": {
+      "model_id": "Qwen/Qwen3.5-9B",
+      "quantization": "bitsandbytes 4-bit nf4, compute float16",
+      "decoding": "greedy, thinking disabled",
+      "max_new_tokens": 40,
+      "batch_size": 16,
+      "prompt": "prompts/relation_v1.txt",
+      "max_prompt_revisions": 1,
+      "dev_reviews": [
+        {
+          "review": "data/review/label_evidence_T1_attempt0.csv",
+          "key": "data/review/label_evidence_T1_attempt0_key.csv"
+        },
+        {
+          "review": "data/review/label_evidence_T1_attempt1.csv",
+          "key": "data/review/label_evidence_T1_attempt1_key.csv"
+        },
+        {
+          "review": "data/review/label_v3_T1_attempt0.csv",
+          "key": "data/review/label_v3_T1_attempt0_key.csv"
+        }
+      ],
+      "confirm": {
+        "positive": 100,
+        "negative": 50,
+        "seed": 20261028,
+        "review_file": "data/review/label_v3_T1_attempt1.csv",
+        "review_key_file": "data/review/label_v3_T1_attempt1_key.csv"
+      }
+    },
+    "inputs_sha256": "acaf967e231f469a8b79b4510732af06e9dffad4691ed6c68d3a07c27a2e1da4",
+    "truth_sha256": "1afbe9d3fc34c9041e92399516a6b8b3a5d06a00265dba9a01db9e2d2141ec10"
+  },
+  "records": 450,
+  "by_source": {
+    "label_evidence_T1_attempt0": 150,
+    "label_evidence_T1_attempt1": 150,
+    "label_v3_T1_attempt0": 150
+  }
+}

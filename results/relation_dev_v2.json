@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "step": "relation_dev",
+    "tag": "v2",
+    "created": "2026-10-07",
+    "git_commit": "7f0372598c7229740c83c75e9c5cecb1d14128d2",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "model_run": {
+      "model_id": "Qwen/Qwen3.5-9B",
+      "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "settings": {
+        "model_id": "Qwen/Qwen3.5-9B",
+        "quantization": "bitsandbytes 4-bit nf4, compute float16",
+        "decoding": "greedy, thinking disabled",
+        "max_new_tokens": 64,
+        "batch_size": 16,
+        "prompt": "prompts/relation_v2.txt",
+        "set": "dev",
+        "limit": null
+      },
+      "started": "2026-10-07T01:06:30+00:00",
+      "seconds": 477.7,
+      "records": 450,
+      "records_per_second": 0.9419593549578523,
+      "invalid": 0,
+      "gpu": "Tesla T4",
+      "gpus": 2,
+      "transformers": "5.19.0",
+      "torch": "2.11.0+cu128",
+      "python": "3.13.15",
+      "install_returncode": 0
+    },
+    "outputs_sha256": "6bdbed36c0084df7136c06182be684eb454e482ba44ad7f9555804afcaad5922",
+    "truth_sha256": "1afbe9d3fc34c9041e92399516a6b8b3a5d06a00265dba9a01db9e2d2141ec10",
+    "note": "Development agreement with existing human reviews; never a verdict."
+  },
+  "all": {
+    "n": 450,
+    "confusion_human_by_model": {
+      "combination": {
+        "combination": 114,
+        "comparison": 8,
+        "mention": 22
+      },
+      "comparison": {
+        "combination": 27,
+        "comparison": 42,
+        "mention": 51
+      },
+      "mention": {
+        "combination": 71,
+        "comparison": 17,
+        "mention": 98
+      }
+    },
+    "agreement": 0.5644444444444444,
+    "kappa": 0.3324553834975705,
+    "combination_precision": 0.7916666666666666,
+    "combination_precision_ci": [
+      0.718187193141116,
+      0.8499890185254458
+    ],
+    "combination_recall": 0.5377358490566038,
+    "combination_recall_ci": [
+      0.4705472808791266,
+      0.6035812025337458
+    ],
+    "invalid": 0
+  },
+  "by_source": {
+    "label_evidence_T1_attempt0": {
+      "n": 150,
+      "confusion_human_by_model": {
+        "combination": {
+          "combination": 32,
+          "comparison": 4,
+          "mention": 7
+        },
+        "comparison": {
+          "combination": 7,
+          "comparison": 15,
+          "mention": 18
+        },
+        "mention": {
+          "combination": 25,
+          "comparison": 7,
+          "mention": 35
+        }
+      },
+      "agreement": 0.5466666666666666,
+      "kappa": 0.30555555555555547,
+      "combination_precision": 0.7441860465116279,
+      "combination_precision_ci": [
+        0.5976159650115332,
+        0.8507048287619176
+      ],
+      "combination_recall": 0.5,
+      "combination_recall_ci": [
+        0.3810209474394701,
+        0.6189790525605299
+      ],
+      "invalid": 0
+    },
+    "label_evidence_T1_attempt1": {
+      "n": 150,
+      "confusion_human_by_model": {
+        "combination": {
+          "combination": 40,
+          "comparison": 3,
+          "mention": 7
+        },
+        "comparison": {
+          "combination": 8,
+          "comparison": 14,
+          "mention": 17
+        },
+        "mention": {
+          "combination": 24,
+          "comparison": 5,
+          "mention": 32
+        }
+      },
+      "agreement": 0.5733333333333334,
+      "kappa": 0.3436346232736223,
+      "combination_precision": 0.8,
+      "combination_precision_ci": [
+        0.6696289406777459,
+        0.887562499842239
+      ],
+      "combination_recall": 0.5555555555555556,
+      "combination_recall_ci": [
+        0.440873908658052,
+        0.6646092943867861
+      ],
+      "invalid": 0
+    },
+    "label_v3_T1_attempt0": {
+      "n": 150,
+      "confusion_human_by_model": {
+        "combination": {
+          "combination": 42,
+          "comparison": 1,
+          "mention": 8
+        },
+        "comparison": {
+          "combination": 12,
+          "comparison": 13,
+          "mention": 16
+        },
+        "mention": {
+          "combination": 22,
+          "comparison": 5,
+          "mention": 31
+        }
+      },
+      "agreement": 0.5733333333333334,
+      "kappa": 0.34493346980552714,
+      "combination_precision": 0.8235294117647058,
+      "combination_precision_ci": [
+        0.6974585747569192,
+        0.9042759653087369
+      ],
+      "combination_recall": 0.5526315789473685,
+      "combination_recall_ci": [
+        0.44100515064486484,
+        0.6591934193482787
+      ],
+      "invalid": 0
+    }
+  },
+  "term_error_agreement": 0.8555555555555555
+}

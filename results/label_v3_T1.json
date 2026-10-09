@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "step": "label_v3",
+    "timepoint": "T1",
+    "created": "2026-10-07",
+    "git_commit": "486d2816cb2ba91d6f7ff1685473021532393243",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "label_v3_config": {
+      "design_timepoint": "T1",
+      "evidence": "engine_reliability.label_v2 (windows, cues, abbreviations, title as first sentence, min_evidence_papers)",
+      "target_positive_lower": 0.7,
+      "sample": {
+        "positive": 100,
+        "negative": 50,
+        "seed": 20261027
+      },
+      "review_file": "data/review/label_v3_T1_attempt0.csv",
+      "review_key_file": "data/review/label_v3_T1_attempt0_key.csv"
+    },
+    "evidence_config": {
+      "design_timepoint": "T1",
+      "window_sentences": 2,
+      "min_evidence_papers": 1,
+      "title_as_first_sentence": true,
+      "abbreviations": [
+        "et al.",
+        "e.g.",
+        "i.e.",
+        "vs.",
+        "cf.",
+        "Fig.",
+        "Eq.",
+        "etc.",
+        "approx."
+      ],
+      "comparison_cues": [
+        "compared with",
+        "compared to",
+        "comparison",
+        "compare",
+        "comparing",
+        "outperform",
+        "outperforms",
+        "outperformed",
+        "outperforming",
+        "versus",
+        "vs.",
+        "baseline",
+        "baselines",
+        "superior to",
+        "better than",
+        "competitive with",
+        "in contrast to",
+        "unlike",
+        "instead of",
+        "rather than",
+        "alternative to",
+        "benchmark",
+        "benchmarks",
+        "benchmarking",
+        "compared",
+        "competing",
+        "alternatives",
+        "existing",
+        "previous",
+        "prior",
+        "state-of-the-art",
+        "state of the art",
+        "survey",
+        "review"
+      ],
+      "evidence_matching": {
+        "drop_nested": true,
+        "acronym_needs_full_name": true,
+        "skip_surface_chars": [
+          "+"
+        ]
+      },
+      "attempt": 1,
+      "previous_review_keys": [
+        "data/review/label_evidence_T1_attempt0_key.csv"
+      ],
+      "sample": {
+        "positive": 100,
+        "negative": 50,
+        "seed": 20261022
+      },
+      "review_file": "data/review/label_evidence_T1_attempt1.csv",
+      "review_key_file": "data/review/label_evidence_T1_attempt1_key.csv"
+    },
+    "surface_rules": {
+      "drop_nested": true,
+      "acronym_needs_full_name": true,
+      "skip_surface_chars": [
+        "+"
+      ]
+    },
+    "inputs_sha256": {
+      "build": "0c025a81c8a13982e742bcb8213bfa558b151a7e432ae2681dee75436701f827",
+      "label": "8b720431eaa383f4267dac5d213979d4d746a75147c4eecc308af61e0f1a9257"
+    },
+    "vocab_sha256": "dcf1148894ae95bd56068eb5a1bd778d5c1df06dd050f30bf1480d8f981d514a",
+    "output_sha256": "9629b34217c19b6ae9be0c7bd6779c1f47a452d47b0ecde9f8c52d85e53d4421",
+    "review_sha256": "1dbb755d6429589d4fcd5c0a6e6643f4a9e57790a4f10b16ebf99d22f6909715",
+    "key_sha256": "60fa7936f417bba34c923c2de91932e62e44c8bdf49a31175112d1f081a3ff51"
+  },
+  "realised_significant_triads": 24630,
+  "dropped_for_excluded_pairs": 2032,
+  "realised_kept": 22598,
+  "triad_paper_pairs": 32041,
+  "pairs_with_evidence": 6074,
+  "label_v3_positive": 4881,
+  "sample": {
+    "positive": 100,
+    "negative": 50
+  }
+}

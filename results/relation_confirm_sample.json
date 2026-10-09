@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "step": "relation_confirm_sample",
+    "created": "2026-10-07",
+    "git_commit": "6381b41f2e36e53875366d0539e786eedf726eb6",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "confirm_config": {
+      "positive": 100,
+      "negative": 50,
+      "seed": 20261028,
+      "frame_triads": 1500,
+      "review_file": "data/review/label_v3_T1_attempt1.csv",
+      "review_key_file": "data/review/label_v3_T1_attempt1_key.csv"
+    },
+    "model_run": {
+      "model_id": "Qwen/Qwen3.5-9B",
+      "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "settings": {
+        "model_id": "Qwen/Qwen3.5-9B",
+        "quantization": "bitsandbytes 4-bit nf4, compute float16",
+        "decoding": "greedy, thinking disabled",
+        "max_new_tokens": 64,
+        "batch_size": 16,
+        "prompt": "prompts/relation_v2.txt",
+        "set": "confirm",
+        "limit": null
+      },
+      "started": "2026-10-07T01:22:31+00:00",
+      "seconds": 2329.9,
+      "records": 2108,
+      "records_per_second": 0.9047657966882745,
+      "invalid": 0,
+      "gpu": "Tesla T4",
+      "gpus": 2,
+      "transformers": "5.19.0",
+      "torch": "2.11.0+cu128",
+      "python": "3.13.15",
+      "install_returncode": 0
+    },
+    "outputs_sha256": "92349967171d0da993c2dc373d050bf66e57347a39404460ad22937cf3e5df47",
+    "review_sha256": "37087cf0019af40f1706c39ace29e7fc829f1003697170aa7b9db7c457d749cd",
+    "key_sha256": "1224e50090bf52821bd3b3d7c93257cf804036f9b10183191adc32a0280a74e4"
+  },
+  "frame_pairs": 2108,
+  "invalid": 0,
+  "model_positive_triads": 484,
+  "model_negative_triads": 1016,
+  "sample": {
+    "positive": 100,
+    "negative": 50
+  }
+}

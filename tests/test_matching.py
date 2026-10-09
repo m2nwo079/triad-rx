@@ -2,6 +2,8 @@
 import importlib.util
 from pathlib import Path
 
+import pytest
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -142,3 +144,91 @@ def test_study_timepoint_roles_keep_t3_labels_out_of_the_rebuild():
     import json
     study = rb.prep.merged_study(json.loads((ROOT / "config/study.json").read_text()))
     assert [tp for tp in study["matching"]["timepoints"] if study["timepoints"][tp].get("role") == "train"] == ["T1", "R2", "R3"]
+
+
+l3 = load("label_v3_sample", "scripts/matching/08_label_v3_sample.py")
+l3s = load("label_v3_score", "scripts/matching/09_label_v3_score.py")
+
+
+def test_excluded_pairs_drop_triads_in_any_order():
+    vocab = {"excluded_pairs": {"hierarchy": [["M:b", "M:a"]], "containment": [["T:x", "T:y"]]}}
+    excluded = l3.excluded_pairs(vocab)
+    assert l3.holds_excluded_pair(("M:a", "M:b", "T:z"), excluded)
+    assert l3.holds_excluded_pair(("M:c", "T:x", "T:y"), excluded)
+    assert not l3.holds_excluded_pair(("M:a", "M:c", "T:x"), excluded)
+
+
+def test_label_v3_adoption_needs_separation_and_target():
+    scored = {"adopted": True, "rule_positive": {"wilson_lower": 0.65}}
+    assert l3s.adopt(scored, 0.7) == {"separated": True, "reaches_target": False, "adopted": False}
+    assert l3s.adopt({**scored, "rule_positive": {"wilson_lower": 0.72}}, 0.7)["adopted"]
+    assert not l3s.adopt({"adopted": False, "rule_positive": {"wilson_lower": 0.9}}, 0.7)["adopted"]
+
+
+rel_run = load("relation_run", "kaggle/relation/run.py")
+rel_in = load("relation_inputs", "scripts/matching/10_relation_inputs.py")
+rel_dev = load("relation_dev", "scripts/matching/11_relation_dev_score.py")
+
+
+def test_relation_output_parsing():
+    assert rel_run.parse('{"relation": "combination", "term_error": false}') == ("combination", False)
+    assert rel_run.parse('Sure. {"relation": "mention", "term_error": true} done') == ("mention", True)
+    assert rel_run.parse("combination") == ("invalid", False)
+    assert rel_run.parse('{"relation": "other"}') == ("invalid", False)
+
+
+def test_relation_inputs_show_names_and_types_only():
+    r = rel_in.record("x:1", ["M:graph attention network", "T:node classification", "M:dropout"], "p", " A  title ", "An\nabstract")
+    assert r["terms"][0] == {"id": "M:graph attention network", "name": "graph attention network", "type": "method"}
+    assert r["title"] == "A title" and r["abstract"] == "An abstract"
+    assert "graph attention network (method)" in rel_run.user_message(r)
+
+
+def test_relation_dev_score_treats_invalid_as_mention():
+    df = pd.DataFrame({"human": ["combination", "combination", "mention", "comparison"],
+                       "model": ["combination", "invalid", "combination", "comparison"]})
+    out = rel_dev.score(df)
+    assert out["invalid"] == 1 and out["agreement"] == 0.5
+    assert out["combination_precision"] == 0.5 and out["combination_recall"] == 0.5
+
+
+def test_relation_v2_roles_give_the_relation_by_rule():
+    assert rel_run.parse('{"roles": ["core", "core", "core"]}') == ("combination", False)
+    assert rel_run.parse('{"roles": ["core", "wrong_sense", "core"]}') == ("mention", True)
+    assert rel_run.parse('{"roles": ["core", "alternative", "background"]}') == ("comparison", False)
+    assert rel_run.parse('{"roles": ["core", "background", "core"]}') == ("mention", False)
+    assert rel_run.parse('{"roles": ["core", "core"]}') == ("invalid", False)
+    assert rel_run.parse('{"roles": ["core", "core", "maybe"]}') == ("invalid", False)
+
+
+rc = load("relation_confirm", "scripts/matching/12_relation_confirm.py")
+
+
+def test_confirm_split_marks_triads_with_a_combination_paper():
+    frame = pd.DataFrame({"id": ["1", "2", "3"], "a": ["x", "x", "u"], "b": ["y", "y", "v"], "c": ["z", "z", "w"], "paper_id": ["p", "q", "r"]})
+    outputs = pd.DataFrame({"id": ["1", "2", "3"], "relation": ["mention", "combination", "invalid"]})
+    pos, neg = rc.split(frame, outputs)
+    assert pos == {("x", "y", "z"): ["q"]} and neg == {("u", "v", "w"): ["r"]}
+
+
+lr = load("label_v3_relation", "scripts/matching/13_label_v3_relation.py")
+
+
+def test_classify_rounds_stop_a_group_at_its_first_combination():
+    records = [{"id": "1", "group": "g"}, {"id": "2", "group": "g"}, {"id": "3", "group": "h"}, {"id": "4", "group": "h"}]
+    answers = {"1": "combination", "2": "mention", "3": "mention", "4": "combination"}
+    step = lambda chunk: [{"id": r["id"], "relation": answers[r["id"]]} for r in chunk]
+    out = rel_run.classify({"batch_size": 2, "early_stop": True}, "", records, step)
+    assert [r["id"] for r in out] == ["1", "3", "4"]
+    full = rel_run.classify({"batch_size": 2, "early_stop": False}, "", records, step)
+    assert sorted(r["id"] for r in full) == ["1", "2", "3", "4"]
+    assert rel_run.shard_of("g", 2) == rel_run.shard_of("g", 2)
+
+
+def test_label_from_classifier_outputs_and_missing_negatives():
+    frame = pd.DataFrame({"id": ["1", "2", "3"], "a": ["x", "x", "u"], "b": ["y", "y", "v"], "c": ["z", "z", "w"], "paper_id": ["p", "q", "r"]})
+    outputs = pd.DataFrame({"id": ["1", "3"], "relation": ["combination", "mention"]})
+    table = lr.label_table(frame, outputs, 1).set_index(["a", "b", "c"])
+    assert bool(table.loc[("x", "y", "z"), "label_v3"]) and not bool(table.loc[("u", "v", "w"), "label_v3"])
+    with pytest.raises(ValueError):
+        lr.label_table(frame, pd.DataFrame({"id": ["2"], "relation": ["mention"]}), 1)

@@ -19,3 +19,4 @@ __pycache__/
 # Local-only notes and generated Kaggle metadata (account and private resource ids)
 CLAUDE.local.md
 kaggle/step4/kernel-metadata.json
+kaggle/relation/kernel-metadata.json

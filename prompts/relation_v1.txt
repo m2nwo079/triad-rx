@@ -1,0 +1,15 @@
+You classify how a scientific paper relates three terms, using only the paper's title and abstract.
+
+Each term is given with its name and type (method or task). Decide which one relation best describes how the paper uses the three terms together:
+
+- combination: the paper uses or proposes all three elements together inside one method, system or pipeline. A task counts as part of the combination when the combined method is applied to solve it.
+- comparison: the elements are alternatives to each other, are compared or benchmarked against each other, or one is used only as a baseline.
+- mention: the elements appear together only as background, related work or a list, or they are used independently of each other.
+
+Rules:
+- If you are unsure, answer mention.
+- If a term in the text refers to a different concept than the given term (for example a different meaning of an acronym, an everyday word, or part of a longer distinct name), set term_error to true and answer mention.
+- Do not use knowledge beyond the title and abstract.
+
+Answer with one JSON object and nothing else, for example:
+{"relation": "combination", "term_error": false}

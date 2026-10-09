@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "step": "relation_inputs",
+    "set": "T1",
+    "created": "2026-10-07",
+    "git_commit": "68587d5150e54705fdff600416a3cf2e7dea9cf3",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "relation_config": {
+      "model_id": "Qwen/Qwen3.5-9B",
+      "quantization": "bitsandbytes 4-bit nf4, compute float16",
+      "decoding": "greedy, thinking disabled",
+      "max_new_tokens": 64,
+      "batch_size": 16,
+      "prompt": "prompts/relation_v2.txt",
+      "prompt_selection": {
+        "candidates": [
+          "prompts/relation_v1.txt",
+          "prompts/relation_v2.txt"
+        ],
+        "rule": "higher development combination precision, v1 on ties",
+        "selected": "prompts/relation_v2.txt",
+        "results": [
+          "results/relation_dev_v1.json",
+          "results/relation_dev_v2.json"
+        ]
+      },
+      "max_prompt_revisions": 1,
+      "dev_reviews": [
+        {
+          "review": "data/review/label_evidence_T1_attempt0.csv",
+          "key": "data/review/label_evidence_T1_attempt0_key.csv"
+        },
+        {
+          "review": "data/review/label_evidence_T1_attempt1.csv",
+          "key": "data/review/label_evidence_T1_attempt1_key.csv"
+        },
+        {
+          "review": "data/review/label_v3_T1_attempt0.csv",
+          "key": "data/review/label_v3_T1_attempt0_key.csv"
+        }
+      ],
+      "confirm": {
+        "positive": 100,
+        "negative": 50,
+        "seed": 20261028,
+        "frame_triads": 1500,
+        "review_file": "data/review/label_v3_T1_attempt1.csv",
+        "review_key_file": "data/review/label_v3_T1_attempt1_key.csv"
+      }
+    },
+    "inputs_sha256": "f0c31515ae2b44bc37eb00727cc825a0a408cf42e92f9a585bd6b1d56ccace8d",
+    "truth_sha256": "efcf307e7a44956d864bfe250530298628c23bebf624e4f2e89e34fd62566f23"
+  },
+  "records": 32041,
+  "by_source": null,
+  "groups": 22598
+}
