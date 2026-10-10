@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "step": "engine_v3_candidates",
+    "timepoint": "R2",
+    "created": "2026-10-09",
+    "git_commit": "67bfb24b980d1f1039b51298763a8b7eef6103c6",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "generator": {
+      "seed_pairs": "stable",
+      "score": "npmi_mean"
+    },
+    "diagnosis_budget_multiple": 5,
+    "stability": 0.95,
+    "two_hop_ratio": 1.0,
+    "inputs_sha256": {
+      "vocab": "695742ba107419ef3f813c80f28a4d917e50bd23f356f2bfa1c717169bfca59a",
+      "build": "b42b380873337c520b1282086744ca65e3de903a4033764985fa605c1ca7c139",
+      "labels": "64d3723a8f72004ed54e31c69ab4192202b2705f98d19f7e6c990971ce1717b7"
+    },
+    "outputs_sha256": {
+      "first": "a2d708053e7d20d5bc7ad522801a20125be5a49c1fad9fbd1324f7115ed50a47",
+      "generator": "f13e0e4b1823ec549abc8591f0f553f6ff25b39d242db92937d735108ea74db9"
+    }
+  },
+  "terms": 1827,
+  "pi_by_value": {
+    "0.74452": 322,
+    "0.825634": 44,
+    "0.862505": 1461
+  },
+  "first_study_rule": {
+    "rule_stats": {
+      "nodes_linked": 1098,
+      "pair_edges": 6539,
+      "open_triangles_before_filter": 15924,
+      "open_triangles": 8497,
+      "two_hop_space_after_filter": 308295,
+      "two_hop_selected": 8497,
+      "candidates": 16994,
+      "type_mix": {
+        "MMM": 301,
+        "MMT": 3617,
+        "MTT": 13076
+      }
+    },
+    "candidates": 16822,
+    "dropped_excluded_pairs": 172,
+    "kind": {
+      "two_hop": 8429,
+      "open_triangle": 8393
+    },
+    "labels": {
+      "label_v3_positive": 240,
+      "realised": 481
+    }
+  },
+  "generator": {
+    "seed_pairs": 6539,
+    "completions_without_excluded": 5280150,
+    "dropped_excluded_pairs": 226916,
+    "budget": 84110,
+    "candidates": 84110,
+    "kind": {
+      "completion": 80029,
+      "open_triangle": 4081
+    },
+    "labels": {
+      "label_v3_positive": 1096,
+      "realised": 3062
+    }
+  },
+  "labels_attached": true
+}

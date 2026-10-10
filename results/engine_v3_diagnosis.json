@@ -1,0 +1,1093 @@
+{
+  "meta": {
+    "step": "engine_v3_diagnosis",
+    "created": "2026-10-10",
+    "git_commit": "748e08065334fe8f85dbbb24ad942afe0b589b3d",
+    "dev_eval": {
+      "train": "T1",
+      "eval": "T2"
+    },
+    "rediagnosis_config": {
+      "train_timepoint": "T1",
+      "eval_timepoint": "T2",
+      "models": {
+        "engine": [
+          "P",
+          "H",
+          "T",
+          "R"
+        ],
+        "engine_no_h": [
+          "P",
+          "T",
+          "R"
+        ]
+      },
+      "feature_rankings": {
+        "P_npmi_mean": "P_npmi_mean"
+      },
+      "k": [
+        100,
+        500,
+        1000,
+        5000
+      ]
+    },
+    "model_config": {
+      "type": "lightgbm_binary",
+      "params": {
+        "num_leaves": 7,
+        "min_data_in_leaf": 20,
+        "learning_rate": 0.05,
+        "feature_fraction": 0.8,
+        "bagging_fraction": 0.8,
+        "bagging_freq": 1,
+        "lambda_l2": 1.0
+      },
+      "n_estimators_max": 2000,
+      "early_stopping_rounds": 100,
+      "cv_folds": 5,
+      "cv_metric": "average_precision",
+      "seeds": [
+        20261011,
+        20261012,
+        20261013,
+        20261014,
+        20261015
+      ],
+      "engine_sets": [
+        "P",
+        "H",
+        "T",
+        "R"
+      ],
+      "v2_baseline_sets": [
+        "P",
+        "T",
+        "R"
+      ]
+    },
+    "evaluation_config": {
+      "top_k": 100,
+      "secondary_k": [
+        50,
+        500
+      ],
+      "bootstrap_n": 1000,
+      "bootstrap_seed": 20261016,
+      "ci_level": 0.95,
+      "rule": "pass only if both candidate and term-block bootstrap lower bounds exceed the threshold",
+      "score": "mean predicted probability over model seeds"
+    },
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "inputs_sha256": {
+      "T1": {
+        "features": "895baebe17ef7b2b4a2641873c28ace145321c189505611302a17bcfe2f48366",
+        "labels": "fb6723cf8b5704949f9a14eb04aac16480c2ff2abde09e1066a007f166183215"
+      },
+      "T2": {
+        "features": "c67b151b464609051b723dc0844d03db3a1665ae9fd506f34c05c67ec1a15148",
+        "labels": "a5098acd339ead1bd70a7a3a4ba357ada5fd27c1b149ff472b217660f1bdc795"
+      },
+      "first_study_rule": "63b054e338e173d42ba9fa4a689c94fda06974209651b21318f26d0fd4e15105"
+    },
+    "note": "Descriptive development diagnostics; never a verdict (matching preregistration 6.3)."
+  },
+  "train": {
+    "timepoint": "T1",
+    "candidates": 34190,
+    "positives": 627
+  },
+  "eval": {
+    "timepoint": "T2",
+    "candidates": 256710,
+    "positives": 1947,
+    "base_rate": 0.007584433796891434
+  },
+  "models": {
+    "engine": {
+      "sets": [
+        "P",
+        "H",
+        "T",
+        "R"
+      ],
+      "rounds": 348,
+      "cv_average_precision_mean": 0.11758468780291849,
+      "cv_average_precision_sd": 0.02230135454803839,
+      "importance_gain_mean": {
+        "P_npmi_max": 2644.302581167221,
+        "R_growth_mean": 2008.1316394805908,
+        "P_npmi_mean": 1705.6570597171783,
+        "T_volume": 1414.3250856399536,
+        "H_pairedges_gmean": 1366.5034831523894,
+        "R_growth_min": 1343.6811712265014,
+        "P_logfreq_min": 1200.345559811592,
+        "H_related_edge_size_mean": 1105.9969090223312,
+        "P_npmi_min": 1073.9134545326233,
+        "T_cos_min": 941.4719166755676,
+        "T_cos_mean": 913.867110300064,
+        "P_aa_min": 825.4253672122956,
+        "P_aa_mean": 694.1075071811676,
+        "H_size_weighted_aa": 668.6415770053864,
+        "P_cn_gmean": 566.5442792654037,
+        "P_aa_gmean": 539.4834145545959,
+        "P_logfreq_mean": 488.5632699489594,
+        "H_pairedges_min": 458.08026962280275,
+        "P_cn_mean": 432.2055946111679,
+        "H_pairedges_mean": 308.4325879573822,
+        "H_triad_cn": 147.31576471328736,
+        "P_cn_min": 114.91120872497558,
+        "H_open_triangle": 1.3132060050964356
+      }
+    },
+    "engine_no_h": {
+      "sets": [
+        "P",
+        "T",
+        "R"
+      ],
+      "rounds": 231,
+      "cv_average_precision_mean": 0.11657239654566934,
+      "cv_average_precision_sd": 0.02480429482341351,
+      "importance_gain_mean": {
+        "P_npmi_max": 2463.798721885681,
+        "R_growth_mean": 2062.1958533287047,
+        "P_npmi_mean": 1499.5936873435974,
+        "R_growth_min": 1335.7410121917724,
+        "T_volume": 1294.204122543335,
+        "P_logfreq_min": 1092.6639390945434,
+        "P_npmi_min": 872.196453332901,
+        "P_aa_min": 870.2648357391357,
+        "T_cos_mean": 833.5358936786652,
+        "T_cos_min": 818.8490756750107,
+        "P_aa_mean": 810.7366114616394,
+        "P_aa_gmean": 743.2936226844788,
+        "P_logfreq_mean": 628.320894241333,
+        "P_cn_gmean": 535.1848171710968,
+        "P_cn_mean": 472.90885000228883,
+        "P_cn_min": 92.65708589553833
+      }
+    }
+  },
+  "rankings": {
+    "generator": {
+      "by_k": {
+        "100": {
+          "precision": 0.0,
+          "lift": 0.0,
+          "distinct_terms": 182,
+          "top_terms": [
+            [
+              "M:fcos",
+              7
+            ],
+            [
+              "M:yolov3",
+              7
+            ],
+            [
+              "M:vision transformer",
+              6
+            ],
+            [
+              "M:tacotron 2",
+              6
+            ],
+            [
+              "M:retinanet",
+              6
+            ]
+          ],
+          "top_terms_slot_share": 0.10666666666666667,
+          "max_term_triad_share": 0.07,
+          "hits": 0,
+          "hit_distinct_terms": 0
+        },
+        "500": {
+          "precision": 0.016,
+          "lift": 2.109583975346687,
+          "distinct_terms": 570,
+          "top_terms": [
+            [
+              "M:faster r cnn",
+              27
+            ],
+            [
+              "M:yolov3",
+              20
+            ],
+            [
+              "M:fcos",
+              16
+            ],
+            [
+              "M:retinanet",
+              16
+            ],
+            [
+              "M:wavenet",
+              15
+            ]
+          ],
+          "top_terms_slot_share": 0.06266666666666666,
+          "max_term_triad_share": 0.054,
+          "hits": 8,
+          "hit_distinct_terms": 21
+        },
+        "1000": {
+          "precision": 0.022,
+          "lift": 2.900677966101695,
+          "distinct_terms": 813,
+          "top_terms": [
+            [
+              "M:faster r cnn",
+              50
+            ],
+            [
+              "M:bert",
+              31
+            ],
+            [
+              "M:retinanet",
+              29
+            ],
+            [
+              "M:fcos",
+              27
+            ],
+            [
+              "M:yolov3",
+              26
+            ]
+          ],
+          "top_terms_slot_share": 0.05433333333333333,
+          "max_term_triad_share": 0.05,
+          "hits": 22,
+          "hit_distinct_terms": 55
+        },
+        "5000": {
+          "precision": 0.0206,
+          "lift": 2.71608936825886,
+          "distinct_terms": 1686,
+          "top_terms": [
+            [
+              "M:bert",
+              322
+            ],
+            [
+              "M:transformer",
+              198
+            ],
+            [
+              "T:object detection",
+              172
+            ],
+            [
+              "M:seq2seq",
+              170
+            ],
+            [
+              "M:faster r cnn",
+              141
+            ]
+          ],
+          "top_terms_slot_share": 0.06686666666666667,
+          "max_term_triad_share": 0.0644,
+          "hits": 103,
+          "hit_distinct_terms": 213
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 0.0,
+            "upper": 0.0,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.0,
+            "upper": 4.7697288154537345,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 0.7898163496932517,
+            "upper": 3.6141350685582,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.0,
+            "upper": 7.541564135287861,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 1.8214388957651209,
+            "upper": 4.162076449235747,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.5105727998109726,
+            "upper": 7.643058549381633,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 2.228605908383842,
+            "upper": 3.2105489785326946,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 1.37865023113131,
+            "upper": 4.223588920154587,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine": {
+      "by_k": {
+        "100": {
+          "precision": 0.12,
+          "lift": 15.821879815100154,
+          "distinct_terms": 108,
+          "top_terms": [
+            [
+              "M:transformer",
+              31
+            ],
+            [
+              "M:bert",
+              29
+            ],
+            [
+              "M:gpt 3",
+              19
+            ],
+            [
+              "M:gpt 2",
+              13
+            ],
+            [
+              "M:bart",
+              12
+            ]
+          ],
+          "top_terms_slot_share": 0.3466666666666667,
+          "max_term_triad_share": 0.31,
+          "hits": 12,
+          "hit_distinct_terms": 30
+        },
+        "500": {
+          "precision": 0.078,
+          "lift": 10.284221879815101,
+          "distinct_terms": 298,
+          "top_terms": [
+            [
+              "M:transformer",
+              127
+            ],
+            [
+              "M:bert",
+              120
+            ],
+            [
+              "M:gpt 2",
+              44
+            ],
+            [
+              "M:gpt 3",
+              43
+            ],
+            [
+              "T:natural language understanding",
+              40
+            ]
+          ],
+          "top_terms_slot_share": 0.24933333333333332,
+          "max_term_triad_share": 0.254,
+          "hits": 39,
+          "hit_distinct_terms": 82
+        },
+        "1000": {
+          "precision": 0.067,
+          "lift": 8.833882896764253,
+          "distinct_terms": 441,
+          "top_terms": [
+            [
+              "M:bert",
+              225
+            ],
+            [
+              "M:transformer",
+              224
+            ],
+            [
+              "M:gpt 3",
+              76
+            ],
+            [
+              "M:gpt 2",
+              63
+            ],
+            [
+              "M:bart",
+              62
+            ]
+          ],
+          "top_terms_slot_share": 0.21666666666666667,
+          "max_term_triad_share": 0.225,
+          "hits": 67,
+          "hit_distinct_terms": 119
+        },
+        "5000": {
+          "precision": 0.0468,
+          "lift": 6.17053312788906,
+          "distinct_terms": 1043,
+          "top_terms": [
+            [
+              "M:transformer",
+              991
+            ],
+            [
+              "M:bert",
+              902
+            ],
+            [
+              "M:attention",
+              304
+            ],
+            [
+              "M:vision transformer",
+              215
+            ],
+            [
+              "T:natural language understanding",
+              189
+            ]
+          ],
+          "top_terms_slot_share": 0.1734,
+          "max_term_triad_share": 0.1982,
+          "hits": 234,
+          "hit_distinct_terms": 283
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 7.790502014969219,
+            "upper": 24.26618648093566,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.0,
+            "upper": 40.14843972782568,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 7.0777683714047654,
+            "upper": 13.325743994431328,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 3.659506132094733,
+            "upper": 21.75295523487975,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 6.8329353268145185,
+            "upper": 11.059253984375001,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 3.9674925783917243,
+            "upper": 16.422489192300095,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 5.441349915556256,
+            "upper": 6.898131327635244,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 3.9938141795155118,
+            "upper": 8.627512463820844,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_generator_ci": {
+        "100": {
+          "candidate": {
+            "lower": 0.06,
+            "upper": 0.18,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.0,
+            "upper": 0.30024999999999974,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 0.036000000000000004,
+            "upper": 0.08604999999999996,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.0019000000000000893,
+            "upper": 0.15209999999999993,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 0.027,
+            "upper": 0.064,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.0019999999999999983,
+            "upper": 0.10300000000000001,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 0.020195000000000005,
+            "upper": 0.032205000000000004,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.007795000000000006,
+            "upper": 0.048205000000000005,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "engine_no_h": {
+      "by_k": {
+        "100": {
+          "precision": 0.11,
+          "lift": 14.503389830508475,
+          "distinct_terms": 106,
+          "top_terms": [
+            [
+              "M:transformer",
+              28
+            ],
+            [
+              "M:bert",
+              28
+            ],
+            [
+              "M:gpt 3",
+              20
+            ],
+            [
+              "M:gpt 2",
+              17
+            ],
+            [
+              "M:bart",
+              13
+            ]
+          ],
+          "top_terms_slot_share": 0.35333333333333333,
+          "max_term_triad_share": 0.28,
+          "hits": 11,
+          "hit_distinct_terms": 27
+        },
+        "500": {
+          "precision": 0.058,
+          "lift": 7.647241910631742,
+          "distinct_terms": 268,
+          "top_terms": [
+            [
+              "M:bert",
+              127
+            ],
+            [
+              "M:transformer",
+              112
+            ],
+            [
+              "T:natural language understanding",
+              48
+            ],
+            [
+              "M:gpt 2",
+              46
+            ],
+            [
+              "M:gpt 3",
+              43
+            ]
+          ],
+          "top_terms_slot_share": 0.25066666666666665,
+          "max_term_triad_share": 0.254,
+          "hits": 29,
+          "hit_distinct_terms": 58
+        },
+        "1000": {
+          "precision": 0.054,
+          "lift": 7.11984591679507,
+          "distinct_terms": 394,
+          "top_terms": [
+            [
+              "M:bert",
+              232
+            ],
+            [
+              "M:transformer",
+              196
+            ],
+            [
+              "M:gpt 3",
+              83
+            ],
+            [
+              "T:natural language understanding",
+              79
+            ],
+            [
+              "M:gpt 2",
+              76
+            ]
+          ],
+          "top_terms_slot_share": 0.222,
+          "max_term_triad_share": 0.232,
+          "hits": 54,
+          "hit_distinct_terms": 93
+        },
+        "5000": {
+          "precision": 0.0452,
+          "lift": 5.959574730354391,
+          "distinct_terms": 1000,
+          "top_terms": [
+            [
+              "M:bert",
+              888
+            ],
+            [
+              "M:transformer",
+              800
+            ],
+            [
+              "M:attention",
+              262
+            ],
+            [
+              "T:natural language understanding",
+              215
+            ],
+            [
+              "M:gpt 2",
+              200
+            ]
+          ],
+          "top_terms_slot_share": 0.15766666666666668,
+          "max_term_triad_share": 0.1776,
+          "hits": 226,
+          "hit_distinct_terms": 276
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 7.804828784219494,
+            "upper": 23.045721901540034,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.0,
+            "upper": 36.73640974184719,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 5.028275441370958,
+            "upper": 10.462483476647828,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 1.7485251839419824,
+            "upper": 17.56672672981548,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 5.5461098275408105,
+            "upper": 9.140019992628105,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 2.581311310532688,
+            "upper": 13.56761242396445,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 5.287035898482392,
+            "upper": 6.76382377177089,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 3.8749304613313362,
+            "upper": 8.360461432505925,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_generator_ci": {
+        "100": {
+          "candidate": {
+            "lower": 0.06,
+            "upper": 0.17,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.0,
+            "upper": 0.2802499999999998,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 0.018000000000000002,
+            "upper": 0.066,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.018,
+            "upper": 0.122,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 0.016,
+            "upper": 0.049,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.013024999999999981,
+            "upper": 0.086,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 0.018400000000000003,
+            "upper": 0.031,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.007595000000000004,
+            "upper": 0.04620999999999999,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    },
+    "P_npmi_mean": {
+      "by_k": {
+        "100": {
+          "precision": 0.01,
+          "lift": 1.3184899845916795,
+          "distinct_terms": 157,
+          "top_terms": [
+            [
+              "M:wavenet",
+              9
+            ],
+            [
+              "M:yolov3",
+              9
+            ],
+            [
+              "M:fcos",
+              8
+            ],
+            [
+              "M:vision transformer",
+              8
+            ],
+            [
+              "T:speech synthesis",
+              7
+            ]
+          ],
+          "top_terms_slot_share": 0.13666666666666666,
+          "max_term_triad_share": 0.09,
+          "hits": 1,
+          "hit_distinct_terms": 3
+        },
+        "500": {
+          "precision": 0.006,
+          "lift": 0.7910939907550077,
+          "distinct_terms": 514,
+          "top_terms": [
+            [
+              "M:faster r cnn",
+              37
+            ],
+            [
+              "M:yolov3",
+              27
+            ],
+            [
+              "M:retinanet",
+              24
+            ],
+            [
+              "M:wavenet",
+              23
+            ],
+            [
+              "M:mbert",
+              20
+            ]
+          ],
+          "top_terms_slot_share": 0.08733333333333333,
+          "max_term_triad_share": 0.074,
+          "hits": 3,
+          "hit_distinct_terms": 9
+        },
+        "1000": {
+          "precision": 0.012,
+          "lift": 1.5821879815100155,
+          "distinct_terms": 783,
+          "top_terms": [
+            [
+              "M:faster r cnn",
+              82
+            ],
+            [
+              "M:retinanet",
+              41
+            ],
+            [
+              "M:ssd",
+              40
+            ],
+            [
+              "M:xlm r",
+              37
+            ],
+            [
+              "M:yolov3",
+              37
+            ]
+          ],
+          "top_terms_slot_share": 0.079,
+          "max_term_triad_share": 0.082,
+          "hits": 12,
+          "hit_distinct_terms": 31
+        },
+        "5000": {
+          "precision": 0.0192,
+          "lift": 2.5315007704160246,
+          "distinct_terms": 1553,
+          "top_terms": [
+            [
+              "M:bert",
+              237
+            ],
+            [
+              "M:faster r cnn",
+              196
+            ],
+            [
+              "M:elmo",
+              144
+            ],
+            [
+              "M:seq2seq",
+              144
+            ],
+            [
+              "M:u net",
+              140
+            ]
+          ],
+          "top_terms_slot_share": 0.0574,
+          "max_term_triad_share": 0.0474,
+          "hits": 96,
+          "hit_distinct_terms": 192
+        }
+      },
+      "lift_ci": {
+        "100": {
+          "candidate": {
+            "lower": 0.0,
+            "upper": 3.9658073554164104,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.0,
+            "upper": 7.688226562227982,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": 0.0,
+            "upper": 1.8144813621737639,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.0,
+            "upper": 4.891653639118942,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": 0.7930697202972443,
+            "upper": 2.6138879416543737,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 0.0,
+            "upper": 4.966581542862831,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": 2.064347574651849,
+            "upper": 3.0171331241700075,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": 1.2790662132395005,
+            "upper": 4.336787457369718,
+            "valid_resamples": 1000
+          }
+        }
+      },
+      "precision_diff_vs_generator_ci": {
+        "100": {
+          "candidate": {
+            "lower": 0.0,
+            "upper": 0.03,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.02024999999999977,
+            "upper": 0.06,
+            "valid_resamples": 1000
+          }
+        },
+        "500": {
+          "candidate": {
+            "lower": -0.019999999999999997,
+            "upper": -0.002,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.040049999999999954,
+            "upper": 0.008,
+            "valid_resamples": 1000
+          }
+        },
+        "1000": {
+          "candidate": {
+            "lower": -0.018000000000000002,
+            "upper": -0.002,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.036000000000000004,
+            "upper": 0.012,
+            "valid_resamples": 1000
+          }
+        },
+        "5000": {
+          "candidate": {
+            "lower": -0.004200000000000002,
+            "upper": 0.0017999999999999995,
+            "valid_resamples": 1000
+          },
+          "term_block": {
+            "lower": -0.009004999999999996,
+            "upper": 0.008,
+            "valid_resamples": 1000
+          }
+        }
+      }
+    }
+  },
+  "generator_recall": {
+    "first_study_candidates": 51342,
+    "totals": {
+      "label_v3": 12850,
+      "realised": 41295
+    },
+    "first_study_rule": {
+      "label_v3": {
+        "hits": 363,
+        "recall": 0.028249027237354087
+      },
+      "realised": {
+        "hits": 882,
+        "recall": 0.021358517980385034
+      }
+    },
+    "generator": [
+      {
+        "multiple": 1,
+        "budget": 51342,
+        "candidates": 51342,
+        "label_v3": {
+          "hits": 689,
+          "recall": 0.05361867704280156
+        },
+        "realised": {
+          "hits": 2245,
+          "recall": 0.05436493522218186
+        }
+      },
+      {
+        "multiple": 5,
+        "budget": 256710,
+        "candidates": 256710,
+        "label_v3": {
+          "hits": 1947,
+          "recall": 0.15151750972762645
+        },
+        "realised": {
+          "hits": 5593,
+          "recall": 0.13544012592323526
+        }
+      }
+    ]
+  }
+}

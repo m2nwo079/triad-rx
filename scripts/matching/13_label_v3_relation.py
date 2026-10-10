@@ -1,6 +1,6 @@
 """Label v3 from the relation classifier (matching preregistration 5.3).
 
-Usage: python scripts/matching/13_label_v3_relation.py --timepoint T1|R2|R3|T3 --outputs <relation_outputs.jsonl> --meta <relation_meta.json>
+Usage: python scripts/matching/13_label_v3_relation.py --timepoint T1|R2|R3|T3|T2 --outputs <relation_outputs.jsonl> --meta <relation_meta.json>
 
 A realised triad (data/derived/relation/<tp>_frame.parquet) is positive when at least
 engine_reliability.label_v2.min_evidence_papers of its papers are classified combination. With per-triad
@@ -55,7 +55,7 @@ def label_table(frame: pd.DataFrame, outputs: pd.DataFrame, min_papers: int) -> 
 def main() -> None:
     study = load_study()
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--timepoint", required=True, choices=["T1", "R2", "R3", "T3"])
+    parser.add_argument("--timepoint", required=True, choices=["T1", "R2", "R3", "T3", "T2"])
     parser.add_argument("--outputs", required=True, type=Path)
     parser.add_argument("--meta", required=True, type=Path)
     args = parser.parse_args()

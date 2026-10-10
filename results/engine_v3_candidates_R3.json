@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "step": "engine_v3_candidates",
+    "timepoint": "R3",
+    "created": "2026-10-09",
+    "git_commit": "67bfb24b980d1f1039b51298763a8b7eef6103c6",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "generator": {
+      "seed_pairs": "stable",
+      "score": "npmi_mean"
+    },
+    "diagnosis_budget_multiple": 5,
+    "stability": 0.95,
+    "two_hop_ratio": 1.0,
+    "inputs_sha256": {
+      "vocab": "5f8b05413f5bcdbeb97bbedaf04e9c5f08f545fa86e0054684fd87bd6a4f19c3",
+      "build": "b77cea646928cdffdcdcb5233fd2bbc5d1ca0873d7da8501268e3d70ba0c576d",
+      "labels": "c7630ccc81d7a6f9aed492294bb1d1dd913baf5ded9c18501211ec14689389ab"
+    },
+    "outputs_sha256": {
+      "first": "12cb75cdd1bba61eb05ee08192e04a276e0f9e9da507ce903137dafa498dc6cc",
+      "generator": "edfc929eb0dd1871a7abd85af4e6d32feb2e88a8ebe2e213d898b17ad64be802"
+    }
+  },
+  "terms": 2146,
+  "pi_by_value": {
+    "0.74452": 401,
+    "0.825634": 59,
+    "0.862505": 1686
+  },
+  "first_study_rule": {
+    "rule_stats": {
+      "nodes_linked": 1393,
+      "pair_edges": 9778,
+      "open_triangles_before_filter": 30376,
+      "open_triangles": 15752,
+      "two_hop_space_after_filter": 627990,
+      "two_hop_selected": 15752,
+      "candidates": 31504,
+      "type_mix": {
+        "MMM": 515,
+        "MMT": 6295,
+        "MTT": 24694
+      }
+    },
+    "candidates": 31251,
+    "dropped_excluded_pairs": 253,
+    "kind": {
+      "two_hop": 15650,
+      "open_triangle": 15601
+    },
+    "labels": {
+      "label_v3_positive": 296,
+      "realised": 670
+    }
+  },
+  "generator": {
+    "seed_pairs": 9778,
+    "completions_without_excluded": 9534444,
+    "dropped_excluded_pairs": 368474,
+    "budget": 156255,
+    "candidates": 156255,
+    "kind": {
+      "completion": 148297,
+      "open_triangle": 7958
+    },
+    "labels": {
+      "label_v3_positive": 1477,
+      "realised": 4120
+    }
+  },
+  "labels_attached": true
+}

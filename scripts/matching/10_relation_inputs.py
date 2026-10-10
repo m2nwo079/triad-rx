@@ -1,6 +1,6 @@
 """Inputs for the relation classifier (matching preregistration 5.3).
 
-Usage: python scripts/matching/10_relation_inputs.py --set dev|T1|R2|R3|T3
+Usage: python scripts/matching/10_relation_inputs.py --set dev|T1|R2|R3|T3|T2
 
 dev: every (triad, paper) of the human reviews in matching.relation.dev_reviews, with the title and
 abstract shown to the reviewer and the three terms (name and type). Human judgements are written to a
@@ -90,7 +90,7 @@ def main() -> None:
     study = load_study()
     cfg = study["matching"]["relation"]
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--set", required=True, choices=["dev", "T1", "R2", "R3", "T3"])
+    parser.add_argument("--set", required=True, choices=["dev", "T1", "R2", "R3", "T3", "T2"])
     name = parser.parse_args().set
     if name == "T3" and not engine_prereg_frozen(Path(study["matching"]["prereg_file"]).read_text()):
         sys.exit("T3 label window is locked until the matching preregistration records its freeze commit")

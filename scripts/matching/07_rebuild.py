@@ -1,6 +1,6 @@
 """Rebuild a timepoint's vocabulary and hypergraphs with refined matching and merged synonyms (matching preregistration 2-4).
 
-Usage: python scripts/matching/07_rebuild.py --timepoint T1|R2|R3|T3
+Usage: python scripts/matching/07_rebuild.py --timepoint T1|R2|R3|T3|T2
 
 1. Vocabulary: the refined vocabulary of scripts/matching/03_precision_sample.py (R4 allow decisions,
    M1 remediation filter, surface rules, common-word decisions), then the same-concept groups of
@@ -10,8 +10,11 @@ Usage: python scripts/matching/07_rebuild.py --timepoint T1|R2|R3|T3
 2. Excluded pairs (4.3): hierarchy pairs of the review whose two terms are in the final vocabulary
    (mapped to representatives) and containment pairs of the final vocabulary
    (scripts/matching/05_synonym_sheet.py `containment`).
-3. Hypergraphs: the build window, and the label window for training timepoints, re-matched with the
-   final vocabulary and the refined matching. T3 never reads its label window here.
+3. Hypergraphs: the build window, and the label window for training timepoints and for the
+   development evaluation timepoint (matching.engine.dev_eval.eval, T2, already opened in the first
+   study), re-matched with the final vocabulary and the refined matching. T3 never reads its label
+   window here. T2 gets no new human review; its final terms missing from every reviewed timepoint
+   (matching.engine.reviewed_timepoints) are counted (matching preregistration 6.1).
 Windows of the engine timepoints are merged in memory as in scripts/engine/14_timepoint_prep.py.
 
 Outputs: vocab/timepoints/<tp>_v3_final.json (terms, R5 details, excluded pairs), results/matching_rebuild_<tp>.json,
@@ -88,11 +91,20 @@ def hyperedges(window: pd.DataFrame, matches: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame({"paper_id": grouped.index, "first_date": dates.loc[grouped.index].values, "terms": grouped.values})
 
 
+def unreviewed_terms(final_ids, reviewed: list[str]) -> int:
+    """Final terms of the development timepoint absent from every reviewed timepoint's final vocabulary."""
+    seen = set()
+    for other in reviewed:
+        seen |= {t["id"] for t in json.loads((TIMEPOINTS / f"{other}_v3_final.json").read_text())["terms"]}
+    return len(set(final_ids) - seen)
+
+
 def main() -> None:
     study = prep.merged_study(load_study())
     cfg = study["matching"]
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--timepoint", required=True, choices=cfg["timepoints"])
+    dev_eval = cfg["engine"]["dev_eval"]["eval"]
+    parser.add_argument("--timepoint", required=True, choices=cfg["timepoints"] + [dev_eval])
     tp = parser.parse_args().timepoint
     rules = cfg["surface_rules"]
     decisions = json.loads(SYNONYMS.read_text())
@@ -143,7 +155,7 @@ def main() -> None:
     build = hyperedges(window, match_papers_refined(window, final_terms, final_cs, rules, phrases))
     build.to_parquet(OUT_DIR / f"{tp}_build.parquet")
     summary = {"build_hyperedges": int(len(build))}
-    if study["timepoints"][tp].get("role") == "train":
+    if study["timepoints"][tp].get("role") == "train" or tp == dev_eval:
         lwin = label_window_papers(tp, study)
         label = hyperedges(lwin, match_papers_refined(lwin, final_terms, final_cs, rules, phrases))
         label.to_parquet(OUT_DIR / f"{tp}_label.parquet")
@@ -154,6 +166,8 @@ def main() -> None:
               "terms_after_r6": len(after_r6), "terms_final": len(final), "terms_removed_r5": len(removed_r5),
               "merged_groups_in_final": sum(1 for t in final_terms if len(t.get("merged_from", [])) > 1),
               "excluded_pairs": {"hierarchy": len(hierarchy), "containment": len(contained)}, **summary}
+    if tp == dev_eval:
+        result["terms_not_in_reviewed_timepoints"] = unreviewed_terms(final_ids, cfg["engine"]["reviewed_timepoints"])
     (RESULTS / f"matching_rebuild_{tp}.json").write_text(json.dumps(result, indent=2))
     print(json.dumps({k: v for k, v in result.items() if k != "meta"}, indent=2))
 

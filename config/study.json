@@ -728,6 +728,10 @@
   },
   "matching": {
     "prereg_file": "preregistration_matching.md",
+    "engine": {"dev_eval": {"train": "T1", "eval": "T2"}, "t3_training": ["T1", "R2", "R3"],
+               "generator": "engine_reliability.conditional.generator.selected",
+               "term_precision": "results/precision_T1.json final_by_stratum",
+               "reviewed_timepoints": ["T1", "R2", "R3", "T3"]},
     "timepoints": ["T1", "R2", "R3", "T3"],
     "t3_reuse": {"ci_level": 0.975, "note": "second test on T3 after the engine study; not an independent confirmation"},
     "surface_rules": {"drop_nested": true, "acronym_needs_full_name": true, "skip_surface_chars": ["+"]},

@@ -253,3 +253,19 @@ def test_attempt2_config_matches_the_power_rule():
     study = json.loads(Path("config/study.json").read_text())
     conf = study["matching"]["relation"]["confirm2"]
     assert rc.sample_size(conf, study["matching"]["label_v3"]["target_positive_lower"]) == conf["positive"]
+
+
+def test_dev_eval_timepoint_is_t2_and_never_t3():
+    study = json.loads(Path("config/study.json").read_text())
+    engine = study["matching"]["engine"]
+    assert engine["dev_eval"] == {"train": "T1", "eval": "T2"}
+    assert engine["t3_training"] == ["T1", "R2", "R3"]
+    assert "T2" not in study["matching"]["timepoints"]
+
+
+def test_unreviewed_terms_counts_terms_missing_from_reviewed_timepoints(tmp_path, monkeypatch):
+    rebuild = load("matching_rebuild", "scripts/matching/07_rebuild.py")
+    for tp, ids in {"A": ["x", "y"], "B": ["y", "z"]}.items():
+        (tmp_path / f"{tp}_v3_final.json").write_text(json.dumps({"terms": [{"id": i} for i in ids]}))
+    monkeypatch.setattr(rebuild, "TIMEPOINTS", tmp_path)
+    assert rebuild.unreviewed_terms({"x", "z", "w", "v"}, ["A", "B"]) == 2
