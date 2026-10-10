@@ -1,0 +1,269 @@
+{
+  "meta": {
+    "step": "engine_v3_power",
+    "created": "2026-10-10",
+    "git_commit": "3d605bc0476eafb7dcf5303d4eceb8b797a4600b",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "power_config": {
+      "eval_timepoint": "T2",
+      "train_timepoint": "T1",
+      "budget_multiples_of_first_candidates": [
+        1,
+        5
+      ],
+      "k": [
+        100,
+        500,
+        1000,
+        5000
+      ],
+      "baseline_feature": "P_npmi_mean",
+      "outer": 200,
+      "inner": 200,
+      "seed": 20261030,
+      "minimum_sequence_power": 0.8,
+      "rule": "choose the budget and k with the highest power of passing S1 and S2 in sequence under the conservative scenario at the verdict confidence level; ties go to the smaller budget, then the smaller k; record the S1 to S4 sequence powers and the stand-alone S4 power before T3 labels are made",
+      "conservative_scenario": "keep each positive with probability equal to the T3 label window length over the evaluation label window length"
+    },
+    "ci_level": 0.975,
+    "engine_rounds": {
+      "engine": 348,
+      "engine_no_h": 231
+    },
+    "smoke": false,
+    "inputs_sha256": {
+      "train_features": "895baebe17ef7b2b4a2641873c28ace145321c189505611302a17bcfe2f48366",
+      "train_labels": "fb6723cf8b5704949f9a14eb04aac16480c2ff2abde09e1066a007f166183215",
+      "eval_features": "c67b151b464609051b723dc0844d03db3a1665ae9fd506f34c05c67ec1a15148",
+      "eval_labels": "a5098acd339ead1bd70a7a3a4ba357ada5fd27c1b149ff472b217660f1bdc795",
+      "first_study_rule": "63b054e338e173d42ba9fa4a689c94fda06974209651b21318f26d0fd4e15105"
+    },
+    "note": "Descriptive power analysis on development data; never a verdict (matching preregistration 6.4)."
+  },
+  "budgets": [
+    51342,
+    256710
+  ],
+  "k": [
+    100,
+    500,
+    1000,
+    5000
+  ],
+  "t3_to_eval_label_window_ratio": 0.8642270048675553,
+  "point_estimates": {
+    "51342": {
+      "S1_recall_diff": 0.02536964980544747,
+      "S2_lift": {
+        "100": 8.94200290275762,
+        "500": 6.408435413642961,
+        "1000": 5.365201741654571,
+        "5000": 3.263831059506531
+      },
+      "S3_precision_diff": {
+        "100": 0.11,
+        "500": 0.07999999999999999,
+        "1000": 0.06,
+        "5000": 0.0246
+      },
+      "S4_precision_diff": {
+        "100": 0.0,
+        "500": 0.029999999999999992,
+        "1000": 0.018999999999999996,
+        "5000": 0.0005999999999999964
+      }
+    },
+    "256710": {
+      "S1_recall_diff": 0.12326848249027238,
+      "S2_lift": {
+        "100": 15.821879815100154,
+        "500": 10.284221879815101,
+        "1000": 8.833882896764253,
+        "5000": 6.17053312788906
+      },
+      "S3_precision_diff": {
+        "100": 0.11,
+        "500": 0.072,
+        "1000": 0.05500000000000001,
+        "5000": 0.027600000000000003
+      },
+      "S4_precision_diff": {
+        "100": 0.009999999999999995,
+        "500": 0.019999999999999997,
+        "1000": 0.013000000000000005,
+        "5000": 0.0016000000000000042
+      }
+    }
+  },
+  "power": {
+    "evaluation_like": {
+      "51342": {
+        "S1": 0.73,
+        "by_k": {
+          "100": {
+            "S2": 0.01,
+            "S3": 0.015,
+            "S4": 0.0,
+            "S1_S2": 0.0,
+            "S1_S2_S3": 0.0,
+            "S1_S2_S3_S4": 0.0
+          },
+          "500": {
+            "S2": 0.29,
+            "S3": 0.33,
+            "S4": 0.0,
+            "S1_S2": 0.19,
+            "S1_S2_S3": 0.11,
+            "S1_S2_S3_S4": 0.0
+          },
+          "1000": {
+            "S2": 0.525,
+            "S3": 0.245,
+            "S4": 0.0,
+            "S1_S2": 0.355,
+            "S1_S2_S3": 0.145,
+            "S1_S2_S3_S4": 0.0
+          },
+          "5000": {
+            "S2": 0.955,
+            "S3": 0.35,
+            "S4": 0.0,
+            "S1_S2": 0.69,
+            "S1_S2_S3": 0.225,
+            "S1_S2_S3_S4": 0.0
+          }
+        }
+      },
+      "256710": {
+        "S1": 1.0,
+        "by_k": {
+          "100": {
+            "S2": 0.01,
+            "S3": 0.01,
+            "S4": 0.0,
+            "S1_S2": 0.01,
+            "S1_S2_S3": 0.01,
+            "S1_S2_S3_S4": 0.0
+          },
+          "500": {
+            "S2": 0.405,
+            "S3": 0.33,
+            "S4": 0.0,
+            "S1_S2": 0.405,
+            "S1_S2_S3": 0.24,
+            "S1_S2_S3_S4": 0.0
+          },
+          "1000": {
+            "S2": 0.76,
+            "S3": 0.26,
+            "S4": 0.0,
+            "S1_S2": 0.76,
+            "S1_S2_S3": 0.255,
+            "S1_S2_S3_S4": 0.0
+          },
+          "5000": {
+            "S2": 1.0,
+            "S3": 0.425,
+            "S4": 0.0,
+            "S1_S2": 1.0,
+            "S1_S2_S3": 0.425,
+            "S1_S2_S3_S4": 0.0
+          }
+        }
+      }
+    },
+    "t3_conservative": {
+      "51342": {
+        "S1": 0.63,
+        "by_k": {
+          "100": {
+            "S2": 0.0,
+            "S3": 0.01,
+            "S4": 0.0,
+            "S1_S2": 0.0,
+            "S1_S2_S3": 0.0,
+            "S1_S2_S3_S4": 0.0
+          },
+          "500": {
+            "S2": 0.175,
+            "S3": 0.26,
+            "S4": 0.0,
+            "S1_S2": 0.09,
+            "S1_S2_S3": 0.055,
+            "S1_S2_S3_S4": 0.0
+          },
+          "1000": {
+            "S2": 0.385,
+            "S3": 0.215,
+            "S4": 0.0,
+            "S1_S2": 0.225,
+            "S1_S2_S3": 0.1,
+            "S1_S2_S3_S4": 0.0
+          },
+          "5000": {
+            "S2": 0.92,
+            "S3": 0.285,
+            "S4": 0.0,
+            "S1_S2": 0.555,
+            "S1_S2_S3": 0.185,
+            "S1_S2_S3_S4": 0.0
+          }
+        }
+      },
+      "256710": {
+        "S1": 1.0,
+        "by_k": {
+          "100": {
+            "S2": 0.005,
+            "S3": 0.005,
+            "S4": 0.0,
+            "S1_S2": 0.005,
+            "S1_S2_S3": 0.005,
+            "S1_S2_S3_S4": 0.0
+          },
+          "500": {
+            "S2": 0.27,
+            "S3": 0.24,
+            "S4": 0.0,
+            "S1_S2": 0.27,
+            "S1_S2_S3": 0.16,
+            "S1_S2_S3_S4": 0.0
+          },
+          "1000": {
+            "S2": 0.635,
+            "S3": 0.21,
+            "S4": 0.0,
+            "S1_S2": 0.635,
+            "S1_S2_S3": 0.185,
+            "S1_S2_S3_S4": 0.0
+          },
+          "5000": {
+            "S2": 1.0,
+            "S3": 0.33,
+            "S4": 0.0,
+            "S1_S2": 1.0,
+            "S1_S2_S3": 0.33,
+            "S1_S2_S3_S4": 0.0
+          }
+        }
+      }
+    }
+  },
+  "choice": {
+    "budget": 256710,
+    "k": 5000,
+    "power_S1_S2": 1.0,
+    "meets_minimum": true
+  }
+}

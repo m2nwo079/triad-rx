@@ -129,3 +129,123 @@ def test_recall_by_budget_counts_unreachable_positives_in_the_totals():
     assert out["first_study_rule"]["label_v3"]["hits"] == 1
     assert [r["label_v3"]["hits"] for r in out["generator"]] == [2, 2]
     assert [r["realised"]["hits"] for r in out["generator"]] == [2, 3]
+
+
+ep = load("engine_power", "scripts/matching/17_engine_power.py")
+
+
+def toy_power_input(seed: int = 3) -> dict:
+    rng = np.random.default_rng(seed)
+    n_terms, n_pool, n_pos = 12, 300, 40
+    pool_terms = np.array([np.sort(rng.choice(n_terms, 3, replace=False)) for _ in range(n_pool)])
+    pos_terms = np.array([np.sort(rng.choice(n_terms, 3, replace=False)) for _ in range(n_pos)])
+    pool_pos_index = np.full(n_pool, -1)
+    hit = rng.choice(n_pool, 25, replace=False)
+    pool_pos_index[hit] = np.arange(25)
+    pool_y = (pool_pos_index >= 0).astype(float)
+    gen_rank = np.arange(1, n_pool + 1)
+    scores = {"engine": pool_y + rng.normal(0, 0.6, n_pool), "engine_no_h": pool_y + rng.normal(0, 0.7, n_pool),
+              "baseline": rng.normal(size=n_pool)}
+    budgets = [100, 300]
+    orders = {b: {name: np.argsort(-np.where(gen_rank <= b, s, -np.inf), kind="stable")[:b] for name, s in scores.items()}
+              for b in budgets}
+    pos_rank = np.full(n_pos, np.inf)
+    pos_rank[:25] = gen_rank[hit]
+    return {"n_terms": n_terms, "budgets": budgets, "orders": orders, "pool_terms": pool_terms, "pool_rank": gen_rank,
+            "pool_y": pool_y, "pool_pos_index": pool_pos_index, "pos_terms": pos_terms,
+            "pos_in_first": (rng.random(n_pos) < 0.2).astype(float), "pos_rank": pos_rank}
+
+
+def test_power_steps_s1_to_s3_match_the_second_study_and_add_s4():
+    d = toy_power_input()
+    ones_pool, ones_pos = np.ones(len(d["pool_y"])), np.ones(len(d["pos_terms"]))
+    keep = np.ones(len(ones_pos), bool)
+    ours = ep.step_values(d, d["pool_y"], keep, ones_pool, ones_pos, d["budgets"], [10, 50])
+    theirs = ep.pw.step_values(d, d["pool_y"], keep, ones_pool, ones_pos, d["budgets"], [10, 50])
+    for b in d["budgets"]:
+        for s in ("S1", "S2", "S3"):
+            assert np.allclose(ours[b][s], theirs[b][s], equal_nan=True)
+        assert len(ours[b]["S4"]) == 2
+
+
+def test_power_sequences_match_the_second_study_for_the_same_seed():
+    d = toy_power_input()
+    cfg = {"outer": 4, "inner": 15, "seed": 7}
+    ours = ep.nested_power(d, d["budgets"], [10, 50], cfg, 0.975, 0.9)
+    theirs = ep.pw.nested_power(d, d["budgets"], [10, 50], cfg, 0.975, 0.9)
+    for b in map(str, d["budgets"]):
+        assert ours[b]["S1"] == theirs[b]["S1"]
+        for k in ("10", "50"):
+            for name in ("S2", "S3", "S1_S2", "S1_S2_S3"):
+                assert ours[b]["by_k"][k][name] == theirs[b]["by_k"][k][name]
+            assert ours[b]["by_k"][k]["S1_S2_S3_S4"] <= ours[b]["by_k"][k]["S1_S2_S3"]
+
+
+def test_verdict_config_is_unset_before_the_power_run():
+    verdict = json.loads(Path("config/study.json").read_text())["matching"]["verdict"]
+    assert verdict["eval"] == "T3" and verdict["power"]["eval_timepoint"] == "T2"
+    assert verdict["power"]["budget_multiples_of_first_candidates"] == [1, 5]
+
+
+tl = load("t3_label_rebuild", "scripts/matching/18_t3_label_rebuild.py")
+tv = load("t3_verdict_v3", "scripts/matching/19_t3_verdict.py")
+pk = load("relation_package", "kaggle/relation/package.py")
+lr = load("label_v3_relation", "scripts/matching/13_label_v3_relation.py")
+
+
+def test_t3_steps_stay_locked_until_the_freeze_commit_is_recorded(tmp_path, monkeypatch):
+    prereg = tmp_path / "prereg.md"
+    prereg.write_text("# x\n\n고정 커밋: 미정\n")
+    study = {"matching": {"prereg_file": str(prereg)}}
+    for module in (tl, tv):
+        with pytest.raises(SystemExit):
+            module.require_frozen(study)
+    prereg.write_text("# x\n\n고정 커밋: abc1234\n")
+    assert tl.require_frozen(study) == "abc1234" and tv.require_frozen(study) == "abc1234"
+
+
+def test_t3_matching_inputs_restore_phrase_tuples_and_case_sensitive_terms():
+    vocab = {"terms": [{"id": "M:a", "surfaces": [{"match": "cs"}]}, {"id": "M:b", "surfaces": [{"match": "cs"}, {"match": "ci"}]}],
+             "exclusion_phrases": {"M:b": [["left", "right"]]}}
+    terms, cs_only, phrases = tl.matching_inputs(vocab)
+    assert cs_only == {"M:a"} and phrases == {"M:b": [("left", "right")]} and len(terms) == 2
+
+
+def test_parts_keep_groups_whole_and_cover_every_record():
+    records = [{"id": f"r{i}", "group": f"g{i // 3}"} for i in range(300)]
+    parts = [pk.part_of(r, 3) for r in records]
+    by_group = {}
+    for r, p in zip(records, parts):
+        by_group.setdefault(r["group"], set()).add(p)
+    assert all(len(v) == 1 for v in by_group.values()) and set(parts) == {0, 1, 2}
+
+
+def test_part_outputs_merge_only_when_settings_match_and_parts_are_complete(tmp_path):
+    def write(i, ids, part, extra=None):
+        out, meta = tmp_path / f"o{i}.jsonl", tmp_path / f"m{i}.json"
+        pd.DataFrame({"id": ids, "relation": "mention"}).to_json(out, orient="records", lines=True)
+        meta.write_text(json.dumps({"settings": {"set": "T3", "gpus": 2, "part": part, "parts": 2, **(extra or {})}}))
+        return out, meta
+    o0, m0 = write(0, ["a", "b"], 0)
+    o1, m1 = write(1, ["c"], 1)
+    outputs, metas = lr.merged_outputs([o0, o1], [m0, m1])
+    assert sorted(outputs["id"]) == ["a", "b", "c"] and len(metas) == 2
+    o2, m2 = write(2, ["c"], 0)
+    with pytest.raises(SystemExit):
+        lr.merged_outputs([o0, o2], [m0, m2])
+    o3, m3 = write(3, ["d"], 1, {"gpus": 1})
+    with pytest.raises(SystemExit):
+        lr.merged_outputs([o0, o3], [m0, m3])
+
+
+def test_verdict_reading_follows_the_preregistered_power_rule():
+    seq = [{"step": s} for s in ("S1_recall", "S2_random", "S3_npmi", "S4_h_contribution")]
+    power = {"S1": 1.0, "S1_S2": 1.0, "S1_S2_S3": 0.33, "S1_S2_S3_S4": 0.0, "S4": 0.0, "minimum": 0.8}
+    s = tv.run_sequence({"S1_recall": True, "S2_random": True, "S3_npmi": False, "S4_h_contribution": False}, seq)
+    assert s == {"S1_recall": "pass", "S2_random": "pass", "S3_npmi": "fail", "S4_h_contribution": "not tested"}
+    assert tv.reading(s, power)["S3_npmi"] == "fail (insufficient power)"
+    s = tv.run_sequence({"S1_recall": True, "S2_random": True, "S3_npmi": True, "S4_h_contribution": False}, seq)
+    r = tv.reading(s, power)
+    assert r["S3_npmi"] == "pass" and r["S4_h_contribution"] == "undetermined (insufficient power)"
+    s = tv.run_sequence({"S1_recall": True, "S2_random": False, "S3_npmi": True, "S4_h_contribution": True}, seq)
+    assert tv.reading(s, power)["S2_random"] == "fail" and s["S3_npmi"] == "not tested"
