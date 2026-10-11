@@ -1,0 +1,436 @@
+{
+ "meta": {
+  "step": "review_decisions_applied",
+  "created": "2026-10-11",
+  "git_commit": "2a88baee7ea63a76c0c9dff1f032b8bc34ba0319",
+  "environment": {
+   "python": "3.12.10",
+   "platform": "macOS-15.7.9-arm64-arm-64bit",
+   "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "pyarrow": "25.0.1",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "lightgbm": "4.7.0"
+   }
+  },
+  "files_sha256": {
+   "common_words_review": "18e3f3d1f218b59fba29afa3f4168f8551de9fe0e49e426a82b843cd3d09aeb0",
+   "common_words_original": "041f5a956137420b02599a9a3c7f1e8537688e7e82fffc6ad3c1af3908ad836a",
+   "synonyms_review": "cd73545e3336c576498a55d8c542fc0046a897d166da2922c1eddb5a34aa6ac1",
+   "synonyms_original": "b9990989888b098e97638e9ad4c27e901b57eb3d4c465dd66d47f24308039a60",
+   "third_study_common_words": "c220993aa64ac3dbc0cfd7bb20fa50784af0114f341f2f1746c2759dfe71a75b",
+   "third_study_synonyms": "4da7abed7d5973fb6f1530c7c591c8a750cb1f727b734b66d933cfd2823c54ae"
+  }
+ },
+ "decisions": [
+  {
+   "term_id": "M:adam",
+   "surface": "adam",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:adapter",
+   "surface": "adapter",
+   "decision": "keep_with_exclusions",
+   "exclusions": [
+    "process adapter",
+    "camera adapter"
+   ]
+  },
+  {
+   "term_id": "M:attention",
+   "surface": "attention",
+   "decision": "keep_with_exclusions",
+   "exclusions": [
+    "research attention",
+    "increasing attention",
+    "a lot of attention",
+    "received attention",
+    "receive attention",
+    "receiving attention",
+    "attracted attention",
+    "attracting attention",
+    "attract attention",
+    "much attention",
+    "considerable attention",
+    "growing attention",
+    "significant attention",
+    "pay attention",
+    "paid attention",
+    "draw attention",
+    "gained attention"
+   ]
+  },
+  {
+   "term_id": "M:convolution",
+   "surface": "convolution",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:cutout",
+   "surface": "cutout",
+   "decision": "keep_with_exclusions",
+   "exclusions": [
+    "object cutout",
+    "video cutout",
+    "image cutout",
+    "camera cutout"
+   ]
+  },
+  {
+   "term_id": "M:deflation",
+   "surface": "deflation",
+   "decision": "keep_with_exclusions",
+   "exclusions": [
+    "gradual deflation"
+   ]
+  },
+  {
+   "term_id": "M:dropout",
+   "surface": "dropout",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:glove",
+   "surface": "glove",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:lion",
+   "surface": "lion",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:oner",
+   "surface": "oner",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:ontology",
+   "surface": "ontology",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:palm",
+   "surface": "palm",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:patching",
+   "surface": "patching",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:procrustes",
+   "surface": "procrustes",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:pruning",
+   "surface": "pruning",
+   "decision": "keep_with_exclusions",
+   "exclusions": [
+    "cube pruning",
+    "pruning the search space"
+   ]
+  },
+  {
+   "term_id": "M:rats",
+   "surface": "rats",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:sarsa",
+   "surface": "sarsa",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:strata",
+   "surface": "strata",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:trades",
+   "surface": "trades",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:transformer",
+   "surface": "transformer",
+   "decision": "keep_with_exclusions",
+   "exclusions": [
+    "graph transformer network",
+    "polar transformer network"
+   ]
+  },
+  {
+   "term_id": "M:tucker",
+   "surface": "tucker",
+   "decision": "keep_with_exclusions",
+   "exclusions": [
+    "kuhn-tucker"
+   ]
+  },
+  {
+   "term_id": "M:wizard",
+   "surface": "wizard",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:arc",
+   "surface": "arc",
+   "decision": "keep_with_exclusions",
+   "exclusions": [
+    "arc consistency",
+    "arc-eager",
+    "arc length",
+    "arc.cs"
+   ]
+  },
+  {
+   "term_id": "T:chunking",
+   "surface": "chunking",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:classification",
+   "surface": "classification",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:clustering",
+   "surface": "clustering",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:colorization",
+   "surface": "colorization",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:decipherment",
+   "surface": "decipherment",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:dialogue",
+   "surface": "dialogue",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:foveation",
+   "surface": "foveation",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:imputation",
+   "surface": "imputation",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:mixture of experts",
+   "surface": "moe",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:object",
+   "surface": "object",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:prediction",
+   "surface": "prediction",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:quantization",
+   "surface": "quantization",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:regression",
+   "surface": "regression",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:reranking",
+   "surface": "reranking",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:resynthesis",
+   "surface": "resynthesis",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:retrieval",
+   "surface": "retrieval",
+   "decision": "keep_with_exclusions",
+   "exclusions": [
+    "phase retrieval"
+   ]
+  },
+  {
+   "term_id": "T:sketch",
+   "surface": "sketch",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:summarization",
+   "surface": "summarization",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:translation",
+   "surface": "translation",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:transliteration",
+   "surface": "transliteration",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "T:triplet",
+   "surface": "triplet",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:apollo",
+   "surface": "apollo",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:cabinet",
+   "surface": "cabinet",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:coat",
+   "surface": "coat",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:cove",
+   "surface": "cove",
+   "decision": "keep",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:merl",
+   "surface": "merl",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:reformer",
+   "surface": "reformer",
+   "decision": "keep_with_exclusions",
+   "exclusions": [
+    "data reformer",
+    "and a reformer",
+    "the reformer helps"
+   ]
+  },
+  {
+   "term_id": "M:sophia",
+   "surface": "sophia",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:alibi",
+   "surface": "alibi",
+   "decision": "keep_with_exclusions",
+   "exclusions": [
+    "pate and alibi"
+   ]
+  },
+  {
+   "term_id": "M:aria",
+   "surface": "aria",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:coop",
+   "surface": "coop",
+   "decision": "keep_with_exclusions",
+   "exclusions": [
+    "coop-ucb",
+    "coop-ftpl"
+   ]
+  },
+  {
+   "term_id": "M:genet",
+   "surface": "genet",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:siren",
+   "surface": "siren",
+   "decision": "keep_with_exclusions",
+   "exclusions": [
+    "siren, gunshots",
+    "siren wailing"
+   ]
+  },
+  {
+   "term_id": "M:soups",
+   "surface": "soups",
+   "decision": "exclude",
+   "exclusions": []
+  },
+  {
+   "term_id": "M:accordion",
+   "surface": "accordion",
+   "decision": "keep_with_exclusions",
+   "exclusions": [
+    "Western accordion",
+    "piano accordion",
+    "button accordion"
+   ]
+  }
+ ]
+}

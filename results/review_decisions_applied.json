@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "step": "review_decisions_applied",
+    "created": "2026-10-11",
+    "git_commit": "2a88baee7ea63a76c0c9dff1f032b8bc34ba0319",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "files_sha256": {
+      "common_words_review": "18e3f3d1f218b59fba29afa3f4168f8551de9fe0e49e426a82b843cd3d09aeb0",
+      "common_words_original": "041f5a956137420b02599a9a3c7f1e8537688e7e82fffc6ad3c1af3908ad836a",
+      "synonyms_review": "cd73545e3336c576498a55d8c542fc0046a897d166da2922c1eddb5a34aa6ac1",
+      "synonyms_original": "b9990989888b098e97638e9ad4c27e901b57eb3d4c465dd66d47f24308039a60",
+      "third_study_common_words": "c220993aa64ac3dbc0cfd7bb20fa50784af0114f341f2f1746c2759dfe71a75b",
+      "third_study_synonyms": "4da7abed7d5973fb6f1530c7c591c8a750cb1f727b734b66d933cfd2823c54ae"
+    },
+    "outputs_sha256": {
+      "common_words": "8739fad655f461b52dad6af7a5e5e7a551d9494d5ae3f407537f5be9590c9292",
+      "synonyms": "e7e9040c938f40a3ccbfcf590d2ad2ea06c2938164ba390cf6c3fda435cb192e"
+    }
+  },
+  "common_words": {
+    "surfaces": 1,
+    "by_decision": {
+      "keep": 0,
+      "exclude": 0,
+      "keep_with_exclusions": 1
+    }
+  },
+  "synonyms": {
+    "pairs": 17,
+    "by_decision": {
+      "same": 2,
+      "hierarchy": 4,
+      "different": 11
+    }
+  },
+  "merge_groups": {
+    "third_study": 23,
+    "combined": 25,
+    "grown": 0,
+    "new": 2
+  },
+  "hierarchy_pairs": {
+    "third_study": 89,
+    "combined": 93
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "step": "matching_rebuild",
+    "timepoint": "applied",
+    "created": "2026-10-11",
+    "git_commit": "2a88baee7ea63a76c0c9dff1f032b8bc34ba0319",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "vocab_sha256": "1bea22b3569578f0c7983d787cef7e401b210ecec4ceec79b0b88065f8ee9e5b",
+    "build_window": [
+      "2021-09-24T17:59:54+00:00",
+      "2026-09-24T17:59:54+00:00"
+    ],
+    "decisions": {
+      "common_words": {
+        "file": "vocab/common_word_decisions_represcription.json",
+        "sha256": "8739fad655f461b52dad6af7a5e5e7a551d9494d5ae3f407537f5be9590c9292"
+      },
+      "synonyms": {
+        "file": "vocab/synonym_decisions_represcription.json",
+        "sha256": "e7e9040c938f40a3ccbfcf590d2ad2ea06c2938164ba390cf6c3fda435cb192e"
+      }
+    }
+  },
+  "terms_after_r6": 4531,
+  "terms_final": 3132,
+  "terms_removed_r5": 1399,
+  "merged_groups_in_final": 25,
+  "excluded_pairs": {
+    "hierarchy": 89,
+    "containment": 1550
+  },
+  "build_hyperedges": 357966,
+  "terms_not_in_reviewed_timepoints": 382
+}

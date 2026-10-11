@@ -1,5 +1,5 @@
 {
-  "design_version": "v0.5.2",
+  "design_version": "v0.6.0",
   "design_section": "10.2",
   "arxiv_categories": [
     "cs.LG",
@@ -725,6 +725,24 @@
       "calibration": {"method": "platt", "fit_on": "out-of-fold engine scores of the training timepoints", "metrics": ["brier", "reliability_curve"], "role": "secondary"},
       "power_result": {"file": "results/engine_power.json", "sha256": "d4838302fa0ba635e85e2c1959929a073073fe880f0bb4732af8d03b6cc13181"}
     }
+  },
+  "represcription": {
+    "prereg_file": "preregistration_represcription.md",
+    "run_dir": "represcription",
+    "timepoint": "applied",
+    "engine": {"generator": "engine_reliability.conditional.generator.selected", "model": "engine_reliability.conditional.rediagnosis.models.engine",
+               "budget_multiple": 5, "training": ["T1", "R2", "R3", "T2", "T3"]},
+    "prescription": {"filter": "applied.prescription.redundancy_rules", "ties": "term_ids", "top_k": 100},
+    "prospective": {"rules": "prospective", "baseline_feature": "P_aa_min"},
+    "downstream": {"rules": "applied (design 6-9)", "patent_matching": "v3 applied vocabulary and refined matching"},
+    "review": {"scope": "applied final terms absent from every reviewed timepoint (matching.engine.reviewed_timepoints)",
+               "common_words_file": "data/review/common_words_applied.csv", "synonyms_file": "data/review/synonyms_applied.csv",
+               "seed": 20261102, "rules": "matching.common_words and matching.synonyms",
+               "combined": {"common_words": "vocab/common_word_decisions_represcription.json",
+                            "synonyms": "vocab/synonym_decisions_represcription.json"}},
+    "q1": {"seed": 20261101, "n_sentences": 100, "population": "evidential_fields", "judging": "cited_evidence_only"},
+    "comparison": ["top_k_overlap", "shared_rank_spearman", "dvf_axis_scores", "riskiest_axis", "mvp_type", "concept_insufficient_share", "q1"],
+    "label": "engine passed the third-study verdict (T3 reused, not an independent confirmation)"
   },
   "matching": {
     "prereg_file": "preregistration_matching.md",

@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "step": "review_sheets_applied",
+    "created": "2026-10-11",
+    "git_commit": "571a08452ef2c6351cc84840d607d8411ba7ded2",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "review_config": {
+      "scope": "applied final terms absent from every reviewed timepoint (matching.engine.reviewed_timepoints)",
+      "common_words_file": "data/review/common_words_applied.csv",
+      "synonyms_file": "data/review/synonyms_applied.csv",
+      "seed": 20261102,
+      "rules": "matching.common_words and matching.synonyms"
+    },
+    "inputs_sha256": {
+      "applied_vocab": "7e34e9904d5e01cbc6a0c3e1841bd883b30d957be4e172204cc7c931062313a6",
+      "applied_build": "07d78e50ed94369a2308a38e2a4d8963955c29da35fe99023c51962b53930331",
+      "common_word_decisions": "c220993aa64ac3dbc0cfd7bb20fa50784af0114f341f2f1746c2759dfe71a75b",
+      "prior_synonym_sheet": "6ff8197b947981e95e60313c44f8b0615c9dbdf1182d3eab4d85aba6add62d9a",
+      "wordlist": "be41ad97963bf8dabedd5871d5d691596175269d540956b0f9965a885c2bbab9"
+    },
+    "sheets_sha256": {
+      "common_words": "041f5a956137420b02599a9a3c7f1e8537688e7e82fffc6ad3c1af3908ad836a",
+      "synonyms": "b9990989888b098e97638e9ad4c27e901b57eb3d4c465dd66d47f24308039a60"
+    }
+  },
+  "new_terms": 384,
+  "new_terms_by_type": {
+    "T": 276,
+    "M": 108
+  },
+  "common_word_surfaces": 1,
+  "synonym_pairs": 17,
+  "synonym_pairs_by_rule": {
+    "cooccurrence": 9,
+    "initials": 5,
+    "same_words": 2,
+    "form": 1
+  }
+}
