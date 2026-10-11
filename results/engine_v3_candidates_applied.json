@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "step": "engine_v3_candidates",
+    "timepoint": "applied",
+    "created": "2026-10-11",
+    "git_commit": "1f7712a6a1c3427bb1a4bd60e9f00334b29feecb",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "generator": {
+      "seed_pairs": "stable",
+      "score": "npmi_mean"
+    },
+    "budget_multiple": 5,
+    "stability": 0.95,
+    "two_hop_ratio": 1.0,
+    "inputs_sha256": {
+      "vocab": "1bea22b3569578f0c7983d787cef7e401b210ecec4ceec79b0b88065f8ee9e5b",
+      "build": "3c657f0968fba1efa1a1ffa2b73e5f5da6f8290efdf314fd8dc1a7fd9af15147"
+    },
+    "outputs_sha256": {
+      "first": "d2bb055d7b06c58d883562ce868feb5f91bc60a459aa9ea5adb32cd0963b73ff",
+      "generator": "4d392e1a38c6c126efc823b3c93f0ec9c5fef9204db64ff7fe9f15cad3e34f27"
+    }
+  },
+  "terms": 3132,
+  "pi_by_value": {
+    "0.74452": 655,
+    "0.825634": 96,
+    "0.862505": 2381
+  },
+  "first_study_rule": {
+    "rule_stats": {
+      "nodes_linked": 2290,
+      "pair_edges": 29961,
+      "open_triangles_before_filter": 252016,
+      "open_triangles": 116183,
+      "two_hop_space_after_filter": 3666460,
+      "two_hop_selected": 116183,
+      "candidates": 232366,
+      "type_mix": {
+        "MMM": 3161,
+        "MMT": 41855,
+        "MTT": 187350
+      }
+    },
+    "candidates": 231286,
+    "dropped_excluded_pairs": 1080,
+    "kind": {
+      "two_hop": 115662,
+      "open_triangle": 115624
+    }
+  },
+  "generator": {
+    "seed_pairs": 29961,
+    "completions_without_excluded": 43094282,
+    "dropped_excluded_pairs": 1023905,
+    "budget": 1156430,
+    "candidates": 1156430,
+    "kind": {
+      "completion": 1068591,
+      "open_triangle": 87839
+    }
+  }
+}

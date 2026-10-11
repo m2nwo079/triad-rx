@@ -93,3 +93,40 @@ def test_review_files_must_keep_fixed_columns(tmp_path):
     import pytest
     with pytest.raises(SystemExit):
         rd.checked(review, ["same", "hierarchy", "different"], rd.syd.validate)
+
+
+ei = load("engine_inputs", "scripts/represcription/04_engine_inputs.py")
+rk = load("ranking", "scripts/represcription/05_ranking.py")
+
+
+def test_applied_recent_window_is_the_last_years_before_the_cutoff():
+    end = datetime.datetime(2026, 9, 24, 17, 59, 54, tzinfo=datetime.timezone.utc)
+    assert ei.recent_start_applied(end, 2) == datetime.datetime(2024, 9, 24, 17, 59, 54, tzinfo=datetime.timezone.utc)
+
+
+def test_ranking_is_locked_until_the_freeze_commit(tmp_path):
+    import pytest
+    prereg = tmp_path / "p.md"
+    prereg.write_text("x\n고정 커밋: 미정\n")
+    with pytest.raises(SystemExit):
+        rk.require_frozen({"represcription": {"prereg_file": str(prereg)}})
+    prereg.write_text("x\n고정 커밋: abc1234\n")
+    assert rk.require_frozen({"represcription": {"prereg_file": str(prereg)}}) == "abc1234"
+
+
+def test_prescription_ranks_break_ties_by_term_ids_and_skip_redundant():
+    applied = pd.DataFrame({"a": ["M:b", "M:a", "M:c", "M:d"], "b": ["T:x"] * 4, "c": ["T:y"] * 4,
+                            "score": [0.5, 0.5, 0.9, 0.1], "redundant": ["", "", "D1", ""]})
+    out = rk.prescription_ranks(applied).set_index("a")
+    assert out["rank_engine"].to_dict() == {"M:a": 2, "M:b": 3, "M:c": 1, "M:d": 4}
+    assert out["rank_prescription"].to_dict()["M:a"] == 1 and pd.isna(out["rank_prescription"]["M:c"])
+    assert out["rank_prescription"]["M:d"] == 3
+
+
+def test_redundancy_flags_same_names_and_uses_candidate_quantile():
+    import numpy as np
+    keys = {"M:a": "batch norm", "M:b": "batchnorm", "T:x": "image classification", "M:c": "dropout"}
+    vectors = {"M:a": np.array([1.0, 0.0]), "M:b": np.array([0.0, 1.0]), "T:x": np.array([1.0, 0.0]), "M:c": np.array([0.0, 1.0])}
+    applied = pd.DataFrame({"a": ["M:a", "M:a"], "b": ["M:b", "M:c"], "c": ["T:x", "T:x"]})
+    reasons, threshold = rk.redundancy(applied, keys, vectors, 0.985)
+    assert reasons[0].startswith("D1") and threshold <= 1.0
