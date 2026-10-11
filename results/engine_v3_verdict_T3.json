@@ -1,0 +1,464 @@
+{
+  "meta": {
+    "step": "engine_v3_verdict_T3",
+    "created": "2026-10-11",
+    "git_commit": "98b4771804d5a52319ce3886ba5d3522a9f27ab2",
+    "preregistration_freeze_commit": "b01783e",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "verdict_config": {
+      "eval": "T3",
+      "budget_multiple": 5,
+      "k": 5000,
+      "descriptive_k": [
+        100,
+        500,
+        1000
+      ],
+      "power_result": {
+        "file": "results/engine_v3_power.json",
+        "sha256": "184d98f5a6b6af656d251427cd665cdbf002a22983d3baafd161b355a2d12f0c"
+      },
+      "sequence": "engine_reliability.verdict.sequence",
+      "rule": "engine_reliability.verdict.rule",
+      "ci_level": "matching.t3_reuse.ci_level",
+      "power": {
+        "eval_timepoint": "T2",
+        "train_timepoint": "T1",
+        "budget_multiples_of_first_candidates": [
+          1,
+          5
+        ],
+        "k": [
+          100,
+          500,
+          1000,
+          5000
+        ],
+        "baseline_feature": "P_npmi_mean",
+        "outer": 200,
+        "inner": 200,
+        "seed": 20261030,
+        "minimum_sequence_power": 0.8,
+        "rule": "choose the budget and k with the highest power of passing S1 and S2 in sequence under the conservative scenario at the verdict confidence level; ties go to the smaller budget, then the smaller k; record the S1 to S4 sequence powers and the stand-alone S4 power before T3 labels are made",
+        "conservative_scenario": "keep each positive with probability equal to the T3 label window length over the evaluation label window length"
+      }
+    },
+    "evaluation_config": {
+      "top_k": 100,
+      "secondary_k": [
+        50,
+        500
+      ],
+      "bootstrap_n": 1000,
+      "bootstrap_seed": 20261016,
+      "ci_level": 0.975,
+      "rule": "pass only if both candidate and term-block bootstrap lower bounds exceed the threshold",
+      "score": "mean predicted probability over model seeds"
+    },
+    "model_config": {
+      "type": "lightgbm_binary",
+      "params": {
+        "num_leaves": 7,
+        "min_data_in_leaf": 20,
+        "learning_rate": 0.05,
+        "feature_fraction": 0.8,
+        "bagging_fraction": 0.8,
+        "bagging_freq": 1,
+        "lambda_l2": 1.0
+      },
+      "n_estimators_max": 2000,
+      "early_stopping_rounds": 100,
+      "cv_folds": 5,
+      "cv_metric": "average_precision",
+      "seeds": [
+        20261011,
+        20261012,
+        20261013,
+        20261014,
+        20261015
+      ],
+      "engine_sets": [
+        "P",
+        "H",
+        "T",
+        "R"
+      ],
+      "v2_baseline_sets": [
+        "P",
+        "T",
+        "R"
+      ]
+    },
+    "training_timepoints": [
+      "T1",
+      "R2",
+      "R3"
+    ],
+    "inputs_sha256": {
+      "features_T1": "895baebe17ef7b2b4a2641873c28ace145321c189505611302a17bcfe2f48366",
+      "features_R2": "5f947ba61555cb949094437c5f07f2ece7ae1714ff68e3e3a5b2a5136de33918",
+      "features_R3": "82d7cdf3a46c8c086ddb473ef5d475cce8a76e4c979a1321c1aac57537107d83",
+      "features_T3": "641b776cb55a25f45482304251d816b156648fb33a0e0ddbd29f5d90d5c4ec0b",
+      "labels_T1": "fb6723cf8b5704949f9a14eb04aac16480c2ff2abde09e1066a007f166183215",
+      "labels_R2": "64d3723a8f72004ed54e31c69ab4192202b2705f98d19f7e6c990971ce1717b7",
+      "labels_R3": "c7630ccc81d7a6f9aed492294bb1d1dd913baf5ded9c18501211ec14689389ab",
+      "labels_T3": "8dcc12bbffc18305046040cb329dc3278289eb848cb2ab6f0aa5ed88f8425455",
+      "first_study_rule_T3": "2748b84fcc694f39cffafa190ec30654dbd66ad8cefcae0a6fcaea9f1efab42c"
+    },
+    "note": "T3 was judged once in the second study; not an independent confirmation (preregistration 6.4)."
+  },
+  "labels": {
+    "realised_triads": 54540,
+    "label_v3_positive": 17869,
+    "pool_candidates": 509820,
+    "pool_positive": 3283
+  },
+  "train": {
+    "candidates": 274555,
+    "positives": 3200
+  },
+  "models": {
+    "engine": {
+      "rounds": 1354,
+      "cv_average_precision_mean": 0.07155587356435555,
+      "cv_average_precision_sd": 0.005528535184386566
+    },
+    "engine_no_h": {
+      "rounds": 770,
+      "cv_average_precision_mean": 0.0654200048484588,
+      "cv_average_precision_sd": 0.007442871491772203
+    }
+  },
+  "S1_recall": {
+    "point": 0.14416027757568975,
+    "recall_pool": 0.18372600593206112,
+    "recall_first": 0.03956572835637137,
+    "candidate": {
+      "lower": 0.13794560411886508,
+      "upper": 0.15029030723599532,
+      "valid_resamples": 1000
+    },
+    "term_block": {
+      "lower": 0.10962548262076836,
+      "upper": 0.17350174029923893,
+      "valid_resamples": 1000
+    }
+  },
+  "by_k": {
+    "5000": {
+      "engine": {
+        "precision": 0.0544,
+        "lift": 8.447824550715808,
+        "distinct_terms": 1189,
+        "top_terms": [
+          [
+            "M:transformer",
+            858
+          ],
+          [
+            "M:gpt 3",
+            518
+          ],
+          [
+            "M:gpt 4",
+            392
+          ],
+          [
+            "M:attention",
+            355
+          ],
+          [
+            "T:contrastive learning",
+            322
+          ]
+        ],
+        "top_terms_slot_share": 0.163,
+        "max_term_triad_share": 0.1716,
+        "hits": 272,
+        "hit_distinct_terms": 300
+      },
+      "S2_lift_ci": {
+        "candidate": {
+          "lower": 7.387087881109484,
+          "upper": 9.496453027950311,
+          "valid_resamples": 1000
+        },
+        "term_block": {
+          "lower": 5.100027639302022,
+          "upper": 12.492343811264199,
+          "valid_resamples": 1000
+        }
+      },
+      "S3_diff_ci": {
+        "candidate": {
+          "lower": 0.0334,
+          "upper": 0.048302500000000005,
+          "valid_resamples": 1000
+        },
+        "term_block": {
+          "lower": 0.01699000000000001,
+          "upper": 0.07430750000000003,
+          "valid_resamples": 1000
+        }
+      },
+      "S4_diff_ci": {
+        "candidate": {
+          "lower": -0.0020000000000000018,
+          "upper": 0.008,
+          "valid_resamples": 1000
+        },
+        "term_block": {
+          "lower": -0.01140499999999999,
+          "upper": 0.016999999999999998,
+          "valid_resamples": 1000
+        }
+      },
+      "baseline_precision": 0.0136,
+      "engine_no_h_precision": 0.0514
+    },
+    "100": {
+      "engine": {
+        "precision": 0.1,
+        "lift": 15.529089247639355,
+        "distinct_terms": 116,
+        "top_terms": [
+          [
+            "M:gpt 3",
+            16
+          ],
+          [
+            "M:transformer",
+            13
+          ],
+          [
+            "M:gpt",
+            12
+          ],
+          [
+            "T:large language model",
+            12
+          ],
+          [
+            "M:gpt 4",
+            12
+          ]
+        ],
+        "top_terms_slot_share": 0.21666666666666667,
+        "max_term_triad_share": 0.16,
+        "hits": 10,
+        "hit_distinct_terms": 25
+      },
+      "S2_lift_ci": {
+        "candidate": {
+          "lower": 6.274568237738617,
+          "upper": 26.668829395300193,
+          "valid_resamples": 1000
+        },
+        "term_block": {
+          "lower": 0.0,
+          "upper": 64.29261107130016,
+          "valid_resamples": 1000
+        }
+      },
+      "S3_diff_ci": {
+        "candidate": {
+          "lower": -0.03,
+          "upper": 0.14,
+          "valid_resamples": 1000
+        },
+        "term_block": {
+          "lower": -0.13,
+          "upper": 0.37512500000000043,
+          "valid_resamples": 1000
+        }
+      },
+      "S4_diff_ci": {
+        "candidate": {
+          "lower": -0.03,
+          "upper": 0.08,
+          "valid_resamples": 1000
+        },
+        "term_block": {
+          "lower": -0.12000000000000001,
+          "upper": 0.23000000000000004,
+          "valid_resamples": 1000
+        }
+      },
+      "baseline_precision": 0.05,
+      "engine_no_h_precision": 0.07
+    },
+    "500": {
+      "engine": {
+        "precision": 0.084,
+        "lift": 13.04443496801706,
+        "distinct_terms": 323,
+        "top_terms": [
+          [
+            "M:transformer",
+            79
+          ],
+          [
+            "M:gpt 3",
+            70
+          ],
+          [
+            "M:gpt 4",
+            60
+          ],
+          [
+            "T:contrastive learning",
+            46
+          ],
+          [
+            "T:large language model",
+            43
+          ]
+        ],
+        "top_terms_slot_share": 0.19866666666666666,
+        "max_term_triad_share": 0.158,
+        "hits": 42,
+        "hit_distinct_terms": 70
+      },
+      "S2_lift_ci": {
+        "candidate": {
+          "lower": 8.623314941709399,
+          "upper": 17.053913080674633,
+          "valid_resamples": 1000
+        },
+        "term_block": {
+          "lower": 3.717732558625166,
+          "upper": 30.536077471028552,
+          "valid_resamples": 1000
+        }
+      },
+      "S3_diff_ci": {
+        "candidate": {
+          "lower": 0.034,
+          "upper": 0.094,
+          "valid_resamples": 1000
+        },
+        "term_block": {
+          "lower": -0.008,
+          "upper": 0.17902500000000007,
+          "valid_resamples": 1000
+        }
+      },
+      "S4_diff_ci": {
+        "candidate": {
+          "lower": -0.015024999999999969,
+          "upper": 0.036000000000000004,
+          "valid_resamples": 1000
+        },
+        "term_block": {
+          "lower": -0.058,
+          "upper": 0.086,
+          "valid_resamples": 1000
+        }
+      },
+      "baseline_precision": 0.018,
+      "engine_no_h_precision": 0.07
+    },
+    "1000": {
+      "engine": {
+        "precision": 0.079,
+        "lift": 12.26798050563509,
+        "distinct_terms": 509,
+        "top_terms": [
+          [
+            "M:transformer",
+            168
+          ],
+          [
+            "M:gpt 3",
+            140
+          ],
+          [
+            "M:gpt 4",
+            116
+          ],
+          [
+            "T:contrastive learning",
+            88
+          ],
+          [
+            "M:gpt",
+            73
+          ]
+        ],
+        "top_terms_slot_share": 0.195,
+        "max_term_triad_share": 0.168,
+        "hits": 79,
+        "hit_distinct_terms": 120
+      },
+      "S2_lift_ci": {
+        "candidate": {
+          "lower": 9.375712573157756,
+          "upper": 15.13427845818605,
+          "valid_resamples": 1000
+        },
+        "term_block": {
+          "lower": 4.843543804845034,
+          "upper": 25.178951424023648,
+          "valid_resamples": 1000
+        }
+      },
+      "S3_diff_ci": {
+        "candidate": {
+          "lower": 0.041,
+          "upper": 0.083,
+          "valid_resamples": 1000
+        },
+        "term_block": {
+          "lower": 0.00948750000000001,
+          "upper": 0.14751250000000007,
+          "valid_resamples": 1000
+        }
+      },
+      "S4_diff_ci": {
+        "candidate": {
+          "lower": -0.008512499999999989,
+          "upper": 0.026512500000000046,
+          "valid_resamples": 1000
+        },
+        "term_block": {
+          "lower": -0.036,
+          "upper": 0.061,
+          "valid_resamples": 1000
+        }
+      },
+      "baseline_precision": 0.016,
+      "engine_no_h_precision": 0.07
+    }
+  },
+  "sequence": {
+    "S1_recall": "pass",
+    "S2_random": "pass",
+    "S3_npmi": "pass",
+    "S4_h_contribution": "fail"
+  },
+  "power_at_choice": {
+    "S1": 1.0,
+    "S1_S2": 1.0,
+    "S1_S2_S3": 0.33,
+    "S1_S2_S3_S4": 0.0,
+    "S4": 0.0,
+    "minimum": 0.8
+  },
+  "reading": {
+    "S1_recall": "pass",
+    "S2_random": "pass",
+    "S3_npmi": "pass",
+    "S4_h_contribution": "undetermined (insufficient power)"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "step": "matching_rebuild_T3_label",
+    "created": "2026-10-10",
+    "git_commit": "e2b99c055cf513a9ccc11a5dce0a827abeabdab6",
+    "preregistration_freeze_commit": "b01783e",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "label_window": [
+      "2025-01-01T00:00:00+00:00",
+      "2026-09-24T17:59:54+00:00"
+    ],
+    "inputs_sha256": {
+      "vocab": "4ed934571b314b3f97c448efe53d5ba193844ce4bf1d66b1cb5c2ab808f4de20",
+      "build": "1fae2444b3dfed4aecd95dbec4367bfc54a0537c44731e9ce082d515ea84e1b7"
+    },
+    "output_sha256": "6914ff8f3cc6c1bae2fbe157c31330c7095f2ab92c49842e00d34351d5e13dd7"
+  },
+  "build_window_rematched_equal": true,
+  "label_window_papers": 205447,
+  "label_hyperedges": 169643
+}

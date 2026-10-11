@@ -152,8 +152,10 @@ def main() -> None:
     started, t0 = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"), time.time()
     shards = min(settings.get("gpus", 1), torch.cuda.device_count())
     if shards > 1:
+        # Expandable segments avoid out-of-memory errors from fragmentation; memory placement only
         procs = [subprocess.Popen([sys.executable, __file__, "--shard", str(i), "--shards", str(shards)],
-                                  env={**os.environ, "CUDA_VISIBLE_DEVICES": str(i)}) for i in range(shards)]
+                                  env={**os.environ, "CUDA_VISIBLE_DEVICES": str(i),
+                                       "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True"}) for i in range(shards)]
         codes = [p.wait() for p in procs]
         if any(codes):
             raise SystemExit(f"worker exit codes {codes}")

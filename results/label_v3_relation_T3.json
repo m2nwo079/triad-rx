@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "step": "label_v3_relation",
+    "timepoint": "T3",
+    "created": "2026-10-11",
+    "git_commit": "555a07cfb3060419e7c4efac2cc3a6bdb3fa5503",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "model_run": [
+      {
+        "model_id": "Qwen/Qwen3.5-9B",
+        "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+        "settings": {
+          "model_id": "Qwen/Qwen3.5-9B",
+          "quantization": "bitsandbytes 4-bit nf4, compute float16",
+          "decoding": "greedy, thinking disabled",
+          "max_new_tokens": 64,
+          "batch_size": 16,
+          "prompt": "prompts/relation_v2.txt",
+          "set": "T3",
+          "limit": null,
+          "gpus": 2,
+          "early_stop": true,
+          "part": 0,
+          "parts": 2
+        },
+        "started": "2026-10-10T04:20:56+00:00",
+        "seconds": 22847.5,
+        "records_given": 33038,
+        "records": 30061,
+        "records_per_second": 1.3157254203255353,
+        "invalid": 3,
+        "gpu": "Tesla T4",
+        "gpus": 2,
+        "shards": [
+          {
+            "records_given": 19963,
+            "records_classified": 18155,
+            "seconds": 22660.7,
+            "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+            "gpu": "Tesla T4",
+            "transformers": "5.19.0",
+            "torch": "2.11.0+cu128"
+          },
+          {
+            "records_given": 13075,
+            "records_classified": 11906,
+            "seconds": 12534.7,
+            "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+            "gpu": "Tesla T4",
+            "transformers": "5.19.0",
+            "torch": "2.11.0+cu128"
+          }
+        ],
+        "transformers": "5.19.0",
+        "torch": "2.11.0+cu128",
+        "python": "3.13.15",
+        "install_returncode": 0
+      },
+      {
+        "model_id": "Qwen/Qwen3.5-9B",
+        "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+        "settings": {
+          "model_id": "Qwen/Qwen3.5-9B",
+          "quantization": "bitsandbytes 4-bit nf4, compute float16",
+          "decoding": "greedy, thinking disabled",
+          "max_new_tokens": 64,
+          "batch_size": 16,
+          "prompt": "prompts/relation_v2.txt",
+          "set": "T3",
+          "limit": null,
+          "gpus": 2,
+          "early_stop": true,
+          "part": 1,
+          "parts": 2
+        },
+        "started": "2026-10-11T02:44:06+00:00",
+        "seconds": 20320.0,
+        "records_given": 32144,
+        "records": 29742,
+        "records_per_second": 1.4636814064562633,
+        "invalid": 4,
+        "gpu": "Tesla T4",
+        "gpus": 2,
+        "shards": [
+          {
+            "records_given": 12679,
+            "records_classified": 11682,
+            "seconds": 13767.4,
+            "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+            "gpu": "Tesla T4",
+            "transformers": "5.19.0",
+            "torch": "2.11.0+cu128"
+          },
+          {
+            "records_given": 19465,
+            "records_classified": 18060,
+            "seconds": 20129.0,
+            "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+            "gpu": "Tesla T4",
+            "transformers": "5.19.0",
+            "torch": "2.11.0+cu128"
+          }
+        ],
+        "transformers": "5.19.0",
+        "torch": "2.11.0+cu128",
+        "python": "3.13.15",
+        "install_returncode": 0
+      }
+    ],
+    "frame_sha256": "bb5bce19e4fd1a67d8bec168145f45a5dcc0a4aa545b9d19033626764220971f",
+    "outputs_sha256": [
+      "4f0918ab14a436323f4e88a4e496b24ad0ddb4a3c59aaab038a10fc14d6ef19e",
+      "027eec25bceb72b97fd39d47e08c19912cb30b1519c66ee0b529d7b61c8554bc"
+    ],
+    "output_sha256": "8dcc12bbffc18305046040cb329dc3278289eb848cb2ab6f0aa5ed88f8425455"
+  },
+  "triads": 54540,
+  "pairs": 65182,
+  "pairs_classified": 59803,
+  "label_v3_positive": 17869,
+  "positive_share": 0.3276310964429776
+}
