@@ -3,7 +3,7 @@
   {
    "file": "config",
    "path": "design_version",
-   "text": "v0.4.5"
+   "text": "v0.5.2"
   },
   {
    "file": "applied_main",
@@ -1461,6 +1461,411 @@
    "text": "3"
   },
   {
+   "file": "config",
+   "path": "matching.t3_reuse.ci_level",
+   "text": "97.5%"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "meta.preregistration_freeze_commit",
+   "text": "b01783e"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.method_ci.correct",
+   "text": "83"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.method_ci.n",
+   "text": "100"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.method_ci.wilson_lower",
+   "text": "0.745"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.task_ci.correct",
+   "text": "93"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.task_ci.n",
+   "text": "100"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.task_ci.wilson_lower",
+   "text": "0.863"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.acronym_cs.correct",
+   "text": "90"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.acronym_cs.n",
+   "text": "100"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.acronym_cs.wilson_lower",
+   "text": "0.826"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "pairs",
+   "text": "355"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "by_decision.same",
+   "text": "23"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "by_decision.hierarchy",
+   "text": "89"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "by_decision.different",
+   "text": "243"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "merge_groups",
+   "text": "23"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "terms_merged",
+   "text": "46"
+  },
+  {
+   "file": "label_v3_T1_attempt1_score",
+   "path": "rule_positive.n",
+   "text": "100"
+  },
+  {
+   "file": "label_v3_T1_attempt1_score",
+   "path": "rule_positive.combination_share",
+   "text": "0.78"
+  },
+  {
+   "file": "label_v3_T1_attempt1_score",
+   "path": "rule_positive.wilson_lower",
+   "text": "0.689"
+  },
+  {
+   "file": "label_v3_T1_attempt1_score",
+   "path": "rule_positive.wilson_upper",
+   "text": "0.850"
+  },
+  {
+   "file": "label_v3_T1_attempt1_score",
+   "path": "rule_negative.combination_share",
+   "text": "0.38"
+  },
+  {
+   "file": "label_v3_T1_attempt2_score",
+   "path": "rule_positive.n",
+   "text": "240"
+  },
+  {
+   "file": "label_v3_T1_attempt2_score",
+   "path": "rule_positive.combination_share",
+   "text": "0.85"
+  },
+  {
+   "file": "label_v3_T1_attempt2_score",
+   "path": "rule_positive.wilson_lower",
+   "text": "0.799"
+  },
+  {
+   "file": "label_v3_T1_attempt2_score",
+   "path": "rule_positive.wilson_upper",
+   "text": "0.890"
+  },
+  {
+   "file": "label_v3_T1_attempt2_score",
+   "path": "rule_negative.combination_share",
+   "text": "0.42"
+  },
+  {
+   "file": "config",
+   "path": "matching.verdict.k",
+   "text": "5,000"
+  },
+  {
+   "file": "config",
+   "path": "matching.verdict.budget_multiple",
+   "text": "5"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "power_at_choice.S1_S2",
+   "text": "1.00"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "power_at_choice.S1_S2_S3",
+   "text": "0.33"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "power_at_choice.S1_S2_S3_S4",
+   "text": "0.00"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "power_at_choice.minimum",
+   "text": "0.80"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "labels.realised_triads",
+   "text": "54,540"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "labels.label_v3_positive",
+   "text": "17,869"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "labels.pool_candidates",
+   "text": "509,820"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "labels.pool_positive",
+   "text": "3,283"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "meta.training_timepoints",
+   "text": "T1+R2+R3"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "S1_recall.point",
+   "text": "0.144"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "S1_recall.candidate.lower",
+   "text": "0.138"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "S1_recall.term_block.lower",
+   "text": "0.110"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.engine.lift",
+   "text": "8.45"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S2_lift_ci.candidate.lower",
+   "text": "7.39"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S2_lift_ci.term_block.lower",
+   "text": "5.10"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.engine.precision",
+   "text": "0.054"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.baseline_precision",
+   "text": "0.014"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.candidate.lower",
+   "text": "0.033"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.term_block.lower",
+   "text": "0.017"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.engine.precision",
+   "text": "0.054"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.engine_no_h_precision",
+   "text": "0.051"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S4_diff_ci.candidate.lower",
+   "text": "-0.002"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S4_diff_ci.term_block.lower",
+   "text": "-0.011"
+  },
+  {
+   "file": "config",
+   "path": "evaluation.ci_level",
+   "text": "95.0%"
+  },
+  {
+   "file": "config",
+   "path": "matching.t3_reuse.ci_level",
+   "text": "97.5%"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine.precision",
+   "text": "0.036"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.engine.precision",
+   "text": "0.054"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.baseline_precision",
+   "text": "0.017"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.baseline_precision",
+   "text": "0.014"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.term_block.lower",
+   "text": "0.001"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.term_block.lower",
+   "text": "0.017"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S4_diff_ci.term_block.lower",
+   "text": "-0.003"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S4_diff_ci.term_block.lower",
+   "text": "-0.011"
+  },
+  {
+   "file": "config",
+   "path": "matching.verdict.descriptive_k.0",
+   "text": "100"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.100.engine.precision",
+   "text": "0.100"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.100.engine.lift",
+   "text": "15.53"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.100.S2_lift_ci.term_block.lower",
+   "text": "0.00"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.100.baseline_precision",
+   "text": "0.050"
+  },
+  {
+   "file": "config",
+   "path": "matching.verdict.descriptive_k.1",
+   "text": "500"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.500.engine.precision",
+   "text": "0.084"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.500.engine.lift",
+   "text": "13.04"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.500.S2_lift_ci.term_block.lower",
+   "text": "3.72"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.500.baseline_precision",
+   "text": "0.018"
+  },
+  {
+   "file": "config",
+   "path": "matching.verdict.descriptive_k.2",
+   "text": "1,000"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.1000.engine.precision",
+   "text": "0.079"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.1000.engine.lift",
+   "text": "12.27"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.1000.S2_lift_ci.term_block.lower",
+   "text": "4.84"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.1000.baseline_precision",
+   "text": "0.016"
+  },
+  {
+   "file": "config",
+   "path": "matching.verdict.k",
+   "text": "5,000"
+  },
+  {
+   "file": "derived",
+   "path": "matching_prereg_changes",
+   "text": "17"
+  },
+  {
+   "file": "derived",
+   "path": "matching_prereg_changes_after_results",
+   "text": "9"
+  },
+  {
+   "file": "derived",
+   "path": "matching_prereg_rows_after_freeze",
+   "text": "2"
+  },
+  {
    "file": "vocab_final_applied",
    "path": "meta.git_commit",
    "text": "5dda8d2"
@@ -1759,13 +2164,73 @@
    "file": "engine_secondary_T3",
    "path": "meta.created",
    "text": "2026-10-06"
+  },
+  {
+   "file": "precision_T1",
+   "path": "meta.git_commit",
+   "text": "feafd1c"
+  },
+  {
+   "file": "precision_T1",
+   "path": "meta.created",
+   "text": "2026-10-07"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "meta.git_commit",
+   "text": "28b5d27"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "meta.created",
+   "text": "2026-10-07"
+  },
+  {
+   "file": "label_v3_T1_attempt1_score",
+   "path": "meta.git_commit",
+   "text": "79d1308"
+  },
+  {
+   "file": "label_v3_T1_attempt1_score",
+   "path": "meta.created",
+   "text": "2026-10-07"
+  },
+  {
+   "file": "label_v3_T1_attempt2_score",
+   "path": "meta.git_commit",
+   "text": "96982b7"
+  },
+  {
+   "file": "label_v3_T1_attempt2_score",
+   "path": "meta.created",
+   "text": "2026-10-09"
+  },
+  {
+   "file": "engine_v3_power",
+   "path": "meta.git_commit",
+   "text": "3d605bc"
+  },
+  {
+   "file": "engine_v3_power",
+   "path": "meta.created",
+   "text": "2026-10-10"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "meta.git_commit",
+   "text": "98b4771"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "meta.created",
+   "text": "2026-10-11"
   }
  ],
  "en": [
   {
    "file": "config",
    "path": "design_version",
-   "text": "v0.4.5"
+   "text": "v0.5.2"
   },
   {
    "file": "applied_main",
@@ -3223,6 +3688,411 @@
    "text": "3"
   },
   {
+   "file": "config",
+   "path": "matching.t3_reuse.ci_level",
+   "text": "97.5%"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "meta.preregistration_freeze_commit",
+   "text": "b01783e"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.method_ci.correct",
+   "text": "83"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.method_ci.n",
+   "text": "100"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.method_ci.wilson_lower",
+   "text": "0.745"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.task_ci.correct",
+   "text": "93"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.task_ci.n",
+   "text": "100"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.task_ci.wilson_lower",
+   "text": "0.863"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.acronym_cs.correct",
+   "text": "90"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.acronym_cs.n",
+   "text": "100"
+  },
+  {
+   "file": "precision_T1",
+   "path": "final_by_stratum.acronym_cs.wilson_lower",
+   "text": "0.826"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "pairs",
+   "text": "355"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "by_decision.same",
+   "text": "23"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "by_decision.hierarchy",
+   "text": "89"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "by_decision.different",
+   "text": "243"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "merge_groups",
+   "text": "23"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "terms_merged",
+   "text": "46"
+  },
+  {
+   "file": "label_v3_T1_attempt1_score",
+   "path": "rule_positive.n",
+   "text": "100"
+  },
+  {
+   "file": "label_v3_T1_attempt1_score",
+   "path": "rule_positive.combination_share",
+   "text": "0.78"
+  },
+  {
+   "file": "label_v3_T1_attempt1_score",
+   "path": "rule_positive.wilson_lower",
+   "text": "0.689"
+  },
+  {
+   "file": "label_v3_T1_attempt1_score",
+   "path": "rule_positive.wilson_upper",
+   "text": "0.850"
+  },
+  {
+   "file": "label_v3_T1_attempt1_score",
+   "path": "rule_negative.combination_share",
+   "text": "0.38"
+  },
+  {
+   "file": "label_v3_T1_attempt2_score",
+   "path": "rule_positive.n",
+   "text": "240"
+  },
+  {
+   "file": "label_v3_T1_attempt2_score",
+   "path": "rule_positive.combination_share",
+   "text": "0.85"
+  },
+  {
+   "file": "label_v3_T1_attempt2_score",
+   "path": "rule_positive.wilson_lower",
+   "text": "0.799"
+  },
+  {
+   "file": "label_v3_T1_attempt2_score",
+   "path": "rule_positive.wilson_upper",
+   "text": "0.890"
+  },
+  {
+   "file": "label_v3_T1_attempt2_score",
+   "path": "rule_negative.combination_share",
+   "text": "0.42"
+  },
+  {
+   "file": "config",
+   "path": "matching.verdict.k",
+   "text": "5,000"
+  },
+  {
+   "file": "config",
+   "path": "matching.verdict.budget_multiple",
+   "text": "5"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "power_at_choice.S1_S2",
+   "text": "1.00"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "power_at_choice.S1_S2_S3",
+   "text": "0.33"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "power_at_choice.S1_S2_S3_S4",
+   "text": "0.00"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "power_at_choice.minimum",
+   "text": "0.80"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "labels.label_v3_positive",
+   "text": "17,869"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "labels.realised_triads",
+   "text": "54,540"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "labels.pool_positive",
+   "text": "3,283"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "labels.pool_candidates",
+   "text": "509,820"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "meta.training_timepoints",
+   "text": "T1+R2+R3"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "S1_recall.point",
+   "text": "0.144"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "S1_recall.candidate.lower",
+   "text": "0.138"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "S1_recall.term_block.lower",
+   "text": "0.110"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.engine.lift",
+   "text": "8.45"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S2_lift_ci.candidate.lower",
+   "text": "7.39"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S2_lift_ci.term_block.lower",
+   "text": "5.10"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.engine.precision",
+   "text": "0.054"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.baseline_precision",
+   "text": "0.014"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.candidate.lower",
+   "text": "0.033"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.term_block.lower",
+   "text": "0.017"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.engine.precision",
+   "text": "0.054"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.engine_no_h_precision",
+   "text": "0.051"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S4_diff_ci.candidate.lower",
+   "text": "-0.002"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S4_diff_ci.term_block.lower",
+   "text": "-0.011"
+  },
+  {
+   "file": "config",
+   "path": "evaluation.ci_level",
+   "text": "95.0%"
+  },
+  {
+   "file": "config",
+   "path": "matching.t3_reuse.ci_level",
+   "text": "97.5%"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.engine.precision",
+   "text": "0.036"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.engine.precision",
+   "text": "0.054"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.baseline_precision",
+   "text": "0.017"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.baseline_precision",
+   "text": "0.014"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.term_block.lower",
+   "text": "0.001"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S3_diff_ci.term_block.lower",
+   "text": "0.017"
+  },
+  {
+   "file": "engine_verdict_T3",
+   "path": "by_k.5000.S4_diff_ci.term_block.lower",
+   "text": "-0.003"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.5000.S4_diff_ci.term_block.lower",
+   "text": "-0.011"
+  },
+  {
+   "file": "config",
+   "path": "matching.verdict.descriptive_k.0",
+   "text": "100"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.100.engine.precision",
+   "text": "0.100"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.100.engine.lift",
+   "text": "15.53"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.100.S2_lift_ci.term_block.lower",
+   "text": "0.00"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.100.baseline_precision",
+   "text": "0.050"
+  },
+  {
+   "file": "config",
+   "path": "matching.verdict.descriptive_k.1",
+   "text": "500"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.500.engine.precision",
+   "text": "0.084"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.500.engine.lift",
+   "text": "13.04"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.500.S2_lift_ci.term_block.lower",
+   "text": "3.72"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.500.baseline_precision",
+   "text": "0.018"
+  },
+  {
+   "file": "config",
+   "path": "matching.verdict.descriptive_k.2",
+   "text": "1,000"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.1000.engine.precision",
+   "text": "0.079"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.1000.engine.lift",
+   "text": "12.27"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.1000.S2_lift_ci.term_block.lower",
+   "text": "4.84"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "by_k.1000.baseline_precision",
+   "text": "0.016"
+  },
+  {
+   "file": "config",
+   "path": "matching.verdict.k",
+   "text": "5,000"
+  },
+  {
+   "file": "derived",
+   "path": "matching_prereg_changes",
+   "text": "17"
+  },
+  {
+   "file": "derived",
+   "path": "matching_prereg_changes_after_results",
+   "text": "9"
+  },
+  {
+   "file": "derived",
+   "path": "matching_prereg_rows_after_freeze",
+   "text": "2"
+  },
+  {
    "file": "vocab_final_applied",
    "path": "meta.git_commit",
    "text": "5dda8d2"
@@ -3521,6 +4391,66 @@
    "file": "engine_secondary_T3",
    "path": "meta.created",
    "text": "2026-10-06"
+  },
+  {
+   "file": "precision_T1",
+   "path": "meta.git_commit",
+   "text": "feafd1c"
+  },
+  {
+   "file": "precision_T1",
+   "path": "meta.created",
+   "text": "2026-10-07"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "meta.git_commit",
+   "text": "28b5d27"
+  },
+  {
+   "file": "synonym_decisions",
+   "path": "meta.created",
+   "text": "2026-10-07"
+  },
+  {
+   "file": "label_v3_T1_attempt1_score",
+   "path": "meta.git_commit",
+   "text": "79d1308"
+  },
+  {
+   "file": "label_v3_T1_attempt1_score",
+   "path": "meta.created",
+   "text": "2026-10-07"
+  },
+  {
+   "file": "label_v3_T1_attempt2_score",
+   "path": "meta.git_commit",
+   "text": "96982b7"
+  },
+  {
+   "file": "label_v3_T1_attempt2_score",
+   "path": "meta.created",
+   "text": "2026-10-09"
+  },
+  {
+   "file": "engine_v3_power",
+   "path": "meta.git_commit",
+   "text": "3d605bc"
+  },
+  {
+   "file": "engine_v3_power",
+   "path": "meta.created",
+   "text": "2026-10-10"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "meta.git_commit",
+   "text": "98b4771"
+  },
+  {
+   "file": "engine_v3_verdict_T3",
+   "path": "meta.created",
+   "text": "2026-10-11"
   }
  ]
 }

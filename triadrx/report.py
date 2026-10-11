@@ -168,6 +168,36 @@ def engine_verdicts(values: Values) -> dict:
     return sequence
 
 
+def matching_change_rows(text: str) -> list[list[str]]:
+    """Cells of the dated rows in the matching preregistration change log (section 7)."""
+    section = text.split("## 7.", 1)[1]
+    lines = [line for line in section.splitlines() if re.match(r"^\| \d{4}-\d{2}-\d{2} \|", line)]
+    return [[c.strip() for c in line.strip().strip("|").split("|")] for line in lines]
+
+
+def matching_verdicts(values: Values) -> dict:
+    """Third-study verdict sequence recomputed from the bootstrap lower bounds (matching preregistration 6.4).
+
+    The steps and thresholds are those of the engine study, at matching.verdict.k; the bounds in the
+    result file are at the stricter confidence level. The result must equal the stored sequence.
+    """
+    steps = values.raw("config", "engine_reliability.verdict.sequence")
+    k = str(values.raw("config", "matching.verdict.k"))
+    by_k = values.raw("engine_v3_verdict_T3", f"by_k.{k}")
+    cis = {"S1_recall": values.raw("engine_v3_verdict_T3", "S1_recall"), "S2_random": by_k["S2_lift_ci"],
+           "S3_npmi": by_k["S3_diff_ci"], "S4_h_contribution": by_k["S4_diff_ci"]}
+    sequence, open_ = {}, True
+    for step in steps:
+        ci = cis[step["step"]]
+        ok = ci["candidate"]["lower"] > step["threshold"] and ci["term_block"]["lower"] > step["threshold"]
+        sequence[step["step"]] = ("pass" if ok else "fail") if open_ else "not tested"
+        open_ = open_ and ok
+    stored = values.raw("engine_v3_verdict_T3", "sequence")
+    if sequence != stored:
+        raise ValueError(f"recomputed third-study verdicts {sequence} differ from the stored {stored}")
+    return sequence
+
+
 def derived(values: Values) -> dict:
     prereg_text = (values.root / PREREG).read_text()
     changes = prereg_changes(prereg_text)
@@ -205,7 +235,16 @@ def derived(values: Values) -> dict:
     engine_frozen_text = subprocess.run(["git", "show", f"{engine_freeze}:{engine_prereg}"], cwd=values.root,
                                         capture_output=True, text=True, check=True).stdout
     conservative = values.raw("engine_power", "power.t3_conservative")
+    matching_prereg = study["matching"]["prereg_file"]
+    matching_text = (values.root / matching_prereg).read_text()
+    matching_rows = matching_change_rows(matching_text)
+    matching_freeze = re.search(r"^고정 커밋:\s*(\S+)", matching_text, flags=re.M).group(1)
+    matching_frozen_text = subprocess.run(["git", "show", f"{matching_freeze}:{matching_prereg}"], cwd=values.root,
+                                          capture_output=True, text=True, check=True).stdout
     return {
+        "matching_prereg_changes": len(matching_rows),
+        "matching_prereg_rows_after_freeze": len(matching_rows) - len(matching_change_rows(matching_frozen_text)),
+        "matching_prereg_changes_after_results": sum(1 for cells in matching_rows if cells[-2].startswith("예")),
         "engine_power_max_through_s3": max(r["S1_S2_S3"] for b in conservative.values() for r in b["by_k"].values()),
         "engine_prereg_changes": len(engine_rows),
         "engine_prereg_rows_after_freeze": len(engine_rows) - len(engine_change_rows(engine_frozen_text)),
@@ -245,6 +284,15 @@ VERDICT_WORDS = {
 STEP_WORDS = {
     "ko": {"pass": "통과", "fail": "불통과", "not tested": "검정하지 않음"},
     "en": {"pass": "pass", "fail": "fail", "not tested": "not tested"},
+}
+
+# Display words for the preregistered reading of the third-study steps (matching preregistration 6.4)
+READING_WORDS = {
+    "ko": {"pass": "통과", "fail": "불통과", "not tested": "검정하지 않음",
+           "fail (insufficient power)": "불통과 (검정력 부족)", "undetermined (insufficient power)": "판단 불가 (검정력 부족)"},
+    "en": {"pass": "pass", "fail": "fail", "not tested": "not tested",
+           "fail (insufficient power)": "fail (insufficient power)",
+           "undetermined (insufficient power)": "undetermined (insufficient power)"},
 }
 
 # Areas of the preregistration change log, in report order (Korean key as written in the log)

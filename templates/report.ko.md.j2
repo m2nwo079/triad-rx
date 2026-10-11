@@ -19,6 +19,8 @@
 
 **후속 연구(12절)의 주장 범위:** {% if engine.S1_recall == 'pass' %}새 시점 T3에서, 조건부 생성기가 경량 검증의 후보 규칙보다 실현 결합을 더 많이 담는다고 판정했습니다. {% endif %}{% if engine.S2_random == 'pass' %}엔진의 상위 {{ V.v('config', 'engine_reliability.verdict.k', 'int') }}개가 무작위보다 실현 결합을 더 많이 담는다고 판정했습니다. {% endif %}{% if engine.S3_npmi == 'pass' %}단순 근접도(nPMI) 기준선보다 낫다는 판정도 통과했습니다(용어 블록 하한 {{ V.v('engine_verdict_T3', 'by_k.' ~ (V.raw('config', 'engine_reliability.verdict.k') | string) ~ '.S3_diff_ci.term_block.lower', 'd3') }}). {% endif %}{% if engine.S4_h_contribution != 'pass' %}고차 특징(H)의 추가 가치는 판정되지 않았습니다. {% endif %}처방 최상위의 품질, 레이블 잡음과 무관한 실제 결합의 예측, 이 엔진으로 만든 처방은 주장하지 않습니다. 위 표의 엔진 관련 칸은 경량 검증 당시의 엔진에 대한 것입니다.
 
+**세 번째 연구(13절)의 주장 범위:** 어휘 매칭, 동의어, 결합 레이블을 다시 세운 뒤 두 번째 연구에서 한 번 판정한 T3를 더 엄격한 신뢰 수준으로 다시 판정했으므로, 아래 판정은 독립 확증이 아닙니다. {% if matching.S1_recall == 'pass' and matching.S2_random == 'pass' %}다시 세운 레이블에서도 생성기와 엔진이 재현율과 무작위 대비 단계를 통과했습니다. {% endif %}{% if matching.S3_npmi == 'pass' %}단순 근접도(nPMI) 기준선 대비 단계도 통과했습니다. {% endif %}{% if matching.S4_h_contribution != 'pass' %}고차 특징(H)의 기여는 {{ reading_word[V.raw('engine_v3_verdict_T3', 'reading.S4_h_contribution')] }}입니다. {% endif %}처방 최상위의 품질과 이 엔진으로 만든 처방은 주장하지 않습니다.
+
 ## 2. 데이터와 어휘
 
 - 적용 모드 구축 구간의 논문은 {{ V.v('hypergraph_main_applied', 'windows.build.papers_in_window', 'int') }}편이며, 그중 어휘 용어가 매칭된 논문은 {{ V.v('hypergraph_main_applied', 'windows.build.papers_with_terms', 'int') }}편입니다.
@@ -169,6 +171,7 @@ DVF 대상 후보 {{ V.v('derived', 'dvf_candidates', 'int') }}개에서 축이 
 - Q1은 검토자 한 명의 판단이며 교차 모델 점검으로 뒷받침되지 않음. 뒷받침되지 않은 판정의 일부는 설계(패키지 설명 공백, "근거 없음" 주장의 판정 충돌)에서 생김.
 - DVF 예측력 미검증. 검증은 전향적 등록(설계서 11절)으로 이후에 합니다.
 - 후속 연구(12절): 레이블에 남은 매칭 오류와 동의어 조합(어휘 매칭 정밀도는 손대지 않음), 상위 후보의 허브 용어 쏠림, 개발 중 T2의 반복 사용, T3 조합의 일부를 적용 모드에서 이미 봄, 판정이 상위 k개에 한정됨.
+- 세 번째 연구(13절): 레이블의 두 번째 확인은 첫 번째 확인의 결과를 본 뒤 추가한 측정, 기법 표기 층의 매칭 정밀도 불합격, 레이블의 재현율 쪽 잡음(모델 음성에도 결합이 많음), 개발 중 T2의 반복 사용, T3 재사용, 판정이 상위 k개에 한정됨.
 
 ## 10. 사전 등록 변경 기록
 
@@ -222,6 +225,63 @@ DVF 대상 후보 {{ V.v('derived', 'dvf_candidates', 'int') }}개에서 축이 
 **한계:** T3의 일부 조합은 적용 모드 브리핑에서 이미 보았습니다. 레이블에는 매칭 오류와 동의어 조합이 남을 수 있어, 엔진이 실제 결합이 아닌 어휘 중복을 맞혔을 가능성을 배제하지 못합니다. 판정은 상위 {{ V.v('config', 'engine_reliability.verdict.k', 'int') }}개에 대한 것이며 처방 최상위의 품질을 보장하지 않습니다. 이 엔진으로 처방을 다시 내지 않았습니다.
 
 **사전 등록(엔진) 변경 기록:** {{ V.v('derived', 'engine_prereg_changes', 'int') }}건, 그중 결과를 확인한 뒤 정한 것은 {{ V.v('derived', 'engine_prereg_changes_after_results', 'int') }}건입니다. {% if V.raw('derived', 'engine_prereg_rows_after_freeze') == 0 %}모두 고정 전, T3를 열기 전에 기록되었습니다. {% else %}고정 이후 추가된 기록이 있습니다. {% endif %}(`preregistration_engine.md` 4절)
+
+## 13. 측정 기반 재정립 (세 번째 연구)
+
+{% set mk = V.raw('config', 'matching.verdict.k') | string -%}
+{% set ek = V.raw('config', 'engine_reliability.verdict.k') | string -%}
+**목적:** 두 번째 연구(12절)의 판정은 결합 비율이 절반 남짓인 레이블 위에서 이루어졌습니다. 이 연구는 어휘 매칭, 동의어, "결합" 레이블을 다시 세운 뒤 두 번째 연구의 파이프라인 선택값을 바꾸지 않고 T3를 다시 판정했습니다. T3는 두 번째 연구에서 한 번 판정한 시점이라 이 판정은 독립 확증이 아니며, 신뢰 수준을 {{ V.v('config', 'matching.t3_reuse.ci_level', 'pct1') }}로 높였습니다(설계서 19절, `preregistration_matching.md`). 판정 규칙과 판정 값은 사전 등록의 고정 커밋 {{ V.v('engine_v3_verdict_T3', 'meta.preregistration_freeze_commit') }}에 고정한 뒤 T3 레이블을 만들었습니다.
+
+**어휘 매칭 정밀도** (새 매칭 규칙, 층별 새 표본, Wilson 하한):
+
+| 층 | 맞음 / 표본 | 하한 | 판정 |
+|---|---|---|---|
+| 기법 표기 | {{ V.v('precision_T1', 'final_by_stratum.method_ci.correct', 'int') }} / {{ V.v('precision_T1', 'final_by_stratum.method_ci.n', 'int') }} | {{ V.v('precision_T1', 'final_by_stratum.method_ci.wilson_lower', 'd3') }} | {{ word[V.raw('precision_T1', 'final_by_stratum.method_ci.status')] }} |
+| 과제 표기 | {{ V.v('precision_T1', 'final_by_stratum.task_ci.correct', 'int') }} / {{ V.v('precision_T1', 'final_by_stratum.task_ci.n', 'int') }} | {{ V.v('precision_T1', 'final_by_stratum.task_ci.wilson_lower', 'd3') }} | {{ word[V.raw('precision_T1', 'final_by_stratum.task_ci.status')] }} |
+| 약어 | {{ V.v('precision_T1', 'final_by_stratum.acronym_cs.correct', 'int') }} / {{ V.v('precision_T1', 'final_by_stratum.acronym_cs.n', 'int') }} | {{ V.v('precision_T1', 'final_by_stratum.acronym_cs.wilson_lower', 'd3') }} | {{ word[V.raw('precision_T1', 'final_by_stratum.acronym_cs.status')] }} |
+
+**동의어와 어휘 중복:** 용어 쌍 {{ V.v('synonym_decisions', 'pairs', 'int') }}개를 판정해 같은 개념 {{ V.v('synonym_decisions', 'by_decision.same', 'int') }}, 상하위 {{ V.v('synonym_decisions', 'by_decision.hierarchy', 'int') }}, 다른 개념 {{ V.v('synonym_decisions', 'by_decision.different', 'int') }}으로 나눴고, 같은 개념 {{ V.v('synonym_decisions', 'merge_groups', 'int') }}묶음(용어 {{ V.v('synonym_decisions', 'terms_merged', 'int') }}개)을 하나로 합쳤습니다. 상하위·포함 관계 쌍이 든 조합은 후보와 레이블에서 뺐습니다.
+
+**결합 레이블:** 공개 언어 모델(리비전 고정, 무작위성 없는 생성)이 조합의 논문마다 결합·비교·언급을 분류하고, 결합으로 분류된 논문이 있는 조합을 양성으로 봅니다. 사람이 블라인드로 판정한 확인 표본에서 모델 양성 가운데 결합의 비율은 다음과 같습니다.
+
+| 확인 | 모델 양성 표본 | 결합 비율 | 모델 음성 결합 비율 | 판정 |
+|---|---|---|---|---|
+| 첫 번째 | {{ V.v('label_v3_T1_attempt1_score', 'rule_positive.n', 'int') }} | {{ V.v('label_v3_T1_attempt1_score', 'rule_positive.combination_share', 'd2') }} {{ V.ci('label_v3_T1_attempt1_score', 'rule_positive.wilson_lower', 'rule_positive.wilson_upper', 'd3') }} | {{ V.v('label_v3_T1_attempt1_score', 'rule_negative.combination_share', 'd2') }} | {% if V.raw('label_v3_T1_attempt1_score', 'adopted') %}채택{% else %}불채택{% endif %} |
+| 두 번째 | {{ V.v('label_v3_T1_attempt2_score', 'rule_positive.n', 'int') }} | {{ V.v('label_v3_T1_attempt2_score', 'rule_positive.combination_share', 'd2') }} {{ V.ci('label_v3_T1_attempt2_score', 'rule_positive.wilson_lower', 'rule_positive.wilson_upper', 'd3') }} | {{ V.v('label_v3_T1_attempt2_score', 'rule_negative.combination_share', 'd2') }} | {% if V.raw('label_v3_T1_attempt2_score', 'adopted') %}채택{% else %}불채택{% endif %} |
+
+두 번째 확인은 첫 번째 확인의 결과를 본 뒤 표본 크기를 검정력으로 정해 추가한 측정이며, 두 확인을 합치지 않고 각각 보고합니다. 두 번째 확인의 모델 양성 논문은 레이블을 만든 결합 논문이라 논문 선택 방식이 첫 번째 확인과 다릅니다. 모델 음성에도 결합이 적지 않아 레이블에는 재현율 쪽 잡음이 남습니다.
+
+**판정 값을 정한 과정:** 두 번째 연구와 같은 검정력 규칙을 판정과 같은 신뢰 수준으로 개발 데이터(T1 학습, T2 평가)에 적용해, k는 {{ V.v('config', 'matching.verdict.k', 'int') }}, B는 같은 입력에 경량 검증 후보 규칙을 적용한 후보 수의 {{ V.v('config', 'matching.verdict.budget_multiple', 'int') }}배로 정했습니다. 판정 전에 기록한 순서 검정력은 재현율·무작위 대비 단계까지 {{ V.v('engine_v3_verdict_T3', 'power_at_choice.S1_S2', 'd2') }}, nPMI 기준선 대비 단계까지 {{ V.v('engine_v3_verdict_T3', 'power_at_choice.S1_S2_S3', 'd2') }}, H 기여 단계까지 {{ V.v('engine_v3_verdict_T3', 'power_at_choice.S1_S2_S3_S4', 'd2') }}입니다. 순서 검정력이 최저 기준 {{ V.v('engine_v3_verdict_T3', 'power_at_choice.minimum', 'd2') }} 미만인 단계의 불통과는 "검정력 부족"으로 해석합니다.
+
+**T3 판정** (T3 실현 결합 {{ V.v('engine_v3_verdict_T3', 'labels.realised_triads', 'int') }}개 중 양성 {{ V.v('engine_v3_verdict_T3', 'labels.label_v3_positive', 'int') }}개, 후보 {{ V.v('engine_v3_verdict_T3', 'labels.pool_candidates', 'int') }}개 중 양성 {{ V.v('engine_v3_verdict_T3', 'labels.pool_positive', 'int') }}개, 학습은 {{ V.v('engine_v3_verdict_T3', 'meta.training_timepoints', 'join') }}). 앞 단계가 통과할 때만 다음 단계를 검정하며, 두 부트스트랩의 하한이 모두 기준을 넘어야 통과입니다.
+
+| 단계 | 통계량 | 점 추정 | 후보 단위 하한 | 용어 블록 하한 | 판정 | 해석 |
+|---|---|---|---|---|---|---|
+| S1 재현율 | 생성기 후보의 재현율 − 경량 검증 후보 규칙의 재현율 | {{ V.v('engine_v3_verdict_T3', 'S1_recall.point', 'd3') }} | {{ V.v('engine_v3_verdict_T3', 'S1_recall.candidate.lower', 'd3') }} | {{ V.v('engine_v3_verdict_T3', 'S1_recall.term_block.lower', 'd3') }} | {{ step_word[matching.S1_recall] }} | {{ reading_word[V.raw('engine_v3_verdict_T3', 'reading.S1_recall')] }} |
+| S2 무작위 대비 | 상위 k 리프트 | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.engine.lift', 'd2') }} | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.S2_lift_ci.candidate.lower', 'd2') }} | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.S2_lift_ci.term_block.lower', 'd2') }} | {{ step_word[matching.S2_random] }} | {{ reading_word[V.raw('engine_v3_verdict_T3', 'reading.S2_random')] }} |
+| S3 nPMI 기준선 대비 | 상위 k 정밀도 차이 | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.engine.precision', 'd3') }} − {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.baseline_precision', 'd3') }} | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.S3_diff_ci.candidate.lower', 'd3') }} | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.S3_diff_ci.term_block.lower', 'd3') }} | {{ step_word[matching.S3_npmi] }} | {{ reading_word[V.raw('engine_v3_verdict_T3', 'reading.S3_npmi')] }} |
+| S4 H 특징의 기여 | 상위 k 정밀도 차이 (H 제외 대비) | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.engine.precision', 'd3') }} − {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.engine_no_h_precision', 'd3') }} | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.S4_diff_ci.candidate.lower', 'd3') }} | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.S4_diff_ci.term_block.lower', 'd3') }} | {{ step_word[matching.S4_h_contribution] }} | {{ reading_word[V.raw('engine_v3_verdict_T3', 'reading.S4_h_contribution')] }} |
+
+**두 번째 연구의 판정과 나란히** (서술용, 레이블 정의와 신뢰 수준이 달라 직접 비교하지 않음):
+
+| 항목 | 두 번째 연구 | 세 번째 연구 |
+|---|---|---|
+| 신뢰 수준 | {{ V.v('config', 'evaluation.ci_level', 'pct1') }} | {{ V.v('config', 'matching.t3_reuse.ci_level', 'pct1') }} |
+| 상위 k 엔진 정밀도 | {{ V.v('engine_verdict_T3', 'by_k.' ~ ek ~ '.engine.precision', 'd3') }} | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.engine.precision', 'd3') }} |
+| 상위 k nPMI 기준선 정밀도 | {{ V.v('engine_verdict_T3', 'by_k.' ~ ek ~ '.baseline_precision', 'd3') }} | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.baseline_precision', 'd3') }} |
+| S3 용어 블록 하한 | {{ V.v('engine_verdict_T3', 'by_k.' ~ ek ~ '.S3_diff_ci.term_block.lower', 'd3') }} | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.S3_diff_ci.term_block.lower', 'd3') }} |
+| S4 용어 블록 하한 | {{ V.v('engine_verdict_T3', 'by_k.' ~ ek ~ '.S4_diff_ci.term_block.lower', 'd3') }} | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ mk ~ '.S4_diff_ci.term_block.lower', 'd3') }} |
+
+**서술용 k** (판정하지 않음):
+
+| k | 정밀도 | 리프트 | 리프트 용어 블록 하한 | nPMI 기준선 정밀도 |
+|---|---|---|---|---|
+{% for dk in V.raw('config', 'matching.verdict.descriptive_k') -%}
+| {{ V.v('config', 'matching.verdict.descriptive_k.' ~ loop.index0, 'int') }} | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ dk ~ '.engine.precision', 'd3') }} | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ dk ~ '.engine.lift', 'd2') }} | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ dk ~ '.S2_lift_ci.term_block.lower', 'd2') }} | {{ V.v('engine_v3_verdict_T3', 'by_k.' ~ dk ~ '.baseline_precision', 'd3') }} |
+{% endfor %}
+**한계:** T3 재사용이라 독립 확증이 아닙니다. 레이블의 두 번째 확인은 결과를 본 뒤 추가한 측정이고, 기법 표기 층의 매칭 정밀도는 불합격 그대로이며, 레이블에는 재현율 쪽 잡음이 남습니다. 개발 중 T2를 여러 번 보았고, 판정은 상위 {{ V.v('config', 'matching.verdict.k', 'int') }}개에 대한 것입니다. 이 엔진으로 처방을 다시 내지 않았습니다.
+
+**사전 등록 변경 기록:** {{ V.v('derived', 'matching_prereg_changes', 'int') }}건, 그중 결과를 확인한 뒤 정한 것은 {{ V.v('derived', 'matching_prereg_changes_after_results', 'int') }}건이며, 고정 이후 추가된 기록은 {{ V.v('derived', 'matching_prereg_rows_after_freeze', 'int') }}건입니다(`preregistration_matching.md` 7절).
 
 ## 부록: 결과 파일의 출처
 
