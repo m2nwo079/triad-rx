@@ -1,0 +1,1289 @@
+{
+  "meta": {
+    "step": "represcription_ranking",
+    "created": "2026-10-11",
+    "git_commit": "21ccc5467ef1a3b8b601cac5a9d5229314a326ab",
+    "preregistration_freeze_commit": "4b924e2",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "feature_sets": [
+      "P",
+      "H",
+      "T",
+      "R"
+    ],
+    "reliability_flag": null,
+    "engine_label": "engine passed the third-study verdict (T3 reused, not an independent confirmation)",
+    "applied_config": {
+      "build_years": 5,
+      "anchor": "data_cutoff",
+      "prescription": {
+        "redundancy_rules": [
+          "D1_same_name_ignoring_spaces",
+          "D2_method_name_within_task_name",
+          "D3_same_type_text_cosine"
+        ],
+        "d3_same_type_cosine_quantile": 0.985,
+        "training": "T1+T2 labels, feature sets by V2 verdict, trees by stratified CV on the combined set",
+        "calibration": "none (ranking only; expected hit rate is the T2 Precision@k of the engine used)"
+      },
+      "dvf": {
+        "population": "prospective_registration",
+        "prospective_file": "prospective/2026-10-04.json",
+        "patent_unit": "pair",
+        "missing_assignee": "exclude_and_report",
+        "f_pair_aggregate": "min",
+        "f_implementation": "terms_with_repo",
+        "percentile_ties": "average",
+        "riskiest": {
+          "missing_axis": "first",
+          "tie_break": "axis_mean_percentile",
+          "axis_order": [
+            "F",
+            "V",
+            "D"
+          ]
+        },
+        "bootstrap": {
+          "method": "poisson",
+          "replicates": 1000,
+          "seed": 20261006
+        }
+      },
+      "briefing": {
+        "top_n": 20,
+        "order": "rank_prescription",
+        "bundle": {
+          "papers_per_pair": 5,
+          "paper_order": "first_date_desc",
+          "abstract": "full",
+          "repos_max": 5,
+          "repo_order": "stars_window_desc",
+          "packages_max": 5,
+          "package_order": "second_half_downloads_desc",
+          "patents_max": 5,
+          "patent_order": "latest_document_date_desc",
+          "tie_break": "evidence_id_asc"
+        },
+        "generation": {
+          "model": "gemini-3.5-flash-lite",
+          "temperature": 1.0,
+          "seed_base": 20261007,
+          "repetitions": 5,
+          "pause_seconds": 4.5,
+          "prompt_version": "v3",
+          "output_language": "en",
+          "max_sentences_per_text": 3
+        }
+      },
+      "evidence": {
+        "patent_window": "build_window",
+        "repo_unit": "pair_evidence_papers",
+        "readme_max_arxiv_ids": 10,
+        "star_window_days": 365,
+        "star_aggregate": "sum",
+        "package_link": "pypi_metadata_urls",
+        "download_growth": "half_over_half",
+        "growth_smoothing": 1,
+        "download_half_weeks": 12
+      },
+      "assignee_classes": {
+        "academic_patterns": [
+          "University",
+          "Universit\u00e4t",
+          "Universit\u00e9",
+          "Universidad",
+          "Universit\u00e0",
+          "College",
+          "Institute of Technology",
+          "Polytechnic",
+          "Academy of Sciences"
+        ],
+        "ambiguous_words": [
+          "Institute",
+          "Research",
+          "Laboratory",
+          "Foundation",
+          "Hospital"
+        ],
+        "company_suffixes": [
+          "Inc",
+          "Corp",
+          "Co.",
+          "Ltd",
+          "LLC",
+          "GmbH",
+          "AG",
+          "S.A.",
+          "K.K.",
+          "Corporation",
+          "Incorporated",
+          "Limited",
+          "Company"
+        ],
+        "codes": {
+          "company_or_academic": [
+            "2",
+            "3"
+          ],
+          "individual": [
+            "4",
+            "5"
+          ],
+          "government": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        },
+        "partial_interest_prefix": "1"
+      },
+      "rl_case": {
+        "term_patterns": [
+          "reinforcement learning",
+          "policy optimization",
+          "actor critic",
+          "actor-critic",
+          "q learning",
+          "q-learning",
+          "deep q",
+          "temporal difference",
+          "markov decision"
+        ],
+        "deep_dive": "all_reps_complete",
+        "scope": "briefing_targets",
+        "tod_dir": "external/tod"
+      }
+    },
+    "represcription_config": {
+      "prereg_file": "preregistration_represcription.md",
+      "run_dir": "represcription",
+      "timepoint": "applied",
+      "engine": {
+        "generator": "engine_reliability.conditional.generator.selected",
+        "model": "engine_reliability.conditional.rediagnosis.models.engine",
+        "budget_multiple": 5,
+        "training": [
+          "T1",
+          "R2",
+          "R3",
+          "T2",
+          "T3"
+        ]
+      },
+      "prescription": {
+        "filter": "applied.prescription.redundancy_rules",
+        "ties": "term_ids",
+        "top_k": 100
+      },
+      "prospective": {
+        "rules": "prospective",
+        "baseline_feature": "P_aa_min"
+      },
+      "downstream": {
+        "rules": "applied (design 6-9)",
+        "patent_matching": "v3 applied vocabulary and refined matching"
+      },
+      "review": {
+        "scope": "applied final terms absent from every reviewed timepoint (matching.engine.reviewed_timepoints)",
+        "common_words_file": "data/review/common_words_applied.csv",
+        "synonyms_file": "data/review/synonyms_applied.csv",
+        "seed": 20261102,
+        "rules": "matching.common_words and matching.synonyms",
+        "combined": {
+          "common_words": "vocab/common_word_decisions_represcription.json",
+          "synonyms": "vocab/synonym_decisions_represcription.json"
+        }
+      },
+      "q1": {
+        "seed": 20261101,
+        "n_sentences": 100,
+        "population": "evidential_fields",
+        "judging": "cited_evidence_only"
+      },
+      "comparison": [
+        "top_k_overlap",
+        "shared_rank_spearman",
+        "dvf_axis_scores",
+        "riskiest_axis",
+        "mvp_type",
+        "concept_insufficient_share",
+        "q1"
+      ],
+      "label": "engine passed the third-study verdict (T3 reused, not an independent confirmation)"
+    },
+    "model_params": {
+      "num_leaves": 7,
+      "min_data_in_leaf": 20,
+      "learning_rate": 0.05,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambda_l2": 1.0
+    },
+    "seeds": [
+      20261011,
+      20261012,
+      20261013,
+      20261014,
+      20261015
+    ],
+    "inputs_sha256": {
+      "applied_features": "9ece356e188311a0e54027172614db673e9e68147c3181cbde4b49aa17d6f032",
+      "applied_vocab": "1bea22b3569578f0c7983d787cef7e401b210ecec4ceec79b0b88065f8ee9e5b",
+      "applied_build": "3c657f0968fba1efa1a1ffa2b73e5f5da6f8290efdf314fd8dc1a7fd9af15147",
+      "features_T1": "895baebe17ef7b2b4a2641873c28ace145321c189505611302a17bcfe2f48366",
+      "features_R2": "5f947ba61555cb949094437c5f07f2ece7ae1714ff68e3e3a5b2a5136de33918",
+      "features_R3": "82d7cdf3a46c8c086ddb473ef5d475cce8a76e4c979a1321c1aac57537107d83",
+      "features_T2": "c67b151b464609051b723dc0844d03db3a1665ae9fd506f34c05c67ec1a15148",
+      "features_T3": "641b776cb55a25f45482304251d816b156648fb33a0e0ddbd29f5d90d5c4ec0b",
+      "labels_T1": "fb6723cf8b5704949f9a14eb04aac16480c2ff2abde09e1066a007f166183215",
+      "labels_R2": "64d3723a8f72004ed54e31c69ab4192202b2705f98d19f7e6c990971ce1717b7",
+      "labels_R3": "c7630ccc81d7a6f9aed492294bb1d1dd913baf5ded9c18501211ec14689389ab",
+      "labels_T2": "a5098acd339ead1bd70a7a3a4ba357ada5fd27c1b149ff472b217660f1bdc795",
+      "labels_T3": "8dcc12bbffc18305046040cb329dc3278289eb848cb2ab6f0aa5ed88f8425455"
+    }
+  },
+  "training": {
+    "timepoints": [
+      "T1",
+      "R2",
+      "R3",
+      "T2",
+      "T3"
+    ],
+    "candidates": 1041085,
+    "positives": 8430,
+    "rounds": 880,
+    "cv_average_precision_mean": 0.04944770539529018,
+    "cv_average_precision_sd": 0.0022965066730103565
+  },
+  "redundancy": {
+    "d3_threshold": 0.9209302648381678,
+    "triads_flagged": 23268,
+    "triads_flagged_by_rule": {
+      "D3": 23268
+    },
+    "candidates": 1156430,
+    "kept": 1133162
+  },
+  "expected_hit_rate_at_k": {
+    "k": 100,
+    "value": 0.1,
+    "source": "T3 precision@100 of the third-study verdict (T3 reused; reference only)"
+  },
+  "top_k_prescription": [
+    {
+      "rank": 1,
+      "rank_engine": 2,
+      "triad": [
+        "M:pc",
+        "T:causal discovery",
+        "T:prediction"
+      ],
+      "score": 0.491580689956398
+    },
+    {
+      "rank": 2,
+      "rank_engine": 3,
+      "triad": [
+        "M:gpt",
+        "T:arithmetic reasoning",
+        "T:code generation"
+      ],
+      "score": 0.4623582917860669
+    },
+    {
+      "rank": 3,
+      "rank_engine": 5,
+      "triad": [
+        "M:normalizing flows",
+        "T:bayesian inference",
+        "T:regression"
+      ],
+      "score": 0.4196145186838021
+    },
+    {
+      "rank": 4,
+      "rank_engine": 6,
+      "triad": [
+        "M:rag",
+        "T:information retrieval",
+        "T:text retrieval"
+      ],
+      "score": 0.3790458956058157
+    },
+    {
+      "rank": 5,
+      "rank_engine": 7,
+      "triad": [
+        "M:proximal policy optimization",
+        "T:deep reinforcement learning",
+        "T:traffic signal control"
+      ],
+      "score": 0.3780439808014127
+    },
+    {
+      "rank": 6,
+      "rank_engine": 8,
+      "triad": [
+        "M:adapter",
+        "T:parameter efficient fine tuning",
+        "T:text generation"
+      ],
+      "score": 0.37769393482774194
+    },
+    {
+      "rank": 7,
+      "rank_engine": 9,
+      "triad": [
+        "M:gaussian process",
+        "T:kolmogorov arnold networks",
+        "T:regression"
+      ],
+      "score": 0.37674700384090515
+    },
+    {
+      "rank": 8,
+      "rank_engine": 10,
+      "triad": [
+        "M:normalizing flows",
+        "T:parameter estimation",
+        "T:regression"
+      ],
+      "score": 0.3759216961789063
+    },
+    {
+      "rank": 9,
+      "rank_engine": 11,
+      "triad": [
+        "M:random search",
+        "T:bayesian optimization",
+        "T:prediction"
+      ],
+      "score": 0.3718074046393185
+    },
+    {
+      "rank": 10,
+      "rank_engine": 13,
+      "triad": [
+        "M:gaussian process",
+        "T:generalization bounds",
+        "T:regression"
+      ],
+      "score": 0.34809261221090365
+    },
+    {
+      "rank": 11,
+      "rank_engine": 14,
+      "triad": [
+        "M:direct preference optimization",
+        "T:instruction following",
+        "T:safety alignment"
+      ],
+      "score": 0.3473861190885288
+    },
+    {
+      "rank": 12,
+      "rank_engine": 15,
+      "triad": [
+        "M:global local attention",
+        "M:transformer",
+        "T:decoder"
+      ],
+      "score": 0.3344675296607117
+    },
+    {
+      "rank": 13,
+      "rank_engine": 16,
+      "triad": [
+        "M:gaussian process",
+        "T:bayesian optimization",
+        "T:operator learning"
+      ],
+      "score": 0.33037961437050645
+    },
+    {
+      "rank": 14,
+      "rank_engine": 17,
+      "triad": [
+        "M:convolutional block attention module",
+        "M:yolov8",
+        "T:classification"
+      ],
+      "score": 0.32232774768944805
+    },
+    {
+      "rank": 15,
+      "rank_engine": 18,
+      "triad": [
+        "M:normalizing flows",
+        "T:density estimation",
+        "T:uncertainty quantification"
+      ],
+      "score": 0.31975868895374404
+    },
+    {
+      "rank": 16,
+      "rank_engine": 19,
+      "triad": [
+        "M:transformer",
+        "T:image to 3d",
+        "T:scene generation"
+      ],
+      "score": 0.3172559566137566
+    },
+    {
+      "rank": 17,
+      "rank_engine": 20,
+      "triad": [
+        "M:direct preference optimization",
+        "T:code generation",
+        "T:instruction following"
+      ],
+      "score": 0.31467206075840853
+    },
+    {
+      "rank": 18,
+      "rank_engine": 21,
+      "triad": [
+        "M:gaussian process",
+        "M:pc",
+        "T:uncertainty quantification"
+      ],
+      "score": 0.3144580046949682
+    },
+    {
+      "rank": 19,
+      "rank_engine": 22,
+      "triad": [
+        "M:vq vae",
+        "T:motion generation",
+        "T:prediction"
+      ],
+      "score": 0.3141168847328969
+    },
+    {
+      "rank": 20,
+      "rank_engine": 23,
+      "triad": [
+        "M:direct preference optimization",
+        "M:proximal policy optimization",
+        "T:decision making"
+      ],
+      "score": 0.3117622602509698
+    },
+    {
+      "rank": 21,
+      "rank_engine": 24,
+      "triad": [
+        "M:grouped query attention",
+        "M:pruning",
+        "T:mixture of experts"
+      ],
+      "score": 0.3102848278539224
+    },
+    {
+      "rank": 22,
+      "rank_engine": 25,
+      "triad": [
+        "M:pruning",
+        "T:language modeling",
+        "T:state space models"
+      ],
+      "score": 0.30928429166264904
+    },
+    {
+      "rank": 23,
+      "rank_engine": 26,
+      "triad": [
+        "M:pruning",
+        "T:mixture of experts",
+        "T:token reduction"
+      ],
+      "score": 0.3080816691782368
+    },
+    {
+      "rank": 24,
+      "rank_engine": 27,
+      "triad": [
+        "M:gpt 4",
+        "T:code generation",
+        "T:mathematical problem solving"
+      ],
+      "score": 0.3078367598385433
+    },
+    {
+      "rank": 25,
+      "rank_engine": 28,
+      "triad": [
+        "M:pc",
+        "T:causal discovery",
+        "T:classification"
+      ],
+      "score": 0.3077055719157161
+    },
+    {
+      "rank": 26,
+      "rank_engine": 29,
+      "triad": [
+        "M:rag",
+        "T:retrieval",
+        "T:text reranking"
+      ],
+      "score": 0.3068315854828118
+    },
+    {
+      "rank": 27,
+      "rank_engine": 30,
+      "triad": [
+        "M:counterfactuals",
+        "T:causal inference",
+        "T:regression"
+      ],
+      "score": 0.3025623396288536
+    },
+    {
+      "rank": 28,
+      "rank_engine": 31,
+      "triad": [
+        "M:consistency models",
+        "T:computational efficiency",
+        "T:denoising"
+      ],
+      "score": 0.29927434212943427
+    },
+    {
+      "rank": 29,
+      "rank_engine": 32,
+      "triad": [
+        "M:adapter",
+        "T:parameter efficient fine tuning",
+        "T:prompt engineering"
+      ],
+      "score": 0.29837304854617985
+    },
+    {
+      "rank": 30,
+      "rank_engine": 33,
+      "triad": [
+        "M:soft actor critic",
+        "T:continuous control",
+        "T:decision making"
+      ],
+      "score": 0.29514822439281796
+    },
+    {
+      "rank": 31,
+      "rank_engine": 34,
+      "triad": [
+        "M:adapter",
+        "T:language modeling",
+        "T:mixture of experts"
+      ],
+      "score": 0.29436908162301395
+    },
+    {
+      "rank": 32,
+      "rank_engine": 35,
+      "triad": [
+        "M:inpainting",
+        "T:image generation",
+        "T:image manipulation"
+      ],
+      "score": 0.29193709953570796
+    },
+    {
+      "rank": 33,
+      "rank_engine": 36,
+      "triad": [
+        "M:adapter",
+        "M:rag",
+        "T:parameter efficient fine tuning"
+      ],
+      "score": 0.2909216627699909
+    },
+    {
+      "rank": 34,
+      "rank_engine": 38,
+      "triad": [
+        "M:linformer",
+        "M:transformer",
+        "T:decoder"
+      ],
+      "score": 0.2849728301486341
+    },
+    {
+      "rank": 35,
+      "rank_engine": 39,
+      "triad": [
+        "M:adapter",
+        "T:meta learning",
+        "T:parameter efficient fine tuning"
+      ],
+      "score": 0.28295286765581135
+    },
+    {
+      "rank": 36,
+      "rank_engine": 40,
+      "triad": [
+        "M:pix2pix",
+        "T:denoising",
+        "T:image generation"
+      ],
+      "score": 0.28198648749312505
+    },
+    {
+      "rank": 37,
+      "rank_engine": 41,
+      "triad": [
+        "M:gpt",
+        "M:rag",
+        "T:claim verification"
+      ],
+      "score": 0.27954543292114964
+    },
+    {
+      "rank": 38,
+      "rank_engine": 42,
+      "triad": [
+        "M:convolutional neural network",
+        "M:long short term memory",
+        "T:computational efficiency"
+      ],
+      "score": 0.2787805786664762
+    },
+    {
+      "rank": 39,
+      "rank_engine": 43,
+      "triad": [
+        "M:attention",
+        "M:gpt 2",
+        "M:sparse autoencoder"
+      ],
+      "score": 0.27869973992570696
+    },
+    {
+      "rank": 40,
+      "rank_engine": 44,
+      "triad": [
+        "M:logistic regression",
+        "T:binary classification",
+        "T:decision making"
+      ],
+      "score": 0.27751263258490055
+    },
+    {
+      "rank": 41,
+      "rank_engine": 46,
+      "triad": [
+        "M:rag",
+        "T:information retrieval",
+        "T:natural questions"
+      ],
+      "score": 0.274660412997108
+    },
+    {
+      "rank": 42,
+      "rank_engine": 47,
+      "triad": [
+        "M:adapter",
+        "T:domain generalization",
+        "T:multi task learning"
+      ],
+      "score": 0.2744281907493814
+    },
+    {
+      "rank": 43,
+      "rank_engine": 49,
+      "triad": [
+        "M:gaussian process",
+        "M:normalizing flows",
+        "T:density estimation"
+      ],
+      "score": 0.2716346755470979
+    },
+    {
+      "rank": 44,
+      "rank_engine": 50,
+      "triad": [
+        "M:attention",
+        "T:4d reconstruction",
+        "T:point tracking"
+      ],
+      "score": 0.27135516048659697
+    },
+    {
+      "rank": 45,
+      "rank_engine": 52,
+      "triad": [
+        "M:segformer",
+        "M:u net",
+        "T:image segmentation"
+      ],
+      "score": 0.26551577063434306
+    },
+    {
+      "rank": 46,
+      "rank_engine": 53,
+      "triad": [
+        "M:glm",
+        "M:rag",
+        "T:question answering"
+      ],
+      "score": 0.26540776190710835
+    },
+    {
+      "rank": 47,
+      "rank_engine": 54,
+      "triad": [
+        "M:deep q network",
+        "M:reinforce",
+        "T:reinforcement learning"
+      ],
+      "score": 0.26498237427993243
+    },
+    {
+      "rank": 48,
+      "rank_engine": 55,
+      "triad": [
+        "M:attention",
+        "M:segment anything model",
+        "T:polyp segmentation"
+      ],
+      "score": 0.26283122677109005
+    },
+    {
+      "rank": 49,
+      "rank_engine": 57,
+      "triad": [
+        "M:adapter",
+        "T:parameter efficient fine tuning",
+        "T:sst 2"
+      ],
+      "score": 0.2604827979665498
+    },
+    {
+      "rank": 50,
+      "rank_engine": 58,
+      "triad": [
+        "M:gpt",
+        "T:chart understanding",
+        "T:question answering"
+      ],
+      "score": 0.2598507923287495
+    },
+    {
+      "rank": 51,
+      "rank_engine": 59,
+      "triad": [
+        "M:proximal policy optimization",
+        "T:continuous control",
+        "T:multi agent reinforcement learning"
+      ],
+      "score": 0.2588248360922191
+    },
+    {
+      "rank": 52,
+      "rank_engine": 61,
+      "triad": [
+        "M:shapley additive explanations",
+        "T:deep learning",
+        "T:feature engineering"
+      ],
+      "score": 0.25311669257092684
+    },
+    {
+      "rank": 53,
+      "rank_engine": 62,
+      "triad": [
+        "M:detr",
+        "M:yolov8",
+        "T:data augmentation"
+      ],
+      "score": 0.252237543006281
+    },
+    {
+      "rank": 54,
+      "rank_engine": 63,
+      "triad": [
+        "M:gpt 4",
+        "T:large language model",
+        "T:red teaming"
+      ],
+      "score": 0.251459238004019
+    },
+    {
+      "rank": 55,
+      "rank_engine": 64,
+      "triad": [
+        "M:transformer",
+        "T:kolmogorov arnold networks",
+        "T:symbolic regression"
+      ],
+      "score": 0.25095517932980316
+    },
+    {
+      "rank": 56,
+      "rank_engine": 65,
+      "triad": [
+        "M:gpt",
+        "T:natural language queries",
+        "T:text to sql"
+      ],
+      "score": 0.25073220684955155
+    },
+    {
+      "rank": 57,
+      "rank_engine": 66,
+      "triad": [
+        "M:adamw",
+        "M:weight decay",
+        "T:large language model"
+      ],
+      "score": 0.25018964409685773
+    },
+    {
+      "rank": 58,
+      "rank_engine": 68,
+      "triad": [
+        "M:pruning",
+        "T:inference optimization",
+        "T:large language model"
+      ],
+      "score": 0.24980714718671115
+    },
+    {
+      "rank": 59,
+      "rank_engine": 69,
+      "triad": [
+        "M:rag",
+        "T:chunking",
+        "T:success rate"
+      ],
+      "score": 0.24940206333016546
+    },
+    {
+      "rank": 60,
+      "rank_engine": 71,
+      "triad": [
+        "M:transformer",
+        "T:humanoid control",
+        "T:motion generation"
+      ],
+      "score": 0.24734855070944223
+    },
+    {
+      "rank": 61,
+      "rank_engine": 72,
+      "triad": [
+        "M:spiking neural networks",
+        "M:transformer",
+        "T:event based vision"
+      ],
+      "score": 0.24623571445109887
+    },
+    {
+      "rank": 62,
+      "rank_engine": 73,
+      "triad": [
+        "M:deep q network",
+        "T:model predictive control",
+        "T:reinforcement learning"
+      ],
+      "score": 0.24514659286172008
+    },
+    {
+      "rank": 63,
+      "rank_engine": 74,
+      "triad": [
+        "M:logistic regression",
+        "T:feature selection",
+        "T:transfer learning"
+      ],
+      "score": 0.24465834130873426
+    },
+    {
+      "rank": 64,
+      "rank_engine": 75,
+      "triad": [
+        "M:inpainting",
+        "T:image editing",
+        "T:video editing"
+      ],
+      "score": 0.24450997111024933
+    },
+    {
+      "rank": 65,
+      "rank_engine": 76,
+      "triad": [
+        "M:adapter",
+        "M:opt",
+        "T:parameter efficient fine tuning"
+      ],
+      "score": 0.2441181450053041
+    },
+    {
+      "rank": 66,
+      "rank_engine": 77,
+      "triad": [
+        "M:attention",
+        "M:spl",
+        "T:vision and language navigation"
+      ],
+      "score": 0.24323976531613925
+    },
+    {
+      "rank": 67,
+      "rank_engine": 78,
+      "triad": [
+        "M:gaussian process",
+        "T:bayesian optimization",
+        "T:density estimation"
+      ],
+      "score": 0.24307194779340974
+    },
+    {
+      "rank": 68,
+      "rank_engine": 79,
+      "triad": [
+        "M:gpt",
+        "T:knowledge editing",
+        "T:world knowledge"
+      ],
+      "score": 0.24178961568993468
+    },
+    {
+      "rank": 69,
+      "rank_engine": 80,
+      "triad": [
+        "M:gaussian process",
+        "T:regression",
+        "T:tensor decomposition"
+      ],
+      "score": 0.24112521400198075
+    },
+    {
+      "rank": 70,
+      "rank_engine": 81,
+      "triad": [
+        "M:adapter",
+        "T:model optimization",
+        "T:parameter efficient fine tuning"
+      ],
+      "score": 0.2407974606012976
+    },
+    {
+      "rank": 71,
+      "rank_engine": 82,
+      "triad": [
+        "M:long short term memory",
+        "M:transformer",
+        "T:demand forecasting"
+      ],
+      "score": 0.2384183792256124
+    },
+    {
+      "rank": 72,
+      "rank_engine": 83,
+      "triad": [
+        "M:gpt",
+        "T:dialogue",
+        "T:persuasion strategies"
+      ],
+      "score": 0.23787781329403165
+    },
+    {
+      "rank": 73,
+      "rank_engine": 84,
+      "triad": [
+        "M:pruning",
+        "M:softmax",
+        "T:mixture of experts"
+      ],
+      "score": 0.23683617590613223
+    },
+    {
+      "rank": 74,
+      "rank_engine": 85,
+      "triad": [
+        "M:pc",
+        "T:causal discovery",
+        "T:deep learning"
+      ],
+      "score": 0.23666128576392897
+    },
+    {
+      "rank": 75,
+      "rank_engine": 86,
+      "triad": [
+        "M:attention",
+        "T:camera pose estimation",
+        "T:visual localization"
+      ],
+      "score": 0.23657956836155228
+    },
+    {
+      "rank": 76,
+      "rank_engine": 87,
+      "triad": [
+        "M:byte pair encoding",
+        "T:language modeling",
+        "T:large language model"
+      ],
+      "score": 0.23604718680550513
+    },
+    {
+      "rank": 77,
+      "rank_engine": 88,
+      "triad": [
+        "M:swin transformer",
+        "M:u net",
+        "T:computational efficiency"
+      ],
+      "score": 0.235007631096054
+    },
+    {
+      "rank": 78,
+      "rank_engine": 89,
+      "triad": [
+        "M:lookahead",
+        "M:proximal policy optimization",
+        "T:deep reinforcement learning"
+      ],
+      "score": 0.23489275432660187
+    },
+    {
+      "rank": 79,
+      "rank_engine": 90,
+      "triad": [
+        "M:pruning",
+        "T:model compression",
+        "T:vector quantization"
+      ],
+      "score": 0.2346035041900397
+    },
+    {
+      "rank": 80,
+      "rank_engine": 91,
+      "triad": [
+        "M:rag",
+        "T:answer generation",
+        "T:code generation"
+      ],
+      "score": 0.23433178990420908
+    },
+    {
+      "rank": 81,
+      "rank_engine": 93,
+      "triad": [
+        "M:rag",
+        "T:instruction following",
+        "T:response generation"
+      ],
+      "score": 0.2331821359923789
+    },
+    {
+      "rank": 82,
+      "rank_engine": 94,
+      "triad": [
+        "M:attention",
+        "T:low rank compression",
+        "T:model compression"
+      ],
+      "score": 0.23236318355754268
+    },
+    {
+      "rank": 83,
+      "rank_engine": 95,
+      "triad": [
+        "M:transformer",
+        "T:chunking",
+        "T:re ranking"
+      ],
+      "score": 0.23170525335223272
+    },
+    {
+      "rank": 84,
+      "rank_engine": 96,
+      "triad": [
+        "M:rag",
+        "T:image retrieval",
+        "T:re ranking"
+      ],
+      "score": 0.23087786638096594
+    },
+    {
+      "rank": 85,
+      "rank_engine": 97,
+      "triad": [
+        "M:inpainting",
+        "T:image editing",
+        "T:virtual try on"
+      ],
+      "score": 0.22996674976830045
+    },
+    {
+      "rank": 86,
+      "rank_engine": 98,
+      "triad": [
+        "M:adapter",
+        "M:u net",
+        "T:computational efficiency"
+      ],
+      "score": 0.2298688785315203
+    },
+    {
+      "rank": 87,
+      "rank_engine": 99,
+      "triad": [
+        "M:attention",
+        "M:convlstm",
+        "M:u net"
+      ],
+      "score": 0.22962769295944785
+    },
+    {
+      "rank": 88,
+      "rank_engine": 100,
+      "triad": [
+        "M:gpt 4",
+        "T:arithmetic reasoning",
+        "T:code generation"
+      ],
+      "score": 0.22951126524921123
+    },
+    {
+      "rank": 89,
+      "rank_engine": 101,
+      "triad": [
+        "M:logistic regression",
+        "T:binary classification",
+        "T:transfer learning"
+      ],
+      "score": 0.22895680777830757
+    },
+    {
+      "rank": 90,
+      "rank_engine": 102,
+      "triad": [
+        "M:transformer",
+        "M:yolov8",
+        "T:small object detection"
+      ],
+      "score": 0.2289249928529585
+    },
+    {
+      "rank": 91,
+      "rank_engine": 103,
+      "triad": [
+        "M:glm",
+        "M:gpt 4",
+        "T:large language model"
+      ],
+      "score": 0.22800926374654606
+    },
+    {
+      "rank": 92,
+      "rank_engine": 104,
+      "triad": [
+        "M:attention sinks",
+        "M:softmax",
+        "T:prediction"
+      ],
+      "score": 0.22786474013570523
+    },
+    {
+      "rank": 93,
+      "rank_engine": 106,
+      "triad": [
+        "M:rag",
+        "T:answer generation",
+        "T:in context learning"
+      ],
+      "score": 0.2274337940039109
+    },
+    {
+      "rank": 94,
+      "rank_engine": 107,
+      "triad": [
+        "M:experience replay",
+        "T:continual learning",
+        "T:parameter efficient fine tuning"
+      ],
+      "score": 0.2267191392007198
+    },
+    {
+      "rank": 95,
+      "rank_engine": 108,
+      "triad": [
+        "M:adamw",
+        "M:weight decay",
+        "T:representation learning"
+      ],
+      "score": 0.22597444293697552
+    },
+    {
+      "rank": 96,
+      "rank_engine": 109,
+      "triad": [
+        "M:adapter",
+        "T:parameter efficient fine tuning",
+        "T:test time adaptation"
+      ],
+      "score": 0.2259221078655856
+    },
+    {
+      "rank": 97,
+      "rank_engine": 111,
+      "triad": [
+        "M:deeplabv3",
+        "M:segment anything model",
+        "T:image segmentation"
+      ],
+      "score": 0.22502519582667208
+    },
+    {
+      "rank": 98,
+      "rank_engine": 113,
+      "triad": [
+        "M:gpt",
+        "T:semantic retrieval",
+        "T:semantic similarity"
+      ],
+      "score": 0.22220478840159513
+    },
+    {
+      "rank": 99,
+      "rank_engine": 114,
+      "triad": [
+        "M:attention",
+        "T:action understanding",
+        "T:video understanding"
+      ],
+      "score": 0.2215762444191462
+    },
+    {
+      "rank": 100,
+      "rank_engine": 115,
+      "triad": [
+        "M:transformer",
+        "T:4d reconstruction",
+        "T:novel view synthesis"
+      ],
+      "score": 0.221127263696616
+    }
+  ]
+}

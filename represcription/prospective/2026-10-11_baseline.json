@@ -1,0 +1,1161 @@
+{
+  "meta": {
+    "step": "represcription_ranking",
+    "created": "2026-10-11",
+    "git_commit": "21ccc5467ef1a3b8b601cac5a9d5229314a326ab",
+    "preregistration_freeze_commit": "4b924e2",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "feature_sets": [
+      "P",
+      "H",
+      "T",
+      "R"
+    ],
+    "reliability_flag": null,
+    "engine_label": "engine passed the third-study verdict (T3 reused, not an independent confirmation)",
+    "applied_config": {
+      "build_years": 5,
+      "anchor": "data_cutoff",
+      "prescription": {
+        "redundancy_rules": [
+          "D1_same_name_ignoring_spaces",
+          "D2_method_name_within_task_name",
+          "D3_same_type_text_cosine"
+        ],
+        "d3_same_type_cosine_quantile": 0.985,
+        "training": "T1+T2 labels, feature sets by V2 verdict, trees by stratified CV on the combined set",
+        "calibration": "none (ranking only; expected hit rate is the T2 Precision@k of the engine used)"
+      },
+      "dvf": {
+        "population": "prospective_registration",
+        "prospective_file": "prospective/2026-10-04.json",
+        "patent_unit": "pair",
+        "missing_assignee": "exclude_and_report",
+        "f_pair_aggregate": "min",
+        "f_implementation": "terms_with_repo",
+        "percentile_ties": "average",
+        "riskiest": {
+          "missing_axis": "first",
+          "tie_break": "axis_mean_percentile",
+          "axis_order": [
+            "F",
+            "V",
+            "D"
+          ]
+        },
+        "bootstrap": {
+          "method": "poisson",
+          "replicates": 1000,
+          "seed": 20261006
+        }
+      },
+      "briefing": {
+        "top_n": 20,
+        "order": "rank_prescription",
+        "bundle": {
+          "papers_per_pair": 5,
+          "paper_order": "first_date_desc",
+          "abstract": "full",
+          "repos_max": 5,
+          "repo_order": "stars_window_desc",
+          "packages_max": 5,
+          "package_order": "second_half_downloads_desc",
+          "patents_max": 5,
+          "patent_order": "latest_document_date_desc",
+          "tie_break": "evidence_id_asc"
+        },
+        "generation": {
+          "model": "gemini-3.5-flash-lite",
+          "temperature": 1.0,
+          "seed_base": 20261007,
+          "repetitions": 5,
+          "pause_seconds": 4.5,
+          "prompt_version": "v3",
+          "output_language": "en",
+          "max_sentences_per_text": 3
+        }
+      },
+      "evidence": {
+        "patent_window": "build_window",
+        "repo_unit": "pair_evidence_papers",
+        "readme_max_arxiv_ids": 10,
+        "star_window_days": 365,
+        "star_aggregate": "sum",
+        "package_link": "pypi_metadata_urls",
+        "download_growth": "half_over_half",
+        "growth_smoothing": 1,
+        "download_half_weeks": 12
+      },
+      "assignee_classes": {
+        "academic_patterns": [
+          "University",
+          "Universit\u00e4t",
+          "Universit\u00e9",
+          "Universidad",
+          "Universit\u00e0",
+          "College",
+          "Institute of Technology",
+          "Polytechnic",
+          "Academy of Sciences"
+        ],
+        "ambiguous_words": [
+          "Institute",
+          "Research",
+          "Laboratory",
+          "Foundation",
+          "Hospital"
+        ],
+        "company_suffixes": [
+          "Inc",
+          "Corp",
+          "Co.",
+          "Ltd",
+          "LLC",
+          "GmbH",
+          "AG",
+          "S.A.",
+          "K.K.",
+          "Corporation",
+          "Incorporated",
+          "Limited",
+          "Company"
+        ],
+        "codes": {
+          "company_or_academic": [
+            "2",
+            "3"
+          ],
+          "individual": [
+            "4",
+            "5"
+          ],
+          "government": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        },
+        "partial_interest_prefix": "1"
+      },
+      "rl_case": {
+        "term_patterns": [
+          "reinforcement learning",
+          "policy optimization",
+          "actor critic",
+          "actor-critic",
+          "q learning",
+          "q-learning",
+          "deep q",
+          "temporal difference",
+          "markov decision"
+        ],
+        "deep_dive": "all_reps_complete",
+        "scope": "briefing_targets",
+        "tod_dir": "external/tod"
+      }
+    },
+    "represcription_config": {
+      "prereg_file": "preregistration_represcription.md",
+      "run_dir": "represcription",
+      "timepoint": "applied",
+      "engine": {
+        "generator": "engine_reliability.conditional.generator.selected",
+        "model": "engine_reliability.conditional.rediagnosis.models.engine",
+        "budget_multiple": 5,
+        "training": [
+          "T1",
+          "R2",
+          "R3",
+          "T2",
+          "T3"
+        ]
+      },
+      "prescription": {
+        "filter": "applied.prescription.redundancy_rules",
+        "ties": "term_ids",
+        "top_k": 100
+      },
+      "prospective": {
+        "rules": "prospective",
+        "baseline_feature": "P_aa_min"
+      },
+      "downstream": {
+        "rules": "applied (design 6-9)",
+        "patent_matching": "v3 applied vocabulary and refined matching"
+      },
+      "review": {
+        "scope": "applied final terms absent from every reviewed timepoint (matching.engine.reviewed_timepoints)",
+        "common_words_file": "data/review/common_words_applied.csv",
+        "synonyms_file": "data/review/synonyms_applied.csv",
+        "seed": 20261102,
+        "rules": "matching.common_words and matching.synonyms",
+        "combined": {
+          "common_words": "vocab/common_word_decisions_represcription.json",
+          "synonyms": "vocab/synonym_decisions_represcription.json"
+        }
+      },
+      "q1": {
+        "seed": 20261101,
+        "n_sentences": 100,
+        "population": "evidential_fields",
+        "judging": "cited_evidence_only"
+      },
+      "comparison": [
+        "top_k_overlap",
+        "shared_rank_spearman",
+        "dvf_axis_scores",
+        "riskiest_axis",
+        "mvp_type",
+        "concept_insufficient_share",
+        "q1"
+      ],
+      "label": "engine passed the third-study verdict (T3 reused, not an independent confirmation)"
+    },
+    "model_params": {
+      "num_leaves": 7,
+      "min_data_in_leaf": 20,
+      "learning_rate": 0.05,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambda_l2": 1.0
+    },
+    "seeds": [
+      20261011,
+      20261012,
+      20261013,
+      20261014,
+      20261015
+    ],
+    "inputs_sha256": {
+      "applied_features": "9ece356e188311a0e54027172614db673e9e68147c3181cbde4b49aa17d6f032",
+      "applied_vocab": "1bea22b3569578f0c7983d787cef7e401b210ecec4ceec79b0b88065f8ee9e5b",
+      "applied_build": "3c657f0968fba1efa1a1ffa2b73e5f5da6f8290efdf314fd8dc1a7fd9af15147",
+      "features_T1": "895baebe17ef7b2b4a2641873c28ace145321c189505611302a17bcfe2f48366",
+      "features_R2": "5f947ba61555cb949094437c5f07f2ece7ae1714ff68e3e3a5b2a5136de33918",
+      "features_R3": "82d7cdf3a46c8c086ddb473ef5d475cce8a76e4c979a1321c1aac57537107d83",
+      "features_T2": "c67b151b464609051b723dc0844d03db3a1665ae9fd506f34c05c67ec1a15148",
+      "features_T3": "641b776cb55a25f45482304251d816b156648fb33a0e0ddbd29f5d90d5c4ec0b",
+      "labels_T1": "fb6723cf8b5704949f9a14eb04aac16480c2ff2abde09e1066a007f166183215",
+      "labels_R2": "64d3723a8f72004ed54e31c69ab4192202b2705f98d19f7e6c990971ce1717b7",
+      "labels_R3": "c7630ccc81d7a6f9aed492294bb1d1dd913baf5ded9c18501211ec14689389ab",
+      "labels_T2": "a5098acd339ead1bd70a7a3a4ba357ada5fd27c1b149ff472b217660f1bdc795",
+      "labels_T3": "8dcc12bbffc18305046040cb329dc3278289eb848cb2ab6f0aa5ed88f8425455"
+    }
+  },
+  "baseline_top_k": [
+    {
+      "rank": 1,
+      "triad": [
+        "M:convolution",
+        "T:computational efficiency",
+        "T:contrastive learning"
+      ],
+      "P_aa_min": 47.23866066345475
+    },
+    {
+      "rank": 2,
+      "triad": [
+        "M:convolution",
+        "T:contrastive learning",
+        "T:image classification"
+      ],
+      "P_aa_min": 46.30738574178842
+    },
+    {
+      "rank": 3,
+      "triad": [
+        "M:pruning",
+        "T:decoder",
+        "T:representation learning"
+      ],
+      "P_aa_min": 45.500151970077106
+    },
+    {
+      "rank": 4,
+      "triad": [
+        "M:convolutional neural network",
+        "T:contrastive learning",
+        "T:transfer learning"
+      ],
+      "P_aa_min": 45.255017354564586
+    },
+    {
+      "rank": 5,
+      "triad": [
+        "M:bert",
+        "T:contrastive learning",
+        "T:translation"
+      ],
+      "P_aa_min": 45.02226603044915
+    },
+    {
+      "rank": 6,
+      "triad": [
+        "M:gpt",
+        "T:clustering",
+        "T:contrastive learning"
+      ],
+      "P_aa_min": 43.93102199286774
+    },
+    {
+      "rank": 7,
+      "triad": [
+        "M:gpt",
+        "T:representation learning",
+        "T:retrieval"
+      ],
+      "P_aa_min": 43.85634126013609
+    },
+    {
+      "rank": 8,
+      "triad": [
+        "M:convolution",
+        "T:data augmentation",
+        "T:object detection"
+      ],
+      "P_aa_min": 43.83331093824055
+    },
+    {
+      "rank": 9,
+      "triad": [
+        "M:convolution",
+        "T:regression",
+        "T:transfer learning"
+      ],
+      "P_aa_min": 43.604613987303146
+    },
+    {
+      "rank": 10,
+      "triad": [
+        "M:convolution",
+        "T:representation learning",
+        "T:transfer learning"
+      ],
+      "P_aa_min": 43.604613987303146
+    },
+    {
+      "rank": 11,
+      "triad": [
+        "M:convolution",
+        "T:self supervised learning",
+        "T:transfer learning"
+      ],
+      "P_aa_min": 43.604613987303146
+    },
+    {
+      "rank": 12,
+      "triad": [
+        "M:transformer",
+        "T:clustering",
+        "T:federated learning"
+      ],
+      "P_aa_min": 43.52898889438147
+    },
+    {
+      "rank": 13,
+      "triad": [
+        "M:pruning",
+        "T:computational efficiency",
+        "T:data augmentation"
+      ],
+      "P_aa_min": 43.27439747834368
+    },
+    {
+      "rank": 14,
+      "triad": [
+        "M:pruning",
+        "T:decision making",
+        "T:image classification"
+      ],
+      "P_aa_min": 42.90817414815543
+    },
+    {
+      "rank": 15,
+      "triad": [
+        "M:pruning",
+        "T:denoising",
+        "T:image classification"
+      ],
+      "P_aa_min": 41.874058393715515
+    },
+    {
+      "rank": 16,
+      "triad": [
+        "M:bert",
+        "T:representation learning",
+        "T:translation"
+      ],
+      "P_aa_min": 40.984220430063694
+    },
+    {
+      "rank": 17,
+      "triad": [
+        "M:pruning",
+        "T:knowledge distillation",
+        "T:representation learning"
+      ],
+      "P_aa_min": 40.43443262898489
+    },
+    {
+      "rank": 18,
+      "triad": [
+        "M:convolution",
+        "T:autonomous driving",
+        "T:denoising"
+      ],
+      "P_aa_min": 40.348262229826275
+    },
+    {
+      "rank": 19,
+      "triad": [
+        "M:pruning",
+        "T:computational efficiency",
+        "T:translation"
+      ],
+      "P_aa_min": 40.06975180111842
+    },
+    {
+      "rank": 20,
+      "triad": [
+        "M:convolution",
+        "T:data augmentation",
+        "T:knowledge distillation"
+      ],
+      "P_aa_min": 39.983114836063116
+    },
+    {
+      "rank": 21,
+      "triad": [
+        "M:convolution",
+        "T:knowledge distillation",
+        "T:self supervised learning"
+      ],
+      "P_aa_min": 39.983114836063116
+    },
+    {
+      "rank": 22,
+      "triad": [
+        "M:convolution",
+        "T:knowledge distillation",
+        "T:transfer learning"
+      ],
+      "P_aa_min": 39.983114836063116
+    },
+    {
+      "rank": 23,
+      "triad": [
+        "M:pruning",
+        "T:representation learning",
+        "T:transfer learning"
+      ],
+      "P_aa_min": 39.68961127503121
+    },
+    {
+      "rank": 24,
+      "triad": [
+        "M:vision transformer",
+        "T:contrastive learning",
+        "T:regression"
+      ],
+      "P_aa_min": 39.526748008479466
+    },
+    {
+      "rank": 25,
+      "triad": [
+        "M:vision transformer",
+        "T:data augmentation",
+        "T:regression"
+      ],
+      "P_aa_min": 39.526748008479466
+    },
+    {
+      "rank": 26,
+      "triad": [
+        "M:vision transformer",
+        "T:computational efficiency",
+        "T:data augmentation"
+      ],
+      "P_aa_min": 39.45840754404646
+    },
+    {
+      "rank": 27,
+      "triad": [
+        "M:vision transformer",
+        "T:computational efficiency",
+        "T:regression"
+      ],
+      "P_aa_min": 39.45840754404646
+    },
+    {
+      "rank": 28,
+      "triad": [
+        "M:pruning",
+        "T:computational efficiency",
+        "T:contrastive learning"
+      ],
+      "P_aa_min": 39.368774618317914
+    },
+    {
+      "rank": 29,
+      "triad": [
+        "M:pruning",
+        "T:contrastive learning",
+        "T:knowledge distillation"
+      ],
+      "P_aa_min": 39.368774618317914
+    },
+    {
+      "rank": 30,
+      "triad": [
+        "M:pruning",
+        "T:image classification",
+        "T:translation"
+      ],
+      "P_aa_min": 39.277501446859496
+    },
+    {
+      "rank": 31,
+      "triad": [
+        "M:convolutional neural network",
+        "T:contrastive learning",
+        "T:time series"
+      ],
+      "P_aa_min": 39.056960484997255
+    },
+    {
+      "rank": 32,
+      "triad": [
+        "M:convolutional neural network",
+        "T:image classification",
+        "T:time series"
+      ],
+      "P_aa_min": 39.056960484997255
+    },
+    {
+      "rank": 33,
+      "triad": [
+        "M:convolutional neural network",
+        "T:self supervised learning",
+        "T:time series"
+      ],
+      "P_aa_min": 39.056960484997255
+    },
+    {
+      "rank": 34,
+      "triad": [
+        "M:convolution",
+        "T:denoising",
+        "T:knowledge distillation"
+      ],
+      "P_aa_min": 38.94957698006081
+    },
+    {
+      "rank": 35,
+      "triad": [
+        "M:convolution",
+        "T:image classification",
+        "T:retrieval"
+      ],
+      "P_aa_min": 38.86271330510797
+    },
+    {
+      "rank": 36,
+      "triad": [
+        "M:convolution",
+        "T:computational efficiency",
+        "T:reinforcement learning"
+      ],
+      "P_aa_min": 38.861197841568526
+    },
+    {
+      "rank": 37,
+      "triad": [
+        "M:adapter",
+        "T:data augmentation",
+        "T:representation learning"
+      ],
+      "P_aa_min": 38.49054811794695
+    },
+    {
+      "rank": 38,
+      "triad": [
+        "M:convolutional neural network",
+        "T:denoising",
+        "T:object detection"
+      ],
+      "P_aa_min": 38.06388078387716
+    },
+    {
+      "rank": 39,
+      "triad": [
+        "M:convolutional neural network",
+        "T:denoising",
+        "T:representation learning"
+      ],
+      "P_aa_min": 38.06388078387716
+    },
+    {
+      "rank": 40,
+      "triad": [
+        "M:convolutional neural network",
+        "T:denoising",
+        "T:self supervised learning"
+      ],
+      "P_aa_min": 38.06388078387716
+    },
+    {
+      "rank": 41,
+      "triad": [
+        "M:convolutional neural network",
+        "T:denoising",
+        "T:time series"
+      ],
+      "P_aa_min": 38.06388078387716
+    },
+    {
+      "rank": 42,
+      "triad": [
+        "M:convolution",
+        "T:autonomous driving",
+        "T:transfer learning"
+      ],
+      "P_aa_min": 37.834715122432065
+    },
+    {
+      "rank": 43,
+      "triad": [
+        "M:vision transformer",
+        "T:clustering",
+        "T:transfer learning"
+      ],
+      "P_aa_min": 37.73056743706318
+    },
+    {
+      "rank": 44,
+      "triad": [
+        "M:convolutional neural network",
+        "T:data augmentation",
+        "T:translation"
+      ],
+      "P_aa_min": 37.36268003255595
+    },
+    {
+      "rank": 45,
+      "triad": [
+        "M:adapter",
+        "T:data augmentation",
+        "T:denoising"
+      ],
+      "P_aa_min": 37.21343274736908
+    },
+    {
+      "rank": 46,
+      "triad": [
+        "M:convolutional neural network",
+        "T:contrastive learning",
+        "T:retrieval"
+      ],
+      "P_aa_min": 37.13580402762053
+    },
+    {
+      "rank": 47,
+      "triad": [
+        "M:convolutional neural network",
+        "T:data augmentation",
+        "T:retrieval"
+      ],
+      "P_aa_min": 37.13580402762053
+    },
+    {
+      "rank": 48,
+      "triad": [
+        "M:convolutional neural network",
+        "T:retrieval",
+        "T:transfer learning"
+      ],
+      "P_aa_min": 37.13580402762053
+    },
+    {
+      "rank": 49,
+      "triad": [
+        "M:convolution",
+        "T:autonomous driving",
+        "T:translation"
+      ],
+      "P_aa_min": 36.507026104940536
+    },
+    {
+      "rank": 50,
+      "triad": [
+        "M:convolution",
+        "T:data augmentation",
+        "T:translation"
+      ],
+      "P_aa_min": 36.507026104940536
+    },
+    {
+      "rank": 51,
+      "triad": [
+        "M:convolution",
+        "T:knowledge distillation",
+        "T:translation"
+      ],
+      "P_aa_min": 36.507026104940536
+    },
+    {
+      "rank": 52,
+      "triad": [
+        "M:convolution",
+        "T:denoising",
+        "T:semantic segmentation"
+      ],
+      "P_aa_min": 36.474743669262246
+    },
+    {
+      "rank": 53,
+      "triad": [
+        "M:convolution",
+        "T:time series",
+        "T:translation"
+      ],
+      "P_aa_min": 36.463386554481716
+    },
+    {
+      "rank": 54,
+      "triad": [
+        "M:pruning",
+        "T:autonomous driving",
+        "T:image classification"
+      ],
+      "P_aa_min": 36.099698884542185
+    },
+    {
+      "rank": 55,
+      "triad": [
+        "M:bert",
+        "T:computational efficiency",
+        "T:contrastive learning"
+      ],
+      "P_aa_min": 36.0624714709971
+    },
+    {
+      "rank": 56,
+      "triad": [
+        "M:bert",
+        "T:computational efficiency",
+        "T:transfer learning"
+      ],
+      "P_aa_min": 36.0624714709971
+    },
+    {
+      "rank": 57,
+      "triad": [
+        "M:convolutional neural network",
+        "T:decoder",
+        "T:knowledge distillation"
+      ],
+      "P_aa_min": 35.907875301367014
+    },
+    {
+      "rank": 58,
+      "triad": [
+        "M:convolutional neural network",
+        "T:knowledge distillation",
+        "T:transfer learning"
+      ],
+      "P_aa_min": 35.907875301367014
+    },
+    {
+      "rank": 59,
+      "triad": [
+        "M:convolutional neural network",
+        "T:knowledge distillation",
+        "T:translation"
+      ],
+      "P_aa_min": 35.907875301367014
+    },
+    {
+      "rank": 60,
+      "triad": [
+        "M:convolution",
+        "T:autonomous driving",
+        "T:time series"
+      ],
+      "P_aa_min": 35.852261919297426
+    },
+    {
+      "rank": 61,
+      "triad": [
+        "M:transformer",
+        "T:autonomous driving",
+        "T:time series"
+      ],
+      "P_aa_min": 35.852261919297426
+    },
+    {
+      "rank": 62,
+      "triad": [
+        "M:pruning",
+        "M:transformer",
+        "T:federated learning"
+      ],
+      "P_aa_min": 35.77009164380627
+    },
+    {
+      "rank": 63,
+      "triad": [
+        "M:pruning",
+        "T:decoder",
+        "T:federated learning"
+      ],
+      "P_aa_min": 35.77009164380627
+    },
+    {
+      "rank": 64,
+      "triad": [
+        "M:pruning",
+        "T:denoising",
+        "T:federated learning"
+      ],
+      "P_aa_min": 35.77009164380627
+    },
+    {
+      "rank": 65,
+      "triad": [
+        "M:pruning",
+        "T:federated learning",
+        "T:large language model"
+      ],
+      "P_aa_min": 35.77009164380627
+    },
+    {
+      "rank": 66,
+      "triad": [
+        "M:adapter",
+        "M:attention",
+        "T:clustering"
+      ],
+      "P_aa_min": 35.744314338698224
+    },
+    {
+      "rank": 67,
+      "triad": [
+        "M:adapter",
+        "T:classification",
+        "T:clustering"
+      ],
+      "P_aa_min": 35.744314338698224
+    },
+    {
+      "rank": 68,
+      "triad": [
+        "M:adapter",
+        "T:clustering",
+        "T:contrastive learning"
+      ],
+      "P_aa_min": 35.744314338698224
+    },
+    {
+      "rank": 69,
+      "triad": [
+        "M:adapter",
+        "T:clustering",
+        "T:decoder"
+      ],
+      "P_aa_min": 35.744314338698224
+    },
+    {
+      "rank": 70,
+      "triad": [
+        "M:adapter",
+        "T:clustering",
+        "T:retrieval"
+      ],
+      "P_aa_min": 35.744314338698224
+    },
+    {
+      "rank": 71,
+      "triad": [
+        "M:pruning",
+        "T:clustering",
+        "T:time series"
+      ],
+      "P_aa_min": 35.74417540551082
+    },
+    {
+      "rank": 72,
+      "triad": [
+        "M:pruning",
+        "T:federated learning",
+        "T:retrieval"
+      ],
+      "P_aa_min": 35.58749570251793
+    },
+    {
+      "rank": 73,
+      "triad": [
+        "M:adapter",
+        "T:data augmentation",
+        "T:translation"
+      ],
+      "P_aa_min": 35.291555877196956
+    },
+    {
+      "rank": 74,
+      "triad": [
+        "M:adapter",
+        "T:representation learning",
+        "T:translation"
+      ],
+      "P_aa_min": 35.291555877196956
+    },
+    {
+      "rank": 75,
+      "triad": [
+        "M:convolutional neural network",
+        "T:computational efficiency",
+        "T:domain adaptation"
+      ],
+      "P_aa_min": 35.251614696318654
+    },
+    {
+      "rank": 76,
+      "triad": [
+        "M:convolutional neural network",
+        "T:contrastive learning",
+        "T:domain adaptation"
+      ],
+      "P_aa_min": 35.251614696318654
+    },
+    {
+      "rank": 77,
+      "triad": [
+        "M:convolutional neural network",
+        "T:data augmentation",
+        "T:domain adaptation"
+      ],
+      "P_aa_min": 35.251614696318654
+    },
+    {
+      "rank": 78,
+      "triad": [
+        "M:convolutional neural network",
+        "T:decoder",
+        "T:domain adaptation"
+      ],
+      "P_aa_min": 35.251614696318654
+    },
+    {
+      "rank": 79,
+      "triad": [
+        "M:convolutional neural network",
+        "T:denoising",
+        "T:domain adaptation"
+      ],
+      "P_aa_min": 35.251614696318654
+    },
+    {
+      "rank": 80,
+      "triad": [
+        "M:convolutional neural network",
+        "T:domain adaptation",
+        "T:knowledge distillation"
+      ],
+      "P_aa_min": 35.251614696318654
+    },
+    {
+      "rank": 81,
+      "triad": [
+        "M:convolutional neural network",
+        "T:computational efficiency",
+        "T:semantic segmentation"
+      ],
+      "P_aa_min": 35.18596581620864
+    },
+    {
+      "rank": 82,
+      "triad": [
+        "M:convolutional neural network",
+        "T:contrastive learning",
+        "T:semantic segmentation"
+      ],
+      "P_aa_min": 35.18596581620864
+    },
+    {
+      "rank": 83,
+      "triad": [
+        "M:convolutional neural network",
+        "T:denoising",
+        "T:semantic segmentation"
+      ],
+      "P_aa_min": 35.18596581620864
+    },
+    {
+      "rank": 84,
+      "triad": [
+        "M:convolutional neural network",
+        "T:self supervised learning",
+        "T:semantic segmentation"
+      ],
+      "P_aa_min": 35.18596581620864
+    },
+    {
+      "rank": 85,
+      "triad": [
+        "M:convolutional neural network",
+        "T:semantic segmentation",
+        "T:translation"
+      ],
+      "P_aa_min": 35.18596581620864
+    },
+    {
+      "rank": 86,
+      "triad": [
+        "M:pruning",
+        "T:data augmentation",
+        "T:self supervised learning"
+      ],
+      "P_aa_min": 35.10134881208429
+    },
+    {
+      "rank": 87,
+      "triad": [
+        "M:pruning",
+        "T:decoder",
+        "T:self supervised learning"
+      ],
+      "P_aa_min": 35.10134881208429
+    },
+    {
+      "rank": 88,
+      "triad": [
+        "M:vision transformer",
+        "T:clustering",
+        "T:knowledge distillation"
+      ],
+      "P_aa_min": 35.070507889097776
+    },
+    {
+      "rank": 89,
+      "triad": [
+        "M:vision transformer",
+        "T:contrastive learning",
+        "T:knowledge distillation"
+      ],
+      "P_aa_min": 35.070507889097776
+    },
+    {
+      "rank": 90,
+      "triad": [
+        "M:vision transformer",
+        "T:decision making",
+        "T:knowledge distillation"
+      ],
+      "P_aa_min": 35.070507889097776
+    },
+    {
+      "rank": 91,
+      "triad": [
+        "M:vision transformer",
+        "T:decoder",
+        "T:knowledge distillation"
+      ],
+      "P_aa_min": 35.070507889097776
+    },
+    {
+      "rank": 92,
+      "triad": [
+        "M:vision transformer",
+        "T:knowledge distillation",
+        "T:object detection"
+      ],
+      "P_aa_min": 35.070507889097776
+    },
+    {
+      "rank": 93,
+      "triad": [
+        "M:vision transformer",
+        "T:knowledge distillation",
+        "T:transfer learning"
+      ],
+      "P_aa_min": 35.070507889097776
+    },
+    {
+      "rank": 94,
+      "triad": [
+        "M:gpt",
+        "T:in context learning",
+        "T:representation learning"
+      ],
+      "P_aa_min": 34.61193256485393
+    },
+    {
+      "rank": 95,
+      "triad": [
+        "M:attention",
+        "T:data augmentation",
+        "T:mixture of experts"
+      ],
+      "P_aa_min": 34.40748321168656
+    },
+    {
+      "rank": 96,
+      "triad": [
+        "M:convolution",
+        "M:vision transformer",
+        "T:retrieval"
+      ],
+      "P_aa_min": 34.28755010579934
+    },
+    {
+      "rank": 97,
+      "triad": [
+        "M:convolutional neural network",
+        "M:vision transformer",
+        "T:retrieval"
+      ],
+      "P_aa_min": 34.28755010579934
+    },
+    {
+      "rank": 98,
+      "triad": [
+        "M:vision transformer",
+        "T:object detection",
+        "T:retrieval"
+      ],
+      "P_aa_min": 34.28755010579934
+    },
+    {
+      "rank": 99,
+      "triad": [
+        "M:vision transformer",
+        "T:computational efficiency",
+        "T:reinforcement learning"
+      ],
+      "P_aa_min": 34.17843809157541
+    },
+    {
+      "rank": 100,
+      "triad": [
+        "M:vision transformer",
+        "T:reinforcement learning",
+        "T:transfer learning"
+      ],
+      "P_aa_min": 34.17843809157541
+    }
+  ]
+}

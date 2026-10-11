@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "step": "represcription_ranking",
+    "created": "2026-10-11",
+    "git_commit": "21ccc5467ef1a3b8b601cac5a9d5229314a326ab",
+    "preregistration_freeze_commit": "4b924e2",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "feature_sets": [
+      "P",
+      "H",
+      "T",
+      "R"
+    ],
+    "reliability_flag": null,
+    "engine_label": "engine passed the third-study verdict (T3 reused, not an independent confirmation)",
+    "applied_config": {
+      "build_years": 5,
+      "anchor": "data_cutoff",
+      "prescription": {
+        "redundancy_rules": [
+          "D1_same_name_ignoring_spaces",
+          "D2_method_name_within_task_name",
+          "D3_same_type_text_cosine"
+        ],
+        "d3_same_type_cosine_quantile": 0.985,
+        "training": "T1+T2 labels, feature sets by V2 verdict, trees by stratified CV on the combined set",
+        "calibration": "none (ranking only; expected hit rate is the T2 Precision@k of the engine used)"
+      },
+      "dvf": {
+        "population": "prospective_registration",
+        "prospective_file": "prospective/2026-10-04.json",
+        "patent_unit": "pair",
+        "missing_assignee": "exclude_and_report",
+        "f_pair_aggregate": "min",
+        "f_implementation": "terms_with_repo",
+        "percentile_ties": "average",
+        "riskiest": {
+          "missing_axis": "first",
+          "tie_break": "axis_mean_percentile",
+          "axis_order": [
+            "F",
+            "V",
+            "D"
+          ]
+        },
+        "bootstrap": {
+          "method": "poisson",
+          "replicates": 1000,
+          "seed": 20261006
+        }
+      },
+      "briefing": {
+        "top_n": 20,
+        "order": "rank_prescription",
+        "bundle": {
+          "papers_per_pair": 5,
+          "paper_order": "first_date_desc",
+          "abstract": "full",
+          "repos_max": 5,
+          "repo_order": "stars_window_desc",
+          "packages_max": 5,
+          "package_order": "second_half_downloads_desc",
+          "patents_max": 5,
+          "patent_order": "latest_document_date_desc",
+          "tie_break": "evidence_id_asc"
+        },
+        "generation": {
+          "model": "gemini-3.5-flash-lite",
+          "temperature": 1.0,
+          "seed_base": 20261007,
+          "repetitions": 5,
+          "pause_seconds": 4.5,
+          "prompt_version": "v3",
+          "output_language": "en",
+          "max_sentences_per_text": 3
+        }
+      },
+      "evidence": {
+        "patent_window": "build_window",
+        "repo_unit": "pair_evidence_papers",
+        "readme_max_arxiv_ids": 10,
+        "star_window_days": 365,
+        "star_aggregate": "sum",
+        "package_link": "pypi_metadata_urls",
+        "download_growth": "half_over_half",
+        "growth_smoothing": 1,
+        "download_half_weeks": 12
+      },
+      "assignee_classes": {
+        "academic_patterns": [
+          "University",
+          "Universit\u00e4t",
+          "Universit\u00e9",
+          "Universidad",
+          "Universit\u00e0",
+          "College",
+          "Institute of Technology",
+          "Polytechnic",
+          "Academy of Sciences"
+        ],
+        "ambiguous_words": [
+          "Institute",
+          "Research",
+          "Laboratory",
+          "Foundation",
+          "Hospital"
+        ],
+        "company_suffixes": [
+          "Inc",
+          "Corp",
+          "Co.",
+          "Ltd",
+          "LLC",
+          "GmbH",
+          "AG",
+          "S.A.",
+          "K.K.",
+          "Corporation",
+          "Incorporated",
+          "Limited",
+          "Company"
+        ],
+        "codes": {
+          "company_or_academic": [
+            "2",
+            "3"
+          ],
+          "individual": [
+            "4",
+            "5"
+          ],
+          "government": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        },
+        "partial_interest_prefix": "1"
+      },
+      "rl_case": {
+        "term_patterns": [
+          "reinforcement learning",
+          "policy optimization",
+          "actor critic",
+          "actor-critic",
+          "q learning",
+          "q-learning",
+          "deep q",
+          "temporal difference",
+          "markov decision"
+        ],
+        "deep_dive": "all_reps_complete",
+        "scope": "briefing_targets",
+        "tod_dir": "external/tod"
+      }
+    },
+    "represcription_config": {
+      "prereg_file": "preregistration_represcription.md",
+      "run_dir": "represcription",
+      "timepoint": "applied",
+      "engine": {
+        "generator": "engine_reliability.conditional.generator.selected",
+        "model": "engine_reliability.conditional.rediagnosis.models.engine",
+        "budget_multiple": 5,
+        "training": [
+          "T1",
+          "R2",
+          "R3",
+          "T2",
+          "T3"
+        ]
+      },
+      "prescription": {
+        "filter": "applied.prescription.redundancy_rules",
+        "ties": "term_ids",
+        "top_k": 100
+      },
+      "prospective": {
+        "rules": "prospective",
+        "baseline_feature": "P_aa_min"
+      },
+      "downstream": {
+        "rules": "applied (design 6-9)",
+        "patent_matching": "v3 applied vocabulary and refined matching"
+      },
+      "review": {
+        "scope": "applied final terms absent from every reviewed timepoint (matching.engine.reviewed_timepoints)",
+        "common_words_file": "data/review/common_words_applied.csv",
+        "synonyms_file": "data/review/synonyms_applied.csv",
+        "seed": 20261102,
+        "rules": "matching.common_words and matching.synonyms",
+        "combined": {
+          "common_words": "vocab/common_word_decisions_represcription.json",
+          "synonyms": "vocab/synonym_decisions_represcription.json"
+        }
+      },
+      "q1": {
+        "seed": 20261101,
+        "n_sentences": 100,
+        "population": "evidential_fields",
+        "judging": "cited_evidence_only"
+      },
+      "comparison": [
+        "top_k_overlap",
+        "shared_rank_spearman",
+        "dvf_axis_scores",
+        "riskiest_axis",
+        "mvp_type",
+        "concept_insufficient_share",
+        "q1"
+      ],
+      "label": "engine passed the third-study verdict (T3 reused, not an independent confirmation)"
+    },
+    "model_params": {
+      "num_leaves": 7,
+      "min_data_in_leaf": 20,
+      "learning_rate": 0.05,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambda_l2": 1.0
+    },
+    "seeds": [
+      20261011,
+      20261012,
+      20261013,
+      20261014,
+      20261015
+    ],
+    "inputs_sha256": {
+      "applied_features": "9ece356e188311a0e54027172614db673e9e68147c3181cbde4b49aa17d6f032",
+      "applied_vocab": "1bea22b3569578f0c7983d787cef7e401b210ecec4ceec79b0b88065f8ee9e5b",
+      "applied_build": "3c657f0968fba1efa1a1ffa2b73e5f5da6f8290efdf314fd8dc1a7fd9af15147",
+      "features_T1": "895baebe17ef7b2b4a2641873c28ace145321c189505611302a17bcfe2f48366",
+      "features_R2": "5f947ba61555cb949094437c5f07f2ece7ae1714ff68e3e3a5b2a5136de33918",
+      "features_R3": "82d7cdf3a46c8c086ddb473ef5d475cce8a76e4c979a1321c1aac57537107d83",
+      "features_T2": "c67b151b464609051b723dc0844d03db3a1665ae9fd506f34c05c67ec1a15148",
+      "features_T3": "641b776cb55a25f45482304251d816b156648fb33a0e0ddbd29f5d90d5c4ec0b",
+      "labels_T1": "fb6723cf8b5704949f9a14eb04aac16480c2ff2abde09e1066a007f166183215",
+      "labels_R2": "64d3723a8f72004ed54e31c69ab4192202b2705f98d19f7e6c990971ce1717b7",
+      "labels_R3": "c7630ccc81d7a6f9aed492294bb1d1dd913baf5ded9c18501211ec14689389ab",
+      "labels_T2": "a5098acd339ead1bd70a7a3a4ba357ada5fd27c1b149ff472b217660f1bdc795",
+      "labels_T3": "8dcc12bbffc18305046040cb329dc3278289eb848cb2ab6f0aa5ed88f8425455"
+    }
+  },
+  "population": 1133162,
+  "top_k": 100,
+  "overlap_prescription_baseline": 0,
+  "sha256": {
+    "ranking": "4447409bf30096275d32fbb82776f89df186a55ecb5dba06f6544b37ad28e284",
+    "vocab": "1bea22b3569578f0c7983d787cef7e401b210ecec4ceec79b0b88065f8ee9e5b",
+    "registration": "28714ae4cce919bc4c9533734dbc5ae17daadb4bbd7da42676510c14c2910014",
+    "baseline": "ce812f2c8f95fc8346c64ba3eae76015ff4ccee9bab81ec535f3354ebbba93a6"
+  }
+}
