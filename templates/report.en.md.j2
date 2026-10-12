@@ -23,6 +23,8 @@
 
 **Claims of the fourth study (section 14):** with the engine that passed the third-study verdict (T3 reused, not an independent confirmation) the prescription was made again at the same reference time, and its top {{ V.v('represcription/comparison_first_study', 'prescription.top_k', 'int') }} and the baseline were registered prospectively by a dated commit. Evidence, DVF and briefing rules are those of the first study and only the engine changed, so the comparison with the first-study prescription is descriptive. The efficacy of the prescription is not claimed before the prospective verdict.
 
+**Claims of the fifth study (section 15):** regenerating with the same bundles and only the prompts changed, the preregistered main decision is "{{ 'improved' if V.raw('faithfulness/comparison_represcription', 'decision.verdict') == 'improved' else 'improvement not shown' }}". The same judge can judge differently at another time, so Q1 values judged separately per study are hard to compare (blind re-judging in section 15); the Q1 comparison and the reading of the business fields in section 14 are corrected there.
+
 ## 2. Data and vocabulary
 
 - The applied-mode build window holds {{ V.v('hypergraph_main_applied', 'windows.build.papers_in_window', 'int') }} papers, of which {{ V.v('hypergraph_main_applied', 'windows.build.papers_with_terms', 'int') }} match at least one vocabulary term.
@@ -175,6 +177,7 @@ All limitations of design §16 apply. The most important for reading the results
 - Follow-up study (section 12): matching errors and synonym combinations remaining in the label (vocabulary matching precision was not revised), concentration of the top candidates on hub terms, repeated use of T2 during development, part of the T3 combinations already seen in the applied mode, and a verdict limited to the top k.
 - Third study (section 13): the second confirmation of the label was added after seeing the first, the method-surface stratum of matching precision failed, the label keeps recall-side noise (many combinations among model negatives), T2 was used repeatedly during development, T3 was reused, and the verdict covers the top k only.
 - Fourth study (section 14): many V axes stay missing, the business fields (target user, JTBD, value proposition) have low faithfulness, new terms were not added, the engine rests on a T3 reuse verdict, and the comparison with the first-study prescription cannot separate causes because the candidates differ.
+- Fifth study (section 15): the business-field rule and the citation rule were changed together, so their effects cannot be separated; one judge; the re-judging is a post-hoc analysis added after the results.
 
 ## 10. Preregistration change log
 
@@ -317,6 +320,35 @@ The second confirmation was added after seeing the first, with its sample size s
 Changing the engine changed the prescription substantially, and with more triads backed by clear evidence the concept-insufficient and term-mismatch outcomes of the frame stage fell. The faithfulness of briefing sentences (Q1) overlaps with the first study, so no improvement can be claimed, and the business fields are filled with almost no evidence in both prescriptions. Because the candidates differ, the difference cannot be attributed to the engine alone.
 
 **Preregistration changes:** {{ V.v('derived', 'represcription_prereg_changes', 'int') }} rows, {{ V.v('derived', 'represcription_prereg_rows_after_freeze', 'int') }} added after the freeze (`preregistration_represcription.md` section 9).
+
+## 15. Evidence faithfulness of briefings (fifth study)
+
+{% set F = 'faithfulness/comparison_represcription' -%}
+{% set R = 'faithfulness/rejudge_full' -%}
+**Purpose:** the bundles and generation seeds of the fourth study were kept and only the prompts changed (design §21, `preregistration_faithfulness.md`). Business fields (target user, JTBD, value proposition) are marked as hypotheses to test when the bundle gives no evidence, and the citation rule asks every evidence-based sentence to be supported by its cited items. Generation and judging followed the preregistration freeze.
+
+**Main decision (preregistered):** Q1 is {{ V.v(F, 'faithfulness.q1.rate', 'd2') }} {{ V.ci(F, 'faithfulness.q1.wilson_95.0', 'faithfulness.q1.wilson_95.1', 'd2') }}; the lower bound {{ V.v(F, 'decision.q1_lower_bound', 'd2') }} {% if V.raw(F, 'decision.verdict') == 'improved' %}exceeds the fourth-study Q1 {{ V.v(F, 'decision.threshold', 'd2') }}, so the decision is "improved"{% else %}does not exceed the fourth-study Q1 {{ V.v(F, 'decision.threshold', 'd2') }}, so the decision is "improvement not shown" and the new prompts are not adopted{% endif %}.
+
+**Descriptive (not judged):**
+
+| Item | Fourth study | This study |
+|---|---|---|
+| Concept insufficient (of runs) | {{ V.v(F, 'represcription.frames.insufficient', 'int') }} / {{ V.v(F, 'represcription.frames.runs', 'int') }} | {{ V.v(F, 'faithfulness.frames.insufficient', 'int') }} / {{ V.v(F, 'faithfulness.frames.runs', 'int') }} |
+| Q2 frame agreement | {{ V.v(F, 'represcription.q2_frame_agreement.rate', 'd2') }} | {{ V.v(F, 'faithfulness.q2_frame_agreement.rate', 'd2') }} |
+| Business fields marked as hypotheses | {{ V.v(F, 'represcription.business_basis.hypothesis', 'int') }} / {{ V.v(F, 'represcription.business_basis.fields', 'int') }} | {{ V.v(F, 'faithfulness.business_basis.hypothesis', 'int') }} / {{ V.v(F, 'faithfulness.business_basis.fields', 'int') }} |
+| Flagged items in the checks | {{ V.v(F, 'represcription.checks.flagged_items', 'int') }} | {{ V.v(F, 'faithfulness.checks.flagged_items', 'int') }} |
+
+**Blind re-judging (post hoc):** the two Q1 values of the main decision were judged at different times. Both Q1 samples were mixed, their origin hidden, and judged again by the same judge; this analysis was added after the results and does not change the main decision.
+
+| Item | Fourth study: earlier → re-judged | This study: earlier → re-judged |
+|---|---|---|
+| Overall | {{ V.v(R, 'by_study.represcription.overall.earlier.rate', 'd2') }} → {{ V.v(R, 'by_study.represcription.overall.now.rate', 'd2') }} {{ V.ci(R, 'by_study.represcription.overall.now.wilson_95.0', 'by_study.represcription.overall.now.wilson_95.1', 'd2') }} | {{ V.v(R, 'by_study.faithfulness.overall.earlier.rate', 'd2') }} → {{ V.v(R, 'by_study.faithfulness.overall.now.rate', 'd2') }} {{ V.ci(R, 'by_study.faithfulness.overall.now.wilson_95.0', 'by_study.faithfulness.overall.now.wilson_95.1', 'd2') }} |
+| Evidence-based without business fields | {{ V.v(R, 'by_study.represcription.without_business.earlier.rate', 'd2') }} → {{ V.v(R, 'by_study.represcription.without_business.now.rate', 'd2') }} | {{ V.v(R, 'by_study.faithfulness.without_business.earlier.rate', 'd2') }} → {{ V.v(R, 'by_study.faithfulness.without_business.now.rate', 'd2') }} |
+| Business fields | {{ V.v(R, 'by_study.represcription.business.earlier.supported', 'int') }} / {{ V.v(R, 'by_study.represcription.business.earlier.n', 'int') }} → {{ V.v(R, 'by_study.represcription.business.now.supported', 'int') }} / {{ V.v(R, 'by_study.represcription.business.now.n', 'int') }} | {{ V.v(R, 'by_study.faithfulness.business.earlier.supported', 'int') }} / {{ V.v(R, 'by_study.faithfulness.business.earlier.n', 'int') }} → {{ V.v(R, 'by_study.faithfulness.business.now.supported', 'int') }} / {{ V.v(R, 'by_study.faithfulness.business.now.n', 'int') }} |
+
+Under the same judging conditions the two prompts did not differ clearly in evidence faithfulness, and most of the drop in the main decision came from the judging time. The clear effect of the new prompts is that they mark a large part of the business fields as hypotheses without evidence. The fourth-study business fields rose strongly on re-judging, so the reading in section 14 and in the first study that business fields are filled without evidence may reflect strict judging. Q1 comparisons between studies should use blind judging of mixed sentences.
+
+**Preregistration changes:** {{ V.v('derived', 'faithfulness_prereg_changes', 'int') }} rows, {{ V.v('derived', 'faithfulness_prereg_changes_after_results', 'int') }} of them added after seeing results, and {{ V.v('derived', 'faithfulness_prereg_rows_after_freeze', 'int') }} added after the freeze (`preregistration_faithfulness.md` section 5).
 
 ## Appendix: provenance of result files
 

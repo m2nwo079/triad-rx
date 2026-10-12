@@ -251,7 +251,16 @@ def derived(values: Values) -> dict:
     rx_freeze = re.search(r"^고정 커밋:\s*(\S+)", rx_text, flags=re.M).group(1)
     rx_frozen_text = subprocess.run(["git", "show", f"{rx_freeze}:{rx_prereg}"], cwd=values.root,
                                     capture_output=True, text=True, check=True).stdout
+    fx_prereg = study["faithfulness"]["prereg_file"]
+    fx_text = (values.root / fx_prereg).read_text()
+    fx_rows = matching_change_rows(fx_text, "## 5.")
+    fx_freeze = re.search(r"^고정 커밋:\s*(\S+)", fx_text, flags=re.M).group(1)
+    fx_frozen_text = subprocess.run(["git", "show", f"{fx_freeze}:{fx_prereg}"], cwd=values.root,
+                                    capture_output=True, text=True, check=True).stdout
     return {
+        "faithfulness_prereg_changes": len(fx_rows),
+        "faithfulness_prereg_rows_after_freeze": len(fx_rows) - len(matching_change_rows(fx_frozen_text, "## 5.")),
+        "faithfulness_prereg_changes_after_results": sum(1 for cells in fx_rows if cells[-2].startswith("예")),
         "represcription_prereg_changes": len(rx_rows),
         "represcription_prereg_rows_after_freeze": len(rx_rows) - len(matching_change_rows(rx_frozen_text, "## 9.")),
         "matching_prereg_changes": len(matching_rows),

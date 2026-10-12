@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "step": "faithfulness_rejudge",
+    "created": "2026-10-12",
+    "git_commit": "fb5bc46b11ad3544cae8ae6f349e136c58a73fca",
+    "note": "Post hoc (faithfulness preregistration 5); does not change the main decision.",
+    "fields": [
+      "components",
+      "open_source"
+    ],
+    "seed": 20261202,
+    "sheet_original_sha256": "9ca9f722092ffd90a7d92d517cac7b7ed77431db213751ff20140218851d75c7"
+  },
+  "by_study": {
+    "faithfulness": {
+      "building_blocks.open_source": {
+        "n": 15,
+        "earlier_supported": 5,
+        "now_supported": 6,
+        "agreement": 0.9333333333333333
+      },
+      "concept_frame.components": {
+        "n": 23,
+        "earlier_supported": 8,
+        "now_supported": 17,
+        "agreement": 0.6086956521739131
+      }
+    },
+    "represcription": {
+      "building_blocks.open_source": {
+        "n": 14,
+        "earlier_supported": 8,
+        "now_supported": 5,
+        "agreement": 0.7857142857142857
+      },
+      "concept_frame.components": {
+        "n": 18,
+        "earlier_supported": 15,
+        "now_supported": 16,
+        "agreement": 0.9444444444444444
+      }
+    }
+  }
+}

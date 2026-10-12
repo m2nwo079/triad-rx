@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "step": "faithfulness_rejudge",
+    "created": "2026-10-12",
+    "git_commit": "9e788c64dde3f71506e4c779d622684fe60d09e2",
+    "note": "Post hoc (faithfulness preregistration 5); does not change the main decision.",
+    "fields": [
+      "others"
+    ],
+    "seed": 20261203,
+    "sheet_original_sha256": "9c2f4dacdac51e517b16a3da5e2eadfec43e262f69f11de7d00f365522114f15"
+  },
+  "by_study": {
+    "faithfulness": {
+      "concept_frame.combination": {
+        "n": 10,
+        "earlier_supported": 4,
+        "now_supported": 7,
+        "agreement": 0.7
+      },
+      "concept_frame.insufficient_explanation": {
+        "n": 7,
+        "earlier_supported": 0,
+        "now_supported": 2,
+        "agreement": 0.7142857142857143
+      },
+      "concept_frame.limitation": {
+        "n": 11,
+        "earlier_supported": 7,
+        "now_supported": 7,
+        "agreement": 1.0
+      },
+      "concept_frame.target_task": {
+        "n": 6,
+        "earlier_supported": 4,
+        "now_supported": 6,
+        "agreement": 0.6666666666666666
+      },
+      "jtbd": {
+        "n": 10,
+        "earlier_supported": 6,
+        "now_supported": 8,
+        "agreement": 0.8
+      },
+      "summary": {
+        "n": 13,
+        "earlier_supported": 7,
+        "now_supported": 10,
+        "agreement": 0.7692307692307693
+      },
+      "target_user": {
+        "n": 1,
+        "earlier_supported": 0,
+        "now_supported": 1,
+        "agreement": 0.0
+      },
+      "value_prop": {
+        "n": 4,
+        "earlier_supported": 4,
+        "now_supported": 4,
+        "agreement": 1.0
+      }
+    },
+    "represcription": {
+      "concept_frame.combination": {
+        "n": 5,
+        "earlier_supported": 2,
+        "now_supported": 3,
+        "agreement": 0.8
+      },
+      "concept_frame.insufficient_explanation": {
+        "n": 1,
+        "earlier_supported": 0,
+        "now_supported": 0,
+        "agreement": 1.0
+      },
+      "concept_frame.limitation": {
+        "n": 7,
+        "earlier_supported": 3,
+        "now_supported": 3,
+        "agreement": 1.0
+      },
+      "concept_frame.target_task": {
+        "n": 15,
+        "earlier_supported": 12,
+        "now_supported": 12,
+        "agreement": 1.0
+      },
+      "jtbd": {
+        "n": 7,
+        "earlier_supported": 1,
+        "now_supported": 5,
+        "agreement": 0.42857142857142855
+      },
+      "summary": {
+        "n": 24,
+        "earlier_supported": 14,
+        "now_supported": 15,
+        "agreement": 0.7916666666666666
+      },
+      "target_user": {
+        "n": 4,
+        "earlier_supported": 0,
+        "now_supported": 1,
+        "agreement": 0.75
+      },
+      "value_prop": {
+        "n": 5,
+        "earlier_supported": 1,
+        "now_supported": 4,
+        "agreement": 0.4
+      }
+    }
+  }
+}

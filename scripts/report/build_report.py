@@ -35,7 +35,7 @@ REPORT_FILES = [
     "engine_v3_power", "engine_v3_verdict_T3",
     "matching_rebuild_applied", "review_decisions_applied", "represcription/applied_main", "represcription/prospective_register",
     "represcription/dvf", "represcription/briefing_generation", "represcription/q1", "represcription/q2",
-    "represcription/comparison_first_study",
+    "represcription/comparison_first_study", "faithfulness/comparison_represcription", "faithfulness/rejudge_full",
 ]
 
 

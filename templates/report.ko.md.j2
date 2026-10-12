@@ -23,6 +23,8 @@
 
 **네 번째 연구(14절)의 주장 범위:** 세 번째 연구 판정을 통과한 엔진(T3 재사용, 독립 확증 아님)으로 같은 기준 시점에서 처방을 다시 만들고, 처방 상위 {{ V.v('represcription/comparison_first_study', 'prescription.top_k', 'int') }}개와 기준선을 날짜가 찍힌 커밋으로 전향적으로 등록했습니다. 근거·DVF·브리핑 규칙은 첫 번째 연구와 같고 엔진만 바뀌었으므로, 첫 번째 연구의 처방과의 비교는 서술용입니다. 처방의 효능은 전향적 판정 전이라 주장하지 않습니다.
 
+**다섯 번째 연구(15절)의 주장 범위:** 같은 근거 묶음에 지시문만 바꿔 다시 생성한 결과, 사전 등록한 주 판정은 "{{ '개선' if V.raw('faithfulness/comparison_represcription', 'decision.verdict') == 'improved' else '개선을 보이지 못함' }}"입니다. 같은 판정자가 판정 시점을 달리하면 판정이 달라질 수 있어, 연구마다 따로 판정한 Q1끼리의 비교는 신뢰하기 어렵습니다(15절의 블라인드 재판정). 이 때문에 14절의 Q1 비교와 사업 필드 해석은 15절에서 바로잡습니다.
+
 ## 2. 데이터와 어휘
 
 - 적용 모드 구축 구간의 논문은 {{ V.v('hypergraph_main_applied', 'windows.build.papers_in_window', 'int') }}편이며, 그중 어휘 용어가 매칭된 논문은 {{ V.v('hypergraph_main_applied', 'windows.build.papers_with_terms', 'int') }}편입니다.
@@ -175,6 +177,7 @@ DVF 대상 후보 {{ V.v('derived', 'dvf_candidates', 'int') }}개에서 축이 
 - 후속 연구(12절): 레이블에 남은 매칭 오류와 동의어 조합(어휘 매칭 정밀도는 손대지 않음), 상위 후보의 허브 용어 쏠림, 개발 중 T2의 반복 사용, T3 조합의 일부를 적용 모드에서 이미 봄, 판정이 상위 k개에 한정됨.
 - 세 번째 연구(13절): 레이블의 두 번째 확인은 첫 번째 확인의 결과를 본 뒤 추가한 측정, 기법 표기 층의 매칭 정밀도 불합격, 레이블의 재현율 쪽 잡음(모델 음성에도 결합이 많음), 개발 중 T2의 반복 사용, T3 재사용, 판정이 상위 k개에 한정됨.
 - 네 번째 연구(14절): V 축 결측이 여전히 많음, 사업 필드(대상 사용자·JTBD·가치 제안)의 근거 충실성이 낮음, 신규 용어 미보완, 엔진의 근거가 T3 재사용 판정, 첫 번째 연구의 처방과의 비교는 후보가 달라 원인을 가를 수 없음.
+- 다섯 번째 연구(15절): 사업 필드 규칙과 인용 규칙을 한 번에 바꾸어 두 규칙의 효과를 따로 가를 수 없음, 판정자 한 명, 재판정은 결과를 본 뒤 추가한 사후 분석.
 
 ## 10. 사전 등록 변경 기록
 
@@ -317,6 +320,35 @@ DVF 대상 후보 {{ V.v('derived', 'dvf_candidates', 'int') }}개에서 축이 
 엔진을 바꾸자 처방이 크게 달라졌고, 근거가 분명한 조합이 늘어 결합 틀 단계의 개념 불충분과 용어 불일치가 줄었습니다. 브리핑 문장의 근거 충실성(Q1)은 첫 번째 연구와 구간이 겹쳐 나아졌다고 말할 수 없고, 사업 필드는 두 처방 모두 근거가 거의 없는 상태로 채워집니다. 후보가 달라 두 처방의 차이를 엔진 하나의 효과로 가를 수는 없습니다.
 
 **사전 등록 변경 기록:** {{ V.v('derived', 'represcription_prereg_changes', 'int') }}건, 고정 이후 추가된 기록 {{ V.v('derived', 'represcription_prereg_rows_after_freeze', 'int') }}건(`preregistration_represcription.md` 9절).
+
+## 15. 브리핑 근거 충실성 보완 (다섯 번째 연구)
+
+{% set F = 'faithfulness/comparison_represcription' -%}
+{% set R = 'faithfulness/rejudge_full' -%}
+**목적:** 네 번째 연구의 근거 묶음과 생성 시드를 그대로 두고 지시문만 바꿔 다시 생성했습니다(설계서 21절, `preregistration_faithfulness.md`). 사업 필드(대상 사용자·JTBD·가치 제안)는 근거가 없으면 검증할 가설로 표시하게 하고, 근거형 문장마다 인용 근거로 뒷받침되도록 인용 규칙을 강화했습니다. 생성과 판정은 사전 등록을 고정한 뒤에 했습니다.
+
+**주 판정 (사전 등록):** 이번 Q1은 {{ V.v(F, 'faithfulness.q1.rate', 'd2') }} {{ V.ci(F, 'faithfulness.q1.wilson_95.0', 'faithfulness.q1.wilson_95.1', 'd2') }}이고, 하한 {{ V.v(F, 'decision.q1_lower_bound', 'd2') }}이 네 번째 연구의 Q1 {{ V.v(F, 'decision.threshold', 'd2') }}보다 {% if V.raw(F, 'decision.verdict') == 'improved' %}높아 "개선"입니다{% else %}높지 않아 "개선을 보이지 못함"입니다. 새 지시문은 채택하지 않습니다{% endif %}.
+
+**서술 (판정하지 않음):**
+
+| 항목 | 네 번째 연구 | 이번 연구 |
+|---|---|---|
+| 개념 불충분 (실행 중) | {{ V.v(F, 'represcription.frames.insufficient', 'int') }} / {{ V.v(F, 'represcription.frames.runs', 'int') }} | {{ V.v(F, 'faithfulness.frames.insufficient', 'int') }} / {{ V.v(F, 'faithfulness.frames.runs', 'int') }} |
+| Q2 결합 틀 일치 | {{ V.v(F, 'represcription.q2_frame_agreement.rate', 'd2') }} | {{ V.v(F, 'faithfulness.q2_frame_agreement.rate', 'd2') }} |
+| 사업 필드 중 가설로 표시 | {{ V.v(F, 'represcription.business_basis.hypothesis', 'int') }} / {{ V.v(F, 'represcription.business_basis.fields', 'int') }} | {{ V.v(F, 'faithfulness.business_basis.hypothesis', 'int') }} / {{ V.v(F, 'faithfulness.business_basis.fields', 'int') }} |
+| 점검에 걸린 항목 | {{ V.v(F, 'represcription.checks.flagged_items', 'int') }} | {{ V.v(F, 'faithfulness.checks.flagged_items', 'int') }} |
+
+**블라인드 재판정 (사후 분석):** 주 판정의 두 Q1은 서로 다른 시점에 판정되었습니다. 두 연구의 Q1 표본 전체를 섞어 출처를 감춘 채 같은 판정자가 다시 판정한 결과는 다음과 같습니다. 이 분석은 결과를 본 뒤 추가했으며 주 판정을 바꾸지 않습니다.
+
+| 항목 | 네 번째 연구: 이전 → 재판정 | 이번 연구: 이전 → 재판정 |
+|---|---|---|
+| 전체 | {{ V.v(R, 'by_study.represcription.overall.earlier.rate', 'd2') }} → {{ V.v(R, 'by_study.represcription.overall.now.rate', 'd2') }} {{ V.ci(R, 'by_study.represcription.overall.now.wilson_95.0', 'by_study.represcription.overall.now.wilson_95.1', 'd2') }} | {{ V.v(R, 'by_study.faithfulness.overall.earlier.rate', 'd2') }} → {{ V.v(R, 'by_study.faithfulness.overall.now.rate', 'd2') }} {{ V.ci(R, 'by_study.faithfulness.overall.now.wilson_95.0', 'by_study.faithfulness.overall.now.wilson_95.1', 'd2') }} |
+| 사업 필드를 뺀 근거형 | {{ V.v(R, 'by_study.represcription.without_business.earlier.rate', 'd2') }} → {{ V.v(R, 'by_study.represcription.without_business.now.rate', 'd2') }} | {{ V.v(R, 'by_study.faithfulness.without_business.earlier.rate', 'd2') }} → {{ V.v(R, 'by_study.faithfulness.without_business.now.rate', 'd2') }} |
+| 사업 필드 | {{ V.v(R, 'by_study.represcription.business.earlier.supported', 'int') }} / {{ V.v(R, 'by_study.represcription.business.earlier.n', 'int') }} → {{ V.v(R, 'by_study.represcription.business.now.supported', 'int') }} / {{ V.v(R, 'by_study.represcription.business.now.n', 'int') }} | {{ V.v(R, 'by_study.faithfulness.business.earlier.supported', 'int') }} / {{ V.v(R, 'by_study.faithfulness.business.earlier.n', 'int') }} → {{ V.v(R, 'by_study.faithfulness.business.now.supported', 'int') }} / {{ V.v(R, 'by_study.faithfulness.business.now.n', 'int') }} |
+
+같은 판정 조건에서는 두 지시문의 근거 충실성에 뚜렷한 차이가 없었고, 주 판정에서 보인 하락은 대부분 판정 시점의 차이였습니다. 새 지시문의 확실한 효과는 사업 필드의 상당 부분을 근거 없는 가설로 표시하게 한 것입니다. 또한 네 번째 연구의 사업 필드는 재판정에서 크게 올라, 14절과 첫 번째 연구의 "사업 필드는 근거 없이 채워진다"는 해석은 판정의 엄격함에 영향받았을 수 있습니다. 연구 사이의 Q1 비교는 문장을 섞은 블라인드 판정으로 해야 합니다.
+
+**사전 등록 변경 기록:** {{ V.v('derived', 'faithfulness_prereg_changes', 'int') }}건, 그중 결과를 확인한 뒤 추가한 것은 {{ V.v('derived', 'faithfulness_prereg_changes_after_results', 'int') }}건이며, 고정 이후 추가된 기록은 {{ V.v('derived', 'faithfulness_prereg_rows_after_freeze', 'int') }}건입니다(`preregistration_faithfulness.md` 5절).
 
 ## 부록: 결과 파일의 출처
 

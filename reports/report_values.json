@@ -3,7 +3,7 @@
   {
    "file": "config",
    "path": "design_version",
-   "text": "v0.7.0"
+   "text": "v0.7.1"
   },
   {
    "file": "applied_main",
@@ -2241,6 +2241,206 @@
    "text": "0"
   },
   {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.q1.rate",
+   "text": "0.45"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.q1.wilson_95.0",
+   "text": "0.36"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.q1.wilson_95.1",
+   "text": "0.55"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "decision.q1_lower_bound",
+   "text": "0.36"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "decision.threshold",
+   "text": "0.56"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "represcription.frames.insufficient",
+   "text": "13"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "represcription.frames.runs",
+   "text": "100"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.frames.insufficient",
+   "text": "29"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.frames.runs",
+   "text": "100"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "represcription.q2_frame_agreement.rate",
+   "text": "0.98"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.q2_frame_agreement.rate",
+   "text": "0.94"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "represcription.business_basis.hypothesis",
+   "text": "0"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "represcription.business_basis.fields",
+   "text": "261"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.business_basis.hypothesis",
+   "text": "102"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.business_basis.fields",
+   "text": "213"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "represcription.checks.flagged_items",
+   "text": "52"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.checks.flagged_items",
+   "text": "52"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.overall.earlier.rate",
+   "text": "0.56"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.overall.now.rate",
+   "text": "0.64"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.overall.now.wilson_95.0",
+   "text": "0.54"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.overall.now.wilson_95.1",
+   "text": "0.73"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.overall.earlier.rate",
+   "text": "0.45"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.overall.now.rate",
+   "text": "0.68"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.overall.now.wilson_95.0",
+   "text": "0.58"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.overall.now.wilson_95.1",
+   "text": "0.76"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.without_business.earlier.rate",
+   "text": "0.64"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.without_business.now.rate",
+   "text": "0.64"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.without_business.earlier.rate",
+   "text": "0.41"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.without_business.now.rate",
+   "text": "0.65"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.business.earlier.supported",
+   "text": "2"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.business.earlier.n",
+   "text": "16"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.business.now.supported",
+   "text": "10"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.business.now.n",
+   "text": "16"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.business.earlier.supported",
+   "text": "10"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.business.earlier.n",
+   "text": "15"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.business.now.supported",
+   "text": "13"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.business.now.n",
+   "text": "15"
+  },
+  {
+   "file": "derived",
+   "path": "faithfulness_prereg_changes",
+   "text": "1"
+  },
+  {
+   "file": "derived",
+   "path": "faithfulness_prereg_changes_after_results",
+   "text": "1"
+  },
+  {
+   "file": "derived",
+   "path": "faithfulness_prereg_rows_after_freeze",
+   "text": "1"
+  },
+  {
    "file": "vocab_final_applied",
    "path": "meta.git_commit",
    "text": "5dda8d2"
@@ -2687,6 +2887,26 @@
   },
   {
    "file": "represcription/comparison_first_study",
+   "path": "meta.created",
+   "text": "2026-10-12"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "meta.git_commit",
+   "text": "a8ab8ca"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "meta.created",
+   "text": "2026-10-12"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "meta.git_commit",
+   "text": "9e788c6"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
    "path": "meta.created",
    "text": "2026-10-12"
   }
@@ -2695,7 +2915,7 @@
   {
    "file": "config",
    "path": "design_version",
-   "text": "v0.7.0"
+   "text": "v0.7.1"
   },
   {
    "file": "applied_main",
@@ -4933,6 +5153,206 @@
    "text": "0"
   },
   {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.q1.rate",
+   "text": "0.45"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.q1.wilson_95.0",
+   "text": "0.36"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.q1.wilson_95.1",
+   "text": "0.55"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "decision.q1_lower_bound",
+   "text": "0.36"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "decision.threshold",
+   "text": "0.56"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "represcription.frames.insufficient",
+   "text": "13"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "represcription.frames.runs",
+   "text": "100"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.frames.insufficient",
+   "text": "29"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.frames.runs",
+   "text": "100"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "represcription.q2_frame_agreement.rate",
+   "text": "0.98"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.q2_frame_agreement.rate",
+   "text": "0.94"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "represcription.business_basis.hypothesis",
+   "text": "0"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "represcription.business_basis.fields",
+   "text": "261"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.business_basis.hypothesis",
+   "text": "102"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.business_basis.fields",
+   "text": "213"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "represcription.checks.flagged_items",
+   "text": "52"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "faithfulness.checks.flagged_items",
+   "text": "52"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.overall.earlier.rate",
+   "text": "0.56"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.overall.now.rate",
+   "text": "0.64"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.overall.now.wilson_95.0",
+   "text": "0.54"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.overall.now.wilson_95.1",
+   "text": "0.73"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.overall.earlier.rate",
+   "text": "0.45"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.overall.now.rate",
+   "text": "0.68"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.overall.now.wilson_95.0",
+   "text": "0.58"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.overall.now.wilson_95.1",
+   "text": "0.76"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.without_business.earlier.rate",
+   "text": "0.64"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.without_business.now.rate",
+   "text": "0.64"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.without_business.earlier.rate",
+   "text": "0.41"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.without_business.now.rate",
+   "text": "0.65"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.business.earlier.supported",
+   "text": "2"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.business.earlier.n",
+   "text": "16"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.business.now.supported",
+   "text": "10"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.represcription.business.now.n",
+   "text": "16"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.business.earlier.supported",
+   "text": "10"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.business.earlier.n",
+   "text": "15"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.business.now.supported",
+   "text": "13"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "by_study.faithfulness.business.now.n",
+   "text": "15"
+  },
+  {
+   "file": "derived",
+   "path": "faithfulness_prereg_changes",
+   "text": "1"
+  },
+  {
+   "file": "derived",
+   "path": "faithfulness_prereg_changes_after_results",
+   "text": "1"
+  },
+  {
+   "file": "derived",
+   "path": "faithfulness_prereg_rows_after_freeze",
+   "text": "1"
+  },
+  {
    "file": "vocab_final_applied",
    "path": "meta.git_commit",
    "text": "5dda8d2"
@@ -5379,6 +5799,26 @@
   },
   {
    "file": "represcription/comparison_first_study",
+   "path": "meta.created",
+   "text": "2026-10-12"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "meta.git_commit",
+   "text": "a8ab8ca"
+  },
+  {
+   "file": "faithfulness/comparison_represcription",
+   "path": "meta.created",
+   "text": "2026-10-12"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
+   "path": "meta.git_commit",
+   "text": "9e788c6"
+  },
+  {
+   "file": "faithfulness/rejudge_full",
    "path": "meta.created",
    "text": "2026-10-12"
   }

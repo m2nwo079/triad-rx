@@ -1,5 +1,5 @@
 {
-  "design_version": "v0.7.0",
+  "design_version": "v0.7.1",
   "design_section": "10.2",
   "arxiv_categories": [
     "cs.LG",
@@ -736,7 +736,8 @@
     "decision": {"statistic": "Q1 Wilson 95% lower bound", "threshold": "Q1 point estimate of the base run",
                  "rule": "improved only if the lower bound exceeds the threshold"},
     "business_fields": ["target_user", "jtbd", "value_prop"],
-    "evidential_fields_without_business": ["concept_frame", "summary", "building_blocks"]
+    "evidential_fields_without_business": ["concept_frame", "summary", "building_blocks"],
+    "rejudge": {"seed": 20261202, "status": "post hoc, added after the results; does not change the main decision"}
   },
   "represcription": {
     "prereg_file": "preregistration_represcription.md",

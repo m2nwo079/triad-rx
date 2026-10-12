@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "step": "faithfulness_rejudge_full",
+    "created": "2026-10-12",
+    "git_commit": "9e788c64dde3f71506e4c779d622684fe60d09e2",
+    "note": "Post hoc (faithfulness preregistration 5); both Q1 samples re-judged blind in two mixed rounds.",
+    "items_by_study": {
+      "faithfulness": 100,
+      "represcription": 100
+    }
+  },
+  "by_study": {
+    "faithfulness": {
+      "overall": {
+        "earlier": {
+          "supported": 45,
+          "n": 100,
+          "rate": 0.45,
+          "wilson_95": [
+            0.3561453797951198,
+            0.5475539700255787
+          ]
+        },
+        "now": {
+          "supported": 68,
+          "n": 100,
+          "rate": 0.68,
+          "wilson_95": [
+            0.5833738138954762,
+            0.7633085267500092
+          ]
+        }
+      },
+      "without_business": {
+        "earlier": {
+          "supported": 35,
+          "n": 85,
+          "rate": 0.4117647058823529,
+          "wilson_95": [
+            0.31317005505324164,
+            0.5179898538551204
+          ]
+        },
+        "now": {
+          "supported": 55,
+          "n": 85,
+          "rate": 0.6470588235294118,
+          "wilson_95": [
+            0.5411250053311214,
+            0.7402751464882753
+          ]
+        }
+      },
+      "business": {
+        "earlier": {
+          "supported": 10,
+          "n": 15,
+          "rate": 0.6666666666666666,
+          "wilson_95": [
+            0.41713547738519774,
+            0.8482367556028526
+          ]
+        },
+        "now": {
+          "supported": 13,
+          "n": 15,
+          "rate": 0.8666666666666667,
+          "wilson_95": [
+            0.6211801716767764,
+            0.9626387408969346
+          ]
+        }
+      }
+    },
+    "represcription": {
+      "overall": {
+        "earlier": {
+          "supported": 56,
+          "n": 100,
+          "rate": 0.56,
+          "wilson_95": [
+            0.4622810465167699,
+            0.6532797336983921
+          ]
+        },
+        "now": {
+          "supported": 64,
+          "n": 100,
+          "rate": 0.64,
+          "wilson_95": [
+            0.5423540245160874,
+            0.7272877959859567
+          ]
+        }
+      },
+      "without_business": {
+        "earlier": {
+          "supported": 54,
+          "n": 84,
+          "rate": 0.6428571428571429,
+          "wilson_95": [
+            0.5362131509036315,
+            0.7370063552636087
+          ]
+        },
+        "now": {
+          "supported": 54,
+          "n": 84,
+          "rate": 0.6428571428571429,
+          "wilson_95": [
+            0.5362131509036315,
+            0.7370063552636087
+          ]
+        }
+      },
+      "business": {
+        "earlier": {
+          "supported": 2,
+          "n": 16,
+          "rate": 0.125,
+          "wilson_95": [
+            0.03497748774324047,
+            0.36022827265758695
+          ]
+        },
+        "now": {
+          "supported": 10,
+          "n": 16,
+          "rate": 0.625,
+          "wilson_95": [
+            0.38641040545502714,
+            0.8151876744113636
+          ]
+        }
+      }
+    }
+  }
+}
