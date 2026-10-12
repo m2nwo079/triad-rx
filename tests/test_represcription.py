@@ -174,3 +174,44 @@ def test_refined_matcher_gives_the_same_terms_as_refined_paper_matching():
     assert {s["id"] for s in spans} == expected
     refined = pt.RefinedMatcher(terms, {"M:bert"}, rules, {})
     assert refined.ambiguous == refined.matcher.ambiguous
+
+
+cp = load("compare_first", "scripts/represcription/08_compare.py")
+
+
+def test_comparison_maps_merged_terms_before_counting_shared_triads():
+    rep = cp.canonical({"M:a": ["M:a", "M:a2"]})
+    first = [{"rank": 1, "triad": ["M:a2", "T:x", "T:y"]}, {"rank": 2, "triad": ["M:b", "T:x", "T:y"]},
+             {"rank": 3, "triad": ["M:c", "T:x", "T:y"]}, {"rank": 4, "triad": ["M:d", "T:x", "T:y"]}]
+    fourth = [{"rank": 1, "triad": ["M:d", "T:x", "T:y"]}, {"rank": 2, "triad": ["T:y", "M:a", "T:x"]},
+              {"rank": 3, "triad": ["M:c", "T:x", "T:y"]}, {"rank": 4, "triad": ["M:e", "T:x", "T:y"]}]
+    out = cp.overlap(first, fourth, rep)
+    assert out["shared_triads"] == 3 and [s["rank_fourth"] for s in out["shared"]] == [1, 2, 3]
+    assert out["shared_rank_spearman"] is not None and out["distinct_terms"]["shared"] == 5
+
+
+def test_comparison_runs_on_first_study_files(tmp_path, monkeypatch):
+    import shutil
+    root = tmp_path / "repo"
+    (root / "results").mkdir(parents=True)
+    run = root / "represcription"
+    for d in ("results", "prospective", "config"):
+        (run / d).mkdir(parents=True)
+    study = json.loads((ROOT / "config/study.json").read_text())
+    for name in ("dvf", "briefing_generation", "q1", "q2"):
+        shutil.copy(ROOT / "results" / f"{name}.json", root / "results")
+        shutil.copy(ROOT / "results" / f"{name}.json", run / "results")
+    reg = study["prospective"]["registration"]
+    (root / reg).parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy(ROOT / reg, root / reg)
+    shutil.copy(ROOT / reg, run / "prospective" / "x.json")
+    (run / "config/study.json").write_text(json.dumps({"prospective": {"registration": "prospective/x.json"}}))
+    syn = root / study["represcription"]["review"]["combined"]["synonyms"]
+    syn.parent.mkdir(parents=True, exist_ok=True)
+    syn.write_text(json.dumps({"merge_groups": {}}))
+    monkeypatch.setattr(cp, "ROOT", root)
+    monkeypatch.setattr(cp, "load_study", lambda: study)
+    cp.main()
+    out = json.loads((run / "results/comparison_first_study.json").read_text())
+    assert out["prescription"]["shared_triads"] == 100 and abs(out["prescription"]["shared_rank_spearman"] - 1.0) < 1e-9
+    assert out["dvf"]["first"] == out["dvf"]["fourth"] and out["briefing_quality"]["first"]["q1"]["rate"] == 0.61

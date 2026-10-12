@@ -21,6 +21,8 @@
 
 **Claims of the third study (section 13):** after rebuilding term matching, synonyms and the combination label, the study judged T3 again, a timepoint the second study had already judged once, at a stricter confidence level; the verdict below is therefore not an independent confirmation. {% if matching.S1_recall == 'pass' and matching.S2_random == 'pass' %}On the rebuilt label the generator and the engine passed the recall and random-ranking steps. {% endif %}{% if matching.S3_npmi == 'pass' %}They also passed the step against the simple proximity (nPMI) baseline. {% endif %}{% if matching.S4_h_contribution != 'pass' %}The contribution of the higher-order features (H) is {{ reading_word[V.raw('engine_v3_verdict_T3', 'reading.S4_h_contribution')] }}. {% endif %}The quality of the very top of a prescription and prescriptions made with this engine are not claimed.
 
+**Claims of the fourth study (section 14):** with the engine that passed the third-study verdict (T3 reused, not an independent confirmation) the prescription was made again at the same reference time, and its top {{ V.v('represcription/comparison_first_study', 'prescription.top_k', 'int') }} and the baseline were registered prospectively by a dated commit. Evidence, DVF and briefing rules are those of the first study and only the engine changed, so the comparison with the first-study prescription is descriptive. The efficacy of the prescription is not claimed before the prospective verdict.
+
 ## 2. Data and vocabulary
 
 - The applied-mode build window holds {{ V.v('hypergraph_main_applied', 'windows.build.papers_in_window', 'int') }} papers, of which {{ V.v('hypergraph_main_applied', 'windows.build.papers_with_terms', 'int') }} match at least one vocabulary term.
@@ -172,6 +174,7 @@ All limitations of design §16 apply. The most important for reading the results
 - DVF predictive validity not tested; it will be checked through the prospective registration (design §11).
 - Follow-up study (section 12): matching errors and synonym combinations remaining in the label (vocabulary matching precision was not revised), concentration of the top candidates on hub terms, repeated use of T2 during development, part of the T3 combinations already seen in the applied mode, and a verdict limited to the top k.
 - Third study (section 13): the second confirmation of the label was added after seeing the first, the method-surface stratum of matching precision failed, the label keeps recall-side noise (many combinations among model negatives), T2 was used repeatedly during development, T3 was reused, and the verdict covers the top k only.
+- Fourth study (section 14): many V axes stay missing, the business fields (target user, JTBD, value proposition) have low faithfulness, new terms were not added, the engine rests on a T3 reuse verdict, and the comparison with the first-study prescription cannot separate causes because the candidates differ.
 
 ## 10. Preregistration change log
 
@@ -282,6 +285,38 @@ The second confirmation was added after seeing the first, with its sample size s
 **Limitations:** T3 was reused, so this is not an independent confirmation. The second confirmation of the label was added after seeing the first, the method-surface stratum of matching precision stays failed, and the label keeps recall-side noise. T2 was seen many times during development, and the verdict covers the top {{ V.v('config', 'matching.verdict.k', 'int') }}. No prescriptions were made again with this engine.
 
 **Preregistration changes:** {{ V.v('derived', 'matching_prereg_changes', 'int') }} rows, {{ V.v('derived', 'matching_prereg_changes_after_results', 'int') }} of them decided after seeing results, and {{ V.v('derived', 'matching_prereg_rows_after_freeze', 'int') }} added after the freeze (`preregistration_matching.md` section 7).
+
+## 14. Represcription with the verified engine (fourth study)
+
+{% set C = 'represcription/comparison_first_study' -%}
+**Purpose:** the prescription at the first-study reference time was made again with the engine that passed the third-study verdict. Evidence, DVF, briefing and quality checks follow the first-study rules and only the candidate engine changed (design §20, `preregistration_represcription.md`). The ranking was computed after the preregistration freeze commit {{ V.v('represcription/applied_main', 'meta.preregistration_freeze_commit') }}, and the prescription is labelled "{{ V.v('config', 'represcription.label') }}".
+
+**Inputs:** the applied window was rebuilt with the third-study rules into {{ V.v('matching_rebuild_applied', 'terms_final', 'int') }} final terms. Only for terms absent from the four reviewed timepoints, {{ V.v('review_decisions_applied', 'common_words.surfaces', 'int') }} common-word surfaces and {{ V.v('review_decisions_applied', 'synonyms.pairs', 'int') }} synonym pairs were judged in addition. The engine was trained on {{ V.v('represcription/applied_main', 'training.candidates', 'int') }} candidates ({{ V.v('represcription/applied_main', 'training.positives', 'int') }} positives) of {{ V.v('represcription/applied_main', 'training.timepoints', 'join') }}, and {{ V.v('represcription/applied_main', 'redundancy.kept', 'int') }} candidates remain after the redundancy filter.
+
+**Prospective registration:** the prescription top {{ V.v(C, 'prescription.top_k', 'int') }} and the baseline were registered on {{ V.v('represcription/applied_main', 'meta.created', 'date') }}. The verdict rules are those of the first study, and the two registrations are judged separately. The first ten of the prescription:
+
+| Rank | Triad | Engine score |
+|---|---|---|
+{% for e in V.raw('represcription/applied_main', 'top_k_prescription')[:10] -%}
+| {{ V.v('represcription/applied_main', 'top_k_prescription.' ~ loop.index0 ~ '.rank', 'int') }} | {{ V.v('represcription/applied_main', 'top_k_prescription.' ~ loop.index0 ~ '.triad', 'triad') }} | {{ V.v('represcription/applied_main', 'top_k_prescription.' ~ loop.index0 ~ '.score', 'd3') }} |
+{% endfor %}
+**Next to the first-study prescription** (descriptive; same reference time and downstream rules, different engine):
+
+| Item | First-study prescription | This prescription |
+|---|---|---|
+| Shared triads in the top k | {{ V.v(C, 'prescription.shared_triads', 'int') }} / {{ V.v(C, 'prescription.top_k', 'int') }} | — |
+| Terms in the top k (shared) | {{ V.v(C, 'prescription.distinct_terms.first', 'int') }} | {{ V.v(C, 'prescription.distinct_terms.fourth', 'int') }} ({{ V.v(C, 'prescription.distinct_terms.shared', 'int') }}) |
+| Missing V axes | {{ V.v(C, 'dvf.first.axes.V.missing', 'int') }} | {{ V.v(C, 'dvf.fourth.axes.V.missing', 'int') }} |
+| Riskiest axis V / D / F | {{ V.v(C, 'dvf.first.riskiest_axis.V', 'int') }} / {{ V.v(C, 'dvf.first.riskiest_axis.D', 'int') }} / {{ V.v(C, 'dvf.first.riskiest_axis.F', 'int') }} | {{ V.v(C, 'dvf.fourth.riskiest_axis.V', 'int') }} / {{ V.v(C, 'dvf.fourth.riskiest_axis.D', 'int') }} / {{ V.v(C, 'dvf.fourth.riskiest_axis.F', 'int') }} |
+| Concept insufficient (of runs) | {{ V.v(C, 'briefing_quality.first.concept_insufficient.insufficient', 'int') }} / {{ V.v(C, 'briefing_quality.first.concept_insufficient.runs', 'int') }} | {{ V.v(C, 'briefing_quality.fourth.concept_insufficient.insufficient', 'int') }} / {{ V.v(C, 'briefing_quality.fourth.concept_insufficient.runs', 'int') }} |
+| Of which term mismatch | {{ V.v(C, 'briefing_quality.first.concept_insufficient.reasons.term_mismatch', 'int') }} | {{ V.v(C, 'briefing_quality.fourth.concept_insufficient.reasons.term_mismatch', 'int') }} |
+| Q1 | {{ V.v(C, 'briefing_quality.first.q1.rate', 'd2') }} {{ V.ci(C, 'briefing_quality.first.q1.wilson_95.0', 'briefing_quality.first.q1.wilson_95.1', 'd2') }} | {{ V.v(C, 'briefing_quality.fourth.q1.rate', 'd2') }} {{ V.ci(C, 'briefing_quality.fourth.q1.wilson_95.0', 'briefing_quality.fourth.q1.wilson_95.1', 'd2') }} |
+| Q1 business fields | {{ V.v(C, 'briefing_quality.first.q1.business_fields.supported', 'int') }} / {{ V.v(C, 'briefing_quality.first.q1.business_fields.n', 'int') }} | {{ V.v(C, 'briefing_quality.fourth.q1.business_fields.supported', 'int') }} / {{ V.v(C, 'briefing_quality.fourth.q1.business_fields.n', 'int') }} |
+| Q2 frame agreement | {{ V.v(C, 'briefing_quality.first.q2_frame_agreement.rate', 'd2') }} | {{ V.v(C, 'briefing_quality.fourth.q2_frame_agreement.rate', 'd2') }} |
+
+Changing the engine changed the prescription substantially, and with more triads backed by clear evidence the concept-insufficient and term-mismatch outcomes of the frame stage fell. The faithfulness of briefing sentences (Q1) overlaps with the first study, so no improvement can be claimed, and the business fields are filled with almost no evidence in both prescriptions. Because the candidates differ, the difference cannot be attributed to the engine alone.
+
+**Preregistration changes:** {{ V.v('derived', 'represcription_prereg_changes', 'int') }} rows, {{ V.v('derived', 'represcription_prereg_rows_after_freeze', 'int') }} added after the freeze (`preregistration_represcription.md` section 9).
 
 ## Appendix: provenance of result files
 

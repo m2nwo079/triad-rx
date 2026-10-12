@@ -21,6 +21,8 @@
 
 **세 번째 연구(13절)의 주장 범위:** 어휘 매칭, 동의어, 결합 레이블을 다시 세운 뒤 두 번째 연구에서 한 번 판정한 T3를 더 엄격한 신뢰 수준으로 다시 판정했으므로, 아래 판정은 독립 확증이 아닙니다. {% if matching.S1_recall == 'pass' and matching.S2_random == 'pass' %}다시 세운 레이블에서도 생성기와 엔진이 재현율과 무작위 대비 단계를 통과했습니다. {% endif %}{% if matching.S3_npmi == 'pass' %}단순 근접도(nPMI) 기준선 대비 단계도 통과했습니다. {% endif %}{% if matching.S4_h_contribution != 'pass' %}고차 특징(H)의 기여는 {{ reading_word[V.raw('engine_v3_verdict_T3', 'reading.S4_h_contribution')] }}입니다. {% endif %}처방 최상위의 품질과 이 엔진으로 만든 처방은 주장하지 않습니다.
 
+**네 번째 연구(14절)의 주장 범위:** 세 번째 연구 판정을 통과한 엔진(T3 재사용, 독립 확증 아님)으로 같은 기준 시점에서 처방을 다시 만들고, 처방 상위 {{ V.v('represcription/comparison_first_study', 'prescription.top_k', 'int') }}개와 기준선을 날짜가 찍힌 커밋으로 전향적으로 등록했습니다. 근거·DVF·브리핑 규칙은 첫 번째 연구와 같고 엔진만 바뀌었으므로, 첫 번째 연구의 처방과의 비교는 서술용입니다. 처방의 효능은 전향적 판정 전이라 주장하지 않습니다.
+
 ## 2. 데이터와 어휘
 
 - 적용 모드 구축 구간의 논문은 {{ V.v('hypergraph_main_applied', 'windows.build.papers_in_window', 'int') }}편이며, 그중 어휘 용어가 매칭된 논문은 {{ V.v('hypergraph_main_applied', 'windows.build.papers_with_terms', 'int') }}편입니다.
@@ -172,6 +174,7 @@ DVF 대상 후보 {{ V.v('derived', 'dvf_candidates', 'int') }}개에서 축이 
 - DVF 예측력 미검증. 검증은 전향적 등록(설계서 11절)으로 이후에 합니다.
 - 후속 연구(12절): 레이블에 남은 매칭 오류와 동의어 조합(어휘 매칭 정밀도는 손대지 않음), 상위 후보의 허브 용어 쏠림, 개발 중 T2의 반복 사용, T3 조합의 일부를 적용 모드에서 이미 봄, 판정이 상위 k개에 한정됨.
 - 세 번째 연구(13절): 레이블의 두 번째 확인은 첫 번째 확인의 결과를 본 뒤 추가한 측정, 기법 표기 층의 매칭 정밀도 불합격, 레이블의 재현율 쪽 잡음(모델 음성에도 결합이 많음), 개발 중 T2의 반복 사용, T3 재사용, 판정이 상위 k개에 한정됨.
+- 네 번째 연구(14절): V 축 결측이 여전히 많음, 사업 필드(대상 사용자·JTBD·가치 제안)의 근거 충실성이 낮음, 신규 용어 미보완, 엔진의 근거가 T3 재사용 판정, 첫 번째 연구의 처방과의 비교는 후보가 달라 원인을 가를 수 없음.
 
 ## 10. 사전 등록 변경 기록
 
@@ -282,6 +285,38 @@ DVF 대상 후보 {{ V.v('derived', 'dvf_candidates', 'int') }}개에서 축이 
 **한계:** T3 재사용이라 독립 확증이 아닙니다. 레이블의 두 번째 확인은 결과를 본 뒤 추가한 측정이고, 기법 표기 층의 매칭 정밀도는 불합격 그대로이며, 레이블에는 재현율 쪽 잡음이 남습니다. 개발 중 T2를 여러 번 보았고, 판정은 상위 {{ V.v('config', 'matching.verdict.k', 'int') }}개에 대한 것입니다. 이 엔진으로 처방을 다시 내지 않았습니다.
 
 **사전 등록 변경 기록:** {{ V.v('derived', 'matching_prereg_changes', 'int') }}건, 그중 결과를 확인한 뒤 정한 것은 {{ V.v('derived', 'matching_prereg_changes_after_results', 'int') }}건이며, 고정 이후 추가된 기록은 {{ V.v('derived', 'matching_prereg_rows_after_freeze', 'int') }}건입니다(`preregistration_matching.md` 7절).
+
+## 14. 검증된 엔진으로 재처방 (네 번째 연구)
+
+{% set C = 'represcription/comparison_first_study' -%}
+**목적:** 세 번째 연구 판정을 통과한 엔진으로 첫 번째 연구와 같은 기준 시점의 처방을 다시 만들었습니다. 근거·DVF·브리핑·품질 점검은 첫 번째 연구의 규칙을 그대로 쓰고 후보 발굴 엔진만 바꿨습니다(설계서 20절, `preregistration_represcription.md`). 처방 순위는 사전 등록의 고정 커밋 {{ V.v('represcription/applied_main', 'meta.preregistration_freeze_commit') }} 뒤에 계산했고, 처방에는 "{{ V.v('config', 'represcription.label') }}"이라고 표시합니다.
+
+**입력:** 적용 모드 구간을 세 번째 연구 규칙으로 재구축해 최종 용어 {{ V.v('matching_rebuild_applied', 'terms_final', 'int') }}개를 얻었습니다. 판정한 네 시점에 없던 용어에 한해 일상어 {{ V.v('review_decisions_applied', 'common_words.surfaces', 'int') }}개와 동의어 {{ V.v('review_decisions_applied', 'synonyms.pairs', 'int') }}쌍을 추가로 판정했습니다. 엔진은 {{ V.v('represcription/applied_main', 'training.timepoints', 'join') }}의 후보 {{ V.v('represcription/applied_main', 'training.candidates', 'int') }}개(양성 {{ V.v('represcription/applied_main', 'training.positives', 'int') }}개)로 학습했고, 처방 대상 후보는 중복 필터 뒤 {{ V.v('represcription/applied_main', 'redundancy.kept', 'int') }}개입니다.
+
+**전향적 등록:** {{ V.v('represcription/applied_main', 'meta.created', 'date') }}에 처방 상위 {{ V.v(C, 'prescription.top_k', 'int') }}개와 기준선을 등록했습니다. 판정 규칙은 첫 번째 연구와 같고, 그 등록과 따로 판정합니다. 처방 상위 열 개:
+
+| 순위 | 조합 | 엔진 점수 |
+|---|---|---|
+{% for e in V.raw('represcription/applied_main', 'top_k_prescription')[:10] -%}
+| {{ V.v('represcription/applied_main', 'top_k_prescription.' ~ loop.index0 ~ '.rank', 'int') }} | {{ V.v('represcription/applied_main', 'top_k_prescription.' ~ loop.index0 ~ '.triad', 'triad') }} | {{ V.v('represcription/applied_main', 'top_k_prescription.' ~ loop.index0 ~ '.score', 'd3') }} |
+{% endfor %}
+**첫 번째 연구의 처방과 나란히** (서술용, 같은 기준 시점과 하위 규칙, 엔진만 다름):
+
+| 항목 | 첫 번째 연구의 처방 | 이번 처방 |
+|---|---|---|
+| 상위 k 조합 겹침 | {{ V.v(C, 'prescription.shared_triads', 'int') }} / {{ V.v(C, 'prescription.top_k', 'int') }} | — |
+| 상위 k에 나온 용어 (공통) | {{ V.v(C, 'prescription.distinct_terms.first', 'int') }} | {{ V.v(C, 'prescription.distinct_terms.fourth', 'int') }} ({{ V.v(C, 'prescription.distinct_terms.shared', 'int') }}) |
+| V 축 결측 | {{ V.v(C, 'dvf.first.axes.V.missing', 'int') }} | {{ V.v(C, 'dvf.fourth.axes.V.missing', 'int') }} |
+| 가장 위험한 축 V / D / F | {{ V.v(C, 'dvf.first.riskiest_axis.V', 'int') }} / {{ V.v(C, 'dvf.first.riskiest_axis.D', 'int') }} / {{ V.v(C, 'dvf.first.riskiest_axis.F', 'int') }} | {{ V.v(C, 'dvf.fourth.riskiest_axis.V', 'int') }} / {{ V.v(C, 'dvf.fourth.riskiest_axis.D', 'int') }} / {{ V.v(C, 'dvf.fourth.riskiest_axis.F', 'int') }} |
+| 개념 불충분 (실행 중) | {{ V.v(C, 'briefing_quality.first.concept_insufficient.insufficient', 'int') }} / {{ V.v(C, 'briefing_quality.first.concept_insufficient.runs', 'int') }} | {{ V.v(C, 'briefing_quality.fourth.concept_insufficient.insufficient', 'int') }} / {{ V.v(C, 'briefing_quality.fourth.concept_insufficient.runs', 'int') }} |
+| 그중 용어 불일치 | {{ V.v(C, 'briefing_quality.first.concept_insufficient.reasons.term_mismatch', 'int') }} | {{ V.v(C, 'briefing_quality.fourth.concept_insufficient.reasons.term_mismatch', 'int') }} |
+| Q1 | {{ V.v(C, 'briefing_quality.first.q1.rate', 'd2') }} {{ V.ci(C, 'briefing_quality.first.q1.wilson_95.0', 'briefing_quality.first.q1.wilson_95.1', 'd2') }} | {{ V.v(C, 'briefing_quality.fourth.q1.rate', 'd2') }} {{ V.ci(C, 'briefing_quality.fourth.q1.wilson_95.0', 'briefing_quality.fourth.q1.wilson_95.1', 'd2') }} |
+| Q1 사업 필드 | {{ V.v(C, 'briefing_quality.first.q1.business_fields.supported', 'int') }} / {{ V.v(C, 'briefing_quality.first.q1.business_fields.n', 'int') }} | {{ V.v(C, 'briefing_quality.fourth.q1.business_fields.supported', 'int') }} / {{ V.v(C, 'briefing_quality.fourth.q1.business_fields.n', 'int') }} |
+| Q2 결합 틀 일치 | {{ V.v(C, 'briefing_quality.first.q2_frame_agreement.rate', 'd2') }} | {{ V.v(C, 'briefing_quality.fourth.q2_frame_agreement.rate', 'd2') }} |
+
+엔진을 바꾸자 처방이 크게 달라졌고, 근거가 분명한 조합이 늘어 결합 틀 단계의 개념 불충분과 용어 불일치가 줄었습니다. 브리핑 문장의 근거 충실성(Q1)은 첫 번째 연구와 구간이 겹쳐 나아졌다고 말할 수 없고, 사업 필드는 두 처방 모두 근거가 거의 없는 상태로 채워집니다. 후보가 달라 두 처방의 차이를 엔진 하나의 효과로 가를 수는 없습니다.
+
+**사전 등록 변경 기록:** {{ V.v('derived', 'represcription_prereg_changes', 'int') }}건, 고정 이후 추가된 기록 {{ V.v('derived', 'represcription_prereg_rows_after_freeze', 'int') }}건(`preregistration_represcription.md` 9절).
 
 ## 부록: 결과 파일의 출처
 

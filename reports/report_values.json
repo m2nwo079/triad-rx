@@ -3,7 +3,7 @@
   {
    "file": "config",
    "path": "design_version",
-   "text": "v0.6.0"
+   "text": "v0.6.1"
   },
   {
    "file": "applied_main",
@@ -24,6 +24,11 @@
    "file": "engine_verdict_T3",
    "path": "by_k.5000.S3_diff_ci.term_block.lower",
    "text": "0.001"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "prescription.top_k",
+   "text": "100"
   },
   {
    "file": "hypergraph_main_applied",
@@ -1866,6 +1871,376 @@
    "text": "2"
   },
   {
+   "file": "represcription/applied_main",
+   "path": "meta.preregistration_freeze_commit",
+   "text": "4b924e2"
+  },
+  {
+   "file": "config",
+   "path": "represcription.label",
+   "text": "engine passed the third-study verdict (T3 reused, not an independent confirmation)"
+  },
+  {
+   "file": "matching_rebuild_applied",
+   "path": "terms_final",
+   "text": "3,132"
+  },
+  {
+   "file": "review_decisions_applied",
+   "path": "common_words.surfaces",
+   "text": "1"
+  },
+  {
+   "file": "review_decisions_applied",
+   "path": "synonyms.pairs",
+   "text": "17"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "training.timepoints",
+   "text": "T1+R2+R3+T2+T3"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "training.candidates",
+   "text": "1,041,085"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "training.positives",
+   "text": "8,430"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "redundancy.kept",
+   "text": "1,133,162"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "meta.created",
+   "text": "2026-10-11"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "prescription.top_k",
+   "text": "100"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.0.rank",
+   "text": "1"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.0.triad",
+   "text": "pc · causal discovery · prediction"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.0.score",
+   "text": "0.492"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.1.rank",
+   "text": "2"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.1.triad",
+   "text": "gpt · arithmetic reasoning · code generation"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.1.score",
+   "text": "0.462"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.2.rank",
+   "text": "3"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.2.triad",
+   "text": "normalizing flows · bayesian inference · regression"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.2.score",
+   "text": "0.420"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.3.rank",
+   "text": "4"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.3.triad",
+   "text": "rag · information retrieval · text retrieval"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.3.score",
+   "text": "0.379"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.4.rank",
+   "text": "5"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.4.triad",
+   "text": "proximal policy optimization · deep reinforcement learning · traffic signal control"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.4.score",
+   "text": "0.378"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.5.rank",
+   "text": "6"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.5.triad",
+   "text": "adapter · parameter efficient fine tuning · text generation"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.5.score",
+   "text": "0.378"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.6.rank",
+   "text": "7"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.6.triad",
+   "text": "gaussian process · kolmogorov arnold networks · regression"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.6.score",
+   "text": "0.377"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.7.rank",
+   "text": "8"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.7.triad",
+   "text": "normalizing flows · parameter estimation · regression"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.7.score",
+   "text": "0.376"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.8.rank",
+   "text": "9"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.8.triad",
+   "text": "random search · bayesian optimization · prediction"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.8.score",
+   "text": "0.372"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.9.rank",
+   "text": "10"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.9.triad",
+   "text": "gaussian process · generalization bounds · regression"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.9.score",
+   "text": "0.348"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "prescription.shared_triads",
+   "text": "5"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "prescription.top_k",
+   "text": "100"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "prescription.distinct_terms.first",
+   "text": "158"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "prescription.distinct_terms.fourth",
+   "text": "152"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "prescription.distinct_terms.shared",
+   "text": "58"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.first.axes.V.missing",
+   "text": "90"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.fourth.axes.V.missing",
+   "text": "68"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.first.riskiest_axis.V",
+   "text": "91"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.first.riskiest_axis.D",
+   "text": "5"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.first.riskiest_axis.F",
+   "text": "4"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.fourth.riskiest_axis.V",
+   "text": "74"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.fourth.riskiest_axis.D",
+   "text": "12"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.fourth.riskiest_axis.F",
+   "text": "14"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.concept_insufficient.insufficient",
+   "text": "44"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.concept_insufficient.runs",
+   "text": "100"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.concept_insufficient.insufficient",
+   "text": "13"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.concept_insufficient.runs",
+   "text": "100"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.concept_insufficient.reasons.term_mismatch",
+   "text": "14"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.concept_insufficient.reasons.term_mismatch",
+   "text": "0"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.q1.rate",
+   "text": "0.61"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.q1.wilson_95.0",
+   "text": "0.51"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.q1.wilson_95.1",
+   "text": "0.70"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.q1.rate",
+   "text": "0.56"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.q1.wilson_95.0",
+   "text": "0.46"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.q1.wilson_95.1",
+   "text": "0.65"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.q1.business_fields.supported",
+   "text": "6"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.q1.business_fields.n",
+   "text": "20"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.q1.business_fields.supported",
+   "text": "2"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.q1.business_fields.n",
+   "text": "16"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.q2_frame_agreement.rate",
+   "text": "0.92"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.q2_frame_agreement.rate",
+   "text": "0.98"
+  },
+  {
+   "file": "derived",
+   "path": "represcription_prereg_changes",
+   "text": "0"
+  },
+  {
+   "file": "derived",
+   "path": "represcription_prereg_rows_after_freeze",
+   "text": "0"
+  },
+  {
    "file": "vocab_final_applied",
    "path": "meta.git_commit",
    "text": "5dda8d2"
@@ -2224,13 +2599,103 @@
    "file": "engine_v3_verdict_T3",
    "path": "meta.created",
    "text": "2026-10-11"
+  },
+  {
+   "file": "matching_rebuild_applied",
+   "path": "meta.git_commit",
+   "text": "2a88bae"
+  },
+  {
+   "file": "matching_rebuild_applied",
+   "path": "meta.created",
+   "text": "2026-10-11"
+  },
+  {
+   "file": "review_decisions_applied",
+   "path": "meta.git_commit",
+   "text": "2a88bae"
+  },
+  {
+   "file": "review_decisions_applied",
+   "path": "meta.created",
+   "text": "2026-10-11"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "meta.git_commit",
+   "text": "21ccc54"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "meta.created",
+   "text": "2026-10-11"
+  },
+  {
+   "file": "represcription/prospective_register",
+   "path": "meta.git_commit",
+   "text": "21ccc54"
+  },
+  {
+   "file": "represcription/prospective_register",
+   "path": "meta.created",
+   "text": "2026-10-11"
+  },
+  {
+   "file": "represcription/dvf",
+   "path": "meta.git_commit",
+   "text": "dc85802"
+  },
+  {
+   "file": "represcription/dvf",
+   "path": "meta.created",
+   "text": "2026-10-12"
+  },
+  {
+   "file": "represcription/briefing_generation",
+   "path": "meta.git_commit",
+   "text": "dc85802"
+  },
+  {
+   "file": "represcription/briefing_generation",
+   "path": "meta.created",
+   "text": "2026-10-12"
+  },
+  {
+   "file": "represcription/q1",
+   "path": "meta.git_commit",
+   "text": "0a75065"
+  },
+  {
+   "file": "represcription/q1",
+   "path": "meta.created",
+   "text": "2026-10-12"
+  },
+  {
+   "file": "represcription/q2",
+   "path": "meta.git_commit",
+   "text": "dc85802"
+  },
+  {
+   "file": "represcription/q2",
+   "path": "meta.created",
+   "text": "2026-10-12"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "meta.git_commit",
+   "text": "c3673e9"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "meta.created",
+   "text": "2026-10-12"
   }
  ],
  "en": [
   {
    "file": "config",
    "path": "design_version",
-   "text": "v0.6.0"
+   "text": "v0.6.1"
   },
   {
    "file": "applied_main",
@@ -2251,6 +2716,11 @@
    "file": "engine_verdict_T3",
    "path": "by_k.5000.S3_diff_ci.term_block.lower",
    "text": "0.001"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "prescription.top_k",
+   "text": "100"
   },
   {
    "file": "hypergraph_main_applied",
@@ -4093,6 +4563,376 @@
    "text": "2"
   },
   {
+   "file": "represcription/applied_main",
+   "path": "meta.preregistration_freeze_commit",
+   "text": "4b924e2"
+  },
+  {
+   "file": "config",
+   "path": "represcription.label",
+   "text": "engine passed the third-study verdict (T3 reused, not an independent confirmation)"
+  },
+  {
+   "file": "matching_rebuild_applied",
+   "path": "terms_final",
+   "text": "3,132"
+  },
+  {
+   "file": "review_decisions_applied",
+   "path": "common_words.surfaces",
+   "text": "1"
+  },
+  {
+   "file": "review_decisions_applied",
+   "path": "synonyms.pairs",
+   "text": "17"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "training.candidates",
+   "text": "1,041,085"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "training.positives",
+   "text": "8,430"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "training.timepoints",
+   "text": "T1+R2+R3+T2+T3"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "redundancy.kept",
+   "text": "1,133,162"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "prescription.top_k",
+   "text": "100"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "meta.created",
+   "text": "2026-10-11"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.0.rank",
+   "text": "1"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.0.triad",
+   "text": "pc · causal discovery · prediction"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.0.score",
+   "text": "0.492"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.1.rank",
+   "text": "2"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.1.triad",
+   "text": "gpt · arithmetic reasoning · code generation"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.1.score",
+   "text": "0.462"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.2.rank",
+   "text": "3"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.2.triad",
+   "text": "normalizing flows · bayesian inference · regression"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.2.score",
+   "text": "0.420"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.3.rank",
+   "text": "4"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.3.triad",
+   "text": "rag · information retrieval · text retrieval"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.3.score",
+   "text": "0.379"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.4.rank",
+   "text": "5"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.4.triad",
+   "text": "proximal policy optimization · deep reinforcement learning · traffic signal control"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.4.score",
+   "text": "0.378"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.5.rank",
+   "text": "6"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.5.triad",
+   "text": "adapter · parameter efficient fine tuning · text generation"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.5.score",
+   "text": "0.378"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.6.rank",
+   "text": "7"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.6.triad",
+   "text": "gaussian process · kolmogorov arnold networks · regression"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.6.score",
+   "text": "0.377"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.7.rank",
+   "text": "8"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.7.triad",
+   "text": "normalizing flows · parameter estimation · regression"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.7.score",
+   "text": "0.376"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.8.rank",
+   "text": "9"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.8.triad",
+   "text": "random search · bayesian optimization · prediction"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.8.score",
+   "text": "0.372"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.9.rank",
+   "text": "10"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.9.triad",
+   "text": "gaussian process · generalization bounds · regression"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "top_k_prescription.9.score",
+   "text": "0.348"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "prescription.shared_triads",
+   "text": "5"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "prescription.top_k",
+   "text": "100"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "prescription.distinct_terms.first",
+   "text": "158"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "prescription.distinct_terms.fourth",
+   "text": "152"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "prescription.distinct_terms.shared",
+   "text": "58"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.first.axes.V.missing",
+   "text": "90"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.fourth.axes.V.missing",
+   "text": "68"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.first.riskiest_axis.V",
+   "text": "91"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.first.riskiest_axis.D",
+   "text": "5"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.first.riskiest_axis.F",
+   "text": "4"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.fourth.riskiest_axis.V",
+   "text": "74"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.fourth.riskiest_axis.D",
+   "text": "12"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "dvf.fourth.riskiest_axis.F",
+   "text": "14"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.concept_insufficient.insufficient",
+   "text": "44"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.concept_insufficient.runs",
+   "text": "100"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.concept_insufficient.insufficient",
+   "text": "13"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.concept_insufficient.runs",
+   "text": "100"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.concept_insufficient.reasons.term_mismatch",
+   "text": "14"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.concept_insufficient.reasons.term_mismatch",
+   "text": "0"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.q1.rate",
+   "text": "0.61"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.q1.wilson_95.0",
+   "text": "0.51"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.q1.wilson_95.1",
+   "text": "0.70"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.q1.rate",
+   "text": "0.56"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.q1.wilson_95.0",
+   "text": "0.46"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.q1.wilson_95.1",
+   "text": "0.65"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.q1.business_fields.supported",
+   "text": "6"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.q1.business_fields.n",
+   "text": "20"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.q1.business_fields.supported",
+   "text": "2"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.q1.business_fields.n",
+   "text": "16"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.first.q2_frame_agreement.rate",
+   "text": "0.92"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "briefing_quality.fourth.q2_frame_agreement.rate",
+   "text": "0.98"
+  },
+  {
+   "file": "derived",
+   "path": "represcription_prereg_changes",
+   "text": "0"
+  },
+  {
+   "file": "derived",
+   "path": "represcription_prereg_rows_after_freeze",
+   "text": "0"
+  },
+  {
    "file": "vocab_final_applied",
    "path": "meta.git_commit",
    "text": "5dda8d2"
@@ -4451,6 +5291,96 @@
    "file": "engine_v3_verdict_T3",
    "path": "meta.created",
    "text": "2026-10-11"
+  },
+  {
+   "file": "matching_rebuild_applied",
+   "path": "meta.git_commit",
+   "text": "2a88bae"
+  },
+  {
+   "file": "matching_rebuild_applied",
+   "path": "meta.created",
+   "text": "2026-10-11"
+  },
+  {
+   "file": "review_decisions_applied",
+   "path": "meta.git_commit",
+   "text": "2a88bae"
+  },
+  {
+   "file": "review_decisions_applied",
+   "path": "meta.created",
+   "text": "2026-10-11"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "meta.git_commit",
+   "text": "21ccc54"
+  },
+  {
+   "file": "represcription/applied_main",
+   "path": "meta.created",
+   "text": "2026-10-11"
+  },
+  {
+   "file": "represcription/prospective_register",
+   "path": "meta.git_commit",
+   "text": "21ccc54"
+  },
+  {
+   "file": "represcription/prospective_register",
+   "path": "meta.created",
+   "text": "2026-10-11"
+  },
+  {
+   "file": "represcription/dvf",
+   "path": "meta.git_commit",
+   "text": "dc85802"
+  },
+  {
+   "file": "represcription/dvf",
+   "path": "meta.created",
+   "text": "2026-10-12"
+  },
+  {
+   "file": "represcription/briefing_generation",
+   "path": "meta.git_commit",
+   "text": "dc85802"
+  },
+  {
+   "file": "represcription/briefing_generation",
+   "path": "meta.created",
+   "text": "2026-10-12"
+  },
+  {
+   "file": "represcription/q1",
+   "path": "meta.git_commit",
+   "text": "0a75065"
+  },
+  {
+   "file": "represcription/q1",
+   "path": "meta.created",
+   "text": "2026-10-12"
+  },
+  {
+   "file": "represcription/q2",
+   "path": "meta.git_commit",
+   "text": "dc85802"
+  },
+  {
+   "file": "represcription/q2",
+   "path": "meta.created",
+   "text": "2026-10-12"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "meta.git_commit",
+   "text": "c3673e9"
+  },
+  {
+   "file": "represcription/comparison_first_study",
+   "path": "meta.created",
+   "text": "2026-10-12"
   }
  ]
 }

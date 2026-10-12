@@ -1,0 +1,404 @@
+{
+ "meta": {
+  "step": "briefing_checks_review",
+  "created": "2026-10-12",
+  "git_commit": "729eedb2a73ebbd25a9bd3175d4cf548653c337d",
+  "post_hoc": true,
+  "note": "Descriptive classification defined after viewing the flags; not a pre-registered metric and not used for the main conclusions.",
+  "checks_sha256": "61266394b16e31a8a7e14282ba04ddf6546fad066b2e99c10b140275e4b72f5f",
+  "violation_categories": [
+   "no_marker",
+   "not_named",
+   "not_stated",
+   "violation"
+  ]
+ },
+ "flags_total": 52,
+ "violations": 9,
+ "by_flag": {
+  "dvf_number_mismatch": {
+   "order_artifact": 2
+  },
+  "missing_designation_not_stated": {
+   "not_stated": 1
+  },
+  "riskiest_axis_not_named": {
+   "letter_form": 2,
+   "not_named": 3
+  },
+  "superiority:outperform": {
+   "unclassified": 1
+  },
+  "unmarked_threshold": {
+   "dvf_score_only": 31,
+   "no_marker": 5,
+   "other_wording": 7
+  }
+ },
+ "items": [
+  {
+   "rank": 1,
+   "rep": 1,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 1,
+   "rep": 2,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 1,
+   "rep": 3,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 1,
+   "rep": 4,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 1,
+   "rep": 5,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 1,
+   "rep": 5,
+   "field": "mvp",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 5,
+   "rep": 1,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 5,
+   "rep": 2,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 5,
+   "rep": 3,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 5,
+   "rep": 4,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 5,
+   "rep": 5,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 6,
+   "rep": 3,
+   "field": "riskiest_assumption/mvp",
+   "flag": "riskiest_axis_not_named",
+   "category": "letter_form"
+  },
+  {
+   "rank": 7,
+   "rep": 1,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "no_marker"
+  },
+  {
+   "rank": 7,
+   "rep": 2,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "no_marker"
+  },
+  {
+   "rank": 7,
+   "rep": 3,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 7,
+   "rep": 4,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 7,
+   "rep": 4,
+   "field": "kill_criteria[0]",
+   "flag": "unmarked_threshold",
+   "category": "no_marker"
+  },
+  {
+   "rank": 7,
+   "rep": 5,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 8,
+   "rep": 2,
+   "field": "riskiest_assumption/mvp",
+   "flag": "riskiest_axis_not_named",
+   "category": "letter_form"
+  },
+  {
+   "rank": 9,
+   "rep": 1,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 9,
+   "rep": 2,
+   "field": "value_prop",
+   "flag": "superiority:outperform",
+   "category": "unclassified"
+  },
+  {
+   "rank": 9,
+   "rep": 2,
+   "field": "riskiest_assumption/mvp",
+   "flag": "riskiest_axis_not_named",
+   "category": "not_named"
+  },
+  {
+   "rank": 9,
+   "rep": 3,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 9,
+   "rep": 4,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 9,
+   "rep": 5,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 12,
+   "rep": 1,
+   "field": "summary",
+   "flag": "dvf_number_mismatch",
+   "category": "order_artifact"
+  },
+  {
+   "rank": 12,
+   "rep": 1,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 12,
+   "rep": 2,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 12,
+   "rep": 3,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 12,
+   "rep": 4,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 12,
+   "rep": 5,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 13,
+   "rep": 1,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 13,
+   "rep": 2,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 13,
+   "rep": 3,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 13,
+   "rep": 3,
+   "field": "riskiest_assumption/mvp",
+   "flag": "riskiest_axis_not_named",
+   "category": "not_named"
+  },
+  {
+   "rank": 13,
+   "rep": 4,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "no_marker"
+  },
+  {
+   "rank": 13,
+   "rep": 5,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 15,
+   "rep": 1,
+   "field": "mvp",
+   "flag": "unmarked_threshold",
+   "category": "other_wording"
+  },
+  {
+   "rank": 15,
+   "rep": 3,
+   "field": "mvp",
+   "flag": "unmarked_threshold",
+   "category": "other_wording"
+  },
+  {
+   "rank": 16,
+   "rep": 4,
+   "field": "mvp",
+   "flag": "unmarked_threshold",
+   "category": "other_wording"
+  },
+  {
+   "rank": 16,
+   "rep": 4,
+   "field": "success_metric",
+   "flag": "unmarked_threshold",
+   "category": "other_wording"
+  },
+  {
+   "rank": 16,
+   "rep": 4,
+   "field": "kill_criteria[0]",
+   "flag": "unmarked_threshold",
+   "category": "other_wording"
+  },
+  {
+   "rank": 18,
+   "rep": 1,
+   "field": "riskiest_assumption/mvp",
+   "flag": "missing_designation_not_stated",
+   "category": "not_stated"
+  },
+  {
+   "rank": 18,
+   "rep": 4,
+   "field": "mvp",
+   "flag": "unmarked_threshold",
+   "category": "other_wording"
+  },
+  {
+   "rank": 18,
+   "rep": 5,
+   "field": "mvp",
+   "flag": "unmarked_threshold",
+   "category": "other_wording"
+  },
+  {
+   "rank": 19,
+   "rep": 1,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 19,
+   "rep": 2,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 19,
+   "rep": 3,
+   "field": "summary",
+   "flag": "dvf_number_mismatch",
+   "category": "order_artifact"
+  },
+  {
+   "rank": 19,
+   "rep": 3,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 19,
+   "rep": 3,
+   "field": "riskiest_assumption/mvp",
+   "flag": "riskiest_axis_not_named",
+   "category": "not_named"
+  },
+  {
+   "rank": 19,
+   "rep": 4,
+   "field": "riskiest_assumption",
+   "flag": "unmarked_threshold",
+   "category": "dvf_score_only"
+  },
+  {
+   "rank": 20,
+   "rep": 2,
+   "field": "mvp",
+   "flag": "unmarked_threshold",
+   "category": "no_marker"
+  }
+ ]
+}

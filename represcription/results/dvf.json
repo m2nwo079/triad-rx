@@ -1,0 +1,8573 @@
+{
+ "meta": {
+  "step": "dvf",
+  "created": "2026-10-12",
+  "git_commit": "dc85802781ca0f28729e074170479085de85d864",
+  "reliability_flag": null,
+  "note": "DVF is a transparent indicator-based priority; its predictive validity is not tested (design 7.1)",
+  "settings": {
+   "dvf": {
+    "population": "prospective_registration",
+    "prospective_file": "prospective/2026-10-11.json",
+    "patent_unit": "pair",
+    "missing_assignee": "exclude_and_report",
+    "f_pair_aggregate": "min",
+    "f_implementation": "terms_with_repo",
+    "percentile_ties": "average",
+    "riskiest": {
+     "missing_axis": "first",
+     "tie_break": "axis_mean_percentile",
+     "axis_order": [
+      "F",
+      "V",
+      "D"
+     ]
+    },
+    "bootstrap": {
+     "method": "poisson",
+     "replicates": 1000,
+     "seed": 20261006
+    }
+   },
+   "evidence": {
+    "patent_window": "build_window",
+    "repo_unit": "pair_evidence_papers",
+    "readme_max_arxiv_ids": 10,
+    "star_window_days": 365,
+    "star_aggregate": "sum",
+    "package_link": "pypi_metadata_urls",
+    "download_growth": "half_over_half",
+    "growth_smoothing": 1,
+    "download_half_weeks": 12
+   }
+  },
+  "axis_bins": "score = ceil(5 * axis value), clipped to 1-5 (five equal-width bins of the percentile scale)",
+  "inputs_sha256": {
+   "papers": "e679708f11e466665018cb3b40255f167b918bdd71ba2b96f87a28f02b9fe892",
+   "hypergraph": "3c657f0968fba1efa1a1ffa2b73e5f5da6f8290efdf314fd8dc1a7fd9af15147",
+   "pwc_links": "e9fd17157790a827fabb1290c08286579bb103e10f1767d0a8d67d71ed43a7ba",
+   "readme_links": "483ca5050eae187e461f8d32ffd0b0f0c71b1b0585b95e2612f2cb1214226d6f",
+   "repo_stars": "429c79170bc79a37da21bfd384d0b39020811636f92166253803149b9404bce4",
+   "pypi_links": "3a19428b3b35880c9f51b0a907933c120951d55156cc41140c462b355c20610b",
+   "pypi_downloads": "8e0df33fabd06ccf0a6ef9a9c1c7ef7d0b314f2f9d1146f88e8f66f45be7d734",
+   "patents": "ff8292a71f4f2c56ed710a77cea99d10c69e2d2cd0ddd1aefea12407a3536169",
+   "patent_assignees": "5cd70007ef33e8bb318bf16565abe17b3d87fe4317eb545c2841db5a2de9d4df",
+   "assignee_classes": "9531f7b64c184dfad8c8e488c30223fce7e3255fb675ba286e0f14fa14fd1245",
+   "evidence_papers": "39485de3b42b51ea85bdfb2057089276303b6f1bf32762a905cb5b8c4e803548"
+  },
+  "units": {
+   "papers": 74249,
+   "repositories": 7267,
+   "packages": 561,
+   "inventions": 34646
+  }
+ },
+ "summary": {
+  "candidates": 100,
+  "axis_missing": {
+   "D": 0,
+   "F": 0,
+   "V": 68
+  },
+  "riskiest_axis": {
+   "F": 14,
+   "V": 74,
+   "D": 12
+  },
+  "riskiest_by_missing": 68
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "triad": [
+    "M:pc",
+    "T:causal discovery",
+    "T:prediction"
+   ],
+   "indicators": {
+    "D1": 354.0,
+    "D2": 3.5355805243445695,
+    "F1": 43.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 0.0,
+    "V2": 0.0
+   },
+   "percentiles": {
+    "D1": 0.15,
+    "D2": 0.9325842696629213,
+    "F1": 0.99,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.078125,
+    "V2": 0.078125
+   },
+   "axes": {
+    "D": {
+     "value": 0.5412921348314607,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.137195163004961,
+      0.628904275639142
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.695,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.6816666666666666,
+      0.6966666666666667
+     ],
+     "bootstrap_score_95": [
+      4.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.078125,
+     "score": 1.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.04,
+      0.1
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      1.0
+     ],
+     "bootstrap_missing_share": 0.374
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "lowest",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 0.998,
+    "D": 0.002
+   },
+   "evidence_counts": {
+    "related_repositories": 51,
+    "related_packages": 4,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 0.0,
+    "ambiguous_as_academic": 0.0
+   }
+  },
+  {
+   "rank": 2,
+   "triad": [
+    "M:gpt",
+    "T:arithmetic reasoning",
+    "T:code generation"
+   ],
+   "indicators": {
+    "D1": 16751.0,
+    "D2": 5.016934391329592,
+    "F1": 9.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.86,
+    "D2": 0.9662921348314607,
+    "F1": 0.345,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.9131460674157303,
+     "score": 5.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.44837514568764564,
+      0.9629518072289156
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.48,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.41500000000000004,
+      0.5733333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 155,
+    "related_packages": 5,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 3,
+   "triad": [
+    "M:normalizing flows",
+    "T:bayesian inference",
+    "T:regression"
+   ],
+   "indicators": {
+    "D1": 1083.0,
+    "D2": 1.3509352669188734,
+    "F1": 31.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.33,
+    "D2": 0.8202247191011236,
+    "F1": 0.96,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.5751123595505618,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.3404756097560976,
+      0.7227116963064295
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6849999999999999,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.6299166666666667,
+      0.6933333333333334
+     ],
+     "bootstrap_score_95": [
+      4.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 62,
+    "related_packages": 7,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 4,
+   "triad": [
+    "M:rag",
+    "T:information retrieval",
+    "T:text retrieval"
+   ],
+   "indicators": {
+    "D1": 22204.0,
+    "D2": 1.0637568685209313,
+    "F1": 19.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.92,
+    "D2": 0.7528089887640449,
+    "F1": 0.76,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.8364044943820225,
+     "score": 5.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.34710382059800665,
+      0.8785511119081778
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6183333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.52,
+      0.6666666666666666
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 112,
+    "related_packages": 7,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 5,
+   "triad": [
+    "M:proximal policy optimization",
+    "T:deep reinforcement learning",
+    "T:traffic signal control"
+   ],
+   "indicators": {
+    "D1": 242.0,
+    "D2": 0.884450784593438,
+    "F1": 9.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 2.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.1,
+    "D2": 0.43820224719101125,
+    "F1": 0.345,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.515625,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.26910112359550564,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.08933862433862434,
+      0.471574727481354
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.48,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.41500000000000004,
+      0.5716666666666667
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.625,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.46752717391304344,
+      0.6690578817733989
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.15500000000000003
+    }
+   },
+   "riskiest_axis": "D",
+   "riskiest_reason": "lowest",
+   "mvp_type": "demand landing page and problem interviews",
+   "riskiest_bootstrap_share": {
+    "F": 0.032,
+    "V": 0.16,
+    "D": 0.808
+   },
+   "evidence_counts": {
+    "related_repositories": 55,
+    "related_packages": 2,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 6,
+   "triad": [
+    "M:adapter",
+    "T:parameter efficient fine tuning",
+    "T:text generation"
+   ],
+   "indicators": {
+    "D1": 4953.0,
+    "D2": 0.9909142662446385,
+    "F1": 17.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.71,
+    "D2": 0.5842696629213483,
+    "F1": 0.665,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.6471348314606742,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.46969266567386453,
+      0.7541246456413891
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5866666666666666,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5033333333333333,
+      0.6650416666666666
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 150,
+    "related_packages": 14,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 7,
+   "triad": [
+    "M:gaussian process",
+    "T:kolmogorov arnold networks",
+    "T:regression"
+   ],
+   "indicators": {
+    "D1": 2024.0,
+    "D2": 0.9530456852791879,
+    "F1": 9.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 5.0,
+    "V2": 0.7142857142857143
+   },
+   "percentiles": {
+    "D1": 0.52,
+    "D2": 0.5056179775280899,
+    "F1": 0.345,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.765625,
+    "V2": 0.265625
+   },
+   "axes": {
+    "D": {
+     "value": 0.512808988764045,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4178121231696813,
+      0.6591216335931964
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.48,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4183333333333333,
+      0.585
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.515625,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.2799711538461539,
+      0.6851851851851852
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    }
+   },
+   "riskiest_axis": "F",
+   "riskiest_reason": "lowest",
+   "mvp_type": "technical proof of concept from existing packages",
+   "riskiest_bootstrap_share": {
+    "F": 0.335,
+    "V": 0.536,
+    "D": 0.129
+   },
+   "evidence_counts": {
+    "related_repositories": 219,
+    "related_packages": 20,
+    "related_inventions_without_assignee": 2,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 0.7142857142857143,
+    "ambiguous_as_academic": 0.7142857142857143
+   }
+  },
+  {
+   "rank": 8,
+   "triad": [
+    "M:normalizing flows",
+    "T:parameter estimation",
+    "T:regression"
+   ],
+   "indicators": {
+    "D1": 1010.0,
+    "D2": 1.3528662420382165,
+    "F1": 18.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.31,
+    "D2": 0.8314606741573034,
+    "F1": 0.705,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.5707303370786517,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.28651553776079935,
+      0.713808740978348
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.52,
+      0.6716666666666665
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 48,
+    "related_packages": 4,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 9,
+   "triad": [
+    "M:random search",
+    "T:bayesian optimization",
+    "T:prediction"
+   ],
+   "indicators": {
+    "D1": 95.0,
+    "D2": 0.3992197659297789,
+    "F1": 13.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 2.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.03,
+    "D2": 0.16853932584269662,
+    "F1": 0.54,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.515625,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.09926966292134831,
+     "score": 1.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.02,
+      0.165
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      1.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5449999999999999,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.45662500000000006,
+      0.6416666666666666
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.625,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.46590909090909094,
+      0.6681474358974357
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.15200000000000002
+    }
+   },
+   "riskiest_axis": "D",
+   "riskiest_reason": "lowest",
+   "mvp_type": "demand landing page and problem interviews",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 0.152,
+    "D": 0.848
+   },
+   "evidence_counts": {
+    "related_repositories": 30,
+    "related_packages": 2,
+    "related_inventions_without_assignee": 2,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 10,
+   "triad": [
+    "M:gaussian process",
+    "T:generalization bounds",
+    "T:regression"
+   ],
+   "indicators": {
+    "D1": 1951.0,
+    "D2": 0.9544646033440057,
+    "F1": 1.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": 5.0,
+    "V2": 0.7142857142857143
+   },
+   "percentiles": {
+    "D1": 0.49,
+    "D2": 0.5224719101123596,
+    "F1": 0.03,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": 0.765625,
+    "V2": 0.265625
+   },
+   "axes": {
+    "D": {
+     "value": 0.5062359550561798,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.41152334337349394,
+      0.6540853174603174
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.20833333333333334,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.20333333333333334,
+      0.24666666666666667
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.515625,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.2799711538461539,
+      0.6851851851851852
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    }
+   },
+   "riskiest_axis": "F",
+   "riskiest_reason": "lowest",
+   "mvp_type": "technical proof of concept from existing packages",
+   "riskiest_bootstrap_share": {
+    "F": 0.992,
+    "V": 0.008,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 207,
+    "related_packages": 18,
+    "related_inventions_without_assignee": 2,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 0.7142857142857143,
+    "ambiguous_as_academic": 0.7142857142857143
+   }
+  },
+  {
+   "rank": 11,
+   "triad": [
+    "M:direct preference optimization",
+    "T:instruction following",
+    "T:safety alignment"
+   ],
+   "indicators": {
+    "D1": 474.0,
+    "D2": 0.42614601018675724,
+    "F1": 19.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.21,
+    "D2": 0.1797752808988764,
+    "F1": 0.76,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.19488764044943818,
+     "score": 1.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.1029863239676458,
+      0.6282500907770515
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6183333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5216666666666666,
+      0.6699999999999999
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 71,
+    "related_packages": 3,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 12,
+   "triad": [
+    "M:global local attention",
+    "M:transformer",
+    "T:decoder"
+   ],
+   "indicators": {
+    "D1": 103360.0,
+    "D2": 1.004148448584497,
+    "F1": 2.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": 24.0,
+    "V2": 0.8571428571428571
+   },
+   "percentiles": {
+    "D1": 0.99,
+    "D2": 0.6685393258426966,
+    "F1": 0.08,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": 0.984375,
+    "V2": 0.390625
+   },
+   "axes": {
+    "D": {
+     "value": 0.8292696629213483,
+     "score": 5.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.6931649928263988,
+      0.9223255813953488
+     ],
+     "bootstrap_score_95": [
+      4.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.225,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.205,
+      0.27166666666666667
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.6875,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.6296296296296297,
+      0.76191829004329
+     ],
+     "bootstrap_score_95": [
+      4.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    }
+   },
+   "riskiest_axis": "F",
+   "riskiest_reason": "lowest",
+   "mvp_type": "technical proof of concept from existing packages",
+   "riskiest_bootstrap_share": {
+    "F": 1.0,
+    "V": 0.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 1132,
+    "related_packages": 158,
+    "related_inventions_without_assignee": 26,
+    "V_ambiguous_assignees": 1,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 0.8620689655172413,
+    "ambiguous_as_academic": 0.8275862068965517
+   }
+  },
+  {
+   "rank": 13,
+   "triad": [
+    "M:gaussian process",
+    "T:bayesian optimization",
+    "T:operator learning"
+   ],
+   "indicators": {
+    "D1": 711.0,
+    "D2": 1.3144057441755104,
+    "F1": 3.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": 5.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.27,
+    "D2": 0.8033707865168539,
+    "F1": 0.12,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": 0.765625,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.536685393258427,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.34777524805102766,
+      0.6405884103641457
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.2383333333333333,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.20833333333333334,
+      0.29837499999999995
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.75,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5555555555555556,
+      0.7931034482758621
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0010000000000000009
+    }
+   },
+   "riskiest_axis": "F",
+   "riskiest_reason": "lowest",
+   "mvp_type": "technical proof of concept from existing packages",
+   "riskiest_bootstrap_share": {
+    "F": 0.999,
+    "V": 0.001,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 135,
+    "related_packages": 16,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 14,
+   "triad": [
+    "M:convolutional block attention module",
+    "M:yolov8",
+    "T:classification"
+   ],
+   "indicators": {
+    "D1": 73.0,
+    "D2": null,
+    "F1": 10.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.01,
+    "D2": null,
+    "F1": 0.405,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.01,
+     "score": 1.0,
+     "missing_indicators": 1,
+     "bootstrap_value_95": [
+      0.01,
+      0.08
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      1.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4283333333333334,
+      0.5916666666666667
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 46,
+    "related_packages": 0,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 15,
+   "triad": [
+    "M:normalizing flows",
+    "T:density estimation",
+    "T:uncertainty quantification"
+   ],
+   "indicators": {
+    "D1": 412.0,
+    "D2": 0.6302250803858521,
+    "F1": 16.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.17,
+    "D2": 0.2808988764044944,
+    "F1": 0.63,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.22544943820224722,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.145,
+      0.33123643818334736
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5750000000000001,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4883333333333333,
+      0.6633333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 58,
+    "related_packages": 2,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 16,
+   "triad": [
+    "M:transformer",
+    "T:image to 3d",
+    "T:scene generation"
+   ],
+   "indicators": {
+    "D1": 1531.0,
+    "D2": null,
+    "F1": 20.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.42,
+    "D2": null,
+    "F1": 0.805,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.42,
+     "score": 3.0,
+     "missing_indicators": 1,
+     "bootstrap_value_95": [
+      0.24975000000000003,
+      0.65
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6333333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5399583333333332,
+      0.6733333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 31,
+    "related_packages": 0,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 17,
+   "triad": [
+    "M:direct preference optimization",
+    "T:code generation",
+    "T:instruction following"
+   ],
+   "indicators": {
+    "D1": 1654.0,
+    "D2": 0.36607142857142855,
+    "F1": 16.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.44,
+    "D2": 0.12359550561797752,
+    "F1": 0.63,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.2817977528089888,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.19517895720814293,
+      0.4886310240963855
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5750000000000001,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.49158333333333337,
+      0.6633749999999998
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 73,
+    "related_packages": 4,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 18,
+   "triad": [
+    "M:gaussian process",
+    "M:pc",
+    "T:uncertainty quantification"
+   ],
+   "indicators": {
+    "D1": 894.0,
+    "D2": 1.209854101822251,
+    "F1": 5.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.3,
+    "D2": 0.7865168539325843,
+    "F1": 0.18,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.5432584269662921,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.30747515060240965,
+      0.6723825322812051
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.25833333333333336,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.21333333333333335,
+      0.3017083333333333
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 72,
+    "related_packages": 7,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 19,
+   "triad": [
+    "M:vq vae",
+    "T:motion generation",
+    "T:prediction"
+   ],
+   "indicators": {
+    "D1": 8283.0,
+    "D2": 2.2872144253467006,
+    "F1": 22.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 0.0,
+    "V2": 0.0
+   },
+   "percentiles": {
+    "D1": 0.81,
+    "D2": 0.9044943820224719,
+    "F1": 0.865,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.078125,
+    "V2": 0.078125
+   },
+   "axes": {
+    "D": {
+     "value": 0.857247191011236,
+     "score": 5.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5408887195121952,
+      0.9103658536585366
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6533333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5582499999999999,
+      0.6833333333333332
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.078125,
+     "score": 1.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.043478260869565216,
+      0.1
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      1.0
+     ],
+     "bootstrap_missing_share": 0.356
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "lowest",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 52,
+    "related_packages": 9,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 0.0,
+    "ambiguous_as_academic": 0.0
+   }
+  },
+  {
+   "rank": 20,
+   "triad": [
+    "M:direct preference optimization",
+    "M:proximal policy optimization",
+    "T:decision making"
+   ],
+   "indicators": {
+    "D1": 445.0,
+    "D2": null,
+    "F1": 18.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.19,
+    "D2": null,
+    "F1": 0.705,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.19,
+     "score": 1.0,
+     "missing_indicators": 1,
+     "bootstrap_value_95": [
+      0.03,
+      0.41
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.515,
+      0.6716666666666667
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 28,
+    "related_packages": 0,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 21,
+   "triad": [
+    "M:grouped query attention",
+    "M:pruning",
+    "T:mixture of experts"
+   ],
+   "indicators": {
+    "D1": 836.0,
+    "D2": 0.46217228464419474,
+    "F1": 7.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.29,
+    "D2": 0.20224719101123595,
+    "F1": 0.25,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.24612359550561796,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.19719083447332422,
+      0.4002499999999998
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      2.0249999999999773
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.4483333333333333,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.401625,
+      0.5400416666666666
+     ],
+     "bootstrap_score_95": [
+      2.9750000000000014,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 94,
+    "related_packages": 2,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 22,
+   "triad": [
+    "M:pruning",
+    "T:language modeling",
+    "T:state space models"
+   ],
+   "indicators": {
+    "D1": 33269.0,
+    "D2": 1.0033217181140057,
+    "F1": 22.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.96,
+    "D2": 0.651685393258427,
+    "F1": 0.865,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.8058426966292135,
+     "score": 5.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.6912335223245925,
+      0.9225
+     ],
+     "bootstrap_score_95": [
+      4.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6533333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.555,
+      0.6849999999999999
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 121,
+    "related_packages": 35,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 23,
+   "triad": [
+    "M:pruning",
+    "T:mixture of experts",
+    "T:token reduction"
+   ],
+   "indicators": {
+    "D1": 1304.0,
+    "D2": 0.5128504672897196,
+    "F1": 1.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.38,
+    "D2": 0.2247191011235955,
+    "F1": 0.03,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.30235955056179775,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.24902688834154352,
+      0.5
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.20833333333333334,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.20333333333333334,
+      0.25
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 110,
+    "related_packages": 2,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 24,
+   "triad": [
+    "M:gpt 4",
+    "T:code generation",
+    "T:mathematical problem solving"
+   ],
+   "indicators": {
+    "D1": 6025.0,
+    "D2": 3.9420541807814193,
+    "F1": 11.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.76,
+    "D2": 0.9438202247191011,
+    "F1": 0.46,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.8519101123595505,
+     "score": 5.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.3356489825581395,
+      0.9117508687516707
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5183333333333334,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.435,
+      0.6083333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 106,
+    "related_packages": 3,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 25,
+   "triad": [
+    "M:pc",
+    "T:causal discovery",
+    "T:classification"
+   ],
+   "indicators": {
+    "D1": 126.0,
+    "D2": 0.3707865168539326,
+    "F1": 18.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.05,
+    "D2": 0.1348314606741573,
+    "F1": 0.705,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.09241573033707864,
+     "score": 1.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.03487500000000001,
+      0.17864301552106432
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      1.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5166249999999999,
+      0.6717083333333334
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 41,
+    "related_packages": 2,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 26,
+   "triad": [
+    "M:rag",
+    "T:retrieval",
+    "T:text reranking"
+   ],
+   "indicators": {
+    "D1": 181997.0,
+    "D2": 1.00938468564677,
+    "F1": 2.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": 2.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 1.0,
+    "D2": 0.6853932584269663,
+    "F1": 0.08,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": 0.515625,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.8426966292134832,
+     "score": 5.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.7252652129817445,
+      0.9195455512984249
+     ],
+     "bootstrap_score_95": [
+      4.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.225,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.04,
+      0.26
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.625,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5568181818181819,
+      0.6875
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.354
+    }
+   },
+   "riskiest_axis": "F",
+   "riskiest_reason": "lowest",
+   "mvp_type": "technical proof of concept from existing packages",
+   "riskiest_bootstrap_share": {
+    "F": 0.646,
+    "V": 0.354,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 1118,
+    "related_packages": 137,
+    "related_inventions_without_assignee": 3,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 27,
+   "triad": [
+    "M:counterfactuals",
+    "T:causal inference",
+    "T:regression"
+   ],
+   "indicators": {
+    "D1": 107.0,
+    "D2": 0.6950354609929078,
+    "F1": 16.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 3.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.04,
+    "D2": 0.33707865168539325,
+    "F1": 0.63,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.59375,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.18853932584269661,
+     "score": 1.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.02,
+      0.3531395348837209
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5750000000000001,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.49,
+      0.6616666666666666
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.6640625,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.10714285714285714,
+      0.7321428571428572
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.016000000000000014
+    }
+   },
+   "riskiest_axis": "D",
+   "riskiest_reason": "lowest",
+   "mvp_type": "demand landing page and problem interviews",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 0.04,
+    "D": 0.96
+   },
+   "evidence_counts": {
+    "related_repositories": 53,
+    "related_packages": 2,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 1,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 0.75
+   }
+  },
+  {
+   "rank": 28,
+   "triad": [
+    "M:consistency models",
+    "T:computational efficiency",
+    "T:denoising"
+   ],
+   "indicators": {
+    "D1": 1090.0,
+    "D2": null,
+    "F1": 9.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.34,
+    "D2": null,
+    "F1": 0.345,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.34,
+     "score": 2.0,
+     "missing_indicators": 1,
+     "bootstrap_value_95": [
+      0.24,
+      0.54
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.48,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4232916666666667,
+      0.5817083333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 63,
+    "related_packages": 0,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 29,
+   "triad": [
+    "M:adapter",
+    "T:parameter efficient fine tuning",
+    "T:prompt engineering"
+   ],
+   "indicators": {
+    "D1": 5437.0,
+    "D2": 0.9909142662446385,
+    "F1": 11.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.74,
+    "D2": 0.5842696629213483,
+    "F1": 0.46,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.6621348314606741,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4789285714285715,
+      0.7666260888501742
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5183333333333334,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.43329166666666663,
+      0.5834166666666666
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 148,
+    "related_packages": 14,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 30,
+   "triad": [
+    "M:soft actor critic",
+    "T:continuous control",
+    "T:decision making"
+   ],
+   "indicators": {
+    "D1": 353.0,
+    "D2": 0.6776829649300945,
+    "F1": 25.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 0.0,
+    "V2": 0.0
+   },
+   "percentiles": {
+    "D1": 0.14,
+    "D2": 0.3146067415730337,
+    "F1": 0.91,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.078125,
+    "V2": 0.078125
+   },
+   "axes": {
+    "D": {
+     "value": 0.22730337078651686,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.06987500000000002,
+      0.3457464859437751
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6683333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5832083333333333,
+      0.6900000000000001
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.078125,
+     "score": 1.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.041666666666666664,
+      0.1
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      1.0
+     ],
+     "bootstrap_missing_share": 0.347
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "lowest",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 0.978,
+    "D": 0.022
+   },
+   "evidence_counts": {
+    "related_repositories": 39,
+    "related_packages": 1,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 0.0,
+    "ambiguous_as_academic": 0.0
+   }
+  },
+  {
+   "rank": 31,
+   "triad": [
+    "M:adapter",
+    "T:language modeling",
+    "T:mixture of experts"
+   ],
+   "indicators": {
+    "D1": 2324.0,
+    "D2": 7.219512195121951,
+    "F1": 29.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 1.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.55,
+    "D2": 0.9775280898876404,
+    "F1": 0.95,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.296875,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.7637640449438202,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.3281699517867272,
+      0.8619383416017009
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6816666666666666,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.6233333333333333,
+      0.6933333333333334
+     ],
+     "bootstrap_score_95": [
+      4.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.515625,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4479166666666667,
+      0.5571022727272728
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.33199999999999996
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "lowest",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 0.922,
+    "D": 0.078
+   },
+   "evidence_counts": {
+    "related_repositories": 98,
+    "related_packages": 4,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 32,
+   "triad": [
+    "M:inpainting",
+    "T:image generation",
+    "T:image manipulation"
+   ],
+   "indicators": {
+    "D1": 5074.0,
+    "D2": 0.1225140428115986,
+    "F1": 21.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.73,
+    "D2": 0.02247191011235955,
+    "F1": 0.835,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.3762359550561798,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.2171951219512195,
+      0.77
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6433333333333332,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.545,
+      0.68
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 89,
+    "related_packages": 3,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 33,
+   "triad": [
+    "M:adapter",
+    "M:rag",
+    "T:parameter efficient fine tuning"
+   ],
+   "indicators": {
+    "D1": 4877.0,
+    "D2": 0.9909142662446385,
+    "F1": 22.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.69,
+    "D2": 0.5842696629213483,
+    "F1": 0.865,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.6371348314606742,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.44755073366555925,
+      0.7432276785714286
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6533333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5483333333333333,
+      0.6783333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 140,
+    "related_packages": 14,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 34,
+   "triad": [
+    "M:linformer",
+    "M:transformer",
+    "T:decoder"
+   ],
+   "indicators": {
+    "D1": 103288.0,
+    "D2": 1.004148448584497,
+    "F1": 1.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": 24.0,
+    "V2": 0.8571428571428571
+   },
+   "percentiles": {
+    "D1": 0.98,
+    "D2": 0.6685393258426966,
+    "F1": 0.03,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": 0.984375,
+    "V2": 0.390625
+   },
+   "axes": {
+    "D": {
+     "value": 0.8242696629213483,
+     "score": 5.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.6929157239819004,
+      0.9207228915662651
+     ],
+     "bootstrap_score_95": [
+      4.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.20833333333333334,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.05000000000000001,
+      0.24833333333333332
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.6875,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.6296296296296297,
+      0.76191829004329
+     ],
+     "bootstrap_score_95": [
+      4.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    }
+   },
+   "riskiest_axis": "F",
+   "riskiest_reason": "lowest",
+   "mvp_type": "technical proof of concept from existing packages",
+   "riskiest_bootstrap_share": {
+    "F": 1.0,
+    "V": 0.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 1132,
+    "related_packages": 158,
+    "related_inventions_without_assignee": 26,
+    "V_ambiguous_assignees": 1,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 0.8620689655172413,
+    "ambiguous_as_academic": 0.8275862068965517
+   }
+  },
+  {
+   "rank": 35,
+   "triad": [
+    "M:adapter",
+    "T:meta learning",
+    "T:parameter efficient fine tuning"
+   ],
+   "indicators": {
+    "D1": 4973.0,
+    "D2": 0.9911034933569379,
+    "F1": 12.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.72,
+    "D2": 0.6292134831460674,
+    "F1": 0.51,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.6746067415730337,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4754752405773857,
+      0.7709205350815025
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.535,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.441625,
+      0.5933333333333334
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 144,
+    "related_packages": 15,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 36,
+   "triad": [
+    "M:pix2pix",
+    "T:denoising",
+    "T:image generation"
+   ],
+   "indicators": {
+    "D1": 15530.0,
+    "D2": 0.6855635315050003,
+    "F1": 11.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.84,
+    "D2": 0.3258426966292135,
+    "F1": 0.46,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.5829213483146067,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.526498861298854,
+      0.7618039215686274
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5183333333333334,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.43329166666666663,
+      0.58
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 274,
+    "related_packages": 12,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 37,
+   "triad": [
+    "M:gpt",
+    "M:rag",
+    "T:claim verification"
+   ],
+   "indicators": {
+    "D1": 1730.0,
+    "D2": 1.163949843260188,
+    "F1": 13.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.46,
+    "D2": 0.7752808988764045,
+    "F1": 0.54,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.6176404494382023,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.38399191245501485,
+      0.7369875107665805
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5449999999999999,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.45829166666666665,
+      0.613375
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 124,
+    "related_packages": 8,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 38,
+   "triad": [
+    "M:convolutional neural network",
+    "M:long short term memory",
+    "T:computational efficiency"
+   ],
+   "indicators": {
+    "D1": 1245.0,
+    "D2": 0.3330898466033601,
+    "F1": 39.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 18.0,
+    "V2": 0.6666666666666666
+   },
+   "percentiles": {
+    "D1": 0.36,
+    "D2": 0.10112359550561797,
+    "F1": 0.98,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.9375,
+    "V2": 0.171875
+   },
+   "axes": {
+    "D": {
+     "value": 0.230561797752809,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.06380952380952382,
+      0.5100312499999999
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6916666666666665,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.6750000000000002,
+      0.6966666666666667
+     ],
+     "bootstrap_score_95": [
+      4.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.5546875,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5,
+      0.6481481481481481
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    }
+   },
+   "riskiest_axis": "D",
+   "riskiest_reason": "lowest",
+   "mvp_type": "demand landing page and problem interviews",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 0.014,
+    "D": 0.986
+   },
+   "evidence_counts": {
+    "related_repositories": 59,
+    "related_packages": 3,
+    "related_inventions_without_assignee": 8,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 0.6666666666666666,
+    "ambiguous_as_academic": 0.6666666666666666
+   }
+  },
+  {
+   "rank": 39,
+   "triad": [
+    "M:attention",
+    "M:gpt 2",
+    "M:sparse autoencoder"
+   ],
+   "indicators": {
+    "D1": 24940.0,
+    "D2": 0.9384944670888968,
+    "F1": 11.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.95,
+    "D2": 0.4943820224719101,
+    "F1": 0.46,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.7221910112359551,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5266189024390243,
+      0.9297789108494533
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5183333333333334,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4366666666666667,
+      0.6033749999999999
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 124,
+    "related_packages": 27,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 40,
+   "triad": [
+    "M:logistic regression",
+    "T:binary classification",
+    "T:decision making"
+   ],
+   "indicators": {
+    "D1": 1496.0,
+    "D2": 0.7967937425048044,
+    "F1": 68.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 1.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.41,
+    "D2": 0.38202247191011235,
+    "F1": 1.0,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.296875,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.39601123595505616,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.20439528218694886,
+      0.6836125088589652
+     ],
+     "bootstrap_score_95": [
+      1.9750000000000014,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6983333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.6983333333333333,
+      0.7016666666666667
+     ],
+     "bootstrap_score_95": [
+      4.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.515625,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.45744047619047623,
+      0.5603448275862069
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.371
+    }
+   },
+   "riskiest_axis": "D",
+   "riskiest_reason": "lowest",
+   "mvp_type": "demand landing page and problem interviews",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 0.571,
+    "D": 0.429
+   },
+   "evidence_counts": {
+    "related_repositories": 47,
+    "related_packages": 5,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 41,
+   "triad": [
+    "M:rag",
+    "T:information retrieval",
+    "T:natural questions"
+   ],
+   "indicators": {
+    "D1": 21203.0,
+    "D2": 1.0628465165912104,
+    "F1": 10.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.9,
+    "D2": 0.7415730337078652,
+    "F1": 0.405,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.8207865168539326,
+     "score": 5.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.3392256097560976,
+      0.8673550932568149
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.425,
+      0.59
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 122,
+    "related_packages": 8,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 42,
+   "triad": [
+    "M:adapter",
+    "T:domain generalization",
+    "T:multi task learning"
+   ],
+   "indicators": {
+    "D1": 598.0,
+    "D2": 0.343811394891945,
+    "F1": 19.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.24,
+    "D2": 0.11235955056179775,
+    "F1": 0.76,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.17617977528089887,
+     "score": 1.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.11999418604651163,
+      0.38
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6183333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5282916666666666,
+      0.6750416666666668
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 42,
+    "related_packages": 1,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 43,
+   "triad": [
+    "M:gaussian process",
+    "M:normalizing flows",
+    "T:density estimation"
+   ],
+   "indicators": {
+    "D1": 399.0,
+    "D2": 0.6252063841496973,
+    "F1": 14.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.16,
+    "D2": 0.2696629213483146,
+    "F1": 0.57,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.21483146067415732,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.08976127819548872,
+      0.3214926470588235
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.555,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4716666666666667,
+      0.6283333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 49,
+    "related_packages": 2,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 44,
+   "triad": [
+    "M:attention",
+    "T:4d reconstruction",
+    "T:point tracking"
+   ],
+   "indicators": {
+    "D1": 1312.0,
+    "D2": null,
+    "F1": 9.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.39,
+    "D2": null,
+    "F1": 0.345,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.39,
+     "score": 2.0,
+     "missing_indicators": 1,
+     "bootstrap_value_95": [
+      0.18,
+      0.62
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.48,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4183333333333333,
+      0.5617083333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 17,
+    "related_packages": 0,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 45,
+   "triad": [
+    "M:segformer",
+    "M:u net",
+    "T:image segmentation"
+   ],
+   "indicators": {
+    "D1": 185.0,
+    "D2": 0.27883211678832115,
+    "F1": 6.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 0.0,
+    "V2": 0.0
+   },
+   "percentiles": {
+    "D1": 0.06,
+    "D2": 0.056179775280898875,
+    "F1": 0.215,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.078125,
+    "V2": 0.078125
+   },
+   "axes": {
+    "D": {
+     "value": 0.058089887640449436,
+     "score": 1.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.05349245852187029,
+      0.16023042168674678
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      1.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.4366666666666667,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.39666666666666667,
+      0.5283333333333333
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.078125,
+     "score": 1.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.041666666666666664,
+      0.1
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      1.0
+     ],
+     "bootstrap_missing_share": 0.368
+    }
+   },
+   "riskiest_axis": "D",
+   "riskiest_reason": "lowest",
+   "mvp_type": "demand landing page and problem interviews",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 0.862,
+    "D": 0.138
+   },
+   "evidence_counts": {
+    "related_repositories": 58,
+    "related_packages": 1,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 0.0,
+    "ambiguous_as_academic": 0.0
+   }
+  },
+  {
+   "rank": 46,
+   "triad": [
+    "M:glm",
+    "M:rag",
+    "T:question answering"
+   ],
+   "indicators": {
+    "D1": 20302.0,
+    "D2": 0.9185045546673438,
+    "F1": 7.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.88,
+    "D2": 0.48314606741573035,
+    "F1": 0.25,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.6815730337078652,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.6283600798543009,
+      0.7923691510226955
+     ],
+     "bootstrap_score_95": [
+      4.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.4483333333333333,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.3999583333333333,
+      0.5150416666666666
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 285,
+    "related_packages": 22,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 47,
+   "triad": [
+    "M:deep q network",
+    "M:reinforce",
+    "T:reinforcement learning"
+   ],
+   "indicators": {
+    "D1": 7195.0,
+    "D2": 2.510586689836364,
+    "F1": 1.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": 4.0,
+    "V2": 0.6666666666666666
+   },
+   "percentiles": {
+    "D1": 0.79,
+    "D2": 0.9213483146067416,
+    "F1": 0.03,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": 0.625,
+    "V2": 0.171875
+   },
+   "axes": {
+    "D": {
+     "value": 0.8556741573033708,
+     "score": 5.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5461190476190475,
+      0.9161974789915966
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.20833333333333334,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.20333333333333334,
+      0.25333333333333335
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.3984375,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.20355902777777776,
+      0.7084821428571426
+     ],
+     "bootstrap_score_95": [
+      1.9750000000000014,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    }
+   },
+   "riskiest_axis": "F",
+   "riskiest_reason": "lowest",
+   "mvp_type": "technical proof of concept from existing packages",
+   "riskiest_bootstrap_share": {
+    "F": 0.963,
+    "V": 0.036,
+    "D": 0.001
+   },
+   "evidence_counts": {
+    "related_repositories": 79,
+    "related_packages": 1,
+    "related_inventions_without_assignee": 2,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 0.6666666666666666,
+    "ambiguous_as_academic": 0.6666666666666666
+   }
+  },
+  {
+   "rank": 48,
+   "triad": [
+    "M:attention",
+    "M:segment anything model",
+    "T:polyp segmentation"
+   ],
+   "indicators": {
+    "D1": 2867.0,
+    "D2": 2.1791946308724834,
+    "F1": 21.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.59,
+    "D2": 0.8651685393258427,
+    "F1": 0.835,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.7275842696629213,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.28476190476190477,
+      0.8243005593803786
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6433333333333332,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5516249999999999,
+      0.6833333333333332
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 110,
+    "related_packages": 2,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 49,
+   "triad": [
+    "M:adapter",
+    "T:parameter efficient fine tuning",
+    "T:sst 2"
+   ],
+   "indicators": {
+    "D1": 4826.0,
+    "D2": 0.9909142662446385,
+    "F1": 3.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.66,
+    "D2": 0.5842696629213483,
+    "F1": 0.12,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.6221348314606742,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.42883502906976745,
+      0.7293975903614458
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.2383333333333333,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.20666666666666667,
+      0.28833333333333333
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 133,
+    "related_packages": 14,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 50,
+   "triad": [
+    "M:gpt",
+    "T:chart understanding",
+    "T:question answering"
+   ],
+   "indicators": {
+    "D1": 4413.0,
+    "D2": 0.24080929129397305,
+    "F1": 11.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.63,
+    "D2": 0.0449438202247191,
+    "F1": 0.46,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.33747191011235955,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.31906976744186044,
+      0.8033392857142856
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5183333333333334,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.43829166666666663,
+      0.6033749999999999
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 153,
+    "related_packages": 11,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 51,
+   "triad": [
+    "M:proximal policy optimization",
+    "T:continuous control",
+    "T:multi agent reinforcement learning"
+   ],
+   "indicators": {
+    "D1": 291.0,
+    "D2": 1.4675669692273634,
+    "F1": 13.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.11,
+    "D2": 0.8426966292134831,
+    "F1": 0.54,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.47634831460674154,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.04,
+      0.5727607193479801
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5449999999999999,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4566666666666667,
+      0.6350416666666667
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 25,
+    "related_packages": 1,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 52,
+   "triad": [
+    "M:shapley additive explanations",
+    "T:deep learning",
+    "T:feature engineering"
+   ],
+   "indicators": {
+    "D1": 1263.0,
+    "D2": 1.8108527131782945,
+    "F1": 9.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 9.0,
+    "V2": 0.9
+   },
+   "percentiles": {
+    "D1": 0.37,
+    "D2": 0.8539325842696629,
+    "F1": 0.345,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.90625,
+    "V2": 0.4375
+   },
+   "axes": {
+    "D": {
+     "value": 0.6119662921348314,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.21673221614227087,
+      0.7567901234567901
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.48,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4216666666666667,
+      0.5800833333333332
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.671875,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5416666666666666,
+      0.8229166666666667
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    }
+   },
+   "riskiest_axis": "F",
+   "riskiest_reason": "lowest",
+   "mvp_type": "technical proof of concept from existing packages",
+   "riskiest_bootstrap_share": {
+    "F": 0.628,
+    "V": 0.01,
+    "D": 0.362
+   },
+   "evidence_counts": {
+    "related_repositories": 71,
+    "related_packages": 6,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 1,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 0.9090909090909091,
+    "ambiguous_as_academic": 0.8181818181818182
+   }
+  },
+  {
+   "rank": 53,
+   "triad": [
+    "M:detr",
+    "M:yolov8",
+    "T:data augmentation"
+   ],
+   "indicators": {
+    "D1": 21714.0,
+    "D2": 0.9989665177671646,
+    "F1": 22.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.91,
+    "D2": 0.6404494382022472,
+    "F1": 0.865,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.7752247191011237,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.40189515250544666,
+      0.8744336544962812
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6533333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5433333333333333,
+      0.6733333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 42,
+    "related_packages": 32,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 54,
+   "triad": [
+    "M:gpt 4",
+    "T:large language model",
+    "T:red teaming"
+   ],
+   "indicators": {
+    "D1": 20554.0,
+    "D2": 0.7475572529521406,
+    "F1": 27.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.89,
+    "D2": 0.3539325842696629,
+    "F1": 0.935,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.6219662921348315,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5426873047746541,
+      0.8656181478405315
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6766666666666666,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5966666666666667,
+      0.6916666666666668
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 214,
+    "related_packages": 15,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 55,
+   "triad": [
+    "M:transformer",
+    "T:kolmogorov arnold networks",
+    "T:symbolic regression"
+   ],
+   "indicators": {
+    "D1": 236.0,
+    "D2": 0.45866666666666667,
+    "F1": 20.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.09,
+    "D2": 0.19101123595505617,
+    "F1": 0.805,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.14050561797752809,
+     "score": 1.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.09788752723311546,
+      0.24196569203643842
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6333333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5383333333333332,
+      0.6783333333333332
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 31,
+    "related_packages": 3,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 56,
+   "triad": [
+    "M:gpt",
+    "T:natural language queries",
+    "T:text to sql"
+   ],
+   "indicators": {
+    "D1": 3793.0,
+    "D2": 0.6450851508813863,
+    "F1": 14.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.61,
+    "D2": 0.29213483146067415,
+    "F1": 0.57,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.45106741573033704,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.1846219512195122,
+      0.6035114569083447
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.555,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4682916666666666,
+      0.6449999999999999
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 30,
+    "related_packages": 8,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 57,
+   "triad": [
+    "M:adamw",
+    "M:weight decay",
+    "T:large language model"
+   ],
+   "indicators": {
+    "D1": 1562.0,
+    "D2": 0.7981962925004316,
+    "F1": 5.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.43,
+    "D2": 0.398876404494382,
+    "F1": 0.18,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.41443820224719097,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.2546029351395731,
+      0.7659039688164422
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.425,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.385,
+      0.515
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 51,
+    "related_packages": 4,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 58,
+   "triad": [
+    "M:pruning",
+    "T:inference optimization",
+    "T:large language model"
+   ],
+   "indicators": {
+    "D1": 18754.0,
+    "D2": 0.397954258936372,
+    "F1": 9.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.87,
+    "D2": 0.15730337078651685,
+    "F1": 0.345,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.5136516853932585,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.23602055279943304,
+      0.6242478657639092
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.48,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.42333333333333334,
+      0.5667499999999999
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 78,
+    "related_packages": 9,
+    "related_inventions_without_assignee": 2,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 59,
+   "triad": [
+    "M:rag",
+    "T:chunking",
+    "T:success rate"
+   ],
+   "indicators": {
+    "D1": 2522.0,
+    "D2": 0.7891735466848242,
+    "F1": 19.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.56,
+    "D2": 0.3707865168539326,
+    "F1": 0.76,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.4653932584269663,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.37746691176470587,
+      0.7376214726631394
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6183333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5249583333333333,
+      0.6750000000000002
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 93,
+    "related_packages": 7,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 60,
+   "triad": [
+    "M:transformer",
+    "T:humanoid control",
+    "T:motion generation"
+   ],
+   "indicators": {
+    "D1": 6400.0,
+    "D2": null,
+    "F1": 9.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.77,
+    "D2": null,
+    "F1": 0.345,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.77,
+     "score": 4.0,
+     "missing_indicators": 1,
+     "bootstrap_value_95": [
+      0.559875,
+      0.87
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.48,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.41500000000000004,
+      0.5466666666666666
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 78,
+    "related_packages": 0,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 61,
+   "triad": [
+    "M:spiking neural networks",
+    "M:transformer",
+    "T:event based vision"
+   ],
+   "indicators": {
+    "D1": 704.0,
+    "D2": null,
+    "F1": 11.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.25,
+    "D2": null,
+    "F1": 0.46,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.25,
+     "score": 2.0,
+     "missing_indicators": 1,
+     "bootstrap_value_95": [
+      0.19,
+      0.42
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5183333333333334,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4366666666666667,
+      0.61
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 49,
+    "related_packages": 0,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 62,
+   "triad": [
+    "M:deep q network",
+    "T:model predictive control",
+    "T:reinforcement learning"
+   ],
+   "indicators": {
+    "D1": 332.0,
+    "D2": null,
+    "F1": 1.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": 5.0,
+    "V2": 0.7142857142857143
+   },
+   "percentiles": {
+    "D1": 0.13,
+    "D2": null,
+    "F1": 0.03,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": 0.765625,
+    "V2": 0.265625
+   },
+   "axes": {
+    "D": {
+     "value": 0.13,
+     "score": 1.0,
+     "missing_indicators": 1,
+     "bootstrap_value_95": [
+      0.08,
+      0.27
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.20833333333333334,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.20333333333333334,
+      0.24837499999999996
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.515625,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.25,
+      0.759625
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    }
+   },
+   "riskiest_axis": "D",
+   "riskiest_reason": "lowest",
+   "mvp_type": "demand landing page and problem interviews",
+   "riskiest_bootstrap_share": {
+    "F": 0.205,
+    "V": 0.007,
+    "D": 0.788
+   },
+   "evidence_counts": {
+    "related_repositories": 72,
+    "related_packages": 0,
+    "related_inventions_without_assignee": 2,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 0.7142857142857143,
+    "ambiguous_as_academic": 0.7142857142857143
+   }
+  },
+  {
+   "rank": 63,
+   "triad": [
+    "M:logistic regression",
+    "T:feature selection",
+    "T:transfer learning"
+   ],
+   "indicators": {
+    "D1": 2773.0,
+    "D2": 2.2866368376868818,
+    "F1": 20.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 1.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.57,
+    "D2": 0.8764044943820225,
+    "F1": 0.805,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.296875,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.7232022471910112,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.22828048780487806,
+      0.8512856104651163
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6333333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5216666666666666,
+      0.6633333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.515625,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.45203703703703707,
+      0.5555555555555556
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.377
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "lowest",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.011,
+    "V": 0.739,
+    "D": 0.25
+   },
+   "evidence_counts": {
+    "related_repositories": 17,
+    "related_packages": 11,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 64,
+   "triad": [
+    "M:inpainting",
+    "T:image editing",
+    "T:video editing"
+   ],
+   "indicators": {
+    "D1": 4508.0,
+    "D2": 0.1225140428115986,
+    "F1": 18.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.64,
+    "D2": 0.02247191011235955,
+    "F1": 0.705,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.33123595505617975,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.2469487951807229,
+      0.7502499999999998
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5066666666666667,
+      0.6733333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 83,
+    "related_packages": 3,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 65,
+   "triad": [
+    "M:adapter",
+    "M:opt",
+    "T:parameter efficient fine tuning"
+   ],
+   "indicators": {
+    "D1": 4829.0,
+    "D2": 0.9909142662446385,
+    "F1": 4.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.67,
+    "D2": 0.5842696629213483,
+    "F1": 0.145,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.6271348314606742,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.435583183020683,
+      0.7334720087245533
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.24666666666666667,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.21166666666666667,
+      0.3067083333333333
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 135,
+    "related_packages": 14,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 66,
+   "triad": [
+    "M:attention",
+    "M:spl",
+    "T:vision and language navigation"
+   ],
+   "indicators": {
+    "D1": 74.0,
+    "D2": 0.28502415458937197,
+    "F1": 12.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.02,
+    "D2": 0.06741573033707865,
+    "F1": 0.51,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.04370786516853933,
+     "score": 1.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.01,
+      0.09833386075949364
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      1.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.535,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.44995833333333335,
+      0.615
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 22,
+    "related_packages": 1,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 67,
+   "triad": [
+    "M:gaussian process",
+    "T:bayesian optimization",
+    "T:density estimation"
+   ],
+   "indicators": {
+    "D1": 706.0,
+    "D2": 1.3144057441755104,
+    "F1": 5.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 5.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.26,
+    "D2": 0.8033707865168539,
+    "F1": 0.18,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.765625,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.5316853932584269,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.342959672021419,
+      0.638126143292683
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.425,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.38499999999999995,
+      0.5083749999999999
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.75,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5555555555555556,
+      0.7931034482758621
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0010000000000000009
+    }
+   },
+   "riskiest_axis": "F",
+   "riskiest_reason": "lowest",
+   "mvp_type": "technical proof of concept from existing packages",
+   "riskiest_bootstrap_share": {
+    "F": 0.846,
+    "V": 0.001,
+    "D": 0.153
+   },
+   "evidence_counts": {
+    "related_repositories": 135,
+    "related_packages": 16,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 68,
+   "triad": [
+    "M:gpt",
+    "T:knowledge editing",
+    "T:world knowledge"
+   ],
+   "indicators": {
+    "D1": 2306.0,
+    "D2": 0.3764367816091954,
+    "F1": 15.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.54,
+    "D2": 0.14606741573033707,
+    "F1": 0.595,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.34303370786516857,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.22720890705679864,
+      0.4897621951219512
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5633333333333334,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4766666666666666,
+      0.64
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 52,
+    "related_packages": 4,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 69,
+   "triad": [
+    "M:gaussian process",
+    "T:regression",
+    "T:tensor decomposition"
+   ],
+   "indicators": {
+    "D1": 1953.0,
+    "D2": 0.9544646033440057,
+    "F1": 8.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 5.0,
+    "V2": 0.7142857142857143
+   },
+   "percentiles": {
+    "D1": 0.5,
+    "D2": 0.5224719101123596,
+    "F1": 0.29,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.765625,
+    "V2": 0.265625
+   },
+   "axes": {
+    "D": {
+     "value": 0.5112359550561798,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4160097891566265,
+      0.6584578924162258
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.4616666666666666,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4099583333333333,
+      0.5516666666666666
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.515625,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.2799711538461539,
+      0.6851851851851852
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    }
+   },
+   "riskiest_axis": "F",
+   "riskiest_reason": "lowest",
+   "mvp_type": "technical proof of concept from existing packages",
+   "riskiest_bootstrap_share": {
+    "F": 0.444,
+    "V": 0.46,
+    "D": 0.096
+   },
+   "evidence_counts": {
+    "related_repositories": 205,
+    "related_packages": 18,
+    "related_inventions_without_assignee": 2,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 0.7142857142857143,
+    "ambiguous_as_academic": 0.7142857142857143
+   }
+  },
+  {
+   "rank": 70,
+   "triad": [
+    "M:adapter",
+    "T:model optimization",
+    "T:parameter efficient fine tuning"
+   ],
+   "indicators": {
+    "D1": 4831.0,
+    "D2": 0.9909142662446385,
+    "F1": 5.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.68,
+    "D2": 0.5842696629213483,
+    "F1": 0.18,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.6321348314606742,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.437546511627907,
+      0.737571355981417
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.425,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.38166666666666665,
+      0.47837499999999994
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 142,
+    "related_packages": 14,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 71,
+   "triad": [
+    "M:long short term memory",
+    "M:transformer",
+    "T:demand forecasting"
+   ],
+   "indicators": {
+    "D1": 724.0,
+    "D2": 1.0118419104948932,
+    "F1": 17.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 1.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.28,
+    "D2": 0.7078651685393258,
+    "F1": 0.665,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.296875,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.4939325842696629,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.24,
+      0.6892063953488372
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5866666666666666,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.49,
+      0.6583333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.515625,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4537037037037037,
+      0.5590001874062968
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.371
+    }
+   },
+   "riskiest_axis": "D",
+   "riskiest_reason": "lowest",
+   "mvp_type": "demand landing page and problem interviews",
+   "riskiest_bootstrap_share": {
+    "F": 0.015,
+    "V": 0.65,
+    "D": 0.335
+   },
+   "evidence_counts": {
+    "related_repositories": 74,
+    "related_packages": 2,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 72,
+   "triad": [
+    "M:gpt",
+    "T:dialogue",
+    "T:persuasion strategies"
+   ],
+   "indicators": {
+    "D1": 22983.0,
+    "D2": 0.5821050843138088,
+    "F1": 2.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.93,
+    "D2": 0.24719101123595505,
+    "F1": 0.08,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.5885955056179776,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.37737081128747796,
+      0.8432987804878048
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.225,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.04833333333333334,
+      0.273375
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 88,
+    "related_packages": 5,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 73,
+   "triad": [
+    "M:pruning",
+    "M:softmax",
+    "T:mixture of experts"
+   ],
+   "indicators": {
+    "D1": 1789.0,
+    "D2": 0.5217661691542289,
+    "F1": 27.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 1.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.47,
+    "D2": 0.23595505617977527,
+    "F1": 0.935,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.296875,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.35297752808988764,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.25585157318741447,
+      0.6502499999999998
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6766666666666666,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5983333333333333,
+      0.6916666666666668
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.515625,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.45,
+      0.5599425287356321
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.391
+    }
+   },
+   "riskiest_axis": "D",
+   "riskiest_reason": "lowest",
+   "mvp_type": "demand landing page and problem interviews",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 0.505,
+    "D": 0.495
+   },
+   "evidence_counts": {
+    "related_repositories": 102,
+    "related_packages": 1,
+    "related_inventions_without_assignee": 2,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 74,
+   "triad": [
+    "M:pc",
+    "T:causal discovery",
+    "T:deep learning"
+   ],
+   "indicators": {
+    "D1": 212.0,
+    "D2": 0.32628398791540786,
+    "F1": 32.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.07,
+    "D2": 0.07865168539325842,
+    "F1": 0.97,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.07432584269662922,
+     "score": 1.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.06522674418604651,
+      0.1977071501014199
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      1.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6883333333333334,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.6466666666666666,
+      0.693375
+     ],
+     "bootstrap_score_95": [
+      4.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 32,
+    "related_packages": 4,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 75,
+   "triad": [
+    "M:attention",
+    "T:camera pose estimation",
+    "T:visual localization"
+   ],
+   "indicators": {
+    "D1": 580.0,
+    "D2": 0.8990720709445567,
+    "F1": 19.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 1.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.23,
+    "D2": 0.449438202247191,
+    "F1": 0.76,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.296875,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.3397191011235955,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.105,
+      0.4850203488372093
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6183333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5132916666666666,
+      0.6583333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.515625,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.44999999999999996,
+      0.5555555555555556
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.367
+    }
+   },
+   "riskiest_axis": "D",
+   "riskiest_reason": "lowest",
+   "mvp_type": "demand landing page and problem interviews",
+   "riskiest_bootstrap_share": {
+    "F": 0.001,
+    "V": 0.375,
+    "D": 0.624
+   },
+   "evidence_counts": {
+    "related_repositories": 29,
+    "related_packages": 1,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 76,
+   "triad": [
+    "M:byte pair encoding",
+    "T:language modeling",
+    "T:large language model"
+   ],
+   "indicators": {
+    "D1": 1166.0,
+    "D2": 8.864632237871675,
+    "F1": 11.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.35,
+    "D2": 0.9887640449438202,
+    "F1": 0.46,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.66938202247191,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.24998644578313253,
+      0.7887782379518072
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5183333333333334,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4383333333333333,
+      0.5966666666666666
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 56,
+    "related_packages": 3,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 77,
+   "triad": [
+    "M:swin transformer",
+    "M:u net",
+    "T:computational efficiency"
+   ],
+   "indicators": {
+    "D1": 1863.0,
+    "D2": null,
+    "F1": 18.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.48,
+    "D2": null,
+    "F1": 0.705,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.48,
+     "score": 3.0,
+     "missing_indicators": 1,
+     "bootstrap_value_95": [
+      0.15,
+      0.74
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5149583333333333,
+      0.6733333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 49,
+    "related_packages": 0,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 78,
+   "triad": [
+    "M:lookahead",
+    "M:proximal policy optimization",
+    "T:deep reinforcement learning"
+   ],
+   "indicators": {
+    "D1": 331.0,
+    "D2": 0.6179913739987677,
+    "F1": 5.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": 2.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.12,
+    "D2": 0.25842696629213485,
+    "F1": 0.18,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": 0.515625,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.18921348314606742,
+     "score": 1.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.13,
+      0.4466259456430372
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.25833333333333336,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.21833333333333335,
+      0.3150416666666666
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.625,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.46928125,
+      0.668377976190476
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.14200000000000002
+    }
+   },
+   "riskiest_axis": "D",
+   "riskiest_reason": "lowest",
+   "mvp_type": "demand landing page and problem interviews",
+   "riskiest_bootstrap_share": {
+    "F": 0.333,
+    "V": 0.142,
+    "D": 0.525
+   },
+   "evidence_counts": {
+    "related_repositories": 57,
+    "related_packages": 4,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 79,
+   "triad": [
+    "M:pruning",
+    "T:model compression",
+    "T:vector quantization"
+   ],
+   "indicators": {
+    "D1": 7206.0,
+    "D2": 0.8206057045884734,
+    "F1": 7.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 5.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.8,
+    "D2": 0.4157303370786517,
+    "F1": 0.25,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.765625,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.6078651685393259,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.2851753048780488,
+      0.8095514619453423
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.4483333333333333,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.40166666666666667,
+      0.5383333333333332
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.75,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5516810344827586,
+      0.8055555555555556
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    }
+   },
+   "riskiest_axis": "F",
+   "riskiest_reason": "lowest",
+   "mvp_type": "technical proof of concept from existing packages",
+   "riskiest_bootstrap_share": {
+    "F": 0.764,
+    "V": 0.002,
+    "D": 0.234
+   },
+   "evidence_counts": {
+    "related_repositories": 131,
+    "related_packages": 7,
+    "related_inventions_without_assignee": 3,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 80,
+   "triad": [
+    "M:rag",
+    "T:answer generation",
+    "T:code generation"
+   ],
+   "indicators": {
+    "D1": 1021.0,
+    "D2": 0.473672442705422,
+    "F1": 2.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.32,
+    "D2": 0.21348314606741572,
+    "F1": 0.08,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.2667415730337079,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.19039842873176205,
+      0.41734432173136987
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.225,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.205,
+      0.2717083333333333
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 94,
+    "related_packages": 6,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 81,
+   "triad": [
+    "M:rag",
+    "T:instruction following",
+    "T:response generation"
+   ],
+   "indicators": {
+    "D1": 16272.0,
+    "D2": 0.9011350335183994,
+    "F1": 16.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.85,
+    "D2": 0.47191011235955055,
+    "F1": 0.63,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.6609550561797752,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.42784308663224324,
+      0.863280848546315
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5750000000000001,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.49162500000000003,
+      0.6566666666666666
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 51,
+    "related_packages": 20,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 82,
+   "triad": [
+    "M:attention",
+    "T:low rank compression",
+    "T:model compression"
+   ],
+   "indicators": {
+    "D1": 1658.0,
+    "D2": 1.0340314136125655,
+    "F1": 10.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.45,
+    "D2": 0.7191011235955056,
+    "F1": 0.405,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.5845505617977528,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.04,
+      0.7403746653279786
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4249583333333333,
+      0.578375
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 39,
+    "related_packages": 2,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 83,
+   "triad": [
+    "M:transformer",
+    "T:chunking",
+    "T:re ranking"
+   ],
+   "indicators": {
+    "D1": 453.0,
+    "D2": 1.1345953817349699,
+    "F1": 24.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 1.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.2,
+    "D2": 0.7640449438202247,
+    "F1": 0.9,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.296875,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.4820224719101124,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.1820892857142857,
+      0.5825089285714286
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.665,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5766666666666667,
+      0.69
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.515625,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4537037037037037,
+      0.5614762931034482
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.38
+    }
+   },
+   "riskiest_axis": "D",
+   "riskiest_reason": "lowest",
+   "mvp_type": "demand landing page and problem interviews",
+   "riskiest_bootstrap_share": {
+    "F": 0.001,
+    "V": 0.587,
+    "D": 0.412
+   },
+   "evidence_counts": {
+    "related_repositories": 50,
+    "related_packages": 3,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 84,
+   "triad": [
+    "M:rag",
+    "T:image retrieval",
+    "T:re ranking"
+   ],
+   "indicators": {
+    "D1": 10998.0,
+    "D2": 0.9011243870717067,
+    "F1": 23.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.83,
+    "D2": 0.4606741573033708,
+    "F1": 0.89,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.6453370786516854,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.42023809523809524,
+      0.8507442788316771
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6616666666666666,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5632916666666666,
+      0.6866666666666666
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 150,
+    "related_packages": 27,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 85,
+   "triad": [
+    "M:inpainting",
+    "T:image editing",
+    "T:virtual try on"
+   ],
+   "indicators": {
+    "D1": 1966.0,
+    "D2": 0.1225140428115986,
+    "F1": 14.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.51,
+    "D2": 0.02247191011235955,
+    "F1": 0.57,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.2662359550561798,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.18234191508581754,
+      0.55
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.555,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.471625,
+      0.6450416666666666
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 71,
+    "related_packages": 3,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 86,
+   "triad": [
+    "M:adapter",
+    "M:u net",
+    "T:computational efficiency"
+   ],
+   "indicators": {
+    "D1": 2089.0,
+    "D2": null,
+    "F1": 26.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.53,
+    "D2": null,
+    "F1": 0.92,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.53,
+     "score": 3.0,
+     "missing_indicators": 1,
+     "bootstrap_value_95": [
+      0.24,
+      0.76
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6716666666666667,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5916666666666667,
+      0.6916666666666665
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 54,
+    "related_packages": 0,
+    "related_inventions_without_assignee": 3,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 87,
+   "triad": [
+    "M:attention",
+    "M:convlstm",
+    "M:u net"
+   ],
+   "indicators": {
+    "D1": 6635.0,
+    "D2": 1.011452178252829,
+    "F1": 8.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 1.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.78,
+    "D2": 0.6966292134831461,
+    "F1": 0.29,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.296875,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.7383146067415731,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.44261607142857146,
+      0.8063856472401231
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.4616666666666666,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.41162499999999996,
+      0.5667083333333331
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.515625,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.44999999999999996,
+      0.5587600730884557
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.366
+    }
+   },
+   "riskiest_axis": "F",
+   "riskiest_reason": "lowest",
+   "mvp_type": "technical proof of concept from existing packages",
+   "riskiest_bootstrap_share": {
+    "F": 0.438,
+    "V": 0.531,
+    "D": 0.031
+   },
+   "evidence_counts": {
+    "related_repositories": 228,
+    "related_packages": 11,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 88,
+   "triad": [
+    "M:gpt 4",
+    "T:arithmetic reasoning",
+    "T:code generation"
+   ],
+   "indicators": {
+    "D1": 4045.0,
+    "D2": 3.95127977762058,
+    "F1": 7.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.62,
+    "D2": 0.9550561797752809,
+    "F1": 0.25,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.7875280898876404,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.2501174698795181,
+      0.8915083979328164
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.4483333333333333,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.40499999999999997,
+      0.5416666666666666
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 102,
+    "related_packages": 3,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 89,
+   "triad": [
+    "M:logistic regression",
+    "T:binary classification",
+    "T:transfer learning"
+   ],
+   "indicators": {
+    "D1": 2811.0,
+    "D2": 2.287044522050988,
+    "F1": 20.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 1.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.58,
+    "D2": 0.8876404494382022,
+    "F1": 0.805,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.296875,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.733820224719101,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.223484496124031,
+      0.8588809497248252
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6333333333333333,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5316666666666666,
+      0.6783333333333332
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.515625,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.45203703703703707,
+      0.5555555555555556
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.377
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "lowest",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.006,
+    "V": 0.76,
+    "D": 0.234
+   },
+   "evidence_counts": {
+    "related_repositories": 28,
+    "related_packages": 11,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 90,
+   "triad": [
+    "M:transformer",
+    "M:yolov8",
+    "T:small object detection"
+   ],
+   "indicators": {
+    "D1": 225.0,
+    "D2": 258.0,
+    "F1": 16.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.08,
+    "D2": 1.0,
+    "F1": 0.63,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.54,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.05,
+      0.61
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5750000000000001,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4932916666666667,
+      0.6583333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 44,
+    "related_packages": 1,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 91,
+   "triad": [
+    "M:glm",
+    "M:gpt 4",
+    "T:large language model"
+   ],
+   "indicators": {
+    "D1": 24422.0,
+    "D2": 0.7475572529521406,
+    "F1": 15.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.94,
+    "D2": 0.3539325842696629,
+    "F1": 0.595,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.6469662921348314,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.564985294117647,
+      0.877959601081812
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5633333333333334,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.47833333333333333,
+      0.6483333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 221,
+    "related_packages": 15,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 92,
+   "triad": [
+    "M:attention sinks",
+    "M:softmax",
+    "T:prediction"
+   ],
+   "indicators": {
+    "D1": 4638.0,
+    "D2": 1.0388993785817489,
+    "F1": 7.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": 5.0,
+    "V2": 0.8333333333333334
+   },
+   "percentiles": {
+    "D1": 0.65,
+    "D2": 0.7303370786516854,
+    "F1": 0.25,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": 0.765625,
+    "V2": 0.34375
+   },
+   "axes": {
+    "D": {
+     "value": 0.6901685393258428,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4079929098128191,
+      0.7991280779753761
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.4483333333333333,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.39833333333333326,
+      0.5316666666666666
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.5546875,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.3396195652173913,
+      0.7592592592592593
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0040000000000000036
+    }
+   },
+   "riskiest_axis": "F",
+   "riskiest_reason": "lowest",
+   "mvp_type": "technical proof of concept from existing packages",
+   "riskiest_bootstrap_share": {
+    "F": 0.752,
+    "V": 0.188,
+    "D": 0.06
+   },
+   "evidence_counts": {
+    "related_repositories": 84,
+    "related_packages": 8,
+    "related_inventions_without_assignee": 1,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 0.8333333333333334,
+    "ambiguous_as_academic": 0.8333333333333334
+   }
+  },
+  {
+   "rank": 93,
+   "triad": [
+    "M:rag",
+    "T:answer generation",
+    "T:in context learning"
+   ],
+   "indicators": {
+    "D1": 3048.0,
+    "D2": 0.32740694531087544,
+    "F1": 4.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.6,
+    "D2": 0.0898876404494382,
+    "F1": 0.145,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.3449438202247191,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.221140389142778,
+      0.5991157965194108
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      3.0249999999999773
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.24666666666666667,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.21333333333333335,
+      0.3183333333333333
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 87,
+    "related_packages": 6,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 94,
+   "triad": [
+    "M:experience replay",
+    "T:continual learning",
+    "T:parameter efficient fine tuning"
+   ],
+   "indicators": {
+    "D1": 558.0,
+    "D2": 0.6714118849467076,
+    "F1": 3.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": 1.0,
+    "V2": 1.0
+   },
+   "percentiles": {
+    "D1": 0.22,
+    "D2": 0.30337078651685395,
+    "F1": 0.12,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": 0.296875,
+    "V2": 0.734375
+   },
+   "axes": {
+    "D": {
+     "value": 0.261685393258427,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.19,
+      0.5934632352941175
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.2383333333333333,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.20666666666666667,
+      0.2950416666666666
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": 0.515625,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4517788461538462,
+      0.5556502525252525
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.362
+    }
+   },
+   "riskiest_axis": "F",
+   "riskiest_reason": "lowest",
+   "mvp_type": "technical proof of concept from existing packages",
+   "riskiest_bootstrap_share": {
+    "F": 0.519,
+    "V": 0.362,
+    "D": 0.119
+   },
+   "evidence_counts": {
+    "related_repositories": 64,
+    "related_packages": 3,
+    "related_inventions_without_assignee": 2,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": 1.0,
+    "ambiguous_as_academic": 1.0
+   }
+  },
+  {
+   "rank": 95,
+   "triad": [
+    "M:adamw",
+    "M:weight decay",
+    "T:representation learning"
+   ],
+   "indicators": {
+    "D1": 1381.0,
+    "D2": 0.7981962925004316,
+    "F1": 2.0,
+    "F2": 0.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.4,
+    "D2": 0.398876404494382,
+    "F1": 0.08,
+    "F2": 0.09,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.399438202247191,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.2139352409638554,
+      0.7557268781006379
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.225,
+     "score": 2.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.20333333333333334,
+      0.273375
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 43,
+    "related_packages": 4,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 96,
+   "triad": [
+    "M:adapter",
+    "T:parameter efficient fine tuning",
+    "T:test time adaptation"
+   ],
+   "indicators": {
+    "D1": 4920.0,
+    "D2": 0.9909142662446385,
+    "F1": 8.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.7,
+    "D2": 0.5842696629213483,
+    "F1": 0.29,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.6421348314606741,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4583161764705882,
+      0.7537631777108433
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.4616666666666666,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4116666666666666,
+      0.5716666666666667
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 143,
+    "related_packages": 14,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 97,
+   "triad": [
+    "M:deeplabv3",
+    "M:segment anything model",
+    "T:image segmentation"
+   ],
+   "indicators": {
+    "D1": 35434.0,
+    "D2": 0.9905073477240056,
+    "F1": 6.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.97,
+    "D2": 0.5393258426966292,
+    "F1": 0.215,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.7546629213483146,
+     "score": 4.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.6298132530120482,
+      0.8413249376817615
+     ],
+     "bootstrap_score_95": [
+      4.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.4366666666666667,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.3916666666666666,
+      0.5249999999999999
+     ],
+     "bootstrap_score_95": [
+      2.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 160,
+    "related_packages": 59,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 98,
+   "triad": [
+    "M:gpt",
+    "T:semantic retrieval",
+    "T:semantic similarity"
+   ],
+   "indicators": {
+    "D1": 421.0,
+    "D2": null,
+    "F1": 10.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.18,
+    "D2": null,
+    "F1": 0.405,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.18,
+     "score": 1.0,
+     "missing_indicators": 1,
+     "bootstrap_value_95": [
+      0.02,
+      0.38024999999999975
+     ],
+     "bootstrap_score_95": [
+      1.0,
+      2.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.5,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.4266666666666667,
+      0.5783333333333333
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 28,
+    "related_packages": 0,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 99,
+   "triad": [
+    "M:attention",
+    "T:action understanding",
+    "T:video understanding"
+   ],
+   "indicators": {
+    "D1": 5827.0,
+    "D2": 0.8641455241742461,
+    "F1": 12.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.75,
+    "D2": 0.42696629213483145,
+    "F1": 0.51,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.5884831460674157,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.44492510893246184,
+      0.7157457087486156
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.535,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.44333333333333336,
+      0.585
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      3.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 130,
+    "related_packages": 4,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  },
+  {
+   "rank": 100,
+   "triad": [
+    "M:transformer",
+    "T:4d reconstruction",
+    "T:novel view synthesis"
+   ],
+   "indicators": {
+    "D1": 9306.0,
+    "D2": 2.2872144253467006,
+    "F1": 18.0,
+    "F2": 1.0,
+    "F3": 3.0,
+    "V1": null,
+    "V2": null
+   },
+   "percentiles": {
+    "D1": 0.82,
+    "D2": 0.9044943820224719,
+    "F1": 0.705,
+    "F2": 0.59,
+    "F3": 0.505,
+    "V1": null,
+    "V2": null
+   },
+   "axes": {
+    "D": {
+     "value": 0.8622471910112359,
+     "score": 5.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.58034530730897,
+      0.91265646374829
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      5.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "F": {
+     "value": 0.6,
+     "score": 3.0,
+     "missing_indicators": 0,
+     "bootstrap_value_95": [
+      0.5133333333333333,
+      0.6633333333333332
+     ],
+     "bootstrap_score_95": [
+      3.0,
+      4.0
+     ],
+     "bootstrap_missing_share": 0.0
+    },
+    "V": {
+     "value": null,
+     "score": null,
+     "missing_indicators": 2,
+     "bootstrap_value_95": null,
+     "bootstrap_score_95": null,
+     "bootstrap_missing_share": 1.0
+    }
+   },
+   "riskiest_axis": "V",
+   "riskiest_reason": "missing",
+   "mvp_type": "customer interviews and price acceptance test",
+   "riskiest_bootstrap_share": {
+    "F": 0.0,
+    "V": 1.0,
+    "D": 0.0
+   },
+   "evidence_counts": {
+    "related_repositories": 55,
+    "related_packages": 9,
+    "related_inventions_without_assignee": 0,
+    "V_ambiguous_assignees": 0,
+    "V_unknown_assignees": 0
+   },
+   "V2_sensitivity": {
+    "ambiguous_as_company": null,
+    "ambiguous_as_academic": null
+   }
+  }
+ ]
+}

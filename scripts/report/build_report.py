@@ -33,6 +33,9 @@ REPORT_FILES = [
     "engine_verdict_T3", "engine_secondary_T3",
     "precision_T1", "synonym_decisions", "label_v3_T1_attempt1_score", "label_v3_T1_attempt2_score",
     "engine_v3_power", "engine_v3_verdict_T3",
+    "matching_rebuild_applied", "review_decisions_applied", "represcription/applied_main", "represcription/prospective_register",
+    "represcription/dvf", "represcription/briefing_generation", "represcription/q1", "represcription/q2",
+    "represcription/comparison_first_study",
 ]
 
 

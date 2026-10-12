@@ -75,6 +75,10 @@ class Values:
                 self.cache[name] = json.loads((self.root / rel).read_text())
             elif name == "derived":
                 self.cache[name] = derived(self)
+            elif "/" in name:
+                # Results of a run folder, e.g. "represcription/q1" -> represcription/results/q1.json
+                folder, base = name.rsplit("/", 1)
+                self.cache[name] = json.loads((self.root / folder / RESULTS / f"{base}.json").read_text())
             else:
                 self.cache[name] = json.loads((self.root / RESULTS / f"{name}.json").read_text())
         return self.cache[name]
@@ -168,9 +172,9 @@ def engine_verdicts(values: Values) -> dict:
     return sequence
 
 
-def matching_change_rows(text: str) -> list[list[str]]:
-    """Cells of the dated rows in the matching preregistration change log (section 7)."""
-    section = text.split("## 7.", 1)[1]
+def matching_change_rows(text: str, heading: str = "## 7.") -> list[list[str]]:
+    """Cells of the dated rows in a change log section (section 7 of the matching preregistration)."""
+    section = text.split(heading, 1)[1]
     lines = [line for line in section.splitlines() if re.match(r"^\| \d{4}-\d{2}-\d{2} \|", line)]
     return [[c.strip() for c in line.strip().strip("|").split("|")] for line in lines]
 
@@ -241,7 +245,15 @@ def derived(values: Values) -> dict:
     matching_freeze = re.search(r"^고정 커밋:\s*(\S+)", matching_text, flags=re.M).group(1)
     matching_frozen_text = subprocess.run(["git", "show", f"{matching_freeze}:{matching_prereg}"], cwd=values.root,
                                           capture_output=True, text=True, check=True).stdout
+    rx_prereg = study["represcription"]["prereg_file"]
+    rx_text = (values.root / rx_prereg).read_text()
+    rx_rows = matching_change_rows(rx_text, "## 9.")
+    rx_freeze = re.search(r"^고정 커밋:\s*(\S+)", rx_text, flags=re.M).group(1)
+    rx_frozen_text = subprocess.run(["git", "show", f"{rx_freeze}:{rx_prereg}"], cwd=values.root,
+                                    capture_output=True, text=True, check=True).stdout
     return {
+        "represcription_prereg_changes": len(rx_rows),
+        "represcription_prereg_rows_after_freeze": len(rx_rows) - len(matching_change_rows(rx_frozen_text, "## 9.")),
         "matching_prereg_changes": len(matching_rows),
         "matching_prereg_rows_after_freeze": len(matching_rows) - len(matching_change_rows(matching_frozen_text)),
         "matching_prereg_changes_after_results": sum(1 for cells in matching_rows if cells[-2].startswith("예")),

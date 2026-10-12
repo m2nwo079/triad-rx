@@ -1,0 +1,307 @@
+{
+  "meta": {
+    "step": "represcription_comparison",
+    "created": "2026-10-12",
+    "git_commit": "c3673e9cb6c040d6750af4762a492b81ca21765f",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "note": "Descriptive only (represcription preregistration 7); same data cutoff and downstream rules, engine differs.",
+    "first_registration": "prospective/2026-10-04.json",
+    "fourth_registration": "represcription/prospective/2026-10-11.json"
+  },
+  "prescription": {
+    "top_k": 100,
+    "shared_triads": 5,
+    "shared": [
+      {
+        "triad": [
+          "M:grouped query attention",
+          "M:pruning",
+          "T:mixture of experts"
+        ],
+        "rank_first": 50,
+        "rank_fourth": 21
+      },
+      {
+        "triad": [
+          "M:consistency models",
+          "T:computational efficiency",
+          "T:denoising"
+        ],
+        "rank_first": 58,
+        "rank_fourth": 28
+      },
+      {
+        "triad": [
+          "M:gpt",
+          "T:natural language queries",
+          "T:text to sql"
+        ],
+        "rank_first": 16,
+        "rank_fourth": 56
+      },
+      {
+        "triad": [
+          "M:rag",
+          "T:chunking",
+          "T:success rate"
+        ],
+        "rank_first": 39,
+        "rank_fourth": 59
+      },
+      {
+        "triad": [
+          "M:gpt",
+          "T:semantic retrieval",
+          "T:semantic similarity"
+        ],
+        "rank_first": 94,
+        "rank_fourth": 98
+      }
+    ],
+    "shared_rank_spearman": 0.19999999999999998,
+    "distinct_terms": {
+      "first": 158,
+      "fourth": 152,
+      "shared": 58
+    }
+  },
+  "dvf": {
+    "first": {
+      "candidates": 100,
+      "axes": {
+        "D": {
+          "missing": 0,
+          "quartiles": [
+            2.0,
+            3.0,
+            4.0
+          ],
+          "mean": 2.84
+        },
+        "V": {
+          "missing": 90,
+          "quartiles": [
+            3.0,
+            3.0,
+            3.0
+          ],
+          "mean": 2.9
+        },
+        "F": {
+          "missing": 0,
+          "quartiles": [
+            3.0,
+            3.0,
+            3.0
+          ],
+          "mean": 2.94
+        }
+      },
+      "riskiest_axis": {
+        "V": 91,
+        "D": 5,
+        "F": 4
+      },
+      "riskiest_reason": {
+        "missing": 90,
+        "lowest": 10
+      },
+      "mvp_type": {
+        "customer interviews and price acceptance test": 91,
+        "demand landing page and problem interviews": 5,
+        "technical proof of concept from existing packages": 4
+      }
+    },
+    "fourth": {
+      "candidates": 100,
+      "axes": {
+        "D": {
+          "missing": 0,
+          "quartiles": [
+            2.0,
+            3.0,
+            4.0
+          ],
+          "mean": 2.99
+        },
+        "V": {
+          "missing": 68,
+          "quartiles": [
+            3.0,
+            3.0,
+            4.0
+          ],
+          "mean": 3.0625
+        },
+        "F": {
+          "missing": 0,
+          "quartiles": [
+            3.0,
+            3.0,
+            4.0
+          ],
+          "mean": 3.1
+        }
+      },
+      "riskiest_axis": {
+        "V": 74,
+        "D": 12,
+        "F": 14
+      },
+      "riskiest_reason": {
+        "lowest": 32,
+        "missing": 68
+      },
+      "mvp_type": {
+        "customer interviews and price acceptance test": 74,
+        "demand landing page and problem interviews": 12,
+        "technical proof of concept from existing packages": 14
+      }
+    }
+  },
+  "briefing_quality": {
+    "first": {
+      "concept_insufficient": {
+        "runs": 100,
+        "insufficient": 44,
+        "share": 0.44,
+        "reasons": {
+          "comparison_only": 10,
+          "term_mismatch": 14,
+          "no_combination_evidence": 20,
+          "other": 0
+        }
+      },
+      "q1": {
+        "supported": 61,
+        "n": 100,
+        "rate": 0.61,
+        "wilson_95": [
+          0.5120301704584073,
+          0.6998312599360558
+        ],
+        "by_field": {
+          "concept_frame": {
+            "supported": 32,
+            "n": 43
+          },
+          "target_user": {
+            "supported": 1,
+            "n": 7
+          },
+          "value_prop": {
+            "supported": 1,
+            "n": 5
+          },
+          "building_blocks": {
+            "supported": 8,
+            "n": 16
+          },
+          "jtbd": {
+            "supported": 4,
+            "n": 8
+          },
+          "summary": {
+            "supported": 15,
+            "n": 21
+          }
+        },
+        "business_fields": {
+          "supported": 6,
+          "n": 20,
+          "rate": 0.3,
+          "wilson_95": [
+            0.1454772448676043,
+            0.5189728183535235
+          ]
+        }
+      },
+      "q2_frame_agreement": {
+        "agreeing": 92,
+        "total": 100,
+        "rate": 0.92,
+        "wilson_95": [
+          0.8500189229905127,
+          0.9589065385156194
+        ]
+      }
+    },
+    "fourth": {
+      "concept_insufficient": {
+        "runs": 100,
+        "insufficient": 13,
+        "share": 0.13,
+        "reasons": {
+          "comparison_only": 3,
+          "term_mismatch": 0,
+          "no_combination_evidence": 10,
+          "other": 0
+        }
+      },
+      "q1": {
+        "supported": 56,
+        "n": 100,
+        "rate": 0.56,
+        "wilson_95": [
+          0.4622810465167699,
+          0.6532797336983921
+        ],
+        "by_field": {
+          "concept_frame": {
+            "supported": 32,
+            "n": 46
+          },
+          "summary": {
+            "supported": 14,
+            "n": 24
+          },
+          "building_blocks": {
+            "supported": 8,
+            "n": 14
+          },
+          "target_user": {
+            "supported": 0,
+            "n": 4
+          },
+          "jtbd": {
+            "supported": 1,
+            "n": 7
+          },
+          "value_prop": {
+            "supported": 1,
+            "n": 5
+          }
+        },
+        "business_fields": {
+          "supported": 2,
+          "n": 16,
+          "rate": 0.125,
+          "wilson_95": [
+            0.03497748774324047,
+            0.36022827265758695
+          ]
+        }
+      },
+      "q2_frame_agreement": {
+        "agreeing": 98,
+        "total": 100,
+        "rate": 0.98,
+        "wilson_95": [
+          0.929988209271456,
+          0.9944980324498376
+        ]
+      }
+    }
+  }
+}
