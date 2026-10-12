@@ -1,0 +1,215 @@
+{
+ "rank": 8,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Used as an embedded normalizing flow to transform the unknown complex distribution of residual information into a simple base distribution for a simulation-based parameter estimation framework.",
+    "evidence_ids": [
+     "paper:2607.25026"
+    ]
+   },
+   {
+    "term_id": "T:parameter estimation",
+    "role": "Formulated as the target objective where an estimation framework (with embedded normalizing flows and implied empirical probabilities under moment restrictions) updates parameter values of a computational simulation model.",
+    "evidence_ids": [
+     "paper:2607.25026"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Not explicitly combined as a distinct third component in this specific evidence context, but the framework utilizes related continuous modeling and gradient methods.",
+    "evidence_ids": [
+     "paper:2607.25026"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Simulation-based parameter estimation for a model defined by a computational simulation of a physical system.",
+   "evidence_ids": [
+    "paper:2607.25026"
+   ]
+  },
+  "limitation": {
+   "text": "Addressing the unknown complex distribution of residual information in simulation-based parameter estimation.",
+   "evidence_ids": [
+    "paper:2607.25026"
+   ]
+  },
+  "combination": {
+   "text": "An embedded normalizing flow transforms the unknown complex residual distribution into a simple base distribution, while an empirical-likelihood estimator under moment restrictions imposes an indirect constraint on the base distribution, allowing gradient-based updating of simulation model parameters.",
+   "evidence_ids": [
+    "paper:2607.25026"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Used as an embedded normalizing flow to transform the unknown complex distribution of residual information into a simple base distribution for a simulation-based parameter estimation framework.",
+     "evidence_ids": [
+      "paper:2607.25026"
+     ]
+    },
+    {
+     "term_id": "T:parameter estimation",
+     "role": "Formulated as the target objective where an estimation framework (with embedded normalizing flows and implied empirical probabilities under moment restrictions) updates parameter values of a computational simulation model.",
+     "evidence_ids": [
+      "paper:2607.25026"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Not explicitly combined as a distinct third component in this specific evidence context, but the framework utilizes related continuous modeling and gradient methods.",
+     "evidence_ids": [
+      "paper:2607.25026"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Simulation-based parameter estimation for a model defined by a computational simulation of a physical system.",
+    "evidence_ids": [
+     "paper:2607.25026"
+    ]
+   },
+   "limitation": {
+    "text": "Addressing the unknown complex distribution of residual information in simulation-based parameter estimation.",
+    "evidence_ids": [
+     "paper:2607.25026"
+    ]
+   },
+   "combination": {
+    "text": "An embedded normalizing flow transforms the unknown complex residual distribution into a simple base distribution, while an empirical-likelihood estimator under moment restrictions imposes an indirect constraint on the base distribution, allowing gradient-based updating of simulation model parameters.",
+    "evidence_ids": [
+     "paper:2607.25026"
+    ]
+   }
+  },
+  "summary": {
+   "text": "An embedded normalizing flow is combined with an empirical-likelihood estimator under moment restrictions to facilitate simulation-based parameter estimation for physical system models. This framework transforms unknown complex residual distributions into simple base distributions, enabling gradient-based updates of the simulation parameters. The approach provides an information-theoretic interpretation and serves as a surrogate model for quantifying model discrepancies and conducting sensitivity analysis.",
+   "evidence_ids": [
+    "paper:2607.25026"
+   ]
+  },
+  "target_user": {
+   "basis": "evidence",
+   "text": "No evidence in the bundle; hypothesis to test: Open source users and package maintainers of statistical modeling tools such as lightgbmlss, xgboostlss, torchcfm, and lf2i.",
+   "evidence_ids": [
+    "pkg:lf2i",
+    "pkg:lightgbmlss",
+    "pkg:torchcfm",
+    "pkg:xgboostlss",
+    "repo:atong01/conditional-flow-matching",
+    "repo:dreamfold/foldflow",
+    "repo:spm/spm",
+    "repo:statmixedml/lightgbmlss",
+    "repo:statmixedml/xgboostlss"
+   ]
+  },
+  "jtbd": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Perform simulation-based parameter estimation for computational simulation models of physical systems while handling unknown complex residual distributions.",
+   "evidence_ids": [
+    "paper:2607.25026"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Enables end-to-end simulation-based parameter estimation by transforming complex residual distributions via embedded normalizing flows and imposing indirect constraints using empirical-likelihood estimators under moment restrictions.",
+   "evidence_ids": [
+    "paper:2607.25026"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Axis V (viability) was designated as the riskiest assumption due to missing evidence in the bundle. The assumption is that users will adopt and pay for a simulation-based parameter estimation framework combining embedded normalizing flows and empirical-likelihood estimators.",
+   "evidence_ids": [
+    "dvf:8",
+    "paper:2607.25026"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with potential users of simulation-based parameter estimation tools to test willingness to pay and viability of the embedded normalizing flow framework.",
+   "evidence_ids": [
+    "dvf:8",
+    "paper:2607.25026"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness to pay during price acceptance testing and validate demand in at least 5 out of 10 customer interviews.",
+   "evidence_ids": [
+    "dvf:8"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than 20 percent of interviewed prospective users express interest in adopting the simulation-based parameter estimation framework during customer interviews.",
+    "evidence_ids": [
+     "dvf:8",
+     "paper:2607.25026"
+    ]
+   },
+   {
+    "text": "Zero prospective users accept the proposed pricing during price acceptance tests.",
+    "evidence_ids": [
+     "dvf:8"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:torchcfm",
+     "use": "Used as a conditional flow matching package for flow-based modeling tasks.",
+     "evidence_ids": [
+      "pkg:torchcfm",
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "pkg:xgboostlss",
+     "use": "Used as an extension of XGBoost to probabilistic modeling for regression tasks.",
+     "evidence_ids": [
+      "pkg:xgboostlss",
+      "repo:statmixedml/xgboostlss"
+     ],
+     "version": "0.6.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "An embedded normalizing flow module that transforms complex residual distributions into simple base distributions for physical system simulations.",
+     "evidence_ids": [
+      "paper:2607.25026"
+     ]
+    },
+    {
+     "text": "An empirical-likelihood estimator under moment restrictions that imposes indirect constraints on the base distribution and supports first-order gradient updates via implicit differentiation.",
+     "evidence_ids": [
+      "paper:2607.25026"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

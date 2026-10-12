@@ -1,0 +1,206 @@
+{
+ "rank": 9,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:random search",
+    "role": "Random search is utilized as a baseline method for comparing optimization and search efficiency against Bayesian optimization and other strategies.",
+    "evidence_ids": [
+     "paper:2608.14264",
+     "paper:2608.14714"
+    ]
+   },
+   {
+    "term_id": "T:bayesian optimization",
+    "role": "Bayesian optimization serves as an advanced surrogate-based search or tuning method that efficiently navigates configuration and design spaces under a limited evaluation budget.",
+    "evidence_ids": [
+     "paper:2608.14264",
+     "paper:2608.14714"
+    ]
+   },
+   {
+    "term_id": "T:prediction",
+    "role": "Prediction tasks or evaluation outcomes provide the objective metrics and predictions (such as performance or reconstruction quality) that guide the optimization process.",
+    "evidence_ids": [
+     "paper:2609.28427"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets optimization and model selection tasks where expensive evaluations or limited feedback budgets constrain the search for optimal configurations.",
+   "evidence_ids": [
+    "paper:2609.28427",
+    "paper:2608.14264",
+    "paper:2608.14714"
+   ]
+  },
+  "limitation": {
+   "text": "Traditional random search and manual tuning can be inefficient, requiring extensive trial-and-error and failing to identify strong configurations early under restricted evaluation budgets.",
+   "evidence_ids": [
+    "paper:2608.14264",
+    "paper:2608.14714"
+   ]
+  },
+  "combination": {
+   "text": "Bayesian optimization uses probabilistic models to guide the search for better configurations and evaluate acquisition functions, frequently outperforming baseline random search in finding superior configurations within limited evaluation budgets.",
+   "evidence_ids": [
+    "paper:2608.14264",
+    "paper:2608.14714"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:random search",
+     "role": "Random search is utilized as a baseline method for comparing optimization and search efficiency against Bayesian optimization and other strategies.",
+     "evidence_ids": [
+      "paper:2608.14264",
+      "paper:2608.14714"
+     ]
+    },
+    {
+     "term_id": "T:bayesian optimization",
+     "role": "Bayesian optimization serves as an advanced surrogate-based search or tuning method that efficiently navigates configuration and design spaces under a limited evaluation budget.",
+     "evidence_ids": [
+      "paper:2608.14264",
+      "paper:2608.14714"
+     ]
+    },
+    {
+     "term_id": "T:prediction",
+     "role": "Prediction tasks or evaluation outcomes provide the objective metrics and predictions (such as performance or reconstruction quality) that guide the optimization process.",
+     "evidence_ids": [
+      "paper:2609.28427"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets optimization and model selection tasks where expensive evaluations or limited feedback budgets constrain the search for optimal configurations.",
+    "evidence_ids": [
+     "paper:2609.28427",
+     "paper:2608.14264",
+     "paper:2608.14714"
+    ]
+   },
+   "limitation": {
+    "text": "Traditional random search and manual tuning can be inefficient, requiring extensive trial-and-error and failing to identify strong configurations early under restricted evaluation budgets.",
+    "evidence_ids": [
+     "paper:2608.14264",
+     "paper:2608.14714"
+    ]
+   },
+   "combination": {
+    "text": "Bayesian optimization uses probabilistic models to guide the search for better configurations and evaluate acquisition functions, frequently outperforming baseline random search in finding superior configurations within limited evaluation budgets.",
+    "evidence_ids": [
+     "paper:2608.14264",
+     "paper:2608.14714"
+    ]
+   }
+  },
+  "summary": {
+   "text": "Bayesian optimization uses probabilistic models to guide the search for better configurations and evaluate acquisition functions, frequently outperforming baseline random search in finding superior configurations within limited evaluation budgets. The combination targets optimization and model selection tasks where expensive evaluations or limited feedback budgets constrain the search for optimal configurations. Traditional random search and manual tuning can be inefficient, requiring extensive trial-and-error and failing to identify strong configurations early under restricted evaluation budgets.",
+   "evidence_ids": [
+    "paper:2608.14264",
+    "paper:2608.14714",
+    "paper:2609.28427"
+   ]
+  },
+  "target_user": {
+   "basis": "evidence",
+   "text": "Patent assignees categorized as companies.",
+   "evidence_ids": [
+    "patent:12305632",
+    "patent:11494639"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Personalizing exoskeleton assistance across operating conditions where time and physical effort required to collect user feedback are constrained.",
+   "evidence_ids": [
+    "paper:2609.28427"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Bayesian optimization can improve reconstruction and preference-based outcomes relative to independent learning when preferences vary smoothly.",
+   "evidence_ids": [
+    "paper:2609.28427"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Target users will actively adopt and value a Bayesian optimization tool for constrained prediction and search workflows over familiar trial-and-error or random search methods, given that axis D score is 1.0.",
+   "evidence_ids": [
+    "dvf:9"
+   ],
+   "axis": "D",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Create a demand landing page outlining the Bayesian optimization and prediction tool, and conduct problem interviews with prospective users to assess interest in replacing random search.",
+   "evidence_ids": [
+    "dvf:9"
+   ],
+   "type": "demand landing page and problem interviews"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 20 percent visitor conversion on the landing page and secure at least 10 qualitative interview commitments from target users.",
+   "evidence_ids": [
+    "dvf:9"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 5 percent visitor conversion on the landing page and zero interview sign-ups after 3 weeks.",
+    "evidence_ids": [
+     "dvf:9"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:activeft",
+     "use": "Active fine-tuning library for active learning and optimization tasks.",
+     "evidence_ids": [
+      "repo:jonhue/activeft"
+     ],
+     "version": "0.1.1"
+    },
+    {
+     "id": "pkg:shadho",
+     "use": "Hyperparameter optimization and scheduling package for resource-constrained search.",
+     "evidence_ids": [
+      "pkg:shadho"
+     ],
+     "version": "0.4.5"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified workflow interface integrating Bayesian optimization acquisition functions with prediction models and random search baselines.",
+     "evidence_ids": [
+      "paper:2608.14264",
+      "paper:2608.14714"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

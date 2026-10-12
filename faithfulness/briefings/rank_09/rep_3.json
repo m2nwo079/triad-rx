@@ -1,0 +1,39 @@
+{
+ "rank": 9,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "comparison_only",
+  "insufficient_explanation": "The evidence bundle compares random search, bayesian optimization, and prediction as alternatives or baseline methods rather than employing all three components together in a unified combination.",
+  "insufficient_evidence_ids": [
+   "paper:2603.11068",
+   "paper:2608.14264"
+  ],
+  "components": [],
+  "target_task": {
+   "text": "",
+   "evidence_ids": [
+    "paper:2603.11068"
+   ]
+  },
+  "limitation": {
+   "text": "",
+   "evidence_ids": [
+    "paper:2603.11068"
+   ]
+  },
+  "combination": {
+   "text": "",
+   "evidence_ids": [
+    "paper:2603.11068"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

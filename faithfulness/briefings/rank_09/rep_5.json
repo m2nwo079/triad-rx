@@ -1,0 +1,21 @@
+{
+ "rank": 9,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "comparison_only",
+  "insufficient_explanation": "The evidence items compare random search, bayesian optimization, and prediction methods or tasks as alternatives or use them separately, but do not present a combination of all three terms working together as an integrated method.",
+  "insufficient_evidence_ids": [
+   "paper:2608.20998",
+   "paper:2608.14264",
+   "paper:2608.14714"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

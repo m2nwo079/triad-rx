@@ -1,0 +1,20 @@
+{
+ "rank": 20,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "The provided evidence bundle contains papers that discuss direct preference optimization and proximal policy optimization either as separate methods, alternative choices in preference optimization, or combined with other techniques like SFT or GRPO, but it does not contain evidence showing how direct preference optimization and proximal policy optimization are used together with decision making in a single integrated combination.",
+  "insufficient_evidence_ids": [
+   "paper:2512.00778",
+   "paper:2606.04807"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

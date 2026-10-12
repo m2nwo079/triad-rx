@@ -1,0 +1,25 @@
+{
+ "rank": 3,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "The evidence bundle contains papers discussing pairs of these terms, such as normalizing flows with bayesian inference and normalizing flows with regression, but it does not provide evidence showing how all three components (normalizing flows, bayesian inference, and regression) are combined together in a single method or task.",
+  "insufficient_evidence_ids": [
+   "paper:2609.24422",
+   "paper:2609.03343",
+   "paper:2608.07648",
+   "paper:2606.04324",
+   "paper:2605.29373",
+   "paper:2605.06829",
+   "paper:2603.09014"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

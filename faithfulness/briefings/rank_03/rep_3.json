@@ -1,0 +1,228 @@
+{
+ "rank": 3,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Normalizing flows parameterize conditional densities or serve as flexible probabilistic models to approximate complex distributions.",
+    "evidence_ids": [
+     "paper:2606.01346",
+     "paper:2608.07648"
+    ]
+   },
+   {
+    "term_id": "T:bayesian inference",
+    "role": "Bayesian inference is used to estimate parameter posteriors and quantify uncertainty.",
+    "evidence_ids": [
+     "paper:2609.24422"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Regression tasks are modeled via conditional distributions or handled with regression losses (such as MSE regression) to train flow matching models.",
+    "evidence_ids": [
+     "paper:2608.05557",
+     "paper:2609.12301"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Bayesian inference over regression models or hierarchical models.",
+   "evidence_ids": [
+    "paper:2609.12301",
+    "paper:2609.24422"
+   ]
+  },
+  "limitation": {
+   "text": "Existing Bayesian inference methods can be slow, computationally expensive, or inherit slow nonparametric convergence rates.",
+   "evidence_ids": [
+    "paper:2609.12301",
+    "paper:2609.24422"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows and related flow methods are integrated into Bayesian regression and hierarchical frameworks to enable efficient posterior estimation or amortized inference.",
+   "evidence_ids": [
+    "paper:2609.24422"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Normalizing flows parameterize conditional densities or serve as flexible probabilistic models to approximate complex distributions.",
+     "evidence_ids": [
+      "paper:2606.01346",
+      "paper:2608.07648"
+     ]
+    },
+    {
+     "term_id": "T:bayesian inference",
+     "role": "Bayesian inference is used to estimate parameter posteriors and quantify uncertainty.",
+     "evidence_ids": [
+      "paper:2609.24422"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Regression tasks are modeled via conditional distributions or handled with regression losses (such as MSE regression) to train flow matching models.",
+     "evidence_ids": [
+      "paper:2608.05557",
+      "paper:2609.12301"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Bayesian inference over regression models or hierarchical models.",
+    "evidence_ids": [
+     "paper:2609.12301",
+     "paper:2609.24422"
+    ]
+   },
+   "limitation": {
+    "text": "Existing Bayesian inference methods can be slow, computationally expensive, or inherit slow nonparametric convergence rates.",
+    "evidence_ids": [
+     "paper:2609.12301",
+     "paper:2609.24422"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows and related flow methods are integrated into Bayesian regression and hierarchical frameworks to enable efficient posterior estimation or amortized inference.",
+    "evidence_ids": [
+     "paper:2609.24422"
+    ]
+   }
+  },
+  "summary": {
+   "text": "Normalizing flows parameterize conditional densities or serve as flexible probabilistic models to approximate complex distributions, while Bayesian inference estimates parameter posteriors and quantifies uncertainty in regression and hierarchical tasks. Combining these techniques addresses limitations where traditional Bayesian inference methods are slow, computationally expensive, or inherit slow nonparametric convergence rates. Specifically, normalizing flows are integrated into Bayesian regression and hierarchical frameworks to enable efficient posterior estimation or amortized inference.",
+   "evidence_ids": [
+    "paper:2606.01346",
+    "paper:2608.05557",
+    "paper:2608.07648",
+    "paper:2609.12301",
+    "paper:2609.24422"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Quantitative researchers, data scientists, and statisticians who build regression and hierarchical models requiring calibrated uncertainty.",
+   "evidence_ids": [
+    "paper:2609.12301",
+    "paper:2609.24422"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Perform Bayesian inference over regression models or hierarchical models while avoiding slow or computationally expensive procedures.",
+   "evidence_ids": [
+    "paper:2609.12301",
+    "paper:2609.24422"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Enable efficient posterior estimation and amortized inference by integrating normalizing flows into Bayesian regression and hierarchical frameworks.",
+   "evidence_ids": [
+    "paper:2609.24422"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The viability axis score is missing in the bundle, so viability is designated as the riskiest assumption due to missing evidence. The riskiest assumption is that target users are willing to pay for or commercially adopt normalizing-flow-accelerated Bayesian regression tools.",
+   "evidence_ids": [
+    "dvf:3"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with quantitative researchers and data scientists to evaluate willingness to pay for normalizing-flow-accelerated Bayesian regression tools.",
+   "evidence_ids": [
+    "dvf:3"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "A proposed threshold of 40 percent of interviewed target users expressing positive willingness to pay during the price acceptance test.",
+   "evidence_ids": [
+    "dvf:3"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 15 percent of interviewed target users confirm willingness to pay or adopt the tooling during customer interviews.",
+    "evidence_ids": [
+     "dvf:3"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:atong01/conditional-flow-matching",
+     "use": "Provides a conditional flow matching library for training flow models.",
+     "evidence_ids": [
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:torchcfm",
+     "use": "Provides conditional flow matching utilities for flow-based modeling tasks.",
+     "evidence_ids": [
+      "pkg:torchcfm"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "pkg:lightgbmlss",
+     "use": "Provides probabilistic modeling extensions for LightGBM regression tasks.",
+     "evidence_ids": [
+      "pkg:lightgbmlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:xgboostlss",
+     "use": "Provides probabilistic modeling extensions for XGBoost regression tasks.",
+     "evidence_ids": [
+      "pkg:xgboostlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:margarine",
+     "use": "Supports sampling and Bayesian analysis tasks.",
+     "evidence_ids": [
+      "pkg:margarine"
+     ],
+     "version": "2.2.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized orchestration wrapper that integrates normalizing flow posterior estimators with Bayesian regression and hierarchical model samplers.",
+     "evidence_ids": [
+      "paper:2609.24422"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

@@ -1,0 +1,190 @@
+{
+ "rank": 20,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:direct preference optimization",
+    "role": "Direct preference optimization is combined to learn state-conditioned compression strategies or optimize agent preferences from pairwise data.",
+    "evidence_ids": [
+     "paper:2604.09150"
+    ]
+   },
+   {
+    "term_id": "M:proximal policy optimization",
+    "role": "Proximal policy optimization is combined to enable reinforcement learning updates and policy training.",
+    "evidence_ids": [
+     "paper:2604.09150"
+    ]
+   },
+   {
+    "term_id": "T:decision making",
+    "role": "Decision making is the overarching task targeted by combining these optimization methods for complex reasoning and policy execution.",
+    "evidence_ids": [
+     "paper:2604.09150"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets efficient reasoning and decision making in large reasoning models.",
+   "evidence_ids": [
+    "paper:2604.09150"
+   ]
+  },
+  "limitation": {
+   "text": "Existing chain-of-thought compression methods struggle to balance accuracy and efficiency, and lack fine-grained, step-level adaptation to redundancy and reasoning bias.",
+   "evidence_ids": [
+    "paper:2604.09150"
+   ]
+  },
+  "combination": {
+   "text": "By combining proximal policy optimization and direct preference optimization into a reward-difference-driven training strategy, the model can learn state-conditioned compression strategies.",
+   "evidence_ids": [
+    "paper:2604.09150"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:direct preference optimization",
+     "role": "Direct preference optimization is combined to learn state-conditioned compression strategies or optimize agent preferences from pairwise data.",
+     "evidence_ids": [
+      "paper:2604.09150"
+     ]
+    },
+    {
+     "term_id": "M:proximal policy optimization",
+     "role": "Proximal policy optimization is combined to enable reinforcement learning updates and policy training.",
+     "evidence_ids": [
+      "paper:2604.09150"
+     ]
+    },
+    {
+     "term_id": "T:decision making",
+     "role": "Decision making is the overarching task targeted by combining these optimization methods for complex reasoning and policy execution.",
+     "evidence_ids": [
+      "paper:2604.09150"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets efficient reasoning and decision making in large reasoning models.",
+    "evidence_ids": [
+     "paper:2604.09150"
+    ]
+   },
+   "limitation": {
+    "text": "Existing chain-of-thought compression methods struggle to balance accuracy and efficiency, and lack fine-grained, step-level adaptation to redundancy and reasoning bias.",
+    "evidence_ids": [
+     "paper:2604.09150"
+    ]
+   },
+   "combination": {
+    "text": "By combining proximal policy optimization and direct preference optimization into a reward-difference-driven training strategy, the model can learn state-conditioned compression strategies.",
+    "evidence_ids": [
+     "paper:2604.09150"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates Proximal Policy Optimization and Direct Preference Optimization into a reward-difference-driven training strategy that enables models to learn state-conditioned compression strategies for decision making.",
+   "evidence_ids": [
+    "paper:2604.09150"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Software engineers and machine learning practitioners who deploy large reasoning models and seek to reduce inference latency.",
+   "evidence_ids": [
+    "paper:2604.09150"
+   ]
+  },
+  "jtbd": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: When deploying models with long chains of thought, users want to compress reasoning steps dynamically so that they can maintain high accuracy while minimizing inference latency.",
+   "evidence_ids": [
+    "paper:2604.09150"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Using a reward-difference-driven training strategy combining Proximal Policy Optimization and Direct Preference Optimization allows practitioners to achieve a superior accuracy-efficiency balance.",
+   "evidence_ids": [
+    "paper:2604.09150"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The viability axis is designated as the riskiest assumption due to missing evidence in the bundle.",
+   "evidence_ids": [
+    "dvf:20"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews with machine learning engineers and present a price acceptance test for a packaged model compression toolkit to test viability.",
+   "evidence_ids": [
+    "dvf:20"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: 40 percent of interviewed prospective users confirm willingness to pay for the optimization framework.",
+   "evidence_ids": [
+    "dvf:20"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: Fewer than 10 percent of interviewed prospective users express interest in purchasing or adopting the combined preference optimization tooling.",
+    "evidence_ids": [
+     "dvf:20"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:openpsi-project/realhf",
+     "use": "Super-efficient RLHF training of language models with parameter reallocation.",
+     "evidence_ids": [
+      "repo:openpsi-project/realhf"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:yifeizhou02/archer",
+     "use": "Training language model agents via hierarchical multi-turn reinforcement learning.",
+     "evidence_ids": [
+      "repo:yifeizhou02/archer"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A reward-difference-driven training pipeline that unifies Proximal Policy Optimization and Direct Preference Optimization for state-conditioned reasoning compression.",
+     "evidence_ids": [
+      "paper:2604.09150"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

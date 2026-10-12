@@ -1,0 +1,240 @@
+{
+ "rank": 15,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Normalizing flows are used as expressive generative models or differentiable density estimators to learn probability distributions over latent or feature spaces.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2606.30936",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   },
+   {
+    "term_id": "T:density estimation",
+    "role": "Density estimation provides the likelihood-based modeling framework that allows capturing complex data or feature distributions.",
+    "evidence_ids": [
+     "paper:2606.30936",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   },
+   {
+    "term_id": "T:uncertainty quantification",
+    "role": "Uncertainty quantification benefits from the learned probability distributions to systematically reason about epistemic or posterior uncertainty.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets probabilistic modeling tasks such as capturing expressive posterior distributions over graphs, latent spaces, or clustering structures.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  },
+  "limitation": {
+   "text": "Approaches can be limited by challenges in approximating complex posteriors, encoding dependencies, or managing multimodal distributions without rigid parametric assumptions.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are leveraged as flexible, differentiable density estimators to model complex probability densities or posteriors, enabling principled uncertainty quantification and inference on downstream structures.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2605.09718",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Normalizing flows are used as expressive generative models or differentiable density estimators to learn probability distributions over latent or feature spaces.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2606.30936",
+      "paper:2605.09718",
+      "paper:2604.11636",
+      "paper:2603.03188"
+     ]
+    },
+    {
+     "term_id": "T:density estimation",
+     "role": "Density estimation provides the likelihood-based modeling framework that allows capturing complex data or feature distributions.",
+     "evidence_ids": [
+      "paper:2606.30936",
+      "paper:2604.11636",
+      "paper:2603.03188"
+     ]
+    },
+    {
+     "term_id": "T:uncertainty quantification",
+     "role": "Uncertainty quantification benefits from the learned probability distributions to systematically reason about epistemic or posterior uncertainty.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2605.09718",
+      "paper:2604.11636",
+      "paper:2603.03188"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets probabilistic modeling tasks such as capturing expressive posterior distributions over graphs, latent spaces, or clustering structures.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   },
+   "limitation": {
+    "text": "Approaches can be limited by challenges in approximating complex posteriors, encoding dependencies, or managing multimodal distributions without rigid parametric assumptions.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are leveraged as flexible, differentiable density estimators to model complex probability densities or posteriors, enabling principled uncertainty quantification and inference on downstream structures.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination leverages normalizing flows as flexible, differentiable density estimators to model complex probability densities or posteriors, enabling principled uncertainty quantification and inference on downstream structures. This approach addresses probabilistic modeling tasks such as capturing expressive posterior distributions over graphs, latent spaces, or clustering structures, while overcoming limitations related to approximating complex posteriors, encoding dependencies, or managing multimodal distributions without rigid parametric assumptions. Evidence across multiple studies demonstrates how normalizing flows support tasks like Bayesian causal discovery, generative shape modeling, and density-based clustering with uncertainty quantification.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2604.11636",
+    "paper:2603.03188",
+    "paper:2605.09718"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Machine learning engineers and quantitative researchers utilizing repositories such as apple/ml-tarflow and sintel-dev/orion who require probabilistic modeling and uncertainty quantification.",
+   "evidence_ids": [
+    "repo:apple/ml-tarflow",
+    "repo:sintel-dev/orion",
+    "pkg:lf2i"
+   ]
+  },
+  "jtbd": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: When deploying models that require capturing complex data or feature distributions, users need to perform density estimation and quantify uncertainty reliably without relying on rigid parametric assumptions.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Combining normalizing flows with density estimation provides expressive posterior modeling and uncertainty quantification that helps users reason systematically about epistemic uncertainty and complex data manifolds.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is on axis V (viability). It was designated due to missing evidence in the bundle. We assume that target users will find sufficient commercial or operational value in this normalizing flow framework to pay for or adopt it.",
+   "evidence_ids": [
+    "dvf:15"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with machine learning practitioners to test the commercial viability and willingness to pay for the normalizing flow uncertainty quantification framework, as specified by the DVF axis V requirement.",
+   "evidence_ids": [
+    "dvf:15"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness-to-pay responses during customer interviews and price acceptance testing.",
+   "evidence_ids": [
+    "dvf:15"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 15 percent of interviewed practitioners express willingness to adopt or pay for the solution.",
+    "evidence_ids": [
+     "dvf:15"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:apple/ml-tarflow",
+     "use": "Used to explore normalizing flow architectures and leverage existing flow-based implementations.",
+     "evidence_ids": [
+      "repo:apple/ml-tarflow"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:lf2i",
+     "use": "Used to support likelihood-free inference or related density estimation pipelines.",
+     "evidence_ids": [
+      "pkg:lf2i"
+     ],
+     "version": "0.3.1"
+    },
+    {
+     "id": "repo:sintel-dev/orion",
+     "use": "Used to benchmark or handle anomaly detection and time series density workflows.",
+     "evidence_ids": [
+      "repo:sintel-dev/orion"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build a unified wrapper that integrates normalizing flow density estimators with uncertainty quantification metrics and customer-facing API endpoints for evaluation.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2603.03188"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

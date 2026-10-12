@@ -1,0 +1,190 @@
+{
+ "rank": 7,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Provides sparse variational Gaussian process inference and analytic moment matching to enable scalable probabilistic modeling and epistemic uncertainty quantification over the network topology.",
+    "evidence_ids": [
+     "paper:2512.05306"
+    ]
+   },
+   {
+    "term_id": "T:kolmogorov arnold networks",
+    "role": "Serves as the underlying network topology (KANs) with learnable univariate functions on network edges, replacing standard MLPs for structured function approximation.",
+    "evidence_ids": [
+     "paper:2512.05306"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Acts as the target learning task for predicting continuous quantities or reconstructing complex systems from measurements.",
+    "evidence_ids": [
+     "paper:2512.22426"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Uncertainty-aware regression and reconstruction tasks, such as time-resolved flow field reconstruction from sparse measurements.",
+   "evidence_ids": [
+    "paper:2512.22426"
+   ]
+  },
+  "limitation": {
+   "text": "Standard Kolmogorov-Arnold Networks lack principled probabilistic outputs and uncertainty quantification capabilities essential for many scientific applications.",
+   "evidence_ids": [
+    "paper:2512.05306"
+   ]
+  },
+  "combination": {
+   "text": "Integrating sparse variational Gaussian process inference with the Kolmogorov-Arnold network topology (SVGP-KAN) propagates uncertainty through deep additive structures while maintaining interpretability and providing well-calibrated uncertainty estimates for regression tasks.",
+   "evidence_ids": [
+    "paper:2512.22426",
+    "paper:2512.05306"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Provides sparse variational Gaussian process inference and analytic moment matching to enable scalable probabilistic modeling and epistemic uncertainty quantification over the network topology.",
+     "evidence_ids": [
+      "paper:2512.05306"
+     ]
+    },
+    {
+     "term_id": "T:kolmogorov arnold networks",
+     "role": "Serves as the underlying network topology (KANs) with learnable univariate functions on network edges, replacing standard MLPs for structured function approximation.",
+     "evidence_ids": [
+      "paper:2512.05306"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Acts as the target learning task for predicting continuous quantities or reconstructing complex systems from measurements.",
+     "evidence_ids": [
+      "paper:2512.22426"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Uncertainty-aware regression and reconstruction tasks, such as time-resolved flow field reconstruction from sparse measurements.",
+    "evidence_ids": [
+     "paper:2512.22426"
+    ]
+   },
+   "limitation": {
+    "text": "Standard Kolmogorov-Arnold Networks lack principled probabilistic outputs and uncertainty quantification capabilities essential for many scientific applications.",
+    "evidence_ids": [
+     "paper:2512.05306"
+    ]
+   },
+   "combination": {
+    "text": "Integrating sparse variational Gaussian process inference with the Kolmogorov-Arnold network topology (SVGP-KAN) propagates uncertainty through deep additive structures while maintaining interpretability and providing well-calibrated uncertainty estimates for regression tasks.",
+    "evidence_ids": [
+     "paper:2512.22426",
+     "paper:2512.05306"
+    ]
+   }
+  },
+  "summary": {
+   "text": "Kolmogorov-Arnold Networks (KANs) lack principled probabilistic outputs and uncertainty quantification capabilities essential for many scientific applications, while standard sparse variational Gaussian processes (SVGP) can be integrated with the KAN topology to enable scalable Bayesian inference and epistemic uncertainty quantification over regression and reconstruction tasks.",
+   "evidence_ids": [
+    "paper:2512.05306",
+    "paper:2512.22426"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Data scientists and machine learning researchers developing scientific regression models and time-resolved flow field reconstructions using sparse measurements.",
+   "evidence_ids": [
+    "paper:2512.22426",
+    "paper:2512.05306"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "To perform uncertainty-aware regression and reconstruction tasks, such as time-resolved flow field reconstruction from temporally sparse measurements, while providing well-calibrated uncertainty estimates.",
+   "evidence_ids": [
+    "paper:2512.22426"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Integrating sparse variational Gaussian process inference with the Kolmogorov-Arnold network topology propagates uncertainty through deep additive structures while maintaining interpretability and reliably indicating when and where predictions degrade.",
+   "evidence_ids": [
+    "paper:2512.05306",
+    "paper:2512.22426"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Analytic moment matching can successfully propagate uncertainty through deep additive structures in Sparse Variational Gaussian Process Kolmogorov-Arnold Networks (SVGP-KAN) without prohibitive computational overhead or loss of calibration, given feasibility score F: 3.0.",
+   "evidence_ids": [
+    "dvf:7",
+    "paper:2512.05306"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "A technical proof of concept built from existing Python packages that implements a Sparse Variational Gaussian Process Kolmogorov-Arnold Network (SVGP-KAN) to evaluate epistemic uncertainty calibration on a 2D synthetic regression benchmark.",
+   "evidence_ids": [
+    "dvf:7",
+    "paper:2512.05306"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "Achieving a proposed threshold of less than 10 percent normalized root mean square error alongside well-calibrated uncertainty estimates on held-out regression test data.",
+   "evidence_ids": [
+    "paper:2512.22426"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Failure to achieve calibrated uncertainty estimates where epistemic uncertainty fails to correlate with prediction error, exceeding a proposed threshold of 40 percent miscalibration area.",
+    "evidence_ids": [
+     "paper:2512.22426",
+     "paper:2512.05306"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:netcal",
+     "use": "To evaluate and quantify the calibration of epistemic uncertainty and predictive confidence derived from the probabilistic KAN regression models.",
+     "evidence_ids": [
+      "pkg:netcal"
+     ],
+     "version": "1.4.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "An integrated Sparse Variational Gaussian Process Kolmogorov-Arnold Network (SVGP-KAN) architecture that combines sparse variational Gaussian process inference with learnable univariate functions on network edges.",
+     "evidence_ids": [
+      "paper:2512.05306"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

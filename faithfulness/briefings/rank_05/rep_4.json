@@ -1,0 +1,184 @@
+{
+ "rank": 5,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:proximal policy optimization",
+    "role": "Serves as the underlying policy optimization algorithm to train the agent by generating signal cycle phase durations or actions.",
+    "evidence_ids": [
+     "paper:2607.03703",
+     "patent:11783702"
+    ]
+   },
+   {
+    "term_id": "T:deep reinforcement learning",
+    "role": "Provides the overall learning paradigm to optimize decision-making strategies for controlling traffic signal environments.",
+    "evidence_ids": [
+     "paper:2607.03703"
+    ]
+   },
+   {
+    "term_id": "T:traffic signal control",
+    "role": "Acts as the target application domain where intersection signals, phase transitions, and timing are dynamically managed.",
+    "evidence_ids": [
+     "paper:2607.03703"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Adaptive traffic signal control to optimize traffic metrics and manage intersection phase configurations.",
+   "evidence_ids": [
+    "paper:2607.03703"
+   ]
+  },
+  "limitation": {
+   "text": "The opaque, black-box nature of deep RL models poses challenges for regulatory compliance, operational trust, and safety compliance in traffic control.",
+   "evidence_ids": [
+    "paper:2607.03703"
+   ]
+  },
+  "combination": {
+   "text": "A deterministic action-masking interface is integrated directly into the Proximal Policy Optimization pipeline within deep reinforcement learning for traffic signal control, explicitly blocking invalid phase transitions to guarantee absolute compliance with established signal timing and safety constraints.",
+   "evidence_ids": [
+    "paper:2607.03703"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:proximal policy optimization",
+     "role": "Serves as the underlying policy optimization algorithm to train the agent by generating signal cycle phase durations or actions.",
+     "evidence_ids": [
+      "paper:2607.03703",
+      "patent:11783702"
+     ]
+    },
+    {
+     "term_id": "T:deep reinforcement learning",
+     "role": "Provides the overall learning paradigm to optimize decision-making strategies for controlling traffic signal environments.",
+     "evidence_ids": [
+      "paper:2607.03703"
+     ]
+    },
+    {
+     "term_id": "T:traffic signal control",
+     "role": "Acts as the target application domain where intersection signals, phase transitions, and timing are dynamically managed.",
+     "evidence_ids": [
+      "paper:2607.03703"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Adaptive traffic signal control to optimize traffic metrics and manage intersection phase configurations.",
+    "evidence_ids": [
+     "paper:2607.03703"
+    ]
+   },
+   "limitation": {
+    "text": "The opaque, black-box nature of deep RL models poses challenges for regulatory compliance, operational trust, and safety compliance in traffic control.",
+    "evidence_ids": [
+     "paper:2607.03703"
+    ]
+   },
+   "combination": {
+    "text": "A deterministic action-masking interface is integrated directly into the Proximal Policy Optimization pipeline within deep reinforcement learning for traffic signal control, explicitly blocking invalid phase transitions to guarantee absolute compliance with established signal timing and safety constraints.",
+    "evidence_ids": [
+     "paper:2607.03703"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates a deterministic action-masking interface directly into the Proximal Policy Optimization pipeline within deep reinforcement learning for traffic signal control to explicitly block invalid phase transitions and guarantee absolute compliance with established signal timing and safety constraints, addressing the opaque black-box nature of deep reinforcement learning models in transportation infrastructure.",
+   "evidence_ids": [
+    "paper:2607.03703"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Transportation agencies, municipal traffic engineers, and urban infrastructure operators seeking auditable and regulatory-compliant adaptive traffic signal management systems.",
+   "evidence_ids": [
+    "paper:2607.03703"
+   ]
+  },
+  "jtbd": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: When managing urban intersection signal timings using deep reinforcement learning, traffic engineers want to guarantee absolute safety and regulatory compliance without sacrificing optimization performance so that regulatory authorities and operational stakeholders can trust the deployed control policies.",
+   "evidence_ids": [
+    "paper:2607.03703"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Integrates a deterministic action-masking interface into the Proximal Policy Optimization pipeline to explicitly block invalid phase transitions, providing a safe, transparent, and auditable adaptive traffic signal control system.",
+   "evidence_ids": [
+    "paper:2607.03703"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Transportation agencies and municipal operators will adopt and trust a deep reinforcement learning-based traffic signal control system even when constrained by deterministic action masking.",
+   "evidence_ids": [
+    "dvf:5"
+   ],
+   "axis": "D",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Launch a demand landing page explaining the auditable, safe PPO-driven traffic signal controller and conduct structured problem interviews with municipal traffic engineers to test desirability and willingness to adopt.",
+   "evidence_ids": [
+    "dvf:5"
+   ],
+   "type": "demand landing page and problem interviews"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: 40 percent of interviewed traffic engineering stakeholders express strong interest in pilot testing the action-masked PPO traffic signal control framework.",
+   "evidence_ids": [
+    "dvf:5"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: fewer than 10 percent of interviewed stakeholders express willingness to consider learning-based traffic controllers due to regulatory or operational barriers.",
+    "evidence_ids": [
+     "dvf:5"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:cpwan/rlor",
+     "use": "Provides reinforcement learning implementations for operations research problems to support the training setup.",
+     "evidence_ids": [
+      "repo:cpwan/rlor"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A deterministic action-masking interface integrated into the Proximal Policy Optimization pipeline to explicitly block invalid phase transitions for traffic signal control environments.",
+     "evidence_ids": [
+      "paper:2607.03703"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

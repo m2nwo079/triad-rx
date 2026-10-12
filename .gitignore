@@ -28,3 +28,11 @@ represcription/vocab
 represcription/.env
 represcription/results/arxiv_filter_*.json
 represcription/results/patent_files.json
+faithfulness/data/
+faithfulness/scripts
+faithfulness/prompts
+faithfulness/templates
+faithfulness/vocab
+faithfulness/.env
+faithfulness/results/briefing_bundles.json
+faithfulness/results/arxiv_filter_*.json

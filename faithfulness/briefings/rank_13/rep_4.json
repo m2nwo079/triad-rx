@@ -1,0 +1,224 @@
+{
+ "rank": 13,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Serves as a surrogate model or provides epistemic uncertainty and residual corrections within operator learning frameworks.",
+    "evidence_ids": [
+     "paper:2606.17513",
+     "paper:2609.00389"
+    ]
+   },
+   {
+    "term_id": "T:bayesian optimization",
+    "role": "Drives sequential decision-making or outer-loop optimization procedures using operator learning and uncertainty estimates.",
+    "evidence_ids": [
+     "paper:2404.03099",
+     "paper:2503.03178"
+    ]
+   },
+   {
+    "term_id": "T:operator learning",
+    "role": "Maps input functions to system response trajectories or serves as a surrogate model for infinite-dimensional scientific computing problems.",
+    "evidence_ids": [
+     "paper:2404.03099",
+     "paper:2503.03178"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Composite Bayesian optimization in function spaces and outer-loop analyses for partial differential equations.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  },
+  "limitation": {
+   "text": "Existing uncertainty quantification frameworks for operator learning incur substantial computational costs during training and inference.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  },
+  "combination": {
+   "text": "Uncertainty-aware operator learning methods provide predictive uncertainties that efficiently drive Bayesian optimization and active learning procedures.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Serves as a surrogate model or provides epistemic uncertainty and residual corrections within operator learning frameworks.",
+     "evidence_ids": [
+      "paper:2606.17513",
+      "paper:2609.00389"
+     ]
+    },
+    {
+     "term_id": "T:bayesian optimization",
+     "role": "Drives sequential decision-making or outer-loop optimization procedures using operator learning and uncertainty estimates.",
+     "evidence_ids": [
+      "paper:2404.03099",
+      "paper:2503.03178"
+     ]
+    },
+    {
+     "term_id": "T:operator learning",
+     "role": "Maps input functions to system response trajectories or serves as a surrogate model for infinite-dimensional scientific computing problems.",
+     "evidence_ids": [
+      "paper:2404.03099",
+      "paper:2503.03178"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Composite Bayesian optimization in function spaces and outer-loop analyses for partial differential equations.",
+    "evidence_ids": [
+     "paper:2404.03099",
+     "paper:2503.03178"
+    ]
+   },
+   "limitation": {
+    "text": "Existing uncertainty quantification frameworks for operator learning incur substantial computational costs during training and inference.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   },
+   "combination": {
+    "text": "Uncertainty-aware operator learning methods provide predictive uncertainties that efficiently drive Bayesian optimization and active learning procedures.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   }
+  },
+  "summary": {
+   "text": "Uncertainty-aware operator learning methods provide predictive uncertainties that efficiently drive Bayesian optimization and active learning procedures. Gaussian processes serve as surrogate models or provide epistemic uncertainty and residual corrections within operator learning frameworks. Bayesian optimization drives sequential decision-making or outer-loop optimization procedures using operator learning and uncertainty estimates.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178",
+    "paper:2606.17513",
+    "paper:2609.00389"
+   ]
+  },
+  "target_user": {
+   "basis": "evidence",
+   "text": "Companies utilizing patent-assigned optimization tools and cloud computing environments can apply these Bayesian optimization and Gaussian process frameworks.",
+   "evidence_ids": [
+    "patent:11757732",
+    "patent:11927927"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Perform composite Bayesian optimization in function spaces and outer-loop analyses for partial differential equations.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Uncertainty-aware operator learning yields improvements in accuracy and data-efficiency for outer-loop optimization procedures.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The combination scores 2.0 on feasibility, indicating that integrating Gaussian process surrogates with Bayesian optimization and operator learning may encounter significant technical bottlenecks in scaling across high-dimensional function spaces.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2603.21678"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Build a technical proof of concept combining Google Vizier and Trieste to run a Bayesian optimization loop over operator learning surrogate predictions, evaluating performance against proposed threshold: 80 percent success rate on benchmark PDE tasks.",
+   "evidence_ids": [
+    "dvf:13",
+    "pkg:google-vizier",
+    "pkg:trieste"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold: 20 percent reduction in high-fidelity function evaluations compared to standard baselines while maintaining predictive coverage.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2609.17440"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The optimization loop fails to outperform single-fidelity baselines under the proposed threshold: 50 percent evaluation budget constraints.",
+    "evidence_ids": [
+     "dvf:13",
+     "paper:2609.17440"
+    ]
+   },
+   {
+    "text": "Inference time exceeds a proposed threshold: 5x slowdown compared to standard deterministic operator networks.",
+    "evidence_ids": [
+     "dvf:13",
+     "paper:2503.03178"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:google-vizier",
+     "use": "Provides black-box optimization algorithms and infrastructure for managing Bayesian optimization trials.",
+     "evidence_ids": [
+      "repo:google/vizier"
+     ],
+     "version": "0.1.24"
+    },
+    {
+     "id": "pkg:trieste",
+     "use": "Offers Bayesian optimization functionality built on Gaussian processes in TensorFlow.",
+     "evidence_ids": [
+      "pkg:trieste"
+     ],
+     "version": "4.6.0"
+    },
+    {
+     "id": "pkg:smt",
+     "use": "Supplies surrogate modeling tools for design and optimization of complex engineering systems.",
+     "evidence_ids": [
+      "repo:smtorg/smt"
+     ],
+     "version": "2.15.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A modular adapter to map infinite-dimensional function outputs from operator networks into finite-dimensional Gaussian process acquisition functions for Bayesian optimization.",
+     "evidence_ids": [
+      "paper:2404.03099",
+      "paper:2503.03178"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

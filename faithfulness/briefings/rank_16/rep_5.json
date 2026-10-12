@@ -1,0 +1,220 @@
+{
+ "rank": 16,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:transformer",
+    "role": "Serves as a backbone network, such as a masked autoregressive transformer or video/diffusion transformer, to model structural relationships or jointly encode tokens for generation.",
+    "evidence_ids": [
+     "paper:2609.03931",
+     "paper:2604.14302"
+    ]
+   },
+   {
+    "term_id": "T:image to 3d",
+    "role": "Provides initial asset-level 3D representations, geometries, or spatial priors derived from images.",
+    "evidence_ids": [
+     "paper:2605.30338",
+     "paper:2607.03990"
+    ]
+   },
+   {
+    "term_id": "T:scene generation",
+    "role": "Acts as the overarching task of synthesizing complete, structured, and physically stable or consistent 3D scenes from visual inputs.",
+    "evidence_ids": [
+     "paper:2607.03990",
+     "paper:2605.30338"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets structured 3D indoor scene generation from a single image or sparse views.",
+   "evidence_ids": [
+    "paper:2607.03990",
+    "paper:2605.30338"
+   ]
+  },
+  "limitation": {
+   "text": "Existing methods focus primarily on asset-level generation while neglecting structural layouts and global spatial contexts, or they produce geometrically plausible but physically inconsistent results like object penetration.",
+   "evidence_ids": [
+    "paper:2607.03990",
+    "paper:2605.30338"
+   ]
+  },
+  "combination": {
+   "text": "Transformer networks are integrated with single-image-to-3D models and structural layout priors to generate complete indoor scenes with coherent structural layouts and asset geometries.",
+   "evidence_ids": [
+    "paper:2607.03990",
+    "paper:2605.30338"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:transformer",
+     "role": "Serves as a backbone network, such as a masked autoregressive transformer or video/diffusion transformer, to model structural relationships or jointly encode tokens for generation.",
+     "evidence_ids": [
+      "paper:2609.03931",
+      "paper:2604.14302"
+     ]
+    },
+    {
+     "term_id": "T:image to 3d",
+     "role": "Provides initial asset-level 3D representations, geometries, or spatial priors derived from images.",
+     "evidence_ids": [
+      "paper:2605.30338",
+      "paper:2607.03990"
+     ]
+    },
+    {
+     "term_id": "T:scene generation",
+     "role": "Acts as the overarching task of synthesizing complete, structured, and physically stable or consistent 3D scenes from visual inputs.",
+     "evidence_ids": [
+      "paper:2607.03990",
+      "paper:2605.30338"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets structured 3D indoor scene generation from a single image or sparse views.",
+    "evidence_ids": [
+     "paper:2607.03990",
+     "paper:2605.30338"
+    ]
+   },
+   "limitation": {
+    "text": "Existing methods focus primarily on asset-level generation while neglecting structural layouts and global spatial contexts, or they produce geometrically plausible but physically inconsistent results like object penetration.",
+    "evidence_ids": [
+     "paper:2607.03990",
+     "paper:2605.30338"
+    ]
+   },
+   "combination": {
+    "text": "Transformer networks are integrated with single-image-to-3D models and structural layout priors to generate complete indoor scenes with coherent structural layouts and asset geometries.",
+    "evidence_ids": [
+     "paper:2607.03990",
+     "paper:2605.30338"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates transformer networks with single-image-to-3D models and structural layout priors to generate complete indoor scenes with coherent structural layouts and asset geometries, addressing limitations where existing methods focus on asset-level generation while neglecting structural layouts or producing physically inconsistent results.",
+   "evidence_ids": [
+    "paper:2605.30338",
+    "paper:2607.03990"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: 3D content creators, AR/VR developers, and simulation engineers who need to convert casual indoor images into simulation-ready assets.",
+   "evidence_ids": [
+    "paper:2605.30338",
+    "paper:2607.03990"
+   ]
+  },
+  "jtbd": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: When creating virtual environments or simulation scenes from casual photos, users want to generate complete, structurally sound, and physically stable 3D indoor scenes automatically, so that they can avoid manual object placement and penetration issues.",
+   "evidence_ids": [
+    "paper:2605.30338",
+    "paper:2607.03990"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: This combination enables automated reconstruction of physically stable 3D indoor scenes from a single image, reducing physical errors and simulation instability while maintaining visual consistency.",
+   "evidence_ids": [
+    "paper:2605.30338",
+    "paper:2607.03990"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is on axis V (viability). This axis was designated due to missing evidence in the bundle.",
+   "evidence_ids": [
+    "dvf:16"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with proposed target users, presenting a prototype workflow that converts a single image into a structured 3D indoor scene, to evaluate commercial viability and proposed willingness-to-pay thresholds.",
+   "evidence_ids": [
+    "dvf:16",
+    "paper:2605.30338"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent of interviewed users confirming a willingness to pay for the scene generation tool, and a proposed threshold of 70 percent expressing strong demand for automated physics-stable scene construction.",
+   "evidence_ids": [
+    "dvf:16",
+    "paper:2605.30338"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 15 percent of interviewed users express a willingness to pay or confirm commercial interest during price acceptance testing.",
+    "evidence_ids": [
+     "dvf:16",
+     "paper:2605.30338"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:shirleymaxx/rest3d",
+     "use": "Serves as a framework for reconstructing physically stable 3D scenes from a single image using agentic physical scene understanding.",
+     "evidence_ids": [
+      "paper:2605.30338",
+      "repo:shirleymaxx/rest3d"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:haoz19/world-tracing",
+     "use": "Provides generative pixel-aligned geometry and world-tracing diffusion transformer capabilities for capturing visible and occluded surfaces.",
+     "evidence_ids": [
+      "paper:2606.13652",
+      "repo:haoz19/world-tracing"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:3dtopia/openlrm",
+     "use": "Supplies an open-source implementation of large reconstruction models for feed-forward 3D asset generation.",
+     "evidence_ids": [
+      "repo:3dtopia/openlrm"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified interface module that connects single-image asset generation, transformer-based structural layout prediction, and physics-constrained optimization into a single pipeline.",
+     "evidence_ids": [
+      "paper:2605.30338",
+      "paper:2607.03990"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

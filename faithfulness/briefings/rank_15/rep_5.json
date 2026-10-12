@@ -1,0 +1,213 @@
+{
+ "rank": 15,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Normalizing flows are used to model expressive and multimodal posterior distributions, capture latent variability, or learn flexible distributions.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   },
+   {
+    "term_id": "T:density estimation",
+    "role": "Density estimation provides data-generating or conditional densities that serve as the foundation for downstream probabilistic and clustering tasks.",
+    "evidence_ids": [
+     "paper:2606.30936",
+     "paper:2603.03188"
+    ]
+   },
+   {
+    "term_id": "T:uncertainty quantification",
+    "role": "Uncertainty quantification assesses epistemic and probabilistic uncertainty in complex models by leveraging posterior distributions or density estimates.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2603.03188"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets tasks such as Bayesian causal discovery, generative shape modeling, and density-based clustering with associated uncertainty.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  },
+  "limitation": {
+   "text": "Existing approaches often fail to encode complex dependencies, lack principled ways to handle multimodal posteriors, or struggle to scale efficiently while providing rigorous inference.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2603.03188"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are combined with density estimation to support expressive posterior learning, while density-based clustering or resampling schemes enable principled uncertainty quantification.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2603.03188"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Normalizing flows are used to model expressive and multimodal posterior distributions, capture latent variability, or learn flexible distributions.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2604.11636",
+      "paper:2603.03188"
+     ]
+    },
+    {
+     "term_id": "T:density estimation",
+     "role": "Density estimation provides data-generating or conditional densities that serve as the foundation for downstream probabilistic and clustering tasks.",
+     "evidence_ids": [
+      "paper:2606.30936",
+      "paper:2603.03188"
+     ]
+    },
+    {
+     "term_id": "T:uncertainty quantification",
+     "role": "Uncertainty quantification assesses epistemic and probabilistic uncertainty in complex models by leveraging posterior distributions or density estimates.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2603.03188"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets tasks such as Bayesian causal discovery, generative shape modeling, and density-based clustering with associated uncertainty.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   },
+   "limitation": {
+    "text": "Existing approaches often fail to encode complex dependencies, lack principled ways to handle multimodal posteriors, or struggle to scale efficiently while providing rigorous inference.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2603.03188"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are combined with density estimation to support expressive posterior learning, while density-based clustering or resampling schemes enable principled uncertainty quantification.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2603.03188"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates normalizing flows with density estimation to support expressive posterior learning, while density-based clustering or resampling schemes enable principled uncertainty quantification. paper:2608.04930 paper:2603.03188",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2603.03188"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Data scientists and machine learning engineers working on anomaly detection and time series forecasting repositories and packages. repo:d3-ai/orion repo:signals-dev/orion pkg:lf2i",
+   "evidence_ids": [
+    "repo:d3-ai/orion",
+    "repo:signals-dev/orion",
+    "pkg:lf2i"
+   ]
+  },
+  "jtbd": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: When performing probabilistic time series forecasting and anomaly detection, users want to model complex data distributions and quantify uncertainty without incurring high computational sampling costs. paper:2608.11114 repo:d3-ai/orion",
+   "evidence_ids": [
+    "paper:2608.11114",
+    "repo:d3-ai/orion"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: By combining normalizing flows and density estimation, users can achieve flexible density modeling and rigorous uncertainty quantification that improves downstream decision-making. paper:2608.11114 paper:2608.04930",
+   "evidence_ids": [
+    "paper:2608.11114",
+    "paper:2608.04930"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated due to missing evidence on axis V (viability). We assume that target users are willing to pay for a tool combining normalizing flows, density estimation, and uncertainty quantification. dvf:15",
+   "evidence_ids": [
+    "dvf:15"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and price acceptance tests with machine learning practitioners to evaluate willingness to pay for a combined normalizing flow and density estimation framework. dvf:15",
+   "evidence_ids": [
+    "dvf:15"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness to pay in price acceptance tests among interviewed data science professionals. dvf:15",
+   "evidence_ids": [
+    "dvf:15"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed target users express willingness to pay for the proposed capabilities. dvf:15",
+    "evidence_ids": [
+     "dvf:15"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:orion-ml",
+     "use": "Provides unsupervised time series anomaly detection library functionalities to build upon. repo:d3-ai/orion",
+     "evidence_ids": [
+      "repo:d3-ai/orion",
+      "pkg:orion-ml"
+     ],
+     "version": "0.7.1"
+    },
+    {
+     "id": "repo:apple/ml-tarflow",
+     "use": "Serves as an implementation reference for normalizing flows in machine learning pipelines. repo:apple/ml-tarflow",
+     "evidence_ids": [
+      "repo:apple/ml-tarflow"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified integration layer that connects normalizing flow density estimators with uncertainty quantification and anomaly detection packages. paper:2608.04930 pkg:orion-ml",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "pkg:orion-ml"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

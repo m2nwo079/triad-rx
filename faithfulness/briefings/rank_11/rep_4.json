@@ -1,0 +1,208 @@
+{
+ "rank": 11,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:direct preference optimization",
+    "role": "Direct preference optimization is used as a preference-based fine-tuning method to align language models on safety or policy objectives.",
+    "evidence_ids": [
+     "paper:2608.29378",
+     "paper:2605.12339"
+    ]
+   },
+   {
+    "term_id": "T:instruction following",
+    "role": "Instruction following represents the general capabilities and constraints that models must maintain while being aligned.",
+    "evidence_ids": [
+     "paper:2512.13741",
+     "paper:2512.11391"
+    ]
+   },
+   {
+    "term_id": "T:safety alignment",
+    "role": "Safety alignment is the target objective of mitigating harmful outputs and handling safety risks and value conflicts.",
+    "evidence_ids": [
+     "paper:2608.29378",
+     "paper:2512.13741"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets the simultaneous balancing of safety alignment and instruction-following or general capabilities in language models.",
+   "evidence_ids": [
+    "paper:2605.12339",
+    "paper:2512.13741"
+   ]
+  },
+  "limitation": {
+   "text": "Adversarial prompts and safety objectives can trigger internal conflicts with instruction-following objectives, and aligning models for safety often risks compromising helpfulness or general abilities.",
+   "evidence_ids": [
+    "paper:2512.13741",
+    "paper:2512.11391"
+   ]
+  },
+  "combination": {
+   "text": "Direct preference optimization is applied to address safety alignment while managing its interaction with instruction-following objectives.",
+   "evidence_ids": [
+    "paper:2608.29378",
+    "paper:2605.12339"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:direct preference optimization",
+     "role": "Direct preference optimization is used as a preference-based fine-tuning method to align language models on safety or policy objectives.",
+     "evidence_ids": [
+      "paper:2608.29378",
+      "paper:2605.12339"
+     ]
+    },
+    {
+     "term_id": "T:instruction following",
+     "role": "Instruction following represents the general capabilities and constraints that models must maintain while being aligned.",
+     "evidence_ids": [
+      "paper:2512.13741",
+      "paper:2512.11391"
+     ]
+    },
+    {
+     "term_id": "T:safety alignment",
+     "role": "Safety alignment is the target objective of mitigating harmful outputs and handling safety risks and value conflicts.",
+     "evidence_ids": [
+      "paper:2608.29378",
+      "paper:2512.13741"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets the simultaneous balancing of safety alignment and instruction-following or general capabilities in language models.",
+    "evidence_ids": [
+     "paper:2605.12339",
+     "paper:2512.13741"
+    ]
+   },
+   "limitation": {
+    "text": "Adversarial prompts and safety objectives can trigger internal conflicts with instruction-following objectives, and aligning models for safety often risks compromising helpfulness or general abilities.",
+    "evidence_ids": [
+     "paper:2512.13741",
+     "paper:2512.11391"
+    ]
+   },
+   "combination": {
+    "text": "Direct preference optimization is applied to address safety alignment while managing its interaction with instruction-following objectives.",
+    "evidence_ids": [
+     "paper:2608.29378",
+     "paper:2605.12339"
+    ]
+   }
+  },
+  "summary": {
+   "text": "Direct preference optimization is used as a preference-based fine-tuning method to align language models on safety or policy objectives, while instruction following represents the general capabilities and constraints that models must maintain while being aligned. Safety alignment is the target objective of mitigating harmful outputs and handling safety risks and value conflicts. The combination targets the simultaneous balancing of safety alignment and instruction-following or general capabilities in language models, though adversarial prompts and safety objectives can trigger internal conflicts with instruction-following objectives, and aligning models for safety often risks compromising helpfulness or general abilities.",
+   "evidence_ids": [
+    "paper:2512.11391",
+    "paper:2512.13741",
+    "paper:2605.12339",
+    "paper:2608.29378"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: AI engineers and safety researchers using repositories like repo:allenai/reward-bench and packages like pkg:turbo-alignment.",
+   "evidence_ids": [
+    "pkg:turbo-alignment",
+    "repo:allenai/reward-bench"
+   ]
+  },
+  "jtbd": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: When fine-tuning language models, users want to balance safety alignment and instruction following so that models refuse harmful prompts without losing general capabilities.",
+   "evidence_ids": [
+    "paper:2512.11391",
+    "paper:2512.13741"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Applying direct preference optimization helps manage the interaction between safety alignment and instruction-following objectives to mitigate the alignment tax.",
+   "evidence_ids": [
+    "paper:2512.11391",
+    "paper:2605.12339"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Axis V (viability) score is null because the bundle has no evidence for this axis. The riskiest assumption is that commercial viability exists for fine-tuning tooling that balances safety alignment and instruction following.",
+   "evidence_ids": [
+    "dvf:11"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with potential enterprise AI safety teams to evaluate willingness to pay for specialized alignment pipelines.",
+   "evidence_ids": [
+    "dvf:11"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: 40 percent of interviewed prospective customers indicate a willingness to pay for the alignment pipeline.",
+   "evidence_ids": [
+    "dvf:11"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: fewer than 10 percent of interviewed prospective customers express interest or willingness to pay during price acceptance testing.",
+    "evidence_ids": [
+     "dvf:11"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:allenai/reward-bench",
+     "use": "Used as an evaluation tool for reward models and alignment performance.",
+     "evidence_ids": [
+      "repo:allenai/reward-bench"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:turbo-alignment",
+     "use": "Used as a package for preference alignment and fine-tuning experiments.",
+     "evidence_ids": [
+      "pkg:turbo-alignment"
+     ],
+     "version": "0.0.4"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized data curation interface to balance safety and instruction-following preference pairs.",
+     "evidence_ids": [
+      "paper:2603.18637"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

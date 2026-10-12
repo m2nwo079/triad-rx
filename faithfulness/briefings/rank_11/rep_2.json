@@ -1,0 +1,208 @@
+{
+ "rank": 11,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:direct preference optimization",
+    "role": "Serves as the preference-based optimization method to align language models on safety and instruction-following objectives.",
+    "evidence_ids": [
+     "paper:2512.13741",
+     "paper:2603.18637"
+    ]
+   },
+   {
+    "term_id": "T:instruction following",
+    "role": "Represents the core capabilities and verifiable constraints that need to be preserved or balanced alongside safety requirements during optimization.",
+    "evidence_ids": [
+     "paper:2512.13741",
+     "paper:2603.18637"
+    ]
+   },
+   {
+    "term_id": "T:safety alignment",
+    "role": "Target behavioral alignment objective that addresses vulnerabilities and harmful queries while conflicting with instruction-following objectives.",
+    "evidence_ids": [
+     "paper:2512.13741",
+     "paper:2603.18637"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Balancing multi-turn safety alignment, low over-refusal, and instruction following under verifiable constraints.",
+   "evidence_ids": [
+    "paper:2603.18637"
+   ]
+  },
+  "limitation": {
+   "text": "Adversarial prompts trigger chaotic, high-variance trajectories resulting from internal conflict between safety alignment and instruction-following objectives.",
+   "evidence_ids": [
+    "paper:2512.13741"
+   ]
+  },
+  "combination": {
+   "text": "Direct preference optimization is used within multi-objective frameworks that simultaneously balance instruction following and safety alignment objectives.",
+   "evidence_ids": [
+    "paper:2512.13741",
+    "paper:2603.18637"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:direct preference optimization",
+     "role": "Serves as the preference-based optimization method to align language models on safety and instruction-following objectives.",
+     "evidence_ids": [
+      "paper:2512.13741",
+      "paper:2603.18637"
+     ]
+    },
+    {
+     "term_id": "T:instruction following",
+     "role": "Represents the core capabilities and verifiable constraints that need to be preserved or balanced alongside safety requirements during optimization.",
+     "evidence_ids": [
+      "paper:2512.13741",
+      "paper:2603.18637"
+     ]
+    },
+    {
+     "term_id": "T:safety alignment",
+     "role": "Target behavioral alignment objective that addresses vulnerabilities and harmful queries while conflicting with instruction-following objectives.",
+     "evidence_ids": [
+      "paper:2512.13741",
+      "paper:2603.18637"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Balancing multi-turn safety alignment, low over-refusal, and instruction following under verifiable constraints.",
+    "evidence_ids": [
+     "paper:2603.18637"
+    ]
+   },
+   "limitation": {
+    "text": "Adversarial prompts trigger chaotic, high-variance trajectories resulting from internal conflict between safety alignment and instruction-following objectives.",
+    "evidence_ids": [
+     "paper:2512.13741"
+    ]
+   },
+   "combination": {
+    "text": "Direct preference optimization is used within multi-objective frameworks that simultaneously balance instruction following and safety alignment objectives.",
+    "evidence_ids": [
+     "paper:2512.13741",
+     "paper:2603.18637"
+    ]
+   }
+  },
+  "summary": {
+   "text": "Direct preference optimization is used within multi-objective frameworks that simultaneously balance instruction following and safety alignment objectives. Adversarial prompts trigger chaotic, high-variance trajectories resulting from internal conflict between safety alignment and instruction-following objectives. The method balances multi-turn safety alignment, low over-refusal, and instruction following under verifiable constraints.",
+   "evidence_ids": [
+    "paper:2512.13741",
+    "paper:2603.18637"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: AI researchers and safety engineers utilizing repositories such as allenai/reward-bench and xuankunrong/safegrpo to align language models.",
+   "evidence_ids": [
+    "repo:allenai/reward-bench",
+    "repo:xuankunrong/safegrpo"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Balancing multi-turn safety alignment, low over-refusal, and instruction following under verifiable constraints.",
+   "evidence_ids": [
+    "paper:2603.18637"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Adversarial prompts trigger chaotic, high-variance trajectories resulting from internal conflict between safety alignment and instruction-following objectives.",
+   "evidence_ids": [
+    "paper:2512.13741"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Axis V (viability) is designated as the riskiest assumption due to missing evidence in the bundle. There is a risk that customers will not pay for an optimization framework targeting the trade-off between instruction following and safety alignment.",
+   "evidence_ids": [
+    "dvf:11"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with AI engineering teams to validate whether they are willing to pay for direct preference optimization solutions addressing safety alignment and instruction following.",
+   "evidence_ids": [
+    "dvf:11"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: 40 percent of interviewed prospective customers indicate willingness to adopt and pay for the alignment solution at a proposed threshold price of $500 per month.",
+   "evidence_ids": [
+    "dvf:11"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Less than proposed threshold: 10 percent of interviewed prospective customers express interest or willingness to pay during the price acceptance test.",
+    "evidence_ids": [
+     "dvf:11"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:allenai/reward-bench",
+     "use": "Serves as an evaluation tool for reward models during alignment and preference optimization.",
+     "evidence_ids": [
+      "repo:allenai/reward-bench"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:xuankunrong/safegrpo",
+     "use": "Provides self-rewarded multimodal safety alignment via rule-governed policy optimization.",
+     "evidence_ids": [
+      "repo:xuankunrong/safegrpo"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:turbo-alignment",
+     "use": "Provides alignment utility packages for managing model training and preference objectives.",
+     "evidence_ids": [
+      "pkg:turbo-alignment"
+     ],
+     "version": "0.0.4"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified multi-objective data curator and slice-aware iterative interface that coordinates direct preference optimization updates with verifiable instruction following constraints.",
+     "evidence_ids": [
+      "paper:2603.18637"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

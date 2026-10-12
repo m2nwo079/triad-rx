@@ -1,0 +1,189 @@
+{
+ "rank": 7,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Serves as the probabilistic component integrated into the Kolmogorov-Arnold network topology to enable scalable Bayesian inference and provide uncertainty quantification.",
+    "evidence_ids": [
+     "paper:2512.00260"
+    ]
+   },
+   {
+    "term_id": "T:kolmogorov arnold networks",
+    "role": "Provides the network architecture with learnable univariate functions on network edges, which is combined with sparse variational Gaussian process inference.",
+    "evidence_ids": [
+     "paper:2512.00260"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Represents the underlying prediction task addressed by the combined probabilistic architecture on scientific and vector data.",
+    "evidence_ids": [
+     "paper:2512.00260"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Regression and scientific data tasks requiring probabilistic predictions.",
+   "evidence_ids": [
+    "paper:2512.00260"
+   ]
+  },
+  "limitation": {
+   "text": "Standard Kolmogorov-Arnold networks lack probabilistic outputs and exact Gaussian process extensions scale cubically with data size.",
+   "evidence_ids": [
+    "paper:2512.00260"
+   ]
+  },
+  "combination": {
+   "text": "Integrating sparse variational Gaussian process inference with the Kolmogorov-Arnold network topology enables scalable Bayesian inference with computational complexity quasi-linear in sample size.",
+   "evidence_ids": [
+    "paper:2512.00260"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Serves as the probabilistic component integrated into the Kolmogorov-Arnold network topology to enable scalable Bayesian inference and provide uncertainty quantification.",
+     "evidence_ids": [
+      "paper:2512.00260"
+     ]
+    },
+    {
+     "term_id": "T:kolmogorov arnold networks",
+     "role": "Provides the network architecture with learnable univariate functions on network edges, which is combined with sparse variational Gaussian process inference.",
+     "evidence_ids": [
+      "paper:2512.00260"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Represents the underlying prediction task addressed by the combined probabilistic architecture on scientific and vector data.",
+     "evidence_ids": [
+      "paper:2512.00260"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Regression and scientific data tasks requiring probabilistic predictions.",
+    "evidence_ids": [
+     "paper:2512.00260"
+    ]
+   },
+   "limitation": {
+    "text": "Standard Kolmogorov-Arnold networks lack probabilistic outputs and exact Gaussian process extensions scale cubically with data size.",
+    "evidence_ids": [
+     "paper:2512.00260"
+    ]
+   },
+   "combination": {
+    "text": "Integrating sparse variational Gaussian process inference with the Kolmogorov-Arnold network topology enables scalable Bayesian inference with computational complexity quasi-linear in sample size.",
+    "evidence_ids": [
+     "paper:2512.00260"
+    ]
+   }
+  },
+  "summary": {
+   "text": "Combining sparse variational Gaussian processes with Kolmogorov-Arnold network topologies addresses the limitation where standard Kolmogorov-Arnold networks lack probabilistic outputs and exact Gaussian process extensions scale cubically with data size by enabling scalable Bayesian inference with quasi-linear computational complexity in sample size for regression tasks (paper:2512.00260).",
+   "evidence_ids": [
+    "paper:2512.00260"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Machine learning practitioners and researchers working on scientific regression tasks who require scalable Bayesian inference and principled uncertainty quantification.",
+   "evidence_ids": [
+    "paper:2512.00260",
+    "paper:2512.05306"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Perform regression and scientific data tasks requiring probabilistic predictions (paper:2512.00260).",
+   "evidence_ids": [
+    "paper:2512.00260"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Integrating sparse variational Gaussian process inference into Kolmogorov-Arnold networks provides scalable uncertainty quantification with quasi-linear complexity, preserving interpretability while offering probabilistic outputs.",
+   "evidence_ids": [
+    "paper:2512.00260",
+    "paper:2512.05306"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption regarding feasibility (score 3.0 on DVF axis F) is that analytic moment matching and inducing points can successfully propagate uncertainty through deep additive Kolmogorov-Arnold network structures without prohibitive loss of accuracy or scaling bottlenecks.",
+   "evidence_ids": [
+    "dvf:7",
+    "paper:2512.00260"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Build a technical proof of concept combining sparse variational Gaussian processes with Kolmogorov-Arnold networks using existing packages to evaluate quasi-linear scaling and uncertainty calibration on a benchmark regression dataset.",
+   "evidence_ids": [
+    "dvf:7",
+    "paper:2512.00260"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of negative log-likelihood improvement or well-calibrated uncertainty metrics on held-out regression test sets while maintaining quasi-linear training time scaling with sample size.",
+   "evidence_ids": [
+    "dvf:7",
+    "paper:2512.00260"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "If training time scales worse than quadratic with sample size or if uncertainty calibration metrics fail to outperform standard multi-layer perceptron baselines, the approach is killed.",
+    "evidence_ids": [
+     "dvf:7",
+     "paper:2512.00260"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:netcal",
+     "use": "Used for evaluating and calibrating uncertainty estimates from the probabilistic regression model.",
+     "evidence_ids": [
+      "pkg:netcal",
+      "paper:2512.05306"
+     ],
+     "version": "1.4.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "An implementation integrating sparse variational Gaussian process inducing points and analytic moment matching directly into the edge-wise univariate functions of the Kolmogorov-Arnold network topology.",
+     "evidence_ids": [
+      "paper:2512.00260"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

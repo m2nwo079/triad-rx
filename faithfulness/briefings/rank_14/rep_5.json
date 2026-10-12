@@ -1,0 +1,22 @@
+{
+ "rank": 14,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "The evidence bundle contains papers combining subsets of the three terms (such as YOLOv8 with convolutional block attention module, or convolutional block attention module with classification), but no single piece of evidence demonstrates the combination of all three terms: YOLOv8, convolutional block attention module, and classification used together.",
+  "insufficient_evidence_ids": [
+   "paper:2609.04791",
+   "paper:2609.06699",
+   "paper:2604.22856",
+   "paper:2509.17078"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

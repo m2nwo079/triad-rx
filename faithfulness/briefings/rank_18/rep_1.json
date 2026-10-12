@@ -1,0 +1,29 @@
+{
+ "rank": 18,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "The evidence bundle discusses various works combining Gaussian processes, principal component analysis or predictive coding, and uncertainty quantification, but does not provide evidence for a single method combining all three terms together.",
+  "insufficient_evidence_ids": [
+   "paper:2307.05592",
+   "paper:2503.24016",
+   "paper:2505.16145",
+   "paper:2605.05743",
+   "paper:2606.11240",
+   "paper:2606.23757",
+   "paper:2609.15555",
+   "paper:2609.19083",
+   "paper:2609.21085",
+   "paper:2609.25430",
+   "paper:2609.30085"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

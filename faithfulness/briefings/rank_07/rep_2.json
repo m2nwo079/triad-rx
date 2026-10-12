@@ -1,0 +1,226 @@
+{
+ "rank": 7,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Serves as a probabilistic component integrated into the network topology to enable Bayesian inference and uncertainty quantification.",
+    "evidence_ids": [
+     "paper:2512.05306",
+     "paper:2512.00260"
+    ]
+   },
+   {
+    "term_id": "T:kolmogorov arnold networks",
+    "role": "Provides the network architecture with learnable univariate functions on network edges, enhancing interpretability and serving as the foundational topology.",
+    "evidence_ids": [
+     "paper:2512.05306",
+     "paper:2512.00260"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Acts as the underlying predictive modeling task performed by the network to map inputs to outputs.",
+    "evidence_ids": [
+     "paper:2512.22426",
+     "paper:2512.05306"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Uncertainty-aware regression and flow field reconstruction from sparse measurements.",
+   "evidence_ids": [
+    "paper:2512.22426",
+    "paper:2512.05306"
+   ]
+  },
+  "limitation": {
+   "text": "Standard implementations of Kolmogorov-Arnold Networks lack principled uncertainty quantification capabilities essential for scientific applications.",
+   "evidence_ids": [
+    "paper:2512.05306",
+    "paper:2512.00260"
+   ]
+  },
+  "combination": {
+   "text": "Integrating sparse variational Gaussian process inference with the Kolmogorov-Arnold network topology enables scalable Bayesian inference and principled uncertainty quantification for regression tasks.",
+   "evidence_ids": [
+    "paper:2512.22426",
+    "paper:2512.05306",
+    "paper:2512.00260"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Serves as a probabilistic component integrated into the network topology to enable Bayesian inference and uncertainty quantification.",
+     "evidence_ids": [
+      "paper:2512.05306",
+      "paper:2512.00260"
+     ]
+    },
+    {
+     "term_id": "T:kolmogorov arnold networks",
+     "role": "Provides the network architecture with learnable univariate functions on network edges, enhancing interpretability and serving as the foundational topology.",
+     "evidence_ids": [
+      "paper:2512.05306",
+      "paper:2512.00260"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Acts as the underlying predictive modeling task performed by the network to map inputs to outputs.",
+     "evidence_ids": [
+      "paper:2512.22426",
+      "paper:2512.05306"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Uncertainty-aware regression and flow field reconstruction from sparse measurements.",
+    "evidence_ids": [
+     "paper:2512.22426",
+     "paper:2512.05306"
+    ]
+   },
+   "limitation": {
+    "text": "Standard implementations of Kolmogorov-Arnold Networks lack principled uncertainty quantification capabilities essential for scientific applications.",
+    "evidence_ids": [
+     "paper:2512.05306",
+     "paper:2512.00260"
+    ]
+   },
+   "combination": {
+    "text": "Integrating sparse variational Gaussian process inference with the Kolmogorov-Arnold network topology enables scalable Bayesian inference and principled uncertainty quantification for regression tasks.",
+    "evidence_ids": [
+     "paper:2512.22426",
+     "paper:2512.05306",
+     "paper:2512.00260"
+    ]
+   }
+  },
+  "summary": {
+   "text": "Integrating sparse variational Gaussian process inference with the Kolmogorov-Arnold network topology enables scalable Bayesian inference and principled uncertainty quantification for regression tasks. Standard implementations of Kolmogorov-Arnold Networks lack principled uncertainty quantification capabilities essential for scientific applications. By employing inducing points and analytic moment matching, computational complexity can be reduced while preserving interpretability for uncertainty-aware flow field reconstruction and regression.",
+   "evidence_ids": [
+    "paper:2512.00260",
+    "paper:2512.05306",
+    "paper:2512.22426"
+   ]
+  },
+  "target_user": {
+   "basis": "evidence",
+   "text": "Academic institutions and corporate R&D entities publishing patents or repositories involving Gaussian process regression and neural architectures.",
+   "evidence_ids": [
+    "patent:11488071",
+    "patent:11894880",
+    "patent:12361333",
+    "repo:facebookresearch/sustainableconcrete"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "To perform uncertainty-aware regression and flow field reconstruction from sparse measurements while distinguishing aleatoric from epistemic uncertainty.",
+   "evidence_ids": [
+    "paper:2512.05306",
+    "paper:2512.22426"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Enables scalable Bayesian inference with computational complexity quasi-linear in sample size for Kolmogorov-Arnold networks, maintaining interpretability and providing well-calibrated uncertainty estimates.",
+   "evidence_ids": [
+    "paper:2512.05306",
+    "paper:2512.00260",
+    "paper:2512.22426"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Analytic moment matching across deep additive Kolmogorov-Arnold network structures can accurately approximate full Gaussian process posteriors without prohibitive error propagation or scaling bottlenecks, given a score of F: 3.0 on the feasibility axis.",
+   "evidence_ids": [
+    "dvf:7",
+    "paper:2512.05306"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "A technical proof of concept combining existing sparse Gaussian process packages with Kolmogorov-Arnold network implementations to evaluate predictive error and uncertainty calibration on a standard synthetic regression benchmark.",
+   "evidence_ids": [
+    "dvf:7",
+    "paper:2512.05306"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "Achieving a proposed threshold of less than 0.05 calibration error and a test RMSE comparable to standard Gaussian process regressors on held-out sparse benchmark datasets.",
+   "evidence_ids": [
+    "dvf:7",
+    "paper:2512.05306"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: computation time scales worse than quadratic relative to sample size N during sparse variational optimization.",
+    "evidence_ids": [
+     "dvf:7",
+     "paper:2512.00260"
+    ]
+   },
+   {
+    "text": "Proposed threshold: epistemic uncertainty estimates fail to correlate with out-of-distribution error, exhibiting an area under the ROC curve below 0.60.",
+    "evidence_ids": [
+     "dvf:7",
+     "paper:2512.05306"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:netcal",
+     "use": "Used for evaluating and calibrating uncertainty estimates generated by the sparse variational Gaussian process Kolmogorov-Arnold network model.",
+     "evidence_ids": [
+      "pkg:netcal",
+      "paper:2512.05306"
+     ],
+     "version": "1.4.0"
+    },
+    {
+     "id": "pkg:glearn",
+     "use": "Provides foundational machine learning utilities and algorithmic components to support regression modeling workflows.",
+     "evidence_ids": [
+      "pkg:glearn",
+      "paper:2512.05306"
+     ],
+     "version": "0.23.3"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "An analytic moment-matching propagation module tailored for edge-wise univariate functions in Kolmogorov-Arnold network topologies combined with sparse Gaussian process inducing points.",
+     "evidence_ids": [
+      "paper:2512.05306",
+      "paper:2512.00260"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

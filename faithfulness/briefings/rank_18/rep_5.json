@@ -1,0 +1,20 @@
+{
+ "rank": 18,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "The evidence bundle contains papers discussing Gaussian processes combined with PC (such as polynomial chaos expansion or principal components) for uncertainty quantification, but lacks evidence showing how all three components (Gaussian process, PC, and uncertainty quantification) function together as a unified triad.",
+  "insufficient_evidence_ids": [
+   "paper:2606.11240",
+   "paper:2512.10873"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

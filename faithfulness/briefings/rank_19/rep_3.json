@@ -1,0 +1,201 @@
+{
+ "rank": 19,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:vq vae",
+    "role": "Learns discrete motion representations or shape-aware motion primitives to tokenize motion sequences for generative modeling.",
+    "evidence_ids": [
+     "paper:2606.26661",
+     "paper:2606.27547"
+    ]
+   },
+   {
+    "term_id": "T:motion generation",
+    "role": "Synthesizes human motion sequences, addressing challenges such as capturing complex human movements and ensuring physical plausibility.",
+    "evidence_ids": [
+     "paper:2606.27547"
+    ]
+   },
+   {
+    "term_id": "T:prediction",
+    "role": "Forecasts motion sequences and intention queries, such as predicting topology-aligned trajectories in autonomous driving scenarios.",
+    "evidence_ids": [
+     "paper:2606.26661"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Human motion generation and trajectory prediction.",
+   "evidence_ids": [
+    "paper:2606.26661",
+    "paper:2606.27547"
+   ]
+  },
+  "limitation": {
+   "text": "Existing predictors often overlook adherence to lane topology for multimodal predictions and human motion models are constrained by limited diversity and narrow data distributions in datasets.",
+   "evidence_ids": [
+    "paper:2606.26661",
+    "paper:2606.27547"
+   ]
+  },
+  "combination": {
+   "text": "A VQ-VAE is used to learn shape-aware motion primitives as discrete intention queries for trajectory prediction and human motion generation frameworks.",
+   "evidence_ids": [
+    "paper:2606.26661",
+    "paper:2606.27547"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:vq vae",
+     "role": "Learns discrete motion representations or shape-aware motion primitives to tokenize motion sequences for generative modeling.",
+     "evidence_ids": [
+      "paper:2606.26661",
+      "paper:2606.27547"
+     ]
+    },
+    {
+     "term_id": "T:motion generation",
+     "role": "Synthesizes human motion sequences, addressing challenges such as capturing complex human movements and ensuring physical plausibility.",
+     "evidence_ids": [
+      "paper:2606.27547"
+     ]
+    },
+    {
+     "term_id": "T:prediction",
+     "role": "Forecasts motion sequences and intention queries, such as predicting topology-aligned trajectories in autonomous driving scenarios.",
+     "evidence_ids": [
+      "paper:2606.26661"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Human motion generation and trajectory prediction.",
+    "evidence_ids": [
+     "paper:2606.26661",
+     "paper:2606.27547"
+    ]
+   },
+   "limitation": {
+    "text": "Existing predictors often overlook adherence to lane topology for multimodal predictions and human motion models are constrained by limited diversity and narrow data distributions in datasets.",
+    "evidence_ids": [
+     "paper:2606.26661",
+     "paper:2606.27547"
+    ]
+   },
+   "combination": {
+    "text": "A VQ-VAE is used to learn shape-aware motion primitives as discrete intention queries for trajectory prediction and human motion generation frameworks.",
+    "evidence_ids": [
+     "paper:2606.26661",
+     "paper:2606.27547"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This briefing analyzes the combination of vq vae, motion generation, and prediction. A VQ-VAE is used to learn shape-aware motion primitives as discrete intention queries for trajectory prediction and human motion generation frameworks. Existing predictors often overlook adherence to lane topology for multimodal predictions and human motion models are constrained by limited diversity and narrow data distributions in datasets.",
+   "evidence_ids": [
+    "paper:2606.26661",
+    "paper:2606.27547"
+   ]
+  },
+  "target_user": {
+   "basis": "evidence",
+   "text": "Academic institutions and researchers working on deep learning frameworks, human motion generation, and trajectory prediction.",
+   "evidence_ids": [
+    "patent:20250165802"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "To synthesize realistic human motion sequences and forecast motion trajectories while adhering to topological constraints.",
+   "evidence_ids": [
+    "paper:2606.26661",
+    "paper:2606.27547"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Leveraging VQ-VAE-based discrete intention queries improves the feasibility, diversity, and topology adherence of motion generation and trajectory prediction models.",
+   "evidence_ids": [
+    "paper:2606.26661",
+    "paper:2606.27547"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Based on the V score of 1.0 (dvf:19), the riskiest assumption is that customers are willing to pay for this combined motion generation and prediction solution.",
+   "evidence_ids": [
+    "dvf:19"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with potential enterprise or academic users to evaluate willingness to pay for the VQ-VAE-based motion generation and prediction tools.",
+   "evidence_ids": [
+    "dvf:19"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness to pay in the price acceptance test.",
+   "evidence_ids": [
+    "dvf:19"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed prospective users express interest in purchasing or licensing the technology.",
+    "evidence_ids": [
+     "dvf:19"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:lucidrains/vector-quantize-pytorch",
+     "use": "Provides vector and scalar quantization implementations in PyTorch for learning discrete representations.",
+     "evidence_ids": [
+      "repo:lucidrains/vector-quantize-pytorch"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:guytevet/motion-diffusion-model",
+     "use": "Serves as an official implementation for human motion generation models.",
+     "evidence_ids": [
+      "repo:guytevet/motion-diffusion-model"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A feasibility-aware intention selector and guidance module that conditions the VQ-VAE tokens on lane topology and structural constraints for prediction.",
+     "evidence_ids": [
+      "paper:2606.26661"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

@@ -11,6 +11,7 @@ The first-study briefing, check and Q1 scripts run unchanged with faithfulness.r
   very same bundles and checks their hashes, and to shared scripts, prompts, templates and .env.
 Outputs (briefings, raw generations, checks, Q1) stay in the run folder.
 """
+import glob
 import json
 import os
 import re
@@ -24,6 +25,8 @@ from triadrx.study import engine_prereg_frozen, load_study
 
 LINKS = ["scripts", "prompts", "templates", "vocab", ".env"]
 BASE_LINKS = ["data/derived/briefing/bundles", "results/briefing_bundles.json"]
+# The data cutoff is read from the arXiv filter summary in the working directory's results
+RESULT_INPUTS = ["results/arxiv_filter_*.json"]
 
 
 def require_frozen(study: dict) -> str:
@@ -68,6 +71,11 @@ def main() -> None:
         if not (base / name).exists():
             sys.exit(f"{base / name} is missing")
         link(base / name, run / name)
+    for pattern in RESULT_INPUTS:
+        files = sorted(glob.glob(str(ROOT / pattern)))
+        if len(files) != 1:
+            sys.exit(f"expected one file for {pattern}, found {len(files)}")
+        link(Path(files[0]), run / "results" / Path(files[0]).name)
     (run / "config").mkdir(parents=True, exist_ok=True)
     base_cfg = json.loads((base / "config/study.json").read_text())
     (run / "config/study.json").write_text(json.dumps(run_config(base_cfg, cfg), indent=2, ensure_ascii=False))

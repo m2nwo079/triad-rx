@@ -1,0 +1,195 @@
+{
+ "rank": 1,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:pc",
+    "role": "The PC algorithm serves as a constraint-based causal discovery method that provides high-recall edge skeletons.",
+    "evidence_ids": [
+     "paper:2608.27472"
+    ]
+   },
+   {
+    "term_id": "T:causal discovery",
+    "role": "Causal discovery is used to infer the underlying interaction network or structural graph from observational data.",
+    "evidence_ids": [
+     "paper:2608.17452"
+    ]
+   },
+   {
+    "term_id": "T:prediction",
+    "role": "Predictive modeling and forecasting are performed to evaluate which interactions genuinely improve the system dynamics or forecasting performance.",
+    "evidence_ids": [
+     "paper:2608.17452"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Simultaneous causal network inference and forecasting for dynamical systems.",
+   "evidence_ids": [
+    "paper:2608.17452"
+   ]
+  },
+  "limitation": {
+   "text": "Causal discovery methods reconstruct interaction networks without regard to whether the inferred structure supports prediction, and existing approaches combining both tasks rely on a single global hyperparameter that cannot recover the structure of heterogeneous systems.",
+   "evidence_ids": [
+    "paper:2608.17452"
+   ]
+  },
+  "combination": {
+   "text": "By combining constraint-based methods like PC with predictive modeling, a framework can simultaneously infer causal networks and forecast system dynamics by selecting the smallest set of neighbors that allows a predictive model to forecast each node near-optimally.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2608.27472"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:pc",
+     "role": "The PC algorithm serves as a constraint-based causal discovery method that provides high-recall edge skeletons.",
+     "evidence_ids": [
+      "paper:2608.27472"
+     ]
+    },
+    {
+     "term_id": "T:causal discovery",
+     "role": "Causal discovery is used to infer the underlying interaction network or structural graph from observational data.",
+     "evidence_ids": [
+      "paper:2608.17452"
+     ]
+    },
+    {
+     "term_id": "T:prediction",
+     "role": "Predictive modeling and forecasting are performed to evaluate which interactions genuinely improve the system dynamics or forecasting performance.",
+     "evidence_ids": [
+      "paper:2608.17452"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Simultaneous causal network inference and forecasting for dynamical systems.",
+    "evidence_ids": [
+     "paper:2608.17452"
+    ]
+   },
+   "limitation": {
+    "text": "Causal discovery methods reconstruct interaction networks without regard to whether the inferred structure supports prediction, and existing approaches combining both tasks rely on a single global hyperparameter that cannot recover the structure of heterogeneous systems.",
+    "evidence_ids": [
+     "paper:2608.17452"
+    ]
+   },
+   "combination": {
+    "text": "By combining constraint-based methods like PC with predictive modeling, a framework can simultaneously infer causal networks and forecast system dynamics by selecting the smallest set of neighbors that allows a predictive model to forecast each node near-optimally.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2608.27472"
+    ]
+   }
+  },
+  "summary": {
+   "text": "By combining constraint-based methods like PC with predictive modeling, a framework can simultaneously infer causal networks and forecast system dynamics by selecting the smallest set of neighbors that allows a predictive model to forecast each node near-optimally [paper:2608.17452, paper:2608.27472]. The PC algorithm serves as a constraint-based causal discovery method that provides high-recall edge skeletons [paper:2608.27472]. Causal discovery is used to infer the underlying interaction network or structural graph from observational data [paper:2608.17452], and predictive modeling is performed to evaluate which interactions genuinely improve system dynamics or forecasting performance [paper:2608.17452].",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2608.27472"
+   ]
+  },
+  "target_user": {
+   "basis": "evidence",
+   "text": "Academic researchers and laboratories performing core flooding experiments and computer-aided simulations for porous medium characterization [patent:11913865].",
+   "evidence_ids": [
+    "patent:11913865"
+   ]
+  },
+  "jtbd": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Perform simultaneous causal network inference and forecasting for dynamical systems to accelerate total analysis time and visualize relative permeability and capillary pressure characteristics [paper:2608.17452, patent:11913865].",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "patent:11913865"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Simultaneously infer causal interaction networks and forecast system dynamics by identifying optimal local neighborhoods, thereby overcoming the limitations of global hyperparameters in heterogeneous systems [paper:2608.17452].",
+   "evidence_ids": [
+    "paper:2608.17452"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The lowest viability score (V score: 1.0) on axis V implies that users will not adopt or pay for this simultaneous causal network inference and forecasting framework under real-world operational constraints [dvf:1].",
+   "evidence_ids": [
+    "dvf:1"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with academic researchers to evaluate willingness to pay for the simultaneous causal network inference and forecasting framework [dvf:1, patent:11913865].",
+   "evidence_ids": [
+    "dvf:1",
+    "patent:11913865"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness to pay in the price acceptance test and customer interviews [dvf:1].",
+   "evidence_ids": [
+    "dvf:1"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed customers express willingness to pay for the proposed solution during the MVP evaluation [dvf:1].",
+    "evidence_ids": [
+     "dvf:1"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:bloomberg/causal-ts",
+     "use": "Provides time series causal discovery routines for inferring interaction networks from observational data [repo:bloomberg/causal-ts].",
+     "evidence_ids": [
+      "repo:bloomberg/causal-ts"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:causalts",
+     "use": "Supplies package-level tooling for causal time-series analysis to support graph inference [pkg:causalts].",
+     "evidence_ids": [
+      "pkg:causalts"
+     ],
+     "version": "0.27.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A local state selector module that independently determines the smallest set of neighbors for each node to allow near-optimal predictive forecasting [paper:2608.17452].",
+     "evidence_ids": [
+      "paper:2608.17452"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

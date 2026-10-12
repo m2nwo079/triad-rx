@@ -1,0 +1,19 @@
+{
+ "rank": 4,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "comparison_only",
+  "insufficient_explanation": "The evidence items discuss individual techniques such as M:rag, T:information retrieval, and T:text retrieval in isolation or contrast them, but do not present a combination of all three terms working together.",
+  "insufficient_evidence_ids": [
+   "paper:2609.28048"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

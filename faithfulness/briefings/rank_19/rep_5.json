@@ -1,0 +1,192 @@
+{
+ "rank": 19,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:vq vae",
+    "role": "Learns discrete codebooks or shape-aware motion primitives to tokenize motion and capture spatiotemporal patterns or latent representations.",
+    "evidence_ids": [
+     "paper:2606.26661"
+    ]
+   },
+   {
+    "term_id": "T:motion generation",
+    "role": "Synthesizes human or body motion sequences, guiding decoders to prioritize topology-consistent intentions.",
+    "evidence_ids": [
+     "paper:2606.26661"
+    ]
+   },
+   {
+    "term_id": "T:prediction",
+    "role": "Performs motion forecasting or trajectory prediction by anchoring multimodal predictions to structured motion primitives.",
+    "evidence_ids": [
+     "paper:2606.26661"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Motion forecasting and trajectory prediction for autonomous systems.",
+   "evidence_ids": [
+    "paper:2606.26661"
+   ]
+  },
+  "limitation": {
+   "text": "Existing predictors often overlook adherence to lane topology of multimodal predictions, leading to predicted trajectories that may violate physical and logical constraints.",
+   "evidence_ids": [
+    "paper:2606.26661"
+   ]
+  },
+  "combination": {
+   "text": "A VQ-VAE is used to learn shape-aware motion primitives as discrete intention queries for motion prediction, while a feasibility-aware intention selector guides the decoder to prioritize topology-consistent intentions.",
+   "evidence_ids": [
+    "paper:2606.26661"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:vq vae",
+     "role": "Learns discrete codebooks or shape-aware motion primitives to tokenize motion and capture spatiotemporal patterns or latent representations.",
+     "evidence_ids": [
+      "paper:2606.26661"
+     ]
+    },
+    {
+     "term_id": "T:motion generation",
+     "role": "Synthesizes human or body motion sequences, guiding decoders to prioritize topology-consistent intentions.",
+     "evidence_ids": [
+      "paper:2606.26661"
+     ]
+    },
+    {
+     "term_id": "T:prediction",
+     "role": "Performs motion forecasting or trajectory prediction by anchoring multimodal predictions to structured motion primitives.",
+     "evidence_ids": [
+      "paper:2606.26661"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Motion forecasting and trajectory prediction for autonomous systems.",
+    "evidence_ids": [
+     "paper:2606.26661"
+    ]
+   },
+   "limitation": {
+    "text": "Existing predictors often overlook adherence to lane topology of multimodal predictions, leading to predicted trajectories that may violate physical and logical constraints.",
+    "evidence_ids": [
+     "paper:2606.26661"
+    ]
+   },
+   "combination": {
+    "text": "A VQ-VAE is used to learn shape-aware motion primitives as discrete intention queries for motion prediction, while a feasibility-aware intention selector guides the decoder to prioritize topology-consistent intentions.",
+    "evidence_ids": [
+     "paper:2606.26661"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing examines a framework combining VQ-VAE, motion generation, and prediction for motion forecasting and trajectory prediction in autonomous systems. By leveraging a VQ-VAE to learn shape-aware motion primitives as discrete intention queries, the approach helps address limitations where existing predictors overlook lane topology adherence. A feasibility-aware intention selector further guides the decoder to prioritize topology-consistent intentions while preserving behavioral diversity.",
+   "evidence_ids": [
+    "paper:2606.26661"
+   ]
+  },
+  "target_user": {
+   "basis": "evidence",
+   "text": "Academic researchers and developers working on autonomous driving systems and motion forecasting models.",
+   "evidence_ids": [
+    "paper:2606.26661",
+    "patent:20250165802"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Perform motion forecasting and trajectory prediction that adheres to lane topology and physical or logical constraints for autonomous systems.",
+   "evidence_ids": [
+    "paper:2606.26661"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Anchors multimodal predictions to structured motion primitives to improve prediction feasibility and reliability for safety-critical planning.",
+   "evidence_ids": [
+    "paper:2606.26661"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The viability axis score is 1.0, indicating that customers are unwilling or unable to pay for a VQ-VAE-based topology-aware motion prediction framework.",
+   "evidence_ids": [
+    "dvf:19"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and price acceptance tests with autonomous vehicle software teams to evaluate willingness to pay for topology-aware motion prediction tools, targeting a proposed acceptance rate of 40 percent at a proposed threshold price of $5,000 per month.",
+   "evidence_ids": [
+    "dvf:19",
+    "paper:2606.26661"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness-to-pay responses during customer interviews and price acceptance testing.",
+   "evidence_ids": [
+    "dvf:19"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than 10 percent of interviewed prospective customers express willingness to pay for the proposed pricing model during validation testing.",
+    "evidence_ids": [
+     "dvf:19"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:lucidrains/vector-quantize-pytorch",
+     "use": "Provides vector quantization primitives in PyTorch to support the VQ-VAE codebook learning process.",
+     "evidence_ids": [
+      "repo:lucidrains/vector-quantize-pytorch"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:scann",
+     "use": "Efficient similarity search and clustering for handling vector operations in large-scale machine learning applications.",
+     "evidence_ids": [
+      "pkg:scann"
+     ],
+     "version": "1.4.2"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A feasibility-aware intention selector module designed to filter unreachable intention queries based on lane-topology priors.",
+     "evidence_ids": [
+      "paper:2606.26661"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

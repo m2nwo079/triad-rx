@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "step": "q1",
+    "created": "2026-10-12",
+    "git_commit": "a8ab8ca50b1f25a3f5cc011101da353bbfaa9e73",
+    "review_sha256": "663f019eaff294cb47a90284272ba11b3c6935d837b5a272cd3b3943e661e1d4",
+    "original_sha256": "746bc0cf38f0936a8cf0648f2210652aa83cdebc3bbb4de4c54bfceed63b382e",
+    "checks_sha256": "ee1ac0234d9599e442587c87ffc9eded5dd9a5db1b71fecf2cfb3840e7bc8542"
+  },
+  "supported": 45,
+  "n": 100,
+  "rate": 0.45,
+  "wilson_95": [
+    0.3561453797951198,
+    0.5475539700255787
+  ],
+  "unsure_notes": 22,
+  "by_field": {
+    "building_blocks": {
+      "n": 15,
+      "supported": 5
+    },
+    "concept_frame": {
+      "n": 57,
+      "supported": 23
+    },
+    "summary": {
+      "n": 13,
+      "supported": 7
+    },
+    "target_user": {
+      "n": 1,
+      "supported": 0
+    },
+    "jtbd": {
+      "n": 10,
+      "supported": 6
+    },
+    "value_prop": {
+      "n": 4,
+      "supported": 4
+    }
+  },
+  "human_vs_auto": {
+    "human_1_auto_clean": 45,
+    "human_1_auto_flag": 0,
+    "human_0_auto_clean": 54,
+    "human_0_auto_flag": 1
+  }
+}

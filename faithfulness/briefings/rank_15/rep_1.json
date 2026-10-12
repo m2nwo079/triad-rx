@@ -1,0 +1,266 @@
+{
+ "rank": 15,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Normalizing flows are used to model expressive probabilistic distributions and dependencies within latent or coefficient spaces to support uncertainty quantification and density estimation.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   },
+   {
+    "term_id": "T:density estimation",
+    "role": "Density estimation provides flexible or likelihood-based probability distribution modeling over data representations or latent spaces.",
+    "evidence_ids": [
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   },
+   {
+    "term_id": "T:uncertainty quantification",
+    "role": "Uncertainty quantification assesses epistemic and probabilistic confidence by evaluating the learned posterior distributions or density functionals.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets probabilistic modeling tasks such as capturing complex latent distributions, clustering, and structural shape modeling with principled uncertainty quantification.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  },
+  "limitation": {
+   "text": "Existing approaches often struggle to approximate expressive posteriors, fail to capture multimodal dependencies, or lack principled mechanisms for uncertainty quantification in latent or structural spaces.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2605.09718"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are integrated into density-based or probabilistic frameworks to model expressive densities and capture latent variability, thereby enabling principled uncertainty quantification and inference.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2605.09718",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Normalizing flows are used to model expressive probabilistic distributions and dependencies within latent or coefficient spaces to support uncertainty quantification and density estimation.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2605.09718",
+      "paper:2604.11636",
+      "paper:2603.03188"
+     ]
+    },
+    {
+     "term_id": "T:density estimation",
+     "role": "Density estimation provides flexible or likelihood-based probability distribution modeling over data representations or latent spaces.",
+     "evidence_ids": [
+      "paper:2604.11636",
+      "paper:2603.03188"
+     ]
+    },
+    {
+     "term_id": "T:uncertainty quantification",
+     "role": "Uncertainty quantification assesses epistemic and probabilistic confidence by evaluating the learned posterior distributions or density functionals.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2605.09718",
+      "paper:2604.11636",
+      "paper:2603.03188"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets probabilistic modeling tasks such as capturing complex latent distributions, clustering, and structural shape modeling with principled uncertainty quantification.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   },
+   "limitation": {
+    "text": "Existing approaches often struggle to approximate expressive posteriors, fail to capture multimodal dependencies, or lack principled mechanisms for uncertainty quantification in latent or structural spaces.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2605.09718"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are integrated into density-based or probabilistic frameworks to model expressive densities and capture latent variability, thereby enabling principled uncertainty quantification and inference.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates normalizing flows into probabilistic frameworks to model expressive densities and capture latent variability, thereby enabling principled uncertainty quantification and inference. Normalizing flows are used to model expressive probabilistic distributions and dependencies within latent or coefficient spaces to support uncertainty quantification and density estimation. Density estimation provides flexible or likelihood-based probability distribution modeling over data representations or latent spaces. Uncertainty quantification assesses epistemic and probabilistic confidence by evaluating the learned posterior distributions or density functionals. The combination targets probabilistic modeling tasks such as capturing complex latent distributions, clustering, and structural shape modeling with principled uncertainty quantification, while addressing limitations where existing approaches fail to capture multimodal dependencies or lack principled mechanisms for uncertainty quantification.",
+   "evidence_ids": [
+    "paper:2603.03188",
+    "paper:2604.11636",
+    "paper:2605.09718",
+    "paper:2608.04930"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Machine learning practitioners and data scientists building probabilistic modeling systems for complex latent distributions, clustering, and structural shape modeling.",
+   "evidence_ids": [
+    "paper:2603.03188",
+    "paper:2604.11636",
+    "paper:2608.04930"
+   ]
+  },
+  "jtbd": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: When performing density estimation and structural shape modeling, practitioners want to capture complex latent distributions and evaluate probabilistic confidence so that they can achieve principled uncertainty quantification without struggling with expressive posterior approximation.",
+   "evidence_ids": [
+    "paper:2604.11636",
+    "paper:2605.09718",
+    "paper:2608.04930"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Integrating normalizing flows into density-based frameworks enables flexible likelihood-based probability distribution modeling and uncertainty quantification, overcoming limitations in approximating expressive posteriors and capturing multimodal dependencies.",
+   "evidence_ids": [
+    "paper:2603.03188",
+    "paper:2605.09718",
+    "paper:2608.04930"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated on axis V (viability) due to missing evidence in the bundle. It is assumed that target users are willing to pay for software integrating normalizing flows for density estimation and uncertainty quantification.",
+   "evidence_ids": [
+    "dvf:15"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with machine learning practitioners to evaluate willingness to pay for a tool combining normalizing flows, density estimation, and uncertainty quantification, targeting a proposed threshold of 30 percent positive purchase intent.",
+   "evidence_ids": [
+    "dvf:15"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 35 percent conversion or positive willingness-to-pay feedback during customer interviews and price acceptance tests.",
+   "evidence_ids": [
+    "dvf:15"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed target users express willingness to pay or adopt the integrated normalizing flows and uncertainty quantification solution.",
+    "evidence_ids": [
+     "dvf:15"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:orion-ml",
+     "use": "Provides unsupervised time series anomaly detection library components that can be adapted for density-based monitoring.",
+     "evidence_ids": [
+      "repo:d3-ai/orion"
+     ],
+     "version": "0.7.1"
+    },
+    {
+     "id": "pkg:lf2i",
+     "use": "Provides likelihood-free inference utility packages to support probabilistic evaluation.",
+     "evidence_ids": [
+      "pkg:lf2i"
+     ],
+     "version": "0.3.1"
+    },
+    {
+     "id": "repo:apple/ml-tarflow",
+     "use": "Provides normalizing flow code structures for generative modeling and density estimation.",
+     "evidence_ids": [
+      "repo:apple/ml-tarflow"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:d3-ai/orion",
+     "use": "Supplies unsupervised anomaly detection algorithms for evaluating data distributions.",
+     "evidence_ids": [
+      "repo:d3-ai/orion"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:signals-dev/orion",
+     "use": "Offers time series anomaly detection pipelines to test density estimation workflows.",
+     "evidence_ids": [
+      "repo:signals-dev/orion"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:sintel-dev/orion",
+     "use": "Supplies library routines for unsupervised anomaly detection in sequence data.",
+     "evidence_ids": [
+      "repo:sintel-dev/orion"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:malbergo/stochastic-interpolants",
+     "use": "Provides stochastic interpolant utilities for modeling continuous probability flows.",
+     "evidence_ids": [
+      "repo:malbergo/stochastic-interpolants"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A commercial user interface and deployment wrapper combining normalizing flows, density estimation, and uncertainty quantification modules for enterprise workflows, as well as pricing and billing infrastructure for the SaaS offering.",
+     "evidence_ids": [
+      "dvf:15",
+      "paper:2603.03188"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

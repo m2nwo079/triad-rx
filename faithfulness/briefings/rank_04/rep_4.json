@@ -1,0 +1,21 @@
+{
+ "rank": 4,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "comparison_only",
+  "insufficient_explanation": "The evidence bundle discusses retrieval-augmented generation, information retrieval, and text retrieval as related tasks or independent components in various pipelines, but does not show the three specific terms being combined together into a single novel method-task combination.",
+  "insufficient_evidence_ids": [
+   "paper:2609.28048",
+   "paper:2609.23880",
+   "paper:2608.24060"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

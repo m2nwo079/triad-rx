@@ -1,0 +1,204 @@
+{
+ "rank": 13,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Serves as a probabilistic surrogate model or kernel-based regression component to capture functional relationships and uncertainties.",
+    "evidence_ids": [
+     "paper:2609.00389",
+     "paper:2404.03099"
+    ]
+   },
+   {
+    "term_id": "T:bayesian optimization",
+    "role": "Drives sequential decision-making or composite optimization tasks by utilizing predictive uncertainties and surrogate evaluations.",
+    "evidence_ids": [
+     "paper:2404.03099"
+    ]
+   },
+   {
+    "term_id": "T:operator learning",
+    "role": "Models mappings between infinite-dimensional function spaces to provide predictions or network backbones for complex physical systems.",
+    "evidence_ids": [
+     "paper:2404.03099"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Composite Bayesian optimization in function spaces where inputs or outputs are defined in infinite-dimensional spaces.",
+   "evidence_ids": [
+    "paper:2404.03099"
+   ]
+  },
+  "limitation": {
+   "text": "Deep ensembles used for epistemic uncertainty in operator networks can incur orders of magnitude more trainable parameters.",
+   "evidence_ids": [
+    "paper:2404.03099"
+   ]
+  },
+  "combination": {
+   "text": "Gaussian process techniques and kernel regression can be combined with operator learning to generate predictions with uncertainty using a single operator network backbone, facilitating sequential decision-making and composite Bayesian optimization.",
+   "evidence_ids": [
+    "paper:2609.00389",
+    "paper:2404.03099"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Serves as a probabilistic surrogate model or kernel-based regression component to capture functional relationships and uncertainties.",
+     "evidence_ids": [
+      "paper:2609.00389",
+      "paper:2404.03099"
+     ]
+    },
+    {
+     "term_id": "T:bayesian optimization",
+     "role": "Drives sequential decision-making or composite optimization tasks by utilizing predictive uncertainties and surrogate evaluations.",
+     "evidence_ids": [
+      "paper:2404.03099"
+     ]
+    },
+    {
+     "term_id": "T:operator learning",
+     "role": "Models mappings between infinite-dimensional function spaces to provide predictions or network backbones for complex physical systems.",
+     "evidence_ids": [
+      "paper:2404.03099"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Composite Bayesian optimization in function spaces where inputs or outputs are defined in infinite-dimensional spaces.",
+    "evidence_ids": [
+     "paper:2404.03099"
+    ]
+   },
+   "limitation": {
+    "text": "Deep ensembles used for epistemic uncertainty in operator networks can incur orders of magnitude more trainable parameters.",
+    "evidence_ids": [
+     "paper:2404.03099"
+    ]
+   },
+   "combination": {
+    "text": "Gaussian process techniques and kernel regression can be combined with operator learning to generate predictions with uncertainty using a single operator network backbone, facilitating sequential decision-making and composite Bayesian optimization.",
+    "evidence_ids": [
+     "paper:2609.00389",
+     "paper:2404.03099"
+    ]
+   }
+  },
+  "summary": {
+   "text": "Gaussian process techniques and kernel regression can be combined with operator learning to generate predictions with uncertainty using a single operator network backbone, facilitating sequential decision-making and composite Bayesian optimization.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2609.00389"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Computational scientists and engineers who build neural operator surrogates for partial differential equations and require uncertainty-aware sequential optimization.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Perform composite Bayesian optimization in function spaces where inputs or outputs are defined in infinite-dimensional spaces.",
+   "evidence_ids": [
+    "paper:2404.03099"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Generate predictions with uncertainty using a single operator network backbone, which presents orders of magnitude less trainable parameters than deep ensembles of comparable performance.",
+   "evidence_ids": [
+    "paper:2404.03099"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Given axis F score 2.0, the riskiest assumption is that combining Gaussian process regression and operator learning will maintain stable calibration and computational tractability during sequential Bayesian optimization across complex function spaces without prohibitive training overhead.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2404.03099"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Implement a technical proof of concept by integrating an existing open-source Gaussian process package with an operator network to execute composite Bayesian optimization on a low-dimensional function-space benchmark, measuring parameter counts and uncertainty calibration against a proposed threshold: target 90 percent calibration coverage.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2404.03099",
+    "pkg:google-vizier",
+    "pkg:trieste"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "Achieve a reduction in trainable parameter count by a proposed threshold: at least 10 times fewer parameters than a comparable deep ensemble while maintaining valid uncertainty coverage above a proposed threshold: 95 percent on test benchmarks.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2404.03099"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The combined operator network and Gaussian process surrogate fails to converge or exhibits higher computational training time than deep ensembles on the benchmark task, exceeding a proposed threshold: 2x training overhead.",
+    "evidence_ids": [
+     "dvf:13",
+     "paper:2404.03099"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:trieste",
+     "use": "Provides Bayesian optimization routines and Gaussian process regression primitives to manage sequential decision-making loops.",
+     "evidence_ids": [
+      "paper:2404.03099"
+     ],
+     "version": "4.6.0"
+    },
+    {
+     "id": "pkg:google-vizier",
+     "use": "Serves as the black-box optimization framework to drive acquisition function evaluation and parameter tuning.",
+     "evidence_ids": [
+      "patent:11757732",
+      "pkg:google-vizier"
+     ],
+     "version": "0.1.24"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A bridging module that maps infinite-dimensional function space outputs from operator networks into exact kernel regression residuals for uncertainty estimation during Bayesian optimization.",
+     "evidence_ids": [
+      "paper:2404.03099",
+      "paper:2609.00389"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

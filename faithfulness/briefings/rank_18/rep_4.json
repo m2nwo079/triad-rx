@@ -1,0 +1,20 @@
+{
+ "rank": 18,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "The evidence bundle contains papers combining Gaussian processes with PC or PC with uncertainty quantification, but does not provide evidence showing how Gaussian processes, PC, and uncertainty quantification are all used together in a single integrated method.",
+  "insufficient_evidence_ids": [
+   "paper:2609.30085",
+   "paper:2503.24016"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

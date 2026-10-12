@@ -1,0 +1,210 @@
+{
+ "rank": 8,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Used as an embedded normalizing flow to transform unknown complex distributions of residual information into a simple base distribution for end-to-end parameter estimation.",
+    "evidence_ids": [
+     "paper:2607.25026"
+    ]
+   },
+   {
+    "term_id": "T:parameter estimation",
+    "role": "The target estimation task for a model defined by a computational simulation of a physical system, updating parameter values using first-order gradient methods.",
+    "evidence_ids": [
+     "paper:2607.25026"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Not directly combined as a distinct third component in this specific evidence context, but implicitly related via regression-based or simulation-based simulation inference frameworks.",
+    "evidence_ids": [
+     "paper:2607.25026"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Simulation-based parameter estimation for a model defined by a computational simulation of a physical system.",
+   "evidence_ids": [
+    "paper:2607.25026"
+   ]
+  },
+  "limitation": {
+   "text": "Complex unknown distributions of residual information in simulation-based parameter estimation are difficult to handle directly.",
+   "evidence_ids": [
+    "paper:2607.25026"
+   ]
+  },
+  "combination": {
+   "text": "An embedded normalizing flow transforms the unknown complex residual distribution into a simple base distribution, allowing an empirical-likelihood estimator under moment restrictions to impose indirect constraints for end-to-end parameter estimation.",
+   "evidence_ids": [
+    "paper:2607.25026"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Used as an embedded normalizing flow to transform unknown complex distributions of residual information into a simple base distribution for end-to-end parameter estimation.",
+     "evidence_ids": [
+      "paper:2607.25026"
+     ]
+    },
+    {
+     "term_id": "T:parameter estimation",
+     "role": "The target estimation task for a model defined by a computational simulation of a physical system, updating parameter values using first-order gradient methods.",
+     "evidence_ids": [
+      "paper:2607.25026"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Not directly combined as a distinct third component in this specific evidence context, but implicitly related via regression-based or simulation-based simulation inference frameworks.",
+     "evidence_ids": [
+      "paper:2607.25026"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Simulation-based parameter estimation for a model defined by a computational simulation of a physical system.",
+    "evidence_ids": [
+     "paper:2607.25026"
+    ]
+   },
+   "limitation": {
+    "text": "Complex unknown distributions of residual information in simulation-based parameter estimation are difficult to handle directly.",
+    "evidence_ids": [
+     "paper:2607.25026"
+    ]
+   },
+   "combination": {
+    "text": "An embedded normalizing flow transforms the unknown complex residual distribution into a simple base distribution, allowing an empirical-likelihood estimator under moment restrictions to impose indirect constraints for end-to-end parameter estimation.",
+    "evidence_ids": [
+     "paper:2607.25026"
+    ]
+   }
+  },
+  "summary": {
+   "text": "An embedded normalizing flow transforms the unknown complex residual distribution into a simple base distribution, allowing an empirical-likelihood estimator under moment restrictions to impose indirect constraints for end-to-end parameter estimation. DVF axis scores are: D is 3.0, F is 3.0, and V is missing.",
+   "evidence_ids": [
+    "dvf:8",
+    "paper:2607.25026"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Quantitative researchers and data scientists building computational simulations of physical systems who require simulation-based parameter estimation.",
+   "evidence_ids": [
+    "paper:2607.25026"
+   ]
+  },
+  "jtbd": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: When performing simulation-based parameter estimation for a physical system, I want to transform unknown complex residual distributions into simple base distributions, so that I can reliably estimate parameters under moment restrictions.",
+   "evidence_ids": [
+    "paper:2607.25026"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: By combining embedded normalizing flows with empirical-likelihood estimation under moment restrictions, users can perform simulation-based parameter estimation while bypassing complex unknown distributions of residual information.",
+   "evidence_ids": [
+    "paper:2607.25026"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated due to missing evidence on axis V (viability). We assume that target users are willing to pay for a software framework combining embedded normalizing flows and empirical-likelihood estimation for parameter estimation.",
+   "evidence_ids": [
+    "dvf:8",
+    "paper:2607.25026"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and price acceptance tests with quantitative researchers and data scientists to evaluate willingness to pay for a simulation-based parameter estimation tool.",
+   "evidence_ids": [
+    "dvf:8",
+    "paper:2607.25026"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness to pay during customer interviews and price acceptance tests.",
+   "evidence_ids": [
+    "dvf:8"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed prospective users express interest in purchasing or adopting the simulation-based parameter estimation framework.",
+    "evidence_ids": [
+     "dvf:8",
+     "paper:2607.25026"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:torchcfm",
+     "use": "Used as a Conditional Flow Matching library for flow-based modeling tasks.",
+     "evidence_ids": [
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "pkg:lightgbmlss",
+     "use": "Used as an extension of LightGBM to probabilistic modelling.",
+     "evidence_ids": [
+      "repo:statmixedml/lightgbmlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:xgboostlss",
+     "use": "Used as an extension of XGBoost to probabilistic modelling.",
+     "evidence_ids": [
+      "repo:statmixedml/xgboostlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:lf2i",
+     "use": "Used as a package for likelihood-free inference.",
+     "evidence_ids": [
+      "pkg:lf2i"
+     ],
+     "version": "0.3.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "An integrated end-to-end parameter estimation module combining embedded normalizing flows with empirical-likelihood estimators under moment restrictions.",
+     "evidence_ids": [
+      "paper:2607.25026"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

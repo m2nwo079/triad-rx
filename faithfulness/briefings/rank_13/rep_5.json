@@ -1,0 +1,215 @@
+{
+ "rank": 13,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Serves as a surrogate model or component providing predictive uncertainty and modeling residuals or kernels for functional spaces.",
+    "evidence_ids": [
+     "paper:2404.03099",
+     "paper:2603.00290",
+     "paper:2603.15091",
+     "paper:2606.17513"
+    ]
+   },
+   {
+    "term_id": "T:bayesian optimization",
+    "role": "Drives sequential decision-making, sample selection, or outer-loop optimization procedures using surrogate uncertainty.",
+    "evidence_ids": [
+     "paper:2404.03099",
+     "paper:2503.03178"
+    ]
+   },
+   {
+    "term_id": "T:operator learning",
+    "role": "Provides operator networks or surrogate models mapping between infinite-dimensional function spaces.",
+    "evidence_ids": [
+     "paper:2404.03099",
+     "paper:2503.03178"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Composite Bayesian optimization in function spaces and outer-loop optimization procedures for partial differential equations.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  },
+  "limitation": {
+   "text": "Conventional uncertainty quantification frameworks for operator networks can incur substantial computational costs during training and inference.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  },
+  "combination": {
+   "text": "Uncertainty estimates from operator networks or epistemic operator frameworks are used to drive Bayesian optimization and active learning procedures to yield improvements in accuracy and data efficiency.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Serves as a surrogate model or component providing predictive uncertainty and modeling residuals or kernels for functional spaces.",
+     "evidence_ids": [
+      "paper:2404.03099",
+      "paper:2603.00290",
+      "paper:2603.15091",
+      "paper:2606.17513"
+     ]
+    },
+    {
+     "term_id": "T:bayesian optimization",
+     "role": "Drives sequential decision-making, sample selection, or outer-loop optimization procedures using surrogate uncertainty.",
+     "evidence_ids": [
+      "paper:2404.03099",
+      "paper:2503.03178"
+     ]
+    },
+    {
+     "term_id": "T:operator learning",
+     "role": "Provides operator networks or surrogate models mapping between infinite-dimensional function spaces.",
+     "evidence_ids": [
+      "paper:2404.03099",
+      "paper:2503.03178"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Composite Bayesian optimization in function spaces and outer-loop optimization procedures for partial differential equations.",
+    "evidence_ids": [
+     "paper:2404.03099",
+     "paper:2503.03178"
+    ]
+   },
+   "limitation": {
+    "text": "Conventional uncertainty quantification frameworks for operator networks can incur substantial computational costs during training and inference.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   },
+   "combination": {
+    "text": "Uncertainty estimates from operator networks or epistemic operator frameworks are used to drive Bayesian optimization and active learning procedures to yield improvements in accuracy and data efficiency.",
+    "evidence_ids": [
+     "paper:2404.03099",
+     "paper:2503.03178"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores the combination of Gaussian processes, Bayesian optimization, and operator learning for composite Bayesian optimization in function spaces and outer-loop optimization procedures for partial differential equations. Conventional uncertainty quantification frameworks for operator networks can incur substantial computational costs during training and inference. Uncertainty estimates from operator networks or epistemic operator frameworks are used to drive Bayesian optimization and active learning procedures to yield improvements in accuracy and data efficiency.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  },
+  "target_user": {
+   "basis": "evidence",
+   "text": "Patent assignee categories indicate companies operating in fields such as cloud computing, manufacturing process optimization, and video tracking.",
+   "evidence_ids": [
+    "patent:11734561",
+    "patent:11757732",
+    "patent:11927927",
+    "patent:20210367862",
+    "patent:20220130130",
+    "patent:20230259079"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "The job to be done is to perform composite Bayesian optimization in function spaces and outer-loop optimization procedures for partial differential equations while overcoming the substantial computational costs of conventional uncertainty quantification frameworks.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Using uncertainty estimates from operator networks or epistemic operator frameworks drives Bayesian optimization and active learning procedures to yield improvements in accuracy and data efficiency.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption, driven by feasibility score F: 2.0 (dvf:13), is that the computational overhead of combining operator learning with Gaussian process surrogate models and sequential Bayesian optimization can be maintained within tractable limits during online inference.",
+   "evidence_ids": [
+    "dvf:13"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "As a technical proof of concept from existing packages, build a minimal pipeline using the Trieste library for Bayesian optimization and SMT for surrogate modeling to optimize a simple operator-learning task. Test whether uncertainty estimates can be computed and queried under a proposed threshold of 500 milliseconds per evaluation, addressing feasibility score F: 2.0 (dvf:13).",
+   "evidence_ids": [
+    "dvf:13",
+    "pkg:trieste",
+    "pkg:smt"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "The success metric is achieving a proposed threshold of at least 15 percent improvement in sample data efficiency compared to single-fidelity baselines, referencing feasibility score F: 2.0 (dvf:13).",
+   "evidence_ids": [
+    "dvf:13"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The project is killed if the inference time per optimization step exceeds a proposed threshold of 2.0 seconds, referencing feasibility score F: 2.0 (dvf:13).",
+    "evidence_ids": [
+     "dvf:13"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:trieste",
+     "use": "Serves as the Bayesian optimization toolkit for managing sequential decision-making and acquisition functions.",
+     "evidence_ids": [
+      "pkg:trieste"
+     ],
+     "version": "4.6.0"
+    },
+    {
+     "id": "pkg:smt",
+     "use": "Provides surrogate modeling tools and Gaussian process implementations for regression and uncertainty estimation.",
+     "evidence_ids": [
+      "pkg:smt"
+     ],
+     "version": "2.15.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "An integration adapter to connect epistemic operator network uncertainty outputs directly into the Bayesian optimization acquisition loop, addressing feasibility score F: 2.0 (dvf:13).",
+     "evidence_ids": [
+      "dvf:13",
+      "paper:2404.03099"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

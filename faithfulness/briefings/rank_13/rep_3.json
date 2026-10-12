@@ -1,0 +1,212 @@
+{
+ "rank": 13,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Serves as a probabilistic surrogate model or provides kernel-based residual corrections to capture uncertainties and correlations in function spaces.",
+    "evidence_ids": [
+     "paper:2404.03099",
+     "paper:2606.17513"
+    ]
+   },
+   {
+    "term_id": "T:bayesian optimization",
+    "role": "Drives sequential decision-making or composite optimization by leveraging uncertainty estimates to guide sample selection in infinite-dimensional or function-space settings.",
+    "evidence_ids": [
+     "paper:2404.03099",
+     "paper:2503.03178"
+    ]
+   },
+   {
+    "term_id": "T:operator learning",
+    "role": "Provides an architectural paradigm or network backbone (such as operator networks) mapping inputs or outputs defined in infinite-dimensional function spaces.",
+    "evidence_ids": [
+     "paper:2404.03099",
+     "paper:2503.03178"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Composite Bayesian optimization and active learning for expensive black-box functions and partial differential equations defined over infinite-dimensional function spaces.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  },
+  "limitation": {
+   "text": "Conventional uncertainty quantification frameworks and surrogate models incur substantial computational costs during training and inference, or struggle with scalability in function-space optimization tasks.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  },
+  "combination": {
+   "text": "Gaussian process methods and probabilistic modeling are integrated with operator learning frameworks to enable efficient uncertainty-aware surrogate modeling, which then drives Bayesian optimization and active learning procedures in function spaces.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Serves as a probabilistic surrogate model or provides kernel-based residual corrections to capture uncertainties and correlations in function spaces.",
+     "evidence_ids": [
+      "paper:2404.03099",
+      "paper:2606.17513"
+     ]
+    },
+    {
+     "term_id": "T:bayesian optimization",
+     "role": "Drives sequential decision-making or composite optimization by leveraging uncertainty estimates to guide sample selection in infinite-dimensional or function-space settings.",
+     "evidence_ids": [
+      "paper:2404.03099",
+      "paper:2503.03178"
+     ]
+    },
+    {
+     "term_id": "T:operator learning",
+     "role": "Provides an architectural paradigm or network backbone (such as operator networks) mapping inputs or outputs defined in infinite-dimensional function spaces.",
+     "evidence_ids": [
+      "paper:2404.03099",
+      "paper:2503.03178"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Composite Bayesian optimization and active learning for expensive black-box functions and partial differential equations defined over infinite-dimensional function spaces.",
+    "evidence_ids": [
+     "paper:2404.03099",
+     "paper:2503.03178"
+    ]
+   },
+   "limitation": {
+    "text": "Conventional uncertainty quantification frameworks and surrogate models incur substantial computational costs during training and inference, or struggle with scalability in function-space optimization tasks.",
+    "evidence_ids": [
+     "paper:2404.03099",
+     "paper:2503.03178"
+    ]
+   },
+   "combination": {
+    "text": "Gaussian process methods and probabilistic modeling are integrated with operator learning frameworks to enable efficient uncertainty-aware surrogate modeling, which then drives Bayesian optimization and active learning procedures in function spaces.",
+    "evidence_ids": [
+     "paper:2404.03099",
+     "paper:2503.03178"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing combines Gaussian process modeling, Bayesian optimization, and operator learning to address computational bottlenecks in function-space optimization and partial differential equations. By integrating probabilistic surrogate models with operator network backbones, the approach enables uncertainty-aware sequential decision-making. Cited studies demonstrate that such combinations reduce trainable parameters while preserving predictive fidelity and supporting active learning workflows.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Machine learning engineers and researchers in scientific computing developing automated design tools, surrogate simulators, and adaptive optimization pipelines for complex physical systems.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Composite Bayesian optimization and active learning for expensive black-box functions and partial differential equations defined over infinite-dimensional function spaces.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Gaussian process methods and probabilistic modeling are integrated with operator learning frameworks to enable efficient uncertainty-aware surrogate modeling, which then drives Bayesian optimization and active learning procedures in function spaces.",
+   "evidence_ids": [
+    "paper:2404.03099",
+    "paper:2503.03178"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Given feasibility axis score 2.0, the riskiest assumption is that exact kernel regressions and Gaussian process residual corrections can scale stably to high-dimensional operator network feature spaces without prohibitive computational overhead during active learning iterations.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2606.17513"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Build a technical proof of concept using existing packages that couples a deep operator network backend with Gaussian process regression to perform composite Bayesian optimization on a low-dimensional PDE benchmark, measuring training time and predictive calibration.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2404.03099",
+    "pkg:trieste"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: a reduction in evaluation budget of at least 20 percent compared to standalone operator network baselines while maintaining calibrated uncertainty estimates on held-out test points.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2503.03178"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: if the computational training overhead of combining Gaussian processes with operator learning exceeds a proposed threshold of 300 percent relative to the base operator network without delivering accuracy gains.",
+    "evidence_ids": [
+     "dvf:13",
+     "paper:2503.03178"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:trieste",
+     "use": "Provides Bayesian optimization routines and Gaussian process infrastructure to guide sample selection and manage acquisition functions.",
+     "evidence_ids": [
+      "pkg:trieste"
+     ],
+     "version": "4.6.0"
+    },
+    {
+     "id": "pkg:google-vizier",
+     "use": "Serves as a black-box optimization service framework for managing hyperparameter search and trial evaluations.",
+     "evidence_ids": [
+      "pkg:google-vizier"
+     ],
+     "version": "0.1.24"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A bridging module that maps infinite-dimensional function space outputs from operator networks into Gaussian process kernel feature spaces for residual correction and epistemic uncertainty quantification.",
+     "evidence_ids": [
+      "paper:2404.03099",
+      "paper:2606.17513"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

@@ -1,0 +1,211 @@
+{
+ "rank": 12,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:global local attention",
+    "role": "Captures multi-scale local and global feature dependencies or integrates long-range semantic relationships and contextual information.",
+    "evidence_ids": [
+     "paper:2509.20701"
+    ]
+   },
+   {
+    "term_id": "M:transformer",
+    "role": "Provides the architecture for the global attention mechanism that integrates long-range semantic relationships and contextual information.",
+    "evidence_ids": [
+     "paper:2509.20701"
+    ]
+   },
+   {
+    "term_id": "T:decoder",
+    "role": "Used alongside encoders or within processing paths to form a unified framework for tasks like target detection.",
+    "evidence_ids": [
+     "paper:2509.20701"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Infrared small target detection and localization.",
+   "evidence_ids": [
+    "paper:2509.20701"
+   ]
+  },
+  "limitation": {
+   "text": "Infrared small targets are highly susceptible to blending into cluttered and noisy backgrounds due to a lack of distinctive texture and morphological features, and deep models suffer from feature misalignment and suboptimal performance caused by the inherent conflict between capturing high-resolution spatial details and extracting robust semantic context.",
+   "evidence_ids": [
+    "paper:2509.20701"
+   ]
+  },
+  "combination": {
+   "text": "A network uses a dual-path architecture where a transformer-based global attention mechanism and local self-attention capture multi-scale local and global feature dependencies to integrate long-range semantic relationships and contextual information.",
+   "evidence_ids": [
+    "paper:2509.20701"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:global local attention",
+     "role": "Captures multi-scale local and global feature dependencies or integrates long-range semantic relationships and contextual information.",
+     "evidence_ids": [
+      "paper:2509.20701"
+     ]
+    },
+    {
+     "term_id": "M:transformer",
+     "role": "Provides the architecture for the global attention mechanism that integrates long-range semantic relationships and contextual information.",
+     "evidence_ids": [
+      "paper:2509.20701"
+     ]
+    },
+    {
+     "term_id": "T:decoder",
+     "role": "Used alongside encoders or within processing paths to form a unified framework for tasks like target detection.",
+     "evidence_ids": [
+      "paper:2509.20701"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Infrared small target detection and localization.",
+    "evidence_ids": [
+     "paper:2509.20701"
+    ]
+   },
+   "limitation": {
+    "text": "Infrared small targets are highly susceptible to blending into cluttered and noisy backgrounds due to a lack of distinctive texture and morphological features, and deep models suffer from feature misalignment and suboptimal performance caused by the inherent conflict between capturing high-resolution spatial details and extracting robust semantic context.",
+    "evidence_ids": [
+     "paper:2509.20701"
+    ]
+   },
+   "combination": {
+    "text": "A network uses a dual-path architecture where a transformer-based global attention mechanism and local self-attention capture multi-scale local and global feature dependencies to integrate long-range semantic relationships and contextual information.",
+    "evidence_ids": [
+     "paper:2509.20701"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates global-local attention, transformers, and decoders into a dual-path network for infrared small target detection and localization. This approach addresses the limitation that infrared small targets lack distinctive texture and morphological features and blend into cluttered backgrounds, which causes feature misalignment and suboptimal performance in deep models. By decoupling edge enhancement and semantic modeling, the architecture uses local and global self-attention to capture multi-scale dependencies while refining edge details.",
+   "evidence_ids": [
+    "paper:2509.20701"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: The target users are remote sensing and computer vision engineers developing automated surveillance, disaster warning, and maritime navigation systems that rely on infrared target detection.",
+   "evidence_ids": [
+    "paper:2509.20701"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Infrared small target detection and localization.",
+   "evidence_ids": [
+    "paper:2509.20701"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "A novel Dual-Path Edge Network explicitly addresses the challenge of infrared small targets blending into cluttered and noisy backgrounds by decoupling edge enhancement and semantic modeling into two complementary processing paths. The global attention mechanism, based on a Transformer architecture, integrates long-range semantic relationships and contextual information, ensuring robust scene understanding.",
+   "evidence_ids": [
+    "paper:2509.20701"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Based on the low feasibility score (dvf:12), the riskiest assumption is that decoupling edge enhancement and global-local attention mechanisms into a dual-path network can be integrated stably without introducing prohibitive feature misalignment or excessive computational overhead during inference.",
+   "evidence_ids": [
+    "dvf:12",
+    "paper:2509.20701"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Build a technical proof of concept using existing packages (pkg:transformers, pkg:ultralytics) to implement a dual-path network combining a transformer-based global attention mechanism and local self-attention, and test its infrared small target detection accuracy and latency on a standard remote sensing dataset.",
+   "evidence_ids": [
+    "dvf:12",
+    "paper:2509.20701",
+    "pkg:transformers",
+    "pkg:ultralytics"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of greater than 85 percent target localization accuracy alongside a proposed threshold of at least a 20 percent reduction in false-positive detections on cluttered infrared benchmark datasets compared to baseline single-path architectures.",
+   "evidence_ids": [
+    "dvf:12",
+    "paper:2509.20701"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "If the dual-path network exhibits a feature misalignment failure rate exceeding a proposed threshold of 40 percent under high-noise infrared conditions, the approach is killed.",
+    "evidence_ids": [
+     "dvf:12",
+     "paper:2509.20701"
+    ]
+   },
+   {
+    "text": "If inference latency exceeds a proposed threshold of 100 milliseconds per frame on standard hardware due to the combination of global attention and edge refinement, the architecture is deemed infeasible.",
+    "evidence_ids": [
+     "dvf:12",
+     "paper:2509.20701"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:transformers",
+     "use": "Provides foundational transformer model definitions and attention modules to implement the global attention mechanism and long-range semantic integration.",
+     "evidence_ids": [
+      "paper:2509.20701",
+      "pkg:transformers"
+     ],
+     "version": "5.17.0"
+    },
+    {
+     "id": "pkg:ultralytics",
+     "use": "Supplies efficient detection and localization framework primitives to support bounding box estimation and multi-scale feature integration.",
+     "evidence_ids": [
+      "paper:2509.20701",
+      "pkg:ultralytics"
+     ],
+     "version": "8.4.161"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A bidirectional interaction module implementing both local and global self-attention paths for multi-scale feature dependency capture.",
+     "evidence_ids": [
+      "paper:2509.20701"
+     ]
+    },
+    {
+     "text": "A multi-edge refiner incorporating cascaded Taylor finite difference operators and attention-driven gating for fine-grained edge localization.",
+     "evidence_ids": [
+      "paper:2509.20701"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

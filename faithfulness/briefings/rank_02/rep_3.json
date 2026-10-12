@@ -1,0 +1,203 @@
+{
+ "rank": 2,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "components": [
+   {
+    "term_id": "M:gpt",
+    "role": "GPT models serve as language models that can be evaluated on or prompted for reasoning and code generation tasks.",
+    "evidence_ids": [
+     "paper:2609.26480",
+     "paper:2609.05232"
+    ]
+   },
+   {
+    "term_id": "T:arithmetic reasoning",
+    "role": "Arithmetic reasoning tasks test the model's ability to solve mathematical word problems and multi-step arithmetic calculations.",
+    "evidence_ids": [
+     "paper:2607.26865"
+    ]
+   },
+   {
+    "term_id": "T:code generation",
+    "role": "Code generation tasks require producing executable or structured programming code from natural language requests.",
+    "evidence_ids": [
+     "paper:2607.26865"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Multi-step complex tasks including arithmetic reasoning and code generation for edge LLM agents.",
+   "evidence_ids": [
+    "paper:2607.26865"
+   ]
+  },
+  "limitation": {
+   "text": "LLM agents must tightly manage their reasoning budgets while remaining reliable when deployed at the edge.",
+   "evidence_ids": [
+    "paper:2607.26865"
+   ]
+  },
+  "combination": {
+   "text": "Frameworks like Think Short, Defer Smart integrate a convergence probe to halt on-device reasoning and a perplexity-based deferral rule to escalate uncertain actions to a cloud-side model, supporting tasks such as arithmetic reasoning and code generation.",
+   "evidence_ids": [
+    "paper:2607.26865"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "components": [
+    {
+     "term_id": "M:gpt",
+     "role": "GPT models serve as language models that can be evaluated on or prompted for reasoning and code generation tasks.",
+     "evidence_ids": [
+      "paper:2609.26480",
+      "paper:2609.05232"
+     ]
+    },
+    {
+     "term_id": "T:arithmetic reasoning",
+     "role": "Arithmetic reasoning tasks test the model's ability to solve mathematical word problems and multi-step arithmetic calculations.",
+     "evidence_ids": [
+      "paper:2607.26865"
+     ]
+    },
+    {
+     "term_id": "T:code generation",
+     "role": "Code generation tasks require producing executable or structured programming code from natural language requests.",
+     "evidence_ids": [
+      "paper:2607.26865"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Multi-step complex tasks including arithmetic reasoning and code generation for edge LLM agents.",
+    "evidence_ids": [
+     "paper:2607.26865"
+    ]
+   },
+   "limitation": {
+    "text": "LLM agents must tightly manage their reasoning budgets while remaining reliable when deployed at the edge.",
+    "evidence_ids": [
+     "paper:2607.26865"
+    ]
+   },
+   "combination": {
+    "text": "Frameworks like Think Short, Defer Smart integrate a convergence probe to halt on-device reasoning and a perplexity-based deferral rule to escalate uncertain actions to a cloud-side model, supporting tasks such as arithmetic reasoning and code generation.",
+    "evidence_ids": [
+     "paper:2607.26865"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining GPT models, arithmetic reasoning, and code generation for edge LLM agents. Frameworks like Think Short, Defer Smart integrate a convergence probe to halt on-device reasoning and a perplexity-based deferral rule to escalate uncertain actions to a cloud-side model, supporting tasks such as arithmetic reasoning and code generation. DVF axis scores are: Demand is 5.0, Feasibility is 3.0, and Viability is missing.",
+   "evidence_ids": [
+    "paper:2607.26865",
+    "dvf:2"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Software developers and data analysts deploying edge AI systems who need reliable multi-step arithmetic reasoning and code generation under strict resource constraints.",
+   "evidence_ids": [
+    "paper:2607.26865",
+    "pkg:appworld",
+    "repo:amap-ml/code2world"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "LLM agents deployed at the edge must tightly manage their reasoning budget while remaining reliable and deferring to a cloud-side model only when local uncertainty is too high to act safely.",
+   "evidence_ids": [
+    "paper:2607.26865"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: By combining on-device convergence probes and selective cloud deferral, edge agents can execute multi-step arithmetic reasoning and code generation efficiently while maintaining safety and accuracy.",
+   "evidence_ids": [
+    "paper:2607.26865"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated on axis V (viability) due to missing evidence in the bundle. Specifically, we assume that customers are willing to pay for an edge-cloud hybrid agent architecture that balances local reasoning budgets with cloud-side escalation.",
+   "evidence_ids": [
+    "dvf:2",
+    "paper:2607.26865"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with prospective buyers of edge AI agent tools to validate willingness to pay for hybrid edge-cloud arithmetic reasoning and code generation capabilities.",
+   "evidence_ids": [
+    "dvf:2",
+    "paper:2607.26865"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive price acceptance and validate that users confirm willingness to adopt the hybrid edge-cloud agent solution.",
+   "evidence_ids": [
+    "dvf:2",
+    "paper:2607.26865"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 20 percent of interviewed prospective users express willingness to pay for or adopt the edge-cloud hybrid agent solution.",
+    "evidence_ids": [
+     "dvf:2",
+     "paper:2607.26865"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:qwenlm/qwen3",
+     "use": "Serves as a large language model base series for local deployment and reasoning tasks.",
+     "evidence_ids": [
+      "repo:qwenlm/qwen3"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:skythought",
+     "use": "Provides reasoning capabilities to support chain-of-thought and thinking processes.",
+     "evidence_ids": [
+      "pkg:skythought"
+     ],
+     "version": "0.1.0"
+    },
+    {
+     "id": "pkg:reprompt-cli",
+     "use": "Facilitates prompt optimization and management workflows for language model interactions.",
+     "evidence_ids": [
+      "pkg:reprompt-cli"
+     ],
+     "version": "2.5.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A lightweight convergence probe for halting on-device reasoning and a perplexity-based deferral rule to escalate uncertain actions to a cloud-side GPT model.",
+     "evidence_ids": [
+      "paper:2607.26865"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

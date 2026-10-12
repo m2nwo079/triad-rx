@@ -1,0 +1,207 @@
+{
+ "rank": 3,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Normalizing flows parameterize conditional densities or serve as flexible probabilistic models to approximate posterior distributions and learn transition densities.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2606.04324",
+     "paper:2606.01346"
+    ]
+   },
+   {
+    "term_id": "T:bayesian inference",
+    "role": "Bayesian inference estimates posterior distributions of parameters or latent variables to yield calibrated uncertainty.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2606.04324"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Regression or velocity field regression is used to train flow models or estimate conditional label marginals and relationships between variables.",
+    "evidence_ids": [
+     "paper:2608.05557",
+     "paper:2605.06829"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets Bayesian inference and density estimation tasks, such as approximating complex posterior distributions and transition densities for hierarchical models or diffusions.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2606.04324"
+   ]
+  },
+  "limitation": {
+   "text": "Standard Bayesian inference and posterior estimation approaches can be computationally slow, require expensive iterative samplers like MCMC/NUTS from scratch, or lack analytical expressions for transition or posterior densities.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2606.04324"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are integrated into Bayesian inference frameworks (such as approximating posterior structures or learning transition densities of diffusions) to enable efficient posterior sampling and avoid repeatedly solving expensive equations in real time.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2606.04324"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Normalizing flows parameterize conditional densities or serve as flexible probabilistic models to approximate posterior distributions and learn transition densities.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2606.04324",
+      "paper:2606.01346"
+     ]
+    },
+    {
+     "term_id": "T:bayesian inference",
+     "role": "Bayesian inference estimates posterior distributions of parameters or latent variables to yield calibrated uncertainty.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2606.04324"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Regression or velocity field regression is used to train flow models or estimate conditional label marginals and relationships between variables.",
+     "evidence_ids": [
+      "paper:2608.05557",
+      "paper:2605.06829"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets Bayesian inference and density estimation tasks, such as approximating complex posterior distributions and transition densities for hierarchical models or diffusions.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2606.04324"
+    ]
+   },
+   "limitation": {
+    "text": "Standard Bayesian inference and posterior estimation approaches can be computationally slow, require expensive iterative samplers like MCMC/NUTS from scratch, or lack analytical expressions for transition or posterior densities.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2606.04324"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are integrated into Bayesian inference frameworks (such as approximating posterior structures or learning transition densities of diffusions) to enable efficient posterior sampling and avoid repeatedly solving expensive equations in real time.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2606.04324"
+    ]
+   }
+  },
+  "summary": {
+   "text": "Normalizing flows are integrated into Bayesian inference frameworks to approximate posterior structures and learn transition densities, enabling efficient posterior sampling and avoiding repeatedly solving expensive equations in real time.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2606.04324"
+   ]
+  },
+  "target_user": {
+   "basis": "evidence",
+   "text": "Users include open-source package developers and researchers working with probabilistic modelling extensions and conditional flow matching libraries.",
+   "evidence_ids": [
+    "pkg:xgboostlss",
+    "repo:atong01/conditional-flow-matching"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "The method is used when researchers need to approximate complex posterior distributions, perform prior-amortized in-context Bayesian inference, or estimate unknown parameters in inverse problems.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2605.29373"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "By leveraging normalizing flows within Bayesian inference, users achieve tuning-free inference orders of magnitude faster than standard samplers while maintaining parameter recovery and calibrated uncertainty.",
+   "evidence_ids": [
+    "paper:2609.24422"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated due to missing evidence on the viability (V) axis (score: null, missing: true) in dvf:3: customers will pay for a commercial tool built on this normalizing flow and Bayesian inference combination.",
+   "evidence_ids": [
+    "dvf:3"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with quantitative researchers and data science managers to evaluate willingness to pay for a commercial normalizing flow and Bayesian inference solution, addressing the missing evidence on the viability (V) axis (score: null, missing: true) from dvf:3.",
+   "evidence_ids": [
+    "dvf:3"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "A proposed threshold of 40 percent of interviewed target users expressing a willingness to pay for the proposed solution during price acceptance tests, motivated by the viability axis score in dvf:3.",
+   "evidence_ids": [
+    "dvf:3"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed users indicating any willingness to pay for the solution during customer interviews and price acceptance tests, as motivated by dvf:3.",
+    "evidence_ids": [
+     "dvf:3"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:atong01/conditional-flow-matching",
+     "use": "Provides conditional flow matching capabilities for training flow models.",
+     "evidence_ids": [
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:xgboostlss",
+     "use": "Extends tree-based models to probabilistic modeling.",
+     "evidence_ids": [
+      "pkg:xgboostlss"
+     ],
+     "version": "0.6.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized wrapper component that integrates conditional normalizing flows with Bayesian inference samplers to handle prior-amortized updates.",
+     "evidence_ids": [
+      "paper:2609.24422"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

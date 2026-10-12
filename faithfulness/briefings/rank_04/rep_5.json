@@ -1,0 +1,38 @@
+{
+ "rank": 4,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "comparison_only",
+  "insufficient_explanation": "The evidence items discuss the individual terms (rag, information retrieval, and text retrieval) or compare different retrieval architectures and paradigms, but do not present a specific method combining all three components together in a unified framework.",
+  "insufficient_evidence_ids": [
+   "paper:2609.28048"
+  ],
+  "components": [],
+  "target_task": {
+   "text": "",
+   "evidence_ids": [
+    "paper:2609.28048"
+   ]
+  },
+  "limitation": {
+   "text": "",
+   "evidence_ids": [
+    "paper:2609.28048"
+   ]
+  },
+  "combination": {
+   "text": "",
+   "evidence_ids": [
+    "paper:2609.28048"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

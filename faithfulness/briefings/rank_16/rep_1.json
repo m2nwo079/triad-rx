@@ -1,0 +1,216 @@
+{
+ "rank": 16,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:transformer",
+    "role": "Serves as a backbone network or architecture component (such as a video transformer or diffusion transformer) to model spatial relationships, geometry, or tokens for generation.",
+    "evidence_ids": [
+     "paper:2604.14302",
+     "paper:2606.07117",
+     "paper:2607.19120"
+    ]
+   },
+   {
+    "term_id": "T:image to 3d",
+    "role": "Provides image-based priors or initializes single-image/sparse-view assets that serve as the input or foundation for generating larger scenes.",
+    "evidence_ids": [
+     "paper:2605.30338",
+     "paper:2607.05392"
+    ]
+   },
+   {
+    "term_id": "T:scene generation",
+    "role": "Represents the target task of synthesizing complex 3D scenes or layouts, which is enhanced by combining image-to-3d capabilities and transformer architectures.",
+    "evidence_ids": [
+     "paper:2607.03990",
+     "paper:2609.03931"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets 3D indoor and general scene generation from images or sparse inputs.",
+   "evidence_ids": [
+    "paper:2607.03990",
+    "paper:2609.03931"
+   ]
+  },
+  "limitation": {
+   "text": "Existing methods struggle with the high computational cost of dense volumetric representations, the scarcity of large-scale 3D supervision, or neglecting structural layouts and spatial anchors when extending asset-level generation to scenes.",
+   "evidence_ids": [
+    "paper:2607.03990",
+    "paper:2609.03931"
+   ]
+  },
+  "combination": {
+   "text": "Transformers are used to model structured latent spaces or handle view-selective cross-attention, building upon image-to-3D asset generation techniques to produce complete and structurally consistent 3D scenes.",
+   "evidence_ids": [
+    "paper:2607.03990",
+    "paper:2609.03931"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:transformer",
+     "role": "Serves as a backbone network or architecture component (such as a video transformer or diffusion transformer) to model spatial relationships, geometry, or tokens for generation.",
+     "evidence_ids": [
+      "paper:2604.14302",
+      "paper:2606.07117",
+      "paper:2607.19120"
+     ]
+    },
+    {
+     "term_id": "T:image to 3d",
+     "role": "Provides image-based priors or initializes single-image/sparse-view assets that serve as the input or foundation for generating larger scenes.",
+     "evidence_ids": [
+      "paper:2605.30338",
+      "paper:2607.05392"
+     ]
+    },
+    {
+     "term_id": "T:scene generation",
+     "role": "Represents the target task of synthesizing complex 3D scenes or layouts, which is enhanced by combining image-to-3d capabilities and transformer architectures.",
+     "evidence_ids": [
+      "paper:2607.03990",
+      "paper:2609.03931"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets 3D indoor and general scene generation from images or sparse inputs.",
+    "evidence_ids": [
+     "paper:2607.03990",
+     "paper:2609.03931"
+    ]
+   },
+   "limitation": {
+    "text": "Existing methods struggle with the high computational cost of dense volumetric representations, the scarcity of large-scale 3D supervision, or neglecting structural layouts and spatial anchors when extending asset-level generation to scenes.",
+    "evidence_ids": [
+     "paper:2607.03990",
+     "paper:2609.03931"
+    ]
+   },
+   "combination": {
+    "text": "Transformers are used to model structured latent spaces or handle view-selective cross-attention, building upon image-to-3D asset generation techniques to produce complete and structurally consistent 3D scenes.",
+    "evidence_ids": [
+     "paper:2607.03990",
+     "paper:2609.03931"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination uses transformer architectures to model structured latent spaces and handle view-selective cross-attention, building upon image-to-3D asset generation techniques to produce complete and structurally consistent 3D scenes (dvf:16, paper:2607.03990, paper:2609.03931).",
+   "evidence_ids": [
+    "dvf:16",
+    "paper:2607.03990",
+    "paper:2609.03931"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Researchers and engineers developing applications for virtual reality, immersive interaction, and interactive 3D content creation who require automated scene generation from images (repo:shirleymaxx/rest3d).",
+   "evidence_ids": [
+    "repo:shirleymaxx/rest3d"
+   ]
+  },
+  "jtbd": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: When developers need to convert casual images or sparse views into complete and physically stable 3D scenes, they want to generate global layouts and assets efficiently without manual per-scene optimization or high volumetric computational costs (paper:2607.03990, paper:2609.03931).",
+   "evidence_ids": [
+    "paper:2607.03990",
+    "paper:2609.03931"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: By combining transformer-based latent modeling with image-to-3D priors, users can synthesize structurally consistent and complete 3D scenes from sparse inputs while avoiding the heavy computational cost of dense volumetric representations (paper:2607.03990, paper:2609.03931).",
+   "evidence_ids": [
+    "paper:2607.03990",
+    "paper:2609.03931"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), designated due to missing evidence in the bundle (dvf:16).",
+   "evidence_ids": [
+    "dvf:16"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with targeted 3D developers to test the viability and willingness to pay for a transformer-based image-to-3D scene generation tool (dvf:16).",
+   "evidence_ids": [
+    "dvf:16"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive pricing acceptance and confirmed willingness to adopt among interviewed 3D developers (dvf:16).",
+   "evidence_ids": [
+    "dvf:16"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 20 percent of interviewed potential users express willingness to pay or adopt the proposed tooling (dvf:16).",
+    "evidence_ids": [
+     "dvf:16"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:shirleymaxx/rest3d",
+     "use": "Used as a reference implementation for reconstructing physically stable 3D scenes from a single image (repo:shirleymaxx/rest3d).",
+     "evidence_ids": [
+      "repo:shirleymaxx/rest3d"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:haoz19/world-tracing",
+     "use": "Used as inference code for generative pixel-aligned geometry beyond the visible (repo:haoz19/world-tracing).",
+     "evidence_ids": [
+      "repo:haoz19/world-tracing"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:3dtopia/openlrm",
+     "use": "Used as an open-source implementation of large reconstruction models for image-to-3D tasks (repo:3dtopia/openlrm).",
+     "evidence_ids": [
+      "repo:3dtopia/openlrm"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified training pipeline and commercial packaging layer to integrate transformer-based scene generation models with user-facing deployment workflows (dvf:16).",
+     "evidence_ids": [
+      "dvf:16"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

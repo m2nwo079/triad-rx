@@ -1,0 +1,204 @@
+{
+ "rank": 1,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:pc",
+    "role": "The PC algorithm serves as a constraint-based causal discovery method or baseline to provide a skeleton of causal or dependency relationships.",
+    "evidence_ids": [
+     "paper:2608.27472",
+     "paper:2608.15332"
+    ]
+   },
+   {
+    "term_id": "T:causal discovery",
+    "role": "Causal discovery is the task of reconstructing the underlying interaction network or directed acyclic graph from observational data.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2608.27472"
+    ]
+   },
+   {
+    "term_id": "T:prediction",
+    "role": "Prediction models are used to forecast system dynamics and evaluate whether inferred causal structures genuinely improve predictive accuracy.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2606.23880"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Simultaneous causal network inference and forecasting or accurate causal edge discovery in dynamical systems.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  },
+  "limitation": {
+   "text": "Causal discovery methods often reconstruct interaction networks without regard to whether the inferred structure supports prediction, while methods combining both tasks can rely on a single global hyperparameter that cannot recover heterogeneous system structures.",
+   "evidence_ids": [
+    "paper:2608.17452"
+   ]
+  },
+  "combination": {
+   "text": "Constraint-based discovery methods like PC provide a high-recall candidate skeleton, which is then refined or combined with predictive modeling tasks to prune false positives by learning which edges genuinely improve prediction.",
+   "evidence_ids": [
+    "paper:2608.27472",
+    "paper:2606.23880"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:pc",
+     "role": "The PC algorithm serves as a constraint-based causal discovery method or baseline to provide a skeleton of causal or dependency relationships.",
+     "evidence_ids": [
+      "paper:2608.27472",
+      "paper:2608.15332"
+     ]
+    },
+    {
+     "term_id": "T:causal discovery",
+     "role": "Causal discovery is the task of reconstructing the underlying interaction network or directed acyclic graph from observational data.",
+     "evidence_ids": [
+      "paper:2608.17452",
+      "paper:2608.27472"
+     ]
+    },
+    {
+     "term_id": "T:prediction",
+     "role": "Prediction models are used to forecast system dynamics and evaluate whether inferred causal structures genuinely improve predictive accuracy.",
+     "evidence_ids": [
+      "paper:2608.17452",
+      "paper:2606.23880"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Simultaneous causal network inference and forecasting or accurate causal edge discovery in dynamical systems.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2606.23880"
+    ]
+   },
+   "limitation": {
+    "text": "Causal discovery methods often reconstruct interaction networks without regard to whether the inferred structure supports prediction, while methods combining both tasks can rely on a single global hyperparameter that cannot recover heterogeneous system structures.",
+    "evidence_ids": [
+     "paper:2608.17452"
+    ]
+   },
+   "combination": {
+    "text": "Constraint-based discovery methods like PC provide a high-recall candidate skeleton, which is then refined or combined with predictive modeling tasks to prune false positives by learning which edges genuinely improve prediction.",
+    "evidence_ids": [
+     "paper:2608.27472",
+     "paper:2606.23880"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates constraint-based causal discovery methods such as the PC algorithm with predictive modeling to simultaneously infer interaction networks and forecast system dynamics. Cited research demonstrates that constraint-based skeletons can provide high-recall candidate edges which are subsequently refined by learning which relationships genuinely improve predictive performance. This approach addresses limitations where causal discovery ignores predictive utility or relies on global hyperparameters unable to capture heterogeneous structures.",
+   "evidence_ids": [
+    "paper:2608.27472",
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  },
+  "target_user": {
+   "basis": "evidence",
+   "text": "Academic researchers and organizations utilizing computational modeling for porous medium characterization and core flooding experiments.",
+   "evidence_ids": [
+    "patent:11913865"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Simultaneously inferring an approximate interaction network and forecasting system dynamics from observational data while pruning false positive causal edges that do not improve prediction.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Reconstructing underlying interaction networks with high fidelity while maintaining forecasts on par with models supplied with true networks, enabling explainable and scalable forecasting of complex systems.",
+   "evidence_ids": [
+    "paper:2608.17452"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Based on the viability axis score of 1.0 from dvf:1, the riskiest assumption is that industrial practitioners will pay for software combining PC-based causal discovery and prediction rather than relying on existing standalone forecasting tools or free open-source scripts.",
+   "evidence_ids": [
+    "dvf:1"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Conduct customer interviews paired with a price acceptance test targeting a proposed threshold of 30 enterprise data science leads, presenting mock workflows of simultaneous causal network inference and prediction to evaluate willingness to pay.",
+   "evidence_ids": [
+    "dvf:1"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "A proposed threshold of at least 40 percent of interviewed enterprise data science leads confirming a willingness to adopt and pay for the combined causal discovery and prediction platform.",
+   "evidence_ids": [
+    "dvf:1"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed prospects express willingness to pay for the tool, or all participants report that existing free open-source methods fully satisfy their requirements.",
+    "evidence_ids": [
+     "dvf:1"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:bloomberg/causal-ts",
+     "use": "Provides time-series causal discovery capabilities to help extract initial interaction structures.",
+     "evidence_ids": [
+      "repo:bloomberg/causal-ts"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:causalts",
+     "use": "Supplies package functions for processing causal time-series data and supporting discovery workflows.",
+     "evidence_ids": [
+      "pkg:causalts"
+     ],
+     "version": "0.27.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized gating and refinement module that bridges constraint-based PC skeletons with predictive models to prune false-positive edges based on forecasting utility.",
+     "evidence_ids": [
+      "paper:2608.17452",
+      "paper:2606.23880"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

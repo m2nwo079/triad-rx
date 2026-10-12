@@ -1,0 +1,233 @@
+{
+ "rank": 3,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Normalizing flows parameterize conditional densities or serve as flexible probabilistic models to approximate posterior distributions and capture complex data structures.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2606.01346"
+    ]
+   },
+   {
+    "term_id": "T:bayesian inference",
+    "role": "Bayesian inference provides calibrated uncertainty estimates and posterior distributions over parameters or hypotheses.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2607.22961"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Regression tasks model conditional label densities, multi-modal outputs, or relationships where flows or Bayesian inference are applied.",
+    "evidence_ids": [
+     "paper:2606.01346",
+     "paper:2607.22961"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets probabilistic regression, multi-modal regression, or structured Bayesian inference tasks such as generalized linear mixed-effects models.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2606.01346"
+   ]
+  },
+  "limitation": {
+   "text": "Standard regression and Bayesian inference approaches often struggle with multi-modal label distributions or require slow sampling methods like MCMC that must restart from scratch for new datasets.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2606.25188"
+   ]
+  },
+  "combination": {
+   "text": "Conditional normalizing flows and neural architectures are integrated to model the posterior distribution or conditional density in regression and Bayesian inference tasks, enabling efficient amortized inference or capturing complex multi-modal structures.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2606.01346"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Normalizing flows parameterize conditional densities or serve as flexible probabilistic models to approximate posterior distributions and capture complex data structures.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2606.01346"
+     ]
+    },
+    {
+     "term_id": "T:bayesian inference",
+     "role": "Bayesian inference provides calibrated uncertainty estimates and posterior distributions over parameters or hypotheses.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2607.22961"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Regression tasks model conditional label densities, multi-modal outputs, or relationships where flows or Bayesian inference are applied.",
+     "evidence_ids": [
+      "paper:2606.01346",
+      "paper:2607.22961"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets probabilistic regression, multi-modal regression, or structured Bayesian inference tasks such as generalized linear mixed-effects models.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2606.01346"
+    ]
+   },
+   "limitation": {
+    "text": "Standard regression and Bayesian inference approaches often struggle with multi-modal label distributions or require slow sampling methods like MCMC that must restart from scratch for new datasets.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2606.25188"
+    ]
+   },
+   "combination": {
+    "text": "Conditional normalizing flows and neural architectures are integrated to model the posterior distribution or conditional density in regression and Bayesian inference tasks, enabling efficient amortized inference or capturing complex multi-modal structures.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2606.01346"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates conditional normalizing flows and neural architectures to model posterior distributions and conditional densities in regression and Bayesian inference tasks, enabling efficient amortized inference or capturing complex multi-modal structures. Cited evidence shows that this approach addresses limitations of standard regression and Bayesian methods such as slow MCMC sampling or inability to handle multi-modal label distributions.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2606.01346",
+    "paper:2606.25188"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Data scientists, quantitative researchers, and statistical modelers who build probabilistic regression and generalized linear mixed-effects models.",
+   "evidence_ids": [
+    "repo:statmixedml/xgboostlss",
+    "repo:statmixedml/lightgbmlss",
+    "pkg:torchcfm"
+   ]
+  },
+  "jtbd": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: When performing regression and Bayesian inference on complex datasets, users want to obtain calibrated uncertainty and capture multi-modal label densities without incurring the high computational cost of slow MCMC sampling.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2606.25188"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Integrating normalizing flows with Bayesian regression enables tuning-free, amortized inference that is orders of magnitude faster than traditional samplers while accurately capturing multi-modal distributions.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2606.25188"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is viability (axis V score is null), which was designated due to missing evidence in the bundle. We assume that enterprise users or researchers are willing to pay for or adopt a specialized amortized probabilistic regression framework instead of relying on open-source samplers.",
+   "evidence_ids": [
+    "dvf:3"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with quantitative modelers to evaluate willingness to pay for a faster, flow-based probabilistic regression and Bayesian inference tool.",
+   "evidence_ids": [
+    "dvf:3"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: 40 percent of interviewed prospective users confirm budget availability and willingness to adopt the probabilistic inference software.",
+   "evidence_ids": [
+    "dvf:3"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: fewer than 10 percent of interviewed users express willingness to pay or adopt the solution during customer discovery.",
+    "evidence_ids": [
+     "dvf:3"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:torchcfm",
+     "use": "Used as a Conditional Flow Matching library to support flow-based generative modeling and density estimation.",
+     "evidence_ids": [
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "pkg:xgboostlss",
+     "use": "Used as an extension of XGBoost to probabilistic modeling for regression tasks.",
+     "evidence_ids": [
+      "repo:statmixedml/xgboostlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:lightgbmlss",
+     "use": "Used as an extension of LightGBM to probabilistic modeling.",
+     "evidence_ids": [
+      "repo:statmixedml/lightgbmlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:margarine",
+     "use": "Used to support nested sampling and evidence evaluation.",
+     "evidence_ids": [
+      "pkg:margarine"
+     ],
+     "version": "2.2.0"
+    },
+    {
+     "id": "pkg:gpry",
+     "use": "Used for Gaussian process regression and Bayesian optimization tasks.",
+     "evidence_ids": [
+      "pkg:gpry"
+     ],
+     "version": "4.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified API layer that connects conditional normalizing flow estimators with probabilistic regression and Bayesian inference pipelines.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2606.01346"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

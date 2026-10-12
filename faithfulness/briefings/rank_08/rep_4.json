@@ -1,0 +1,21 @@
+{
+ "rank": 8,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "The evidence bundle contains papers discussing normalizing flows for parameter estimation and normalizing flows for regression, but does not provide evidence of a combination using normalizing flows, parameter estimation, and regression all together in a single method.",
+  "insufficient_evidence_ids": [
+   "paper:2607.25026",
+   "paper:2606.01346",
+   "paper:2603.10991"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

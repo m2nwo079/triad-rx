@@ -1,0 +1,224 @@
+{
+ "rank": 7,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Provides sparse variational Gaussian process inference and Bayesian predictive uncertainty quantification within the network topology.",
+    "evidence_ids": [
+     "paper:2512.05306",
+     "paper:2512.00260"
+    ]
+   },
+   {
+    "term_id": "T:kolmogorov arnold networks",
+    "role": "Acts as the underlying network architecture (KAN topology) using learnable univariate functions on network edges.",
+    "evidence_ids": [
+     "paper:2512.05306",
+     "paper:2512.00260"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Serves as the target learning task being modeled and predicted by the probabilistic network.",
+    "evidence_ids": [
+     "paper:2512.22426"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Uncertainty-aware regression tasks, such as reconstructing time-resolved flow fields from temporally sparse measurements.",
+   "evidence_ids": [
+    "paper:2512.22426"
+   ]
+  },
+  "limitation": {
+   "text": "Standard Kolmogorov-Arnold Networks lack principled probabilistic outputs and exact Gaussian process extensions scale cubically with data size.",
+   "evidence_ids": [
+    "paper:2512.05306",
+    "paper:2512.00260"
+   ]
+  },
+  "combination": {
+   "text": "Integrating sparse variational Gaussian process inference into the Kolmogorov-Arnold network topology enables scalable Bayesian inference with computational complexity quasi-linear in sample size for regression and flow reconstruction tasks.",
+   "evidence_ids": [
+    "paper:2512.22426",
+    "paper:2512.05306",
+    "paper:2512.00260"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Provides sparse variational Gaussian process inference and Bayesian predictive uncertainty quantification within the network topology.",
+     "evidence_ids": [
+      "paper:2512.05306",
+      "paper:2512.00260"
+     ]
+    },
+    {
+     "term_id": "T:kolmogorov arnold networks",
+     "role": "Acts as the underlying network architecture (KAN topology) using learnable univariate functions on network edges.",
+     "evidence_ids": [
+      "paper:2512.05306",
+      "paper:2512.00260"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Serves as the target learning task being modeled and predicted by the probabilistic network.",
+     "evidence_ids": [
+      "paper:2512.22426"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Uncertainty-aware regression tasks, such as reconstructing time-resolved flow fields from temporally sparse measurements.",
+    "evidence_ids": [
+     "paper:2512.22426"
+    ]
+   },
+   "limitation": {
+    "text": "Standard Kolmogorov-Arnold Networks lack principled probabilistic outputs and exact Gaussian process extensions scale cubically with data size.",
+    "evidence_ids": [
+     "paper:2512.05306",
+     "paper:2512.00260"
+    ]
+   },
+   "combination": {
+    "text": "Integrating sparse variational Gaussian process inference into the Kolmogorov-Arnold network topology enables scalable Bayesian inference with computational complexity quasi-linear in sample size for regression and flow reconstruction tasks.",
+    "evidence_ids": [
+     "paper:2512.22426",
+     "paper:2512.05306",
+     "paper:2512.00260"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing examines the integration of sparse variational Gaussian processes into Kolmogorov-Arnold Networks for uncertainty-aware regression tasks, addressing the lack of principled probabilistic outputs in standard networks and the cubic scaling limitations of exact Gaussian process extensions. Integrating sparse variational Gaussian process inference with the network topology enables scalable Bayesian inference with computational complexity quasi-linear in sample size. This combination is applied to regression and uncertainty-aware flow field reconstruction from temporally sparse measurements, providing calibrated uncertainty estimates. (dvf:7, paper:2512.00260, paper:2512.05306, paper:2512.22426)",
+   "evidence_ids": [
+    "dvf:7",
+    "paper:2512.00260",
+    "paper:2512.05306",
+    "paper:2512.22426"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Researchers and engineers in scientific machine learning, fluid dynamics, and automated manufacturing systems who require uncertainty-aware function approximation and regression with scalable probabilistic guarantees. (patent:11488071, patent:11984334, patent:12361333, repo:facebookresearch/sustainableconcrete)",
+   "evidence_ids": [
+    "patent:11488071",
+    "patent:11984334",
+    "patent:12361333",
+    "repo:facebookresearch/sustainableconcrete"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Reconstructing time-resolved flow fields from temporally sparse measurements while quantifying epistemic uncertainty and distinguishing aleatoric from heteroscedastic measurement noise. (paper:2512.05306, paper:2512.22426)",
+   "evidence_ids": [
+    "paper:2512.05306",
+    "paper:2512.22426"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Enables scalable Bayesian inference with computational complexity quasi-linear in sample size for regression tasks, while preserving interpretable network topologies and providing well-calibrated uncertainty estimates. (paper:2512.00260, paper:2512.05306, paper:2512.22426)",
+   "evidence_ids": [
+    "paper:2512.00260",
+    "paper:2512.05306",
+    "paper:2512.22426"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Analytic moment matching and sparse variational inducing point approximations in the Kolmogorov-Arnold network topology will reliably propagate uncertainty through deep additive structures without destabilizing regression convergence or degrading out-of-distribution detection. (dvf:7, paper:2512.00260, paper:2512.05306)",
+   "evidence_ids": [
+    "dvf:7",
+    "paper:2512.00260",
+    "paper:2512.05306"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Build a technical proof of concept using existing packages to implement a Sparse Variational Gaussian Process Kolmogorov-Arnold Network and evaluate its reconstruction error and uncertainty calibration on a 2D synthetic regression or sparse flow field dataset. (dvf:7, paper:2512.00260, paper:2512.22426)",
+   "evidence_ids": [
+    "dvf:7",
+    "paper:2512.00260",
+    "paper:2512.22426"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of less than 5 percent normalized root mean square error on held-out regression benchmarks while maintaining an epistemic uncertainty calibration score where predicted confidence intervals capture proposed threshold: 95 percent of true out-of-distribution variations. (dvf:7, paper:2512.05306, paper:2512.22426)",
+   "evidence_ids": [
+    "dvf:7",
+    "paper:2512.05306",
+    "paper:2512.22426"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Training scalability degrades worse than quasi-linear time with respect to sample size N when incorporating sparse variational inducing points M. (dvf:7, paper:2512.00260)",
+    "evidence_ids": [
+     "dvf:7",
+     "paper:2512.00260"
+    ]
+   },
+   {
+    "text": "Uncertainty calibration metrics fail to reliably indicate when and where predictions degrade on out-of-distribution test samples. (dvf:7, paper:2512.22426)",
+    "evidence_ids": [
+     "dvf:7",
+     "paper:2512.22426"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:netcal",
+     "use": "Used to evaluate and calibrate predictive uncertainty estimates and confidence scores produced by the regression models. (pkg:netcal)",
+     "evidence_ids": [
+      "pkg:netcal"
+     ],
+     "version": "1.4.0"
+    },
+    {
+     "id": "pkg:glearn",
+     "use": "Provides foundational machine learning utilities and algorithmic structures for learning tasks. (pkg:glearn)",
+     "evidence_ids": [
+      "pkg:glearn"
+     ],
+     "version": "0.23.3"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Implement the Sparse Variational Gaussian Process inference layer integrated with learnable univariate edge functions in the Kolmogorov-Arnold network topology, along with analytic moment matching routines for uncertainty propagation. (paper:2512.00260, paper:2512.05306)",
+     "evidence_ids": [
+      "paper:2512.00260",
+      "paper:2512.05306"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

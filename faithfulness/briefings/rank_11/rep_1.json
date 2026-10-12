@@ -1,0 +1,214 @@
+{
+ "rank": 11,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:direct preference optimization",
+    "role": "Serves as a preference-based fine-tuning objective to optimize language models on preference data.",
+    "evidence_ids": [
+     "paper:2512.13741",
+     "paper:2605.12339",
+     "paper:2609.21094"
+    ]
+   },
+   {
+    "term_id": "T:instruction following",
+    "role": "Represents the core ability and objective of language models that can experience internal conflict or trade-offs during alignment.",
+    "evidence_ids": [
+     "paper:2512.13741",
+     "paper:2609.21094"
+    ]
+   },
+   {
+    "term_id": "T:safety alignment",
+    "role": "Represents the objective of securing models against harmful queries or ensuring ethical preference alignment.",
+    "evidence_ids": [
+     "paper:2512.13741",
+     "paper:2609.21094"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Aligning large language models to balance safety and general capabilities such as instruction following.",
+   "evidence_ids": [
+    "paper:2512.13741",
+    "paper:2609.21094"
+   ]
+  },
+  "limitation": {
+   "text": "Adversarial prompts and preference tuning can trigger high-variance trajectories or internal conflicts between safety alignment and instruction-following objectives.",
+   "evidence_ids": [
+    "paper:2512.13741",
+    "paper:2609.21094"
+   ]
+  },
+  "combination": {
+   "text": "Direct preference optimization is used to fine-tune models on preference datasets for safety and ethical value alignment while managing behaviors related to instruction following.",
+   "evidence_ids": [
+    "paper:2512.13741",
+    "paper:2609.21094"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:direct preference optimization",
+     "role": "Serves as a preference-based fine-tuning objective to optimize language models on preference data.",
+     "evidence_ids": [
+      "paper:2512.13741",
+      "paper:2605.12339",
+      "paper:2609.21094"
+     ]
+    },
+    {
+     "term_id": "T:instruction following",
+     "role": "Represents the core ability and objective of language models that can experience internal conflict or trade-offs during alignment.",
+     "evidence_ids": [
+      "paper:2512.13741",
+      "paper:2609.21094"
+     ]
+    },
+    {
+     "term_id": "T:safety alignment",
+     "role": "Represents the objective of securing models against harmful queries or ensuring ethical preference alignment.",
+     "evidence_ids": [
+      "paper:2512.13741",
+      "paper:2609.21094"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Aligning large language models to balance safety and general capabilities such as instruction following.",
+    "evidence_ids": [
+     "paper:2512.13741",
+     "paper:2609.21094"
+    ]
+   },
+   "limitation": {
+    "text": "Adversarial prompts and preference tuning can trigger high-variance trajectories or internal conflicts between safety alignment and instruction-following objectives.",
+    "evidence_ids": [
+     "paper:2512.13741",
+     "paper:2609.21094"
+    ]
+   },
+   "combination": {
+    "text": "Direct preference optimization is used to fine-tune models on preference datasets for safety and ethical value alignment while managing behaviors related to instruction following.",
+    "evidence_ids": [
+     "paper:2512.13741",
+     "paper:2609.21094"
+    ]
+   }
+  },
+  "summary": {
+   "text": "Large Language Models can experience internal conflicts or trade-offs between safety alignment and instruction-following objectives. Direct preference optimization is used to fine-tune models on preference datasets for safety and ethical value alignment while managing behaviors related to instruction following.",
+   "evidence_ids": [
+    "paper:2512.13741",
+    "paper:2609.21094"
+   ]
+  },
+  "target_user": {
+   "basis": "evidence",
+   "text": "The available software packages and repositories reflect a user base of machine learning developers and researchers working with model fine-tuning, evaluation tooling, and mixture-of-experts architectures.",
+   "evidence_ids": [
+    "pkg:pip-skill",
+    "pkg:theriac",
+    "pkg:turbo-alignment",
+    "repo:allenai/reward-bench",
+    "repo:amd-agi/instella-moe",
+    "repo:sail-sg/sdft",
+    "repo:syuan03/mm-ifengine",
+    "repo:xuankunrong/safegrpo"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Aligning large language models to balance safety and general capabilities such as instruction following.",
+   "evidence_ids": [
+    "paper:2512.13741",
+    "paper:2609.21094"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Direct preference optimization fine-tuning effectively removes biases and adapts models for safety and ethical value alignment.",
+   "evidence_ids": [
+    "paper:2609.21094"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Axis V (viability) was designated as the riskiest assumption due to missing evidence in the bundle. We assume that enterprise customers are willing to pay for a direct preference optimization tool that balances safety and instruction following.",
+   "evidence_ids": [
+    "dvf:11"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with machine learning engineers to evaluate willingness to pay for a specialized direct preference optimization service focused on balancing safety alignment and instruction following.",
+   "evidence_ids": [
+    "dvf:11"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: 40 percent of interviewed machine learning leads confirm willingness to pay for the direct preference optimization alignment service during price acceptance testing.",
+   "evidence_ids": [
+    "dvf:11"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: fewer than 10 percent of interviewed prospective users express interest in purchasing or adopting the alignment offering.",
+    "evidence_ids": [
+     "dvf:11"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:allenai/reward-bench",
+     "use": "Used as an evaluation tool for reward models to assess alignment performance.",
+     "evidence_ids": [
+      "repo:allenai/reward-bench"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:turbo-alignment",
+     "use": "Used to support alignment workflows and model fine-tuning tasks.",
+     "evidence_ids": [
+      "pkg:turbo-alignment"
+     ],
+     "version": "0.0.4"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized preference data curation module that generates balanced pairs for simultaneous safety alignment and instruction-following optimization.",
+     "evidence_ids": [
+      "paper:2512.13741",
+      "paper:2609.21094"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

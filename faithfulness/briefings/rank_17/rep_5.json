@@ -1,0 +1,225 @@
+{
+ "rank": 17,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:direct preference optimization",
+    "role": "Direct preference optimization is used as a preference-based fine-tuning method to align language models.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   },
+   {
+    "term_id": "T:code generation",
+    "role": "Code generation serves as the downstream capability being improved and evaluated.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   },
+   {
+    "term_id": "T:instruction following",
+    "role": "Instruction following represents broader language model capabilities and tasks evaluated alongside code generation.",
+    "evidence_ids": [
+     "paper:2609.13916"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets code generation and instruction-following tasks.",
+   "evidence_ids": [
+    "paper:2609.13916",
+    "paper:2603.29292"
+   ]
+  },
+  "limitation": {
+   "text": "Improving code generation typically relies on costly external resources such as powerful teacher models or reliable test units when obtaining reference solutions and test oracles is difficult.",
+   "evidence_ids": [
+    "paper:2603.29292"
+   ]
+  },
+  "combination": {
+   "text": "Direct preference optimization is combined with self-improving mechanisms using behavioral consensus to weight preference pairs, mitigating the impact of noisy self-generated supervision for code generation.",
+   "evidence_ids": [
+    "paper:2603.29292"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:direct preference optimization",
+     "role": "Direct preference optimization is used as a preference-based fine-tuning method to align language models.",
+     "evidence_ids": [
+      "paper:2603.29292"
+     ]
+    },
+    {
+     "term_id": "T:code generation",
+     "role": "Code generation serves as the downstream capability being improved and evaluated.",
+     "evidence_ids": [
+      "paper:2603.29292"
+     ]
+    },
+    {
+     "term_id": "T:instruction following",
+     "role": "Instruction following represents broader language model capabilities and tasks evaluated alongside code generation.",
+     "evidence_ids": [
+      "paper:2609.13916"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets code generation and instruction-following tasks.",
+    "evidence_ids": [
+     "paper:2609.13916",
+     "paper:2603.29292"
+    ]
+   },
+   "limitation": {
+    "text": "Improving code generation typically relies on costly external resources such as powerful teacher models or reliable test units when obtaining reference solutions and test oracles is difficult.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   },
+   "combination": {
+    "text": "Direct preference optimization is combined with self-improving mechanisms using behavioral consensus to weight preference pairs, mitigating the impact of noisy self-generated supervision for code generation.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination applies direct preference optimization alongside self-improving mechanisms using behavioral consensus to weight preference pairs, mitigating the impact of noisy self-generated supervision for code generation and instruction-following tasks. paper:2603.29292 paper:2609.13916",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2609.13916"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Software developers and engineering teams utilizing open-source models for automated coding tasks. repo:amd-agi/instella-moe",
+   "evidence_ids": [
+    "repo:amd-agi/instella-moe"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Improving the code generation capabilities of large language models without access to a superior teacher and a test oracle. paper:2603.29292",
+   "evidence_ids": [
+    "paper:2603.29292"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Mitigating the impact of noisy self-generated supervision during preference-based fine-tuning for code generation. paper:2603.29292",
+   "evidence_ids": [
+    "paper:2603.29292"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The viability axis is designated as the riskiest assumption due to missing evidence. dvf:17",
+   "evidence_ids": [
+    "dvf:17"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with potential enterprise users to validate economic viability and willingness to pay for self-improving code generation models. dvf:17",
+   "evidence_ids": [
+    "dvf:17"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold: 40 percent positive pricing acceptance in target customer interviews. dvf:17",
+   "evidence_ids": [
+    "dvf:17"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold: 10 percent of interviewed enterprise customers express willingness to pay for the proposed solution. dvf:17",
+    "evidence_ids": [
+     "dvf:17"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:amd-agi/instella-moe",
+     "use": "Used as a fully open mixture-of-experts language model foundation for instruction and code tasks. repo:amd-agi/instella-moe",
+     "evidence_ids": [
+      "repo:amd-agi/instella-moe"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:safeailab/eagle",
+     "use": "Used for architectural implementation reference. repo:safeailab/eagle",
+     "evidence_ids": [
+      "repo:safeailab/eagle"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:allenai/reward-bench",
+     "use": "Used as an evaluation tool for reward models. repo:allenai/reward-bench",
+     "evidence_ids": [
+      "repo:allenai/reward-bench"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:evoeval",
+     "use": "Used for evaluating code generation capabilities. pkg:evoeval",
+     "evidence_ids": [
+      "pkg:evoeval"
+     ],
+     "version": "0.1.0"
+    },
+    {
+     "id": "pkg:turbo-alignment",
+     "use": "Used for alignment tasks. pkg:turbo-alignment",
+     "evidence_ids": [
+      "pkg:turbo-alignment"
+     ],
+     "version": "0.0.4"
+    },
+    {
+     "id": "pkg:jetts",
+     "use": "Used as an auxiliary software package. pkg:jetts",
+     "evidence_ids": [
+      "pkg:jetts"
+     ],
+     "version": "0.0.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Implement consensus-driven direct preference optimization weighting modules to process self-generated supervision pairs. paper:2603.29292",
+     "evidence_ids": [
+      "paper:2603.29292"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

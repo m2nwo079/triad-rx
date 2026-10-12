@@ -1,0 +1,627 @@
+{
+ "meta": {
+  "step": "briefing_checks",
+  "created": "2026-10-12",
+  "git_commit": "1e6a1e55aaf760c48c5bd6f1ee51758b95e628df",
+  "data_cutoff": "2026-09-24T17:59:54+00:00",
+  "checks": {
+   "superiority_phrases": [
+    "outperform",
+    "state-of-the-art",
+    "state of the art",
+    "sota",
+    "surpass",
+    "superior",
+    "best-in-class",
+    "beats"
+   ],
+   "threshold_marker": "proposed threshold",
+   "mvp_keywords": {
+    "F": [
+     "proof of concept",
+     "poc",
+     "prototype"
+    ],
+    "V": [
+     "interview",
+     "price"
+    ],
+    "D": [
+     "landing page",
+     "interview"
+    ]
+   }
+  },
+  "outputs": 100
+ },
+ "summary": {
+  "sentences": {
+   "evidential": 913,
+   "prescriptive": 506
+  },
+  "flagged_items": 52,
+  "flag_counts": {
+   "unmarked_threshold": 38,
+   "riskiest_axis_not_named": 9,
+   "superiority:outperform": 4,
+   "superiority:superior": 2,
+   "missing_designation_not_stated": 1
+  }
+ },
+ "flags": [
+  {
+   "rank": 1,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The lowest V score (1.0) indicates that commercial viability and customer willingness to pay for this combined causal discovery and prediction tooling are unproven [dvf:1].",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 1,
+   "rep": 2,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The viability axis score is 1.0, indicating that target organizations will not pay for or adopt simultaneous causal network inference and forecasting software.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 1,
+   "rep": 2,
+   "kind": "prescriptive",
+   "field": "mvp",
+   "sentence_index": 0,
+   "sentence": "Conduct customer interviews and price acceptance tests with researchers and engineers to determine willingness to pay for simultaneous causal network inference and forecasting tools, proposing a threshold of $500 per month for enterprise licensing based on dvf:1.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 1,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The lowest viability score (V score: 1.0) on axis V implies that users will not adopt or pay for this simultaneous causal network inference and forecasting framework under real-world operational constraints [dvf:1].",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 1,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The viability axis score is 1.0 (lowest), indicating that target users are not willing to pay for or adopt a combined causal discovery and prediction software tool.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 1,
+   "rep": 5,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Based on the viability axis score of 1.0 from dvf:1, the riskiest assumption is that industrial practitioners will pay for software combining PC-based causal discovery and prediction rather than relying on existing standalone forecasting tools or free open-source scripts.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The lowest DVF axis score is D at 2.0 (dvf:5), which means the riskiest assumption is that municipal transportation agencies and traffic engineers will actively desire and adopt a deep reinforcement learning and PPO-based traffic control solution over traditional controllers.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "riskiest_axis_not_named"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 2,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Transportation agencies and municipal authorities will adopt and trust a deep reinforcement learning-based traffic signal control system for real-world deployment despite its black-box nature and safety compliance requirements, as reflected by desirability score 2.0 on DVF axis D.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 2,
+   "kind": "prescriptive",
+   "field": "mvp",
+   "sentence_index": 0,
+   "sentence": "Launch a demand landing page outlining the adaptive traffic signal control system and conduct problem interviews with municipal traffic engineers to validate workflow integration and willingness to pilot, motivated by DVF desirability score 2.0.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Transportation agencies and city planners will adopt deep reinforcement learning and PProximal Policy Optimization-based traffic signal controllers over established standard practices due to a DVF score of D=2.0.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "mvp",
+   "sentence_index": 0,
+   "sentence": "Conduct problem interviews and launch a demand landing page outlining the benefits of PPO-driven adaptive traffic signal control to test whether municipal traffic engineers are willing to trial the system, targeting a proposed conversion threshold of 20 percent.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "riskiest_axis_not_named"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "riskiest_axis_not_named"
+   ]
+  },
+  {
+   "rank": 5,
+   "rep": 5,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Municipal transportation agencies and urban planners will experience sufficient desirability and operational trust in black-box deep reinforcement learning models to adopt PPO-based adaptive traffic signal control systems, as reflected by axis D score 2.0.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 7,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The lowest feasibility score (F: 3.0) on dvf:7 indicates that integrating sparse variational Gaussian process inference into Kolmogorov-Arnold network topologies may suffer from unstable analytic moment matching or prohibitive scaling bottlenecks when propagating uncertainty through deep additive layers on larger scientific datasets.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 7,
+   "rep": 2,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Analytic moment matching across deep additive Kolmogorov-Arnold network structures can accurately approximate full Gaussian process posteriors without prohibitive error propagation or scaling bottlenecks, given a score of F: 3.0 on the feasibility axis.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 7,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Analytic moment matching can successfully propagate uncertainty through deep additive structures in Sparse Variational Gaussian Process Kolmogorov-Arnold Networks (SVGP-KAN) without prohibitive computational overhead or loss of calibration, given feasibility score F: 3.0.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 7,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The riskiest assumption regarding feasibility (score 3.0 on DVF axis F) is that analytic moment matching and inducing points can successfully propagate uncertainty through deep additive Kolmogorov-Arnold network structures without prohibitive loss of accuracy or scaling bottlenecks.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 7,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "kill_criteria[0]",
+   "sentence_index": 0,
+   "sentence": "If training time scales worse than quadratic with sample size or if uncertainty calibration metrics fail to outperform standard multi-layer perceptron baselines, the approach is killed.",
+   "flags": [
+    "superiority:outperform"
+   ]
+  },
+  {
+   "rank": 7,
+   "rep": 5,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "riskiest_axis_not_named"
+   ]
+  },
+  {
+   "rank": 8,
+   "rep": 2,
+   "kind": "prescriptive",
+   "field": "kill_criteria[0]",
+   "sentence_index": 0,
+   "sentence": "Fewer than 20 percent of interviewed prospective users express interest in adopting the simulation-based parameter estimation framework during customer interviews.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 8,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "riskiest_axis_not_named"
+   ]
+  },
+  {
+   "rank": 9,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Users have sufficient demand for a standalone Bayesian optimization tuning tool for scarce-data prediction systems to justify adopting it over existing baselines, given the D score of 1.0.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 9,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "kill_criteria[1]",
+   "sentence_index": 0,
+   "sentence": "Fewer than 3 out of 10 interviewed engineering teams identify scarce-data prediction tuning as a primary workflow pain point.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 9,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "riskiest_axis_not_named"
+   ]
+  },
+  {
+   "rank": 9,
+   "rep": 4,
+   "kind": "evidential",
+   "field": "concept_frame.combination",
+   "sentence_index": 0,
+   "sentence": "Bayesian optimization uses probabilistic models to guide the search for better configurations and evaluate acquisition functions, frequently outperforming baseline random search in finding superior configurations within limited evaluation budgets.",
+   "flags": [
+    "superiority:outperform",
+    "superiority:superior"
+   ]
+  },
+  {
+   "rank": 9,
+   "rep": 4,
+   "kind": "evidential",
+   "field": "summary",
+   "sentence_index": 0,
+   "sentence": "Bayesian optimization uses probabilistic models to guide the search for better configurations and evaluate acquisition functions, frequently outperforming baseline random search in finding superior configurations within limited evaluation budgets.",
+   "flags": [
+    "superiority:outperform",
+    "superiority:superior"
+   ]
+  },
+  {
+   "rank": 9,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Target users will actively adopt and value a Bayesian optimization tool for constrained prediction and search workflows over familiar trial-and-error or random search methods, given that axis D score is 1.0.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 9,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "riskiest_axis_not_named"
+   ]
+  },
+  {
+   "rank": 11,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "missing_designation_not_stated"
+   ]
+  },
+  {
+   "rank": 12,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The riskiest assumption is that combining global-local attention with transformer and decoder components can achieve low parameter counts and fast inference speed without degrading audio-visual speech separation quality, as indicated by feasibility score 2.0.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 12,
+   "rep": 2,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The riskiest assumption, constrained by feasibility score 2.0 (dvf:12), is that incorporating global-local attention into every layer of a lightweight transformer decoder will maintain stable convergence and integration during training without requiring excessive manual tuning.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 12,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Given feasibility axis score 2.0 (dvf:12), the riskiest assumption is that integrating global-local attention blocks into a transformer decoder separator can maintain high audio-visual separation quality while achieving significant parameter and MAC reductions in real-world scenarios.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 12,
+   "rep": 5,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Given the feasibility score of 2.0 (dvf:12), the riskiest assumption is that integrating global-local attention blocks into a lightweight encoder-decoder structure can maintain or improve speech separation quality while drastically cutting parameters and MACs without suffering from training divergence or optimization instability.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 13,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Given axis F score 2.0, the riskiest assumption is that combining Gaussian process regression and operator learning will maintain stable calibration and computational tractability during sequential Bayesian optimization across complex function spaces without prohibitive training overhead.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 13,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "riskiest_axis_not_named"
+   ]
+  },
+  {
+   "rank": 13,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Given feasibility axis score 2.0, the riskiest assumption is that exact kernel regressions and Gaussian process residual corrections can scale stably to high-dimensional operator network feature spaces without prohibitive computational overhead during active learning iterations.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 13,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The combination scores 2.0 on feasibility, indicating that integrating Gaussian process surrogates with Bayesian optimization and operator learning may encounter significant technical bottlenecks in scaling across high-dimensional function spaces.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 13,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "kill_criteria[0]",
+   "sentence_index": 0,
+   "sentence": "The optimization loop fails to outperform single-fidelity baselines under the proposed threshold: 50 percent evaluation budget constraints.",
+   "flags": [
+    "superiority:outperform"
+   ]
+  },
+  {
+   "rank": 13,
+   "rep": 5,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The riskiest assumption, driven by feasibility score F: 2.0 (dvf:13), is that the computational overhead of combining operator learning with Gaussian process surrogate models and sequential Bayesian optimization can be maintained within tractable limits during online inference.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 13,
+   "rep": 5,
+   "kind": "prescriptive",
+   "field": "building_blocks.to_build[0]",
+   "sentence_index": 0,
+   "sentence": "An integration adapter to connect epistemic operator network uncertainty outputs directly into the Bayesian optimization acquisition loop, addressing feasibility score F: 2.0 (dvf:13).",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 15,
+   "rep": 2,
+   "kind": "prescriptive",
+   "field": "kill_criteria[0]",
+   "sentence_index": 0,
+   "sentence": "Fewer than 10 percent of interviewed prospective users express any willingness to pay or commercial need for the uncertainty quantification capabilities, indicating failure on axis V.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 16,
+   "rep": 2,
+   "kind": "prescriptive",
+   "field": "target_user.hypothesis",
+   "sentence_index": 0,
+   "sentence": "No evidence in the bundle; hypothesis to test: 3D content creators, game developers, and AR/VR application designers who need to rapidly synthesize complete indoor and scene-scale environments from single or 360-degree images.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 17,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "kill_criteria[0]",
+   "sentence_index": 0,
+   "sentence": "Fewer than 10 percent of interviewed practitioners express willingness to adopt or pay for the direct preference optimization tooling (dvf:17).",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 19,
+   "rep": 1,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The viability axis score of 1.0 indicates that market demand, monetization potential, and willingness to pay for commercial VQ-VAE motion generation and prediction tools remain unproven.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 19,
+   "rep": 2,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "According to axis V with a score of 1.0 (lowest), the riskiest assumption is that customers are willing to pay for this VQ-VAE-based motion generation and prediction solution at a price that ensures commercial viability.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 19,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Based on the V score of 1.0 (dvf:19), the riskiest assumption is that customers are willing to pay for this combined motion generation and prediction solution.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 19,
+   "rep": 3,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption/mvp",
+   "sentence_index": null,
+   "sentence": null,
+   "flags": [
+    "riskiest_axis_not_named"
+   ]
+  },
+  {
+   "rank": 19,
+   "rep": 4,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "Given the viability score of 1.0 (lowest) from dvf:19, the riskiest assumption is that customers will pay for a VQ-VAE-based motion generation and prediction system.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 19,
+   "rep": 5,
+   "kind": "prescriptive",
+   "field": "riskiest_assumption",
+   "sentence_index": 0,
+   "sentence": "The viability axis score is 1.0, indicating that customers are unwilling or unable to pay for a VQ-VAE-based topology-aware motion prediction framework.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  },
+  {
+   "rank": 19,
+   "rep": 5,
+   "kind": "prescriptive",
+   "field": "kill_criteria[0]",
+   "sentence_index": 0,
+   "sentence": "Fewer than 10 percent of interviewed prospective customers express willingness to pay for the proposed pricing model during validation testing.",
+   "flags": [
+    "unmarked_threshold"
+   ]
+  }
+ ]
+}

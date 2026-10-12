@@ -1,0 +1,215 @@
+{
+ "rank": 5,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:proximal policy optimization",
+    "role": "Proximal Policy Optimization is used as the underlying policy or actor-critic learning algorithm to optimize signal timing decisions, update network weights, or drive controller behavior.",
+    "evidence_ids": [
+     "paper:2607.03703",
+     "paper:2606.22108",
+     "paper:2509.21745",
+     "patent:11783702"
+    ]
+   },
+   {
+    "term_id": "T:deep reinforcement learning",
+    "role": "Deep reinforcement learning provides the foundational algorithmic paradigm and framework for training adaptive control agents using real-time intersection or traffic environment observations.",
+    "evidence_ids": [
+     "paper:2606.22108",
+     "paper:2605.29693",
+     "paper:2512.04653"
+    ]
+   },
+   {
+    "term_id": "T:traffic signal control",
+    "role": "Traffic signal control serves as the target operational environment and task where agents dynamically allocate green-phase durations, cycle lengths, or signal timing to reduce vehicle delays and queues.",
+    "evidence_ids": [
+     "paper:2606.22108",
+     "paper:2509.21745",
+     "patent:11783702"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Adaptive traffic signal control to optimize signal timing, reduce vehicle delays, and manage queues in urban traffic networks.",
+   "evidence_ids": [
+    "paper:2606.22108",
+    "paper:2509.21745",
+    "patent:11783702"
+   ]
+  },
+  "limitation": {
+   "text": "Traditional traffic signal control systems and standard reward formulations often fail to adapt to dynamic traffic conditions or produce short-sighted and unstable policies.",
+   "evidence_ids": [
+    "paper:2605.29693",
+    "paper:2509.21745"
+   ]
+  },
+  "combination": {
+   "text": "Proximal Policy Optimization is integrated as a reinforcement learning algorithm within deep reinforcement learning frameworks to drive adaptive traffic signal controllers that dynamically determine signal phases and durations based on traffic state inputs.",
+   "evidence_ids": [
+    "paper:2606.22108",
+    "paper:2602.12296",
+    "patent:11783702"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:proximal policy optimization",
+     "role": "Proximal Policy Optimization is used as the underlying policy or actor-critic learning algorithm to optimize signal timing decisions, update network weights, or drive controller behavior.",
+     "evidence_ids": [
+      "paper:2607.03703",
+      "paper:2606.22108",
+      "paper:2509.21745",
+      "patent:11783702"
+     ]
+    },
+    {
+     "term_id": "T:deep reinforcement learning",
+     "role": "Deep reinforcement learning provides the foundational algorithmic paradigm and framework for training adaptive control agents using real-time intersection or traffic environment observations.",
+     "evidence_ids": [
+      "paper:2606.22108",
+      "paper:2605.29693",
+      "paper:2512.04653"
+     ]
+    },
+    {
+     "term_id": "T:traffic signal control",
+     "role": "Traffic signal control serves as the target operational environment and task where agents dynamically allocate green-phase durations, cycle lengths, or signal timing to reduce vehicle delays and queues.",
+     "evidence_ids": [
+      "paper:2606.22108",
+      "paper:2509.21745",
+      "patent:11783702"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Adaptive traffic signal control to optimize signal timing, reduce vehicle delays, and manage queues in urban traffic networks.",
+    "evidence_ids": [
+     "paper:2606.22108",
+     "paper:2509.21745",
+     "patent:11783702"
+    ]
+   },
+   "limitation": {
+    "text": "Traditional traffic signal control systems and standard reward formulations often fail to adapt to dynamic traffic conditions or produce short-sighted and unstable policies.",
+    "evidence_ids": [
+     "paper:2605.29693",
+     "paper:2509.21745"
+    ]
+   },
+   "combination": {
+    "text": "Proximal Policy Optimization is integrated as a reinforcement learning algorithm within deep reinforcement learning frameworks to drive adaptive traffic signal controllers that dynamically determine signal phases and durations based on traffic state inputs.",
+    "evidence_ids": [
+     "paper:2606.22108",
+     "paper:2602.12296",
+     "patent:11783702"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This briefing examines the combination of proximal policy optimization, deep reinforcement learning, and traffic signal control for adaptive urban traffic management. Proximal Policy Optimization is integrated as the underlying learning algorithm within deep reinforcement learning frameworks to drive controllers that dynamically allocate green-phase durations and manage signal timing. Cited studies demonstrate that these approaches can reduce average vehicle delays, lower queue lengths, and decrease emissions compared to conventional control methods.",
+   "evidence_ids": [
+    "paper:2606.22108",
+    "paper:2509.21745",
+    "patent:11783702"
+   ]
+  },
+  "target_user": {
+   "basis": "evidence",
+   "text": "Company-managed organizations and entities operating within transportation, infrastructure, and intelligent traffic management sectors.",
+   "evidence_ids": [
+    "patent:11783702",
+    "patent:20230376781"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Dynamically allocate green-phase durations, optimize signal timing, and manage queues in urban traffic networks to reduce vehicle delays and emissions.",
+   "evidence_ids": [
+    "paper:2606.22108",
+    "paper:2509.21745",
+    "patent:11783702"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Adaptive traffic signal control controllers leverage reinforcement learning to dynamically determine signal phases and durations based on traffic state inputs, overcoming the limitations of traditional fixed-time or actuated control systems.",
+   "evidence_ids": [
+    "paper:2606.22108",
+    "paper:2509.21745",
+    "patent:11783702"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Transportation agencies and city planners will adopt deep reinforcement learning and PProximal Policy Optimization-based traffic signal controllers over established standard practices due to a DVF score of D=2.0.",
+   "evidence_ids": [
+    "dvf:5"
+   ],
+   "axis": "D",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Conduct problem interviews and launch a demand landing page outlining the benefits of PPO-driven adaptive traffic signal control to test whether municipal traffic engineers are willing to trial the system, targeting a proposed conversion threshold of 20 percent.",
+   "evidence_ids": [
+    "dvf:5",
+    "paper:2606.22108"
+   ],
+   "type": "demand landing page and problem interviews"
+  },
+  "success_metric": {
+   "text": "Landing page visitor conversion rate and confirmed sign-ups for problem interviews, with a proposed threshold of 25 percent expressed interest from contacted traffic management professionals.",
+   "evidence_ids": [
+    "dvf:5"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 5 percent of targeted municipal stakeholders sign up for problem interviews or express willingness to evaluate the PPO-driven traffic controller after 30 days.",
+    "evidence_ids": [
+     "dvf:5"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:cpwan/rlor",
+     "use": "Provides reinforcement learning implementations for operations research problems using OpenAI Gym and CleanRL.",
+     "evidence_ids": [
+      "repo:cpwan/rlor"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized PPO training wrapper and simulation interface tailored to parse microscopic traffic simulator states and enforce safety-constrained phase transition rules.",
+     "evidence_ids": [
+      "paper:2607.03703",
+      "paper:2606.22108"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

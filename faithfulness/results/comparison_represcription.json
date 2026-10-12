@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "step": "faithfulness_comparison",
+    "created": "2026-10-12",
+    "git_commit": "a8ab8ca50b1f25a3f5cc011101da353bbfaa9e73",
+    "environment": {
+      "python": "3.12.10",
+      "platform": "macOS-15.7.9-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "lightgbm": "4.7.0"
+      }
+    },
+    "decision_rule": {
+      "statistic": "Q1 Wilson 95% lower bound",
+      "threshold": "Q1 point estimate of the base run",
+      "rule": "improved only if the lower bound exceeds the threshold"
+    }
+  },
+  "decision": {
+    "q1_lower_bound": 0.3561453797951198,
+    "threshold": 0.56,
+    "verdict": "not shown"
+  },
+  "faithfulness": {
+    "q1": {
+      "supported": 45,
+      "n": 100,
+      "rate": 0.45,
+      "wilson_95": [
+        0.3561453797951198,
+        0.5475539700255787
+      ]
+    },
+    "q1_without_business": {
+      "supported": 35,
+      "n": 85,
+      "rate": 0.4117647058823529,
+      "wilson_95": [
+        0.31317005505324164,
+        0.5179898538551204
+      ]
+    },
+    "q1_business_evidence": {
+      "supported": 10,
+      "n": 15,
+      "rate": 0.6666666666666666,
+      "wilson_95": [
+        0.41713547738519774,
+        0.8482367556028526
+      ]
+    },
+    "business_basis": {
+      "by_field": {
+        "target_user": {
+          "evidence": 24,
+          "hypothesis": 47
+        },
+        "jtbd": {
+          "evidence": 47,
+          "hypothesis": 24
+        },
+        "value_prop": {
+          "evidence": 40,
+          "hypothesis": 31
+        }
+      },
+      "fields": 213,
+      "hypothesis": 102,
+      "hypothesis_share": 0.4788732394366197
+    },
+    "evidential_items_by_field": {
+      "concept_frame": 455,
+      "summary": 71,
+      "target_user": 24,
+      "jtbd": 47,
+      "value_prop": 40,
+      "building_blocks": 183
+    },
+    "frames": {
+      "runs": 100,
+      "complete": 71,
+      "insufficient": 29,
+      "reasons": {
+        "comparison_only": 7,
+        "term_mismatch": 0,
+        "no_combination_evidence": 22,
+        "other": 0
+      },
+      "briefing_valid": 71
+    },
+    "q2_frame_agreement": {
+      "agreeing": 94,
+      "total": 100,
+      "rate": 0.94,
+      "wilson_95": [
+        0.8752318455410406,
+        0.9722138760368118
+      ]
+    },
+    "checks": {
+      "flagged_items": 52,
+      "flag_counts": {
+        "unmarked_threshold": 38,
+        "riskiest_axis_not_named": 9,
+        "superiority:outperform": 4,
+        "superiority:superior": 2,
+        "missing_designation_not_stated": 1
+      },
+      "sentences": {
+        "evidential": 913,
+        "prescriptive": 506
+      }
+    }
+  },
+  "represcription": {
+    "q1": {
+      "supported": 56,
+      "n": 100,
+      "rate": 0.56,
+      "wilson_95": [
+        0.4622810465167699,
+        0.6532797336983921
+      ]
+    },
+    "q1_without_business": {
+      "supported": 54,
+      "n": 84,
+      "rate": 0.6428571428571429,
+      "wilson_95": [
+        0.5362131509036315,
+        0.7370063552636087
+      ]
+    },
+    "q1_business_evidence": {
+      "supported": 2,
+      "n": 16,
+      "rate": 0.125,
+      "wilson_95": [
+        0.03497748774324047,
+        0.36022827265758695
+      ]
+    },
+    "business_basis": {
+      "by_field": {
+        "target_user": {
+          "evidence": 87
+        },
+        "jtbd": {
+          "evidence": 87
+        },
+        "value_prop": {
+          "evidence": 87
+        }
+      },
+      "fields": 261,
+      "hypothesis": 0,
+      "hypothesis_share": 0.0
+    },
+    "evidential_items_by_field": {
+      "concept_frame": 535,
+      "summary": 87,
+      "target_user": 87,
+      "jtbd": 87,
+      "value_prop": 87,
+      "building_blocks": 248
+    },
+    "frames": {
+      "runs": 100,
+      "complete": 87,
+      "insufficient": 13,
+      "reasons": {
+        "comparison_only": 3,
+        "term_mismatch": 0,
+        "no_combination_evidence": 10,
+        "other": 0
+      },
+      "briefing_valid": 87
+    },
+    "q2_frame_agreement": {
+      "agreeing": 98,
+      "total": 100,
+      "rate": 0.98,
+      "wilson_95": [
+        0.929988209271456,
+        0.9944980324498376
+      ]
+    },
+    "checks": {
+      "flagged_items": 52,
+      "flag_counts": {
+        "unmarked_threshold": 43,
+        "riskiest_axis_not_named": 5,
+        "superiority:outperform": 1,
+        "dvf_number_mismatch": 2,
+        "missing_designation_not_stated": 1
+      },
+      "sentences": {
+        "evidential": 1350,
+        "prescriptive": 542
+      }
+    }
+  }
+}

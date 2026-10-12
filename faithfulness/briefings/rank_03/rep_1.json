@@ -1,0 +1,216 @@
+{
+ "rank": 3,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Normalizing flows parameterize conditional densities or serve as flexible probabilistic models to approximate complex posterior distributions.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2606.01346"
+    ]
+   },
+   {
+    "term_id": "T:bayesian inference",
+    "role": "Bayesian inference estimates posterior distributions of model parameters or latent quantities to provide calibrated uncertainty.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2605.29373"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Regression tasks involve modeling outcomes or conditional label distributions, and are sometimes combined with latent-space density scores or solved via regression losses.",
+    "evidence_ids": [
+     "paper:2607.18479",
+     "paper:2608.05557"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Bayesian inference and regression, including hierarchical and multi-dimensional distribution modeling.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2607.18479"
+   ]
+  },
+  "limitation": {
+   "text": "Traditional posterior estimation or inference techniques can be slow, computationally expensive, or restricted by rigid distributional assumptions.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2605.29373"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are integrated into Bayesian inference and regression frameworks to tractably model complex distributions and improve inference efficiency.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2607.18479"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Normalizing flows parameterize conditional densities or serve as flexible probabilistic models to approximate complex posterior distributions.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2606.01346"
+     ]
+    },
+    {
+     "term_id": "T:bayesian inference",
+     "role": "Bayesian inference estimates posterior distributions of model parameters or latent quantities to provide calibrated uncertainty.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2605.29373"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Regression tasks involve modeling outcomes or conditional label distributions, and are sometimes combined with latent-space density scores or solved via regression losses.",
+     "evidence_ids": [
+      "paper:2607.18479",
+      "paper:2608.05557"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Bayesian inference and regression, including hierarchical and multi-dimensional distribution modeling.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2607.18479"
+    ]
+   },
+   "limitation": {
+    "text": "Traditional posterior estimation or inference techniques can be slow, computationally expensive, or restricted by rigid distributional assumptions.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2605.29373"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are integrated into Bayesian inference and regression frameworks to tractably model complex distributions and improve inference efficiency.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2607.18479"
+    ]
+   }
+  },
+  "summary": {
+   "text": "Normalizing flows are integrated into Bayesian inference and regression frameworks to tractably model complex distributions and improve inference efficiency.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2607.18479"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Machine learning engineers and quantitative researchers utilizing repositories such as repo:atong01/conditional-flow-matching and packages such as pkg:torchcfm and pkg:xgboostlss.",
+   "evidence_ids": [
+    "repo:atong01/conditional-flow-matching",
+    "pkg:torchcfm",
+    "pkg:xgboostlss"
+   ]
+  },
+  "jtbd": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: To perform efficient Bayesian inference and multi-dimensional distribution modeling while bypassing the slow convergence rates or restrictive distributional assumptions of traditional approaches.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2605.29373"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Combining normalizing flows with Bayesian inference and regression yields tuning-free, flexible probability density estimation that is orders of magnitude faster than standard samplers.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2607.18479"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Axis V (viability) score is null and missing evidence; we assume that target customers are willing to pay for a commercial offering combining normalizing flows, Bayesian inference, and regression.",
+   "evidence_ids": [
+    "dvf:3"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and price acceptance tests with quantitative researchers and machine learning engineers to validate willingness to pay for the proposed combination.",
+   "evidence_ids": [
+    "dvf:3"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold: 40 percent of interviewed target users expressing a willingness to adopt and pay for the solution during price acceptance tests.",
+   "evidence_ids": [
+    "dvf:3"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold: 10 percent of interviewed prospective users indicate any willingness to pay or adopt the solution during customer interviews.",
+    "evidence_ids": [
+     "dvf:3"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:torchcfm",
+     "use": "Provides conditional flow matching capabilities for modeling complex probability distributions.",
+     "evidence_ids": [
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "pkg:xgboostlss",
+     "use": "Extends gradient boosting to probabilistic modeling for regression tasks.",
+     "evidence_ids": [
+      "repo:statmixedml/xgboostlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "repo:atong01/conditional-flow-matching",
+     "use": "Serves as a conditional flow matching library for implementing flow-based generative models.",
+     "evidence_ids": [
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified wrapper pipeline that integrates normalizing flow density estimators with Bayesian regression samplers and probabilistic tree boosting models.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2607.18479"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

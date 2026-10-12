@@ -1,0 +1,222 @@
+{
+ "rank": 16,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:transformer",
+    "role": "Serves as the underlying network architecture (such as diffusion transformers or scene encoders) to model spatial relationships, token values, or geometric structures.",
+    "evidence_ids": [
+     "paper:2607.19120",
+     "paper:2606.07117",
+     "paper:2604.14302"
+    ]
+   },
+   {
+    "term_id": "T:image to 3d",
+    "role": "Provides initial asset-level representations, geometric priors, or high-fidelity 3D assets generated from 2D inputs to seed the scene generation process.",
+    "evidence_ids": [
+     "paper:2607.05392",
+     "paper:2607.03990",
+     "paper:2605.30338"
+    ]
+   },
+   {
+    "term_id": "T:scene generation",
+    "role": "Acts as the overarching task that synthesizes complete, globally coherent 3D environments or layouts from visual and geometric priors.",
+    "evidence_ids": [
+     "paper:2607.05392",
+     "paper:2607.03990",
+     "paper:2605.30338"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets 3D indoor and scene-scale generation from visual inputs such as single or 360-degree images.",
+   "evidence_ids": [
+    "paper:2607.05392",
+    "paper:2607.03990"
+   ]
+  },
+  "limitation": {
+   "text": "Existing methods focus mainly on asset-level generation while neglecting structural layouts, or they struggle to extend single image-to-3D capabilities to the scale of entire scenes due to a lack of spatial coverage or scene data.",
+   "evidence_ids": [
+    "paper:2607.05392",
+    "paper:2607.03990"
+   ]
+  },
+  "combination": {
+   "text": "Frameworks adapt image-to-3D generators as convolutional operators or hybrid attention mechanisms within transformer-based pipelines to scale single-asset synthesis up to complete, structurally sound 3D indoor and scene-scale environments.",
+   "evidence_ids": [
+    "paper:2607.05392",
+    "paper:2607.03990"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:transformer",
+     "role": "Serves as the underlying network architecture (such as diffusion transformers or scene encoders) to model spatial relationships, token values, or geometric structures.",
+     "evidence_ids": [
+      "paper:2607.19120",
+      "paper:2606.07117",
+      "paper:2604.14302"
+     ]
+    },
+    {
+     "term_id": "T:image to 3d",
+     "role": "Provides initial asset-level representations, geometric priors, or high-fidelity 3D assets generated from 2D inputs to seed the scene generation process.",
+     "evidence_ids": [
+      "paper:2607.05392",
+      "paper:2607.03990",
+      "paper:2605.30338"
+     ]
+    },
+    {
+     "term_id": "T:scene generation",
+     "role": "Acts as the overarching task that synthesizes complete, globally coherent 3D environments or layouts from visual and geometric priors.",
+     "evidence_ids": [
+      "paper:2607.05392",
+      "paper:2607.03990",
+      "paper:2605.30338"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets 3D indoor and scene-scale generation from visual inputs such as single or 360-degree images.",
+    "evidence_ids": [
+     "paper:2607.05392",
+     "paper:2607.03990"
+    ]
+   },
+   "limitation": {
+    "text": "Existing methods focus mainly on asset-level generation while neglecting structural layouts, or they struggle to extend single image-to-3D capabilities to the scale of entire scenes due to a lack of spatial coverage or scene data.",
+    "evidence_ids": [
+     "paper:2607.05392",
+     "paper:2607.03990"
+    ]
+   },
+   "combination": {
+    "text": "Frameworks adapt image-to-3D generators as convolutional operators or hybrid attention mechanisms within transformer-based pipelines to scale single-asset synthesis up to complete, structurally sound 3D indoor and scene-scale environments.",
+    "evidence_ids": [
+     "paper:2607.05392",
+     "paper:2607.03990"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates transformer architectures with image-to-3D generation to address scene-scale 3D environment synthesis. By adapting image-to-3D generators as convolutional operators or utilizing hybrid attention mechanisms, single-asset capabilities are scaled up to coherent 3D indoor and scene-scale environments. This approach overcomes traditional limitations where methods focus purely on individual assets or lack the spatial coverage needed for global structural layouts.",
+   "evidence_ids": [
+    "paper:2607.05392",
+    "paper:2607.03990"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: 3D content creators, game developers, and AR/VR application designers who need to rapidly synthesize complete indoor and scene-scale environments from single or 360-degree images.",
+   "evidence_ids": [
+    "paper:2607.05392",
+    "paper:2607.03990"
+   ]
+  },
+  "jtbd": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: When building virtual environments, users want to convert single or panoramic photographs into globally coherent 3D scenes with proper structural layouts so that they can avoid manual asset placement and tedious per-scene optimization.",
+   "evidence_ids": [
+    "paper:2607.05392",
+    "paper:2607.03990",
+    "paper:2605.30338"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Automates the scaling of single image-to-3D assets into complete, structurally sound 3D indoor scenes using convolutional operators and hybrid attention, saving hours of manual layout modeling.",
+   "evidence_ids": [
+    "paper:2607.05392",
+    "paper:2607.03990"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated due to missing evidence on axis V (viability). We assume that target users are willing to pay for a tool that scales single image-to-3D generation into complete scene-scale 3D environments.",
+   "evidence_ids": [
+    "dvf:16"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with 3D designers using mockups of scene-scale generation workflows to validate willingness to pay and viability.",
+   "evidence_ids": [
+    "dvf:16"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive pricing acceptance and confirmed budget allocation during customer interviews.",
+   "evidence_ids": [
+    "dvf:16"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 15 percent of interviewed users express willingness to pay for scene-scale generation capabilities.",
+    "evidence_ids": [
+     "dvf:16"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:shirleymaxx/rest3d",
+     "use": "Reconstructs physically stable 3D scenes from a single image to provide structural and physical priors for the pipeline.",
+     "evidence_ids": [
+      "paper:2605.30338"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:haoz19/world-tracing",
+     "use": "Predicts pixel-aligned geometry beyond the visible surface to aid in generating complete 3D scene representations.",
+     "evidence_ids": [
+      "paper:2606.13652"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:3dtopia/openlrm",
+     "use": "Provides open-source implementation of large reconstruction models to assist with feed-forward asset generation.",
+     "evidence_ids": [
+      "repo:3dtopia/openlrm"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified interface and orchestration layer that combines convolutional operators for image-to-3D generators with transformer-based global layout attention mechanisms.",
+     "evidence_ids": [
+      "paper:2607.05392",
+      "paper:2607.03990"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

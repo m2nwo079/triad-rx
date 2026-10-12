@@ -1,0 +1,189 @@
+{
+ "rank": 12,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:global local attention",
+    "role": "The global-local attention mechanism integrates long-range semantic relationships and contextual information, or captures multi-scale dependencies to efficiently process inputs.",
+    "evidence_ids": [
+     "paper:2509.20701",
+     "paper:2509.23610"
+    ]
+   },
+   {
+    "term_id": "M:transformer",
+    "role": "The transformer architecture serves as the foundation backbone or encoder providing global semantic integration and sequence modeling.",
+    "evidence_ids": [
+     "paper:2509.20701"
+    ]
+   },
+   {
+    "term_id": "T:decoder",
+    "role": "The decoder constructs a lightweight encoder-decoder separator or generative component incorporating attention blocks.",
+    "evidence_ids": [
+     "paper:2509.23610"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets audio-visual speech separation (AVSS) to extract target speech in noisy acoustic environments.",
+   "evidence_ids": [
+    "paper:2509.23610"
+   ]
+  },
+  "limitation": {
+   "text": "Audio-visual speech separation methods usually involve a large number of parameters and require high computational cost, making them unacceptable when speech separation serves as a preprocessing step.",
+   "evidence_ids": [
+    "paper:2509.23610"
+   ]
+  },
+  "combination": {
+   "text": "An efficient audio-visual speech separation method constructs a lightweight encoder-decoder separator in which each layer incorporates a global-local attention block to efficiently capture multi-scale dependencies.",
+   "evidence_ids": [
+    "paper:2509.23610"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:global local attention",
+     "role": "The global-local attention mechanism integrates long-range semantic relationships and contextual information, or captures multi-scale dependencies to efficiently process inputs.",
+     "evidence_ids": [
+      "paper:2509.20701",
+      "paper:2509.23610"
+     ]
+    },
+    {
+     "term_id": "M:transformer",
+     "role": "The transformer architecture serves as the foundation backbone or encoder providing global semantic integration and sequence modeling.",
+     "evidence_ids": [
+      "paper:2509.20701"
+     ]
+    },
+    {
+     "term_id": "T:decoder",
+     "role": "The decoder constructs a lightweight encoder-decoder separator or generative component incorporating attention blocks.",
+     "evidence_ids": [
+      "paper:2509.23610"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets audio-visual speech separation (AVSS) to extract target speech in noisy acoustic environments.",
+    "evidence_ids": [
+     "paper:2509.23610"
+    ]
+   },
+   "limitation": {
+    "text": "Audio-visual speech separation methods usually involve a large number of parameters and require high computational cost, making them unacceptable when speech separation serves as a preprocessing step.",
+    "evidence_ids": [
+     "paper:2509.23610"
+    ]
+   },
+   "combination": {
+    "text": "An efficient audio-visual speech separation method constructs a lightweight encoder-decoder separator in which each layer incorporates a global-local attention block to efficiently capture multi-scale dependencies.",
+    "evidence_ids": [
+     "paper:2509.23610"
+    ]
+   }
+  },
+  "summary": {
+   "text": "An efficient audio-visual speech separation method constructs a lightweight encoder-decoder separator in which each layer incorporates a global-local attention block to efficiently capture multi-scale dependencies. The global-local attention mechanism integrates long-range semantic relationships and contextual information, or captures multi-scale dependencies to efficiently process inputs. The transformer architecture serves as the foundation backbone or encoder providing global semantic integration and sequence modeling.",
+   "evidence_ids": [
+    "paper:2509.20701",
+    "paper:2509.23610"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Machine learning engineers and researchers building speech preprocessing pipelines for noisy acoustic environments.",
+   "evidence_ids": [
+    "paper:2509.23610"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "The combination targets audio-visual speech separation (AVSS) to extract target speech in noisy acoustic environments.",
+   "evidence_ids": [
+    "paper:2509.23610"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Audio-visual speech separation methods usually involve a large number of parameters and require high computational cost, making them unacceptable when speech separation serves as a preprocessing step.",
+   "evidence_ids": [
+    "paper:2509.23610"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is that combining global-local attention with transformer and decoder components can achieve low parameter counts and fast inference speed without degrading audio-visual speech separation quality, as indicated by feasibility score 2.0.",
+   "evidence_ids": [
+    "dvf:12",
+    "paper:2509.23610"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Build a technical proof of concept using existing packages by implementing a lightweight encoder-decoder separator with global-local attention blocks to measure parameter count, MACs, and inference speed on benchmark datasets.",
+   "evidence_ids": [
+    "dvf:12",
+    "paper:2509.23610",
+    "pkg:transformers"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold: over 50 percent fewer parameters and a proposed threshold: over 2.4x reduction in MACs compared to baseline models while maintaining competitive speech separation quality.",
+   "evidence_ids": [
+    "paper:2509.23610"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The model fails to achieve a proposed threshold: over 6x faster GPU inference speed or exhibits higher computational cost than baseline preprocessing methods.",
+    "evidence_ids": [
+     "paper:2509.23610"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:transformers",
+     "use": "Provide foundational transformer and model-definition building blocks for sequence modeling and attention components.",
+     "evidence_ids": [
+      "paper:2509.20701",
+      "repo:huggingface/transformers"
+     ],
+     "version": "5.17.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A lightweight encoder-decoder separator module integrating global-local attention blocks for multi-scale dependency capture in audio-visual speech separation.",
+     "evidence_ids": [
+      "paper:2509.23610"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

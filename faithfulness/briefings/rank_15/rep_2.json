@@ -1,0 +1,245 @@
+{
+ "rank": 15,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Normalizing flows are used as expressive generative models or differentiable density estimators to learn probability distributions, latent spaces, or dependencies between edges.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2606.09857",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   },
+   {
+    "term_id": "T:density estimation",
+    "role": "Density estimation provides the modeling framework to infer probability densities, likelihoods, or conditional distributions from observed data or feature spaces.",
+    "evidence_ids": [
+     "paper:2606.30936",
+     "paper:2606.26687",
+     "paper:2606.26016"
+    ]
+   },
+   {
+    "term_id": "T:uncertainty quantification",
+    "role": "Uncertainty quantification evaluates epistemic and predictive uncertainty, capturing dispersion or posterior distributions over model parameters and structures.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2606.09857",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets probabilistic modeling and structured inference tasks such as Bayesian causal discovery, reduced-order model closure, multiscale dynamics, and shape modeling.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2606.09857",
+    "paper:2605.09718",
+    "paper:2604.11636"
+   ]
+  },
+  "limitation": {
+   "text": "Existing approaches often fail to capture complex dependencies, lack principled ways to incorporate expressive posterior learning, or do not adequately represent interactions and uncertainties in multiscale and structural systems.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2606.09857",
+    "paper:2605.09718",
+    "paper:2604.11636"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are integrated into density estimation and probabilistic frameworks to model complex probability distributions and support uncertainty quantification over latent spaces, parameters, and structural dependencies.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2606.09857",
+    "paper:2605.09718",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Normalizing flows are used as expressive generative models or differentiable density estimators to learn probability distributions, latent spaces, or dependencies between edges.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2606.09857",
+      "paper:2605.09718",
+      "paper:2604.11636",
+      "paper:2603.03188"
+     ]
+    },
+    {
+     "term_id": "T:density estimation",
+     "role": "Density estimation provides the modeling framework to infer probability densities, likelihoods, or conditional distributions from observed data or feature spaces.",
+     "evidence_ids": [
+      "paper:2606.30936",
+      "paper:2606.26687",
+      "paper:2606.26016"
+     ]
+    },
+    {
+     "term_id": "T:uncertainty quantification",
+     "role": "Uncertainty quantification evaluates epistemic and predictive uncertainty, capturing dispersion or posterior distributions over model parameters and structures.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2606.09857",
+      "paper:2605.09718",
+      "paper:2604.11636",
+      "paper:2603.03188"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets probabilistic modeling and structured inference tasks such as Bayesian causal discovery, reduced-order model closure, multiscale dynamics, and shape modeling.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2606.09857",
+     "paper:2605.09718",
+     "paper:2604.11636"
+    ]
+   },
+   "limitation": {
+    "text": "Existing approaches often fail to capture complex dependencies, lack principled ways to incorporate expressive posterior learning, or do not adequately represent interactions and uncertainties in multiscale and structural systems.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2606.09857",
+     "paper:2605.09718",
+     "paper:2604.11636"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are integrated into density estimation and probabilistic frameworks to model complex probability distributions and support uncertainty quantification over latent spaces, parameters, and structural dependencies.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2606.09857",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates normalizing flows into density estimation and probabilistic frameworks to model complex probability distributions, supporting uncertainty quantification across latent spaces, parameters, and structural dependencies.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2606.09857",
+    "paper:2605.09718",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Quantitative researchers, machine learning engineers, and simulation scientists working on complex multiscale systems, structural modeling, and causal discovery.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2606.09857",
+    "paper:2605.09718",
+    "paper:2604.11636"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Perform probabilistic modeling and structured inference tasks such as Bayesian causal discovery, reduced-order model closure, multiscale dynamics, and shape modeling.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2606.09857",
+    "paper:2605.09718",
+    "paper:2604.11636"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: By leveraging normalizing flows for density estimation and uncertainty quantification, users can capture complex probabilistic dependencies and represent multiscale or structural uncertainties more accurately than traditional methods.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2606.09857",
+    "paper:2605.09718",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is on axis V (viability), which was designated due to missing evidence. It is assumed that target users are willing to pay for or commercially adopt a normalizing flow and density estimation pipeline for uncertainty quantification.",
+   "evidence_ids": [
+    "dvf:15"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and price acceptance tests with quantitative researchers and ML engineers to evaluate commercial interest and willingness to pay for a normalizing flow-based density estimation and uncertainty quantification framework.",
+   "evidence_ids": [
+    "dvf:15"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness to pay and a positive validation score across initial customer interviews.",
+   "evidence_ids": [
+    "dvf:15"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than 10 percent of interviewed prospective users express any willingness to pay or commercial need for the uncertainty quantification capabilities, indicating failure on axis V.",
+    "evidence_ids": [
+     "dvf:15"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:apple/ml-tarflow",
+     "use": "Used as an open-source repository component for flow-based modeling.",
+     "evidence_ids": [
+      "repo:apple/ml-tarflow"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:orion-ml",
+     "use": "Used as a package component to support unsupervised detection and density-related workflows.",
+     "evidence_ids": [
+      "pkg:orion-ml"
+     ],
+     "version": "0.7.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized orchestration wrapper that integrates normalizing flow training loops with density estimation metrics and uncertainty quantification diagnostics.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2603.03188"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

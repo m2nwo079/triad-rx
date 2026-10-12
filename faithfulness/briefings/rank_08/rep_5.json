@@ -1,0 +1,214 @@
+{
+ "rank": 8,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Used to transform the unknown complex distribution of residual information into a simple base distribution, or to approximate posterior distributions and handle continuous parameter estimation.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2603.10991"
+    ]
+   },
+   {
+    "term_id": "T:parameter estimation",
+    "role": "The overarching task of estimating parameters of a model, which is framed as an inverse problem or simulation-based inference solved via neural networks and normalizing flows.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2603.10991"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Used during training via loss functions like mean-square error to map data or summary statistics to target parameters.",
+    "evidence_ids": [
+     "paper:2603.10991"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Simulation-based parameter estimation and solving the inverse problem for statistical models.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2603.10991"
+   ]
+  },
+  "limitation": {
+   "text": "Complex modeling tasks and intractable likelihoods in physical systems make traditional parameter estimation challenging.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2603.10991"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows and regression-based neural network architectures are combined in simulation-based frameworks to approximate posterior distributions or solve inverse problems of parameter estimation.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2603.10991"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Used to transform the unknown complex distribution of residual information into a simple base distribution, or to approximate posterior distributions and handle continuous parameter estimation.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2603.10991"
+     ]
+    },
+    {
+     "term_id": "T:parameter estimation",
+     "role": "The overarching task of estimating parameters of a model, which is framed as an inverse problem or simulation-based inference solved via neural networks and normalizing flows.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2603.10991"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Used during training via loss functions like mean-square error to map data or summary statistics to target parameters.",
+     "evidence_ids": [
+      "paper:2603.10991"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Simulation-based parameter estimation and solving the inverse problem for statistical models.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2603.10991"
+    ]
+   },
+   "limitation": {
+    "text": "Complex modeling tasks and intractable likelihoods in physical systems make traditional parameter estimation challenging.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2603.10991"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows and regression-based neural network architectures are combined in simulation-based frameworks to approximate posterior distributions or solve inverse problems of parameter estimation.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2603.10991"
+    ]
+   }
+  },
+  "summary": {
+   "text": "Normalizing flows and regression-based neural network architectures are combined in simulation-based frameworks to approximate posterior distributions or solve inverse problems of parameter estimation.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2603.10991"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Quantitative researchers and data scientists utilizing repositories such as atong01/conditional-flow-matching and statmixedml/xgboostlss who perform simulation-based inference and parameter estimation.",
+   "evidence_ids": [
+    "repo:atong01/conditional-flow-matching",
+    "repo:statmixedml/xgboostlss",
+    "pkg:lf2i"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Simulation-based parameter estimation and solving the inverse problem for statistical models.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2603.10991"
+   ]
+  },
+  "value_prop": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: By combining embedded normalizing flows and regression estimators, users can address complex modeling tasks and intractable likelihoods in physical systems where traditional parameter estimation is challenging.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2603.10991"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated due to missing evidence on axis V (viability). We assume that target users are willing to pay for a commercial tool that packages simulation-based parameter estimation workflows.",
+   "evidence_ids": [
+    "dvf:8"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with quantitative researchers to evaluate willingness to pay for simulation-based parameter estimation tools.",
+   "evidence_ids": [
+    "dvf:8"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness-to-pay responses during customer interviews and price acceptance testing.",
+   "evidence_ids": [
+    "dvf:8"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than 15 percent of interviewed target users indicate willingness to pay above the proposed threshold of 50 dollars per month during price acceptance tests.",
+    "evidence_ids": [
+     "dvf:8"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:torchcfm",
+     "use": "Used as a conditional flow matching library for flow-based modeling tasks.",
+     "evidence_ids": [
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "pkg:xgboostlss",
+     "use": "Used for probabilistic modeling extensions in regression tasks.",
+     "evidence_ids": [
+      "repo:statmixedml/xgboostlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:lf2i",
+     "use": "Used for likelihood-free inference workflows.",
+     "evidence_ids": [
+      "pkg:lf2i"
+     ],
+     "version": "0.3.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified integration interface that connects normalizing flow residual transformations with gradient-based empirical-likelihood estimators.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2603.10991"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

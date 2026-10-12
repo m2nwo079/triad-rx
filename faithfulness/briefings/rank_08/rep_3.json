@@ -1,0 +1,232 @@
+{
+ "rank": 8,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Normalizing flows are used as an embedded or factorizable transformation model (such as monotonic rational-quadratic spline flows or factorizable normalizing flows) to model complex residual distributions, capture high-dimensional correlations, or approximate posterior distributions.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2606.01346",
+     "paper:2602.13184"
+    ]
+   },
+   {
+    "term_id": "T:parameter estimation",
+    "role": "Parameter estimation serves as the primary inference goal where unknown model parameters or target distributions of physical and statistical systems are estimated using simulation-based inference or filtering frameworks.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2602.13184",
+     "paper:2601.07013"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Regression losses and objectives are optimized to update parameters, learn vector fields, or train underlying networks within the simulation and estimation pipeline.",
+    "evidence_ids": [
+     "paper:2608.05557",
+     "paper:2605.06829",
+     "paper:2603.10991"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combined approach targets simulation-based parameter estimation and continuous parameter estimation tasks for complex physical or statistical systems.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2602.13184"
+   ]
+  },
+  "limitation": {
+   "text": "Traditional estimation methods struggle with the prohibitive computational cost of profiling systematic uncertainties, complex high-dimensional correlations, and unknown complex distributions of residual information.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2602.13184"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are integrated into simulation-based parameter estimation frameworks to transform complex residual distributions into simple base distributions or to elevate fit targets to multivariate distributions of interest, facilitating end-to-end estimation schemes and amortized training strategies.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2602.13184"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Normalizing flows are used as an embedded or factorizable transformation model (such as monotonic rational-quadratic spline flows or factorizable normalizing flows) to model complex residual distributions, capture high-dimensional correlations, or approximate posterior distributions.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2606.01346",
+      "paper:2602.13184"
+     ]
+    },
+    {
+     "term_id": "T:parameter estimation",
+     "role": "Parameter estimation serves as the primary inference goal where unknown model parameters or target distributions of physical and statistical systems are estimated using simulation-based inference or filtering frameworks.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2602.13184",
+      "paper:2601.07013"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Regression losses and objectives are optimized to update parameters, learn vector fields, or train underlying networks within the simulation and estimation pipeline.",
+     "evidence_ids": [
+      "paper:2608.05557",
+      "paper:2605.06829",
+      "paper:2603.10991"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combined approach targets simulation-based parameter estimation and continuous parameter estimation tasks for complex physical or statistical systems.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2602.13184"
+    ]
+   },
+   "limitation": {
+    "text": "Traditional estimation methods struggle with the prohibitive computational cost of profiling systematic uncertainties, complex high-dimensional correlations, and unknown complex distributions of residual information.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2602.13184"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are integrated into simulation-based parameter estimation frameworks to transform complex residual distributions into simple base distributions or to elevate fit targets to multivariate distributions of interest, facilitating end-to-end estimation schemes and amortized training strategies.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2602.13184"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates normalizing flows into simulation-based parameter estimation frameworks to transform complex residual distributions or model multivariate distributions of interest. Regression objectives and losses are optimized within these pipelines to update parameters and train underlying networks. Together, these techniques address challenges in simulation-based parameter estimation and continuous parameter estimation for complex physical or statistical systems.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2602.13184",
+    "paper:2608.05557",
+    "paper:2605.06829",
+    "paper:2603.10991"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Quantitative researchers, machine learning engineers, and data scientists working on simulation-based inference and physical modeling tasks.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2602.13184"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "The combined approach targets simulation-based parameter estimation and continuous parameter estimation tasks for complex physical or statistical systems.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2602.13184"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Normalizing flows are integrated into simulation-based parameter estimation frameworks to transform complex residual distributions into simple base distributions or to elevate fit targets to multivariate distributions of interest, facilitating end-to-end estimation schemes and amortized training strategies.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2602.13184"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated due to missing evidence (axis V score is null): organizations will pay for a software solution integrating normalizing flows and regression for simulation-based parameter estimation.",
+   "evidence_ids": [
+    "dvf:8"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with quantitative researchers and ML engineers to validate willingness to pay for simulation-based parameter estimation tools.",
+   "evidence_ids": [
+    "dvf:8"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness-to-pay responses during price acceptance testing with target customer interviews.",
+   "evidence_ids": [
+    "dvf:8"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 15 percent of interviewed prospects express willingness to pay for the proposed simulation-based parameter estimation offering.",
+    "evidence_ids": [
+     "dvf:8"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:torchcfm",
+     "use": "Utilized as a Conditional Flow Matching library for flow-based modeling.",
+     "evidence_ids": [
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "pkg:lightgbmlss",
+     "use": "Used as an extension of LightGBM for probabilistic modelling and regression tasks.",
+     "evidence_ids": [
+      "repo:statmixedml/lightgbmlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:xgboostlss",
+     "use": "Employed as an extension of XGBoost for probabilistic modeling and regression.",
+     "evidence_ids": [
+      "repo:statmixedml/xgboostlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:lf2i",
+     "use": "Applied for likelihood-free inference or related simulation-based parameter estimation pipelines.",
+     "evidence_ids": [
+      "pkg:lf2i"
+     ],
+     "version": "0.3.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build an end-to-end integration layer combining embedded normalizing flows with regression-based estimators for simulation-based inference.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2602.13184"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

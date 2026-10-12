@@ -1,0 +1,199 @@
+{
+ "rank": 17,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:direct preference optimization",
+    "role": "Direct preference optimization serves as a preference-based fine-tuning method to align language models by weighting or optimizing preference pairs.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   },
+   {
+    "term_id": "T:code generation",
+    "role": "Code generation is the primary target capability and task being improved through preference optimization and self-improving frameworks.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   },
+   {
+    "term_id": "T:instruction following",
+    "role": "Instruction following provides the contextual constraints and requirements that guide model generation and behavior during complex tasks.",
+    "evidence_ids": [
+     "paper:2609.22943"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets instruction-following and code generation capabilities in large language models.",
+   "evidence_ids": [
+    "paper:2609.22943"
+   ]
+  },
+  "limitation": {
+   "text": "Code generation and instruction tuning can be limited by noisy self-generated supervision or selection-state mismatch between valuation and retained training subsets.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2609.22943"
+   ]
+  },
+  "combination": {
+   "text": "Direct preference optimization is integrated to refine model outputs and handle preference pairs for code generation and instruction-following tasks.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2609.22943"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:direct preference optimization",
+     "role": "Direct preference optimization serves as a preference-based fine-tuning method to align language models by weighting or optimizing preference pairs.",
+     "evidence_ids": [
+      "paper:2603.29292"
+     ]
+    },
+    {
+     "term_id": "T:code generation",
+     "role": "Code generation is the primary target capability and task being improved through preference optimization and self-improving frameworks.",
+     "evidence_ids": [
+      "paper:2603.29292"
+     ]
+    },
+    {
+     "term_id": "T:instruction following",
+     "role": "Instruction following provides the contextual constraints and requirements that guide model generation and behavior during complex tasks.",
+     "evidence_ids": [
+      "paper:2609.22943"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets instruction-following and code generation capabilities in large language models.",
+    "evidence_ids": [
+     "paper:2609.22943"
+    ]
+   },
+   "limitation": {
+    "text": "Code generation and instruction tuning can be limited by noisy self-generated supervision or selection-state mismatch between valuation and retained training subsets.",
+    "evidence_ids": [
+     "paper:2603.29292",
+     "paper:2609.22943"
+    ]
+   },
+   "combination": {
+    "text": "Direct preference optimization is integrated to refine model outputs and handle preference pairs for code generation and instruction-following tasks.",
+    "evidence_ids": [
+     "paper:2603.29292",
+     "paper:2609.22943"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates direct preference optimization with instruction-following and code generation tasks, utilizing preference-based fine-tuning methods to refine model behavior and handle preference pairs (paper:2603.29292, paper:2609.22943).",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2609.22943"
+   ]
+  },
+  "target_user": {
+   "basis": "hypothesis",
+   "text": "No evidence in the bundle; hypothesis to test: Software engineers and machine learning practitioners who fine-tune large language models for code generation tasks are the primary target users (repo:safeailab/eagle, repo:amd-agi/instella-moe).",
+   "evidence_ids": [
+    "repo:safeailab/eagle",
+    "repo:amd-agi/instella-moe"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Code generation and instruction tuning can be limited by noisy self-generated supervision or selection-state mismatch between valuation and retained training subsets (paper:2603.29292, paper:2609.22943).",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2609.22943"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Direct preference optimization is integrated to refine model outputs and handle preference pairs for code generation and instruction-following tasks (paper:2603.29292, paper:2609.22943).",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2609.22943"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated as axis V (viability) due to missing evidence in the bundle (dvf:17). Specifically, it is assumed that customers are willing to pay for direct preference optimization tooling tailored to code generation and instruction following.",
+   "evidence_ids": [
+    "dvf:17"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with machine learning practitioners to evaluate willingness to pay for preference-based fine-tuning workflows (dvf:17).",
+   "evidence_ids": [
+    "dvf:17"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive pricing feedback from interviewed machine learning practitioners (dvf:17).",
+   "evidence_ids": [
+    "dvf:17"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than 10 percent of interviewed practitioners express willingness to adopt or pay for the direct preference optimization tooling (dvf:17).",
+    "evidence_ids": [
+     "dvf:17"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:evoeval",
+     "use": "Used as an evaluation benchmark for code generation tasks (paper:2606.28998).",
+     "evidence_ids": [
+      "paper:2606.28998"
+     ],
+     "version": "0.1.0"
+    },
+    {
+     "id": "repo:allenai/reward-bench",
+     "use": "Used as an evaluation tool for reward models and preference tuning alignment (repo:allenai/reward-bench).",
+     "evidence_ids": [
+      "repo:allenai/reward-bench"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized data curation pipeline for aligning code generation and instruction-following models using direct preference optimization (paper:2603.29292, paper:2609.22943).",
+     "evidence_ids": [
+      "paper:2603.29292",
+      "paper:2609.22943"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

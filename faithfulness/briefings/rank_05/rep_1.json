@@ -1,0 +1,212 @@
+{
+ "rank": 5,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v4",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:proximal policy optimization",
+    "role": "Proximal Policy Optimization is used as the underlying policy or reinforcement learning algorithm to optimize the signal timing or control decisions.",
+    "evidence_ids": [
+     "paper:2607.03703",
+     "paper:2606.22108",
+     "paper:2509.21745"
+    ]
+   },
+   {
+    "term_id": "T:deep reinforcement learning",
+    "role": "Deep reinforcement learning serves as the learning paradigm that enables agents to interact with traffic environments and adapt signal control policies.",
+    "evidence_ids": [
+     "paper:2607.03703",
+     "paper:2605.29693"
+    ]
+   },
+   {
+    "term_id": "T:traffic signal control",
+    "role": "Traffic signal control is the target application domain where intersection signal phases and durations are dynamically managed to reduce delay and congestion.",
+    "evidence_ids": [
+     "paper:2607.03703",
+     "paper:2606.22108",
+     "paper:2509.21745"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets adaptive traffic signal control to manage urban intersections and optimize traffic performance metrics such as delay, queues, and throughput.",
+   "evidence_ids": [
+    "paper:2607.03703",
+    "paper:2606.22108",
+    "paper:2509.21745"
+   ]
+  },
+  "limitation": {
+   "text": "Traditional traffic signal control systems often fail to adapt to dynamic traffic conditions, and opaque black-box reinforcement learning models pose challenges for compliance, safety, and operational reliability.",
+   "evidence_ids": [
+    "paper:2607.03703",
+    "paper:2605.29693",
+    "paper:2509.21745"
+   ]
+  },
+  "combination": {
+   "text": "Proximal Policy Optimization is integrated directly within deep reinforcement learning-based traffic signal control pipelines, often incorporating action-masking interfaces or specialized state representations to ensure compliance with safety constraints and improve traffic performance.",
+   "evidence_ids": [
+    "paper:2607.03703",
+    "paper:2606.22108",
+    "paper:2509.21745"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:proximal policy optimization",
+     "role": "Proximal Policy Optimization is used as the underlying policy or reinforcement learning algorithm to optimize the signal timing or control decisions.",
+     "evidence_ids": [
+      "paper:2607.03703",
+      "paper:2606.22108",
+      "paper:2509.21745"
+     ]
+    },
+    {
+     "term_id": "T:deep reinforcement learning",
+     "role": "Deep reinforcement learning serves as the learning paradigm that enables agents to interact with traffic environments and adapt signal control policies.",
+     "evidence_ids": [
+      "paper:2607.03703",
+      "paper:2605.29693"
+     ]
+    },
+    {
+     "term_id": "T:traffic signal control",
+     "role": "Traffic signal control is the target application domain where intersection signal phases and durations are dynamically managed to reduce delay and congestion.",
+     "evidence_ids": [
+      "paper:2607.03703",
+      "paper:2606.22108",
+      "paper:2509.21745"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets adaptive traffic signal control to manage urban intersections and optimize traffic performance metrics such as delay, queues, and throughput.",
+    "evidence_ids": [
+     "paper:2607.03703",
+     "paper:2606.22108",
+     "paper:2509.21745"
+    ]
+   },
+   "limitation": {
+    "text": "Traditional traffic signal control systems often fail to adapt to dynamic traffic conditions, and opaque black-box reinforcement learning models pose challenges for compliance, safety, and operational reliability.",
+    "evidence_ids": [
+     "paper:2607.03703",
+     "paper:2605.29693",
+     "paper:2509.21745"
+    ]
+   },
+   "combination": {
+    "text": "Proximal Policy Optimization is integrated directly within deep reinforcement learning-based traffic signal control pipelines, often incorporating action-masking interfaces or specialized state representations to ensure compliance with safety constraints and improve traffic performance.",
+    "evidence_ids": [
+     "paper:2607.03703",
+     "paper:2606.22108",
+     "paper:2509.21745"
+    ]
+   }
+  },
+  "summary": {
+   "text": "Proximal policy optimization is integrated directly within deep reinforcement learning-based traffic signal control pipelines, incorporating safety constraints and specialized state representations to optimize traffic performance and reduce delay and congestion.",
+   "evidence_ids": [
+    "paper:2607.03703",
+    "paper:2606.22108",
+    "paper:2509.21745"
+   ]
+  },
+  "target_user": {
+   "basis": "evidence",
+   "text": "Patent assignees in the company category develop adaptive cycle-level traffic signal control methods and systems.",
+   "evidence_ids": [
+    "patent:11783702",
+    "patent:20220092973"
+   ]
+  },
+  "jtbd": {
+   "basis": "evidence",
+   "text": "Manage urban intersections and optimize traffic performance metrics such as delay, queues, and throughput when traditional traffic signal control systems fail to adapt to dynamic traffic conditions.",
+   "evidence_ids": [
+    "paper:2607.03703",
+    "paper:2606.22108",
+    "paper:2509.21745"
+   ]
+  },
+  "value_prop": {
+   "basis": "evidence",
+   "text": "Adaptive traffic signal control optimization manages signal timing to improve traffic performance while addressing safety and compliance challenges associated with black-box models.",
+   "evidence_ids": [
+    "paper:2607.03703",
+    "paper:2605.29693",
+    "paper:2509.21745"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The lowest DVF axis score is D at 2.0 (dvf:5), which means the riskiest assumption is that municipal transportation agencies and traffic engineers will actively desire and adopt a deep reinforcement learning and PPO-based traffic control solution over traditional controllers.",
+   "evidence_ids": [
+    "dvf:5"
+   ],
+   "axis": "D",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Set up a demand landing page outlining the adaptive traffic signal control system and conduct problem interviews with municipal traffic management stakeholders to test the desirability of the solution.",
+   "evidence_ids": [
+    "dvf:5"
+   ],
+   "type": "demand landing page and problem interviews"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 30 percent conversion or positive intent-to-pilot responses during stakeholder problem interviews and landing page sign-ups.",
+   "evidence_ids": [
+    "dvf:5"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed municipal stakeholders express willingness to pilot the PPO-based traffic signal control system.",
+    "evidence_ids": [
+     "dvf:5"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:cpwan/rlor",
+     "use": "Used for reinforcement learning operations research problems with OpenAI Gym and CleanRL.",
+     "evidence_ids": [
+      "repo:cpwan/rlor"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized deterministic action-masking interface and state representation pipeline tailored for adaptive traffic signal phase coordination.",
+     "evidence_ids": [
+      "paper:2607.03703",
+      "paper:2509.21745"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}
