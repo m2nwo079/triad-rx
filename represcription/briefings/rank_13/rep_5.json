@@ -1,0 +1,233 @@
+{
+ "rank": 13,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Serves as a probabilistic surrogate model or kernel-based regression component to capture functional relationships and predictive uncertainties.",
+    "evidence_ids": [
+     "paper:2503.03178",
+     "paper:2404.03099"
+    ]
+   },
+   {
+    "term_id": "T:bayesian optimization",
+    "role": "Provides the sequential decision-making framework and acquisition strategies to guide data collection or optimization in outer-loop procedures.",
+    "evidence_ids": [
+     "paper:2503.03178",
+     "paper:2404.03099"
+    ]
+   },
+   {
+    "term_id": "T:operator learning",
+    "role": "Maps inputs to infinite-dimensional spaces or function trajectories, such as via neural operator networks, to serve as the core surrogate architecture.",
+    "evidence_ids": [
+     "paper:2503.03178",
+     "paper:2404.03099"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Outer-loop optimization and sequential decision-making problems involving expensive evaluations of functions or systems defined in infinite-dimensional spaces.",
+   "evidence_ids": [
+    "paper:2503.03178",
+    "paper:2404.03099"
+   ]
+  },
+  "limitation": {
+   "text": "Traditional uncertainty quantification frameworks for operator networks incur substantial computational costs during training and inference, rendering outer-loop optimization and sequential decision-making prohibitively expensive.",
+   "evidence_ids": [
+    "paper:2503.03178",
+    "paper:2404.03099"
+   ]
+  },
+  "combination": {
+   "text": "Uncertainty estimates and epistemic representations derived from operator networks or Gaussian process components are integrated into Bayesian optimization procedures to drive data-efficient sequential decision-making and optimization in function spaces.",
+   "evidence_ids": [
+    "paper:2503.03178",
+    "paper:2404.03099"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Serves as a probabilistic surrogate model or kernel-based regression component to capture functional relationships and predictive uncertainties.",
+     "evidence_ids": [
+      "paper:2503.03178",
+      "paper:2404.03099"
+     ]
+    },
+    {
+     "term_id": "T:bayesian optimization",
+     "role": "Provides the sequential decision-making framework and acquisition strategies to guide data collection or optimization in outer-loop procedures.",
+     "evidence_ids": [
+      "paper:2503.03178",
+      "paper:2404.03099"
+     ]
+    },
+    {
+     "term_id": "T:operator learning",
+     "role": "Maps inputs to infinite-dimensional spaces or function trajectories, such as via neural operator networks, to serve as the core surrogate architecture.",
+     "evidence_ids": [
+      "paper:2503.03178",
+      "paper:2404.03099"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Outer-loop optimization and sequential decision-making problems involving expensive evaluations of functions or systems defined in infinite-dimensional spaces.",
+    "evidence_ids": [
+     "paper:2503.03178",
+     "paper:2404.03099"
+    ]
+   },
+   "limitation": {
+    "text": "Traditional uncertainty quantification frameworks for operator networks incur substantial computational costs during training and inference, rendering outer-loop optimization and sequential decision-making prohibitively expensive.",
+    "evidence_ids": [
+     "paper:2503.03178",
+     "paper:2404.03099"
+    ]
+   },
+   "combination": {
+    "text": "Uncertainty estimates and epistemic representations derived from operator networks or Gaussian process components are integrated into Bayesian optimization procedures to drive data-efficient sequential decision-making and optimization in function spaces.",
+    "evidence_ids": [
+     "paper:2503.03178",
+     "paper:2404.03099"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores the integration of Gaussian processes, Bayesian optimization, and operator learning for data-efficient sequential decision-making in function spaces. Traditional uncertainty quantification frameworks for operator networks incur high computational costs, making outer-loop optimization expensive. By combining operator learning with probabilistic surrogate modeling and Bayesian optimization, systems can achieve improved data-efficiency and fast inference in infinite-dimensional spaces as demonstrated in recent research.",
+   "evidence_ids": [
+    "paper:2503.03178",
+    "paper:2404.03099",
+    "dvf:13"
+   ]
+  },
+  "target_user": {
+   "text": "The target users are derived from company patent assignees working on automated industrial process parameters, laser cutting, and multi-tenant cloud optimization, alongside machine learning engineers utilizing packages such as Google Vizier and Trieste for surrogate modeling and black-box optimization.",
+   "evidence_ids": [
+    "patent:11927927",
+    "patent:11757732",
+    "pkg:google-vizier",
+    "pkg:trieste"
+   ]
+  },
+  "jtbd": {
+   "text": "Optimize expensive functions and black-box systems defined in infinite-dimensional spaces using fewer evaluations by leveraging uncertainty-aware operator network surrogates within Bayesian optimization loops.",
+   "evidence_ids": [
+    "paper:2503.03178",
+    "paper:2404.03099"
+   ]
+  },
+  "value_prop": {
+   "text": "Enables rapid solutions and uncertainty-aware outer-loop optimization for partial differential equations and function-space problems with significantly lower computational overhead and fewer trainable parameters than conventional deep ensembles.",
+   "evidence_ids": [
+    "paper:2503.03178",
+    "paper:2404.03099"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption, fixed by feasibility axis F (score 2.0), is that lightweight predictive uncertainty quantification from operator networks can maintain sufficient calibration and stability when integrated directly into active Bayesian optimization loops without incurring prohibitive training or inference slowdowns.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2503.03178"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "A technical proof of concept built from existing packages that couples an operator network surrogate with a Bayesian optimization loop to test sample efficiency on a benchmark partial differential equation task, with a proposed threshold of at least a fivefold reduction in evaluation time.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2503.03178",
+    "pkg:trieste",
+    "pkg:google-vizier"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "Achieving a proposed threshold of greater than 20 percent improvement in sample efficiency or optimization convergence rate compared to baseline single-fidelity or uncalibrated surrogate methods on benchmark function-space tasks, with evaluation time reduced by at least a proposed threshold of 5 times.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2503.03178",
+    "paper:2404.03099"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "If the uncertainty estimates from the operator network prove uncalibrated or fail to improve sample efficiency over standard Gaussian process baselines within a proposed threshold of 50 optimization iterations, the approach will be killed.",
+    "evidence_ids": [
+     "dvf:13",
+     "paper:2503.03178"
+    ]
+   },
+   {
+    "text": "If end-to-end inference and training time exceed a proposed threshold of 2x the cost of conventional solvers due to operator uncertainty overhead, the approach will be abandoned.",
+    "evidence_ids": [
+     "dvf:13",
+     "paper:2503.03178"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:google-vizier",
+     "use": "Serves as the optimization framework for black-box and Bayesian optimization tuning procedures.",
+     "evidence_ids": [
+      "paper:2503.03178",
+      "pkg:google-vizier"
+     ],
+     "version": "0.1.24"
+    },
+    {
+     "id": "pkg:trieste",
+     "use": "Provides Gaussian process regression and Bayesian optimization routines to support sequential decision-making.",
+     "evidence_ids": [
+      "paper:2503.03178",
+      "pkg:trieste"
+     ],
+     "version": "4.6.0"
+    },
+    {
+     "id": "pkg:smt",
+     "use": "Supplies supplementary surrogate modeling toolboxes and DOE sampling strategies for function evaluation.",
+     "evidence_ids": [
+      "paper:2609.17440",
+      "pkg:smt"
+     ],
+     "version": "2.15.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "An integration adapter connecting operator network predictive uncertainty modules directly to Bayesian optimization acquisition functions to handle function-space inputs.",
+     "evidence_ids": [
+      "dvf:13",
+      "paper:2503.03178",
+      "paper:2404.03099"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

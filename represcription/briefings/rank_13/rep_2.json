@@ -1,0 +1,206 @@
+{
+ "rank": 13,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Serves as a probabilistic surrogate model or kernel-based regression component to capture functional relationships and uncertainties.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   },
+   {
+    "term_id": "T:bayesian optimization",
+    "role": "Acts as the outer-loop sequential decision-making framework that uses predictive uncertainties to drive data-efficient exploration.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   },
+   {
+    "term_id": "T:operator learning",
+    "role": "Provides the underlying neural operator backbone (such as DeepONets or FNOs) mapping input functions to system response trajectories.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Outer-loop optimization and active learning for systems governed by partial differential equations.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  },
+  "limitation": {
+   "text": "Existing uncertainty quantification frameworks for operator learning incur substantial computational costs during both training and inference.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  },
+  "combination": {
+   "text": "Lightweight predictive uncertainty quantification methods are integrated into operator networks to efficiently drive Bayesian optimization and active learning procedures. This combination yields improvements in accuracy and data-efficiency for outer-loop optimization without the heavy computational overhead of traditional ensembles.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Serves as a probabilistic surrogate model or kernel-based regression component to capture functional relationships and uncertainties.",
+     "evidence_ids": [
+      "paper:2503.03178"
+     ]
+    },
+    {
+     "term_id": "T:bayesian optimization",
+     "role": "Acts as the outer-loop sequential decision-making framework that uses predictive uncertainties to drive data-efficient exploration.",
+     "evidence_ids": [
+      "paper:2503.03178"
+     ]
+    },
+    {
+     "term_id": "T:operator learning",
+     "role": "Provides the underlying neural operator backbone (such as DeepONets or FNOs) mapping input functions to system response trajectories.",
+     "evidence_ids": [
+      "paper:2503.03178"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Outer-loop optimization and active learning for systems governed by partial differential equations.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   },
+   "limitation": {
+    "text": "Existing uncertainty quantification frameworks for operator learning incur substantial computational costs during both training and inference.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   },
+   "combination": {
+    "text": "Lightweight predictive uncertainty quantification methods are integrated into operator networks to efficiently drive Bayesian optimization and active learning procedures. This combination yields improvements in accuracy and data-efficiency for outer-loop optimization without the heavy computational overhead of traditional ensembles.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining gaussian process, bayesian optimization, and operator learning to address high computational costs in operator learning uncertainty quantification. By integrating lightweight predictive uncertainty quantification into operator networks, the approach efficiently drives Bayesian optimization and active learning procedures. The combination yields improvements in accuracy and data-efficiency for outer-loop optimization without the heavy computational overhead of traditional ensembles.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is derived from company patent assignee categories and open source repositories, focusing on engineers and researchers optimizing systems governed by partial differential equations or deploying surrogate models. Based on the bundle evidence, the target user is unverified.",
+   "evidence_ids": [
+    "patent:11494639",
+    "patent:11734561",
+    "patent:11757732",
+    "patent:11842279",
+    "patent:11927927"
+   ]
+  },
+  "jtbd": {
+   "text": "Perform outer-loop optimization and active learning for systems governed by partial differential equations while overcoming high computational costs in uncertainty quantification.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrates lightweight predictive uncertainty quantification methods into operator networks to efficiently drive Bayesian optimization and active learning procedures. This combination yields improvements in accuracy and data-efficiency for outer-loop optimization without incurring the substantial computational costs of traditional ensembles or Bayesian methods during training and inference.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The feasibility axis score is 2.0 (dvf:13). The riskiest assumption is that lightweight predictive uncertainty quantification methods generalized from DeepONets can maintain sufficient calibration and accuracy when driving Bayesian optimization across complex operator learning tasks without prohibitive implementation complexity.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2503.03178"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "A technical proof of concept from existing packages (dvf:13) combining DeepONet or operator network modules with Trieste and Google Vizier to test whether lightweight predictive uncertainties can successfully guide active learning loops on a standard PDE benchmark.",
+   "evidence_ids": [
+    "dvf:13",
+    "pkg:trieste",
+    "pkg:google-vizier",
+    "paper:2503.03178"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "Achieving a proposed threshold of at least a 5 times reduction in evaluation time alongside improved optimization accuracy on a standard PDE benchmark compared to standard ensemble methods, motivated by feasibility targets (dvf:13).",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2503.03178"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "If the lightweight predictive uncertainty estimates fail to provide unbiased out-of-distribution predictions, or if active learning loops exhibit worse data-efficiency than random sampling on the baseline PDE problem, the combination should be abandoned per feasibility constraints (dvf:13).",
+    "evidence_ids": [
+     "dvf:13",
+     "paper:2503.03178"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:trieste",
+     "use": "Serves as the Bayesian optimization framework to manage acquisition functions and outer-loop optimization.",
+     "evidence_ids": [
+      "paper:2503.03178"
+     ],
+     "version": "4.6.0"
+    },
+    {
+     "id": "pkg:google-vizier",
+     "use": "Provides the black-box and hyperparameter optimization research interface for sequential decision making.",
+     "evidence_ids": [
+      "repo:google/vizier"
+     ],
+     "version": "0.1.24"
+    },
+    {
+     "id": "pkg:smt",
+     "use": "Supplies surrogate modeling tools and additional Gaussian process regression components.",
+     "evidence_ids": [
+      "repo:smtorg/smt"
+     ],
+     "version": "2.15.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A lightweight predictive uncertainty quantification module tailored for operator networks that integrates with Bayesian optimization acquisition loops, as motivated by feasibility constraints (dvf:13) and operator learning requirements (paper:2503.03178).",
+     "evidence_ids": [
+      "dvf:13",
+      "paper:2503.03178"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

@@ -1,0 +1,244 @@
+{
+ "rank": 11,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:direct preference optimization",
+    "role": "Serves as the preference-based optimization method to align model outputs using pairwise data.",
+    "evidence_ids": [
+     "paper:2606.16808"
+    ]
+   },
+   {
+    "term_id": "T:instruction following",
+    "role": "Represents the core capability that must be preserved or integrated alongside safety requirements.",
+    "evidence_ids": [
+     "paper:2512.13741"
+    ]
+   },
+   {
+    "term_id": "T:safety alignment",
+    "role": "Target objective addressed to secure models against harmful queries and jailbreaks.",
+    "evidence_ids": [
+     "paper:2606.16808"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Safety alignment and instruction-following for language models to handle complex queries safely.",
+   "evidence_ids": [
+    "paper:2606.16808",
+    "paper:2512.13741"
+   ]
+  },
+  "limitation": {
+   "text": "Models remain vulnerable to sophisticated jailbreaks and direct harmful queries due to internal conflicts between safety alignment and instruction-following objectives.",
+   "evidence_ids": [
+    "paper:2606.16808",
+    "paper:2512.13741"
+   ]
+  },
+  "combination": {
+   "text": "Direct preference optimization is applied subsequent to supervised safety analysis tuning to further enhance the correctness and stability of safety guidance, mitigating internal objective conflicts during instruction following.",
+   "evidence_ids": [
+    "paper:2606.16808"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:direct preference optimization",
+     "role": "Serves as the preference-based optimization method to align model outputs using pairwise data.",
+     "evidence_ids": [
+      "paper:2606.16808"
+     ]
+    },
+    {
+     "term_id": "T:instruction following",
+     "role": "Represents the core capability that must be preserved or integrated alongside safety requirements.",
+     "evidence_ids": [
+      "paper:2512.13741"
+     ]
+    },
+    {
+     "term_id": "T:safety alignment",
+     "role": "Target objective addressed to secure models against harmful queries and jailbreaks.",
+     "evidence_ids": [
+      "paper:2606.16808"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Safety alignment and instruction-following for language models to handle complex queries safely.",
+    "evidence_ids": [
+     "paper:2606.16808",
+     "paper:2512.13741"
+    ]
+   },
+   "limitation": {
+    "text": "Models remain vulnerable to sophisticated jailbreaks and direct harmful queries due to internal conflicts between safety alignment and instruction-following objectives.",
+    "evidence_ids": [
+     "paper:2606.16808",
+     "paper:2512.13741"
+    ]
+   },
+   "combination": {
+    "text": "Direct preference optimization is applied subsequent to supervised safety analysis tuning to further enhance the correctness and stability of safety guidance, mitigating internal objective conflicts during instruction following.",
+    "evidence_ids": [
+     "paper:2606.16808"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining direct preference optimization, instruction following, and safety alignment. Specifically, direct preference optimization is applied subsequent to supervised safety analysis tuning to further enhance the correctness and stability of safety guidance, mitigating internal objective conflicts during instruction following. The DVF scores are D: 1.0, F: 4.0, and V: null.",
+   "evidence_ids": [
+    "dvf:11",
+    "paper:2606.16808",
+    "paper:2512.13741"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as the bundle provides no direct evidence from patent assignee categories or package download data.",
+   "evidence_ids": [
+    "dvf:11"
+   ]
+  },
+  "jtbd": {
+   "text": "The job to be done is to execute safety alignment and instruction-following for language models to handle complex queries safely.",
+   "evidence_ids": [
+    "paper:2606.16808",
+    "paper:2512.13741"
+   ]
+  },
+  "value_prop": {
+   "text": "The combination helps resolve vulnerabilities to sophisticated jailbreaks and direct harmful queries stemming from internal conflicts between safety alignment and instruction-following objectives.",
+   "evidence_ids": [
+    "paper:2606.16808",
+    "paper:2512.13741"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated on axis V (viability) due to missing evidence. It is assumed that customers will pay for a specialized preference optimization and safety alignment pipeline.",
+   "evidence_ids": [
+    "dvf:11"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test to evaluate willingness to pay for the proposed safety alignment and preference optimization framework, addressing the missing viability evidence on axis V.",
+   "evidence_ids": [
+    "dvf:11"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: at least 40 percent of interviewed target organizations express willingness to adopt and pay for the pipeline.",
+   "evidence_ids": [
+    "dvf:11"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: fewer than 10 percent of interviewed potential customers indicate a willingness to pay or adopt the solution during the price acceptance test.",
+    "evidence_ids": [
+     "dvf:11"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:allenai/reward-bench",
+     "use": "Serves as an evaluation tool for reward models during alignment.",
+     "evidence_ids": [
+      "repo:allenai/reward-bench"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:amd-agi/instella-moe",
+     "use": "Provides a fully open Mixture-of-Experts language model foundation for training.",
+     "evidence_ids": [
+      "repo:amd-agi/instella-moe"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:sail-sg/sdft",
+     "use": "Acts as a codebase for self-distillation to bridge distribution gaps during fine-tuning.",
+     "evidence_ids": [
+      "repo:sail-sg/sdft"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:syuan03/mm-ifengine",
+     "use": "Provides a multimodal instruction following engine framework.",
+     "evidence_ids": [
+      "repo:syuan03/mm-ifengine"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:xuankunrong/safegrpo",
+     "use": "Supplies self-rewarded multimodal safety alignment via rule-governed policy optimization.",
+     "evidence_ids": [
+      "repo:xuankunrong/safegrpo"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:pip-skill",
+     "use": "Used as a package building block for pipeline skill execution.",
+     "evidence_ids": [
+      "pkg:pip-skill"
+     ],
+     "version": "0.2.1"
+    },
+    {
+     "id": "pkg:theriac",
+     "use": "Used as a package building block for supporting computations.",
+     "evidence_ids": [
+      "pkg:theriac"
+     ],
+     "version": "0.1.0"
+    },
+    {
+     "id": "pkg:turbo-alignment",
+     "use": "Provides library utilities for model alignment tasks.",
+     "evidence_ids": [
+      "pkg:turbo-alignment"
+     ],
+     "version": "0.0.4"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Proposed component: an integrated interface to manage sequential supervised safety analysis tuning and direct preference optimization training loops.",
+     "evidence_ids": [
+      "paper:2606.16808",
+      "dvf:11"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

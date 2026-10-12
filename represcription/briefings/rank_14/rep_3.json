@@ -1,0 +1,20 @@
+{
+ "rank": 14,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "Although individual papers discuss combinations of YOLOv8 with CBAM or classification tasks with CBAM or YOLOv8, no single study in the evidence bundle combines all three components (convolutional block attention module, YOLOv8, and classification) together into one integrated workflow.",
+  "insufficient_evidence_ids": [
+   "paper:2604.22856",
+   "paper:2509.17078"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

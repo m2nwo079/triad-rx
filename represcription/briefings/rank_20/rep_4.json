@@ -1,0 +1,195 @@
+{
+ "rank": 20,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:proximal policy optimization",
+    "role": "Serves as an online reinforcement learning component to train policies and manage exploration during sequential decision-making tasks.",
+    "evidence_ids": [
+     "paper:2604.09150"
+    ]
+   },
+   {
+    "term_id": "M:direct preference optimization",
+    "role": "Acts as an offline preference-based alignment technique that guides models using contrastive or preference data without requiring online rollouts.",
+    "evidence_ids": [
+     "paper:2604.09150"
+    ]
+   },
+   {
+    "term_id": "T:decision making",
+    "role": "Represents the target task domain of long-horizon or step-wise reasoning and strategic planning where agents make sequential choices.",
+    "evidence_ids": [
+     "paper:2604.09150"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets efficient multi-step reasoning and decision-making tasks in large reasoning models.",
+   "evidence_ids": [
+    "paper:2604.09150"
+   ]
+  },
+  "limitation": {
+   "text": "Existing reasoning models often suffer from overthinking, excessive reasoning steps, and high inference latency while lacking fine-grained adaptation to redundancy.",
+   "evidence_ids": [
+    "paper:2604.09150"
+   ]
+  },
+  "combination": {
+   "text": "By combining Proximal Policy Optimization and Direct Preference Optimization into a reward-difference-driven training strategy, the framework enables models to learn state-conditioned compression strategies and balance accuracy with efficiency during decision-making.",
+   "evidence_ids": [
+    "paper:2604.09150"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:proximal policy optimization",
+     "role": "Serves as an online reinforcement learning component to train policies and manage exploration during sequential decision-making tasks.",
+     "evidence_ids": [
+      "paper:2604.09150"
+     ]
+    },
+    {
+     "term_id": "M:direct preference optimization",
+     "role": "Acts as an offline preference-based alignment technique that guides models using contrastive or preference data without requiring online rollouts.",
+     "evidence_ids": [
+      "paper:2604.09150"
+     ]
+    },
+    {
+     "term_id": "T:decision making",
+     "role": "Represents the target task domain of long-horizon or step-wise reasoning and strategic planning where agents make sequential choices.",
+     "evidence_ids": [
+      "paper:2604.09150"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets efficient multi-step reasoning and decision-making tasks in large reasoning models.",
+    "evidence_ids": [
+     "paper:2604.09150"
+    ]
+   },
+   "limitation": {
+    "text": "Existing reasoning models often suffer from overthinking, excessive reasoning steps, and high inference latency while lacking fine-grained adaptation to redundancy.",
+    "evidence_ids": [
+     "paper:2604.09150"
+    ]
+   },
+   "combination": {
+    "text": "By combining Proximal Policy Optimization and Direct Preference Optimization into a reward-difference-driven training strategy, the framework enables models to learn state-conditioned compression strategies and balance accuracy with efficiency during decision-making.",
+    "evidence_ids": [
+     "paper:2604.09150"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The opportunity integrates proximal policy optimization and direct preference optimization into a reward-difference-driven training strategy for decision-making tasks in large reasoning models. This combined approach addresses overthinking and excessive reasoning steps by enabling models to learn state-conditioned compression strategies that balance accuracy and efficiency.",
+   "evidence_ids": [
+    "paper:2604.09150"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified due to a lack of explicit patent assignee categories, repositories, or packages in the evidence bundle.",
+   "evidence_ids": [
+    "dvf:20"
+   ]
+  },
+  "jtbd": {
+   "text": "When deploying large reasoning models for multi-step tasks, developers want to compress long chains of thought and suppress redundant verification without sacrificing accuracy, so that they can reduce inference latency and computational overhead.",
+   "evidence_ids": [
+    "paper:2604.09150"
+   ]
+  },
+  "value_prop": {
+   "text": "Combining proximal policy optimization and direct preference optimization allows models to learn state-conditioned compression strategies, balancing accuracy and efficiency to achieve a reduction in average response length.",
+   "evidence_ids": [
+    "paper:2604.09150"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence in the bundle. We assume that organizations building large reasoning models are willing to adopt a hybrid training pipeline combining proximal policy optimization and direct preference optimization, and that they perceive sufficient economic value in response-length reduction to pay for such tooling.",
+   "evidence_ids": [
+    "dvf:20"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews with machine learning engineers and present a price acceptance test using a prototype pricing model for the combined proximal policy optimization and direct preference optimization training framework to validate commercial viability.",
+   "evidence_ids": [
+    "dvf:20"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: at least 40 percent of interviewed machine learning practitioners confirm intent to adopt the hybrid training framework, and proposed threshold: at least 30 percent validate a proposed pricing tier.",
+   "evidence_ids": [
+    "dvf:20"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: fewer than 15 percent of interviewed practitioners express willingness to use a combined proximal policy optimization and direct preference optimization pipeline in their current workflows.",
+    "evidence_ids": [
+     "dvf:20"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:openpsi-project/realhf",
+     "use": "Used for efficient reinforcement learning and parameter reallocation during the proximal policy optimization training phase.",
+     "evidence_ids": [
+      "repo:openpsi-project/realhf"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:sentient-engineering/agent-q",
+     "use": "Used as an advanced reasoning and learning foundation for autonomous AI agents.",
+     "evidence_ids": [
+      "repo:sentient-engineering/agent-q"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:yifeizhou02/archer",
+     "use": "Used to support hierarchical multi-turn reinforcement learning for agent decision-making workflows.",
+     "evidence_ids": [
+      "repo:yifeizhou02/archer"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A reward-difference-driven orchestration wrapper that couples proximal policy optimization and direct preference optimization objectives for state-conditioned reasoning compression.",
+     "evidence_ids": [
+      "paper:2604.09150"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

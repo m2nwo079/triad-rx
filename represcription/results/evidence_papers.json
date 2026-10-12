@@ -1,0 +1,3753 @@
+{
+  "meta": {
+    "step": "evidence_papers",
+    "created": "2026-10-11",
+    "git_commit": "8dcaf6387b1af0980d41ee927f327630d5cf7510",
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "reliability_flag": null,
+    "population": {
+      "population": "prospective_registration",
+      "prospective_file": "prospective/2026-10-11.json",
+      "patent_unit": "pair",
+      "missing_assignee": "exclude_and_report",
+      "f_pair_aggregate": "min",
+      "f_implementation": "terms_with_repo",
+      "percentile_ties": "average",
+      "riskiest": {
+        "missing_axis": "first",
+        "tie_break": "axis_mean_percentile",
+        "axis_order": [
+          "F",
+          "V",
+          "D"
+        ]
+      },
+      "bootstrap": {
+        "method": "poisson",
+        "replicates": 1000,
+        "seed": 20261006
+      }
+    },
+    "evidence_id_format": {
+      "paper": "paper:<arXiv id>",
+      "patent": "patent:<grant or publication number>",
+      "repo": "repo:<owner/name>",
+      "package": "pkg:<PyPI name>"
+    },
+    "prospective_sha256": "28714ae4cce919bc4c9533734dbc5ae17daadb4bbd7da42676510c14c2910014",
+    "hypergraph_sha256": "3c657f0968fba1efa1a1ffa2b73e5f5da6f8290efdf314fd8dc1a7fd9af15147",
+    "ranking_sha256": "4447409bf30096275d32fbb82776f89df186a55ecb5dba06f6544b37ad28e284",
+    "papers_sha256": "f1cf789f7b470b6d2d7ffb269d65add6131e0f56058833889ab1759dfd859f31",
+    "evidence_parquet_sha256": "e679708f11e466665018cb3b40255f167b918bdd71ba2b96f87a28f02b9fe892"
+  },
+  "stats": {
+    "candidates": 100,
+    "terms": 152,
+    "pairs": 269,
+    "pairs_without_papers": 0,
+    "evidence_rows": 21031,
+    "distinct_papers": 18013
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "triad": [
+        "M:pc",
+        "T:causal discovery",
+        "T:prediction"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:pc",
+            "T:causal discovery"
+          ],
+          "papers": 43,
+          "latest": "2026-08-19T09:14:38+00:00"
+        },
+        {
+          "pair": [
+            "M:pc",
+            "T:prediction"
+          ],
+          "papers": 44,
+          "latest": "2026-09-18T22:13:43+00:00"
+        },
+        {
+          "pair": [
+            "T:causal discovery",
+            "T:prediction"
+          ],
+          "papers": 86,
+          "latest": "2026-09-20T10:10:07+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 173
+    },
+    {
+      "rank": 2,
+      "triad": [
+        "M:gpt",
+        "T:arithmetic reasoning",
+        "T:code generation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:gpt",
+            "T:arithmetic reasoning"
+          ],
+          "papers": 9,
+          "latest": "2026-06-02T13:09:44+00:00"
+        },
+        {
+          "pair": [
+            "M:gpt",
+            "T:code generation"
+          ],
+          "papers": 223,
+          "latest": "2026-09-22T16:10:18+00:00"
+        },
+        {
+          "pair": [
+            "T:arithmetic reasoning",
+            "T:code generation"
+          ],
+          "papers": 17,
+          "latest": "2026-07-29T12:47:05+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 249
+    },
+    {
+      "rank": 3,
+      "triad": [
+        "M:normalizing flows",
+        "T:bayesian inference",
+        "T:regression"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:normalizing flows",
+            "T:bayesian inference"
+          ],
+          "papers": 31,
+          "latest": "2026-09-21T11:15:02+00:00"
+        },
+        {
+          "pair": [
+            "M:normalizing flows",
+            "T:regression"
+          ],
+          "papers": 37,
+          "latest": "2026-08-06T03:23:49+00:00"
+        },
+        {
+          "pair": [
+            "T:bayesian inference",
+            "T:regression"
+          ],
+          "papers": 93,
+          "latest": "2026-09-19T20:53:30+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 161
+    },
+    {
+      "rank": 4,
+      "triad": [
+        "M:rag",
+        "T:information retrieval",
+        "T:text retrieval"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:rag",
+            "T:information retrieval"
+          ],
+          "papers": 236,
+          "latest": "2026-09-23T13:05:09+00:00"
+        },
+        {
+          "pair": [
+            "M:rag",
+            "T:text retrieval"
+          ],
+          "papers": 23,
+          "latest": "2026-09-16T07:27:19+00:00"
+        },
+        {
+          "pair": [
+            "T:information retrieval",
+            "T:text retrieval"
+          ],
+          "papers": 19,
+          "latest": "2026-08-25T04:42:54+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 278
+    },
+    {
+      "rank": 5,
+      "triad": [
+        "M:proximal policy optimization",
+        "T:deep reinforcement learning",
+        "T:traffic signal control"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:proximal policy optimization",
+            "T:deep reinforcement learning"
+          ],
+          "papers": 244,
+          "latest": "2026-09-20T13:44:08+00:00"
+        },
+        {
+          "pair": [
+            "M:proximal policy optimization",
+            "T:traffic signal control"
+          ],
+          "papers": 9,
+          "latest": "2026-07-04T04:45:54+00:00"
+        },
+        {
+          "pair": [
+            "T:deep reinforcement learning",
+            "T:traffic signal control"
+          ],
+          "papers": 27,
+          "latest": "2026-07-28T07:57:18+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 280
+    },
+    {
+      "rank": 6,
+      "triad": [
+        "M:adapter",
+        "T:parameter efficient fine tuning",
+        "T:text generation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:adapter",
+            "T:parameter efficient fine tuning"
+          ],
+          "papers": 308,
+          "latest": "2026-09-21T12:48:34+00:00"
+        },
+        {
+          "pair": [
+            "M:adapter",
+            "T:text generation"
+          ],
+          "papers": 17,
+          "latest": "2026-04-11T04:32:59+00:00"
+        },
+        {
+          "pair": [
+            "T:parameter efficient fine tuning",
+            "T:text generation"
+          ],
+          "papers": 28,
+          "latest": "2026-09-21T17:55:48+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 353
+    },
+    {
+      "rank": 7,
+      "triad": [
+        "M:gaussian process",
+        "T:kolmogorov arnold networks",
+        "T:regression"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:gaussian process",
+            "T:kolmogorov arnold networks"
+          ],
+          "papers": 9,
+          "latest": "2026-09-14T09:34:31+00:00"
+        },
+        {
+          "pair": [
+            "M:gaussian process",
+            "T:regression"
+          ],
+          "papers": 680,
+          "latest": "2026-09-24T16:33:59+00:00"
+        },
+        {
+          "pair": [
+            "T:kolmogorov arnold networks",
+            "T:regression"
+          ],
+          "papers": 44,
+          "latest": "2026-09-07T16:45:20+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 733
+    },
+    {
+      "rank": 8,
+      "triad": [
+        "M:normalizing flows",
+        "T:parameter estimation",
+        "T:regression"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:normalizing flows",
+            "T:parameter estimation"
+          ],
+          "papers": 18,
+          "latest": "2026-07-27T19:36:51+00:00"
+        },
+        {
+          "pair": [
+            "M:normalizing flows",
+            "T:regression"
+          ],
+          "papers": 37,
+          "latest": "2026-08-06T03:23:49+00:00"
+        },
+        {
+          "pair": [
+            "T:parameter estimation",
+            "T:regression"
+          ],
+          "papers": 83,
+          "latest": "2026-08-25T00:47:38+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 138
+    },
+    {
+      "rank": 9,
+      "triad": [
+        "M:random search",
+        "T:bayesian optimization",
+        "T:prediction"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:random search",
+            "T:bayesian optimization"
+          ],
+          "papers": 45,
+          "latest": "2026-08-21T11:33:13+00:00"
+        },
+        {
+          "pair": [
+            "M:random search",
+            "T:prediction"
+          ],
+          "papers": 13,
+          "latest": "2026-08-30T09:58:30+00:00"
+        },
+        {
+          "pair": [
+            "T:bayesian optimization",
+            "T:prediction"
+          ],
+          "papers": 91,
+          "latest": "2026-09-23T17:28:08+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 149
+    },
+    {
+      "rank": 10,
+      "triad": [
+        "M:gaussian process",
+        "T:generalization bounds",
+        "T:regression"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:gaussian process",
+            "T:generalization bounds"
+          ],
+          "papers": 1,
+          "latest": "2026-06-11T18:49:45+00:00"
+        },
+        {
+          "pair": [
+            "M:gaussian process",
+            "T:regression"
+          ],
+          "papers": 680,
+          "latest": "2026-09-24T16:33:59+00:00"
+        },
+        {
+          "pair": [
+            "T:generalization bounds",
+            "T:regression"
+          ],
+          "papers": 36,
+          "latest": "2026-07-05T17:51:59+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 717
+    },
+    {
+      "rank": 11,
+      "triad": [
+        "M:direct preference optimization",
+        "T:instruction following",
+        "T:safety alignment"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:direct preference optimization",
+            "T:instruction following"
+          ],
+          "papers": 52,
+          "latest": "2026-09-17T21:12:43+00:00"
+        },
+        {
+          "pair": [
+            "M:direct preference optimization",
+            "T:safety alignment"
+          ],
+          "papers": 27,
+          "latest": "2026-08-29T17:25:01+00:00"
+        },
+        {
+          "pair": [
+            "T:instruction following",
+            "T:safety alignment"
+          ],
+          "papers": 19,
+          "latest": "2026-03-19T09:00:47+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 98
+    },
+    {
+      "rank": 12,
+      "triad": [
+        "M:global local attention",
+        "M:transformer",
+        "T:decoder"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:global local attention",
+            "M:transformer"
+          ],
+          "papers": 11,
+          "latest": "2026-02-10T22:48:58+00:00"
+        },
+        {
+          "pair": [
+            "M:global local attention",
+            "T:decoder"
+          ],
+          "papers": 2,
+          "latest": "2026-08-25T21:29:35+00:00"
+        },
+        {
+          "pair": [
+            "M:transformer",
+            "T:decoder"
+          ],
+          "papers": 2278,
+          "latest": "2026-09-24T16:44:26+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 2291
+    },
+    {
+      "rank": 13,
+      "triad": [
+        "M:gaussian process",
+        "T:bayesian optimization",
+        "T:operator learning"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:gaussian process",
+            "T:bayesian optimization"
+          ],
+          "papers": 396,
+          "latest": "2026-09-23T17:28:08+00:00"
+        },
+        {
+          "pair": [
+            "M:gaussian process",
+            "T:operator learning"
+          ],
+          "papers": 13,
+          "latest": "2026-07-08T17:58:52+00:00"
+        },
+        {
+          "pair": [
+            "T:bayesian optimization",
+            "T:operator learning"
+          ],
+          "papers": 3,
+          "latest": "2026-08-25T11:42:09+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 412
+    },
+    {
+      "rank": 14,
+      "triad": [
+        "M:convolutional block attention module",
+        "M:yolov8",
+        "T:classification"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:convolutional block attention module",
+            "M:yolov8"
+          ],
+          "papers": 10,
+          "latest": "2026-06-11T06:35:07+00:00"
+        },
+        {
+          "pair": [
+            "M:convolutional block attention module",
+            "T:classification"
+          ],
+          "papers": 28,
+          "latest": "2026-09-06T16:17:18+00:00"
+        },
+        {
+          "pair": [
+            "M:yolov8",
+            "T:classification"
+          ],
+          "papers": 99,
+          "latest": "2026-09-21T14:31:45+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 137
+    },
+    {
+      "rank": 15,
+      "triad": [
+        "M:normalizing flows",
+        "T:density estimation",
+        "T:uncertainty quantification"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:normalizing flows",
+            "T:density estimation"
+          ],
+          "papers": 79,
+          "latest": "2026-09-21T07:18:23+00:00"
+        },
+        {
+          "pair": [
+            "M:normalizing flows",
+            "T:uncertainty quantification"
+          ],
+          "papers": 35,
+          "latest": "2026-08-05T14:56:14+00:00"
+        },
+        {
+          "pair": [
+            "T:density estimation",
+            "T:uncertainty quantification"
+          ],
+          "papers": 16,
+          "latest": "2026-05-06T18:01:19+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 130
+    },
+    {
+      "rank": 16,
+      "triad": [
+        "M:transformer",
+        "T:image to 3d",
+        "T:scene generation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:transformer",
+            "T:image to 3d"
+          ],
+          "papers": 30,
+          "latest": "2026-09-07T07:36:52+00:00"
+        },
+        {
+          "pair": [
+            "M:transformer",
+            "T:scene generation"
+          ],
+          "papers": 27,
+          "latest": "2026-09-03T14:41:34+00:00"
+        },
+        {
+          "pair": [
+            "T:image to 3d",
+            "T:scene generation"
+          ],
+          "papers": 20,
+          "latest": "2026-09-08T14:58:11+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 77
+    },
+    {
+      "rank": 17,
+      "triad": [
+        "M:direct preference optimization",
+        "T:code generation",
+        "T:instruction following"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:direct preference optimization",
+            "T:code generation"
+          ],
+          "papers": 16,
+          "latest": "2026-06-27T16:22:22+00:00"
+        },
+        {
+          "pair": [
+            "M:direct preference optimization",
+            "T:instruction following"
+          ],
+          "papers": 52,
+          "latest": "2026-09-17T21:12:43+00:00"
+        },
+        {
+          "pair": [
+            "T:code generation",
+            "T:instruction following"
+          ],
+          "papers": 73,
+          "latest": "2026-09-20T05:25:09+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 141
+    },
+    {
+      "rank": 18,
+      "triad": [
+        "M:gaussian process",
+        "M:pc",
+        "T:uncertainty quantification"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:gaussian process",
+            "M:pc"
+          ],
+          "papers": 5,
+          "latest": "2026-06-22T08:43:04+00:00"
+        },
+        {
+          "pair": [
+            "M:gaussian process",
+            "T:uncertainty quantification"
+          ],
+          "papers": 259,
+          "latest": "2026-09-24T16:33:59+00:00"
+        },
+        {
+          "pair": [
+            "M:pc",
+            "T:uncertainty quantification"
+          ],
+          "papers": 5,
+          "latest": "2026-07-02T14:13:08+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 269
+    },
+    {
+      "rank": 19,
+      "triad": [
+        "M:vq vae",
+        "T:motion generation",
+        "T:prediction"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:vq vae",
+            "T:motion generation"
+          ],
+          "papers": 22,
+          "latest": "2026-06-25T20:50:31+00:00"
+        },
+        {
+          "pair": [
+            "M:vq vae",
+            "T:prediction"
+          ],
+          "papers": 35,
+          "latest": "2026-06-25T06:52:17+00:00"
+        },
+        {
+          "pair": [
+            "T:motion generation",
+            "T:prediction"
+          ],
+          "papers": 51,
+          "latest": "2026-09-13T15:46:41+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 108
+    },
+    {
+      "rank": 20,
+      "triad": [
+        "M:direct preference optimization",
+        "M:proximal policy optimization",
+        "T:decision making"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:direct preference optimization",
+            "M:proximal policy optimization"
+          ],
+          "papers": 33,
+          "latest": "2026-06-03T12:31:42+00:00"
+        },
+        {
+          "pair": [
+            "M:direct preference optimization",
+            "T:decision making"
+          ],
+          "papers": 18,
+          "latest": "2026-08-12T13:48:30+00:00"
+        },
+        {
+          "pair": [
+            "M:proximal policy optimization",
+            "T:decision making"
+          ],
+          "papers": 85,
+          "latest": "2026-09-13T14:53:42+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 136
+    },
+    {
+      "rank": 21,
+      "triad": [
+        "M:grouped query attention",
+        "M:pruning",
+        "T:mixture of experts"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:grouped query attention",
+            "M:pruning"
+          ],
+          "papers": 7,
+          "latest": "2026-08-24T14:24:05+00:00"
+        },
+        {
+          "pair": [
+            "M:grouped query attention",
+            "T:mixture of experts"
+          ],
+          "papers": 15,
+          "latest": "2026-08-17T19:21:23+00:00"
+        },
+        {
+          "pair": [
+            "M:pruning",
+            "T:mixture of experts"
+          ],
+          "papers": 146,
+          "latest": "2026-09-22T07:39:35+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 168
+    },
+    {
+      "rank": 22,
+      "triad": [
+        "M:pruning",
+        "T:language modeling",
+        "T:state space models"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:pruning",
+            "T:language modeling"
+          ],
+          "papers": 56,
+          "latest": "2026-09-16T23:23:10+00:00"
+        },
+        {
+          "pair": [
+            "M:pruning",
+            "T:state space models"
+          ],
+          "papers": 22,
+          "latest": "2026-09-02T11:21:41+00:00"
+        },
+        {
+          "pair": [
+            "T:language modeling",
+            "T:state space models"
+          ],
+          "papers": 81,
+          "latest": "2026-09-15T02:36:13+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 159
+    },
+    {
+      "rank": 23,
+      "triad": [
+        "M:pruning",
+        "T:mixture of experts",
+        "T:token reduction"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:pruning",
+            "T:mixture of experts"
+          ],
+          "papers": 146,
+          "latest": "2026-09-22T07:39:35+00:00"
+        },
+        {
+          "pair": [
+            "M:pruning",
+            "T:token reduction"
+          ],
+          "papers": 101,
+          "latest": "2026-09-22T03:47:29+00:00"
+        },
+        {
+          "pair": [
+            "T:mixture of experts",
+            "T:token reduction"
+          ],
+          "papers": 1,
+          "latest": "2026-05-14T21:11:32+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 248
+    },
+    {
+      "rank": 24,
+      "triad": [
+        "M:gpt 4",
+        "T:code generation",
+        "T:mathematical problem solving"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:gpt 4",
+            "T:code generation"
+          ],
+          "papers": 126,
+          "latest": "2026-05-18T08:55:30+00:00"
+        },
+        {
+          "pair": [
+            "M:gpt 4",
+            "T:mathematical problem solving"
+          ],
+          "papers": 11,
+          "latest": "2026-03-26T16:43:54+00:00"
+        },
+        {
+          "pair": [
+            "T:code generation",
+            "T:mathematical problem solving"
+          ],
+          "papers": 21,
+          "latest": "2026-09-04T23:32:11+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 158
+    },
+    {
+      "rank": 25,
+      "triad": [
+        "M:pc",
+        "T:causal discovery",
+        "T:classification"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:pc",
+            "T:causal discovery"
+          ],
+          "papers": 43,
+          "latest": "2026-08-19T09:14:38+00:00"
+        },
+        {
+          "pair": [
+            "M:pc",
+            "T:classification"
+          ],
+          "papers": 62,
+          "latest": "2026-09-18T22:13:43+00:00"
+        },
+        {
+          "pair": [
+            "T:causal discovery",
+            "T:classification"
+          ],
+          "papers": 18,
+          "latest": "2026-06-15T09:01:49+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 123
+    },
+    {
+      "rank": 26,
+      "triad": [
+        "M:rag",
+        "T:retrieval",
+        "T:text reranking"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:rag",
+            "T:retrieval"
+          ],
+          "papers": 2636,
+          "latest": "2026-09-24T15:48:59+00:00"
+        },
+        {
+          "pair": [
+            "M:rag",
+            "T:text reranking"
+          ],
+          "papers": 2,
+          "latest": "2026-08-24T11:32:05+00:00"
+        },
+        {
+          "pair": [
+            "T:retrieval",
+            "T:text reranking"
+          ],
+          "papers": 4,
+          "latest": "2026-09-17T12:24:24+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 2642
+    },
+    {
+      "rank": 27,
+      "triad": [
+        "M:counterfactuals",
+        "T:causal inference",
+        "T:regression"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:counterfactuals",
+            "T:causal inference"
+          ],
+          "papers": 39,
+          "latest": "2026-07-29T07:46:44+00:00"
+        },
+        {
+          "pair": [
+            "M:counterfactuals",
+            "T:regression"
+          ],
+          "papers": 16,
+          "latest": "2026-08-18T17:51:16+00:00"
+        },
+        {
+          "pair": [
+            "T:causal inference",
+            "T:regression"
+          ],
+          "papers": 113,
+          "latest": "2026-09-07T19:56:29+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 168
+    },
+    {
+      "rank": 28,
+      "triad": [
+        "M:consistency models",
+        "T:computational efficiency",
+        "T:denoising"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:consistency models",
+            "T:computational efficiency"
+          ],
+          "papers": 9,
+          "latest": "2025-10-02T16:53:07+00:00"
+        },
+        {
+          "pair": [
+            "M:consistency models",
+            "T:denoising"
+          ],
+          "papers": 37,
+          "latest": "2026-08-20T20:49:25+00:00"
+        },
+        {
+          "pair": [
+            "T:computational efficiency",
+            "T:denoising"
+          ],
+          "papers": 135,
+          "latest": "2026-09-13T03:49:06+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 181
+    },
+    {
+      "rank": 29,
+      "triad": [
+        "M:adapter",
+        "T:parameter efficient fine tuning",
+        "T:prompt engineering"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:adapter",
+            "T:parameter efficient fine tuning"
+          ],
+          "papers": 308,
+          "latest": "2026-09-21T12:48:34+00:00"
+        },
+        {
+          "pair": [
+            "M:adapter",
+            "T:prompt engineering"
+          ],
+          "papers": 14,
+          "latest": "2026-06-11T06:09:51+00:00"
+        },
+        {
+          "pair": [
+            "T:parameter efficient fine tuning",
+            "T:prompt engineering"
+          ],
+          "papers": 11,
+          "latest": "2026-08-10T13:56:48+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 333
+    },
+    {
+      "rank": 30,
+      "triad": [
+        "M:soft actor critic",
+        "T:continuous control",
+        "T:decision making"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:soft actor critic",
+            "T:continuous control"
+          ],
+          "papers": 48,
+          "latest": "2026-08-24T02:34:22+00:00"
+        },
+        {
+          "pair": [
+            "M:soft actor critic",
+            "T:decision making"
+          ],
+          "papers": 25,
+          "latest": "2026-07-17T08:21:15+00:00"
+        },
+        {
+          "pair": [
+            "T:continuous control",
+            "T:decision making"
+          ],
+          "papers": 51,
+          "latest": "2026-07-12T16:06:09+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 124
+    },
+    {
+      "rank": 31,
+      "triad": [
+        "M:adapter",
+        "T:language modeling",
+        "T:mixture of experts"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:adapter",
+            "T:language modeling"
+          ],
+          "papers": 29,
+          "latest": "2026-07-20T17:00:53+00:00"
+        },
+        {
+          "pair": [
+            "M:adapter",
+            "T:mixture of experts"
+          ],
+          "papers": 98,
+          "latest": "2026-09-05T13:05:01+00:00"
+        },
+        {
+          "pair": [
+            "T:language modeling",
+            "T:mixture of experts"
+          ],
+          "papers": 90,
+          "latest": "2026-09-18T06:01:13+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 217
+    },
+    {
+      "rank": 32,
+      "triad": [
+        "M:inpainting",
+        "T:image generation",
+        "T:image manipulation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:inpainting",
+            "T:image generation"
+          ],
+          "papers": 91,
+          "latest": "2026-09-13T08:24:45+00:00"
+        },
+        {
+          "pair": [
+            "M:inpainting",
+            "T:image manipulation"
+          ],
+          "papers": 21,
+          "latest": "2026-08-05T13:36:42+00:00"
+        },
+        {
+          "pair": [
+            "T:image generation",
+            "T:image manipulation"
+          ],
+          "papers": 29,
+          "latest": "2026-06-23T02:05:10+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 141
+    },
+    {
+      "rank": 33,
+      "triad": [
+        "M:adapter",
+        "M:rag",
+        "T:parameter efficient fine tuning"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:adapter",
+            "M:rag"
+          ],
+          "papers": 26,
+          "latest": "2026-09-21T06:48:27+00:00"
+        },
+        {
+          "pair": [
+            "M:adapter",
+            "T:parameter efficient fine tuning"
+          ],
+          "papers": 308,
+          "latest": "2026-09-21T12:48:34+00:00"
+        },
+        {
+          "pair": [
+            "M:rag",
+            "T:parameter efficient fine tuning"
+          ],
+          "papers": 22,
+          "latest": "2026-03-17T13:49:31+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 356
+    },
+    {
+      "rank": 34,
+      "triad": [
+        "M:linformer",
+        "M:transformer",
+        "T:decoder"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:linformer",
+            "M:transformer"
+          ],
+          "papers": 11,
+          "latest": "2025-10-24T18:00:01+00:00"
+        },
+        {
+          "pair": [
+            "M:linformer",
+            "T:decoder"
+          ],
+          "papers": 1,
+          "latest": "2025-03-10T10:32:55+00:00"
+        },
+        {
+          "pair": [
+            "M:transformer",
+            "T:decoder"
+          ],
+          "papers": 2278,
+          "latest": "2026-09-24T16:44:26+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 2290
+    },
+    {
+      "rank": 35,
+      "triad": [
+        "M:adapter",
+        "T:meta learning",
+        "T:parameter efficient fine tuning"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:adapter",
+            "T:meta learning"
+          ],
+          "papers": 12,
+          "latest": "2026-05-15T16:09:56+00:00"
+        },
+        {
+          "pair": [
+            "M:adapter",
+            "T:parameter efficient fine tuning"
+          ],
+          "papers": 308,
+          "latest": "2026-09-21T12:48:34+00:00"
+        },
+        {
+          "pair": [
+            "T:meta learning",
+            "T:parameter efficient fine tuning"
+          ],
+          "papers": 13,
+          "latest": "2026-03-02T11:38:18+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 333
+    },
+    {
+      "rank": 36,
+      "triad": [
+        "M:pix2pix",
+        "T:denoising",
+        "T:image generation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:pix2pix",
+            "T:denoising"
+          ],
+          "papers": 11,
+          "latest": "2026-08-20T08:34:40+00:00"
+        },
+        {
+          "pair": [
+            "M:pix2pix",
+            "T:image generation"
+          ],
+          "papers": 13,
+          "latest": "2026-05-17T17:49:01+00:00"
+        },
+        {
+          "pair": [
+            "T:denoising",
+            "T:image generation"
+          ],
+          "papers": 481,
+          "latest": "2026-09-21T07:33:28+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 505
+    },
+    {
+      "rank": 37,
+      "triad": [
+        "M:gpt",
+        "M:rag",
+        "T:claim verification"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:gpt",
+            "M:rag"
+          ],
+          "papers": 268,
+          "latest": "2026-09-24T06:05:11+00:00"
+        },
+        {
+          "pair": [
+            "M:gpt",
+            "T:claim verification"
+          ],
+          "papers": 17,
+          "latest": "2026-07-30T14:00:27+00:00"
+        },
+        {
+          "pair": [
+            "M:rag",
+            "T:claim verification"
+          ],
+          "papers": 13,
+          "latest": "2026-09-13T02:49:06+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 298
+    },
+    {
+      "rank": 38,
+      "triad": [
+        "M:convolutional neural network",
+        "M:long short term memory",
+        "T:computational efficiency"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:convolutional neural network",
+            "M:long short term memory"
+          ],
+          "papers": 210,
+          "latest": "2026-08-28T05:27:51+00:00"
+        },
+        {
+          "pair": [
+            "M:convolutional neural network",
+            "T:computational efficiency"
+          ],
+          "papers": 72,
+          "latest": "2026-09-21T14:06:08+00:00"
+        },
+        {
+          "pair": [
+            "M:long short term memory",
+            "T:computational efficiency"
+          ],
+          "papers": 39,
+          "latest": "2026-06-30T15:39:47+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 321
+    },
+    {
+      "rank": 39,
+      "triad": [
+        "M:attention",
+        "M:gpt 2",
+        "M:sparse autoencoder"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:attention",
+            "M:gpt 2"
+          ],
+          "papers": 186,
+          "latest": "2026-09-21T18:27:16+00:00"
+        },
+        {
+          "pair": [
+            "M:attention",
+            "M:sparse autoencoder"
+          ],
+          "papers": 19,
+          "latest": "2026-09-15T13:17:30+00:00"
+        },
+        {
+          "pair": [
+            "M:gpt 2",
+            "M:sparse autoencoder"
+          ],
+          "papers": 11,
+          "latest": "2026-06-26T10:30:56+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 216
+    },
+    {
+      "rank": 40,
+      "triad": [
+        "M:logistic regression",
+        "T:binary classification",
+        "T:decision making"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:logistic regression",
+            "T:binary classification"
+          ],
+          "papers": 68,
+          "latest": "2026-09-20T09:01:47+00:00"
+        },
+        {
+          "pair": [
+            "M:logistic regression",
+            "T:decision making"
+          ],
+          "papers": 79,
+          "latest": "2026-09-24T14:28:35+00:00"
+        },
+        {
+          "pair": [
+            "T:binary classification",
+            "T:decision making"
+          ],
+          "papers": 74,
+          "latest": "2026-08-13T09:48:22+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 221
+    },
+    {
+      "rank": 41,
+      "triad": [
+        "M:rag",
+        "T:information retrieval",
+        "T:natural questions"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:rag",
+            "T:information retrieval"
+          ],
+          "papers": 236,
+          "latest": "2026-09-23T13:05:09+00:00"
+        },
+        {
+          "pair": [
+            "M:rag",
+            "T:natural questions"
+          ],
+          "papers": 31,
+          "latest": "2026-08-31T23:21:27+00:00"
+        },
+        {
+          "pair": [
+            "T:information retrieval",
+            "T:natural questions"
+          ],
+          "papers": 10,
+          "latest": "2026-07-28T01:23:04+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 277
+    },
+    {
+      "rank": 42,
+      "triad": [
+        "M:adapter",
+        "T:domain generalization",
+        "T:multi task learning"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:adapter",
+            "T:domain generalization"
+          ],
+          "papers": 49,
+          "latest": "2026-08-09T16:43:04+00:00"
+        },
+        {
+          "pair": [
+            "M:adapter",
+            "T:multi task learning"
+          ],
+          "papers": 35,
+          "latest": "2026-08-22T10:45:48+00:00"
+        },
+        {
+          "pair": [
+            "T:domain generalization",
+            "T:multi task learning"
+          ],
+          "papers": 19,
+          "latest": "2026-07-24T04:26:47+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 103
+    },
+    {
+      "rank": 43,
+      "triad": [
+        "M:gaussian process",
+        "M:normalizing flows",
+        "T:density estimation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:gaussian process",
+            "M:normalizing flows"
+          ],
+          "papers": 18,
+          "latest": "2026-07-28T04:40:25+00:00"
+        },
+        {
+          "pair": [
+            "M:gaussian process",
+            "T:density estimation"
+          ],
+          "papers": 14,
+          "latest": "2026-09-06T08:46:36+00:00"
+        },
+        {
+          "pair": [
+            "M:normalizing flows",
+            "T:density estimation"
+          ],
+          "papers": 79,
+          "latest": "2026-09-21T07:18:23+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 111
+    },
+    {
+      "rank": 44,
+      "triad": [
+        "M:attention",
+        "T:4d reconstruction",
+        "T:point tracking"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:attention",
+            "T:4d reconstruction"
+          ],
+          "papers": 13,
+          "latest": "2026-07-23T04:57:22+00:00"
+        },
+        {
+          "pair": [
+            "M:attention",
+            "T:point tracking"
+          ],
+          "papers": 23,
+          "latest": "2026-07-16T09:04:50+00:00"
+        },
+        {
+          "pair": [
+            "T:4d reconstruction",
+            "T:point tracking"
+          ],
+          "papers": 9,
+          "latest": "2026-09-01T21:58:51+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 45
+    },
+    {
+      "rank": 45,
+      "triad": [
+        "M:segformer",
+        "M:u net",
+        "T:image segmentation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:segformer",
+            "M:u net"
+          ],
+          "papers": 36,
+          "latest": "2026-09-09T16:01:45+00:00"
+        },
+        {
+          "pair": [
+            "M:segformer",
+            "T:image segmentation"
+          ],
+          "papers": 6,
+          "latest": "2026-06-23T02:07:15+00:00"
+        },
+        {
+          "pair": [
+            "M:u net",
+            "T:image segmentation"
+          ],
+          "papers": 179,
+          "latest": "2026-09-06T03:16:51+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 221
+    },
+    {
+      "rank": 46,
+      "triad": [
+        "M:glm",
+        "M:rag",
+        "T:question answering"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:glm",
+            "M:rag"
+          ],
+          "papers": 7,
+          "latest": "2026-07-30T15:49:34+00:00"
+        },
+        {
+          "pair": [
+            "M:glm",
+            "T:question answering"
+          ],
+          "papers": 8,
+          "latest": "2026-09-16T13:52:50+00:00"
+        },
+        {
+          "pair": [
+            "M:rag",
+            "T:question answering"
+          ],
+          "papers": 734,
+          "latest": "2026-09-24T15:48:59+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 749
+    },
+    {
+      "rank": 47,
+      "triad": [
+        "M:deep q network",
+        "M:reinforce",
+        "T:reinforcement learning"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:deep q network",
+            "M:reinforce"
+          ],
+          "papers": 1,
+          "latest": "2026-07-02T14:22:42+00:00"
+        },
+        {
+          "pair": [
+            "M:deep q network",
+            "T:reinforcement learning"
+          ],
+          "papers": 195,
+          "latest": "2026-09-23T07:11:03+00:00"
+        },
+        {
+          "pair": [
+            "M:reinforce",
+            "T:reinforcement learning"
+          ],
+          "papers": 87,
+          "latest": "2026-09-22T12:58:28+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 283
+    },
+    {
+      "rank": 48,
+      "triad": [
+        "M:attention",
+        "M:segment anything model",
+        "T:polyp segmentation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:attention",
+            "M:segment anything model"
+          ],
+          "papers": 148,
+          "latest": "2026-09-20T10:41:37+00:00"
+        },
+        {
+          "pair": [
+            "M:attention",
+            "T:polyp segmentation"
+          ],
+          "papers": 53,
+          "latest": "2026-05-14T22:19:52+00:00"
+        },
+        {
+          "pair": [
+            "M:segment anything model",
+            "T:polyp segmentation"
+          ],
+          "papers": 21,
+          "latest": "2026-01-25T18:13:48+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 222
+    },
+    {
+      "rank": 49,
+      "triad": [
+        "M:adapter",
+        "T:parameter efficient fine tuning",
+        "T:sst 2"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:adapter",
+            "T:parameter efficient fine tuning"
+          ],
+          "papers": 308,
+          "latest": "2026-09-21T12:48:34+00:00"
+        },
+        {
+          "pair": [
+            "M:adapter",
+            "T:sst 2"
+          ],
+          "papers": 6,
+          "latest": "2026-07-07T07:40:00+00:00"
+        },
+        {
+          "pair": [
+            "T:parameter efficient fine tuning",
+            "T:sst 2"
+          ],
+          "papers": 3,
+          "latest": "2026-08-05T06:20:57+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 317
+    },
+    {
+      "rank": 50,
+      "triad": [
+        "M:gpt",
+        "T:chart understanding",
+        "T:question answering"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:gpt",
+            "T:chart understanding"
+          ],
+          "papers": 18,
+          "latest": "2026-05-21T08:47:49+00:00"
+        },
+        {
+          "pair": [
+            "M:gpt",
+            "T:question answering"
+          ],
+          "papers": 250,
+          "latest": "2026-09-21T02:06:45+00:00"
+        },
+        {
+          "pair": [
+            "T:chart understanding",
+            "T:question answering"
+          ],
+          "papers": 11,
+          "latest": "2026-03-28T00:45:05+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 279
+    },
+    {
+      "rank": 51,
+      "triad": [
+        "M:proximal policy optimization",
+        "T:continuous control",
+        "T:multi agent reinforcement learning"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:proximal policy optimization",
+            "T:continuous control"
+          ],
+          "papers": 37,
+          "latest": "2026-09-17T21:48:04+00:00"
+        },
+        {
+          "pair": [
+            "M:proximal policy optimization",
+            "T:multi agent reinforcement learning"
+          ],
+          "papers": 77,
+          "latest": "2026-09-16T13:25:05+00:00"
+        },
+        {
+          "pair": [
+            "T:continuous control",
+            "T:multi agent reinforcement learning"
+          ],
+          "papers": 13,
+          "latest": "2026-09-20T01:01:39+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 127
+    },
+    {
+      "rank": 52,
+      "triad": [
+        "M:shapley additive explanations",
+        "T:deep learning",
+        "T:feature engineering"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:shapley additive explanations",
+            "T:deep learning"
+          ],
+          "papers": 65,
+          "latest": "2026-09-03T22:01:00+00:00"
+        },
+        {
+          "pair": [
+            "M:shapley additive explanations",
+            "T:feature engineering"
+          ],
+          "papers": 9,
+          "latest": "2026-02-27T10:16:28+00:00"
+        },
+        {
+          "pair": [
+            "T:deep learning",
+            "T:feature engineering"
+          ],
+          "papers": 242,
+          "latest": "2026-08-31T11:08:33+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 316
+    },
+    {
+      "rank": 53,
+      "triad": [
+        "M:detr",
+        "M:yolov8",
+        "T:data augmentation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:detr",
+            "M:yolov8"
+          ],
+          "papers": 41,
+          "latest": "2026-09-22T00:17:45+00:00"
+        },
+        {
+          "pair": [
+            "M:detr",
+            "T:data augmentation"
+          ],
+          "papers": 22,
+          "latest": "2026-09-02T13:06:58+00:00"
+        },
+        {
+          "pair": [
+            "M:yolov8",
+            "T:data augmentation"
+          ],
+          "papers": 23,
+          "latest": "2026-03-28T23:06:36+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 86
+    },
+    {
+      "rank": 54,
+      "triad": [
+        "M:gpt 4",
+        "T:large language model",
+        "T:red teaming"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:gpt 4",
+            "T:large language model"
+          ],
+          "papers": 373,
+          "latest": "2026-09-14T15:20:30+00:00"
+        },
+        {
+          "pair": [
+            "M:gpt 4",
+            "T:red teaming"
+          ],
+          "papers": 27,
+          "latest": "2026-02-12T18:12:12+00:00"
+        },
+        {
+          "pair": [
+            "T:large language model",
+            "T:red teaming"
+          ],
+          "papers": 42,
+          "latest": "2026-08-16T07:18:04+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 442
+    },
+    {
+      "rank": 55,
+      "triad": [
+        "M:transformer",
+        "T:kolmogorov arnold networks",
+        "T:symbolic regression"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:transformer",
+            "T:kolmogorov arnold networks"
+          ],
+          "papers": 33,
+          "latest": "2026-09-18T19:07:25+00:00"
+        },
+        {
+          "pair": [
+            "M:transformer",
+            "T:symbolic regression"
+          ],
+          "papers": 34,
+          "latest": "2026-09-21T15:16:15+00:00"
+        },
+        {
+          "pair": [
+            "T:kolmogorov arnold networks",
+            "T:symbolic regression"
+          ],
+          "papers": 20,
+          "latest": "2026-08-26T13:53:13+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 87
+    },
+    {
+      "rank": 56,
+      "triad": [
+        "M:gpt",
+        "T:natural language queries",
+        "T:text to sql"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:gpt",
+            "T:natural language queries"
+          ],
+          "papers": 14,
+          "latest": "2026-07-16T03:55:51+00:00"
+        },
+        {
+          "pair": [
+            "M:gpt",
+            "T:text to sql"
+          ],
+          "papers": 30,
+          "latest": "2026-08-17T14:54:51+00:00"
+        },
+        {
+          "pair": [
+            "T:natural language queries",
+            "T:text to sql"
+          ],
+          "papers": 37,
+          "latest": "2026-09-08T16:08:43+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 81
+    },
+    {
+      "rank": 57,
+      "triad": [
+        "M:adamw",
+        "M:weight decay",
+        "T:large language model"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:adamw",
+            "M:weight decay"
+          ],
+          "papers": 53,
+          "latest": "2026-09-16T19:35:47+00:00"
+        },
+        {
+          "pair": [
+            "M:adamw",
+            "T:large language model"
+          ],
+          "papers": 19,
+          "latest": "2026-09-10T15:00:01+00:00"
+        },
+        {
+          "pair": [
+            "M:weight decay",
+            "T:large language model"
+          ],
+          "papers": 5,
+          "latest": "2026-08-04T16:22:30+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 77
+    },
+    {
+      "rank": 58,
+      "triad": [
+        "M:pruning",
+        "T:inference optimization",
+        "T:large language model"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:pruning",
+            "T:inference optimization"
+          ],
+          "papers": 14,
+          "latest": "2026-07-01T15:26:09+00:00"
+        },
+        {
+          "pair": [
+            "M:pruning",
+            "T:large language model"
+          ],
+          "papers": 150,
+          "latest": "2026-09-18T06:44:44+00:00"
+        },
+        {
+          "pair": [
+            "T:inference optimization",
+            "T:large language model"
+          ],
+          "papers": 9,
+          "latest": "2026-06-16T21:30:10+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 173
+    },
+    {
+      "rank": 59,
+      "triad": [
+        "M:rag",
+        "T:chunking",
+        "T:success rate"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:rag",
+            "T:chunking"
+          ],
+          "papers": 127,
+          "latest": "2026-09-21T07:38:12+00:00"
+        },
+        {
+          "pair": [
+            "M:rag",
+            "T:success rate"
+          ],
+          "papers": 70,
+          "latest": "2026-09-13T14:58:56+00:00"
+        },
+        {
+          "pair": [
+            "T:chunking",
+            "T:success rate"
+          ],
+          "papers": 19,
+          "latest": "2026-09-17T17:48:07+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 216
+    },
+    {
+      "rank": 60,
+      "triad": [
+        "M:transformer",
+        "T:humanoid control",
+        "T:motion generation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:transformer",
+            "T:humanoid control"
+          ],
+          "papers": 9,
+          "latest": "2026-07-16T16:08:27+00:00"
+        },
+        {
+          "pair": [
+            "M:transformer",
+            "T:motion generation"
+          ],
+          "papers": 114,
+          "latest": "2026-09-14T03:15:22+00:00"
+        },
+        {
+          "pair": [
+            "T:humanoid control",
+            "T:motion generation"
+          ],
+          "papers": 10,
+          "latest": "2026-09-21T16:20:25+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 133
+    },
+    {
+      "rank": 61,
+      "triad": [
+        "M:spiking neural networks",
+        "M:transformer",
+        "T:event based vision"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:spiking neural networks",
+            "M:transformer"
+          ],
+          "papers": 99,
+          "latest": "2026-08-26T12:50:09+00:00"
+        },
+        {
+          "pair": [
+            "M:spiking neural networks",
+            "T:event based vision"
+          ],
+          "papers": 27,
+          "latest": "2026-09-11T02:34:24+00:00"
+        },
+        {
+          "pair": [
+            "M:transformer",
+            "T:event based vision"
+          ],
+          "papers": 11,
+          "latest": "2026-09-18T02:06:34+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 137
+    },
+    {
+      "rank": 62,
+      "triad": [
+        "M:deep q network",
+        "T:model predictive control",
+        "T:reinforcement learning"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:deep q network",
+            "T:model predictive control"
+          ],
+          "papers": 1,
+          "latest": "2023-05-04T22:47:39+00:00"
+        },
+        {
+          "pair": [
+            "M:deep q network",
+            "T:reinforcement learning"
+          ],
+          "papers": 195,
+          "latest": "2026-09-23T07:11:03+00:00"
+        },
+        {
+          "pair": [
+            "T:model predictive control",
+            "T:reinforcement learning"
+          ],
+          "papers": 142,
+          "latest": "2026-09-04T16:08:05+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 338
+    },
+    {
+      "rank": 63,
+      "triad": [
+        "M:logistic regression",
+        "T:feature selection",
+        "T:transfer learning"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:logistic regression",
+            "T:feature selection"
+          ],
+          "papers": 92,
+          "latest": "2026-08-20T17:00:19+00:00"
+        },
+        {
+          "pair": [
+            "M:logistic regression",
+            "T:transfer learning"
+          ],
+          "papers": 20,
+          "latest": "2026-07-03T06:39:54+00:00"
+        },
+        {
+          "pair": [
+            "T:feature selection",
+            "T:transfer learning"
+          ],
+          "papers": 21,
+          "latest": "2026-06-22T06:06:02+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 133
+    },
+    {
+      "rank": 64,
+      "triad": [
+        "M:inpainting",
+        "T:image editing",
+        "T:video editing"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:inpainting",
+            "T:image editing"
+          ],
+          "papers": 73,
+          "latest": "2026-08-17T08:54:14+00:00"
+        },
+        {
+          "pair": [
+            "M:inpainting",
+            "T:video editing"
+          ],
+          "papers": 18,
+          "latest": "2026-05-14T14:37:54+00:00"
+        },
+        {
+          "pair": [
+            "T:image editing",
+            "T:video editing"
+          ],
+          "papers": 61,
+          "latest": "2026-08-26T17:59:19+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 152
+    },
+    {
+      "rank": 65,
+      "triad": [
+        "M:adapter",
+        "M:opt",
+        "T:parameter efficient fine tuning"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:adapter",
+            "M:opt"
+          ],
+          "papers": 4,
+          "latest": "2026-05-29T23:36:16+00:00"
+        },
+        {
+          "pair": [
+            "M:adapter",
+            "T:parameter efficient fine tuning"
+          ],
+          "papers": 308,
+          "latest": "2026-09-21T12:48:34+00:00"
+        },
+        {
+          "pair": [
+            "M:opt",
+            "T:parameter efficient fine tuning"
+          ],
+          "papers": 8,
+          "latest": "2025-05-24T21:56:03+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 320
+    },
+    {
+      "rank": 66,
+      "triad": [
+        "M:attention",
+        "M:spl",
+        "T:vision and language navigation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:attention",
+            "M:spl"
+          ],
+          "papers": 12,
+          "latest": "2026-09-18T01:52:36+00:00"
+        },
+        {
+          "pair": [
+            "M:attention",
+            "T:vision and language navigation"
+          ],
+          "papers": 20,
+          "latest": "2026-04-10T02:47:01+00:00"
+        },
+        {
+          "pair": [
+            "M:spl",
+            "T:vision and language navigation"
+          ],
+          "papers": 28,
+          "latest": "2026-08-29T07:54:38+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 60
+    },
+    {
+      "rank": 67,
+      "triad": [
+        "M:gaussian process",
+        "T:bayesian optimization",
+        "T:density estimation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:gaussian process",
+            "T:bayesian optimization"
+          ],
+          "papers": 396,
+          "latest": "2026-09-23T17:28:08+00:00"
+        },
+        {
+          "pair": [
+            "M:gaussian process",
+            "T:density estimation"
+          ],
+          "papers": 14,
+          "latest": "2026-09-06T08:46:36+00:00"
+        },
+        {
+          "pair": [
+            "T:bayesian optimization",
+            "T:density estimation"
+          ],
+          "papers": 5,
+          "latest": "2026-07-13T10:12:50+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 415
+    },
+    {
+      "rank": 68,
+      "triad": [
+        "M:gpt",
+        "T:knowledge editing",
+        "T:world knowledge"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:gpt",
+            "T:knowledge editing"
+          ],
+          "papers": 15,
+          "latest": "2026-06-25T09:20:00+00:00"
+        },
+        {
+          "pair": [
+            "M:gpt",
+            "T:world knowledge"
+          ],
+          "papers": 49,
+          "latest": "2026-07-17T06:56:08+00:00"
+        },
+        {
+          "pair": [
+            "T:knowledge editing",
+            "T:world knowledge"
+          ],
+          "papers": 21,
+          "latest": "2026-06-02T05:35:57+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 85
+    },
+    {
+      "rank": 69,
+      "triad": [
+        "M:gaussian process",
+        "T:regression",
+        "T:tensor decomposition"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:gaussian process",
+            "T:regression"
+          ],
+          "papers": 680,
+          "latest": "2026-09-24T16:33:59+00:00"
+        },
+        {
+          "pair": [
+            "M:gaussian process",
+            "T:tensor decomposition"
+          ],
+          "papers": 8,
+          "latest": "2026-02-04T05:32:57+00:00"
+        },
+        {
+          "pair": [
+            "T:regression",
+            "T:tensor decomposition"
+          ],
+          "papers": 13,
+          "latest": "2026-07-20T19:57:21+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 701
+    },
+    {
+      "rank": 70,
+      "triad": [
+        "M:adapter",
+        "T:model optimization",
+        "T:parameter efficient fine tuning"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:adapter",
+            "T:model optimization"
+          ],
+          "papers": 6,
+          "latest": "2026-03-26T22:30:10+00:00"
+        },
+        {
+          "pair": [
+            "M:adapter",
+            "T:parameter efficient fine tuning"
+          ],
+          "papers": 308,
+          "latest": "2026-09-21T12:48:34+00:00"
+        },
+        {
+          "pair": [
+            "T:model optimization",
+            "T:parameter efficient fine tuning"
+          ],
+          "papers": 5,
+          "latest": "2026-07-15T11:47:24+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 319
+    },
+    {
+      "rank": 71,
+      "triad": [
+        "M:long short term memory",
+        "M:transformer",
+        "T:demand forecasting"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:long short term memory",
+            "M:transformer"
+          ],
+          "papers": 221,
+          "latest": "2026-09-18T21:07:12+00:00"
+        },
+        {
+          "pair": [
+            "M:long short term memory",
+            "T:demand forecasting"
+          ],
+          "papers": 17,
+          "latest": "2026-05-12T05:55:41+00:00"
+        },
+        {
+          "pair": [
+            "M:transformer",
+            "T:demand forecasting"
+          ],
+          "papers": 23,
+          "latest": "2026-09-15T15:08:36+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 261
+    },
+    {
+      "rank": 72,
+      "triad": [
+        "M:gpt",
+        "T:dialogue",
+        "T:persuasion strategies"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:gpt",
+            "T:dialogue"
+          ],
+          "papers": 214,
+          "latest": "2026-09-21T12:19:50+00:00"
+        },
+        {
+          "pair": [
+            "M:gpt",
+            "T:persuasion strategies"
+          ],
+          "papers": 2,
+          "latest": "2026-08-12T04:11:22+00:00"
+        },
+        {
+          "pair": [
+            "T:dialogue",
+            "T:persuasion strategies"
+          ],
+          "papers": 11,
+          "latest": "2026-09-06T09:14:39+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 227
+    },
+    {
+      "rank": 73,
+      "triad": [
+        "M:pruning",
+        "M:softmax",
+        "T:mixture of experts"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:pruning",
+            "M:softmax"
+          ],
+          "papers": 27,
+          "latest": "2026-08-24T23:55:36+00:00"
+        },
+        {
+          "pair": [
+            "M:pruning",
+            "T:mixture of experts"
+          ],
+          "papers": 146,
+          "latest": "2026-09-22T07:39:35+00:00"
+        },
+        {
+          "pair": [
+            "M:softmax",
+            "T:mixture of experts"
+          ],
+          "papers": 44,
+          "latest": "2026-09-02T06:06:30+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 217
+    },
+    {
+      "rank": 74,
+      "triad": [
+        "M:pc",
+        "T:causal discovery",
+        "T:deep learning"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:pc",
+            "T:causal discovery"
+          ],
+          "papers": 43,
+          "latest": "2026-08-19T09:14:38+00:00"
+        },
+        {
+          "pair": [
+            "M:pc",
+            "T:deep learning"
+          ],
+          "papers": 41,
+          "latest": "2026-07-07T14:54:40+00:00"
+        },
+        {
+          "pair": [
+            "T:causal discovery",
+            "T:deep learning"
+          ],
+          "papers": 32,
+          "latest": "2026-05-08T05:43:47+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 116
+    },
+    {
+      "rank": 75,
+      "triad": [
+        "M:attention",
+        "T:camera pose estimation",
+        "T:visual localization"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:attention",
+            "T:camera pose estimation"
+          ],
+          "papers": 20,
+          "latest": "2026-09-18T07:50:59+00:00"
+        },
+        {
+          "pair": [
+            "M:attention",
+            "T:visual localization"
+          ],
+          "papers": 27,
+          "latest": "2026-08-04T10:14:16+00:00"
+        },
+        {
+          "pair": [
+            "T:camera pose estimation",
+            "T:visual localization"
+          ],
+          "papers": 19,
+          "latest": "2026-08-11T14:06:51+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 66
+    },
+    {
+      "rank": 76,
+      "triad": [
+        "M:byte pair encoding",
+        "T:language modeling",
+        "T:large language model"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:byte pair encoding",
+            "T:language modeling"
+          ],
+          "papers": 16,
+          "latest": "2025-12-26T07:59:00+00:00"
+        },
+        {
+          "pair": [
+            "M:byte pair encoding",
+            "T:large language model"
+          ],
+          "papers": 11,
+          "latest": "2026-05-29T04:04:32+00:00"
+        },
+        {
+          "pair": [
+            "T:language modeling",
+            "T:large language model"
+          ],
+          "papers": 91,
+          "latest": "2026-09-02T09:18:27+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 118
+    },
+    {
+      "rank": 77,
+      "triad": [
+        "M:swin transformer",
+        "M:u net",
+        "T:computational efficiency"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:swin transformer",
+            "M:u net"
+          ],
+          "papers": 40,
+          "latest": "2026-09-19T02:29:47+00:00"
+        },
+        {
+          "pair": [
+            "M:swin transformer",
+            "T:computational efficiency"
+          ],
+          "papers": 18,
+          "latest": "2026-04-11T11:39:29+00:00"
+        },
+        {
+          "pair": [
+            "M:u net",
+            "T:computational efficiency"
+          ],
+          "papers": 84,
+          "latest": "2026-09-24T13:26:08+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 142
+    },
+    {
+      "rank": 78,
+      "triad": [
+        "M:lookahead",
+        "M:proximal policy optimization",
+        "T:deep reinforcement learning"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:lookahead",
+            "M:proximal policy optimization"
+          ],
+          "papers": 5,
+          "latest": "2026-03-30T16:09:26+00:00"
+        },
+        {
+          "pair": [
+            "M:lookahead",
+            "T:deep reinforcement learning"
+          ],
+          "papers": 7,
+          "latest": "2026-07-28T07:57:18+00:00"
+        },
+        {
+          "pair": [
+            "M:proximal policy optimization",
+            "T:deep reinforcement learning"
+          ],
+          "papers": 244,
+          "latest": "2026-09-20T13:44:08+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 256
+    },
+    {
+      "rank": 79,
+      "triad": [
+        "M:pruning",
+        "T:model compression",
+        "T:vector quantization"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:pruning",
+            "T:model compression"
+          ],
+          "papers": 341,
+          "latest": "2026-09-23T01:08:21+00:00"
+        },
+        {
+          "pair": [
+            "M:pruning",
+            "T:vector quantization"
+          ],
+          "papers": 17,
+          "latest": "2026-08-03T06:32:00+00:00"
+        },
+        {
+          "pair": [
+            "T:model compression",
+            "T:vector quantization"
+          ],
+          "papers": 7,
+          "latest": "2026-05-20T06:11:25+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 365
+    },
+    {
+      "rank": 80,
+      "triad": [
+        "M:rag",
+        "T:answer generation",
+        "T:code generation"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:rag",
+            "T:answer generation"
+          ],
+          "papers": 115,
+          "latest": "2026-09-23T01:45:23+00:00"
+        },
+        {
+          "pair": [
+            "M:rag",
+            "T:code generation"
+          ],
+          "papers": 107,
+          "latest": "2026-09-01T17:59:39+00:00"
+        },
+        {
+          "pair": [
+            "T:answer generation",
+            "T:code generation"
+          ],
+          "papers": 2,
+          "latest": "2026-06-04T14:54:40+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 224
+    },
+    {
+      "rank": 81,
+      "triad": [
+        "M:rag",
+        "T:instruction following",
+        "T:response generation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:rag",
+            "T:instruction following"
+          ],
+          "papers": 25,
+          "latest": "2026-08-25T01:44:07+00:00"
+        },
+        {
+          "pair": [
+            "M:rag",
+            "T:response generation"
+          ],
+          "papers": 77,
+          "latest": "2026-09-13T10:13:10+00:00"
+        },
+        {
+          "pair": [
+            "T:instruction following",
+            "T:response generation"
+          ],
+          "papers": 16,
+          "latest": "2026-06-08T18:37:23+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 118
+    },
+    {
+      "rank": 82,
+      "triad": [
+        "M:attention",
+        "T:low rank compression",
+        "T:model compression"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:attention",
+            "T:low rank compression"
+          ],
+          "papers": 14,
+          "latest": "2026-08-24T21:30:11+00:00"
+        },
+        {
+          "pair": [
+            "M:attention",
+            "T:model compression"
+          ],
+          "papers": 112,
+          "latest": "2026-08-04T19:31:43+00:00"
+        },
+        {
+          "pair": [
+            "T:low rank compression",
+            "T:model compression"
+          ],
+          "papers": 10,
+          "latest": "2026-04-25T16:46:59+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 136
+    },
+    {
+      "rank": 83,
+      "triad": [
+        "M:transformer",
+        "T:chunking",
+        "T:re ranking"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:transformer",
+            "T:chunking"
+          ],
+          "papers": 47,
+          "latest": "2026-08-30T18:22:49+00:00"
+        },
+        {
+          "pair": [
+            "M:transformer",
+            "T:re ranking"
+          ],
+          "papers": 74,
+          "latest": "2026-09-03T15:30:22+00:00"
+        },
+        {
+          "pair": [
+            "T:chunking",
+            "T:re ranking"
+          ],
+          "papers": 24,
+          "latest": "2026-09-15T11:23:16+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 145
+    },
+    {
+      "rank": 84,
+      "triad": [
+        "M:rag",
+        "T:image retrieval",
+        "T:re ranking"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:rag",
+            "T:image retrieval"
+          ],
+          "papers": 23,
+          "latest": "2026-09-16T20:54:08+00:00"
+        },
+        {
+          "pair": [
+            "M:rag",
+            "T:re ranking"
+          ],
+          "papers": 223,
+          "latest": "2026-09-20T21:30:31+00:00"
+        },
+        {
+          "pair": [
+            "T:image retrieval",
+            "T:re ranking"
+          ],
+          "papers": 43,
+          "latest": "2026-09-02T00:43:58+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 289
+    },
+    {
+      "rank": 85,
+      "triad": [
+        "M:inpainting",
+        "T:image editing",
+        "T:virtual try on"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:inpainting",
+            "T:image editing"
+          ],
+          "papers": 73,
+          "latest": "2026-08-17T08:54:14+00:00"
+        },
+        {
+          "pair": [
+            "M:inpainting",
+            "T:virtual try on"
+          ],
+          "papers": 30,
+          "latest": "2026-07-24T21:25:58+00:00"
+        },
+        {
+          "pair": [
+            "T:image editing",
+            "T:virtual try on"
+          ],
+          "papers": 14,
+          "latest": "2026-07-10T12:40:06+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 117
+    },
+    {
+      "rank": 86,
+      "triad": [
+        "M:adapter",
+        "M:u net",
+        "T:computational efficiency"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:adapter",
+            "M:u net"
+          ],
+          "papers": 26,
+          "latest": "2026-08-25T16:24:53+00:00"
+        },
+        {
+          "pair": [
+            "M:adapter",
+            "T:computational efficiency"
+          ],
+          "papers": 43,
+          "latest": "2026-08-11T06:05:05+00:00"
+        },
+        {
+          "pair": [
+            "M:u net",
+            "T:computational efficiency"
+          ],
+          "papers": 84,
+          "latest": "2026-09-24T13:26:08+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 153
+    },
+    {
+      "rank": 87,
+      "triad": [
+        "M:attention",
+        "M:convlstm",
+        "M:u net"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:attention",
+            "M:convlstm"
+          ],
+          "papers": 29,
+          "latest": "2026-09-01T15:34:23+00:00"
+        },
+        {
+          "pair": [
+            "M:attention",
+            "M:u net"
+          ],
+          "papers": 631,
+          "latest": "2026-09-21T03:20:33+00:00"
+        },
+        {
+          "pair": [
+            "M:convlstm",
+            "M:u net"
+          ],
+          "papers": 8,
+          "latest": "2026-09-16T12:11:18+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 668
+    },
+    {
+      "rank": 88,
+      "triad": [
+        "M:gpt 4",
+        "T:arithmetic reasoning",
+        "T:code generation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:gpt 4",
+            "T:arithmetic reasoning"
+          ],
+          "papers": 7,
+          "latest": "2024-11-04T18:14:07+00:00"
+        },
+        {
+          "pair": [
+            "M:gpt 4",
+            "T:code generation"
+          ],
+          "papers": 126,
+          "latest": "2026-05-18T08:55:30+00:00"
+        },
+        {
+          "pair": [
+            "T:arithmetic reasoning",
+            "T:code generation"
+          ],
+          "papers": 17,
+          "latest": "2026-07-29T12:47:05+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 150
+    },
+    {
+      "rank": 89,
+      "triad": [
+        "M:logistic regression",
+        "T:binary classification",
+        "T:transfer learning"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:logistic regression",
+            "T:binary classification"
+          ],
+          "papers": 68,
+          "latest": "2026-09-20T09:01:47+00:00"
+        },
+        {
+          "pair": [
+            "M:logistic regression",
+            "T:transfer learning"
+          ],
+          "papers": 20,
+          "latest": "2026-07-03T06:39:54+00:00"
+        },
+        {
+          "pair": [
+            "T:binary classification",
+            "T:transfer learning"
+          ],
+          "papers": 49,
+          "latest": "2026-08-11T08:33:17+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 137
+    },
+    {
+      "rank": 90,
+      "triad": [
+        "M:transformer",
+        "M:yolov8",
+        "T:small object detection"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:transformer",
+            "M:yolov8"
+          ],
+          "papers": 37,
+          "latest": "2026-09-14T17:13:12+00:00"
+        },
+        {
+          "pair": [
+            "M:transformer",
+            "T:small object detection"
+          ],
+          "papers": 26,
+          "latest": "2026-09-10T12:52:34+00:00"
+        },
+        {
+          "pair": [
+            "M:yolov8",
+            "T:small object detection"
+          ],
+          "papers": 16,
+          "latest": "2026-08-23T17:00:22+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 79
+    },
+    {
+      "rank": 91,
+      "triad": [
+        "M:glm",
+        "M:gpt 4",
+        "T:large language model"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:glm",
+            "M:gpt 4"
+          ],
+          "papers": 15,
+          "latest": "2026-01-10T22:24:52+00:00"
+        },
+        {
+          "pair": [
+            "M:glm",
+            "T:large language model"
+          ],
+          "papers": 23,
+          "latest": "2026-09-11T19:15:20+00:00"
+        },
+        {
+          "pair": [
+            "M:gpt 4",
+            "T:large language model"
+          ],
+          "papers": 373,
+          "latest": "2026-09-14T15:20:30+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 411
+    },
+    {
+      "rank": 92,
+      "triad": [
+        "M:attention sinks",
+        "M:softmax",
+        "T:prediction"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:attention sinks",
+            "M:softmax"
+          ],
+          "papers": 15,
+          "latest": "2026-06-21T03:59:13+00:00"
+        },
+        {
+          "pair": [
+            "M:attention sinks",
+            "T:prediction"
+          ],
+          "papers": 7,
+          "latest": "2026-06-02T14:34:01+00:00"
+        },
+        {
+          "pair": [
+            "M:softmax",
+            "T:prediction"
+          ],
+          "papers": 190,
+          "latest": "2026-09-24T08:56:23+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 212
+    },
+    {
+      "rank": 93,
+      "triad": [
+        "M:rag",
+        "T:answer generation",
+        "T:in context learning"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:rag",
+            "T:answer generation"
+          ],
+          "papers": 115,
+          "latest": "2026-09-23T01:45:23+00:00"
+        },
+        {
+          "pair": [
+            "M:rag",
+            "T:in context learning"
+          ],
+          "papers": 120,
+          "latest": "2026-09-19T12:10:41+00:00"
+        },
+        {
+          "pair": [
+            "T:answer generation",
+            "T:in context learning"
+          ],
+          "papers": 4,
+          "latest": "2026-05-12T02:48:43+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 239
+    },
+    {
+      "rank": 94,
+      "triad": [
+        "M:experience replay",
+        "T:continual learning",
+        "T:parameter efficient fine tuning"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:experience replay",
+            "T:continual learning"
+          ],
+          "papers": 118,
+          "latest": "2026-08-20T00:15:18+00:00"
+        },
+        {
+          "pair": [
+            "M:experience replay",
+            "T:parameter efficient fine tuning"
+          ],
+          "papers": 3,
+          "latest": "2026-08-31T11:20:55+00:00"
+        },
+        {
+          "pair": [
+            "T:continual learning",
+            "T:parameter efficient fine tuning"
+          ],
+          "papers": 61,
+          "latest": "2026-08-27T07:12:33+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 182
+    },
+    {
+      "rank": 95,
+      "triad": [
+        "M:adamw",
+        "M:weight decay",
+        "T:representation learning"
+      ],
+      "open_triangle": 0,
+      "pairs": [
+        {
+          "pair": [
+            "M:adamw",
+            "M:weight decay"
+          ],
+          "papers": 53,
+          "latest": "2026-09-16T19:35:47+00:00"
+        },
+        {
+          "pair": [
+            "M:adamw",
+            "T:representation learning"
+          ],
+          "papers": 2,
+          "latest": "2026-08-02T14:47:39+00:00"
+        },
+        {
+          "pair": [
+            "M:weight decay",
+            "T:representation learning"
+          ],
+          "papers": 7,
+          "latest": "2026-03-07T20:07:16+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 62
+    },
+    {
+      "rank": 96,
+      "triad": [
+        "M:adapter",
+        "T:parameter efficient fine tuning",
+        "T:test time adaptation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:adapter",
+            "T:parameter efficient fine tuning"
+          ],
+          "papers": 308,
+          "latest": "2026-09-21T12:48:34+00:00"
+        },
+        {
+          "pair": [
+            "M:adapter",
+            "T:test time adaptation"
+          ],
+          "papers": 30,
+          "latest": "2026-09-15T07:43:38+00:00"
+        },
+        {
+          "pair": [
+            "T:parameter efficient fine tuning",
+            "T:test time adaptation"
+          ],
+          "papers": 8,
+          "latest": "2026-05-13T11:27:40+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 346
+    },
+    {
+      "rank": 97,
+      "triad": [
+        "M:deeplabv3",
+        "M:segment anything model",
+        "T:image segmentation"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:deeplabv3",
+            "M:segment anything model"
+          ],
+          "papers": 6,
+          "latest": "2026-05-27T08:21:04+00:00"
+        },
+        {
+          "pair": [
+            "M:deeplabv3",
+            "T:image segmentation"
+          ],
+          "papers": 18,
+          "latest": "2026-06-02T16:43:24+00:00"
+        },
+        {
+          "pair": [
+            "M:segment anything model",
+            "T:image segmentation"
+          ],
+          "papers": 238,
+          "latest": "2026-09-15T01:18:06+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 262
+    },
+    {
+      "rank": 98,
+      "triad": [
+        "M:gpt",
+        "T:semantic retrieval",
+        "T:semantic similarity"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:gpt",
+            "T:semantic retrieval"
+          ],
+          "papers": 10,
+          "latest": "2026-07-16T08:14:27+00:00"
+        },
+        {
+          "pair": [
+            "M:gpt",
+            "T:semantic similarity"
+          ],
+          "papers": 51,
+          "latest": "2026-09-24T06:05:11+00:00"
+        },
+        {
+          "pair": [
+            "T:semantic retrieval",
+            "T:semantic similarity"
+          ],
+          "papers": 15,
+          "latest": "2026-08-30T07:16:07+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 76
+    },
+    {
+      "rank": 99,
+      "triad": [
+        "M:attention",
+        "T:action understanding",
+        "T:video understanding"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:attention",
+            "T:action understanding"
+          ],
+          "papers": 12,
+          "latest": "2026-08-20T15:15:08+00:00"
+        },
+        {
+          "pair": [
+            "M:attention",
+            "T:video understanding"
+          ],
+          "papers": 227,
+          "latest": "2026-09-15T14:30:00+00:00"
+        },
+        {
+          "pair": [
+            "T:action understanding",
+            "T:video understanding"
+          ],
+          "papers": 12,
+          "latest": "2026-07-10T12:31:27+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 251
+    },
+    {
+      "rank": 100,
+      "triad": [
+        "M:transformer",
+        "T:4d reconstruction",
+        "T:novel view synthesis"
+      ],
+      "open_triangle": 1,
+      "pairs": [
+        {
+          "pair": [
+            "M:transformer",
+            "T:4d reconstruction"
+          ],
+          "papers": 18,
+          "latest": "2026-07-24T17:59:51+00:00"
+        },
+        {
+          "pair": [
+            "M:transformer",
+            "T:novel view synthesis"
+          ],
+          "papers": 82,
+          "latest": "2026-08-24T15:55:34+00:00"
+        },
+        {
+          "pair": [
+            "T:4d reconstruction",
+            "T:novel view synthesis"
+          ],
+          "papers": 23,
+          "latest": "2026-09-05T13:51:48+00:00"
+        }
+      ],
+      "triad_papers": 0,
+      "distinct_papers": 123
+    }
+  ]
+}

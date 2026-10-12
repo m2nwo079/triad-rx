@@ -1,0 +1,207 @@
+{
+ "rank": 6,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:adapter",
+    "role": "Integrates external preferences, contexts, or retrieved entities into the generation process and enables parameter-efficient adaptation.",
+    "evidence_ids": [
+     "paper:2502.08254",
+     "paper:2508.03935",
+     "paper:2609.24979"
+    ]
+   },
+   {
+    "term_id": "T:parameter efficient fine tuning",
+    "role": "Modifies target base large language models via lightweight weights or low-rank structures (such as LoRA) to adapt models while minimizing training and storage costs.",
+    "evidence_ids": [
+     "paper:2508.03935",
+     "paper:2609.24979"
+    ]
+   },
+   {
+    "term_id": "T:text generation",
+    "role": "Serves as the generative task or downstream capability being personalized, conditioned, or adapted via parameter-efficient methods.",
+    "evidence_ids": [
+     "paper:2508.03935",
+     "paper:2609.24979"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Personalized or context-augmented text generation tasks using large language models.",
+   "evidence_ids": [
+    "paper:2508.03935",
+    "paper:2609.24979"
+   ]
+  },
+  "limitation": {
+   "text": "Existing approaches to LLM customization like in-context learning introduce high inference latency or input length constraints, while standard full fine-tuning incurs excessive computational and parameter overhead.",
+   "evidence_ids": [
+    "paper:2508.03935",
+    "paper:2609.24979"
+   ]
+  },
+  "combination": {
+   "text": "Adapters and parameter-efficient fine-tuning techniques are integrated into text generation pipelines to incorporate user contexts, preferences, or retrieved information into frozen or base large language models. This enables efficient customization and personalization of generative outputs without extending input sequences or modifying all model parameters.",
+   "evidence_ids": [
+    "paper:2502.08254",
+    "paper:2508.03935",
+    "paper:2609.24979"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:adapter",
+     "role": "Integrates external preferences, contexts, or retrieved entities into the generation process and enables parameter-efficient adaptation.",
+     "evidence_ids": [
+      "paper:2502.08254",
+      "paper:2508.03935",
+      "paper:2609.24979"
+     ]
+    },
+    {
+     "term_id": "T:parameter efficient fine tuning",
+     "role": "Modifies target base large language models via lightweight weights or low-rank structures (such as LoRA) to adapt models while minimizing training and storage costs.",
+     "evidence_ids": [
+      "paper:2508.03935",
+      "paper:2609.24979"
+     ]
+    },
+    {
+     "term_id": "T:text generation",
+     "role": "Serves as the generative task or downstream capability being personalized, conditioned, or adapted via parameter-efficient methods.",
+     "evidence_ids": [
+      "paper:2508.03935",
+      "paper:2609.24979"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Personalized or context-augmented text generation tasks using large language models.",
+    "evidence_ids": [
+     "paper:2508.03935",
+     "paper:2609.24979"
+    ]
+   },
+   "limitation": {
+    "text": "Existing approaches to LLM customization like in-context learning introduce high inference latency or input length constraints, while standard full fine-tuning incurs excessive computational and parameter overhead.",
+    "evidence_ids": [
+     "paper:2508.03935",
+     "paper:2609.24979"
+    ]
+   },
+   "combination": {
+    "text": "Adapters and parameter-efficient fine-tuning techniques are integrated into text generation pipelines to incorporate user contexts, preferences, or retrieved information into frozen or base large language models. This enables efficient customization and personalization of generative outputs without extending input sequences or modifying all model parameters.",
+    "evidence_ids": [
+     "paper:2502.08254",
+     "paper:2508.03935",
+     "paper:2609.24979"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining adapters, parameter-efficient fine-tuning, and text generation. As shown in paper:2609.24979 and paper:2508.03935, integrating adapters with parameter-efficient fine-tuning enables personalized and context-augmented text generation without excessive computational overhead.",
+   "evidence_ids": [
+    "paper:2508.03935",
+    "paper:2609.24979"
+   ]
+  },
+  "target_user": {
+   "text": "The target user includes developers and researchers utilizing scalable generative AI frameworks and serving infrastructure, as indicated by repo:nvidia/nemo and repo:s-lora/s-lora.",
+   "evidence_ids": [
+    "repo:nvidia/nemo",
+    "repo:s-lora/s-lora"
+   ]
+  },
+  "jtbd": {
+   "text": "The primary job-to-be-done is to customize and personalize large language model text generation efficiently by injecting user context or preferences through lightweight adapters rather than full fine-tuning, as described in paper:2609.24979 and paper:2508.03935.",
+   "evidence_ids": [
+    "paper:2508.03935",
+    "paper:2609.24979"
+   ]
+  },
+  "value_prop": {
+   "text": "By combining adapters and parameter-efficient fine-tuning for text generation, systems can achieve targeted personalization and contextual augmentation while avoiding the latency penalties of long input sequences and the high costs of full fine-tuning, per paper:2609.24979 and paper:2508.03935.",
+   "evidence_ids": [
+    "paper:2508.03935",
+    "paper:2609.24979"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence in the DVF bundle (dvf:6). We assume that enterprise customers will pay a recurring subscription fee for a managed adapter-based text generation personalization API.",
+   "evidence_ids": [
+    "dvf:6"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "To test the viability assumption (dvf:6), conduct customer interviews and a price acceptance test with a mock pricing sheet showing proposed threshold: 50 dollars per month for personalized text generation API access.",
+   "evidence_ids": [
+    "dvf:6"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Success is defined as achieving a proposed threshold of 40 percent of interviewed prospective users expressing willingness to pay for the adapter-based personalization API (dvf:6).",
+   "evidence_ids": [
+    "dvf:6"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Kill the project if fewer than a proposed threshold of 10 percent of interviewed target users confirm a budget for parameter-efficient text generation solutions (dvf:6).",
+    "evidence_ids": [
+     "dvf:6"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:nvidia/nemo",
+     "use": "Utilize the scalable generative AI framework to handle large language model pipelines and speech or text components as supported by repo:nvidia/nemo.",
+     "evidence_ids": [
+      "repo:nvidia/nemo"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:s-lora/s-lora",
+     "use": "Deploy S-LoRA to efficiently serve thousands of concurrent LoRA adapters for text generation tasks as indicated in repo:s-lora/s-lora.",
+     "evidence_ids": [
+      "repo:s-lora/s-lora"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Develop a unified context-injection adapter module that bridges user preferences directly into the base language model generation pipeline (paper:2508.03935).",
+     "evidence_ids": [
+      "paper:2508.03935"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

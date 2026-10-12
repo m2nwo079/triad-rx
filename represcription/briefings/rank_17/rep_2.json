@@ -1,0 +1,210 @@
+{
+ "rank": 17,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:direct preference optimization",
+    "role": "Serves as an alignment technique that optimizes language models using preference pairs to better align model outputs with desired behavior and quality standards.",
+    "evidence_ids": [
+     "paper:2603.29292",
+     "paper:2606.28998"
+    ]
+   },
+   {
+    "term_id": "T:code generation",
+    "role": "Acts as the target task domain where models are evaluated on their ability to produce correct, executable code and satisfy functional requirements.",
+    "evidence_ids": [
+     "paper:2603.29292",
+     "paper:2606.28998"
+    ]
+   },
+   {
+    "term_id": "T:instruction following",
+    "role": "Provides the broader capability or constraint framework that guides how models adhere to given instructions and prompt conditions during generation tasks.",
+    "evidence_ids": [
+     "paper:2609.13916",
+     "paper:2609.21094"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Code generation guided by instructions and preference-based alignment.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2606.28998"
+   ]
+  },
+  "limitation": {
+   "text": "Standard code generation models often lack robust alignment regarding non-functional or functional quality standards and struggle to acquire effective supervision without expensive external oracles.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2606.28998"
+   ]
+  },
+  "combination": {
+   "text": "Direct preference optimization is applied to code generation and instruction-following contexts to align language model outputs based on preference pairs, mitigating the need for complex reward models.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2606.28998"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:direct preference optimization",
+     "role": "Serves as an alignment technique that optimizes language models using preference pairs to better align model outputs with desired behavior and quality standards.",
+     "evidence_ids": [
+      "paper:2603.29292",
+      "paper:2606.28998"
+     ]
+    },
+    {
+     "term_id": "T:code generation",
+     "role": "Acts as the target task domain where models are evaluated on their ability to produce correct, executable code and satisfy functional requirements.",
+     "evidence_ids": [
+      "paper:2603.29292",
+      "paper:2606.28998"
+     ]
+    },
+    {
+     "term_id": "T:instruction following",
+     "role": "Provides the broader capability or constraint framework that guides how models adhere to given instructions and prompt conditions during generation tasks.",
+     "evidence_ids": [
+      "paper:2609.13916",
+      "paper:2609.21094"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Code generation guided by instructions and preference-based alignment.",
+    "evidence_ids": [
+     "paper:2603.29292",
+     "paper:2606.28998"
+    ]
+   },
+   "limitation": {
+    "text": "Standard code generation models often lack robust alignment regarding non-functional or functional quality standards and struggle to acquire effective supervision without expensive external oracles.",
+    "evidence_ids": [
+     "paper:2603.29292",
+     "paper:2606.28998"
+    ]
+   },
+   "combination": {
+    "text": "Direct preference optimization is applied to code generation and instruction-following contexts to align language model outputs based on preference pairs, mitigating the need for complex reward models.",
+    "evidence_ids": [
+     "paper:2603.29292",
+     "paper:2606.28998"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining direct preference optimization with code generation and instruction following. It utilizes preference pairs to align model outputs for code generation tasks without requiring complex reward models. Evidence indicates this approach addresses gaps in code quality standards and alignment.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2606.28998"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as the bundle gives no patent assignee categories or specific repository user evidence.",
+   "evidence_ids": [
+    "dvf:17"
+   ]
+  },
+  "jtbd": {
+   "text": "When developers perform code generation tasks, they want to align model outputs using preference-based feedback so that the generated code meets functional requirements and instructions without needing costly external oracles.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2606.28998"
+   ]
+  },
+  "value_prop": {
+   "text": "Applying direct preference optimization to code generation improves alignment with quality standards and instruction following. It eliminates the need for multiple reward scores while handling preference pairs efficiently.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2606.28998"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated due to missing evidence on axis V (viability). We assume that software development teams are willing to pay for a direct preference optimization tool tailored to code generation and instruction following.",
+   "evidence_ids": [
+    "dvf:17"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and price acceptance tests with software engineering leads. Present a prototype workflow for direct preference optimization in code generation to evaluate willingness to pay and budget allocation.",
+   "evidence_ids": [
+    "dvf:17"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive pricing acceptance and intent-to-purchase commitments during customer interviews.",
+   "evidence_ids": [
+    "dvf:17"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed potential users express willingness to adopt or pay for the direct preference optimization tooling.",
+    "evidence_ids": [
+     "dvf:17"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:evoeval",
+     "use": "Used for evaluating code generation capabilities and functional requirements.",
+     "evidence_ids": [
+      "paper:2606.28998"
+     ],
+     "version": "0.1.0"
+    },
+    {
+     "id": "repo:allenai/reward-bench",
+     "use": "Used for evaluating reward models and preference-based alignment data.",
+     "evidence_ids": [
+      "repo:allenai/reward-bench"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:turbo-alignment",
+     "use": "Used as a package for fast alignment and preference optimization workflows.",
+     "evidence_ids": [
+      "pkg:turbo-alignment"
+     ],
+     "version": "0.0.4"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized preference data pipeline that automatically pairs accepted and rejected code generation outputs based on semantic entropy and instruction-following constraints.",
+     "evidence_ids": [
+      "paper:2603.29292"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

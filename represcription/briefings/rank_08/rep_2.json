@@ -1,0 +1,206 @@
+{
+ "rank": 8,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Used to transform complex or unknown residual distributions into simple base distributions or to model conditional distributions in simulation-based frameworks.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013"
+    ]
+   },
+   {
+    "term_id": "T:parameter estimation",
+    "role": "The target inference process where physical or system parameters are estimated from simulated or observed data.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Serves as the regression or functional modeling component within the estimation pipeline (such as through embedded transformations or conditional flows).",
+    "evidence_ids": [
+     "paper:2608.05557",
+     "paper:2606.01346"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Simulation-based parameter estimation and nonlinear joint state-parameter estimation under complex distributions.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  },
+  "limitation": {
+   "text": "Traditional filtering and regression techniques struggle with arbitrary non-Gaussian, multi-modal uncertainties and intractable residual distributions in complex simulation models.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are embedded within parameter estimation frameworks to transform complex residual distributions or handle conditional dependencies, bridging simulation models and regression-like estimation tasks.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Used to transform complex or unknown residual distributions into simple base distributions or to model conditional distributions in simulation-based frameworks.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2601.07013"
+     ]
+    },
+    {
+     "term_id": "T:parameter estimation",
+     "role": "The target inference process where physical or system parameters are estimated from simulated or observed data.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2601.07013"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Serves as the regression or functional modeling component within the estimation pipeline (such as through embedded transformations or conditional flows).",
+     "evidence_ids": [
+      "paper:2608.05557",
+      "paper:2606.01346"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Simulation-based parameter estimation and nonlinear joint state-parameter estimation under complex distributions.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013"
+    ]
+   },
+   "limitation": {
+    "text": "Traditional filtering and regression techniques struggle with arbitrary non-Gaussian, multi-modal uncertainties and intractable residual distributions in complex simulation models.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are embedded within parameter estimation frameworks to transform complex residual distributions or handle conditional dependencies, bridging simulation models and regression-like estimation tasks.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining normalizing flows, parameter estimation, and regression for simulation-based estimation under complex distributions. Normalizing flows transform unknown residual distributions into simple base distributions while regression and parameter estimation handle inference tasks. Evidence shows this approach handles non-Gaussian, multi-modal uncertainties in computational models.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  },
+  "target_user": {
+   "text": "The target user includes researchers and engineers working with probabilistic modeling, simulation-based inference, and statistical machine learning using repositories such as atong01/conditional-flow-matching and statmixedml/xgboostlss.",
+   "evidence_ids": [
+    "repo:atong01/conditional-flow-matching",
+    "repo:statmixedml/xgboostlss"
+   ]
+  },
+  "jtbd": {
+   "text": "When researchers need to perform simulation-based parameter estimation under non-Gaussian, multi-modal uncertainties, they want to leverage normalizing flows embedded within regression frameworks so that they can accurately capture complex residual distributions and improve inference.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrating normalizing flows into regression-based parameter estimation overcomes the limitations of traditional filtering methods that struggle with arbitrary non-Gaussian distributions. It provides a robust, end-to-end framework for handling intractable residual distributions in physical simulations.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is that commercial buyers will pay for a software package combining normalizing flows and regression for parameter estimation; this axis V is designated as the riskiest due to missing evidence in the bundle.",
+   "evidence_ids": [
+    "dvf:8"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with a prototype workflow combining torchcfm and xgboostlss to gauge willingness to pay for simulation-based parameter estimation tools.",
+   "evidence_ids": [
+    "dvf:8",
+    "pkg:torchcfm",
+    "pkg:xgboostlss"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness-to-pay responses during customer price acceptance interviews.",
+   "evidence_ids": [
+    "dvf:8"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed prospective users express interest in purchasing a combined normalizing flow and regression parameter estimation tool.",
+    "evidence_ids": [
+     "dvf:8"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:torchcfm",
+     "use": "Used as a conditional flow matching library to support flow-based transformations.",
+     "evidence_ids": [
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "pkg:xgboostlss",
+     "use": "Used for probabilistic modeling extensions in regression-based estimation tasks.",
+     "evidence_ids": [
+      "repo:statmixedml/xgboostlss"
+     ],
+     "version": "0.6.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified integration pipeline that links embedded normalizing flow transformations with probabilistic regression estimators for end-io-end parameter inference.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2601.07013"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

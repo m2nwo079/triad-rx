@@ -1,0 +1,19 @@
+{
+ "rank": 4,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "comparison_only",
+  "insufficient_explanation": "The evidence items discuss the components as separate tasks or methods (e.g. information retrieval, text retrieval, and RAG pipelines), but do not demonstrate a combination where all three specific terms are utilized together in a single integrated framework.",
+  "insufficient_evidence_ids": [
+   "paper:2609.28048"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

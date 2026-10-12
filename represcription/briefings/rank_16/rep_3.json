@@ -1,0 +1,195 @@
+{
+ "rank": 16,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:transformer",
+    "role": "Serves as the backbone architecture for joint modeling, latent generation, or diffusion-based generation processes.",
+    "evidence_ids": [
+     "paper:2609.03931"
+    ]
+   },
+   {
+    "term_id": "T:image to 3d",
+    "role": "Provides feed-forward or instance-level 3D asset initializations from sparse observations or images as building blocks for scenes.",
+    "evidence_ids": [
+     "paper:2609.03931"
+    ]
+   },
+   {
+    "term_id": "T:scene generation",
+    "role": "The overarching task of synthesizing complete, structured 3D scenes or latent representations from sparse inputs.",
+    "evidence_ids": [
+     "paper:2609.03931"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Generating complete 3D scenes from sparse or unconstrained multi-view images.",
+   "evidence_ids": [
+    "paper:2609.03931"
+   ]
+  },
+  "limitation": {
+   "text": "Existing feed-forward reconstruction methods are limited to visible content, while 3D generative modeling is hindered by high computational costs of dense volumetric representations and data scarcity.",
+   "evidence_ids": [
+    "paper:2609.03931"
+   ]
+  },
+  "combination": {
+   "text": "A sparse voxel-aligned latent generative model is trained using multi-view images and differentiable 3D Gaussian Splatting to learn a compact 3D latent space. A masked autoregressive transformer is then employed to jointly model voxel occupancy and latent token values, enabling efficient completion of unseen regions and scene generation from sparse input views.",
+   "evidence_ids": [
+    "paper:2609.03931"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:transformer",
+     "role": "Serves as the backbone architecture for joint modeling, latent generation, or diffusion-based generation processes.",
+     "evidence_ids": [
+      "paper:2609.03931"
+     ]
+    },
+    {
+     "term_id": "T:image to 3d",
+     "role": "Provides feed-forward or instance-level 3D asset initializations from sparse observations or images as building blocks for scenes.",
+     "evidence_ids": [
+      "paper:2609.03931"
+     ]
+    },
+    {
+     "term_id": "T:scene generation",
+     "role": "The overarching task of synthesizing complete, structured 3D scenes or latent representations from sparse inputs.",
+     "evidence_ids": [
+      "paper:2609.03931"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Generating complete 3D scenes from sparse or unconstrained multi-view images.",
+    "evidence_ids": [
+     "paper:2609.03931"
+    ]
+   },
+   "limitation": {
+    "text": "Existing feed-forward reconstruction methods are limited to visible content, while 3D generative modeling is hindered by high computational costs of dense volumetric representations and data scarcity.",
+    "evidence_ids": [
+     "paper:2609.03931"
+    ]
+   },
+   "combination": {
+    "text": "A sparse voxel-aligned latent generative model is trained using multi-view images and differentiable 3D Gaussian Splatting to learn a compact 3D latent space. A masked autoregressive transformer is then employed to jointly model voxel occupancy and latent token values, enabling efficient completion of unseen regions and scene generation from sparse input views.",
+    "evidence_ids": [
+     "paper:2609.03931"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining transformer, image to 3d, and scene generation. Specifically, a sparse voxel-aligned latent generative model can be trained using multi-view images and differentiable 3D Gaussian Splatting to learn a compact 3D latent space, while a masked autoregressive transformer jointly models voxel occupancy and latent token values to complete unseen regions and generate scenes from sparse views.",
+   "evidence_ids": [
+    "paper:2609.03931"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified due to a lack of explicit patent assignee, package, or repository user data in the bundle.",
+   "evidence_ids": [
+    "dvf:16"
+   ]
+  },
+  "jtbd": {
+   "text": "When developers and researchers need to generate complete 3D scenes from sparse or unconstrained multi-view images, they want an efficient and computationally tractable approach that avoids the high costs of dense volumetric representations, so that they can accurately reason beyond observed content without requiring ground-truth 3D supervision.",
+   "evidence_ids": [
+    "paper:2609.03931"
+   ]
+  },
+  "value_prop": {
+   "text": "By formulating 3D scene generation in a structured, compact, voxel-aligned 3D latent space where only occupied voxels are represented, the approach enables efficient and spatially consistent generation of unseen regions from sparse input views.",
+   "evidence_ids": [
+    "paper:2609.03931"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is that commercial viability and user demand exist for this sparse voxel-aligned latent generative scene approach; this assumption was designated due to missing evidence on the viability axis.",
+   "evidence_ids": [
+    "dvf:16"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and price acceptance tests with 3D content creators using a mocked-up interface of the sparse scene generation pipeline to evaluate willingness to pay and operational workflow fit.",
+   "evidence_ids": [
+    "dvf:16"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness-to-pay confirmation among interviewed target users during the price acceptance test.",
+   "evidence_ids": [
+    "dvf:16"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 15 percent of interviewed customers express any willingness to adopt or pay for the sparse scene generation workflow.",
+    "evidence_ids": [
+     "dvf:16"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:3dtopia/openlrm",
+     "use": "Will be used to provide open-source large reconstruction model implementations for initial asset building blocks.",
+     "evidence_ids": [
+      "repo:3dtopia/openlrm"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:haoz19/world-tracing",
+     "use": "Will be used as a reference inference repository for generative pixel-aligned geometry and scene diffusion tasks.",
+     "evidence_ids": [
+      "repo:haoz19/world-tracing"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:shirleymaxx/rest3d",
+     "use": "Will be used to integrate physically stable scene understanding and reconstruction capabilities from single images.",
+     "evidence_ids": [
+      "repo:shirleymaxx/rest3d"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized training pipeline wrapper to coordinate photometric supervision via differentiable 3D Gaussian Splatting with the masked autoregressive transformer.",
+     "evidence_ids": [
+      "paper:2609.03931"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

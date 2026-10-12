@@ -1,0 +1,222 @@
+{
+ "rank": 18,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Serves as a probabilistic surrogate model or kernel-based regression method to capture unknown functions and encode prior knowledge.",
+    "evidence_ids": [
+     "paper:2609.21085",
+     "paper:2512.08499"
+    ]
+   },
+   {
+    "term_id": "M:pc",
+    "role": "Provides principal components or predictive coding frameworks used for dimensionality reduction or representation of complex temporal/spatial responses.",
+    "evidence_ids": [
+     "paper:2307.05592",
+     "paper:2503.24016"
+    ]
+   },
+   {
+    "term_id": "T:uncertainty quantification",
+    "role": "Target task focused on estimating epistemic and aleatoric uncertainties in model predictions.",
+    "evidence_ids": [
+     "paper:2307.05592",
+     "paper:2512.08499"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Uncertainty quantification for complex physical or time-dependent systems using dimensionality reduction and probabilistic surrogate modeling.",
+   "evidence_ids": [
+    "paper:2307.05592",
+    "paper:2512.08499"
+   ]
+  },
+  "limitation": {
+   "text": "High-dimensional outputs or representations make direct inverse uncertainty quantification and probabilistic modeling computationally prohibitive.",
+   "evidence_ids": [
+    "paper:2307.05592",
+    "paper:2512.08499"
+   ]
+  },
+  "combination": {
+   "text": "Principal component-based dimensionality reduction is applied to compress high-dimensional responses, allowing Gaussian process or probabilistic models to efficiently perform uncertainty quantification.",
+   "evidence_ids": [
+    "paper:2307.05592",
+    "paper:2512.08499"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Serves as a probabilistic surrogate model or kernel-based regression method to capture unknown functions and encode prior knowledge.",
+     "evidence_ids": [
+      "paper:2609.21085",
+      "paper:2512.08499"
+     ]
+    },
+    {
+     "term_id": "M:pc",
+     "role": "Provides principal components or predictive coding frameworks used for dimensionality reduction or representation of complex temporal/spatial responses.",
+     "evidence_ids": [
+      "paper:2307.05592",
+      "paper:2503.24016"
+     ]
+    },
+    {
+     "term_id": "T:uncertainty quantification",
+     "role": "Target task focused on estimating epistemic and aleatoric uncertainties in model predictions.",
+     "evidence_ids": [
+      "paper:2307.05592",
+      "paper:2512.08499"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Uncertainty quantification for complex physical or time-dependent systems using dimensionality reduction and probabilistic surrogate modeling.",
+    "evidence_ids": [
+     "paper:2307.05592",
+     "paper:2512.08499"
+    ]
+   },
+   "limitation": {
+    "text": "High-dimensional outputs or representations make direct inverse uncertainty quantification and probabilistic modeling computationally prohibitive.",
+    "evidence_ids": [
+     "paper:2307.05592",
+     "paper:2512.08499"
+    ]
+   },
+   "combination": {
+    "text": "Principal component-based dimensionality reduction is applied to compress high-dimensional responses, allowing Gaussian process or probabilistic models to efficiently perform uncertainty quantification.",
+    "evidence_ids": [
+     "paper:2307.05592",
+     "paper:2512.08499"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This briefing explores combining Gaussian processes and principal component-based dimensionality reduction for uncertainty quantification in complex physical systems. By compressing high-dimensional responses using principal components, probabilistic surrogate models can efficiently estimate epistemic and aleatoric uncertainties. This combination addresses computational bottlenecks when modeling high-dimensional or time-dependent experimental and simulation data.",
+   "evidence_ids": [
+    "paper:2307.05592",
+    "paper:2512.08499"
+   ]
+  },
+  "target_user": {
+   "text": "The target user includes researchers and engineers developing surrogate models for complex physical systems, as indicated by the repository and package usage in uncertainty quantification, chemistry, and language-agent frameworks.",
+   "evidence_ids": [
+    "repo:leojklarner/gauche",
+    "repo:google/uncertainty-baselines",
+    "pkg:dgpsi"
+   ]
+  },
+  "jtbd": {
+   "text": "Perform efficient uncertainty quantification on high-dimensional simulation or experimental outputs by reducing dimensionality before applying probabilistic surrogate models.",
+   "evidence_ids": [
+    "paper:2307.05592",
+    "paper:2512.08499"
+   ]
+  },
+  "value_prop": {
+   "text": "Reduces the computational cost of modeling high-dimensional spatial or temporal responses while preserving valid uncertainty estimates and physical consistency.",
+   "evidence_ids": [
+    "paper:2307.05592",
+    "paper:2512.08499"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is viability (axis V), which was designated due to missing evidence in the bundle. We assume that enterprise customers are willing to pay for a specialized dimensionality-reduction and Gaussian process uncertainty quantification tool rather than relying on custom internal scripts.",
+   "evidence_ids": [
+    "dvf:18"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Run customer interviews and price acceptance tests with simulation engineers to evaluate willingness to pay for a combined dimensionality-reduction and Gaussian process uncertainty quantification workflow, targeting a proposed threshold of 30 percent conversion for paid pilot interest.",
+   "evidence_ids": [
+    "dvf:18",
+    "paper:2307.05592"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of at least 40 percent of interviewed engineering teams confirming that the tool solves a critical high-dimensional uncertainty bottleneck, alongside a positive price acceptance test at a proposed threshold of 500 dollars per month.",
+   "evidence_ids": [
+    "dvf:18",
+    "paper:2512.08499"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of prospective users express willingness to pay during price acceptance testing.",
+    "evidence_ids": [
+     "dvf:18"
+    ]
+   },
+   {
+    "text": "Feedback indicates that existing in-house dimensionality reduction scripts are considered entirely sufficient, preventing commercial adoption below a proposed threshold of 20 percent market interest.",
+    "evidence_ids": [
+     "dvf:18",
+     "paper:2307.05592"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:google/uncertainty-baselines",
+     "use": "Provides high-quality implementations of baseline methods for uncertainty tasks.",
+     "evidence_ids": [
+      "repo:google/uncertainty-baselines"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:dgpsi",
+     "use": "Supplies Gaussian process emulator packages for complex systems.",
+     "evidence_ids": [
+      "pkg:dgpsi"
+     ],
+     "version": "2.6.0"
+    },
+    {
+     "id": "repo:geometric-kernels/geometrickernels",
+     "use": "Offers geometric kernels for structured representations.",
+     "evidence_ids": [
+      "repo:geometric-kernels/geometrickernels"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified pipeline integrating principal component extraction with Gaussian process surrogate training and calibration.",
+     "evidence_ids": [
+      "paper:2307.05592",
+      "paper:2512.08499"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

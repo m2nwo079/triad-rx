@@ -1,0 +1,210 @@
+{
+ "rank": 13,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Serves as a probabilistic surrogate model or covariance-based regressor for capturing functional relationships and predictive uncertainty.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   },
+   {
+    "term_id": "T:bayesian optimization",
+    "role": "Drives sequential decision-making and adaptive sample collection using surrogate model uncertainty.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   },
+   {
+    "term_id": "T:operator learning",
+    "role": "Provides infinite-dimensional mapping capabilities between function spaces for physical and differential equation systems.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Outer-loop optimization and active learning procedures involving operator networks for partial differential equations.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  },
+  "limitation": {
+   "text": "Existing uncertainty quantification frameworks for operator networks can incur substantial computational costs during both training and inference.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  },
+  "combination": {
+   "text": "Uncertainty estimates derived from operator networks are integrated into Bayesian optimization and active learning workflows to improve data efficiency and model accuracy.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Serves as a probabilistic surrogate model or covariance-based regressor for capturing functional relationships and predictive uncertainty.",
+     "evidence_ids": [
+      "paper:2503.03178"
+     ]
+    },
+    {
+     "term_id": "T:bayesian optimization",
+     "role": "Drives sequential decision-making and adaptive sample collection using surrogate model uncertainty.",
+     "evidence_ids": [
+      "paper:2503.03178"
+     ]
+    },
+    {
+     "term_id": "T:operator learning",
+     "role": "Provides infinite-dimensional mapping capabilities between function spaces for physical and differential equation systems.",
+     "evidence_ids": [
+      "paper:2503.03178"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Outer-loop optimization and active learning procedures involving operator networks for partial differential equations.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   },
+   "limitation": {
+    "text": "Existing uncertainty quantification frameworks for operator networks can incur substantial computational costs during both training and inference.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   },
+   "combination": {
+    "text": "Uncertainty estimates derived from operator networks are integrated into Bayesian optimization and active learning workflows to improve data efficiency and model accuracy.",
+    "evidence_ids": [
+     "paper:2503.03178"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining Gaussian processes, Bayesian optimization, and operator learning to support outer-loop optimization and active learning procedures for partial differential equations. As noted in paper:2503.03178, standard uncertainty quantification frameworks for operator networks incur substantial computational costs during training and inference. Integrating uncertainty estimates from operator networks into Bayesian optimization workflows aims to improve data efficiency and model accuracy.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2503.03178"
+   ]
+  },
+  "target_user": {
+   "text": "The target users are R&D engineers and scientific computing practitioners in companies and research environments who utilize surrogate models and optimization frameworks such as Google Vizier (repo:google/vizier) and SMT (repo:smtorg/smt) for expensive simulation and physical modeling tasks.",
+   "evidence_ids": [
+    "patent:11927927",
+    "pkg:google-vizier",
+    "pkg:smt",
+    "repo:google/vizier",
+    "repo:smtorg/smt"
+   ]
+  },
+  "jtbd": {
+   "text": "When engineers run expensive simulations or solve partial differential equations, they want to perform outer-loop optimization and active learning efficiently, so that they can minimize the number of high-cost evaluations required to find optimal parameters.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrating operator learning with Bayesian optimization and Gaussian processes enables lightweight predictive uncertainty quantification that can drive outer-loop optimization procedures more efficiently than conventional solvers, avoiding the heavy computational costs of standard deep ensembles.",
+   "evidence_ids": [
+    "paper:2503.03178"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The feasibility axis score is 2.0 out of 5.0 (dvf:13), which indicates that the riskiest assumption is whether predictive uncertainty estimates derived from operator networks can maintain calibration and stable optimization performance when coupled directly with sequential Bayesian optimization loops on out-of-distribution physical domains.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2503.03178"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "As required by the MVP type, a technical proof of concept from existing packages will be constructed by combining Triest (pkg:trieste) or Google Vizier (pkg:google-vizier) with operator surrogate routines to test whether active learning iterations converge under a proposed threshold of 50 high-cost function evaluations.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2503.03178",
+    "pkg:google-vizier",
+    "pkg:trieste"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "Success will be measured by achieving a proposed threshold of at least 20 percent reduction in total function evaluations compared to baseline non-adaptive sampling while maintaining predictive error bounds below a proposed threshold of 5 percent on held-out validation tasks, as motivated by paper:2503.03178 and dvf:13.",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2503.03178"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The integration will be abandoned if active learning loops exhibit worse data efficiency than standard Gaussian process surrogates, or if uncertainty calibration drift exceeds a proposed threshold of 40 percent on out-of-distribution test queries, reflecting the feasibility constraints in dvf:13 and paper:2503.03178.",
+    "evidence_ids": [
+     "dvf:13",
+     "paper:2503.03178"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:google-vizier",
+     "use": "Serves as the optimization engine for black-box sequential decision making and acquisition function maximization.",
+     "evidence_ids": [
+      "paper:2503.03178",
+      "pkg:google-vizier"
+     ],
+     "version": "0.1.24"
+    },
+    {
+     "id": "pkg:trieste",
+     "use": "Provides Gaussian process regression modules and Bayesian optimization routines for handling surrogate modeling tasks.",
+     "evidence_ids": [
+      "paper:2503.03178",
+      "pkg:trieste"
+     ],
+     "version": "4.6.0"
+    },
+    {
+     "id": "pkg:smt",
+     "use": "Supplies surrogate modeling toolbox utilities to evaluate regression and experimental design baselines.",
+     "evidence_ids": [
+      "paper:2503.03178",
+      "pkg:smt"
+     ],
+     "version": "2.15.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A lightweight epistemic uncertainty wrapper that maps operator network outputs directly into Gaussian process covariance kernels to drive active acquisition loops, as motivated by paper:2503.03178 and dvf:13.",
+     "evidence_ids": [
+      "dvf:13",
+      "paper:2503.03178"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

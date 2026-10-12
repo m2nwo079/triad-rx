@@ -130,3 +130,47 @@ def test_redundancy_flags_same_names_and_uses_candidate_quantile():
     applied = pd.DataFrame({"a": ["M:a", "M:a"], "b": ["M:b", "M:c"], "c": ["T:x", "T:x"]})
     reasons, threshold = rk.redundancy(applied, keys, vectors, 0.985)
     assert reasons[0].startswith("D1") and threshold <= 1.0
+
+
+su = load("setup_run", "scripts/represcription/06_setup_run.py")
+pt = load("patents_v3", "scripts/represcription/07_patents.py")
+
+
+def test_run_config_swaps_only_the_fourth_study_files_and_q1():
+    study = json.loads((ROOT / "config/study.json").read_text())
+    out = su.run_config(study, "prospective/2026-10-11.json", "prospective/2026-10-11_baseline.json")
+    assert out["applied"]["dvf"]["prospective_file"] == "prospective/2026-10-11.json" == out["prospective"]["registration"]
+    assert out["prospective"]["vocab"] == "vocab/timepoints/applied_v3_final.json"
+    assert out["quality"]["q1"]["seed"] == study["represcription"]["q1"]["seed"]
+    changed = {k for k in study if study[k] != out[k]}
+    assert changed == {"applied", "prospective", "quality"} and "run" in out
+    assert out["applied"]["briefing"] == study["applied"]["briefing"] and out["evaluation"] == study["evaluation"]
+
+
+def test_links_are_created_once_and_wrong_files_stop_the_setup(tmp_path):
+    import pytest
+    target = tmp_path / "target"
+    target.mkdir()
+    su.link(target, tmp_path / "run" / "x")
+    su.link(target, tmp_path / "run" / "x")
+    (tmp_path / "run" / "y").write_text("not a link")
+    with pytest.raises(SystemExit):
+        su.link(target, tmp_path / "run" / "y")
+
+
+def test_refined_matcher_gives_the_same_terms_as_refined_paper_matching():
+    from triadrx.corpus import match_papers_refined
+    study = json.loads((ROOT / "config/study.json").read_text())
+    rules = study["matching"]["surface_rules"]
+    terms = [{"id": "M:bert", "type": "M", "key": "bert", "status": "active",
+              "surfaces": [{"text": "BERT", "match": "cs"}, {"text": "bidirectional encoder representations", "match": "ci"}]},
+             {"id": "T:text classification", "type": "T", "key": "text classification", "status": "active",
+              "surfaces": [{"text": "text classification", "match": "ci"}]}]
+    text = "BERT for text classification. Bidirectional encoder representations help text classification."
+    spans = pt.RefinedMatcher(terms, {"M:bert"}, rules, {}).spans(text)
+    papers = pd.DataFrame({"id": ["p"], "title": ["BERT for text classification"],
+                           "abstract": ["Bidirectional encoder representations help text classification."]})
+    expected = set(match_papers_refined(papers, terms, {"M:bert"}, rules, {})["term_id"])
+    assert {s["id"] for s in spans} == expected
+    refined = pt.RefinedMatcher(terms, {"M:bert"}, rules, {})
+    assert refined.ambiguous == refined.matcher.ambiguous

@@ -1,0 +1,212 @@
+{
+ "rank": 1,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:pc",
+    "role": "Serves as the constraint-based causal discovery algorithm (such as the Peter-Clark algorithm) that constructs the initial skeleton or independence structure from data.",
+    "evidence_ids": [
+     "paper:2608.15332",
+     "paper:2608.27472"
+    ]
+   },
+   {
+    "term_id": "T:causal discovery",
+    "role": "The overarching task of recovering the underlying causal interaction graph or network structure from observational data.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2608.27472"
+    ]
+   },
+   {
+    "term_id": "T:prediction",
+    "role": "The task of forecasting system dynamics or evaluating which edges genuinely improve predictive performance.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2606.23880"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Simultaneous causal network inference and forecasting, where a predictive model leverages the causal structure to forecast system dynamics.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  },
+  "limitation": {
+   "text": "Causal discovery methods often reconstruct interaction networks without regard to whether the inferred structure supports prediction, whereas pure predictive models are typically treated as black boxes that offer no insight into which interactions drive the dynamics.",
+   "evidence_ids": [
+    "paper:2608.17452"
+   ]
+  },
+  "combination": {
+   "text": "Constraint-based causal discovery algorithms like PC provide high-recall candidate edge skeletons, which are then refined by learning which edges genuinely improve prediction performance and system forecasting.",
+   "evidence_ids": [
+    "paper:2606.23880",
+    "paper:2608.17452"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:pc",
+     "role": "Serves as the constraint-based causal discovery algorithm (such as the Peter-Clark algorithm) that constructs the initial skeleton or independence structure from data.",
+     "evidence_ids": [
+      "paper:2608.15332",
+      "paper:2608.27472"
+     ]
+    },
+    {
+     "term_id": "T:causal discovery",
+     "role": "The overarching task of recovering the underlying causal interaction graph or network structure from observational data.",
+     "evidence_ids": [
+      "paper:2608.17452",
+      "paper:2608.27472"
+     ]
+    },
+    {
+     "term_id": "T:prediction",
+     "role": "The task of forecasting system dynamics or evaluating which edges genuinely improve predictive performance.",
+     "evidence_ids": [
+      "paper:2608.17452",
+      "paper:2606.23880"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Simultaneous causal network inference and forecasting, where a predictive model leverages the causal structure to forecast system dynamics.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2606.23880"
+    ]
+   },
+   "limitation": {
+    "text": "Causal discovery methods often reconstruct interaction networks without regard to whether the inferred structure supports prediction, whereas pure predictive models are typically treated as black boxes that offer no insight into which interactions drive the dynamics.",
+    "evidence_ids": [
+     "paper:2608.17452"
+    ]
+   },
+   "combination": {
+    "text": "Constraint-based causal discovery algorithms like PC provide high-recall candidate edge skeletons, which are then refined by learning which edges genuinely improve prediction performance and system forecasting.",
+    "evidence_ids": [
+     "paper:2606.23880",
+     "paper:2608.17452"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining the PC constraint-based causal discovery algorithm with predictive modeling for simultaneous causal network inference and forecasting. While causal discovery methods often reconstruct interaction networks without regard to whether the inferred structure supports prediction, pure predictive models are treated as black boxes. By leveraging high-recall candidate skeletons from constraint-based discovery and refining them through predictive performance, the framework achieves high-fidelity network reconstruction and robust system forecasting.",
+   "evidence_ids": [
+    "paper:2608.15332",
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  },
+  "target_user": {
+   "text": "The target users are derived from academic assignee categories in the patent literature and open-source practitioners utilizing time-series causal discovery and predictive coding repositories such as causal-ts and pyhgf.",
+   "evidence_ids": [
+    "patent:11913865",
+    "repo:bloomberg/causal-ts",
+    "repo:ilabcode/pyhgf"
+   ]
+  },
+  "jtbd": {
+   "text": "When practitioners analyze complex observational time-series data, they want to simultaneously infer the underlying causal network structure and forecast system dynamics, so that they can avoid black-box predictions and understand which interactions drive the system.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  },
+  "value_prop": {
+   "text": "Unlike standard approaches that treat causal discovery and prediction as isolated tasks or black-box forecasters, this combination uses predictive modeling to prune false positive edges from constraint-based skeletons, thereby improving causal graph accuracy and delivering transparent system forecasts.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Given the viability score of 1.0, the riskiest assumption is that enterprise customers will pay for an integrated causal discovery and prediction framework rather than relying on separate open-source tools or single-purpose forecasting models.",
+   "evidence_ids": [
+    "dvf:1"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Conduct structured customer interviews and a price acceptance test with data science leaders to evaluate willingness to pay for combined causal network inference and forecasting capabilities, using a mock workflow as a visual aid.",
+   "evidence_ids": [
+    "dvf:1"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "At least a proposed threshold of 40 percent of interviewed prospective users confirm a willingness to adopt and pay for the integrated solution at a proposed threshold price of $500 per month.",
+   "evidence_ids": [
+    "dvf:1"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 15 percent of interviewed customers express interest in paying for combined causal discovery and prediction over existing standalone methods.",
+    "evidence_ids": [
+     "dvf:1"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:bloomberg/causal-ts",
+     "use": "Provides foundational time-series causal discovery algorithms and utilities for handling sequential data structures.",
+     "evidence_ids": [
+      "repo:bloomberg/causal-ts"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:causalts",
+     "use": "Supplies package-level routines for time-series causal analysis and graph skeleton generation.",
+     "evidence_ids": [
+      "pkg:causalts"
+     ],
+     "version": "0.27.0"
+    },
+    {
+     "id": "repo:ilabcode/pyhgf",
+     "use": "Leverages neural network components for predictive coding to support system dynamics forecasting.",
+     "evidence_ids": [
+      "repo:ilabcode/pyhgf"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A gating and refinement module that bridges constraint-based edge skeletons with predictive performance metrics to prune false positives.",
+     "evidence_ids": [
+      "paper:2606.23880",
+      "paper:2608.17452"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

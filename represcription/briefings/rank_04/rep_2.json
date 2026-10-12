@@ -1,0 +1,19 @@
+{
+ "rank": 4,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "comparison_only",
+  "insufficient_explanation": "The terms rag, information retrieval, and text retrieval are discussed in the context of retrieval systems and text benchmarks, but there is no specific evidence showing how all three components are combined together as an integrated methodology.",
+  "insufficient_evidence_ids": [
+   "paper:2608.24060"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

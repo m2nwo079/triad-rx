@@ -1,0 +1,216 @@
+{
+ "rank": 8,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Models complex residual or target distributions and parameterizes invertible mappings or densities.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2607.18479",
+     "paper:2606.01346"
+    ]
+   },
+   {
+    "term_id": "T:parameter estimation",
+    "role": "Serves as the overarching inference task aiming to recover unknown physical or statistical parameters from observations.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013",
+     "paper:2511.02277"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Provides the foundational supervised learning or flow matching loss formulation used to train predictive mappings.",
+    "evidence_ids": [
+     "paper:2608.05557",
+     "paper:2605.06829",
+     "paper:2606.01346"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Simulation-based parameter estimation and conditional density recovery.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2606.01346"
+   ]
+  },
+  "limitation": {
+   "text": "Traditional regression and standard parameter estimation models struggle to capture arbitrary non-Gaussian, multi-modal, or complex residual distributions of target parameters.",
+   "evidence_ids": [
+    "paper:2601.07013",
+    "paper:2607.25026",
+    "paper:2606.01346"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are embedded within simulation-based frameworks to transform unknown or complex residual distributions into simple base distributions, while regression-based or likelihood optimization updates the parameter values and network functions end-to-end.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2606.01346"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Models complex residual or target distributions and parameterizes invertible mappings or densities.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2607.18479",
+      "paper:2606.01346"
+     ]
+    },
+    {
+     "term_id": "T:parameter estimation",
+     "role": "Serves as the overarching inference task aiming to recover unknown physical or statistical parameters from observations.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2601.07013",
+      "paper:2511.02277"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Provides the foundational supervised learning or flow matching loss formulation used to train predictive mappings.",
+     "evidence_ids": [
+      "paper:2608.05557",
+      "paper:2605.06829",
+      "paper:2606.01346"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Simulation-based parameter estimation and conditional density recovery.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2606.01346"
+    ]
+   },
+   "limitation": {
+    "text": "Traditional regression and standard parameter estimation models struggle to capture arbitrary non-Gaussian, multi-modal, or complex residual distributions of target parameters.",
+    "evidence_ids": [
+     "paper:2601.07013",
+     "paper:2607.25026",
+     "paper:2606.01346"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are embedded within simulation-based frameworks to transform unknown or complex residual distributions into simple base distributions, while regression-based or likelihood optimization updates the parameter values and network functions end-to-end.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2606.01346"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining normalizing flows, parameter estimation, and regression. Normalizing flows are embedded within simulation-based frameworks to model complex residual and target distributions, while regression provides the foundational training loss or predictive mapping. Together, they target simulation-based parameter estimation and conditional density recovery as supported by paper:2607.25026 and paper:2606.01346.",
+   "evidence_ids": [
+    "paper:2606.01346",
+    "paper:2607.25026"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified due to the absence of patent assignees in the bundle, though open-source repositories and packages such as repo:atong01/conditional-flow-matching and pkg:torchcfm suggest a user base of machine learning practitioners and simulation researchers.",
+   "evidence_ids": [
+    "pkg:torchcfm",
+    "repo:atong01/conditional-flow-matching"
+   ]
+  },
+  "jtbd": {
+   "text": "When performing simulation-based inference or physical modeling, researchers want to recover unknown parameters and capture arbitrary non-Gaussian or multi-modal distributions so that they can avoid the limitations of traditional regression models.",
+   "evidence_ids": [
+    "paper:2601.07013",
+    "paper:2606.01346",
+    "paper:2607.25026"
+   ]
+  },
+  "value_prop": {
+   "text": "Embedding normalizing flows within regression and simulation-based parameter estimation pipelines transforms complex residual distributions into simple base distributions. This approach enables end-to-end parameter estimation and conditional density recovery that standard feedforward regression cannot achieve.",
+   "evidence_ids": [
+    "paper:2606.01346",
+    "paper:2607.25026"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence in the bundle (dvf:8). We assume that commercial customers are willing to pay for a specialized simulation-based parameter estimation framework incorporating normalizing flows.",
+   "evidence_ids": [
+    "dvf:8"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with a proposed threshold of 10 target research leads to validate willingness to pay for simulation-based parameter estimation software.",
+   "evidence_ids": [
+    "dvf:8",
+    "paper:2607.25026"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive pricing feedback and intent-to-use commitments during customer interviews and price acceptance tests.",
+   "evidence_ids": [
+    "dvf:8"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed prospects express willingness to pay for the simulation-based parameter estimation solution.",
+    "evidence_ids": [
+     "dvf:8"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:torchcfm",
+     "use": "Used as a conditional flow matching library to implement flow-based transformations and regression losses.",
+     "evidence_ids": [
+      "paper:2608.05557",
+      "pkg:torchcfm",
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "pkg:lightgbmlss",
+     "use": "Used to provide probabilistic modeling extensions for baseline regression tasks.",
+     "evidence_ids": [
+      "pkg:lightgbmlss",
+      "repo:statmixedml/lightgbmlss"
+     ],
+     "version": "0.6.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build an integration wrapper that couples embedded normalizing flows with empirical-likelihood estimators under moment restrictions for end-to-end simulation-based parameter estimation.",
+     "evidence_ids": [
+      "paper:2607.25026"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

@@ -1,0 +1,19 @@
+{
+ "rank": 10,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "insufficient_concept",
+  "insufficient_reason": "no_combination_evidence",
+  "insufficient_explanation": "The evidence bundle discusses Gaussian processes and regression (e.g., Gaussian process regression) as well as generalization bounds in separate papers, but does not provide evidence of how all three components (Gaussian process, generalization bounds, and regression) are combined together into a single method.",
+  "insufficient_evidence_ids": [
+   "paper:2606.13818"
+  ]
+ },
+ "frame_valid": true,
+ "briefing": null,
+ "briefing_valid": null
+}

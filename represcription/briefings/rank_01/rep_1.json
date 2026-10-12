@@ -1,0 +1,219 @@
+{
+ "rank": 1,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:pc",
+    "role": "Serves as a constraint-based causal discovery algorithm that extracts initial skeleton structures and edge orientations.",
+    "evidence_ids": [
+     "paper:2608.27472",
+     "paper:2608.15332"
+    ]
+   },
+   {
+    "term_id": "T:causal discovery",
+    "role": "Aims to reconstruct the underlying interaction network or directed acyclic graph from observational data.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2608.27472"
+    ]
+   },
+   {
+    "term_id": "T:prediction",
+    "role": "Provides forecasting or predictive modeling of system dynamics, acting as an evaluation metric or scoring mechanism for whether inferred causal edges are genuine.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2606.23880"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Simultaneous causal discovery and forecasting in complex dynamical systems.",
+   "evidence_ids": [
+    "paper:2608.17452"
+   ]
+  },
+  "limitation": {
+   "text": "Causal discovery methods often reconstruct interaction networks without regard to whether the inferred structure supports prediction, while predictive models are treated as black boxes that offer no insight into which interactions drive the dynamics.",
+   "evidence_ids": [
+    "paper:2608.17452"
+   ]
+  },
+  "combination": {
+   "text": "Constraint-based causal discovery algorithms like PC provide high-recall skeleton candidates which are then pruned or refined by learning which edges genuinely improve prediction performance in dynamical systems.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:pc",
+     "role": "Serves as a constraint-based causal discovery algorithm that extracts initial skeleton structures and edge orientations.",
+     "evidence_ids": [
+      "paper:2608.27472",
+      "paper:2608.15332"
+     ]
+    },
+    {
+     "term_id": "T:causal discovery",
+     "role": "Aims to reconstruct the underlying interaction network or directed acyclic graph from observational data.",
+     "evidence_ids": [
+      "paper:2608.17452",
+      "paper:2608.27472"
+     ]
+    },
+    {
+     "term_id": "T:prediction",
+     "role": "Provides forecasting or predictive modeling of system dynamics, acting as an evaluation metric or scoring mechanism for whether inferred causal edges are genuine.",
+     "evidence_ids": [
+      "paper:2608.17452",
+      "paper:2606.23880"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Simultaneous causal discovery and forecasting in complex dynamical systems.",
+    "evidence_ids": [
+     "paper:2608.17452"
+    ]
+   },
+   "limitation": {
+    "text": "Causal discovery methods often reconstruct interaction networks without regard to whether the inferred structure supports prediction, while predictive models are treated as black boxes that offer no insight into which interactions drive the dynamics.",
+    "evidence_ids": [
+     "paper:2608.17452"
+    ]
+   },
+   "combination": {
+    "text": "Constraint-based causal discovery algorithms like PC provide high-recall skeleton candidates which are then pruned or refined by learning which edges genuinely improve prediction performance in dynamical systems.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2606.23880"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This briefing evaluates combining the PC algorithm, causal discovery, and prediction for simultaneous causal network inference and forecasting in complex systems. By using constraint-based causal discovery like PC to generate high-recall skeleton candidates and predictive modeling to prune false positives, the approach unifies network structure recovery with system forecasting. Evidence shows this combination matches or exceeds expensive nonlinear conditional independence tests while remaining computationally efficient.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2606.23880",
+    "dvf:1"
+   ]
+  },
+  "target_user": {
+   "text": "The target user includes academic researchers and industrial practitioners working with complex observational panel data, time-series dynamics, and porous medium simulations.",
+   "evidence_ids": [
+    "paper:2608.20187",
+    "patent:11913865",
+    "repo:bloomberg/causal-ts"
+   ]
+  },
+  "jtbd": {
+   "text": "When analyzing complex observational time-series data, researchers want to simultaneously infer the underlying causal interaction network and forecast system dynamics so that they can understand which interactions drive the system while maintaining predictive accuracy.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  },
+  "value_prop": {
+   "text": "Combining constraint-based causal discovery with predictive pruning recovers underlying interaction networks with high fidelity and forecasts system dynamics on par with models supplied with true networks. This avoids treating predictive models as opaque black boxes while bypassing the prohibitive computational costs of traditional nonlinear conditional independence tests.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption, fixed by viability axis V scoring 1.0, is that potential customers will willingly pay for a combined causal discovery and forecasting software tool rather than relying on free standalone open-source libraries.",
+   "evidence_ids": [
+    "dvf:1"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with quantitative data science teams to determine if they face budget constraints for commercial causal-forecasting software versus using existing free packages.",
+   "evidence_ids": [
+    "dvf:1",
+    "repo:bloomberg/causal-ts"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: at least 40 percent of interviewed data science leaders express willingness to pay for a commercial tool that integrates causal discovery with forecasting.",
+   "evidence_ids": [
+    "dvf:1"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: fewer than 10 percent of prospective enterprise interviewees confirm a budget allocation for combined causal-forecasting software.",
+    "evidence_ids": [
+     "dvf:1"
+    ]
+   },
+   {
+    "text": "Proposed threshold: customer interviews reveal that zero respondents are willing to pay above open-source replacement costs for the combined workflow.",
+    "evidence_ids": [
+     "dvf:1",
+     "repo:bloomberg/causal-ts"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:bloomberg/causal-ts",
+     "use": "Provides time-series causal discovery capabilities to establish initial edge skeletons from observational data.",
+     "evidence_ids": [
+      "repo:bloomberg/causal-ts",
+      "paper:2608.17452"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:causalts",
+     "use": "Utilized as an underlying package for handling causal time-series analytics and data structures.",
+     "evidence_ids": [
+      "pkg:causalts",
+      "paper:2608.17452"
+     ],
+     "version": "0.27.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified optimization layer that takes high-recall causal skeletons from constraint-based discovery and evaluates them using predictive improvement metrics to prune false positives.",
+     "evidence_ids": [
+      "paper:2608.17452",
+      "paper:2606.23880"
+     ]
+    },
+    {
+     "text": "An interactive commercial dashboard to display both the inferred causal interaction graph and parallel system forecasts for domain experts.",
+     "evidence_ids": [
+      "paper:2608.17452",
+      "patent:11913865"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

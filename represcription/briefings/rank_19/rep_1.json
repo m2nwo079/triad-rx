@@ -1,0 +1,214 @@
+{
+ "rank": 19,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:vq vae",
+    "role": "Learns discrete codebooks and latent representations for motion sequences to structure the state space.",
+    "evidence_ids": [
+     "paper:2606.27547",
+     "paper:2602.18057"
+    ]
+   },
+   {
+    "term_id": "T:motion generation",
+    "role": "Synthesizes realistic human motion sequences or trajectories using discrete representations.",
+    "evidence_ids": [
+     "paper:2606.27547",
+     "paper:2602.18057"
+    ]
+   },
+   {
+    "term_id": "T:prediction",
+    "role": "Forecasts future motion or state trajectories based on learned discrete intention queries or sequence patterns.",
+    "evidence_ids": [
+     "paper:2606.26661",
+     "paper:2606.05855"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Human motion generation and trajectory prediction.",
+   "evidence_ids": [
+    "paper:2606.27547",
+    "paper:2606.26661"
+   ]
+  },
+  "limitation": {
+   "text": "Existing prediction and generation approaches often lack rich representation support, fail to capture complex or rare motion dynamics, or neglect physical and topological constraints.",
+   "evidence_ids": [
+    "paper:2606.27547",
+    "paper:2606.26661"
+   ]
+  },
+  "combination": {
+   "text": "By incorporating a VQ-VAE to learn shape-aware motion primitives or expanded codebooks, the model can discretize human motion for both generation and prediction tasks. This discrete bottleneck allows subsequent sequence models and transformers to forecast motion trajectories and synthesize realistic movements that adhere to structural and topological priors.",
+   "evidence_ids": [
+    "paper:2606.27547",
+    "paper:2606.26661"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:vq vae",
+     "role": "Learns discrete codebooks and latent representations for motion sequences to structure the state space.",
+     "evidence_ids": [
+      "paper:2606.27547",
+      "paper:2602.18057"
+     ]
+    },
+    {
+     "term_id": "T:motion generation",
+     "role": "Synthesizes realistic human motion sequences or trajectories using discrete representations.",
+     "evidence_ids": [
+      "paper:2606.27547",
+      "paper:2602.18057"
+     ]
+    },
+    {
+     "term_id": "T:prediction",
+     "role": "Forecasts future motion or state trajectories based on learned discrete intention queries or sequence patterns.",
+     "evidence_ids": [
+      "paper:2606.26661",
+      "paper:2606.05855"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Human motion generation and trajectory prediction.",
+    "evidence_ids": [
+     "paper:2606.27547",
+     "paper:2606.26661"
+    ]
+   },
+   "limitation": {
+    "text": "Existing prediction and generation approaches often lack rich representation support, fail to capture complex or rare motion dynamics, or neglect physical and topological constraints.",
+    "evidence_ids": [
+     "paper:2606.27547",
+     "paper:2606.26661"
+    ]
+   },
+   "combination": {
+    "text": "By incorporating a VQ-VAE to learn shape-aware motion primitives or expanded codebooks, the model can discretize human motion for both generation and prediction tasks. This discrete bottleneck allows subsequent sequence models and transformers to forecast motion trajectories and synthesize realistic movements that adhere to structural and topological priors.",
+    "evidence_ids": [
+     "paper:2606.27547",
+     "paper:2606.26661"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining VQ-VAE with motion generation and prediction to improve human motion synthesis and trajectory forecasting. By incorporating a VQ-VAE to learn shape-aware motion primitives or expanded codebooks, the model can discretize human motion for both generation and prediction tasks. This approach uses learned discrete codebooks and latent representations to structure the state space, synthesize realistic motion sequences, and forecast future trajectories.",
+   "evidence_ids": [
+    "paper:2606.27547",
+    "paper:2606.26661",
+    "paper:2602.18057"
+   ]
+  },
+  "target_user": {
+   "text": "Academic researchers and developers working on human motion generation, trajectory prediction, and embodied AI systems, as indicated by academic assignee categories and open-source repositories.",
+   "evidence_ids": [
+    "patent:20250165802",
+    "repo:guytevet/motion-diffusion-model",
+    "repo:nv-tlabs/kimodo"
+   ]
+  },
+  "jtbd": {
+   "text": "When building automated motion generation or trajectory prediction systems, practitioners need to structure latent spaces and forecast future motion so that synthetic movements adhere to physical and topological constraints.",
+   "evidence_ids": [
+    "paper:2606.27547",
+    "paper:2606.26661"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrating VQ-VAE tokenization with motion generation and prediction enables models to capture complex or rare motion dynamics while adhering to structural and topological priors. This discrete bottleneck allows sequence models to forecast motion trajectories and synthesize realistic movements with improved feasibility and diversity.",
+   "evidence_ids": [
+    "paper:2606.27547",
+    "paper:2606.26661"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Based on the DVF axis scores where viability (V) is the lowest at 1.0 (dvf:19), the riskiest assumption is that customers or organizations are willing to pay for a specialized VQ-VAE motion generation and prediction framework compared to existing baseline tools.",
+   "evidence_ids": [
+    "dvf:19"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with a proposed threshold of 20 prospective users or engineering teams, presenting mockups of the VQ-VAE motion generation and prediction pipeline to evaluate willingness to pay and budget allocation (dvf:19).",
+   "evidence_ids": [
+    "dvf:19"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "A proposed threshold of at least 40 percent of interviewed prospective users expressing positive willingness to pay for the proposed solution during price acceptance testing (dvf:19).",
+   "evidence_ids": [
+    "dvf:19"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 15 percent of interviewed prospective users indicate any willingness to pay for the tool during validation (dvf:19).",
+    "evidence_ids": [
+     "dvf:19"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:guytevet/motion-diffusion-model",
+     "use": "Used as a baseline PyTorch implementation for human motion diffusion modeling and generation experiments.",
+     "evidence_ids": [
+      "repo:guytevet/motion-diffusion-model"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:lucidrains/vector-quantize-pytorch",
+     "use": "Used to implement vector quantization and scalar quantization modules in PyTorch for the VQ-VAE components.",
+     "evidence_ids": [
+      "repo:lucidrains/vector-quantize-pytorch"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:scann",
+     "use": "Used for efficient vector similarity search and nearest neighbor lookup over learned motion codebooks and latent representations.",
+     "evidence_ids": [
+      "pkg:scann"
+     ],
+     "version": "1.4.2"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized data pipeline and integration adapter to connect vector quantization outputs with downstream trajectory prediction and sequence generation models.",
+     "evidence_ids": [
+      "paper:2606.27547",
+      "paper:2606.26661"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

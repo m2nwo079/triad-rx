@@ -1,0 +1,223 @@
+{
+ "rank": 11,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:direct preference optimization",
+    "role": "Serves as the preference-based optimization objective to fine-tune the model using structured preference pairs.",
+    "evidence_ids": [
+     "paper:2603.18637",
+     "paper:2512.13741"
+    ]
+   },
+   {
+    "term_id": "T:instruction following",
+    "role": "Represents the core capability and constraint requirements that need to be maintained or satisfied during alignment.",
+    "evidence_ids": [
+     "paper:2603.18637",
+     "paper:2512.13741"
+    ]
+   },
+   {
+    "term_id": "T:safety alignment",
+    "role": "Represents the objective to secure models against harmful outputs or adversarial jailbreaks.",
+    "evidence_ids": [
+     "paper:2603.18637",
+     "paper:2512.13741"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Balancing multi-turn safety alignment while preserving general capabilities and instruction-following performance.",
+   "evidence_ids": [
+    "paper:2603.18637"
+   ]
+  },
+  "limitation": {
+   "text": "Standard alignment or fine-tuning approaches often struggle to simultaneously satisfy strict constraints on safety, over-refusal, and instruction following, and can suffer from internal conflicts between safety objectives and instruction execution.",
+   "evidence_ids": [
+    "paper:2603.18637",
+    "paper:2512.13741"
+   ]
+  },
+  "combination": {
+   "text": "Direct Preference Optimization is applied within multi-objective frameworks to balance safety alignment and instruction-following requirements by leveraging preference pairs that target slice-aware failure profiles and internal model dynamics.",
+   "evidence_ids": [
+    "paper:2603.18637",
+    "paper:2512.13741"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:direct preference optimization",
+     "role": "Serves as the preference-based optimization objective to fine-tune the model using structured preference pairs.",
+     "evidence_ids": [
+      "paper:2603.18637",
+      "paper:2512.13741"
+     ]
+    },
+    {
+     "term_id": "T:instruction following",
+     "role": "Represents the core capability and constraint requirements that need to be maintained or satisfied during alignment.",
+     "evidence_ids": [
+      "paper:2603.18637",
+      "paper:2512.13741"
+     ]
+    },
+    {
+     "term_id": "T:safety alignment",
+     "role": "Represents the objective to secure models against harmful outputs or adversarial jailbreaks.",
+     "evidence_ids": [
+      "paper:2603.18637",
+      "paper:2512.13741"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Balancing multi-turn safety alignment while preserving general capabilities and instruction-following performance.",
+    "evidence_ids": [
+     "paper:2603.18637"
+    ]
+   },
+   "limitation": {
+    "text": "Standard alignment or fine-tuning approaches often struggle to simultaneously satisfy strict constraints on safety, over-refusal, and instruction following, and can suffer from internal conflicts between safety objectives and instruction execution.",
+    "evidence_ids": [
+     "paper:2603.18637",
+     "paper:2512.13741"
+    ]
+   },
+   "combination": {
+    "text": "Direct Preference Optimization is applied within multi-objective frameworks to balance safety alignment and instruction-following requirements by leveraging preference pairs that target slice-aware failure profiles and internal model dynamics.",
+    "evidence_ids": [
+     "paper:2603.18637",
+     "paper:2512.13741"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining direct preference optimization, instruction following, and safety alignment to balance multi-turn safety alignment while preserving general capabilities. Standard alignment approaches often struggle to simultaneously satisfy strict constraints on safety, over-refusal, and instruction following due to internal conflicts between safety objectives and instruction execution. By integrating direct preference optimization within multi-objective frameworks, developers can leverage structured preference pairs targeting slice-aware failure profiles and internal model dynamics.",
+   "evidence_ids": [
+    "dvf:11",
+    "paper:2603.18637",
+    "paper:2512.13741"
+   ]
+  },
+  "target_user": {
+   "text": "The target users are developers and researchers utilizing open-weight mixture-of-experts architectures, reward evaluation tools, and alignment packages such as Instella-MoE, RewardBench, and turbo-alignment.",
+   "evidence_ids": [
+    "dvf:11",
+    "repo:amd-agi/instella-moe",
+    "repo:allenai/reward-bench",
+    "pkg:turbo-alignment"
+   ]
+  },
+  "jtbd": {
+   "text": "When deploying large language models in applications that must weigh clashing values and avoid adversarial jailbreaks, developers want to balance multi-turn safety alignment and instruction-following performance so that the models maintain core capabilities without suffering from blanket refusal or over-refusal.",
+   "evidence_ids": [
+    "dvf:11",
+    "paper:2603.18637",
+    "paper:2512.13741"
+   ]
+  },
+  "value_prop": {
+   "text": "Applying direct preference optimization to balance instruction following and safety alignment provides a principled way to mitigate internal conflicts and manage the trade-off between benign refusal and harmful compliance.",
+   "evidence_ids": [
+    "dvf:11",
+    "paper:2608.29378",
+    "paper:2512.13741"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence in the bundle. We assume that enterprise customers are willing to pay for an integrated alignment service that simultaneously optimizes for instruction following and safety compliance.",
+   "evidence_ids": [
+    "dvf:11"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with potential enterprise buyers of alignment tooling, presenting a mockup of the multi-objective optimization pipeline to test willingness to pay. Proposed threshold: secure at least 5 positive commitments out of 10 interviews to validate viability.",
+   "evidence_ids": [
+    "dvf:11"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a conversion rate of proposed threshold: 30 percent during the price acceptance test and maintain an instruction-following accuracy score above proposed threshold: 85 percent while reducing attack success rates.",
+   "evidence_ids": [
+    "dvf:11",
+    "paper:2603.18637"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than proposed threshold: 10 percent of interviewed customers express willingness to pay for the proposed alignment service during the price acceptance test.",
+    "evidence_ids": [
+     "dvf:11"
+    ]
+   },
+   {
+    "text": "The fine-tuned model suffers from a degradation in general instruction-following benchmarks exceeding proposed threshold: 25 percent compared to the base model.",
+    "evidence_ids": [
+     "dvf:11",
+     "paper:2603.18637"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:amd-agi/instella-moe",
+     "use": "Serves as the fully open mixture-of-experts foundation model to test preference optimization and alignment workflows.",
+     "evidence_ids": [
+      "repo:amd-agi/instella-moe"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:allenai/reward-bench",
+     "use": "Provides the evaluation tool for assessing reward models and alignment performance across objectives.",
+     "evidence_ids": [
+      "repo:allenai/reward-bench"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:turbo-alignment",
+     "use": "Utilized as a package building block to execute alignment procedures efficiently.",
+     "evidence_ids": [
+      "pkg:turbo-alignment"
+     ],
+     "version": "0.0.4"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build a multi-objective data curation pipeline that generates slice-aware preference pairs to balance instruction following and safety objectives.",
+     "evidence_ids": [
+      "dvf:11",
+      "paper:2603.18637"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

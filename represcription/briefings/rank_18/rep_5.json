@@ -1,0 +1,190 @@
+{
+ "rank": 18,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Serves as a probabilistic surrogate model to capture nonlinear relationships and encode prior knowledge.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   {
+    "term_id": "M:pc",
+    "role": "Performs dimensionality reduction on time-dependent responses to extract principal component scores.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   {
+    "term_id": "T:uncertainty quantification",
+    "role": "Quantifies model input and prediction uncertainties based on transient experimental data.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Inverse uncertainty quantification for time-dependent transient responses.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "limitation": {
+   "text": "High-dimensional time-dependent outputs make direct surrogate modeling and inverse uncertainty quantification computationally intractable.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "combination": {
+   "text": "Principal component analysis reduces the dimensionality of time-dependent quantities of interest, and the resulting principal component scores are used to train surrogate models to efficiently perform inverse uncertainty quantification.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Serves as a probabilistic surrogate model to capture nonlinear relationships and encode prior knowledge.",
+     "evidence_ids": [
+      "paper:2307.05592"
+     ]
+    },
+    {
+     "term_id": "M:pc",
+     "role": "Performs dimensionality reduction on time-dependent responses to extract principal component scores.",
+     "evidence_ids": [
+      "paper:2307.05592"
+     ]
+    },
+    {
+     "term_id": "T:uncertainty quantification",
+     "role": "Quantifies model input and prediction uncertainties based on transient experimental data.",
+     "evidence_ids": [
+      "paper:2307.05592"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Inverse uncertainty quantification for time-dependent transient responses.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   "limitation": {
+    "text": "High-dimensional time-dependent outputs make direct surrogate modeling and inverse uncertainty quantification computationally intractable.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   "combination": {
+    "text": "Principal component analysis reduces the dimensionality of time-dependent quantities of interest, and the resulting principal component scores are used to train surrogate models to efficiently perform inverse uncertainty quantification.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining Gaussian processes, principal component analysis, and uncertainty quantification for inverse uncertainty quantification of time-dependent transient responses. By leveraging dimensionality reduction, high-dimensional temporal outputs are compressed into principal component scores to train surrogate models efficiently. According to the evidence bundle, this approach addresses computational bottlenecks in Markov Chain Monte Carlo sampling and transient simulations.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified based on the available bundle of patents, repositories, and packages.",
+   "evidence_ids": [
+    "repo:google/uncertainty-baselines",
+    "pkg:dgpsi"
+   ]
+  },
+  "jtbd": {
+   "text": "When performing inverse uncertainty quantification on time-dependent transient experimental data, engineers need to reduce output dimensions and propagate uncertainties efficiently so that they can quantify model input uncertainties without incurring intractable computational costs.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "value_prop": {
+   "text": "Applying dimensionality reduction and Gaussian process surrogate modeling enables efficient inverse uncertainty quantification for high-dimensional transient responses. This combination reduces computational cost in Markov Chain Monte Carlo sampling while maintaining better agreement with experimental data.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is viability (axis V score is null), which was designated due to missing evidence in the bundle. We assume that enterprise customers will pay for a software tool that performs inverse uncertainty quantification using principal component analysis and Gaussian processes.",
+   "evidence_ids": [
+    "dvf:18"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "To test the viability of the commercial offering, we will conduct customer interviews and price acceptance tests with prospective engineering teams. We will present a mock-up of the workflow combining principal component analysis and Gaussian processes for inverse uncertainty quantification to test a proposed pricing threshold of 5000 dollars per seat annually, as motivated by dvf:18.",
+   "evidence_ids": [
+    "dvf:18",
+    "paper:2307.05592"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "The success metric for the MVP is achieving a proposed threshold of 30 percent positive price acceptance and commitment to pilot the software, as motivated by dvf:18.",
+   "evidence_ids": [
+    "dvf:18"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The project will be killed if fewer than a proposed threshold of 10 percent of interviewed prospective users express willingness to pay for the proposed solution, as motivated by dvf:18.",
+    "evidence_ids": [
+     "dvf:18"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:dgpsi",
+     "use": "Will be used to emulate and perform sensitivity analysis on complex computer models.",
+     "evidence_ids": [
+      "pkg:dgpsi"
+     ],
+     "version": "2.6.0"
+    },
+    {
+     "id": "repo:google/uncertainty-baselines",
+     "use": "Will be used to provide benchmark implementations for uncertainty quantification methods.",
+     "evidence_ids": [
+      "repo:google/uncertainty-baselines"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A pipeline module that integrates functional principal component analysis with Gaussian process surrogate training for time-dependent transient responses, as motivated by paper:2307.05592 and dvf:18.",
+     "evidence_ids": [
+      "dvf:18",
+      "paper:2307.05592"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

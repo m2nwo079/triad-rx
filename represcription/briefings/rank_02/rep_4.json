@@ -1,0 +1,197 @@
+{
+ "rank": 2,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gpt",
+    "role": "Acts as the underlying frontier large language model used to generate reasoning traces, code, or execute prompt-guided optimization.",
+    "evidence_ids": [
+     "paper:2512.13323",
+     "paper:2607.18266"
+    ]
+   },
+   {
+    "term_id": "T:arithmetic reasoning",
+    "role": "Serves as the target capability involving multi-step math word problems and symbolic computations.",
+    "evidence_ids": [
+     "paper:2512.13323",
+     "paper:2607.18266"
+    ]
+   },
+   {
+    "term_id": "T:code generation",
+    "role": "Provides a programming medium and code generation agent workflow to delegate and execute arithmetic operations accurately.",
+    "evidence_ids": [
+     "paper:2512.13323"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Automated arithmetic reasoning and tabular data workflows using code generation agents.",
+   "evidence_ids": [
+    "paper:2512.13323"
+   ]
+  },
+  "limitation": {
+   "text": "Base small language models and standard architectures often exhibit fundamental limitations and low accuracy when performing complex arithmetic reasoning tasks directly.",
+   "evidence_ids": [
+    "paper:2512.13323"
+   ]
+  },
+  "combination": {
+   "text": "An error-driven prompt optimization framework enhances code generation agents built on language models by clustering erroneous predictions to iteratively refine prompt rules, thereby substantially improving arithmetic reasoning performance.",
+   "evidence_ids": [
+    "paper:2512.13323"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gpt",
+     "role": "Acts as the underlying frontier large language model used to generate reasoning traces, code, or execute prompt-guided optimization.",
+     "evidence_ids": [
+      "paper:2512.13323",
+      "paper:2607.18266"
+     ]
+    },
+    {
+     "term_id": "T:arithmetic reasoning",
+     "role": "Serves as the target capability involving multi-step math word problems and symbolic computations.",
+     "evidence_ids": [
+      "paper:2512.13323",
+      "paper:2607.18266"
+     ]
+    },
+    {
+     "term_id": "T:code generation",
+     "role": "Provides a programming medium and code generation agent workflow to delegate and execute arithmetic operations accurately.",
+     "evidence_ids": [
+      "paper:2512.13323"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Automated arithmetic reasoning and tabular data workflows using code generation agents.",
+    "evidence_ids": [
+     "paper:2512.13323"
+    ]
+   },
+   "limitation": {
+    "text": "Base small language models and standard architectures often exhibit fundamental limitations and low accuracy when performing complex arithmetic reasoning tasks directly.",
+    "evidence_ids": [
+     "paper:2512.13323"
+    ]
+   },
+   "combination": {
+    "text": "An error-driven prompt optimization framework enhances code generation agents built on language models by clustering erroneous predictions to iteratively refine prompt rules, thereby substantially improving arithmetic reasoning performance.",
+    "evidence_ids": [
+     "paper:2512.13323"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates GPT-style models and code generation agents to support automated arithmetic reasoning and tabular data workflows. By applying an error-driven prompt optimization framework that clusters erroneous predictions to iteratively refine prompt rules, the system substantially improves arithmetic reasoning performance. Evidence shows this approach elevates model accuracy on arithmetic tasks to 70.8 percent.",
+   "evidence_ids": [
+    "paper:2512.13323"
+   ]
+  },
+  "target_user": {
+   "text": "Analysts in regulated sectors such as finance and healthcare who handle tabular data workflows, as derived from the package and repository ecosystem in the bundle.",
+   "evidence_ids": [
+    "paper:2512.13323"
+   ]
+  },
+  "jtbd": {
+   "text": "When analysts perform arithmetic operations on structured data in secure, on-premises environments, they want to delegate and execute precise calculations via code generation agents so that sensitive information never leaves secure systems and reasoning accuracy is maximized.",
+   "evidence_ids": [
+    "paper:2512.13323"
+   ]
+  },
+  "value_prop": {
+   "text": "This error-driven prompt optimization framework enables small language models to achieve 70.8 percent accuracy on arithmetic tasks while maintaining privacy-compliant, on-premises execution without costly full fine-tuning.",
+   "evidence_ids": [
+    "paper:2512.13323"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The viability axis is designated as the riskiest assumption due to missing evidence in the bundle. We assume that target users in regulated financial and healthcare sectors are willing to pay for an on-premises, code-generation-based arithmetic reasoning assistant.",
+   "evidence_ids": [
+    "dvf:2",
+    "paper:2512.13323"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with regulated sector data analysts using mockups of the error-driven prompt optimization agent to test viability and willingness to pay a proposed threshold of $500 per month per user, motivated by dvf:2.",
+   "evidence_ids": [
+    "dvf:2",
+    "paper:2512.13323"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness-to-pay responses during customer interviews and price acceptance testing, as motivated by dvf:2.",
+   "evidence_ids": [
+    "dvf:2",
+    "paper:2512.13323"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Terminate the project if fewer than a proposed threshold of 15 percent of interviewed analysts express willingness to adopt and pay for the on-premises solution, motivated by dvf:2.",
+    "evidence_ids": [
+     "dvf:2",
+     "paper:2512.13323"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:qwenlm/qwen3",
+     "use": "Serves as the underlying small language model deployed locally for on-premises code generation and arithmetic reasoning tasks.",
+     "evidence_ids": [
+      "paper:2512.13323",
+      "repo:qwenlm/qwen3"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:skythought",
+     "use": "Provides thinking and reasoning capabilities to support the agentic generation process.",
+     "evidence_ids": [
+      "paper:2512.13323",
+      "pkg:skythought"
+     ],
+     "version": "0.1.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "An error-driven prompt optimization engine that clusters erroneous code generation predictions to iteratively refine prompt-rules for on-premises models.",
+     "evidence_ids": [
+      "paper:2512.13323"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

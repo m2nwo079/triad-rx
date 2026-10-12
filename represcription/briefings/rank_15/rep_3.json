@@ -1,0 +1,253 @@
+{
+ "rank": 15,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Models probability distributions, shapes, or dependencies between edges/variables to capture complex multimodal behavior and support likelihood-based generative modeling.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2606.09857",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   },
+   {
+    "term_id": "T:density estimation",
+    "role": "Learns probability density functions or conditional distributions over features and latent variables to infer data likelihoods and represent uncertainty.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2606.09857",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   },
+   {
+    "term_id": "T:uncertainty quantification",
+    "role": "Provides principled posterior approximations, Bayesian reasoning, or confidence metrics derived from the learned densities to assess prediction reliability.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2606.09857",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Uncertainty quantification and probabilistic modeling in complex systems such as causal graphs, reduced-order models, multiscale systems, and shape spaces.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2606.09857",
+    "paper:2605.09718",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  },
+  "limitation": {
+   "text": "Existing approaches often fail to capture complex dependencies between variables, lack expressive and multimodal posterior learning capabilities, or struggle to provide principled uncertainty quantification.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2606.09857",
+    "paper:2605.09718",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are employed as expressive density estimators to model distributions and dependencies within latent or structured spaces, thereby enabling rigorous uncertainty quantification for downstream tasks.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2606.09857",
+    "paper:2605.09718",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Models probability distributions, shapes, or dependencies between edges/variables to capture complex multimodal behavior and support likelihood-based generative modeling.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2606.09857",
+      "paper:2605.09718",
+      "paper:2604.11636",
+      "paper:2603.03188"
+     ]
+    },
+    {
+     "term_id": "T:density estimation",
+     "role": "Learns probability density functions or conditional distributions over features and latent variables to infer data likelihoods and represent uncertainty.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2606.09857",
+      "paper:2605.09718",
+      "paper:2604.11636",
+      "paper:2603.03188"
+     ]
+    },
+    {
+     "term_id": "T:uncertainty quantification",
+     "role": "Provides principled posterior approximations, Bayesian reasoning, or confidence metrics derived from the learned densities to assess prediction reliability.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2606.09857",
+      "paper:2605.09718",
+      "paper:2604.11636",
+      "paper:2603.03188"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Uncertainty quantification and probabilistic modeling in complex systems such as causal graphs, reduced-order models, multiscale systems, and shape spaces.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2606.09857",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   },
+   "limitation": {
+    "text": "Existing approaches often fail to capture complex dependencies between variables, lack expressive and multimodal posterior learning capabilities, or struggle to provide principled uncertainty quantification.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2606.09857",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are employed as expressive density estimators to model distributions and dependencies within latent or structured spaces, thereby enabling rigorous uncertainty quantification for downstream tasks.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2606.09857",
+     "paper:2605.09718",
+     "paper:2604.11636",
+     "paper:2603.03188"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining normalizing flows, density estimation, and uncertainty quantification to improve probabilistic modeling in complex systems. By using normalizing flows to learn expressive, multimodal distributions over latent or structured spaces, systems can provide rigorous uncertainty estimates. Evidence indicates applications in reduced-order models, causal discovery, and shape spaces.",
+   "evidence_ids": [
+    "dvf:15",
+    "paper:2608.04930",
+    "paper:2606.09857",
+    "paper:2605.09718",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified based on the available patent assignee categories, but open-source repositories and packages such as pkg:orion-ml and repo:d3-ai/orion indicate developers and researchers working on unsupervised time series anomaly detection and probabilistic machine learning systems.",
+   "evidence_ids": [
+    "dvf:15",
+    "pkg:orion-ml",
+    "repo:d3-ai/orion"
+   ]
+  },
+  "jtbd": {
+   "text": "When deploying machine learning models in complex or multiscale environments, practitioners need to perform probabilistic modeling and uncertainty quantification so that they can reliably assess prediction confidence and handle complex dependencies between variables.",
+   "evidence_ids": [
+    "dvf:15",
+    "paper:2608.04930",
+    "paper:2606.09857",
+    "paper:2605.09718",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrating normalizing flows with density estimation enables expressive multimodal posterior learning and robust uncertainty quantification, helping practitioners overcome the limitations of traditional models that fail to capture complex variable dependencies.",
+   "evidence_ids": [
+    "dvf:15",
+    "paper:2608.04930",
+    "paper:2606.09857",
+    "paper:2605.09718",
+    "paper:2604.11636",
+    "paper:2603.03188"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence in the bundle. We assume that organizations building probabilistic modeling solutions will pay for a normalizing flow-based uncertainty quantification framework.",
+   "evidence_ids": [
+    "dvf:15"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "To test the viability and price acceptance of the framework, we will conduct customer interviews and a price acceptance test with a proposed target of 10 industry practitioners. We will present conceptual architectures combining density estimation and normalizing flows to gauge willingness to pay.",
+   "evidence_ids": [
+    "dvf:15"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Success is defined as achieving a proposed threshold of 40 percent positive willingness-to-pay responses during customer interviews and price acceptance tests.",
+   "evidence_ids": [
+    "dvf:15"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The opportunity should be killed if fewer than a proposed threshold of 15 percent of interviewed practitioners express willingness to pay for uncertainty quantification tools.",
+    "evidence_ids": [
+     "dvf:15"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:orion-ml",
+     "use": "Used to support unsupervised anomaly detection pipelines and time-series evaluation workflows.",
+     "evidence_ids": [
+      "pkg:orion-ml"
+     ],
+     "version": "0.7.1"
+    },
+    {
+     "id": "repo:apple/ml-tarflow",
+     "use": "Used to provide normalizing flow architectures and baseline transformation implementations.",
+     "evidence_ids": [
+      "repo:apple/ml-tarflow"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Develop a unified API layer that binds conditional density estimators to downstream uncertainty quantification metrics, as motivated by dvf:15 and paper:2608.04930.",
+     "evidence_ids": [
+      "dvf:15",
+      "paper:2608.04930"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

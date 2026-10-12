@@ -1,0 +1,226 @@
+{
+ "rank": 5,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:proximal policy optimization",
+    "role": "Serves as the underlying policy optimization algorithm within an actor-critic model to generate adaptive traffic signal phase durations or control policies.",
+    "evidence_ids": [
+     "paper:2607.03703",
+     "paper:2606.22108",
+     "paper:2509.21745",
+     "patent:11783702"
+    ]
+   },
+   {
+    "term_id": "T:deep reinforcement learning",
+    "role": "Provides the broader learning framework to model complex urban traffic environments and optimize sequential decision-making for intersection control.",
+    "evidence_ids": [
+     "paper:2607.03703",
+     "paper:2605.29693",
+     "paper:2512.04653"
+    ]
+   },
+   {
+    "term_id": "T:traffic signal control",
+    "role": "Acts as the target application domain where intelligent agents dynamically adjust signal timings and phases to manage urban traffic.",
+    "evidence_ids": [
+     "paper:2607.03703",
+     "paper:2606.22108",
+     "paper:2605.29693",
+     "patent:11783702"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Adaptive traffic signal control for urban intersections and road networks to manage dynamic traffic flow.",
+   "evidence_ids": [
+    "paper:2607.03703",
+    "paper:2606.22108",
+    "paper:2605.29693",
+    "paper:2509.21745"
+   ]
+  },
+  "limitation": {
+   "text": "Traditional fixed-time or actuated traffic signal control systems fail to adapt to dynamic traffic conditions, while existing deep reinforcement learning approaches can suffer from short-sighted or unstable policies.",
+   "evidence_ids": [
+    "paper:2605.29693",
+    "paper:2509.21745"
+   ]
+  },
+  "combination": {
+   "text": "Deep reinforcement learning leverages Proximal Policy Optimization to update policy networks that dynamically allocate green-phase durations and minimize queue lengths or delays based on real-time traffic observations.",
+   "evidence_ids": [
+    "paper:2607.03703",
+    "paper:2606.22108",
+    "paper:2509.21745",
+    "patent:11783702"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:proximal policy optimization",
+     "role": "Serves as the underlying policy optimization algorithm within an actor-critic model to generate adaptive traffic signal phase durations or control policies.",
+     "evidence_ids": [
+      "paper:2607.03703",
+      "paper:2606.22108",
+      "paper:2509.21745",
+      "patent:11783702"
+     ]
+    },
+    {
+     "term_id": "T:deep reinforcement learning",
+     "role": "Provides the broader learning framework to model complex urban traffic environments and optimize sequential decision-making for intersection control.",
+     "evidence_ids": [
+      "paper:2607.03703",
+      "paper:2605.29693",
+      "paper:2512.04653"
+     ]
+    },
+    {
+     "term_id": "T:traffic signal control",
+     "role": "Acts as the target application domain where intelligent agents dynamically adjust signal timings and phases to manage urban traffic.",
+     "evidence_ids": [
+      "paper:2607.03703",
+      "paper:2606.22108",
+      "paper:2605.29693",
+      "patent:11783702"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Adaptive traffic signal control for urban intersections and road networks to manage dynamic traffic flow.",
+    "evidence_ids": [
+     "paper:2607.03703",
+     "paper:2606.22108",
+     "paper:2605.29693",
+     "paper:2509.21745"
+    ]
+   },
+   "limitation": {
+    "text": "Traditional fixed-time or actuated traffic signal control systems fail to adapt to dynamic traffic conditions, while existing deep reinforcement learning approaches can suffer from short-sighted or unstable policies.",
+    "evidence_ids": [
+     "paper:2605.29693",
+     "paper:2509.21745"
+    ]
+   },
+   "combination": {
+    "text": "Deep reinforcement learning leverages Proximal Policy Optimization to update policy networks that dynamically allocate green-phase durations and minimize queue lengths or delays based on real-time traffic observations.",
+    "evidence_ids": [
+     "paper:2607.03703",
+     "paper:2606.22108",
+     "paper:2509.21745",
+     "patent:11783702"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing combines deep reinforcement learning and proximal policy optimization for adaptive traffic signal control. The approach dynamically adjusts signal phase durations and timing based on real-time traffic observations to mitigate congestion and reduce delays. Patent and paper evidence indicate strong potential for operational deployment in smart city transportation networks.",
+   "evidence_ids": [
+    "paper:2607.03703",
+    "paper:2606.22108",
+    "paper:2509.21745",
+    "patent:11783702"
+   ]
+  },
+  "target_user": {
+   "text": "The target user includes commercial entities, corporate patent assignees, and municipal transportation authorities managing urban infrastructure and traffic signal operations.",
+   "evidence_ids": [
+    "patent:11783702",
+    "patent:20230376781"
+   ]
+  },
+  "jtbd": {
+   "text": "When urban traffic conditions fluctuate unpredictably throughout the day, traffic engineers and city planners want to automatically adapt signal phases in real time so that vehicle queues and travel delays are minimized without requiring manual schedule updates.",
+   "evidence_ids": [
+    "paper:2606.22108",
+    "paper:2509.21745",
+    "patent:11783702"
+   ]
+  },
+  "value_prop": {
+   "text": "By integrating proximal policy optimization with deep reinforcement learning for traffic signal control, cities can achieve more stable policy updates and lower average vehicle delays compared to traditional fixed-time or actuated controllers.",
+   "evidence_ids": [
+    "paper:2606.22108",
+    "paper:2605.29693",
+    "patent:11783702"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Municipal transportation agencies will actively purchase and deploy machine learning-based traffic signal controllers despite existing reliance on conventional fixed-time hardware, as reflected by the lowest DVF score on axis D (desirability score: 2.0).",
+   "evidence_ids": [
+    "dvf:5"
+   ],
+   "axis": "D",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Design a demand landing page outlining adaptive traffic signal control benefits alongside problem interviews with municipal traffic engineers to test the riskiest assumption.",
+   "evidence_ids": [
+    "dvf:5"
+   ],
+   "type": "demand landing page and problem interviews"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: at least 30 percent of interviewed traffic engineers express intent to pilot the adaptive control software, driven by desirability score 2.0 and feasibility score 3.0.",
+   "evidence_ids": [
+    "dvf:5"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: fewer than 5 percent of contacted municipal stakeholders agree to a follow-up problem interview, reflecting insufficient market interest under desirability score 2.0.",
+    "evidence_ids": [
+     "dvf:5"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:cpwan/rlor",
+     "use": "Provides reinforcement learning implementations for operations research problems using OpenAI Gym and CleanRL to support policy training.",
+     "evidence_ids": [
+      "repo:cpwan/rlor"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:diambra-arena",
+     "use": "Serves as an experimental reinforcement learning platform environment template for testing agent interactions.",
+     "evidence_ids": [
+      "pkg:diambra-arena"
+     ],
+     "version": "2.2.7"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A microscopic traffic simulation environment connector that integrates real-time intersection sensor feeds with PPO policy updates, proposed threshold: handling 100 percent of state vector inputs from urban road networks (citing paper:2606.22108 and patent:11783702).",
+     "evidence_ids": [
+      "paper:2606.22108",
+      "patent:11783702"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

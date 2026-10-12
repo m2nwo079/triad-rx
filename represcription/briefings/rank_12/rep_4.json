@@ -1,0 +1,205 @@
+{
+ "rank": 12,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:global local attention",
+    "role": "Captures multi-scale local and global dependencies or feature representations within the architecture.",
+    "evidence_ids": [
+     "paper:2509.23610",
+     "paper:2509.20701"
+    ]
+   },
+   {
+    "term_id": "M:transformer",
+    "role": "Serves as the foundational neural architecture providing the underlying attention and processing layers.",
+    "evidence_ids": [
+     "paper:2509.20701"
+    ]
+   },
+   {
+    "term_id": "T:decoder",
+    "role": "Acts as part of the separation or generation separator to process features and generate outputs.",
+    "evidence_ids": [
+     "paper:2509.23610"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Audio-visual speech separation or related sequence processing tasks.",
+   "evidence_ids": [
+    "paper:2509.23610"
+   ]
+  },
+  "limitation": {
+   "text": "High parameter counts and high computational costs in existing models.",
+   "evidence_ids": [
+    "paper:2509.23610"
+   ]
+  },
+  "combination": {
+   "text": "A lightweight encoder-decoder separator incorporates global-local attention blocks in each layer to efficiently capture multi-scale dependencies while reducing computational costs.",
+   "evidence_ids": [
+    "paper:2509.23610"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:global local attention",
+     "role": "Captures multi-scale local and global dependencies or feature representations within the architecture.",
+     "evidence_ids": [
+      "paper:2509.23610",
+      "paper:2509.20701"
+     ]
+    },
+    {
+     "term_id": "M:transformer",
+     "role": "Serves as the foundational neural architecture providing the underlying attention and processing layers.",
+     "evidence_ids": [
+      "paper:2509.20701"
+     ]
+    },
+    {
+     "term_id": "T:decoder",
+     "role": "Acts as part of the separation or generation separator to process features and generate outputs.",
+     "evidence_ids": [
+      "paper:2509.23610"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Audio-visual speech separation or related sequence processing tasks.",
+    "evidence_ids": [
+     "paper:2509.23610"
+    ]
+   },
+   "limitation": {
+    "text": "High parameter counts and high computational costs in existing models.",
+    "evidence_ids": [
+     "paper:2509.23610"
+    ]
+   },
+   "combination": {
+    "text": "A lightweight encoder-decoder separator incorporates global-local attention blocks in each layer to efficiently capture multi-scale dependencies while reducing computational costs.",
+    "evidence_ids": [
+     "paper:2509.23610"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining global local attention, transformer architectures, and decoder structures for audio-visual speech separation and sequence processing. Drawing on evidence of high parameter counts and computational costs in existing models, the approach integrates global-local attention blocks into each layer of a lightweight encoder-decoder separator. According to the DVF assessment, this combination receives a feasibility score of 2.0, a desirability score of 5.0, and a viability score of 4.0, with feasibility identified as the riskiest axis.",
+   "evidence_ids": [
+    "dvf:12",
+    "paper:2509.23610",
+    "paper:2509.20701"
+   ]
+  },
+  "target_user": {
+   "text": "The target users are unverified based on the available bundle evidence.",
+   "evidence_ids": [
+    "paper:2509.23610"
+   ]
+  },
+  "jtbd": {
+   "text": "The job to be done is to perform audio-visual speech separation or related sequence processing tasks while reducing computational costs and parameter counts.",
+   "evidence_ids": [
+    "paper:2509.23610"
+   ]
+  },
+  "value_prop": {
+   "text": "This combination provides an efficient, lightweight encoder-decoder separator that incorporates global-local attention blocks in each layer to capture multi-scale dependencies with lower computational overhead.",
+   "evidence_ids": [
+    "paper:2509.23610"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption, driven by feasibility axis score 2.0, is that integrating global-local attention into every layer of a lightweight decoder architecture can be trained stably without exceeding target hardware latency or memory limits.",
+   "evidence_ids": [
+    "dvf:12",
+    "paper:2509.23610"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "As a technical proof of concept from existing packages, the MVP will build a small-scale encoder-decoder script using open-source libraries to measure inference latency and parameter size against a baseline.",
+   "evidence_ids": [
+    "dvf:12",
+    "pkg:transformers",
+    "repo:usefulsensors/moonshine"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "Success will be measured by achieving a proposed threshold: greater than 50 percent reduction in parameters and a proposed threshold: over 2x reduction in MACs compared to baseline architectures while maintaining separation quality.",
+   "evidence_ids": [
+    "dvf:12",
+    "paper:2509.23610"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The approach is killed if the prototype exceeds a proposed threshold: 50 milliseconds of processing latency per frame or fails to demonstrate any MAC reduction.",
+    "evidence_ids": [
+     "dvf:12",
+     "paper:2509.23610"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:transformers",
+     "use": "Used to load foundational transformer blocks and base attention mechanisms.",
+     "evidence_ids": [
+      "pkg:transformers"
+     ],
+     "version": "5.17.0"
+    },
+    {
+     "id": "repo:usefulsensors/moonshine",
+     "use": "Used to supply low-latency speech processing components for voice agents and interfaces.",
+     "evidence_ids": [
+      "repo:usefulsensors/moonshine"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:alibaba-damo-academy/funasr",
+     "use": "Used to provide speech recognition and separation pipeline toolkits for experimental evaluation.",
+     "evidence_ids": [
+      "repo:alibaba-damo-academy/funasr"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A custom global-local attention block wrapper tailored for integration into each layer of the lightweight decoder stack.",
+     "evidence_ids": [
+      "dvf:12",
+      "paper:2509.23610"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

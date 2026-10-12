@@ -1,0 +1,211 @@
+{
+ "rank": 17,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:direct preference optimization",
+    "role": "Serves as an alignment and fine-tuning technique utilizing preference pairs to guide language models toward preferred behaviors and functional requirements without requiring a separate reward model.",
+    "evidence_ids": [
+     "paper:2603.29292",
+     "paper:2606.28998"
+    ]
+   },
+   {
+    "term_id": "T:code generation",
+    "role": "Represents the target generation domain where models are optimized to produce executable and correct code.",
+    "evidence_ids": [
+     "paper:2603.29292",
+     "paper:2606.28998"
+    ]
+   },
+   {
+    "term_id": "T:instruction following",
+    "role": "Provides the broader capability framework and set of constraints that guide how models process prompts and structured inputs during generation tasks.",
+    "evidence_ids": [
+     "paper:2609.13916",
+     "paper:2609.21094"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Code generation guided by instruction-following constraints and preference optimization.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2606.28998"
+   ]
+  },
+  "limitation": {
+   "text": "Improving code generation models to meet both functional and stylistic requirements typically relies on costly external resources or noisy self-generated supervision without adequate consensus weighting.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2606.28998"
+   ]
+  },
+  "combination": {
+   "text": "Direct preference optimization is applied to code generation and instruction-following tasks by weighting preference pairs using behavioral consensus, mitigating noisy supervision and aligning the model to satisfy functional requirements.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2606.28998"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:direct preference optimization",
+     "role": "Serves as an alignment and fine-tuning technique utilizing preference pairs to guide language models toward preferred behaviors and functional requirements without requiring a separate reward model.",
+     "evidence_ids": [
+      "paper:2603.29292",
+      "paper:2606.28998"
+     ]
+    },
+    {
+     "term_id": "T:code generation",
+     "role": "Represents the target generation domain where models are optimized to produce executable and correct code.",
+     "evidence_ids": [
+      "paper:2603.29292",
+      "paper:2606.28998"
+     ]
+    },
+    {
+     "term_id": "T:instruction following",
+     "role": "Provides the broader capability framework and set of constraints that guide how models process prompts and structured inputs during generation tasks.",
+     "evidence_ids": [
+      "paper:2609.13916",
+      "paper:2609.21094"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Code generation guided by instruction-following constraints and preference optimization.",
+    "evidence_ids": [
+     "paper:2603.29292",
+     "paper:2606.28998"
+    ]
+   },
+   "limitation": {
+    "text": "Improving code generation models to meet both functional and stylistic requirements typically relies on costly external resources or noisy self-generated supervision without adequate consensus weighting.",
+    "evidence_ids": [
+     "paper:2603.29292",
+     "paper:2606.28998"
+    ]
+   },
+   "combination": {
+    "text": "Direct preference optimization is applied to code generation and instruction-following tasks by weighting preference pairs using behavioral consensus, mitigating noisy supervision and aligning the model to satisfy functional requirements.",
+    "evidence_ids": [
+     "paper:2603.29292",
+     "paper:2606.28998"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores the integration of direct preference optimization, code generation, and instruction-following tasks. By utilizing consensus-driven preference fine-tuning, models can better align with functional and stylistic requirements while mitigating noisy self-generated supervision. The approach addresses key limitations in existing alignment pipelines for code generation tasks.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2606.28998"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as the evidence bundle contains no explicit patent assignee categories or specific user group disclosures beyond standard open-source repositories and packages.",
+   "evidence_ids": [
+    "repo:safeailab/eagle",
+    "pkg:evoeval"
+   ]
+  },
+  "jtbd": {
+   "text": "When developers work on complex software tasks, they want to align code generation models using preference optimization so that the generated code satisfies both strict functional correctness and multi-turn instruction constraints without requiring expensive external reward models.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2606.28998"
+   ]
+  },
+  "value_prop": {
+   "text": "Applying direct preference optimization weighted by behavioral consensus improves code generation and instruction-following capabilities. This eliminates the need for separate reward models while preserving general coding and reasoning performance.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2606.28998"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is that commercial viability and customer willingness to pay for this preference-optimized code generation approach exist; axis V (viability) was explicitly designated as the riskiest axis due to missing evidence in the bundle.",
+   "evidence_ids": [
+    "dvf:17"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and price acceptance tests with prospective developer tooling buyers to validate willingness to pay for preference-optimized code generation solutions, addressing the missing viability evidence designated in dvf:17.",
+   "evidence_ids": [
+    "dvf:17"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: at least 40 percent of interviewed prospective users confirm a willingness to pay for a consensus-driven code alignment tool, as motivated by dvf:17.",
+   "evidence_ids": [
+    "dvf:17"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: fewer than 15 percent of interviewed prospective users express interest in adopting or paying for the preference-optimized code generation solution, as motivated by dvf:17.",
+    "evidence_ids": [
+     "dvf:17"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:evoeval",
+     "use": "Used to evaluate the functional requirements of generated code across benchmark tasks.",
+     "evidence_ids": [
+      "paper:2606.28998"
+     ],
+     "version": "0.1.0"
+    },
+    {
+     "id": "repo:allenai/reward-bench",
+     "use": "Used as an evaluation tool to measure reward model and preference alignment performance.",
+     "evidence_ids": [
+      "repo:allenai/reward-bench"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:amd-agi/instella-moe",
+     "use": "Used as a fully open foundation Mixture-of-Experts language model backbone for efficient training and inference.",
+     "evidence_ids": [
+      "repo:amd-agi/instella-moe"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A consensus-driven direct preference optimization pipeline that weights preference pairs by behavioral entropy to filter noisy supervision, as motivated by paper:2603.29292.",
+     "evidence_ids": [
+      "paper:2603.29292"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

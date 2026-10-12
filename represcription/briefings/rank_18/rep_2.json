@@ -1,0 +1,198 @@
+{
+ "rank": 18,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Serves as a probabilistic surrogate model or kernel-based regression framework that provides principled uncertainty bounds.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   {
+    "term_id": "M:pc",
+    "role": "Acts as a dimensionality reduction technique (such as functional principal component analysis) to reduce the dimensionality of complex, high-dimensional target responses.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   {
+    "term_id": "T:uncertainty quantification",
+    "role": "The target task being solved, specifically inverse uncertainty quantification for time-dependent responses and physical model parameters.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Inverse uncertainty quantification for time-dependent transient experimental responses and physical model parameters.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "limitation": {
+   "text": "High-dimensional or infinite-dimensional transient responses are computationally expensive and difficult to model directly within inference processes like Markov Chain Monte Carlo sampling.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "combination": {
+   "text": "Functional principal component analysis is used to reduce the dimensionality of time-dependent responses while preserving profile information, after which deep neural networks or related surrogate approaches trained on the resulting principal component scores enable efficient uncertainty quantification.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Serves as a probabilistic surrogate model or kernel-based regression framework that provides principled uncertainty bounds.",
+     "evidence_ids": [
+      "paper:2307.05592"
+     ]
+    },
+    {
+     "term_id": "M:pc",
+     "role": "Acts as a dimensionality reduction technique (such as functional principal component analysis) to reduce the dimensionality of complex, high-dimensional target responses.",
+     "evidence_ids": [
+      "paper:2307.05592"
+     ]
+    },
+    {
+     "term_id": "T:uncertainty quantification",
+     "role": "The target task being solved, specifically inverse uncertainty quantification for time-dependent responses and physical model parameters.",
+     "evidence_ids": [
+      "paper:2307.05592"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Inverse uncertainty quantification for time-dependent transient experimental responses and physical model parameters.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   "limitation": {
+    "text": "High-dimensional or infinite-dimensional transient responses are computationally expensive and difficult to model directly within inference processes like Markov Chain Monte Carlo sampling.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   "combination": {
+    "text": "Functional principal component analysis is used to reduce the dimensionality of time-dependent responses while preserving profile information, after which deep neural networks or related surrogate approaches trained on the resulting principal component scores enable efficient uncertainty quantification.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining Gaussian processes, principal component analysis, and uncertainty quantification to handle time-dependent transient responses. Specifically, functional principal component analysis reduces high-dimensional responses, enabling surrogate-based inverse uncertainty quantification as demonstrated in paper:2307.05592.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "target_user": {
+   "text": "The target users are unverified, as the evidence bundle contains no patent assignee categories, though open-source repositories and packages such as repo:google/uncertainty-baselines and pkg:netcal indicate machine learning practitioners and researchers working on probabilistic modeling and calibration.",
+   "evidence_ids": [
+    "repo:google/uncertainty-baselines",
+    "pkg:netcal"
+   ]
+  },
+  "jtbd": {
+   "text": "Perform inverse uncertainty quantification for time-dependent transient experimental responses and physical model parameters while mitigating the high computational cost of direct inference.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "value_prop": {
+   "text": "Reduces the dimensionality of complex transient simulation outputs using functional principal component analysis while preserving temporal profiles, thereby making downstream Bayesian inference and uncertainty quantification efficient.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated as axis V (viability) due to missing evidence in the bundle, specifically whether commercial customers will pay for a software package combining functional principal components and Gaussian process surrogate models for transient uncertainty quantification.",
+   "evidence_ids": [
+    "dvf:18",
+    "paper:2307.05592"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with a proposed threshold of 500 dollars per month for a pilot license, targeting industrial engineering teams to test viability and willingness to pay.",
+   "evidence_ids": [
+    "dvf:18",
+    "paper:2307.05592"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "A successful validation outcome is defined as a proposed threshold of at least 40 percent of interviewed organizations confirming budget availability and willingness to pay the pilot price.",
+   "evidence_ids": [
+    "dvf:18"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The opportunity should be killed if fewer than a proposed threshold of 10 percent of interviewed prospective users express willingness to pay for the proposed software capability.",
+    "evidence_ids": [
+     "dvf:18"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:google/uncertainty-baselines",
+     "use": "Used to provide baseline implementations of standard uncertainty quantification methods for evaluation.",
+     "evidence_ids": [
+      "repo:google/uncertainty-baselines"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:netcal",
+     "use": "Used for evaluating and calibrating probabilistic uncertainty estimates generated by the surrogate models.",
+     "evidence_ids": [
+      "pkg:netcal"
+     ],
+     "version": "1.4.0"
+    },
+    {
+     "id": "pkg:dgpsi",
+     "use": "Used to handle emulation and calibration for complex computer models with deep Gaussian processes.",
+     "evidence_ids": [
+      "pkg:dgpsi"
+     ],
+     "version": "2.6.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build a modular pipeline that integrates functional principal component analysis for time-series alignment and dimensionality reduction with Gaussian process surrogate training for inverse uncertainty quantification.",
+     "evidence_ids": [
+      "paper:2307.05592"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

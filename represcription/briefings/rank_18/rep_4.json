@@ -1,0 +1,188 @@
+{
+ "rank": 18,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Acts as a probabilistic surrogate model or regressor that can be combined with dimensionality reduction or feature spaces to capture complex response surfaces and provide uncertainty estimates.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   {
+    "term_id": "M:pc",
+    "role": "Serves as principal component analysis (or principal components) to reduce the dimensionality of time-dependent or high-dimensional responses while preserving profile information.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   {
+    "term_id": "T:uncertainty quantification",
+    "role": "The overarching task of inversely quantifying model input and prediction uncertainties based on experimental data or transient responses.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Inverse uncertainty quantification for time-dependent or high-dimensional transient responses.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "limitation": {
+   "text": "High-dimensional or infinite-dimensional responses (such as transient time series profiles) make inverse uncertainty quantification computationally prohibitive and difficult to represent precisely.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "combination": {
+   "text": "Principal component analysis is used to reduce the dimensionality of time-dependent quantities of interest while preserving their profiles, and the resulting principal component scores are then used to build surrogate models (such as deep neural networks or Gaussian processes) to reduce computational costs during sampling tasks like Markov Chain Monte Carlo for uncertainty quantification.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Acts as a probabilistic surrogate model or regressor that can be combined with dimensionality reduction or feature spaces to capture complex response surfaces and provide uncertainty estimates.",
+     "evidence_ids": [
+      "paper:2307.05592"
+     ]
+    },
+    {
+     "term_id": "M:pc",
+     "role": "Serves as principal component analysis (or principal components) to reduce the dimensionality of time-dependent or high-dimensional responses while preserving profile information.",
+     "evidence_ids": [
+      "paper:2307.05592"
+     ]
+    },
+    {
+     "term_id": "T:uncertainty quantification",
+     "role": "The overarching task of inversely quantifying model input and prediction uncertainties based on experimental data or transient responses.",
+     "evidence_ids": [
+      "paper:2307.05592"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Inverse uncertainty quantification for time-dependent or high-dimensional transient responses.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   "limitation": {
+    "text": "High-dimensional or infinite-dimensional responses (such as transient time series profiles) make inverse uncertainty quantification computationally prohibitive and difficult to represent precisely.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   "combination": {
+    "text": "Principal component analysis is used to reduce the dimensionality of time-dependent quantities of interest while preserving their profiles, and the resulting principal component scores are then used to build surrogate models (such as deep neural networks or Gaussian processes) to reduce computational costs during sampling tasks like Markov Chain Monte Carlo for uncertainty quantification.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining Gaussian processes, principal components, and uncertainty quantification to tackle inverse uncertainty quantification for time-dependent or high-dimensional transient responses. As documented in paper:2307.05592, high-dimensional responses make inverse uncertainty quantification computationally prohibitive, but dimensionality reduction paired with surrogate models can streamline the process. The proposed approach uses principal component analysis to reduce response dimensions while preserving profiles, enabling efficient surrogate modeling for tasks like Markov Chain Monte Carlo sampling.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified due to a lack of explicit patent assignee categories, repositories, or packages directly indicating user profiles in the bundle.",
+   "evidence_ids": [
+    "dvf:18"
+   ]
+  },
+  "jtbd": {
+   "text": "When performing inverse uncertainty quantification on time-dependent or high-dimensional transient responses, researchers and engineers want to reduce computational overhead without losing critical profile information, so that they can accurately quantify model input uncertainties based on experimental data.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "value_prop": {
+   "text": "By applying principal component analysis to reduce the dimensionality of time-dependent quantities of interest while preserving profile information, the method enables surrogate models to efficiently support sampling tasks like Markov Chain Monte Carlo for uncertainty quantification.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated on axis V (viability) due to missing evidence in the bundle, specifically that customers are willing to pay for an integrated software solution combining Gaussian processes, principal components, and uncertainty quantification.",
+   "evidence_ids": [
+    "dvf:18"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "To test the viability and price acceptance of the proposed workflow, conduct customer interviews combined with price acceptance tests targeting potential users of high-dimensional uncertainty quantification tools, proposing a price threshold of USD 500 per month based on dvf:18.",
+   "evidence_ids": [
+    "dvf:18"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "A proposed threshold of 40 percent of interviewed prospective users expressing willingness to pay for the workflow during price acceptance testing, as motivated by dvf:18.",
+   "evidence_ids": [
+    "dvf:18"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed prospects confirming a pressing need or willingness to pay during customer interviews, as motivated by dvf:18.",
+    "evidence_ids": [
+     "dvf:18"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:google/uncertainty-baselines",
+     "use": "To provide high-quality implementations of baseline methods for uncertainty quantification.",
+     "evidence_ids": [
+      "repo:google/uncertainty-baselines"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:netcal",
+     "use": "To evaluate and calibrate uncertainty estimates.",
+     "evidence_ids": [
+      "pkg:netcal"
+     ],
+     "version": "1.4.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized pipeline integrating functional principal component analysis with Gaussian process surrogates for transient experimental data, as motivated by paper:2307.05592 and dvf:18.",
+     "evidence_ids": [
+      "paper:2307.05592",
+      "dvf:18"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

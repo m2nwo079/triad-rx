@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "step": "evidence_pwc_links",
+    "created": "2026-10-11",
+    "git_commit": "8dcaf6387b1af0980d41ee927f327630d5cf7510",
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "scope": "build-window papers matching at least one DVF-population term",
+    "links_sha256": "c845ff642112a345f6271bf954d007c6698088d7de525f3f8d5f7d975f142c76",
+    "hypergraph_sha256": "3c657f0968fba1efa1a1ffa2b73e5f5da6f8290efdf314fd8dc1a7fd9af15147",
+    "pair_evidence_sha256": "e679708f11e466665018cb3b40255f167b918bdd71ba2b96f87a28f02b9fe892",
+    "pwc_links_parquet_sha256": "e9fd17157790a827fabb1290c08286579bb103e10f1767d0a8d67d71ed43a7ba"
+  },
+  "stats": {
+    "dvf_terms": 152,
+    "scope_papers": 265352,
+    "pair_evidence_papers": 18013,
+    "snapshot_links": 300161,
+    "links_to_scope_papers": 69902,
+    "non_github_links_dropped": 385,
+    "github_links": 69426,
+    "distinct_repos": 62162,
+    "linked_scope_papers": 60261,
+    "linked_pair_evidence_papers": 4025,
+    "latest_linked_paper_date": "2025-07-21T14:03:08"
+  }
+}

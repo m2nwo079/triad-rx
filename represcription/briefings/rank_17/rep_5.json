@@ -1,0 +1,192 @@
+{
+ "rank": 17,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:direct preference optimization",
+    "role": "Serves as an alignment technique (such as consensus-driven direct preference optimization) to fine-tune models using preference pairs, avoiding the need for external reward models.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   },
+   {
+    "term_id": "T:code generation",
+    "role": "Represents the generation task where large language models are expected to produce executable and correct code.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   },
+   {
+    "term_id": "T:instruction following",
+    "role": "Captures the underlying behavior and constraints that language models must follow when carrying out programming and user instructions.",
+    "evidence_ids": [
+     "paper:2609.13916"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets code generation tasks where models must improve their functional program outputs and adhere to instructions.",
+   "evidence_ids": [
+    "paper:2603.29292"
+   ]
+  },
+  "limitation": {
+   "text": "Improving code generation typically relies on costly external resources like superior teachers or reliable test oracles, and preference-based fine-tuning can be adversely affected by noisy self-generated supervision.",
+   "evidence_ids": [
+    "paper:2603.29292"
+   ]
+  },
+  "combination": {
+   "text": "Direct preference optimization is combined with code generation and instruction-following contexts by weighting preference pairs using behavioral consensus, mitigating noisy supervision and enabling self-improvement without external oracles.",
+   "evidence_ids": [
+    "paper:2603.29292"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:direct preference optimization",
+     "role": "Serves as an alignment technique (such as consensus-driven direct preference optimization) to fine-tune models using preference pairs, avoiding the need for external reward models.",
+     "evidence_ids": [
+      "paper:2603.29292"
+     ]
+    },
+    {
+     "term_id": "T:code generation",
+     "role": "Represents the generation task where large language models are expected to produce executable and correct code.",
+     "evidence_ids": [
+      "paper:2603.29292"
+     ]
+    },
+    {
+     "term_id": "T:instruction following",
+     "role": "Captures the underlying behavior and constraints that language models must follow when carrying out programming and user instructions.",
+     "evidence_ids": [
+      "paper:2609.13916"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets code generation tasks where models must improve their functional program outputs and adhere to instructions.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   },
+   "limitation": {
+    "text": "Improving code generation typically relies on costly external resources like superior teachers or reliable test oracles, and preference-based fine-tuning can be adversely affected by noisy self-generated supervision.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   },
+   "combination": {
+    "text": "Direct preference optimization is combined with code generation and instruction-following contexts by weighting preference pairs using behavioral consensus, mitigating noisy supervision and enabling self-improvement without external oracles.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination merges direct preference optimization, code generation, and instruction following to enable self-improving code generation without relying on external test oracles or superior teachers. It utilizes behavioral consensus to weight preference pairs, mitigating the impact of noisy self-generated supervision during fine-tuning.",
+   "evidence_ids": [
+    "paper:2603.29292"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as the evidence bundle contains no patent assignee categories, repositories, or packages that specify end-user demographics.",
+   "evidence_ids": [
+    "repo:allenai/reward-bench",
+    "repo:amd-agi/instella-moe",
+    "repo:safeailab/eagle",
+    "repo:wangrongsheng/caregpt",
+    "repo:xingchen-agi/xing4.0-29b-a4b"
+   ]
+  },
+  "jtbd": {
+   "text": "When developers need to improve language model code generation and instruction adherence, they want to fine-tune models using consensus-driven preference optimization so that they can avoid costly external test oracles and noisy self-generated supervision.",
+   "evidence_ids": [
+    "paper:2603.29292"
+   ]
+  },
+  "value_prop": {
+   "text": "This approach enables code language models to self-improve on instruction-following and code generation tasks without requiring access to superior teacher models or external test oracles.",
+   "evidence_ids": [
+    "paper:2603.29292"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence in the bundle. We assume that organizations will pay for a consensus-driven direct preference optimization service for code generation.",
+   "evidence_ids": [
+    "dvf:17"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Run customer interviews and a price acceptance test with engineering teams to validate willingness to pay for a consensus-driven code alignment tool.",
+   "evidence_ids": [
+    "dvf:17"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness-to-pay responses during price acceptance interviews, motivated by dvf:17.",
+   "evidence_ids": [
+    "dvf:17"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed engineering leads express willingness to pay for the proposed code alignment pipeline, as motivated by dvf:17.",
+    "evidence_ids": [
+     "dvf:17"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:allenai/reward-bench",
+     "use": "Used as an evaluation tool for testing reward models and alignment performance.",
+     "evidence_ids": [
+      "repo:allenai/reward-bench"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:evoeval",
+     "use": "Used to evaluate functional requirements and code generation performance.",
+     "evidence_ids": [
+      "pkg:evoeval",
+      "paper:2606.28998"
+     ],
+     "version": "0.1.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build a consensus-driven direct preference optimization module that weights preference pairs by behavioral consensus, as described in paper:2603.29292.",
+     "evidence_ids": [
+      "paper:2603.29292"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "step": "evidence_repo_stars",
+    "created": "2026-10-12",
+    "git_commit": "9767ffc0f37316f79b8f368eaaf65708c59ad1f1",
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "window_days": [
+      "2025-09-24",
+      "2026-09-24"
+    ],
+    "window_rule": "start < day <= cutoff, UTC dates; GitHub day boundaries may not align with UTC",
+    "api_version": "2026-03-10",
+    "settings": {
+      "patent_window": "build_window",
+      "repo_unit": "pair_evidence_papers",
+      "readme_max_arxiv_ids": 10,
+      "star_window_days": 365,
+      "star_aggregate": "sum",
+      "package_link": "pypi_metadata_urls",
+      "download_growth": "half_over_half",
+      "growth_smoothing": 1,
+      "download_half_weeks": 12
+    },
+    "fetched_from": "2026-10-11T23:06:07+00:00",
+    "fetched_to": "2026-10-12T05:38:09+00:00",
+    "pwc_links_sha256": "e9fd17157790a827fabb1290c08286579bb103e10f1767d0a8d67d71ed43a7ba",
+    "readme_links_sha256": "483ca5050eae187e461f8d32ffd0b0f0c71b1b0585b95e2612f2cb1214226d6f",
+    "repo_stars_parquet_sha256": "429c79170bc79a37da21bfd384d0b39020811636f92166253803149b9404bce4"
+  },
+  "stats": {
+    "repositories": 7300,
+    "from_pwc": 4662,
+    "from_readme": 2642,
+    "in_both": 4,
+    "readme_list_repos_excluded": 383,
+    "fetched_ok": 7267,
+    "unavailable": 33,
+    "unavailable_status": {
+      "404": 33
+    },
+    "zero_stars_in_window": 2558
+  }
+}

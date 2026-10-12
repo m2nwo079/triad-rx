@@ -1,0 +1,223 @@
+{
+ "rank": 3,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Parametrizes flexible conditional distributions or transition densities to represent complex probability distributions in a tractable way.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2606.04324"
+    ]
+   },
+   {
+    "term_id": "T:bayesian inference",
+    "role": "Provides the overall statistical framework for parameter estimation, quantifying uncertainty, and posterior sampling.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2606.04324"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Serves as the underlying predictive modeling task or objective (e.g., via regression loss or generalized linear models) whose parameters or outcomes are modeled.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2608.05557"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Bayesian inference and posterior estimation for hierarchical or complex regression and generalized linear mixed-effects models.",
+   "evidence_ids": [
+    "paper:2609.24422"
+   ]
+  },
+  "limitation": {
+   "text": "Traditional Bayesian inference using MCMC or NUTS is slow, computationally expensive, and must restart from scratch for every new dataset or model configuration.",
+   "evidence_ids": [
+    "paper:2609.24422"
+   ]
+  },
+  "combination": {
+   "text": "Conditional normalizing flows are integrated with Bayesian inference to model complex hierarchical posterior distributions, while regression tasks and structured models provide the functional relationships and losses for training. This combination enables prior-amortized, tuning-free Bayesian inference that is orders of magnitude faster than traditional sampling methods.",
+   "evidence_ids": [
+    "paper:2609.24422"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Parametrizes flexible conditional distributions or transition densities to represent complex probability distributions in a tractable way.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2606.04324"
+     ]
+    },
+    {
+     "term_id": "T:bayesian inference",
+     "role": "Provides the overall statistical framework for parameter estimation, quantifying uncertainty, and posterior sampling.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2606.04324"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Serves as the underlying predictive modeling task or objective (e.g., via regression loss or generalized linear models) whose parameters or outcomes are modeled.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2608.05557"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Bayesian inference and posterior estimation for hierarchical or complex regression and generalized linear mixed-effects models.",
+    "evidence_ids": [
+     "paper:2609.24422"
+    ]
+   },
+   "limitation": {
+    "text": "Traditional Bayesian inference using MCMC or NUTS is slow, computationally expensive, and must restart from scratch for every new dataset or model configuration.",
+    "evidence_ids": [
+     "paper:2609.24422"
+    ]
+   },
+   "combination": {
+    "text": "Conditional normalizing flows are integrated with Bayesian inference to model complex hierarchical posterior distributions, while regression tasks and structured models provide the functional relationships and losses for training. This combination enables prior-amortized, tuning-free Bayesian inference that is orders of magnitude faster than traditional sampling methods.",
+    "evidence_ids": [
+     "paper:2609.24422"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This briefing explores combining normalizing flows, Bayesian inference, and regression to achieve prior-amortized, tuning-free inference for hierarchical models. By parametrizing conditional distributions with normalizing flows within a Bayesian regression framework, the system avoids slow MCMC restarts across new datasets. Evidence shows this approach matches traditional sampling in parameter recovery while operating significantly faster.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2606.04324"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified.",
+   "evidence_ids": [
+    "dvf:3"
+   ]
+  },
+  "jtbd": {
+   "text": "When analyzing hierarchical or complex datasets, quantitative scientists need to perform posterior estimation and uncertainty quantification without incurring the massive computational delays of traditional MCMC samplers. The system solves this by delivering prior-amortized Bayesian inference that generalises zero-shot to new prior families and hyperparameters.",
+   "evidence_ids": [
+    "paper:2609.24422"
+   ]
+  },
+  "value_prop": {
+   "text": "The combined framework provides tuning-free inference that runs two to three orders of magnitude faster than standard samplers like NUTS while preserving parameter recovery and out-of-sample prediction quality. It enables robust probabilistic modeling under misspecified likelihoods and data-poor regimes.",
+   "evidence_ids": [
+    "paper:2609.24422"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The viability axis score is unverified and designated due to missing evidence (dvf:3). The riskiest assumption is that target users will pay for a specialized prior-amortized Bayesian inference library rather than relying on existing open-source MCMC tools.",
+   "evidence_ids": [
+    "dvf:3"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "To test the riskiest assumption (dvf:3), conduct customer interviews and price acceptance tests with quantitative modeling teams, presenting mock pricing tiers for a managed inference service. Measure whether at least a proposed threshold of 20 percent of interviewed teams express willingness to purchase a paid subscription for speed improvements.",
+   "evidence_ids": [
+    "dvf:3"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Success is measured by a conversion rate of at least a proposed threshold of 15 percent of interviewed prospects agreeing to participate in a paid pilot program, motivated by the speedups documented in paper:2609.24422.",
+   "evidence_ids": [
+    "dvf:3",
+    "paper:2609.24422"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The opportunity is killed if fewer than a proposed threshold of 5 percent of interviewed prospects indicate any willingness to pay for the software, as indicated by customer interviews (dvf:3).",
+    "evidence_ids": [
+     "dvf:3"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:torchcfm",
+     "use": "Used to supply conditional flow matching capabilities for amortized posterior estimation.",
+     "evidence_ids": [
+      "pkg:torchcfm",
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "pkg:xgboostlss",
+     "use": "Used to handle probabilistic modeling extensions for regression tasks.",
+     "evidence_ids": [
+      "pkg:xgboostlss",
+      "repo:statmixedml/xgboostlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:lightgbmlss",
+     "use": "Used to support flexible probabilistic regression modeling.",
+     "evidence_ids": [
+      "pkg:lightgbmlss",
+      "repo:statmixedml/lightgbmlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:margarine",
+     "use": "Used for evaluating evidence and probability densities in Bayesian workflows.",
+     "evidence_ids": [
+      "pkg:margarine"
+     ],
+     "version": "2.2.0"
+    },
+    {
+     "id": "pkg:gpry",
+     "use": "Used to assist with probabilistic optimization and regression routines.",
+     "evidence_ids": [
+      "pkg:gpry"
+     ],
+     "version": "4.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build an integration wrapper that bridges conditional normalizing flow estimators with probabilistic regression outputs to facilitate automated zero-shot inference pipelines, addressing gaps identified in dvf:3.",
+     "evidence_ids": [
+      "dvf:3",
+      "paper:2609.24422"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

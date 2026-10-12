@@ -1,0 +1,217 @@
+{
+ "rank": 8,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Models complex, non-Gaussian posterior distributions or transforms residual distributions to base distributions.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013"
+    ]
+   },
+   {
+    "term_id": "T:parameter estimation",
+    "role": "Estimates model parameters or physical states from observed or simulated data.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Provides underlying supervised learning or mapping structures within simulation-based frameworks.",
+    "evidence_ids": [
+     "paper:2608.05557"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Simulation-based parameter estimation and joint state-parameter estimation for physical or dynamic systems.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  },
+  "limitation": {
+   "text": "Traditional filtering and estimation algorithms degrade when dealing with nonlinear systems whose uncertainty follows arbitrary non-Gaussian or multi-modal distributions.",
+   "evidence_ids": [
+    "paper:2601.07013"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are integrated into parameter estimation schemes to transform complex residual or error distributions into simple base distributions, enabling end-to-end simulation-based estimation and nonlinear filtering.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Models complex, non-Gaussian posterior distributions or transforms residual distributions to base distributions.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2601.07013"
+     ]
+    },
+    {
+     "term_id": "T:parameter estimation",
+     "role": "Estimates model parameters or physical states from observed or simulated data.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2601.07013"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Provides underlying supervised learning or mapping structures within simulation-based frameworks.",
+     "evidence_ids": [
+      "paper:2608.05557"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Simulation-based parameter estimation and joint state-parameter estimation for physical or dynamic systems.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013"
+    ]
+   },
+   "limitation": {
+    "text": "Traditional filtering and estimation algorithms degrade when dealing with nonlinear systems whose uncertainty follows arbitrary non-Gaussian or multi-modal distributions.",
+    "evidence_ids": [
+     "paper:2601.07013"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are integrated into parameter estimation schemes to transform complex residual or error distributions into simple base distributions, enabling end-to-end simulation-based estimation and nonlinear filtering.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining normalizing flows, parameter estimation, and regression for simulation-based parameter estimation and joint state-parameter estimation in physical or dynamic systems. Traditional estimation approaches suffer performance degradation when handling nonlinear systems whose uncertainty follows arbitrary non-Gaussian or multi-modal distributions. The proposed combination integrates normalizing flows into parameter estimation schemes to transform complex residual or error distributions into simple base distributions, facilitating end-to-end simulation-based estimation and nonlinear filtering.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified due to a lack of patent assignee categories and user-specific descriptions in the bundle, though technical implementers can leverage provided open-source repositories and packages such as torchcfm and lightgbmlss.",
+   "evidence_ids": [
+    "pkg:torchcfm",
+    "pkg:lightgbmlss"
+   ]
+  },
+  "jtbd": {
+   "text": "When researchers and engineers model physical or dynamic systems with complex non-Gaussian uncertainties, they want to accurately estimate parameters and joint states, so that they can overcome the performance degradation of traditional filtering and estimation algorithms.",
+   "evidence_ids": [
+    "paper:2601.07013"
+   ]
+  },
+  "value_prop": {
+   "text": "By integrating normalizing flows into parameter estimation schemes, complex residual or error distributions are transformed into simple base distributions. This enables robust end-to-end simulation-based estimation and advanced nonlinear filtering for complex systems.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated due to missing evidence on axis V (viability) (score: null, missing: true) dvf:8: target users will pay for a commercial software solution integrating normalizing flows with simulation-based parameter estimation workflows.",
+   "evidence_ids": [
+    "dvf:8",
+    "paper:2607.25026"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct structured customer interviews and a price acceptance test with quantitative simulation and engineering teams to validate willingness to pay for a simulation-based parameter estimation tool, addressing the missing viability axis dvf:8.",
+   "evidence_ids": [
+    "dvf:8",
+    "paper:2607.25026"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: 40 percent of interviewed prospective users confirm a willingness to pay above a baseline subscription price during price acceptance testing, validating viability axis dvf:8.",
+   "evidence_ids": [
+    "dvf:8"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: fewer than 10 percent of interviewed prospective users express interest in purchasing or adopting the integrated simulation-based estimation tool during validation testing, confirming unviable market demand under axis V dvf:8.",
+    "evidence_ids": [
+     "dvf:8"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:torchcfm",
+     "use": "Used as a conditional flow matching library to support flow-based transformations in the estimation pipeline.",
+     "evidence_ids": [
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "pkg:lightgbmlss",
+     "use": "Provides extensions to probabilistic modeling for regression and parameter estimation tasks.",
+     "evidence_ids": [
+      "repo:statmixedml/lightgbmlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:xgboostlss",
+     "use": "Serves as an extension of XGBoost for probabilistic modeling supporting underlying regression mappings.",
+     "evidence_ids": [
+      "repo:statmixedml/xgboostlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:lf2i",
+     "use": "Provides likelihood-free or simulation-based inference components for parameter estimation tasks.",
+     "evidence_ids": [
+      "pkg:lf2i"
+     ],
+     "version": "0.3.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified wrapper component to seamlessly link normalizing flow residual transformations with probabilistic regression estimators for end-to-end simulation workflows.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2601.07013"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

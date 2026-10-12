@@ -1,0 +1,2278 @@
+{
+ "meta": {
+  "step": "evidence_pypi_downloads",
+  "created": "2026-10-12",
+  "git_commit": "54bb6eb7b6f1dc64cebc0d667bf4a3efd5aee01f",
+  "data_cutoff": "2026-09-24T17:59:54+00:00",
+  "source": "pypistats.org /api/packages/<name>/overall?mirrors=false, category without_mirrors",
+  "verdict": "6_months_pypistats",
+  "half_weeks_configured": 12,
+  "half_weeks_used": 12,
+  "first_half": [
+   "2026-04-10",
+   "2026-07-02"
+  ],
+  "second_half": [
+   "2026-07-03",
+   "2026-09-24"
+  ],
+  "earliest_date_served": "2026-04-08",
+  "latest_date_served": "2026-10-11",
+  "fetched_from": "2026-10-12T05:40:40+00:00",
+  "fetched_to": "2026-10-12T06:08:21+00:00",
+  "pypi_links_sha256": "3a19428b3b35880c9f51b0a907933c120951d55156cc41140c462b355c20610b",
+  "pypi_downloads_parquet_sha256": "8e0df33fabd06ccf0a6ef9a9c1c7ef7d0b314f2f9d1146f88e8f66f45be7d734"
+ },
+ "stats": {
+  "packages": 579,
+  "fetched_ok": 561,
+  "not_found": 18,
+  "zero_in_both_halves": 1
+ },
+ "half_sums": {
+  "0xibra-scann": [
+   115,
+   95
+  ],
+  "3d-rcnet": [
+   431,
+   277
+  ],
+  "activeft": [
+   2076,
+   818
+  ],
+  "actnova-yolo": [
+   27,
+   1
+  ],
+  "adaptergate": [
+   599,
+   113
+  ],
+  "adaptive-oci-chunking": [
+   430,
+   768
+  ],
+  "adasplash": [
+   883,
+   450
+  ],
+  "adeepspeed": [
+   136,
+   54
+  ],
+  "agentuniverse": [
+   3766,
+   1324
+  ],
+  "aglite-test": [
+   147,
+   44
+  ],
+  "aglite-test-common": [
+   171,
+   72
+  ],
+  "aglite-test-core": [
+   174,
+   67
+  ],
+  "aglite-test-features": [
+   418,
+   92
+  ],
+  "aglite-test-tabular": [
+   247,
+   87
+  ],
+  "ai2-scholar-qa": [
+   4185,
+   1479
+  ],
+  "aiconfig-extension-gemini": [
+   273,
+   144
+  ],
+  "aiconfig-extension-groq": [
+   185,
+   132
+  ],
+  "aiconfig-extension-hugging-face": [
+   1252,
+   254
+  ],
+  "aiconfig-extension-hugging-face-transformers": [
+   0,
+   1
+  ],
+  "aiconfig-extension-llama": [
+   533,
+   124
+  ],
+  "aiconfig-extension-llama-guard": [
+   682,
+   139
+  ],
+  "akana": [
+   0,
+   1532
+  ],
+  "ale-py": [
+   921815,
+   624698
+  ],
+  "angelslim": [
+   19684,
+   20500
+  ],
+  "angelslim-fork": [
+   179,
+   39
+  ],
+  "annobel": [
+   382,
+   67
+  ],
+  "appworld": [
+   7005,
+   50864
+  ],
+  "archai": [
+   318,
+   280
+  ],
+  "astchunk": [
+   8804,
+   6106
+  ],
+  "astchunk-extended": [
+   172,
+   111
+  ],
+  "audiolm-pytorch": [
+   15464,
+   5477
+  ],
+  "autocontrastive-gen": [
+   111,
+   46
+  ],
+  "autogluon": [
+   883616,
+   1197099
+  ],
+  "autogluon-common": [
+   2280409,
+   732549
+  ],
+  "autogluon-core": [
+   2414887,
+   1823451
+  ],
+  "autogluon-eda": [
+   2182,
+   1525
+  ],
+  "autogluon-features": [
+   2404360,
+   1740069
+  ],
+  "autogluon-multimodal": [
+   846341,
+   856259
+  ],
+  "autogluon-tabular": [
+   2484051,
+   1840595
+  ],
+  "autogluon-text": [
+   104937,
+   370016
+  ],
+  "autogluon-timeseries": [
+   1029376,
+   1068136
+  ],
+  "autogluon-tonyhu-test": [
+   1,
+   4
+  ],
+  "autogluon-tonyhu-test-common": [
+   0,
+   1
+  ],
+  "autogluon-tonyhu-test-core": [
+   0,
+   10
+  ],
+  "autogluon-tonyhu-test-features": [
+   1,
+   5
+  ],
+  "autogluon-tonyhu-test-multimodal": [
+   8,
+   8
+  ],
+  "autogluon-tonyhu-test-tabular": [
+   2,
+   1
+  ],
+  "autogluon-tonyhu-test-timeseries": [
+   10,
+   5
+  ],
+  "autogluon-vision": [
+   121861,
+   371319
+  ],
+  "avalanche-lib": [
+   10754,
+   5143
+  ],
+  "aworld": [
+   744,
+   409
+  ],
+  "bettertransformers": [
+   1,
+   0
+  ],
+  "bfcl-eval": [
+   748243,
+   1004278
+  ],
+  "bhasa": [
+   130,
+   61
+  ],
+  "bitbudget": [
+   553,
+   119
+  ],
+  "block-recurrent-transformer-pytorch": [
+   6207,
+   1125
+  ],
+  "bmdal-reg": [
+   404,
+   328
+  ],
+  "boicl": [
+   103,
+   56
+  ],
+  "brad-agent": [
+   138,
+   92
+  ],
+  "bytes32": [
+   129,
+   71
+  ],
+  "cairn-engine": [
+   0,
+   306
+  ],
+  "cairn-retrieval": [
+   0,
+   307
+  ],
+  "calm-pytorch": [
+   2076,
+   353
+  ],
+  "catt-tashkeel": [
+   6147,
+   7628
+  ],
+  "causalcompass": [
+   284,
+   72
+  ],
+  "causalts": [
+   0,
+   689
+  ],
+  "ccr-memory": [
+   575,
+   203
+  ],
+  "chronofy": [
+   179,
+   292
+  ],
+  "colpali-engine": [
+   424758,
+   327637
+  ],
+  "conflare": [
+   140,
+   59
+  ],
+  "copra-theorem-prover": [
+   1097,
+   319
+  ],
+  "ctxray": [
+   286,
+   97
+  ],
+  "d-rcnet": [
+   178,
+   64
+  ],
+  "darts": [
+   1028678,
+   669722
+  ],
+  "datashield-ai": [
+   244,
+   51
+  ],
+  "dbgpt": [
+   9599,
+   7419
+  ],
+  "dbgpt-acc-auto": [
+   4178,
+   2185
+  ],
+  "dbgpt-app": [
+   3971,
+   2375
+  ],
+  "dbgpt-client": [
+   3920,
+   2074
+  ],
+  "dbgpt-ext": [
+   5419,
+   3650
+  ],
+  "dbgpt-sandbox": [
+   3365,
+   2002
+  ],
+  "dbgpt-serve": [
+   2909,
+   1854
+  ],
+  "deepcache": [
+   153975,
+   95631
+  ],
+  "deeppipe-api": [
+   396,
+   157
+  ],
+  "deepsort": [
+   521,
+   288
+  ],
+  "deepspeed": [
+   3551350,
+   3139795
+  ],
+  "detkit": [
+   2526,
+   2913
+  ],
+  "dgenerate-ultralytics-headless": [
+   13852,
+   11938
+  ],
+  "dgpsi": [
+   319,
+   236
+  ],
+  "diambra-arena": [
+   515,
+   564
+  ],
+  "divyanx-transformers": [
+   1004,
+   147
+  ],
+  "dmri-rcnn": [
+   759,
+   114
+  ],
+  "doe2vec": [
+   225,
+   81
+  ],
+  "dreamsim": [
+   32061,
+   77871
+  ],
+  "dte-adj": [
+   356,
+   338
+  ],
+  "dytok": [
+   83,
+   42
+  ],
+  "eagle-llm": [
+   663,
+   194
+  ],
+  "easyedit2": [
+   75,
+   29
+  ],
+  "easysteer": [
+   79,
+   38
+  ],
+  "edgetam-dimos": [
+   1480,
+   3245
+  ],
+  "edible": [
+   90,
+   34
+  ],
+  "edward2": [
+   657,
+   713
+  ],
+  "effective-horizon": [
+   118,
+   43
+  ],
+  "efficientvit-gml": [
+   2023,
+   375
+  ],
+  "eiseg": [
+   944,
+   547
+  ],
+  "ellzaf-ml": [
+   508,
+   174
+  ],
+  "encodec": [
+   955614,
+   909356
+  ],
+  "erag": [
+   162,
+   43
+  ],
+  "evalplus": [
+   98163,
+   396161
+  ],
+  "evoagentx": [
+   2370,
+   586
+  ],
+  "evoeval": [
+   159,
+   93
+  ],
+  "examinationrag": [
+   162,
+   76
+  ],
+  "fa4": [
+   672,
+   255
+  ],
+  "falcon-perception": [
+   867,
+   362
+  ],
+  "fast-dataindex": [
+   20520,
+   15683
+  ],
+  "fast-tokenizer-python": [
+   1665,
+   494
+  ],
+  "faster-tokenizer": [
+   1375,
+   345
+  ],
+  "faster-tokenizers": [
+   595,
+   74
+  ],
+  "fastrtc-moonshine-onnx": [
+   13946,
+   9890
+  ],
+  "fhlmi": [
+   358760,
+   466635
+  ],
+  "finaltrygist": [
+   1,
+   0
+  ],
+  "fkan": [
+   251,
+   159
+  ],
+  "fla-core": [
+   1465849,
+   2490065
+  ],
+  "flaml": [
+   2363448,
+   1327981
+  ],
+  "flash-attention-softmax-n": [
+   195,
+   102
+  ],
+  "flash-attn": [
+   2413339,
+   1080451
+  ],
+  "flash-attn-104-env": [
+   89,
+   24
+  ],
+  "flash-attn-4": [
+   2047525,
+   5628273
+  ],
+  "flash-attn-wheels-test": [
+   129,
+   71
+  ],
+  "flash-attn-xwyzsn": [
+   54,
+   23
+  ],
+  "flash-cosine-sim-attention": [
+   380,
+   752
+  ],
+  "flash-linear-attention": [
+   1243665,
+   2025322
+  ],
+  "flash-xlstm-exp": [
+   0,
+   177
+  ],
+  "flashrag": [
+   117,
+   191
+  ],
+  "flashrag-dev": [
+   2478,
+   2196
+  ],
+  "flowcut": [
+   104,
+   39
+  ],
+  "flying-delta": [
+   90,
+   41
+  ],
+  "flying-delta-core": [
+   398,
+   1362
+  ],
+  "flying-delta-legacy": [
+   98,
+   38
+  ],
+  "frechet-audio-distance": [
+   8513,
+   4776
+  ],
+  "fschat": [
+   177030,
+   168528
+  ],
+  "fsner": [
+   158,
+   34
+  ],
+  "fulu": [
+   78,
+   20
+  ],
+  "funasr": [
+   1058612,
+   1140698
+  ],
+  "funasr-onnx": [
+   20363,
+   20835
+  ],
+  "funasr-python": [
+   781,
+   351
+  ],
+  "funasr-runtime": [
+   382,
+   195
+  ],
+  "funasr-torch": [
+   1784,
+   563
+  ],
+  "funaudio": [
+   271,
+   75
+  ],
+  "fungpt": [
+   429,
+   90
+  ],
+  "funllm": [
+   291,
+   79
+  ],
+  "funnmt": [
+   137,
+   50
+  ],
+  "funspeaker": [
+   98,
+   40
+  ],
+  "funspeech": [
+   272,
+   107
+  ],
+  "funtts": [
+   82,
+   33
+  ],
+  "fusion-bench": [
+   1607,
+   838
+  ],
+  "gaea-paddledet": [
+   5,
+   5
+  ],
+  "gated-state-spaces-pytorch": [
+   1203,
+   190
+  ],
+  "gddet": [
+   126,
+   55
+  ],
+  "gdinopy": [
+   642,
+   113
+  ],
+  "gem-llm": [
+   193355,
+   485436
+  ],
+  "geometric-kernels": [
+   1039,
+   696
+  ],
+  "getitune": [
+   432,
+   544
+  ],
+  "gisting": [
+   120,
+   27
+  ],
+  "gisting-test": [
+   190,
+   73
+  ],
+  "gistingv10": [
+   1,
+   0
+  ],
+  "gistingv2": [
+   1,
+   0
+  ],
+  "gistingv3": [
+   1,
+   0
+  ],
+  "gistingv4": [
+   1,
+   0
+  ],
+  "gistingv5": [
+   1,
+   0
+  ],
+  "gistingv6": [
+   1,
+   0
+  ],
+  "gistsrc": [
+   1,
+   0
+  ],
+  "gldf": [
+   96,
+   45
+  ],
+  "glearn": [
+   1296,
+   1016
+  ],
+  "goex": [
+   51,
+   22
+  ],
+  "google-fax": [
+   45,
+   20
+  ],
+  "google-vizier": [
+   51845,
+   101434
+  ],
+  "google-vizier-dev": [
+   1655,
+   6030
+  ],
+  "gorilla-execution-engine": [
+   49,
+   26
+  ],
+  "gpnam": [
+   136,
+   90
+  ],
+  "gpplus": [
+   311,
+   218
+  ],
+  "gppluss": [
+   0,
+   1
+  ],
+  "gpry": [
+   151,
+   509
+  ],
+  "gpyrn": [
+   114,
+   50
+  ],
+  "grad-cam": [
+   212201,
+   172676
+  ],
+  "graph-ragu": [
+   610,
+   894
+  ],
+  "graphiti-core": [
+   2299149,
+   3169364
+  ],
+  "graphiti-core-falkordb": [
+   29948,
+   1002
+  ],
+  "graphiti-core-multi-turn-rag": [
+   174,
+   64
+  ],
+  "graphiti-core-varming": [
+   242,
+   87
+  ],
+  "graphrag": [
+   205421,
+   169880
+  ],
+  "graphrag-cache": [
+   91216,
+   87746
+  ],
+  "graphrag-chunking": [
+   90630,
+   87355
+  ],
+  "graphrag-common": [
+   92908,
+   88921
+  ],
+  "graphrag-input": [
+   91308,
+   87692
+  ],
+  "graphrag-llm": [
+   91179,
+   88181
+  ],
+  "graphrag-storage": [
+   90003,
+   87886
+  ],
+  "graphrag-vectors": [
+   90482,
+   87246
+  ],
+  "graphragkhoj": [
+   143,
+   60
+  ],
+  "greedy-ancestral-search": [
+   170,
+   53
+  ],
+  "gritlm": [
+   30825,
+   13887
+  ],
+  "groundeddino-vl": [
+   840,
+   186
+  ],
+  "groundingdino": [
+   1,
+   2
+  ],
+  "groundingdino-cu128": [
+   0,
+   4
+  ],
+  "groundingdino-gml": [
+   880,
+   117
+  ],
+  "groundingdino-iscas": [
+   496,
+   101
+  ],
+  "groundingdino-mod": [
+   270,
+   76
+  ],
+  "groundingdino-py": [
+   397682,
+   322533
+  ],
+  "groundingdino-yl": [
+   466,
+   106
+  ],
+  "grouse": [
+   256,
+   154
+  ],
+  "haico": [
+   110,
+   31
+  ],
+  "hakubooru": [
+   83,
+   34
+  ],
+  "hipporag": [
+   15248,
+   3465
+  ],
+  "hipporag-nyabot": [
+   94,
+   74
+  ],
+  "huixiangdou": [
+   128,
+   85
+  ],
+  "ifbo": [
+   1726,
+   2457
+  ],
+  "iflow-mcp-graphiti-core": [
+   223,
+   43
+  ],
+  "imagedetect": [
+   766,
+   136
+  ],
+  "in-transformers": [
+   3,
+   3
+  ],
+  "instructlab": [
+   12649,
+   7511
+  ],
+  "intel-extension-for-transformers": [
+   8971,
+   2971
+  ],
+  "iohblade": [
+   459,
+   243
+  ],
+  "jackpots": [
+   90,
+   24
+  ],
+  "jestimator": [
+   237,
+   457
+  ],
+  "jetts": [
+   70,
+   32
+  ],
+  "kani-tts-2": [
+   1062,
+   395
+  ],
+  "kapture-localization": [
+   55930,
+   50285
+  ],
+  "kausal": [
+   111,
+   45
+  ],
+  "kdaf": [
+   0,
+   177
+  ],
+  "kecam": [
+   536,
+   175
+  ],
+  "keras-cv": [
+   65719,
+   58831
+  ],
+  "keras-cv-attention-models": [
+   13964,
+   9190
+  ],
+  "keras-cv-nightly": [
+   5226,
+   2025
+  ],
+  "knowledge-storm": [
+   9672,
+   6796
+  ],
+  "kornia": [
+   9068674,
+   7840936
+  ],
+  "korouge-score": [
+   421,
+   817
+  ],
+  "kronecker-embeddings": [
+   1484,
+   298
+  ],
+  "labml-nn": [
+   2192,
+   10514
+  ],
+  "langchain-openviking": [
+   0,
+   93040
+  ],
+  "langchain-pced": [
+   132,
+   56
+  ],
+  "laplace-bayesopt": [
+   157,
+   63
+  ],
+  "lazyllm-llamafactory": [
+   1258,
+   254
+  ],
+  "lbrain": [
+   0,
+   1555
+  ],
+  "ldp": [
+   180677,
+   231441
+  ],
+  "lf2i": [
+   127,
+   60
+  ],
+  "lightgbmlss": [
+   6586,
+   10497
+  ],
+  "lightgp": [
+   1180,
+   143
+  ],
+  "lightrag-dembrane": [
+   239,
+   108
+  ],
+  "lightrag-hku": [
+   630193,
+   673964
+  ],
+  "lightseq": [
+   1282,
+   1378
+  ],
+  "lindex-patch": [
+   73,
+   32
+  ],
+  "linpde-gp": [
+   60,
+   20
+  ],
+  "lion-pytorch": [
+   446832,
+   348217
+  ],
+  "llada": [
+   68,
+   75
+  ],
+  "llama-index": [
+   28507560,
+   16127044
+  ],
+  "llama-index-bundle": [
+   455,
+   77
+  ],
+  "llama-index-core": [
+   33470158,
+   34032005
+  ],
+  "llama-index-guardrails-icephi": [
+   0,
+   287
+  ],
+  "llama-index-instrumentation": [
+   15160081,
+   18945253
+  ],
+  "llama-index-legacy": [
+   5320363,
+   5202718
+  ],
+  "llama-index-node-parser-chonkie": [
+   857,
+   1021
+  ],
+  "llama-index-readers-builtsimple": [
+   299,
+   64
+  ],
+  "llama-index-readers-decodo": [
+   0,
+   30
+  ],
+  "llama-index-retrievers-superlinked": [
+   574,
+   194
+  ],
+  "llama-index-retrievers-vectorize": [
+   1317,
+   362
+  ],
+  "llama-index-test-starter": [
+   845,
+   144
+  ],
+  "llama-index-tools-querit": [
+   295,
+   62
+  ],
+  "llamafactory": [
+   1114510,
+   56700
+  ],
+  "llamafactory-songlab": [
+   341,
+   57
+  ],
+  "llamea": [
+   15358,
+   5014
+  ],
+  "llmtuner": [
+   2248,
+   721
+  ],
+  "lm-debug-eval-ui": [
+   278,
+   66
+  ],
+  "lmcache": [
+   201629,
+   204551
+  ],
+  "lmcache-cli": [
+   1048,
+   2326
+  ],
+  "lycoris-lora": [
+   350293,
+   303975
+  ],
+  "make-a-video-pytorch": [
+   1197,
+   193
+  ],
+  "mamba-ssm": [
+   328058,
+   219338
+  ],
+  "mammoth-cl": [
+   2,
+   1
+  ],
+  "maniscope": [
+   127,
+   55
+  ],
+  "margarine": [
+   365,
+   140
+  ],
+  "mastercurves": [
+   382,
+   350
+  ],
+  "mathlas-mcp": [
+   1575,
+   1357
+  ],
+  "mbag-gensyn": [
+   804,
+   340
+  ],
+  "mcw-transformer": [
+   0,
+   1
+  ],
+  "mcwtimesformer": [
+   1,
+   1
+  ],
+  "mcwtransformers": [
+   992,
+   125
+  ],
+  "megatron-core": [
+   460638,
+   664581
+  ],
+  "megatron-fsdp": [
+   186860,
+   154843
+  ],
+  "megatron-lm": [
+   12,
+   27
+  ],
+  "memformers": [
+   40,
+   17
+  ],
+  "memward": [
+   211,
+   34
+  ],
+  "mesh-tensorflow": [
+   68910,
+   49312
+  ],
+  "meshgpt-pytorch": [
+   27952,
+   7226
+  ],
+  "metacontroller-pytorch": [
+   4493,
+   1976
+  ],
+  "micro-sam": [
+   1988,
+   6918
+  ],
+  "minihack": [
+   2941,
+   4052
+  ],
+  "minirag-hku": [
+   255,
+   121
+  ],
+  "mirage-bench": [
+   507,
+   189
+  ],
+  "mkdocs-ultralytics-plugin": [
+   35140,
+   20448
+  ],
+  "ml2": [
+   249,
+   97
+  ],
+  "mmaction": [
+   343,
+   169
+  ],
+  "mmaction2": [
+   9938,
+   8773
+  ],
+  "mmtrack": [
+   3160,
+   3246
+  ],
+  "mnemefusion": [
+   83,
+   25
+  ],
+  "mnemefusion-cpu": [
+   212,
+   84
+  ],
+  "modelscope": [
+   13354819,
+   13069341
+  ],
+  "modelscope-sam2-fork": [
+   2171,
+   222
+  ],
+  "mojogp": [
+   124,
+   177
+  ],
+  "momahub": [
+   206,
+   58
+  ],
+  "mopet-moe": [
+   0,
+   403
+  ],
+  "mttl": [
+   103,
+   45
+  ],
+  "muon-optimizer": [
+   10341,
+   16560
+  ],
+  "muse-maskgit-pytorch": [
+   2406,
+   258
+  ],
+  "my-transformers": [
+   1647,
+   180
+  ],
+  "nano-graphrag": [
+   5726,
+   3223
+  ],
+  "needle-rs": [
+   1164,
+   1091
+  ],
+  "nemo-asr": [
+   1995,
+   1147
+  ],
+  "nemo-nlp": [
+   1890,
+   172
+  ],
+  "nemo-simple-gan": [
+   0,
+   1
+  ],
+  "nemo-toolkit": [
+   2587108,
+   2678862
+  ],
+  "nemo-toolkit-asr": [
+   2223,
+   4117
+  ],
+  "nemo-tts": [
+   129,
+   64
+  ],
+  "netcal": [
+   167883,
+   161167
+  ],
+  "nextai-star": [
+   199,
+   45
+  ],
+  "nlp-uncertainty-zoo": [
+   2377,
+   190
+  ],
+  "npm-weibull-py": [
+   202,
+   30
+  ],
+  "nubopy": [
+   150,
+   204
+  ],
+  "nudge-ft": [
+   238,
+   169
+  ],
+  "nuggetizer": [
+   226,
+   302
+  ],
+  "nuwa-pytorch": [
+   3086,
+   610
+  ],
+  "nvidia-bfcl": [
+   2377,
+   714
+  ],
+  "nw-groundingdino": [
+   809,
+   133
+  ],
+  "odeformer": [
+   435,
+   227
+  ],
+  "omnixai": [
+   1589,
+   752
+  ],
+  "only-train-once": [
+   571,
+   169
+  ],
+  "open-metric-learning": [
+   7881,
+   9858
+  ],
+  "opencompass": [
+   19040,
+   13823
+  ],
+  "openllm-api": [
+   0,
+   1
+  ],
+  "openocr-python": [
+   17950,
+   16546
+  ],
+  "opentau-transformers": [
+   37,
+   3
+  ],
+  "openviking": [
+   696661,
+   1197606
+  ],
+  "optax-shampoo": [
+   54850,
+   38321
+  ],
+  "optillm": [
+   17451,
+   4839
+  ],
+  "or-lib": [
+   142,
+   41
+  ],
+  "orion-ml": [
+   1738,
+   1115
+  ],
+  "otoml": [
+   105,
+   22
+  ],
+  "otx": [
+   3558,
+   2087
+  ],
+  "otxmmaction2": [
+   80,
+   41
+  ],
+  "owais-roger1": [
+   1,
+   0
+  ],
+  "paddle-pipelines": [
+   335,
+   590
+  ],
+  "paddledet": [
+   5875,
+   2802
+  ],
+  "paddlenlp": [
+   99534,
+   54670
+  ],
+  "paddlesci": [
+   219,
+   76
+  ],
+  "paddleseg": [
+   6912,
+   4856
+  ],
+  "paddlespatial": [
+   78,
+   29
+  ],
+  "parallelformers": [
+   321,
+   147
+  ],
+  "pararnn-torch": [
+   0,
+   162
+  ],
+  "parfam": [
+   95,
+   40
+  ],
+  "parti-pytorch": [
+   1200,
+   181
+  ],
+  "peftfactory": [
+   247,
+   78
+  ],
+  "pennylane": [
+   872841,
+   695065
+  ],
+  "personalize-sam": [
+   9,
+   1
+  ],
+  "pfns": [
+   13638,
+   7661
+  ],
+  "pfns4bo": [
+   187,
+   807
+  ],
+  "phenaki-pytorch": [
+   2329,
+   284
+  ],
+  "pi-flash-attn": [
+   39,
+   11
+  ],
+  "picsellia-sam2": [
+   171,
+   63
+  ],
+  "pip-skill": [
+   473,
+   70
+  ],
+  "pixeloe": [
+   336377,
+   262318
+  ],
+  "pixelrag": [
+   5290,
+   10488
+  ],
+  "pixelrag-langchain": [
+   0,
+   128
+  ],
+  "ppdet": [
+   0,
+   1
+  ],
+  "ppdet-notebook": [
+   122,
+   21
+  ],
+  "ppdet-test": [
+   4,
+   1
+  ],
+  "ppdiffusers": [
+   12649,
+   5883
+  ],
+  "ppmmvehicle": [
+   5,
+   3
+  ],
+  "pquant-ml": [
+   968,
+   1425
+  ],
+  "prexsyn": [
+   453,
+   210
+  ],
+  "ps-sues": [
+   66,
+   29
+  ],
+  "py-sled": [
+   109,
+   48
+  ],
+  "py-sues": [
+   133,
+   47
+  ],
+  "pycag": [
+   0,
+   145
+  ],
+  "pydexpi": [
+   4018,
+   6059
+  ],
+  "pydone": [
+   133,
+   65
+  ],
+  "pyllama": [
+   1833,
+   433
+  ],
+  "pypots": [
+   331739,
+   270115
+  ],
+  "pyterrier-rag": [
+   755,
+   453
+  ],
+  "python-aiconfig": [
+   1205,
+   982
+  ],
+  "python-aiconfig-llama": [
+   289,
+   64
+  ],
+  "python-aiconfig-test": [
+   111,
+   54
+  ],
+  "pytorch-gpu": [
+   323,
+   6
+  ],
+  "pytorch-riscv64": [
+   339,
+   141
+  ],
+  "qifa": [
+   111,
+   47
+  ],
+  "qkan": [
+   601,
+   302
+  ],
+  "qpots": [
+   833,
+   470
+  ],
+  "qwen-memory-agent": [
+   129,
+   111
+  ],
+  "raganything": [
+   87710,
+   53328
+  ],
+  "raganything-mineru-cloud": [
+   431,
+   49
+  ],
+  "ragas": [
+   4112748,
+   3840947
+  ],
+  "ragas-examples": [
+   443,
+   313
+  ],
+  "ragcheckerzs": [
+   63,
+   32
+  ],
+  "ragcheckerzsv2": [
+   62,
+   32
+  ],
+  "ragcheckerzsv3": [
+   66,
+   24
+  ],
+  "ragcheckerzsv4": [
+   67,
+   27
+  ],
+  "ragelo": [
+   1075,
+   1749
+  ],
+  "rai-gsam2": [
+   487,
+   294
+  ],
+  "rankify": [
+   1029,
+   359
+  ],
+  "rdagent": [
+   62613,
+   22363
+  ],
+  "refactx": [
+   113,
+   46
+  ],
+  "reprompt-cli": [
+   896,
+   355
+  ],
+  "revolve": [
+   45,
+   48
+  ],
+  "rf-groundingdino": [
+   217892,
+   83219
+  ],
+  "rfdetr": [
+   761259,
+   1031656
+  ],
+  "rfdetr-isarsoft": [
+   335,
+   73
+  ],
+  "rgl": [
+   109,
+   30
+  ],
+  "richads-transformers": [
+   1,
+   1
+  ],
+  "rir-api": [
+   103,
+   29
+  ],
+  "rknn-yolov8": [
+   4,
+   5
+  ],
+  "rlinf-transformer-openpi": [
+   0,
+   4424
+  ],
+  "roar-yolo": [
+   920,
+   196
+  ],
+  "rouge-score": [
+   9224182,
+   21365199
+  ],
+  "routellm": [
+   26724,
+   20989
+  ],
+  "rpi-torch": [
+   170,
+   51
+  ],
+  "rwkv-fla": [
+   2390,
+   908
+  ],
+  "s5-pytorch": [
+   2704,
+   2729
+  ],
+  "sam-2-uni": [
+   123,
+   45
+  ],
+  "scann": [
+   445409,
+   839784
+  ],
+  "scikit-ntk": [
+   181,
+   66
+  ],
+  "scope-optimizer": [
+   312,
+   108
+  ],
+  "scrydb": [
+   0,
+   137
+  ],
+  "search-as-code": [
+   0,
+   289
+  ],
+  "sectum-ai": [
+   679,
+   3324
+  ],
+  "sectum-ai-adapters": [
+   901,
+   4127
+  ],
+  "sectum-ai-evidence": [
+   790,
+   3824
+  ],
+  "sectum-ai-probes": [
+   784,
+   3682
+  ],
+  "sectum-ai-spec": [
+   1141,
+   4955
+  ],
+  "segment-anything-hq": [
+   16275,
+   9042
+  ],
+  "segment-geospatial": [
+   46417,
+   29297
+  ],
+  "segment-geospatial-uni": [
+   365,
+   53
+  ],
+  "selective-optimizers": [
+   432,
+   200
+  ],
+  "selfcalibratingconformal": [
+   153,
+   89
+  ],
+  "semviqa": [
+   525,
+   79
+  ],
+  "sequence-layers": [
+   220,
+   105
+  ],
+  "sgl-fa4": [
+   396206,
+   91801
+  ],
+  "shadho": [
+   230,
+   102
+  ],
+  "shap-select": [
+   2909,
+   2566
+  ],
+  "skythought": [
+   70,
+   175
+  ],
+  "slice-score": [
+   108,
+   31
+  ],
+  "sm-trieste": [
+   0,
+   1
+  ],
+  "smallml": [
+   732,
+   142
+  ],
+  "smart-eval": [
+   97,
+   15
+  ],
+  "smt": [
+   67650,
+   64762
+  ],
+  "sorsa": [
+   65,
+   33
+  ],
+  "soundstorm-pytorch": [
+   1851,
+   264
+  ],
+  "spacebench": [
+   207,
+   53
+  ],
+  "spach-transformer": [
+   1512,
+   135
+  ],
+  "sparse-deferred": [
+   270,
+   590
+  ],
+  "speeq": [
+   4,
+   2
+  ],
+  "squeezeformer": [
+   358,
+   299
+  ],
+  "step-audio2": [
+   561,
+   8688
+  ],
+  "stepaudio2-minicpmo": [
+   539,
+   2572
+  ],
+  "streamdiffusion": [
+   2101,
+   927
+  ],
+  "strongsort": [
+   1240,
+   825
+  ],
+  "stump-cli": [
+   106,
+   36
+  ],
+  "survshap": [
+   1770,
+   880
+  ],
+  "swiftlogisticreg": [
+   64,
+   26
+  ],
+  "syml-ultralytics": [
+   844,
+   195
+  ],
+  "synapt": [
+   1904,
+   2136
+  ],
+  "syncreus-eval": [
+   152,
+   37
+  ],
+  "syndrilla": [
+   749,
+   375
+  ],
+  "syntaxnet": [
+   71,
+   12
+  ],
+  "syntaxnet-with-tensorflow": [
+   120,
+   46
+  ],
+  "t-draft-123": [
+   96,
+   40
+  ],
+  "tabm": [
+   30285,
+   60506
+  ],
+  "tabred": [
+   0,
+   559
+  ],
+  "tabtune": [
+   1676,
+   2282
+  ],
+  "tactis": [
+   287,
+   199
+  ],
+  "te2rules": [
+   1558,
+   1765
+  ],
+  "temporal-taggers": [
+   284,
+   165
+  ],
+  "textgrad": [
+   205228,
+   46992
+  ],
+  "tf-models-nightly": [
+   241417,
+   101525
+  ],
+  "tf-models-no-deps": [
+   2479,
+   402
+  ],
+  "tf-models-official": [
+   175233,
+   94543
+  ],
+  "tf-models-research-object-detection": [
+   2734,
+   353
+  ],
+  "tfimm": [
+   662,
+   457
+  ],
+  "tgate": [
+   204,
+   78
+  ],
+  "theriac": [
+   0,
+   131
+  ],
+  "timm": [
+   36292555,
+   37760749
+  ],
+  "timm-clean": [
+   589,
+   284
+  ],
+  "timm-ctp": [
+   1249,
+   1479
+  ],
+  "tlnvxkmvepwftirvjc": [
+   0,
+   0
+  ],
+  "token2wav-cosyvoice-stepaudio2": [
+   177,
+   68
+  ],
+  "tokenspeed-fa4": [
+   35217,
+   32804
+  ],
+  "tokensynth": [
+   377,
+   127
+  ],
+  "tool-helpers": [
+   32573,
+   17573
+  ],
+  "torch": [
+   243816266,
+   226465443
+  ],
+  "torch-abi": [
+   9,
+   2
+  ],
+  "torch-cpp": [
+   231,
+   142
+  ],
+  "torch-neuron-base": [
+   12811,
+   4857
+  ],
+  "torch-npu": [
+   1739688,
+   1760238
+  ],
+  "torchcfm": [
+   40201,
+   56991
+  ],
+  "torchcp": [
+   2684,
+   1704
+  ],
+  "torchmultimodal-nightly": [
+   14991,
+   7438
+  ],
+  "trailmet": [
+   163,
+   18
+  ],
+  "trajectory-judge": [
+   0,
+   156
+  ],
+  "transformer-tricks": [
+   4313,
+   372
+  ],
+  "transformers": [
+   427049679,
+   426616387
+  ],
+  "transformers-kt": [
+   5473,
+   5580
+  ],
+  "transformers-machinify": [
+   1010,
+   155
+  ],
+  "transformers-mcw": [
+   970,
+   144
+  ],
+  "transformers-openpi": [
+   1003,
+   154
+  ],
+  "transformers-phobert": [
+   1729,
+   182
+  ],
+  "transformers-qwenomni": [
+   992,
+   132
+  ],
+  "transformers-usf-om-vl-exp-v0": [
+   977,
+   123
+  ],
+  "transformers-v4-55-0-glm-4-5v-preview": [
+   10436,
+   3970
+  ],
+  "transformers-v5-pre-rc0": [
+   967,
+   142
+  ],
+  "transformers4576": [
+   0,
+   10097
+  ],
+  "transition-neural-parser": [
+   759,
+   242
+  ],
+  "transject": [
+   79,
+   25
+  ],
+  "trieste": [
+   6901,
+   7106
+  ],
+  "true-colon": [
+   0,
+   257
+  ],
+  "trustrag": [
+   126,
+   56
+  ],
+  "tsroots": [
+   125,
+   52
+  ],
+  "turbo-alignment": [
+   115,
+   49
+  ],
+  "u8darts": [
+   374533,
+   236642
+  ],
+  "ultralytics": [
+   27400180,
+   18828123
+  ],
+  "ultralytics-copy": [
+   111,
+   66
+  ],
+  "ultralytics-custom": [
+   154,
+   77
+  ],
+  "ultralytics-dev": [
+   1318,
+   196
+  ],
+  "ultralytics-dist-yolo": [
+   1070,
+   237
+  ],
+  "ultralytics-opencv-headless": [
+   47346,
+   75144
+  ],
+  "ultralytics-rknn": [
+   737,
+   147
+  ],
+  "ultralytics-sam3-batch": [
+   251,
+   101
+  ],
+  "ultralyticsutils": [
+   352,
+   109
+  ],
+  "uncertainty-baselines": [
+   262,
+   225
+  ],
+  "vectorpin": [
+   1369,
+   82
+  ],
+  "versatil": [
+   166,
+   291
+  ],
+  "vidore-benchmark": [
+   8174,
+   1975
+  ],
+  "virne": [
+   185,
+   55
+  ],
+  "visaionyoloe": [
+   958,
+   199
+  ],
+  "visual-parser": [
+   973,
+   397
+  ],
+  "vitpose-infer": [
+   620,
+   50
+  ],
+  "vmas": [
+   9033,
+   13257
+  ],
+  "weblinx": [
+   44251,
+   24990
+  ],
+  "webllama": [
+   541,
+   60
+  ],
+  "whisperpipe": [
+   1566,
+   758
+  ],
+  "whisperspeech": [
+   7485,
+   3677
+  ],
+  "wiola": [
+   0,
+   279
+  ],
+  "wmh-seg": [
+   684,
+   190
+  ],
+  "x-unet": [
+   636,
+   517
+  ],
+  "xaisuite": [
+   960,
+   293
+  ],
+  "xgboostlss": [
+   9605,
+   8915
+  ],
+  "xgpr": [
+   256,
+   97
+  ],
+  "xlstm": [
+   40533,
+   40836
+  ],
+  "xmersawitransformers": [
+   962,
+   124
+  ],
+  "xn-ultralytics": [
+   354,
+   88
+  ],
+  "yolotest": [
+   908,
+   198
+  ],
+  "yolov10-onnx": [
+   2890,
+   497
+  ],
+  "yolov8-pose-triton": [
+   1736,
+   315
+  ],
+  "yolov8-rknn": [
+   1046,
+   233
+  ],
+  "zmkj-rknn-yolov8": [
+   2562,
+   327
+  ]
+ }
+}

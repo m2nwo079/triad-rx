@@ -1,0 +1,200 @@
+{
+ "rank": 15,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Serves as an expressive, invertible generative model that maps complex distributions to a tractable base density.",
+    "evidence_ids": [
+     "paper:2605.09718"
+    ]
+   },
+   {
+    "term_id": "T:density estimation",
+    "role": "Provides the foundational framework to parameterize and model unknown invariant distributions or probability densities in the system.",
+    "evidence_ids": [
+     "paper:2605.09718"
+    ]
+   },
+   {
+    "term_id": "T:uncertainty quantification",
+    "role": "Quantifies epistemic and predictive uncertainty by approximating posterior distributions over model parameters and system states.",
+    "evidence_ids": [
+     "paper:2605.09718"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Learning multiscale stochastic dynamical systems and capturing parameter uncertainty from observed trajectories.",
+   "evidence_ids": [
+    "paper:2605.09718"
+   ]
+  },
+  "limitation": {
+   "text": "Reduced models depend on the invariant distribution of unobserved fast processes, which typically requires solving intractable or unknown partial differential equations.",
+   "evidence_ids": [
+    "paper:2605.09718"
+   ]
+  },
+  "combination": {
+   "text": "The approach parameterizes the intractable invariant distribution of fast processes using normalizing flows optimized via a penalized likelihood objective. Furthermore, it employs a second normalizing flow within a Bayesian variational inference procedure to perform uncertainty quantification by approximating the posterior distribution over model parameters.",
+   "evidence_ids": [
+    "paper:2605.09718"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Serves as an expressive, invertible generative model that maps complex distributions to a tractable base density.",
+     "evidence_ids": [
+      "paper:2605.09718"
+     ]
+    },
+    {
+     "term_id": "T:density estimation",
+     "role": "Provides the foundational framework to parameterize and model unknown invariant distributions or probability densities in the system.",
+     "evidence_ids": [
+      "paper:2605.09718"
+     ]
+    },
+    {
+     "term_id": "T:uncertainty quantification",
+     "role": "Quantifies epistemic and predictive uncertainty by approximating posterior distributions over model parameters and system states.",
+     "evidence_ids": [
+      "paper:2605.09718"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Learning multiscale stochastic dynamical systems and capturing parameter uncertainty from observed trajectories.",
+    "evidence_ids": [
+     "paper:2605.09718"
+    ]
+   },
+   "limitation": {
+    "text": "Reduced models depend on the invariant distribution of unobserved fast processes, which typically requires solving intractable or unknown partial differential equations.",
+    "evidence_ids": [
+     "paper:2605.09718"
+    ]
+   },
+   "combination": {
+    "text": "The approach parameterizes the intractable invariant distribution of fast processes using normalizing flows optimized via a penalized likelihood objective. Furthermore, it employs a second normalizing flow within a Bayesian variational inference procedure to perform uncertainty quantification by approximating the posterior distribution over model parameters.",
+    "evidence_ids": [
+     "paper:2605.09718"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates normalizing flows with density estimation and uncertainty quantification to learn multiscale stochastic dynamical systems from observed trajectories. By parameterizing intractable invariant distributions of fast processes with normalizing flows, the approach handles unobserved fast dynamics and approximates posterior distributions over model parameters for robust uncertainty quantification.",
+   "evidence_ids": [
+    "paper:2605.09718"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified due to a lack of patent assignee categories and specific organizational information in the bundle, though the repositories and packages such as repo:d3-ai/orion and pkg:lf2i suggest developers and researchers working on time series and likelihood-free inference.",
+   "evidence_ids": [
+    "pkg:lf2i",
+    "repo:d3-ai/orion",
+    "repo:signals-dev/orion",
+    "repo:sintel-dev/orion"
+   ]
+  },
+  "jtbd": {
+   "text": "When researchers and engineers model multiscale stochastic dynamical systems from single trajectory observations, they want to accurately capture unobserved fast processes and quantify model parameter uncertainty, so that they can reliably predict system behavior without solving intractable partial differential equations.",
+   "evidence_ids": [
+    "paper:2605.09718"
+   ]
+  },
+  "value_prop": {
+   "text": "This framework parameterizes intractable invariant distributions using normalizing flows trained on penalized likelihood objectives, enabling expressive density modeling in latent spaces. Additionally, it uses a second normalizing flow for Bayesian variational inference to capture epistemic uncertainty in multiscale systems.",
+   "evidence_ids": [
+    "paper:2605.09718"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence in the bundle. We assume that enterprise users are willing to pay for a specialized software tool that models multiscale stochastic systems and quantifies parameter uncertainty using normalizing flows.",
+   "evidence_ids": [
+    "dvf:15"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews with quantitative researchers and execute a price acceptance test using a landing page describing the normalizing flow multiscale modeling tool, targeting a proposed threshold of 20 percent sign-ups or positive pricing feedback to validate economic viability as indicated by dvf:15.",
+   "evidence_ids": [
+    "dvf:15",
+    "paper:2605.09718"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "A successful validation outcome requires a proposed threshold of at least 25 percent of interviewed prospects confirming budget availability and willingness to pay for the uncertainty quantification capability, as motivated by dvf:15.",
+   "evidence_ids": [
+    "dvf:15"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The opportunity is killed if fewer than a proposed threshold of 10 percent of interviewed prospective users express interest in purchasing or licensing the software, as specified by dvf:15.",
+    "evidence_ids": [
+     "dvf:15"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:apple/ml-tarflow",
+     "use": "Provides foundational normalizing flow architectures and utilities for generative modeling tasks.",
+     "evidence_ids": [
+      "repo:apple/ml-tarflow"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:orion-ml",
+     "use": "Supplies time series and anomaly processing infrastructure to support data ingestion and trajectory evaluation.",
+     "evidence_ids": [
+      "pkg:orion-ml"
+     ],
+     "version": "0.7.1"
+    },
+    {
+     "id": "pkg:lf2i",
+     "use": "Offers likelihood-free inference tools to assist with parameter estimation and uncertainty quantification workflows.",
+     "evidence_ids": [
+      "pkg:lf2i"
+     ],
+     "version": "0.3.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build a domain-specific orchestration wrapper that couples dual normalizing flows for invariant distribution parameterization and Bayesian variational inference over trajectories, addressing the missing components identified in paper:2605.09718.",
+     "evidence_ids": [
+      "paper:2605.09718",
+      "dvf:15"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

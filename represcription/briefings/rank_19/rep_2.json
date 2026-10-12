@@ -1,0 +1,226 @@
+{
+ "rank": 19,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:vq vae",
+    "role": "Learns discrete codebooks and latent representations of motion or temporal dynamics to support generation and forecasting.",
+    "evidence_ids": [
+     "paper:2606.27547",
+     "paper:2606.26661",
+     "paper:2606.05855"
+    ]
+   },
+   {
+    "term_id": "T:motion generation",
+    "role": "Synthesizes human or dynamic action sequences from latent or conditioning inputs.",
+    "evidence_ids": [
+     "paper:2606.27547",
+     "paper:2602.21133",
+     "paper:2602.18057"
+    ]
+   },
+   {
+    "term_id": "T:prediction",
+    "role": "Forecasts future trajectories, states, or developments based on past or latent temporal observations.",
+    "evidence_ids": [
+     "paper:2606.26661",
+     "paper:2606.05855",
+     "paper:2606.10069"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Human motion generation and trajectory or sequence prediction in various domains such as autonomous driving and continuous affective modeling.",
+   "evidence_ids": [
+    "paper:2606.26661",
+    "paper:2606.05855",
+    "paper:2606.27547"
+   ]
+  },
+  "limitation": {
+   "text": "Standard autoregressive or point-wise prediction paradigms often struggle with long-term error accumulation, lack semantic structure in discrete token spaces, or overlook physical and topological constraints.",
+   "evidence_ids": [
+    "paper:2609.14615",
+    "paper:2606.26661",
+    "paper:2602.21133"
+   ]
+  },
+  "combination": {
+   "text": "A VQ-VAE is integrated into motion generation and prediction frameworks to tokenize continuous motion signals or temporal data into discrete codebooks. These discrete latent representations capture structured movement primitives and intention queries that guide sequence prediction and generative modeling while preserving topological and physical constraints.",
+   "evidence_ids": [
+    "paper:2606.27547",
+    "paper:2606.26661",
+    "paper:2606.05855"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:vq vae",
+     "role": "Learns discrete codebooks and latent representations of motion or temporal dynamics to support generation and forecasting.",
+     "evidence_ids": [
+      "paper:2606.27547",
+      "paper:2606.26661",
+      "paper:2606.05855"
+     ]
+    },
+    {
+     "term_id": "T:motion generation",
+     "role": "Synthesizes human or dynamic action sequences from latent or conditioning inputs.",
+     "evidence_ids": [
+      "paper:2606.27547",
+      "paper:2602.21133",
+      "paper:2602.18057"
+     ]
+    },
+    {
+     "term_id": "T:prediction",
+     "role": "Forecasts future trajectories, states, or developments based on past or latent temporal observations.",
+     "evidence_ids": [
+      "paper:2606.26661",
+      "paper:2606.05855",
+      "paper:2606.10069"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Human motion generation and trajectory or sequence prediction in various domains such as autonomous driving and continuous affective modeling.",
+    "evidence_ids": [
+     "paper:2606.26661",
+     "paper:2606.05855",
+     "paper:2606.27547"
+    ]
+   },
+   "limitation": {
+    "text": "Standard autoregressive or point-wise prediction paradigms often struggle with long-term error accumulation, lack semantic structure in discrete token spaces, or overlook physical and topological constraints.",
+    "evidence_ids": [
+     "paper:2609.14615",
+     "paper:2606.26661",
+     "paper:2602.21133"
+    ]
+   },
+   "combination": {
+    "text": "A VQ-VAE is integrated into motion generation and prediction frameworks to tokenize continuous motion signals or temporal data into discrete codebooks. These discrete latent representations capture structured movement primitives and intention queries that guide sequence prediction and generative modeling while preserving topological and physical constraints.",
+    "evidence_ids": [
+     "paper:2606.27547",
+     "paper:2606.26661",
+     "paper:2606.05855"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity combines VQ-VAE representations with motion generation and prediction tasks to tokenize continuous motion signals and temporal dynamics into discrete codebooks. As documented in dvf:19, the combination achieves a desirability score of 5.0 and a feasibility score of 4.0, while exhibiting a low viability score of 1.0. The framework addresses challenges such as long-term error accumulation and a lack of topological constraints in standard prediction paradigms.",
+   "evidence_ids": [
+    "dvf:19",
+    "paper:2606.26661",
+    "paper:2606.27547"
+   ]
+  },
+  "target_user": {
+   "text": "The target user includes academic researchers and practitioners working on human motion synthesis, trajectory forecasting, and multi-edge systems, as indicated by patent assignee categories and open-source codebases.",
+   "evidence_ids": [
+    "patent:20250165802",
+    "repo:guytevet/motion-diffusion-model",
+    "repo:nv-tlabs/kimodo"
+   ]
+  },
+  "jtbd": {
+   "text": "When building applications that forecast future movements or generate dynamic motion sequences, practitioners need to tokenize continuous temporal data and maintain topological constraints so that predicted trajectories do not violate physical boundaries.",
+   "evidence_ids": [
+    "paper:2606.26661",
+    "paper:2606.05855"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrating VQ-VAE tokenizers into motion generation and prediction frameworks enables structured movement primitives and discrete intention queries that guide sequence generation while preserving topological and physical consistency.",
+   "evidence_ids": [
+    "paper:2606.27547",
+    "paper:2606.26661"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Given the low viability score of 1.0 in dvf:19, the riskiest assumption is that enterprise customers or organizations will pay a profitable price for a VQ-VAE-based motion generation and prediction software solution.",
+   "evidence_ids": [
+    "dvf:19"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "To test the viability assumption indicated by dvf:19, conduct customer interviews combined with a price acceptance test targeting potential users of motion generation and prediction tools, proposing a subscription price threshold of proposed threshold: 500 dollars per month.",
+   "evidence_ids": [
+    "dvf:19"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Success is measured by customer validation during interviews, targeting a proposed threshold of 40 percent of interviewed organizations willing to commit to paid pilot agreements during price acceptance testing.",
+   "evidence_ids": [
+    "dvf:19"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The opportunity is killed if fewer than a proposed threshold of 10 percent of interviewed prospective users express willingness to pay for the proposed motion generation and prediction solution.",
+    "evidence_ids": [
+     "dvf:19"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:guytevet/motion-diffusion-model",
+     "use": "Serves as a baseline and implementation reference for human motion diffusion modeling.",
+     "evidence_ids": [
+      "repo:guytevet/motion-diffusion-model"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:lucidrains/vector-quantize-pytorch",
+     "use": "Provides vector quantization and codebook learning modules for tokenizing motion trajectories.",
+     "evidence_ids": [
+      "repo:lucidrains/vector-quantize-pytorch"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:scann",
+     "use": "Enables efficient vector search and nearest neighbor retrieval over learned discrete token spaces.",
+     "evidence_ids": [
+      "pkg:scann"
+     ],
+     "version": "1.4.2"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized training pipeline and interface that couples VQ-VAE codebook generation with topological constraint filters for downstream trajectory prediction tasks, motivated by dvf:19 and paper:2606.26661.",
+     "evidence_ids": [
+      "dvf:19",
+      "paper:2606.26661"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

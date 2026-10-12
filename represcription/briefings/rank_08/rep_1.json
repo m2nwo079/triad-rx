@@ -1,0 +1,219 @@
+{
+ "rank": 8,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Serves as an invertible, learnable transformation to model complex distributions of residual information or target parameters.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2607.18479"
+    ]
+   },
+   {
+    "term_id": "T:parameter estimation",
+    "role": "Defines the inverse problem or joint retrieval task where physical or statistical parameters are estimated from simulated or observed data.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Provides underlying loss formulations or mapping structures (such as MSE regression losses or direct regression) used during training to match flows or estimate target values.",
+    "evidence_ids": [
+     "paper:2608.05557",
+     "paper:2605.06829"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Simulation-based parameter estimation and continuous parameter inference for complex physical or computational models.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2602.13184"
+   ]
+  },
+  "limitation": {
+   "text": "Standard regression and traditional estimation methods often struggle with complex, unknown error distributions, multi-modal uncertainties, and high-dimensional correlations without capturing full distributions.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are integrated into simulation-based parameter estimation frameworks, transforming complex residual distributions into simple base distributions while leveraging regression objectives or likelihood maximization for end-to-end updates.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2606.01346"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Serves as an invertible, learnable transformation to model complex distributions of residual information or target parameters.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2607.18479"
+     ]
+    },
+    {
+     "term_id": "T:parameter estimation",
+     "role": "Defines the inverse problem or joint retrieval task where physical or statistical parameters are estimated from simulated or observed data.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2601.07013"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Provides underlying loss formulations or mapping structures (such as MSE regression losses or direct regression) used during training to match flows or estimate target values.",
+     "evidence_ids": [
+      "paper:2608.05557",
+      "paper:2605.06829"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Simulation-based parameter estimation and continuous parameter inference for complex physical or computational models.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2602.13184"
+    ]
+   },
+   "limitation": {
+    "text": "Standard regression and traditional estimation methods often struggle with complex, unknown error distributions, multi-modal uncertainties, and high-dimensional correlations without capturing full distributions.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are integrated into simulation-based parameter estimation frameworks, transforming complex residual distributions into simple base distributions while leveraging regression objectives or likelihood maximization for end-to-end updates.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2606.01346"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This briefing analyzes the combination of normalizing flows, parameter estimation, and regression for simulation-based inference. Based on DVF axis scores (D: 3.0, F: 3.0, V: null) from dvf:8, the combination integrates invertible transformations with regression-driven mapping to resolve complex inverse problems (paper:2607.25026). Open source repositories such as repo:atong01/conditional-flow-matching and packages like pkg:torchcfm support this integration.",
+   "evidence_ids": [
+    "dvf:8",
+    "paper:2607.25026",
+    "pkg:torchcfm",
+    "repo:atong01/conditional-flow-matching"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as the patent assignee categories, repositories, and packages in the bundle do not explicitly provide user identity evidence (pkg:torchcfm, pkg:lightgbmlss, repo:atong01/conditional-flow-matching).",
+   "evidence_ids": [
+    "pkg:torchcfm",
+    "pkg:lightgbmlss",
+    "repo:atong01/conditional-flow-matching"
+   ]
+  },
+  "jtbd": {
+   "text": "Perform simulation-based parameter estimation and continuous parameter inference for complex physical or computational models while handling unknown residual error distributions (paper:2607.25026).",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2602.13184"
+   ]
+  },
+  "value_prop": {
+   "text": "Transforms complex residual distributions into simple base distributions using normalizing flows combined with regression objectives, enabling end-to-end parameter updates and uncertainty quantification (paper:2607.25026, paper:2606.01346).",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2606.01346"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated due to missing evidence on axis V (viability), as indicated by the DVF table score of null (dvf:8). We assume that simulation-based parameter estimation using normalizing flows and regression provides sufficient commercial value for users to pay for an integrated software solution.",
+   "evidence_ids": [
+    "dvf:8",
+    "paper:2607.25026"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "To test the riskiest assumption regarding commercial viability (dvf:8), conduct customer interviews and price acceptance tests with prospective modeling teams using a prototype pipeline built from repo:atong01/conditional-flow-matching and pkg:torchcfm.",
+   "evidence_ids": [
+    "dvf:8",
+    "pkg:torchcfm",
+    "repo:atong01/conditional-flow-matching"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness-to-pay responses during customer price acceptance testing, backed by feasibility demonstrated in paper:2607.25026.",
+   "evidence_ids": [
+    "dvf:8",
+    "paper:2607.25026"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed prospective users express willingness to pay for the simulation-based estimation software during validation tests (dvf:8).",
+    "evidence_ids": [
+     "dvf:8"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:torchcfm",
+     "use": "Used for conditional flow matching capabilities to implement continuous normalizing flows in the estimation pipeline (paper:2608.05557).",
+     "evidence_ids": [
+      "paper:2608.05557",
+      "pkg:torchcfm"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "repo:atong01/conditional-flow-matching",
+     "use": "Provides the foundational conditional flow matching library implementation for training flow-based regression models (repo:atong01/conditional-flow-matching).",
+     "evidence_ids": [
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:lightgbmlss",
+     "use": "Serves as an extension for probabilistic modelling and regression tasks within the parameter estimation workflow (pkg:lightgbmlss).",
+     "evidence_ids": [
+      "pkg:lightgbmlss"
+     ],
+     "version": "0.6.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "An integration wrapper combining embedded normalizing flows with empirical-likelihood estimators under moment restrictions for end-to-end simulation-based parameter updates (paper:2607.25026).",
+     "evidence_ids": [
+      "paper:2607.25026"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

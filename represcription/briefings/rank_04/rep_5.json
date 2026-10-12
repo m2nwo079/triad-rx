@@ -1,0 +1,189 @@
+{
+ "rank": 4,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "components": [
+   {
+    "term_id": "M:rag",
+    "role": "Acts as the overall generation and retrieval framework incorporating external knowledge sources to support accurate outputs.",
+    "evidence_ids": [
+     "paper:2609.28048"
+    ]
+   },
+   {
+    "term_id": "T:information retrieval",
+    "role": "Provides the broader search and indexing paradigm through which user queries are matched against relevant documents.",
+    "evidence_ids": [
+     "paper:2609.28048"
+    ]
+   },
+   {
+    "term_id": "T:text retrieval",
+    "role": "Focuses on retrieving specific textual content and matching query terms against textual document corpora.",
+    "evidence_ids": [
+     "paper:2609.28048"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Retrieving relevant documents in text and information retrieval pipelines for Retrieval-Augmented Generation (RAG) where temporal constraints and anchored dates determine document relevance.",
+   "evidence_ids": [
+    "paper:2609.28048"
+   ]
+  },
+  "limitation": {
+   "text": "Dense retrievers and RAG pipelines frequently match queries to documents well on topic but poorly on time, resulting in the retrieval of content that is topically correct yet temporally incorrect.",
+   "evidence_ids": [
+    "paper:2609.28048"
+   ]
+  },
+  "combination": {
+   "text": "A modular temporal branch is attached to a semantic retriever within a RAG pipeline to jointly handle text retrieval and temporal alignment. By resolving temporal expressions and fusing temporal scores with semantic scores, the system improves overall retrieval performance for time-sensitive information retrieval tasks.",
+   "evidence_ids": [
+    "paper:2609.28048"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "components": [
+    {
+     "term_id": "M:rag",
+     "role": "Acts as the overall generation and retrieval framework incorporating external knowledge sources to support accurate outputs.",
+     "evidence_ids": [
+      "paper:2609.28048"
+     ]
+    },
+    {
+     "term_id": "T:information retrieval",
+     "role": "Provides the broader search and indexing paradigm through which user queries are matched against relevant documents.",
+     "evidence_ids": [
+      "paper:2609.28048"
+     ]
+    },
+    {
+     "term_id": "T:text retrieval",
+     "role": "Focuses on retrieving specific textual content and matching query terms against textual document corpora.",
+     "evidence_ids": [
+      "paper:2609.28048"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Retrieving relevant documents in text and information retrieval pipelines for Retrieval-Augmented Generation (RAG) where temporal constraints and anchored dates determine document relevance.",
+    "evidence_ids": [
+     "paper:2609.28048"
+    ]
+   },
+   "limitation": {
+    "text": "Dense retrievers and RAG pipelines frequently match queries to documents well on topic but poorly on time, resulting in the retrieval of content that is topically correct yet temporally incorrect.",
+    "evidence_ids": [
+     "paper:2609.28048"
+    ]
+   },
+   "combination": {
+    "text": "A modular temporal branch is attached to a semantic retriever within a RAG pipeline to jointly handle text retrieval and temporal alignment. By resolving temporal expressions and fusing temporal scores with semantic scores, the system improves overall retrieval performance for time-sensitive information retrieval tasks.",
+    "evidence_ids": [
+     "paper:2609.28048"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing examines the combination of RAG, information retrieval, and text retrieval to address temporal mismatch in search pipelines, supported by findings from paper:2609.28048. By attaching a modular temporal branch to a semantic retriever, systems can resolve temporal expressions and fuse them with semantic scores. This approach improves text retrieval and general information retrieval performance for time-sensitive tasks as indicated in paper:2609.28048.",
+   "evidence_ids": [
+    "dvf:4",
+    "paper:2609.28048"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified due to a lack of explicit assignee categories, repositories, or package telemetry in the bundle specifically defining an end-user group for this temporal RAG integration.",
+   "evidence_ids": [
+    "dvf:4",
+    "paper:2609.28048"
+   ]
+  },
+  "jtbd": {
+   "text": "When performing document search within a RAG pipeline, users want to retrieve documents that are both semantically relevant and temporally accurate so that time-sensitive information needs are properly satisfied without returning outdated or mismatched text.",
+   "evidence_ids": [
+    "dvf:4",
+    "paper:2609.28048"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrating a modular temporal branch into existing text and information retrieval pipelines solves the limitation where semantic-only retrievers surface on-topic yet temporally wrong content. This dual scoring mechanism enhances retrieval precision and improves metrics like MRR and R@1 on temporal benchmarks.",
+   "evidence_ids": [
+    "dvf:4",
+    "paper:2609.28048"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence in the evidence bundle. We assume that enterprise users will pay for a temporally-aware text retrieval and RAG add-on module.",
+   "evidence_ids": [
+    "dvf:4"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with potential enterprise search users to validate viability and willingness to pay for temporal text retrieval enhancements, addressing the riskiest assumption identified by dvf:4.",
+   "evidence_ids": [
+    "dvf:4"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Proposed success metric: a proposed threshold of 40 percent of interviewed prospective users expressing willingness to adopt and pay for the temporal RAG retrieval module, evaluated using feedback gathered during customer interviews and price acceptance tests as mandated by dvf:4.",
+   "evidence_ids": [
+    "dvf:4"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed kill criteria: terminate the project if fewer than a proposed threshold of 10 percent of interviewed customers confirm a willingness to pay for temporal text retrieval capabilities during the price acceptance test.",
+    "evidence_ids": [
+     "dvf:4"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:hkuds/lightrag",
+     "use": "Will be utilized as the baseline RAG framework backbone for integrating the modular temporal retrieval components.",
+     "evidence_ids": [
+      "repo:hkuds/lightrag"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:scrydb",
+     "use": "Will be used to support lexical, semantic, and hybrid search operations within SQLite as part of the retrieval stack.",
+     "evidence_ids": [
+      "paper:2608.24060",
+      "pkg:scrydb"
+     ],
+     "version": "0.2.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build a modular temporal branch encoder that resolves anchored temporal expressions to intervals, computes Gaussian-KL distributional embeddings, and fuses temporal scores with semantic retriever scores, as motivated by paper:2609.28048 and dvf:4.",
+     "evidence_ids": [
+      "dvf:4",
+      "paper:2609.28048"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

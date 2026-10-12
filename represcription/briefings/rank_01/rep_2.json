@@ -1,0 +1,217 @@
+{
+ "rank": 1,
+ "rep": 2,
+ "seed": 20261009,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:pc",
+    "role": "Serves as a constraint-based causal discovery algorithm that produces candidate edge skeletons or is refined for causal graph learning.",
+    "evidence_ids": [
+     "paper:2608.27472",
+     "paper:2608.15332",
+     "paper:2606.23880"
+    ]
+   },
+   {
+    "term_id": "T:causal discovery",
+    "role": "Identifies causal interaction networks and graph structures from observational data.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2606.23880"
+    ]
+   },
+   {
+    "term_id": "T:prediction",
+    "role": "Acts as the objective to evaluate or prune causal edges based on which interactions genuinely improve forecasting accuracy.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2606.23880"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Simultaneous causal network inference and forecasting for complex systems.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  },
+  "limitation": {
+   "text": "Causal discovery methods often ignore whether the inferred structures support prediction, whereas prediction approaches operate as black boxes without revealing the underlying interaction dynamics.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  },
+  "combination": {
+   "text": "Constraint-based causal discovery algorithms like the PC algorithm provide high-recall candidate edge skeletons, which are then pruned or refined by learning which edges genuinely improve prediction performance.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:pc",
+     "role": "Serves as a constraint-based causal discovery algorithm that produces candidate edge skeletons or is refined for causal graph learning.",
+     "evidence_ids": [
+      "paper:2608.27472",
+      "paper:2608.15332",
+      "paper:2606.23880"
+     ]
+    },
+    {
+     "term_id": "T:causal discovery",
+     "role": "Identifies causal interaction networks and graph structures from observational data.",
+     "evidence_ids": [
+      "paper:2608.17452",
+      "paper:2606.23880"
+     ]
+    },
+    {
+     "term_id": "T:prediction",
+     "role": "Acts as the objective to evaluate or prune causal edges based on which interactions genuinely improve forecasting accuracy.",
+     "evidence_ids": [
+      "paper:2608.17452",
+      "paper:2606.23880"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Simultaneous causal network inference and forecasting for complex systems.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2606.23880"
+    ]
+   },
+   "limitation": {
+    "text": "Causal discovery methods often ignore whether the inferred structures support prediction, whereas prediction approaches operate as black boxes without revealing the underlying interaction dynamics.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2606.23880"
+    ]
+   },
+   "combination": {
+    "text": "Constraint-based causal discovery algorithms like the PC algorithm provide high-recall candidate edge skeletons, which are then pruned or refined by learning which edges genuinely improve prediction performance.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2606.23880"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining the PC algorithm, causal discovery, and prediction for simultaneous causal network inference and forecasting in complex systems. As noted by dvf:1, this combination holds a desirability score of 3.0 and a feasibility score of 4.0, but faces viability challenges with a score of 1.0. The framework leverages constraint-based causal discovery to generate candidate edge skeletons, which are subsequently pruned using predictive objectives to ensure the network supports accurate forecasting.",
+   "evidence_ids": [
+    "dvf:1",
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  },
+  "target_user": {
+   "text": "Academic researchers and software developers working with time-series analysis, causal network inference, and predictive modeling, as evidenced by academic patent assignees and specialized open-source repositories and packages.",
+   "evidence_ids": [
+    "patent:11913865",
+    "repo:bloomberg/causal-ts",
+    "pkg:causalts"
+   ]
+  },
+  "jtbd": {
+   "text": "Simultaneously inferring causal interaction networks and forecasting system dynamics from observational data without treating predictive models as uninterpretable black boxes.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  },
+  "value_prop": {
+   "text": "It provides high-fidelity causal network reconstruction alongside predictive accuracy comparable to models supplied with true networks, overcoming the limitation where causal discovery ignores prediction and predictive models lack explanatory transparency.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2606.23880"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Given the viability score of 1.0 from dvf:1, the riskiest assumption is that prospective enterprise customers are willing to pay for an integrated causal discovery and prediction software solution rather than relying on existing standalone forecasting tools or free open-source scripts.",
+   "evidence_ids": [
+    "dvf:1"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Conduct structured customer interviews and price acceptance tests with prospective data science teams to determine commercial viability and willingness to pay for combined causal-predictive software, addressing the lowest viability axis score in dvf:1.",
+   "evidence_ids": [
+    "dvf:1"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "A proposed threshold of at least 40 percent of interviewed enterprise data science leads confirming a strong willingness to adopt and pay for the integrated solution during price acceptance testing.",
+   "evidence_ids": [
+    "dvf:1"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 15 percent of interviewed customers expressing a willingness to pay for the combined solution during the price acceptance test.",
+    "evidence_ids": [
+     "dvf:1"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:bloomberg/causal-ts",
+     "use": "Utilized for time-series causal discovery algorithms and baseline implementations.",
+     "evidence_ids": [
+      "repo:bloomberg/causal-ts"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:causalts",
+     "use": "Used as a software package dependency for handling time-series causal discovery operations.",
+     "evidence_ids": [
+      "pkg:causalts"
+     ],
+     "version": "0.27.0"
+    },
+    {
+     "id": "pkg:greedy-ancestral-search",
+     "use": "Applied for ancestral search routines during graph structure optimization.",
+     "evidence_ids": [
+      "pkg:greedy-ancestral-search"
+     ],
+     "version": "0.1.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified execution pipeline that coordinates constraint-based PC skeleton generation with predictive refinement gating to simultaneously forecast system dynamics.",
+     "evidence_ids": [
+      "paper:2608.17452",
+      "paper:2606.23880",
+      "dvf:1"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

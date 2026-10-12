@@ -1,0 +1,238 @@
+{
+ "rank": 8,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Acts as an invertible generative model or parametric transformation to model complex residual, feature, or target distributions.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2607.18479",
+     "paper:2606.01346"
+    ]
+   },
+   {
+    "term_id": "T:parameter estimation",
+    "role": "Serves as the overarching computational or statistical task to infer unknown physical or model parameters.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013",
+     "paper:2511.02277"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Provides supervised training objectives or functional mappings between inputs and target outputs.",
+    "evidence_ids": [
+     "paper:2608.05557",
+     "paper:2606.01346",
+     "paper:2605.06829"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Simulation-based or probabilistic parameter estimation.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  },
+  "limitation": {
+   "text": "Traditional regression and standard parameter estimation methods struggle with complex, unknown, non-Gaussian, or multimodal distributions of residuals and uncertainties.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are integrated into parameter estimation and regression frameworks to transform complex residual or target distributions into simple base distributions, enabling likelihood-based estimation and improved handling of non-Gaussian uncertainties.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Acts as an invertible generative model or parametric transformation to model complex residual, feature, or target distributions.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2607.18479",
+      "paper:2606.01346"
+     ]
+    },
+    {
+     "term_id": "T:parameter estimation",
+     "role": "Serves as the overarching computational or statistical task to infer unknown physical or model parameters.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2601.07013",
+      "paper:2511.02277"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Provides supervised training objectives or functional mappings between inputs and target outputs.",
+     "evidence_ids": [
+      "paper:2608.05557",
+      "paper:2606.01346",
+      "paper:2605.06829"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Simulation-based or probabilistic parameter estimation.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013"
+    ]
+   },
+   "limitation": {
+    "text": "Traditional regression and standard parameter estimation methods struggle with complex, unknown, non-Gaussian, or multimodal distributions of residuals and uncertainties.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are integrated into parameter estimation and regression frameworks to transform complex residual or target distributions into simple base distributions, enabling likelihood-based estimation and improved handling of non-Gaussian uncertainties.",
+    "evidence_ids": [
+     "paper:2607.25026",
+     "paper:2601.07013"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining normalizing flows, parameter estimation, and regression to handle complex non-Gaussian uncertainties. Normalizing flows act as invertible generative models that transform complex residual distributions into simple base distributions for parameter estimation tasks. Regression provides the functional mapping and supervised training objectives to support these estimation pipelines.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2607.18479",
+    "paper:2606.01346",
+    "paper:2601.07013",
+    "paper:2511.02277",
+    "paper:2608.05557",
+    "paper:2605.06829"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified due to a lack of explicit patent assignee categories or user descriptions in the bundle, though open-source repositories and packages indicate usage by quantitative modelers, researchers, and developers working with probabilistic machine learning libraries.",
+   "evidence_ids": [
+    "pkg:torchcfm",
+    "pkg:lightgbmlss",
+    "pkg:xgboostlss",
+    "pkg:lf2i",
+    "repo:atong01/conditional-flow-matching",
+    "repo:dreamfold/foldflow",
+    "repo:spm/spm",
+    "repo:statmixedml/lightgbmlss",
+    "repo:statmixedml/xgboostlss"
+   ]
+  },
+  "jtbd": {
+   "text": "When researchers and quantitative analysts perform simulation-based or probabilistic parameter estimation under complex conditions, they want to accurately capture multimodal or non-Gaussian uncertainties so that they can avoid the performance degradation of traditional regression models.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrating normalizing flows into regression and parameter estimation frameworks transforms complex residual distributions into simple base distributions, enabling likelihood-based estimation that handles non-Gaussian uncertainties better than traditional feedforward regression models.",
+   "evidence_ids": [
+    "paper:2607.25026",
+    "paper:2601.07013"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), designated due to missing evidence. We assume that target users will pay for a commercial software wrapper or integrated library combining normalizing flows with probabilistic regression and parameter estimation.",
+   "evidence_ids": [
+    "dvf:8"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with a prototype workflow combining normalizing flows and regression-based parameter estimation to validate willingness to pay. This directly tests the viability axis designated due to missing evidence in dvf:8.",
+   "evidence_ids": [
+    "dvf:8"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "The success metric is the proportion of interviewed target users expressing positive willingness to pay, with a proposed threshold: 40 percent of interviewed prospects accepting a commercial software price point, as motivated by dvf:8.",
+   "evidence_ids": [
+    "dvf:8"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Kill the project if fewer than a proposed threshold: 10 percent of interviewed target users indicate a willingness to pay during price acceptance testing, as designated by the viability constraints in dvf:8.",
+    "evidence_ids": [
+     "dvf:8"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:torchcfm",
+     "use": "Provides foundational conditional flow matching capabilities for flow-based modeling.",
+     "evidence_ids": [
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "pkg:lightgbmlss",
+     "use": "Extends gradient boosting to probabilistic modeling for regression tasks.",
+     "evidence_ids": [
+      "repo:statmixedml/lightgbmlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:xgboostlss",
+     "use": "Supplies probabilistic boosting extensions to model distributional regression parameters.",
+     "evidence_ids": [
+      "repo:statmixedml/xgboostlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:lf2i",
+     "use": "Facilitates likelihood-free inference and simulation-based parameter estimation workflows.",
+     "evidence_ids": [
+      "pkg:lf2i"
+     ],
+     "version": "0.3.1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build a unified pipeline wrapper that connects embedded normalizing flows with probabilistic regression backbones to execute end-to-end parameter estimation under moment restrictions.",
+     "evidence_ids": [
+      "paper:2607.25026",
+      "paper:2601.07013"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

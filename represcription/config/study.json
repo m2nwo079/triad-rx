@@ -1,0 +1,1156 @@
+{
+  "design_version": "v0.6.0",
+  "design_section": "10.2",
+  "arxiv_categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CV",
+    "cs.CL",
+    "stat.ML"
+  ],
+  "timepoints": {
+    "T1": {
+      "role": "train",
+      "build": [
+        2014,
+        2018
+      ],
+      "buffer": [
+        2019,
+        2019
+      ],
+      "label": [
+        2020,
+        2021
+      ]
+    },
+    "T2": {
+      "role": "evaluate",
+      "build": [
+        2017,
+        2021
+      ],
+      "buffer": [
+        2022,
+        2022
+      ],
+      "label": [
+        2023,
+        2024
+      ]
+    }
+  },
+  "applied": {
+    "build_years": 5,
+    "anchor": "data_cutoff",
+    "prescription": {
+      "redundancy_rules": [
+        "D1_same_name_ignoring_spaces",
+        "D2_method_name_within_task_name",
+        "D3_same_type_text_cosine"
+      ],
+      "d3_same_type_cosine_quantile": 0.985,
+      "training": "T1+T2 labels, feature sets by V2 verdict, trees by stratified CV on the combined set",
+      "calibration": "none (ranking only; expected hit rate is the T2 Precision@k of the engine used)"
+    },
+    "dvf": {
+      "population": "prospective_registration",
+      "prospective_file": "prospective/2026-10-11.json",
+      "patent_unit": "pair",
+      "missing_assignee": "exclude_and_report",
+      "f_pair_aggregate": "min",
+      "f_implementation": "terms_with_repo",
+      "percentile_ties": "average",
+      "riskiest": {
+        "missing_axis": "first",
+        "tie_break": "axis_mean_percentile",
+        "axis_order": [
+          "F",
+          "V",
+          "D"
+        ]
+      },
+      "bootstrap": {
+        "method": "poisson",
+        "replicates": 1000,
+        "seed": 20261006
+      }
+    },
+    "briefing": {
+      "top_n": 20,
+      "order": "rank_prescription",
+      "bundle": {
+        "papers_per_pair": 5,
+        "paper_order": "first_date_desc",
+        "abstract": "full",
+        "repos_max": 5,
+        "repo_order": "stars_window_desc",
+        "packages_max": 5,
+        "package_order": "second_half_downloads_desc",
+        "patents_max": 5,
+        "patent_order": "latest_document_date_desc",
+        "tie_break": "evidence_id_asc"
+      },
+      "generation": {
+        "model": "gemini-3.5-flash-lite",
+        "temperature": 1.0,
+        "seed_base": 20261007,
+        "repetitions": 5,
+        "pause_seconds": 4.5,
+        "prompt_version": "v3",
+        "output_language": "en",
+        "max_sentences_per_text": 3
+      }
+    },
+    "evidence": {
+      "patent_window": "build_window",
+      "repo_unit": "pair_evidence_papers",
+      "readme_max_arxiv_ids": 10,
+      "star_window_days": 365,
+      "star_aggregate": "sum",
+      "package_link": "pypi_metadata_urls",
+      "download_growth": "half_over_half",
+      "growth_smoothing": 1,
+      "download_half_weeks": 12
+    },
+    "assignee_classes": {
+      "academic_patterns": [
+        "University",
+        "Universität",
+        "Université",
+        "Universidad",
+        "Università",
+        "College",
+        "Institute of Technology",
+        "Polytechnic",
+        "Academy of Sciences"
+      ],
+      "ambiguous_words": [
+        "Institute",
+        "Research",
+        "Laboratory",
+        "Foundation",
+        "Hospital"
+      ],
+      "company_suffixes": [
+        "Inc",
+        "Corp",
+        "Co.",
+        "Ltd",
+        "LLC",
+        "GmbH",
+        "AG",
+        "S.A.",
+        "K.K.",
+        "Corporation",
+        "Incorporated",
+        "Limited",
+        "Company"
+      ],
+      "codes": {
+        "company_or_academic": [
+          "2",
+          "3"
+        ],
+        "individual": [
+          "4",
+          "5"
+        ],
+        "government": [
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "partial_interest_prefix": "1"
+    },
+    "rl_case": {
+      "term_patterns": [
+        "reinforcement learning",
+        "policy optimization",
+        "actor critic",
+        "actor-critic",
+        "q learning",
+        "q-learning",
+        "deep q",
+        "temporal difference",
+        "markov decision"
+      ],
+      "deep_dive": "all_reps_complete",
+      "scope": "briefing_targets",
+      "tod_dir": "external/tod"
+    }
+  },
+  "vocab": {
+    "r4_wordlist": "/usr/share/dict/words",
+    "r3_min_acronym_len": 3,
+    "restore_min_support": 2,
+    "r5_rule": {
+      "method": "resampling_stability_with_matching_noise",
+      "stability": 0.95,
+      "precision": "m1_stratum_wilson_lower_95"
+    },
+    "r6_rule": {
+      "method": "chung_lu_validity",
+      "paper_degree_quantile": 0.99
+    },
+    "m1_fix": {
+      "junk_pattern": "[<>\"{}\\[\\]|\\\\`]",
+      "r3_exclude": [
+        {
+          "term_id": "M:linear discriminant analysis",
+          "surface": "LDA"
+        },
+        {
+          "term_id": "M:energy based model",
+          "surface": "EBM"
+        },
+        {
+          "term_id": "M:slime mould algorithm",
+          "surface": "SMA"
+        },
+        {
+          "term_id": "M:conditional random field",
+          "surface": "CRF"
+        },
+        {
+          "term_id": "M:diffusion convolutional neural networks",
+          "surface": "DCNN"
+        },
+        {
+          "term_id": "M:semantic cross attention",
+          "surface": "SCA"
+        },
+        {
+          "term_id": "M:switchable atrous convolution",
+          "surface": "SAC"
+        },
+        {
+          "term_id": "M:g3d",
+          "surface": "G3D"
+        },
+        {
+          "term_id": "M:region proposal network",
+          "surface": "RPN"
+        },
+        {
+          "term_id": "M:approximate bayesian computation",
+          "surface": "ABC"
+        },
+        {
+          "term_id": "M:masked autoencoder",
+          "surface": "MAE"
+        }
+      ]
+    }
+  },
+  "r4_review": {
+    "seed": 20261002,
+    "n_per_stratum": 3,
+    "allow_threshold": 0.6
+  },
+  "quality": {
+    "m1": {
+      "seed": 20261003,
+      "n_per_stratum": 100,
+      "strata": [
+        "method_ci",
+        "task_ci",
+        "acronym_cs"
+      ],
+      "pass_rule": {
+        "statistic": "wilson_lower_95",
+        "pass": 0.8,
+        "conditional": 0.75
+      },
+      "max_remeasure": 2
+    },
+    "m2": {
+      "seed": 20261004,
+      "n_per_category": 100,
+      "categories": [
+        "company",
+        "academic",
+        "government",
+        "individual"
+      ],
+      "pass_rule": {
+        "statistic": "wilson_lower_95",
+        "pass": 0.8,
+        "conditional": 0.75
+      },
+      "max_remeasure": 2,
+      "population": "all_patent_evidence_assignees"
+    },
+    "q1": {
+      "seed": 20261101,
+      "n_sentences": 100,
+      "population": "evidential_fields",
+      "judging": "cited_evidence_only"
+    },
+    "q2": {
+      "frame_agreement": "modal_status_and_reason",
+      "mvp_type": "fixed_by_rule_reported_as_is",
+      "unit": "repetition"
+    },
+    "checks": {
+      "superiority_phrases": [
+        "outperform",
+        "state-of-the-art",
+        "state of the art",
+        "sota",
+        "surpass",
+        "superior",
+        "best-in-class",
+        "beats"
+      ],
+      "threshold_marker": "proposed threshold",
+      "mvp_keywords": {
+        "F": [
+          "proof of concept",
+          "poc",
+          "prototype"
+        ],
+        "V": [
+          "interview",
+          "price"
+        ],
+        "D": [
+          "landing page",
+          "interview"
+        ]
+      }
+    },
+    "cross_model": {
+      "model": "Qwen/Qwen3.5-9B",
+      "fallback": "Qwen/Qwen3-8B",
+      "quantization": "bitsandbytes 4-bit nf4, compute float16",
+      "decoding": "greedy",
+      "thinking": false,
+      "max_new_tokens": 256,
+      "prompt_version": "v1",
+      "invalid_output": "label_0",
+      "metrics": [
+        "agreement",
+        "cohen_kappa",
+        "table",
+        "model_supported_rate"
+      ]
+    }
+  },
+  "secondary_analyses": {
+    "S1": {
+      "description": "V1 and V2 recomputed with all case-sensitive acronym surfaces removed",
+      "drop_match_modes": [
+        "cs"
+      ]
+    }
+  },
+  "candidates": {
+    "pair_rule": "pair_stability_with_r5_stability",
+    "two_hop": {
+      "score": "adamic_adar_missing_pair",
+      "tie_break": [
+        "weakest_pair_count",
+        "triad_id"
+      ],
+      "n_ratio_to_open_triangles": 1.0
+    },
+    "coherence": "exclude_all_task_triads"
+  },
+  "labels": {
+    "null_model": "chung_lu_triadic",
+    "probability_cap": 1.0,
+    "test": "poisson_binomial_upper_tail_exact_by_degree",
+    "correction": "benjamini_hochberg",
+    "fdr": 0.05,
+    "scope": "all candidates of the timepoint"
+  },
+  "features": {
+    "recent_years": 2,
+    "text": {
+      "min_df": 5,
+      "max_df": 0.5,
+      "max_features": 50000,
+      "svd_dims": 100,
+      "seed": 20261004
+    },
+    "sets": {
+      "P": [
+        "P_aa_min",
+        "P_aa_mean",
+        "P_aa_gmean",
+        "P_cn_min",
+        "P_cn_mean",
+        "P_cn_gmean",
+        "P_npmi_min",
+        "P_npmi_mean",
+        "P_npmi_max",
+        "P_logfreq_min",
+        "P_logfreq_mean"
+      ],
+      "H": [
+        "H_pairedges_min",
+        "H_pairedges_mean",
+        "H_pairedges_gmean",
+        "H_triad_cn",
+        "H_size_weighted_aa",
+        "H_related_edge_size_mean",
+        "H_open_triangle"
+      ],
+      "T": [
+        "T_cos_mean",
+        "T_cos_min",
+        "T_volume"
+      ],
+      "R": [
+        "R_growth_min",
+        "R_growth_mean"
+      ]
+    }
+  },
+  "model": {
+    "type": "lightgbm_binary",
+    "params": {
+      "num_leaves": 7,
+      "min_data_in_leaf": 20,
+      "learning_rate": 0.05,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambda_l2": 1.0
+    },
+    "n_estimators_max": 2000,
+    "early_stopping_rounds": 100,
+    "cv_folds": 5,
+    "cv_metric": "average_precision",
+    "seeds": [
+      20261011,
+      20261012,
+      20261013,
+      20261014,
+      20261015
+    ],
+    "engine_sets": [
+      "P",
+      "H",
+      "T",
+      "R"
+    ],
+    "v2_baseline_sets": [
+      "P",
+      "T",
+      "R"
+    ]
+  },
+  "evaluation": {
+    "top_k": 100,
+    "secondary_k": [
+      50,
+      500
+    ],
+    "bootstrap_n": 1000,
+    "bootstrap_seed": 20261016,
+    "ci_level": 0.95,
+    "rule": "pass only if both candidate and term-block bootstrap lower bounds exceed the threshold",
+    "score": "mean predicted probability over model seeds"
+  },
+  "prospective": {
+    "anchor": "data_cutoff",
+    "buffer_years": 1,
+    "label_years": 2,
+    "descriptive_years": [
+      1,
+      2
+    ],
+    "top_k": 100,
+    "population": "candidates passing applied.prescription redundancy filter",
+    "baseline": {
+      "feature": "P_aa_min",
+      "order": "desc",
+      "ties": "term_ids",
+      "file": "prospective/2026-10-11_baseline.json"
+    },
+    "registration": "prospective/2026-10-11.json",
+    "ranking": "data/derived/applied/ranking.parquet",
+    "vocab": "vocab/timepoints/applied_v3_final.json",
+    "bootstrap": "evaluation"
+  },
+  "engine_reliability": {
+    "prereg_file": "preregistration_engine.md",
+    "timepoints": {
+      "T3": {
+        "role": "evaluate",
+        "build": [
+          2019,
+          2023
+        ],
+        "buffer": [
+          2024,
+          2024
+        ],
+        "label_start": 2025,
+        "label_end": "data_cutoff"
+      },
+      "R2": {
+        "role": "train",
+        "build": [
+          2015,
+          2019
+        ],
+        "buffer": [
+          2020,
+          2020
+        ],
+        "label": [
+          2021,
+          2022
+        ]
+      },
+      "R3": {
+        "role": "train",
+        "build": [
+          2016,
+          2020
+        ],
+        "buffer": [
+          2021,
+          2021
+        ],
+        "label": [
+          2022,
+          2023
+        ]
+      }
+    },
+    "dev_eval": {
+      "timepoints": [
+        "T2"
+      ],
+      "k": [
+        50,
+        100,
+        300,
+        500
+      ],
+      "rankings": {
+        "engine": "engine_mean",
+        "engine_ptr": "baseline_mean",
+        "proximity": "P_aa_min",
+        "popularity": "P_logfreq_mean",
+        "npmi_min": "P_npmi_min",
+        "npmi_mean": "P_npmi_mean",
+        "recency": "R_growth_mean",
+        "text": "T_cos_mean"
+      },
+      "top_terms": 5,
+      "bootstrap": "evaluation",
+      "power": {
+        "rankings": [
+          "engine",
+          "engine_ptr",
+          "engine_cap3",
+          "engine_cap5",
+          "engine_cap10"
+        ],
+        "outer": 200,
+        "inner": 200,
+        "seed": 20261020,
+        "method": "nested bootstrap: outer term-block resample as a pseudo replication, inner candidate and term-block bootstraps as in the verdict"
+      },
+      "diversify": {
+        "base": "engine",
+        "caps": [
+          3,
+          5,
+          10
+        ]
+      }
+    },
+    "training": {
+      "rule": "label window must end by the decision time (end of the evaluated timepoint's build window)",
+      "T3": [
+        "T1",
+        "R2",
+        "R3"
+      ]
+    },
+    "label_v2": {
+      "design_timepoint": "T1",
+      "window_sentences": 2,
+      "min_evidence_papers": 1,
+      "title_as_first_sentence": true,
+      "abbreviations": [
+        "et al.",
+        "e.g.",
+        "i.e.",
+        "vs.",
+        "cf.",
+        "Fig.",
+        "Eq.",
+        "etc.",
+        "approx."
+      ],
+      "comparison_cues": [
+        "compared with",
+        "compared to",
+        "comparison",
+        "compare",
+        "comparing",
+        "outperform",
+        "outperforms",
+        "outperformed",
+        "outperforming",
+        "versus",
+        "vs.",
+        "baseline",
+        "baselines",
+        "superior to",
+        "better than",
+        "competitive with",
+        "in contrast to",
+        "unlike",
+        "instead of",
+        "rather than",
+        "alternative to",
+        "benchmark",
+        "benchmarks",
+        "benchmarking",
+        "compared",
+        "competing",
+        "alternatives",
+        "existing",
+        "previous",
+        "prior",
+        "state-of-the-art",
+        "state of the art",
+        "survey",
+        "review"
+      ],
+      "evidence_matching": {
+        "drop_nested": true,
+        "acronym_needs_full_name": true,
+        "skip_surface_chars": [
+          "+"
+        ]
+      },
+      "attempt": 1,
+      "previous_review_keys": [
+        "data/review/label_evidence_T1_attempt0_key.csv"
+      ],
+      "sample": {
+        "positive": 100,
+        "negative": 50,
+        "seed": 20261022
+      },
+      "review_file": "data/review/label_evidence_T1_attempt1.csv",
+      "review_key_file": "data/review/label_evidence_T1_attempt1_key.csv"
+    },
+    "conditional": {
+      "timepoints": [
+        "T1",
+        "T2"
+      ],
+      "pair_min_counts": [
+        1,
+        5
+      ],
+      "stable_pairs": true,
+      "generator": {
+        "seed_pairs": [
+          "stable",
+          "min_5"
+        ],
+        "scores": [
+          "npmi_mean",
+          "min_count",
+          "adamic_adar"
+        ],
+        "budget_multiples_of_first_candidates": [
+          1,
+          5,
+          25,
+          100
+        ],
+        "tune_timepoint": "T1",
+        "confirm_timepoint": "T2",
+        "selected": {
+          "seed_pairs": "stable",
+          "score": "npmi_mean"
+        },
+        "diagnosis_budget_multiple": 5
+      },
+      "rediagnosis": {
+        "train_timepoint": "T1",
+        "eval_timepoint": "T2",
+        "models": {
+          "engine": [
+            "P",
+            "H",
+            "T",
+            "R"
+          ],
+          "engine_no_h": [
+            "P",
+            "T",
+            "R"
+          ]
+        },
+        "feature_rankings": {
+          "P_npmi_mean": "P_npmi_mean"
+        },
+        "k": [
+          100,
+          500,
+          1000,
+          5000
+        ]
+      }
+    },
+    "signals": {
+      "timepoints": [
+        "T1",
+        "T2"
+      ],
+      "sets": {
+        "E": [
+          "E_share_min",
+          "E_share_mean",
+          "E_pairs"
+        ],
+        "S": [
+          "S_ctx_max",
+          "S_ctx_mean"
+        ]
+      },
+      "models": {
+        "engine": [
+          "P",
+          "H",
+          "T",
+          "R"
+        ],
+        "engine_E": [
+          "P",
+          "H",
+          "T",
+          "R",
+          "E"
+        ],
+        "engine_S": [
+          "P",
+          "H",
+          "T",
+          "R",
+          "S"
+        ],
+        "engine_ES": [
+          "P",
+          "H",
+          "T",
+          "R",
+          "E",
+          "S"
+        ]
+      },
+      "diversify_caps": [
+        5,
+        10
+      ],
+      "learned_generator": {
+        "oof_folds": 5,
+        "chunk_rows": 2000000
+      }
+    },
+    "pipeline_compare": {
+      "reference": "npmi_engine",
+      "pipelines": {
+        "npmi_engine": {
+          "features": "data/derived/features_v2/main",
+          "order": "engine"
+        },
+        "learned_generator": {
+          "features": "data/derived/features_learned/main",
+          "order": "generator"
+        },
+        "learned_engine": {
+          "features": "data/derived/features_learned/main",
+          "order": "engine"
+        },
+        "learned_engine_no_h": {
+          "features": "data/derived/features_learned/main",
+          "order": "engine_no_h"
+        }
+      },
+      "k": [
+        100,
+        500,
+        1000,
+        5000
+      ]
+    },
+    "verdict_pipeline": {
+      "primary": "npmi_engine",
+      "secondary": {
+        "learned_generator_recall": "recall at the fixed budget of the learned third-term score against the nPMI generator; reported, never part of the primary verdict"
+      }
+    },
+    "power_v2": {
+      "eval_timepoint": "T2",
+      "train_timepoint": "T1",
+      "budget_multiples_of_first_candidates": [
+        1,
+        5
+      ],
+      "k": [
+        100,
+        500,
+        1000,
+        5000
+      ],
+      "baseline_feature": "P_npmi_mean",
+      "outer": 200,
+      "inner": 200,
+      "seed": 20261023,
+      "minimum_sequence_power": 0.8,
+      "rule": "choose the budget and k with the highest power of passing the recall and random-precision steps in sequence under the conservative scenario; record any shortfall below minimum_sequence_power before T3 is opened",
+      "conservative_scenario": "keep each positive with probability equal to the T3 label window length over the evaluation label window length"
+    },
+    "verdict": {
+      "budget_multiple_of_first_candidates": 5,
+      "k": 5000,
+      "descriptive_k": [
+        100,
+        500,
+        1000
+      ],
+      "sequence": [
+        {
+          "step": "S1_recall",
+          "statistic": "recall of the generator's top B minus that of the first-study candidates",
+          "threshold": 0.0
+        },
+        {
+          "step": "S2_random",
+          "statistic": "lift of the engine's top k inside the pool",
+          "threshold": 1.0
+        },
+        {
+          "step": "S3_npmi",
+          "statistic": "engine precision at k minus P_npmi_mean precision at k inside the pool",
+          "threshold": 0.0
+        },
+        {
+          "step": "S4_h_contribution",
+          "statistic": "engine precision at k minus engine without H precision at k inside the pool",
+          "threshold": 0.0
+        }
+      ],
+      "rule": "a step passes only if both the candidate and the term-block bootstrap lower bounds exceed its threshold; a step is tested only if every earlier step passed",
+      "calibration": {
+        "method": "platt",
+        "fit_on": "out-of-fold engine scores of the training timepoints",
+        "metrics": [
+          "brier",
+          "reliability_curve"
+        ],
+        "role": "secondary"
+      },
+      "power_result": {
+        "file": "results/engine_power.json",
+        "sha256": "d4838302fa0ba635e85e2c1959929a073073fe880f0bb4732af8d03b6cc13181"
+      }
+    }
+  },
+  "represcription": {
+    "prereg_file": "preregistration_represcription.md",
+    "run_dir": "represcription",
+    "timepoint": "applied",
+    "engine": {
+      "generator": "engine_reliability.conditional.generator.selected",
+      "model": "engine_reliability.conditional.rediagnosis.models.engine",
+      "budget_multiple": 5,
+      "training": [
+        "T1",
+        "R2",
+        "R3",
+        "T2",
+        "T3"
+      ]
+    },
+    "prescription": {
+      "filter": "applied.prescription.redundancy_rules",
+      "ties": "term_ids",
+      "top_k": 100
+    },
+    "prospective": {
+      "rules": "prospective",
+      "baseline_feature": "P_aa_min"
+    },
+    "downstream": {
+      "rules": "applied (design 6-9)",
+      "patent_matching": "v3 applied vocabulary and refined matching"
+    },
+    "review": {
+      "scope": "applied final terms absent from every reviewed timepoint (matching.engine.reviewed_timepoints)",
+      "common_words_file": "data/review/common_words_applied.csv",
+      "synonyms_file": "data/review/synonyms_applied.csv",
+      "seed": 20261102,
+      "rules": "matching.common_words and matching.synonyms",
+      "combined": {
+        "common_words": "vocab/common_word_decisions_represcription.json",
+        "synonyms": "vocab/synonym_decisions_represcription.json"
+      }
+    },
+    "q1": {
+      "seed": 20261101,
+      "n_sentences": 100,
+      "population": "evidential_fields",
+      "judging": "cited_evidence_only"
+    },
+    "comparison": [
+      "top_k_overlap",
+      "shared_rank_spearman",
+      "dvf_axis_scores",
+      "riskiest_axis",
+      "mvp_type",
+      "concept_insufficient_share",
+      "q1"
+    ],
+    "label": "engine passed the third-study verdict (T3 reused, not an independent confirmation)"
+  },
+  "matching": {
+    "prereg_file": "preregistration_matching.md",
+    "engine": {
+      "dev_eval": {
+        "train": "T1",
+        "eval": "T2"
+      },
+      "t3_training": [
+        "T1",
+        "R2",
+        "R3"
+      ],
+      "generator": "engine_reliability.conditional.generator.selected",
+      "term_precision": "results/precision_T1.json final_by_stratum",
+      "reviewed_timepoints": [
+        "T1",
+        "R2",
+        "R3",
+        "T3"
+      ]
+    },
+    "verdict": {
+      "eval": "T3",
+      "budget_multiple": 5,
+      "k": 5000,
+      "descriptive_k": [
+        100,
+        500,
+        1000
+      ],
+      "power_result": {
+        "file": "results/engine_v3_power.json",
+        "sha256": "184d98f5a6b6af656d251427cd665cdbf002a22983d3baafd161b355a2d12f0c"
+      },
+      "sequence": "engine_reliability.verdict.sequence",
+      "rule": "engine_reliability.verdict.rule",
+      "ci_level": "matching.t3_reuse.ci_level",
+      "power": {
+        "eval_timepoint": "T2",
+        "train_timepoint": "T1",
+        "budget_multiples_of_first_candidates": [
+          1,
+          5
+        ],
+        "k": [
+          100,
+          500,
+          1000,
+          5000
+        ],
+        "baseline_feature": "P_npmi_mean",
+        "outer": 200,
+        "inner": 200,
+        "seed": 20261030,
+        "minimum_sequence_power": 0.8,
+        "rule": "choose the budget and k with the highest power of passing S1 and S2 in sequence under the conservative scenario at the verdict confidence level; ties go to the smaller budget, then the smaller k; record the S1 to S4 sequence powers and the stand-alone S4 power before T3 labels are made",
+        "conservative_scenario": "keep each positive with probability equal to the T3 label window length over the evaluation label window length"
+      }
+    },
+    "timepoints": [
+      "T1",
+      "R2",
+      "R3",
+      "T3"
+    ],
+    "t3_reuse": {
+      "ci_level": 0.975,
+      "note": "second test on T3 after the engine study; not an independent confirmation"
+    },
+    "surface_rules": {
+      "drop_nested": true,
+      "acronym_needs_full_name": true,
+      "skip_surface_chars": [
+        "+"
+      ]
+    },
+    "common_words": {
+      "wordlist": "vocab.r4_wordlist",
+      "inflections": [
+        [
+          "ing",
+          ""
+        ],
+        [
+          "ing",
+          "e"
+        ],
+        [
+          "ed",
+          ""
+        ],
+        [
+          "ed",
+          "e"
+        ],
+        [
+          "s",
+          ""
+        ],
+        [
+          "es",
+          ""
+        ]
+      ],
+      "examples_per_surface": 8,
+      "seed": 20261024,
+      "review_file": "data/review/common_words_attempt0.csv",
+      "decisions": [
+        "keep",
+        "exclude",
+        "keep_with_exclusions"
+      ]
+    },
+    "precision": {
+      "seed": 20261025,
+      "n_per_stratum": 100,
+      "strata": [
+        "method_ci",
+        "task_ci",
+        "acronym_cs"
+      ],
+      "pass_rule": {
+        "statistic": "wilson_lower_95",
+        "pass": 0.8,
+        "conditional": 0.75
+      },
+      "max_remeasure": 2,
+      "timepoint": "T1"
+    },
+    "synonyms": {
+      "timepoints": [
+        "T1",
+        "R2",
+        "R3",
+        "T3"
+      ],
+      "npmi_min": 0.6,
+      "min_cooccurrence": 5,
+      "acronym_max_letters": 6,
+      "stem_suffixes": [
+        "ional",
+        "ions",
+        "ion",
+        "al",
+        "s"
+      ],
+      "stem_min_length": 4,
+      "titles_per_pair": 3,
+      "seed": 20261026,
+      "review_file": "data/review/synonyms_attempt0.csv",
+      "decisions": [
+        "same",
+        "hierarchy",
+        "different"
+      ]
+    },
+    "label_v3": {
+      "design_timepoint": "T1",
+      "evidence": "engine_reliability.label_v2 (windows, cues, abbreviations, title as first sentence, min_evidence_papers)",
+      "target_positive_lower": 0.7,
+      "sample": {
+        "positive": 100,
+        "negative": 50,
+        "seed": 20261027
+      },
+      "review_file": "data/review/label_v3_T1_attempt0.csv",
+      "review_key_file": "data/review/label_v3_T1_attempt0_key.csv"
+    },
+    "relation": {
+      "model_id": "Qwen/Qwen3.5-9B",
+      "quantization": "bitsandbytes 4-bit nf4, compute float16",
+      "decoding": "greedy, thinking disabled",
+      "max_new_tokens": 64,
+      "batch_size": 16,
+      "prompt": "prompts/relation_v2.txt",
+      "prompt_selection": {
+        "candidates": [
+          "prompts/relation_v1.txt",
+          "prompts/relation_v2.txt"
+        ],
+        "rule": "higher development combination precision, v1 on ties",
+        "selected": "prompts/relation_v2.txt",
+        "results": [
+          "results/relation_dev_v1.json",
+          "results/relation_dev_v2.json"
+        ]
+      },
+      "max_prompt_revisions": 1,
+      "dev_reviews": [
+        {
+          "review": "data/review/label_evidence_T1_attempt0.csv",
+          "key": "data/review/label_evidence_T1_attempt0_key.csv"
+        },
+        {
+          "review": "data/review/label_evidence_T1_attempt1.csv",
+          "key": "data/review/label_evidence_T1_attempt1_key.csv"
+        },
+        {
+          "review": "data/review/label_v3_T1_attempt0.csv",
+          "key": "data/review/label_v3_T1_attempt0_key.csv"
+        }
+      ],
+      "confirm": {
+        "positive": 100,
+        "negative": 50,
+        "seed": 20261028,
+        "frame_triads": 1500,
+        "review_file": "data/review/label_v3_T1_attempt1.csv",
+        "review_key_file": "data/review/label_v3_T1_attempt1_key.csv"
+      },
+      "confirm2": {
+        "positive": 240,
+        "negative": 50,
+        "seed": 20261029,
+        "confidence": 0.95,
+        "assumed_precision": 0.78,
+        "power": 0.8,
+        "size_search": {
+          "start": 50,
+          "step": 5
+        },
+        "outputs_sha256": "b55ccf6c857d2f965abf6209724fb50f75df4f63f8d10e77025477f7b812682a",
+        "frame_sha256": "efcf307e7a44956d864bfe250530298628c23bebf624e4f2e89e34fd62566f23",
+        "attempt1_frame_sha256": "e12034ecc69a95f853cd166322e0ece5626004eb10d03b4315c35fa9c05aee7c",
+        "review_file": "data/review/label_v3_T1_attempt2.csv",
+        "review_key_file": "data/review/label_v3_T1_attempt2_key.csv"
+      }
+    }
+  },
+  "run": {
+    "study": "represcription",
+    "base_config": "config/study.json of the repository root"
+  }
+}

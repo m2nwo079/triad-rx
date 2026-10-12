@@ -1,0 +1,196 @@
+{
+ "rank": 2,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gpt",
+    "role": "Acts as the underlying frontier language model used to generate code and execute reasoning steps.",
+    "evidence_ids": [
+     "paper:2609.26480"
+    ]
+   },
+   {
+    "term_id": "T:arithmetic reasoning",
+    "role": "Provides quantitative and mathematical problem-solving steps that are integrated into planning and verification tasks.",
+    "evidence_ids": [
+     "paper:2510.08992"
+    ]
+   },
+   {
+    "term_id": "T:code generation",
+    "role": "Serves as the structured target domain where models produce functional applications, CAD code, or programmatic outputs.",
+    "evidence_ids": [
+     "paper:2510.08992"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The combination targets complex multi-step tasks such as CAD code generation and arithmetic reasoning, where planning must satisfy symbolic constraints.",
+   "evidence_ids": [
+    "paper:2510.08992"
+   ]
+  },
+  "limitation": {
+   "text": "Language models struggle to ensure that multi-step plans align with high-level user intent and satisfy symbolic constraints, often yielding infeasible actions or hallucinated steps.",
+   "evidence_ids": [
+    "paper:2510.08992"
+   ]
+  },
+  "combination": {
+   "text": "The framework integrates intent-constraint representations into search algorithms like Monte Carlo Tree Search, enabling the GPT model to actively focus exploration toward semantically valid actions during arithmetic reasoning and code generation tasks.",
+   "evidence_ids": [
+    "paper:2510.08992"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gpt",
+     "role": "Acts as the underlying frontier language model used to generate code and execute reasoning steps.",
+     "evidence_ids": [
+      "paper:2609.26480"
+     ]
+    },
+    {
+     "term_id": "T:arithmetic reasoning",
+     "role": "Provides quantitative and mathematical problem-solving steps that are integrated into planning and verification tasks.",
+     "evidence_ids": [
+      "paper:2510.08992"
+     ]
+    },
+    {
+     "term_id": "T:code generation",
+     "role": "Serves as the structured target domain where models produce functional applications, CAD code, or programmatic outputs.",
+     "evidence_ids": [
+      "paper:2510.08992"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The combination targets complex multi-step tasks such as CAD code generation and arithmetic reasoning, where planning must satisfy symbolic constraints.",
+    "evidence_ids": [
+     "paper:2510.08992"
+    ]
+   },
+   "limitation": {
+    "text": "Language models struggle to ensure that multi-step plans align with high-level user intent and satisfy symbolic constraints, often yielding infeasible actions or hallucinated steps.",
+    "evidence_ids": [
+     "paper:2510.08992"
+    ]
+   },
+   "combination": {
+    "text": "The framework integrates intent-constraint representations into search algorithms like Monte Carlo Tree Search, enabling the GPT model to actively focus exploration toward semantically valid actions during arithmetic reasoning and code generation tasks.",
+    "evidence_ids": [
+     "paper:2510.08992"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates intent-constraint representations into search algorithms like Monte Carlo Tree Search, enabling the GPT model to actively focus exploration toward semantically valid actions during arithmetic reasoning and code generation tasks. It targets complex multi-step tasks such as CAD code generation and arithmetic reasoning, where planning must satisfy symbolic constraints. Language models struggle to ensure that multi-step plans align with high-level user intent and satisfy symbolic constraints, often yielding infeasible actions or hallucinated steps.",
+   "evidence_ids": [
+    "paper:2510.08992"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified.",
+   "evidence_ids": [
+    "dvf:2"
+   ]
+  },
+  "jtbd": {
+   "text": "When building multi-step plans in code generation and arithmetic reasoning, users want to ensure that generated actions strictly satisfy symbolic constraints, so that they can avoid infeasible actions and hallucinations.",
+   "evidence_ids": [
+    "paper:2510.08992"
+   ]
+  },
+  "value_prop": {
+   "text": "By integrating intent-constraint representations into search algorithms, the framework actively focuses exploration toward semantically valid actions, outperforming baselines in accuracy and structural alignment.",
+   "evidence_ids": [
+    "paper:2510.08992"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is on axis V (viability), designated explicitly due to missing evidence in the evidence bundle.",
+   "evidence_ids": [
+    "dvf:2"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with a proposed threshold of 30 percent willingness to pay to test whether potential users find the constraint-guided code generation and arithmetic reasoning solution economically viable.",
+   "evidence_ids": [
+    "dvf:2",
+    "paper:2510.08992"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 70 percent positive feedback on economic value and pricing during customer interviews.",
+   "evidence_ids": [
+    "dvf:2"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 20 percent of interviewed customers indicate a willingness to pay for the proposed solution.",
+    "evidence_ids": [
+     "dvf:2"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:qwenlm/qwen3",
+     "use": "Used as an alternative language model backend for testing constraint-guided reasoning tasks.",
+     "evidence_ids": [
+      "repo:qwenlm/qwen3"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:skythought",
+     "use": "Provides thinking and reasoning capabilities for structured planning pipelines.",
+     "evidence_ids": [
+      "pkg:skythought"
+     ],
+     "version": "0.1.0"
+    },
+    {
+     "id": "repo:amap-ml/code2world",
+     "use": "Supports renderable code generation environments for evaluation.",
+     "evidence_ids": [
+      "repo:amap-ml/code2world"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A Monte Carlo Tree Search module incorporating intent-constraint pairs for semantic action pruning.",
+     "evidence_ids": [
+      "paper:2510.08992"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

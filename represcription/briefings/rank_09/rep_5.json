@@ -1,0 +1,216 @@
+{
+ "rank": 9,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:random search",
+    "role": "Serves as a baseline method for comparison or initialization against optimized search strategies in engineering and configuration tuning tasks.",
+    "evidence_ids": [
+     "paper:2603.11068",
+     "paper:2608.14714"
+    ]
+   },
+   {
+    "term_id": "T:bayesian optimization",
+    "role": "Acts as an efficient sequential design strategy to explore parameter configurations and minimize expensive evaluation costs.",
+    "evidence_ids": [
+     "paper:2603.11068",
+     "paper:2608.14714"
+    ]
+   },
+   {
+    "term_id": "T:prediction",
+    "role": "Provides surrogate modeling or classification output to estimate target metrics and evaluate candidate configurations during optimization.",
+    "evidence_ids": [
+     "paper:2603.11068",
+     "paper:2608.14714"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The target task is parameter optimization and inverse design for complex systems, such as discovering high-entropy alloy compositions or tuning configuration suites.",
+   "evidence_ids": [
+    "paper:2603.11068",
+    "paper:2608.14714"
+   ]
+  },
+  "limitation": {
+   "text": "Conventional trial-and-error and standard tuning suites often suffer from expensive evaluations, restricted search spaces, and scalarized objectives that limit efficiency and exclude promising configurations.",
+   "evidence_ids": [
+    "paper:2603.11068",
+    "paper:2608.14714"
+   ]
+  },
+  "combination": {
+   "text": "Bayesian optimization uses predictive surrogate models to guide the search for optimal parameters more efficiently than random search baselines, identifying strong configurations earlier and handling multi-objective trade-offs.",
+   "evidence_ids": [
+    "paper:2603.11068",
+    "paper:2608.14714"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:random search",
+     "role": "Serves as a baseline method for comparison or initialization against optimized search strategies in engineering and configuration tuning tasks.",
+     "evidence_ids": [
+      "paper:2603.11068",
+      "paper:2608.14714"
+     ]
+    },
+    {
+     "term_id": "T:bayesian optimization",
+     "role": "Acts as an efficient sequential design strategy to explore parameter configurations and minimize expensive evaluation costs.",
+     "evidence_ids": [
+      "paper:2603.11068",
+      "paper:2608.14714"
+     ]
+    },
+    {
+     "term_id": "T:prediction",
+     "role": "Provides surrogate modeling or classification output to estimate target metrics and evaluate candidate configurations during optimization.",
+     "evidence_ids": [
+      "paper:2603.11068",
+      "paper:2608.14714"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The target task is parameter optimization and inverse design for complex systems, such as discovering high-entropy alloy compositions or tuning configuration suites.",
+    "evidence_ids": [
+     "paper:2603.11068",
+     "paper:2608.14714"
+    ]
+   },
+   "limitation": {
+    "text": "Conventional trial-and-error and standard tuning suites often suffer from expensive evaluations, restricted search spaces, and scalarized objectives that limit efficiency and exclude promising configurations.",
+    "evidence_ids": [
+     "paper:2603.11068",
+     "paper:2608.14714"
+    ]
+   },
+   "combination": {
+    "text": "Bayesian optimization uses predictive surrogate models to guide the search for optimal parameters more efficiently than random search baselines, identifying strong configurations earlier and handling multi-objective trade-offs.",
+    "evidence_ids": [
+     "paper:2603.11068",
+     "paper:2608.14714"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining random search, bayesian optimization, and prediction for parameter optimization and inverse design tasks. As indicated by the DVF scores, the desirability axis score is 1.0, feasibility is 3.0, and viability is 4.0. Conventional trial-and-error and standard tuning suites often suffer from expensive evaluations and restricted search spaces, whereas Bayesian optimization uses predictive surrogate models to guide search efficiently.",
+   "evidence_ids": [
+    "dvf:9",
+    "paper:2603.11068",
+    "paper:2608.14714"
+   ]
+  },
+  "target_user": {
+   "text": "The target users are engineers, researchers, and technical practitioners working in companies that build and configure complex systems, such as automated material discovery and parameter tuning suites.",
+   "evidence_ids": [
+    "patent:11494639",
+    "patent:12305632",
+    "pkg:activeft",
+    "pkg:shadho",
+    "repo:ivan-chai/hotpp-benchmark",
+    "repo:ivan-chai/pretpp",
+    "repo:jonhue/activeft",
+    "repo:namkoong-lab/data-recipes",
+    "repo:visionary-laboratory/photoflow"
+   ]
+  },
+  "jtbd": {
+   "text": "When configuring complex engineering systems or searching large parameter spaces, practitioners want to efficiently discover optimal configurations without incurring massive evaluation costs or getting stuck in restrictive search spaces.",
+   "evidence_ids": [
+    "paper:2603.11068",
+    "paper:2608.14714"
+   ]
+  },
+  "value_prop": {
+   "text": "Combining predictive surrogate modeling with Bayesian optimization identifies strong configurations earlier than random search baselines, effectively handling multi-objective trade-offs and reducing expensive evaluation overhead.",
+   "evidence_ids": [
+    "paper:2603.11068",
+    "paper:2608.14714"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Given that the desirability axis score is 1.0, the riskiest assumption is that target users will actively desire and adopt a Bayesian optimization and prediction platform over their familiar trial-and-error workflows.",
+   "evidence_ids": [
+    "dvf:9"
+   ],
+   "axis": "D",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "The MVP consists of a demand landing page outlining the Bayesian optimization and prediction toolkit, paired with structured problem interviews with engineering practitioners to test the riskiest assumption.",
+   "evidence_ids": [
+    "dvf:9",
+    "paper:2603.11068",
+    "paper:2608.14714"
+   ],
+   "type": "demand landing page and problem interviews"
+  },
+  "success_metric": {
+   "text": "Success will be measured by a proposed threshold of 25 percent landing page conversion and at least 15 positive commitments from technical stakeholders during problem interviews to adopt the workflow.",
+   "evidence_ids": [
+    "dvf:9",
+    "paper:2603.11068"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The opportunity should be killed if fewer than a proposed threshold of 5 percent of landing page visitors express interest, or if more than 80 percent of interviewed practitioners report that evaluation costs are not a primary pain point.",
+    "evidence_ids": [
+     "dvf:9",
+     "paper:2608.14714"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:shadho",
+     "use": "Will be used to provide distributed hyperparameter optimization and scheduling capabilities.",
+     "evidence_ids": [
+      "pkg:shadho"
+     ],
+     "version": "0.4.5"
+    },
+    {
+     "id": "repo:ivan-chai/hotpp-benchmark",
+     "use": "Will be used as an event sequence prediction benchmark to evaluate surrogate modeling performance.",
+     "evidence_ids": [
+      "repo:ivan-chai/hotpp-benchmark"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified multi-objective Bayesian optimization orchestration layer that coordinates predictive surrogate models and random search baseline comparisons.",
+     "evidence_ids": [
+      "paper:2603.11068",
+      "paper:2608.14714"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

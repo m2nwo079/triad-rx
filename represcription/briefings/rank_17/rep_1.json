@@ -1,0 +1,232 @@
+{
+ "rank": 17,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:direct preference optimization",
+    "role": "Serves as an alignment technique (e.g., consensus-driven direct preference optimization) to optimize models using preference pairs without requiring an explicit reward model.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   },
+   {
+    "term_id": "T:code generation",
+    "role": "Acts as the target capability domain where language models are trained and evaluated to produce functional, executable code.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   },
+   {
+    "term_id": "T:instruction following",
+    "role": "Serves as a complementary behavioral capability or evaluation axis alongside code generation tasks during model alignment and assessment.",
+    "evidence_ids": [
+     "paper:2609.22943"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Code generation and instruction following in language models.",
+   "evidence_ids": [
+    "paper:2609.22943",
+    "paper:2603.29292"
+   ]
+  },
+  "limitation": {
+   "text": "Improving code generation often relies on costly external resources like superior teacher models or test oracles, and standard preference optimization can be impacted by noisy self-generated supervision.",
+   "evidence_ids": [
+    "paper:2603.29292"
+   ]
+  },
+  "combination": {
+   "text": "Consensus-driven direct preference optimization weights each preference pair by its behavioral consensus to mitigate noisy self-generated supervision, thereby improving code generation without relying on external supervision.",
+   "evidence_ids": [
+    "paper:2603.29292"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:direct preference optimization",
+     "role": "Serves as an alignment technique (e.g., consensus-driven direct preference optimization) to optimize models using preference pairs without requiring an explicit reward model.",
+     "evidence_ids": [
+      "paper:2603.29292"
+     ]
+    },
+    {
+     "term_id": "T:code generation",
+     "role": "Acts as the target capability domain where language models are trained and evaluated to produce functional, executable code.",
+     "evidence_ids": [
+      "paper:2603.29292"
+     ]
+    },
+    {
+     "term_id": "T:instruction following",
+     "role": "Serves as a complementary behavioral capability or evaluation axis alongside code generation tasks during model alignment and assessment.",
+     "evidence_ids": [
+      "paper:2609.22943"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Code generation and instruction following in language models.",
+    "evidence_ids": [
+     "paper:2609.22943",
+     "paper:2603.29292"
+    ]
+   },
+   "limitation": {
+    "text": "Improving code generation often relies on costly external resources like superior teacher models or test oracles, and standard preference optimization can be impacted by noisy self-generated supervision.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   },
+   "combination": {
+    "text": "Consensus-driven direct preference optimization weights each preference pair by its behavioral consensus to mitigate noisy self-generated supervision, thereby improving code generation without relying on external supervision.",
+    "evidence_ids": [
+     "paper:2603.29292"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining direct preference optimization, code generation, and instruction following. Specifically, consensus-driven direct preference optimization weights preference pairs by behavioral consensus to mitigate noisy self-generated supervision during code generation. This approach improves code generation without requiring costly external resources like superior teacher models or test oracles.",
+   "evidence_ids": [
+    "paper:2603.29292"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as the bundle contains no patent assignee categories, repositories, or packages that specify end-user demographics.",
+   "evidence_ids": [
+    "repo:safeailab/eagle",
+    "repo:allenai/reward-bench",
+    "repo:wangrongsheng/caregpt",
+    "repo:xingchen-agi/xing4.0-29b-a4b",
+    "repo:amd-agi/instella-moe",
+    "pkg:eagle-llm",
+    "pkg:evoeval",
+    "pkg:turbo-alignment",
+    "pkg:jetts"
+   ]
+  },
+  "jtbd": {
+   "text": "When developers need to enhance language model coding capabilities, they want to align models using preference pairs without expensive external test oracles or teacher models, so that they can generate functionally correct code and follow complex instructions reliably.",
+   "evidence_ids": [
+    "paper:2603.29292",
+    "paper:2609.22943"
+   ]
+  },
+  "value_prop": {
+   "text": "Consensus-driven direct preference optimization improves code generation capabilities by mitigating noisy self-generated supervision using behavioral consensus weighting. It removes the need for costly external resources such as powerful teacher models or reliable test units.",
+   "evidence_ids": [
+    "paper:2603.29292"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was explicitly designated due to missing evidence in the bundle. We assume that enterprise software teams will pay for a consensus-driven direct preference optimization service to align code generation models.",
+   "evidence_ids": [
+    "dvf:17"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "To test the viability of the commercial offering, we will conduct customer interviews and a price acceptance test with engineering leaders. We will present a mock-up of the consensus-driven direct preference optimization pipeline to validate willingness to pay and budget allocation.",
+   "evidence_ids": [
+    "dvf:17",
+    "paper:2603.29292"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: at least 40 percent of interviewed engineering leaders confirm a budget allocation for the alignment tool. Proposed threshold: at least 60 percent express strong willingness to adopt consensus-driven direct preference optimization for internal code models.",
+   "evidence_ids": [
+    "dvf:17",
+    "paper:2603.29292"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: fewer than 20 percent of interviewed prospective customers indicate any willingness to pay for the direct preference optimization pipeline.",
+    "evidence_ids": [
+     "dvf:17",
+     "paper:2603.29292"
+    ]
+   },
+   {
+    "text": "Proposed threshold: more than 75 percent of interviewees state that existing free or internal alignment methods entirely satisfy their code generation requirements.",
+    "evidence_ids": [
+     "dvf:17",
+     "paper:2603.29292"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:evoeval",
+     "use": "Will be used to evaluate code generation performance and functional correctness across alignment iterations.",
+     "evidence_ids": [
+      "paper:2606.28998",
+      "pkg:evoeval"
+     ],
+     "version": "0.1.0"
+    },
+    {
+     "id": "repo:allenai/reward-bench",
+     "use": "Will be utilized as an evaluation tool for analyzing model preferences and reward dynamics during the alignment process.",
+     "evidence_ids": [
+      "repo:allenai/reward-bench"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:amd-agi/instella-moe",
+     "use": "Will serve as an open mixture-of-experts foundation architecture to apply consensus-driven direct preference optimization.",
+     "evidence_ids": [
+      "paper:2609.00791",
+      "repo:amd-agi/instella-moe"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:turbo-alignment",
+     "use": "Will be integrated to support rapid model alignment workflows and preference optimization experiments.",
+     "evidence_ids": [
+      "pkg:turbo-alignment"
+     ],
+     "version": "0.0.4"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A behavioral consensus scoring module to compute problem-level uncertainty and functional diversity from self-generated program behaviors.",
+     "evidence_ids": [
+      "paper:2603.29292"
+     ]
+    },
+    {
+     "text": "A weighted preference pair construction pipeline that scales supervision signals based on consensus weights without external test oracles.",
+     "evidence_ids": [
+      "paper:2603.29292"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

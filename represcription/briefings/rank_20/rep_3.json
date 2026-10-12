@@ -1,0 +1,227 @@
+{
+ "rank": 20,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:direct preference optimization",
+    "role": "Provides an offline preference-based training signal to learn state-conditioned strategies or refine reasoning paths without online rollouts.",
+    "evidence_ids": [
+     "paper:2604.09150",
+     "paper:2607.14485"
+    ]
+   },
+   {
+    "term_id": "M:proximal policy optimization",
+    "role": "Drives online reinforcement learning or optimization across dynamic trajectories to balance exploration and exploitation.",
+    "evidence_ids": [
+     "paper:2604.09150",
+     "paper:2512.00778"
+    ]
+   },
+   {
+    "term_id": "T:decision making",
+    "role": "The target task domain involving long-horizon actions, multi-step planning, or sequential control steps.",
+    "evidence_ids": [
+     "paper:2604.09150",
+     "paper:2607.14485"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Long-horizon decision-making processes and sequential reasoning tasks for AI agents.",
+   "evidence_ids": [
+    "paper:2604.09150",
+    "paper:2607.14485"
+   ]
+  },
+  "limitation": {
+   "text": "Existing agent decision-making approaches often struggle with excessive reasoning steps, lack fine-grained human preference grounding over intermediate steps, or face trade-offs between offline exploration limits and online training instability.",
+   "evidence_ids": [
+    "paper:2604.09150",
+    "paper:2607.14485"
+   ]
+  },
+  "combination": {
+   "text": "By combining Proximal Policy Optimization and Direct Preference Optimization into a joint training strategy, models can leverage both online reinforcement learning dynamics and preference-based supervision to learn robust state-conditioned compression and decision strategies.",
+   "evidence_ids": [
+    "paper:2604.09150"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:direct preference optimization",
+     "role": "Provides an offline preference-based training signal to learn state-conditioned strategies or refine reasoning paths without online rollouts.",
+     "evidence_ids": [
+      "paper:2604.09150",
+      "paper:2607.14485"
+     ]
+    },
+    {
+     "term_id": "M:proximal policy optimization",
+     "role": "Drives online reinforcement learning or optimization across dynamic trajectories to balance exploration and exploitation.",
+     "evidence_ids": [
+      "paper:2604.09150",
+      "paper:2512.00778"
+     ]
+    },
+    {
+     "term_id": "T:decision making",
+     "role": "The target task domain involving long-horizon actions, multi-step planning, or sequential control steps.",
+     "evidence_ids": [
+      "paper:2604.09150",
+      "paper:2607.14485"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Long-horizon decision-making processes and sequential reasoning tasks for AI agents.",
+    "evidence_ids": [
+     "paper:2604.09150",
+     "paper:2607.14485"
+    ]
+   },
+   "limitation": {
+    "text": "Existing agent decision-making approaches often struggle with excessive reasoning steps, lack fine-grained human preference grounding over intermediate steps, or face trade-offs between offline exploration limits and online training instability.",
+    "evidence_ids": [
+     "paper:2604.09150",
+     "paper:2607.14485"
+    ]
+   },
+   "combination": {
+    "text": "By combining Proximal Policy Optimization and Direct Preference Optimization into a joint training strategy, models can leverage both online reinforcement learning dynamics and preference-based supervision to learn robust state-conditioned compression and decision strategies.",
+    "evidence_ids": [
+     "paper:2604.09150"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This briefing analyzes the combination of direct preference optimization, proximal policy optimization, and decision making for long-horizon agent tasks. By integrating these components, models can leverage online reinforcement learning and offline preference tuning to learn state-conditioned strategies. The approach addresses limitations in existing agent frameworks where intermediate reasoning steps lack fine-grained preference grounding and online training suffers from instability.",
+   "evidence_ids": [
+    "paper:2604.09150",
+    "paper:2607.14485"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as the bundle lacks patent assignee categories or package registries, but points to researchers and developers building autonomous AI agents and language model decision systems.",
+   "evidence_ids": [
+    "repo:sentient-engineering/agent-q",
+    "repo:yifeizhou02/archer"
+   ]
+  },
+  "jtbd": {
+   "text": "When building multi-turn autonomous agents or sequential control systems, developers want to jointly optimize online exploration and preference alignment so that agents make reliable long-horizon decisions without excessive reasoning steps.",
+   "evidence_ids": [
+    "paper:2604.09150",
+    "paper:2607.14485"
+   ]
+  },
+  "value_prop": {
+   "text": "Combining proximal policy optimization and direct preference optimization enables agents to learn stable state-conditioned strategies that balance exploration and exploitation. This integration improves local decision quality and long-horizon agent behavior while avoiding the instability of purely online or offline methods.",
+   "evidence_ids": [
+    "paper:2604.09150",
+    "paper:2512.00778"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), designated explicitly due to missing evidence in the bundle. We assume that enterprise customers will pay for a joint reinforcement learning and preference optimization platform for agent decision-making.",
+   "evidence_ids": [
+    "dvf:20"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with potential enterprise AI engineering teams to test the viability of a joint DPO and PPO training platform. Present a prototype workflow for agent decision-making optimization to evaluate willingness to pay a proposed threshold: 500 dollars per month.",
+   "evidence_ids": [
+    "dvf:20",
+    "paper:2604.09150"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold: 40 percent of interviewed prospective users expressing active willingness to adopt the platform, with at least a proposed threshold: 25 percent committing to a paid pilot at the proposed threshold: 500 dollars per month price point.",
+   "evidence_ids": [
+    "dvf:20"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold: 10 percent of interviewed target users indicate any willingness to pay for a combined DPO and PPO training platform for decision-making agents.",
+    "evidence_ids": [
+     "dvf:20"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:openpsi-project/realhf",
+     "use": "Used for efficient reinforcement learning training of large language models with parameter reallocation to support the optimization pipeline.",
+     "evidence_ids": [
+      "repo:openpsi-project/realhf"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:sentient-engineering/agent-q",
+     "use": "Used as an open-source advanced reasoning and learning framework for building autonomous AI agents.",
+     "evidence_ids": [
+      "repo:sentient-engineering/agent-q"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:yifeizhou02/archer",
+     "use": "Used as a hierarchical multi-turn reinforcement learning research codebase to support agent decision-making architectures.",
+     "evidence_ids": [
+      "repo:yifeizhou02/archer"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:ragen-ai/vagen",
+     "use": "Used as a world model reinforcement learning framework for multi-turn vision-language model agents.",
+     "evidence_ids": [
+      "repo:ragen-ai/vagen"
+     ],
+     "version": null
+    },
+    {
+     "id": "repo:koa-fin/sep",
+     "use": "Used to generate explainable predictions and outputs using self-reflective large language models within the system loop.",
+     "evidence_ids": [
+      "repo:koa-fin/sep"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A unified training orchestration module that combines step-level preference learning objectives with online policy gradient updates for agent decision trajectories.",
+     "evidence_ids": [
+      "paper:2604.09150",
+      "paper:2607.14485"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

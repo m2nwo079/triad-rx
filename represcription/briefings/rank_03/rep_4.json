@@ -1,0 +1,249 @@
+{
+ "rank": 3,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Parametrizes flexible conditional density models, infinite-dimensional priors, or transition densities to capture complex posterior distributions.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2609.03343",
+     "paper:2605.29373"
+    ]
+   },
+   {
+    "term_id": "T:bayesian inference",
+    "role": "Target statistical framework that yields calibrated uncertainty and posterior distributions for model parameters.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2609.03343",
+     "paper:2605.29373"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Serves as the underlying predictive modeling task or utilizes regression loss functions (such as MSE or velocity field regression) to train flow matching models.",
+    "evidence_ids": [
+     "paper:2608.05557",
+     "paper:2605.06829",
+     "paper:2603.09014"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Bayesian inference and posterior estimation for hierarchical or high-dimensional models.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2605.29373"
+   ]
+  },
+  "limitation": {
+   "text": "Standard Bayesian inference and posterior estimation are computationally expensive, slow when relying purely on MCMC sampling, and restricted by inflexible prior or posterior assumptions.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2605.29373"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are integrated into Bayesian inference frameworks (such as via conditional normalizing flows or variational flow models) to model complex, non-Gaussian posterior distributions or prior measures, enabling amortized or accelerated inference.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2605.29373"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Parametrizes flexible conditional density models, infinite-dimensional priors, or transition densities to capture complex posterior distributions.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2609.03343",
+      "paper:2605.29373"
+     ]
+    },
+    {
+     "term_id": "T:bayesian inference",
+     "role": "Target statistical framework that yields calibrated uncertainty and posterior distributions for model parameters.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2609.03343",
+      "paper:2605.29373"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Serves as the underlying predictive modeling task or utilizes regression loss functions (such as MSE or velocity field regression) to train flow matching models.",
+     "evidence_ids": [
+      "paper:2608.05557",
+      "paper:2605.06829",
+      "paper:2603.09014"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Bayesian inference and posterior estimation for hierarchical or high-dimensional models.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2605.29373"
+    ]
+   },
+   "limitation": {
+    "text": "Standard Bayesian inference and posterior estimation are computationally expensive, slow when relying purely on MCMC sampling, and restricted by inflexible prior or posterior assumptions.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2605.29373"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are integrated into Bayesian inference frameworks (such as via conditional normalizing flows or variational flow models) to model complex, non-Gaussian posterior distributions or prior measures, enabling amortized or accelerated inference.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2605.29373"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores the combination of normalizing flows, Bayesian inference, and regression for accelerated posterior estimation in hierarchical and high-dimensional models. By parameterizing flexible conditional density models or infinite-dimensional priors using normalizing flows, the approach addresses the high computational cost of traditional MCMC methods cited in dvf:3, paper:2609.24422, and paper:2605.29373.",
+   "evidence_ids": [
+    "dvf:3",
+    "paper:2605.29373",
+    "paper:2609.24422"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as the patent assignee categories are absent from the bundle. However, the repositories and packages such as repo:atong01/conditional-flow-matching, pkg:lightgbmlss, and pkg:xgboostlss indicate that quantitative researchers, data scientists, and statisticians performing probabilistic modeling and Bayesian inference are the prospective users.",
+   "evidence_ids": [
+    "pkg:lightgbmlss",
+    "pkg:xgboostlss",
+    "repo:atong01/conditional-flow-matching"
+   ]
+  },
+  "jtbd": {
+   "text": "When performing Bayesian inference on hierarchical or high-dimensional models, quantitative modelers want to eliminate the slow convergence and high computational burden of traditional sampling methods, so that they can obtain accurate, calibrated posterior distributions and predictions rapidly as described in paper:2609.24422 and paper:2605.29373.",
+   "evidence_ids": [
+    "paper:2605.29373",
+    "paper:2609.24422"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrating normalizing flows into Bayesian inference frameworks enables amortized zero-shot generalization over prior families and flexible modeling of complex non-Gaussian posteriors. This reduces inference time by orders of magnitude compared to standard MCMC samplers while maintaining parameter recovery and calibration, as supported by paper:2609.24422 and paper:2605.29373.",
+   "evidence_ids": [
+    "paper:2605.29373",
+    "paper:2609.24422"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated due to missing evidence for axis V (viability) in dvf:3. Specifically, we assume that commercial customers will pay for an accelerated Bayesian inference tool combining normalizing flows and regression rather than relying on existing open-source MCMC libraries or custom scripts.",
+   "evidence_ids": [
+    "dvf:3"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with quantitative data scientists and researchers, as mandated by the mvp_type in dvf:3. Show them a prototype specification for the flow-based Bayesian regression tool to test willingness to pay and validate the viability assumption.",
+   "evidence_ids": [
+    "dvf:3"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "A successful outcome is defined as a conversion rate of at least a proposed threshold of 25 percent among interviewed practitioners expressing intent to pay for or pilot the tool, motivated by dvf:3 and paper:2609.24422.",
+   "evidence_ids": [
+    "dvf:3",
+    "paper:2609.24422"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The opportunity should be killed if fewer than a proposed threshold of 10 percent of interviewed target users confirm that slow Bayesian inference is a critical bottleneck in their workflow, per dvf:3.",
+    "evidence_ids": [
+     "dvf:3"
+    ]
+   },
+   {
+    "text": "The opportunity should be killed if zero prospective users indicate a willingness to pay above a proposed threshold of 0 dollars for proprietary commercial wrappers or extensions of these open-source techniques, per dvf:3.",
+    "evidence_ids": [
+     "dvf:3"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:atong01/conditional-flow-matching",
+     "use": "Used to provide conditional flow matching capabilities for training flexible generative models and vector fields as referenced in paper:2608.05557.",
+     "evidence_ids": [
+      "paper:2608.05557",
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:torchcfm",
+     "use": "Used as a core library package for conditional flow matching implementation and efficient simulation-based training routines.",
+     "evidence_ids": [
+      "pkg:torchcfm",
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "pkg:xgboostlss",
+     "use": "Used to extend probabilistic modeling and regression tasks with distributional parameter estimation.",
+     "evidence_ids": [
+      "pkg:xgboostlss",
+      "repo:statmixedml/xgboostlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:lightgbmlss",
+     "use": "Used for scalable probabilistic regression and distributional predictions within the modeling pipeline.",
+     "evidence_ids": [
+      "pkg:lightgbmlss",
+      "repo:statmixedml/lightgbmlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:margarine",
+     "use": "Used to compute evidence evaluations and handle sample-based probability distributions for Bayesian inference tasks.",
+     "evidence_ids": [
+      "pkg:margarine"
+     ],
+     "version": "2.2.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Develop a unified commercial software wrapper that integrates conditional normalizing flows with probabilistic regression packages (such as lightgbmlss and xgboostlss) to provide an out-of-the-box amortization interface for Bayesian inference, addressing the gaps in dvf:3 and paper:2609.24422.",
+     "evidence_ids": [
+      "dvf:3",
+      "paper:2609.24422",
+      "pkg:lightgbmlss",
+      "pkg:xgboostlss"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

@@ -1,0 +1,222 @@
+{
+ "rank": 2,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gpt",
+    "role": "Serves as the foundational language model that generates both natural language solution steps and corresponding code implementations.",
+    "evidence_ids": [
+     "paper:2512.13323",
+     "paper:2607.18266"
+    ]
+   },
+   {
+    "term_id": "T:arithmetic reasoning",
+    "role": "Provides the mathematical word problems and quantitative multi-step computations that require structured problem-solving.",
+    "evidence_ids": [
+     "paper:2512.13323",
+     "paper:2607.18266"
+    ]
+   },
+   {
+    "term_id": "T:code generation",
+    "role": "Acts as the target task where models write executable code scripts to handle structured arithmetic or calculations reliably.",
+    "evidence_ids": [
+     "paper:2512.13323"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Arithmetic reasoning and quantitative problem-solving through code generation using language models.",
+   "evidence_ids": [
+    "paper:2512.13323",
+    "paper:2607.18266"
+   ]
+  },
+  "limitation": {
+   "text": "Small or standard language models exhibit fundamental limitations and low accuracy in executing multi-step arithmetic reasoning directly.",
+   "evidence_ids": [
+    "paper:2512.13323",
+    "paper:2607.18266"
+   ]
+  },
+  "combination": {
+   "text": "By framing arithmetic reasoning tasks into a code generation framework, models generate executable code solutions. System-level prompting or synthetic data adaptation further optimizes these workflows to improve numerical accuracy.",
+   "evidence_ids": [
+    "paper:2512.13323",
+    "paper:2607.18266"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gpt",
+     "role": "Serves as the foundational language model that generates both natural language solution steps and corresponding code implementations.",
+     "evidence_ids": [
+      "paper:2512.13323",
+      "paper:2607.18266"
+     ]
+    },
+    {
+     "term_id": "T:arithmetic reasoning",
+     "role": "Provides the mathematical word problems and quantitative multi-step computations that require structured problem-solving.",
+     "evidence_ids": [
+      "paper:2512.13323",
+      "paper:2607.18266"
+     ]
+    },
+    {
+     "term_id": "T:code generation",
+     "role": "Acts as the target task where models write executable code scripts to handle structured arithmetic or calculations reliably.",
+     "evidence_ids": [
+      "paper:2512.13323"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Arithmetic reasoning and quantitative problem-solving through code generation using language models.",
+    "evidence_ids": [
+     "paper:2512.13323",
+     "paper:2607.18266"
+    ]
+   },
+   "limitation": {
+    "text": "Small or standard language models exhibit fundamental limitations and low accuracy in executing multi-step arithmetic reasoning directly.",
+    "evidence_ids": [
+     "paper:2512.13323",
+     "paper:2607.18266"
+    ]
+   },
+   "combination": {
+    "text": "By framing arithmetic reasoning tasks into a code generation framework, models generate executable code solutions. System-level prompting or synthetic data adaptation further optimizes these workflows to improve numerical accuracy.",
+    "evidence_ids": [
+     "paper:2512.13323",
+     "paper:2607.18266"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining language models like GPT with arithmetic reasoning and code generation tasks. By framing arithmetic challenges into code generation workflows, models can generate executable code solutions for multi-step quantitative problems. System-level optimization, such as error-driven prompt refinement or synthetic reasoning data, helps small models achieve higher accuracy on structured computations.",
+   "evidence_ids": [
+    "paper:2512.13323",
+    "paper:2607.18266"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified due to a lack of assignee categories, repository descriptions, and package download patterns in the evidence bundle.",
+   "evidence_ids": [
+    "dvf:2"
+   ]
+  },
+  "jtbd": {
+   "text": "When analysts or automated agents encounter complex multi-step arithmetic word problems, they want to solve them reliably without making manual calculation errors, so that they can generate trustworthy quantitative outputs using code generation workflows.",
+   "evidence_ids": [
+    "paper:2512.13323",
+    "paper:2607.18266"
+   ]
+  },
+  "value_prop": {
+   "text": "Translating multi-step arithmetic problems into executable code blocks bypasses the fundamental limitations of direct text-based reasoning in standard models. This approach improves accuracy and provides interpretable, verifiable calculations.",
+   "evidence_ids": [
+    "paper:2512.13323",
+    "paper:2607.18266"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated on axis V (viability) due to missing evidence in the bundle. We assume that enterprise users are willing to pay for an arithmetic code-generation assistant deployed on on-premises or cloud infrastructure.",
+   "evidence_ids": [
+    "dvf:2"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and price acceptance tests with target data analysts using a prototype interface that converts a set of GSM8K-style arithmetic prompts into executable Python scripts, evaluating their willingness to adopt and pay for the tool.",
+   "evidence_ids": [
+    "dvf:2",
+    "paper:2512.13323"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Proposed threshold: at least 70.8 percent accuracy on benchmark arithmetic tasks and a proposed threshold of 40 percent positive willingness-to-pay confirmation during customer interviews.",
+   "evidence_ids": [
+    "dvf:2",
+    "paper:2512.13323"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Proposed threshold: fewer than 30 percent of interviewed target users express willingness to adopt or pay for the code generation tool.",
+    "evidence_ids": [
+     "dvf:2"
+    ]
+   },
+   {
+    "text": "Proposed threshold: exact-match arithmetic code generation accuracy falls below 50 percent on standardized test suites.",
+    "evidence_ids": [
+     "paper:2512.13323"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:qwenlm/qwen3",
+     "use": "Serves as the foundation language model for local fine-tuning and code generation tasks.",
+     "evidence_ids": [
+      "paper:2607.18266"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:skythought",
+     "use": "Provides thinking and reasoning capabilities to structure multi-step math problem-solving.",
+     "evidence_ids": [
+      "pkg:skythought"
+     ],
+     "version": "0.1.0"
+    },
+    {
+     "id": "pkg:appworld",
+     "use": "Acts as an interactive environment to test generated code execution against structured inputs.",
+     "evidence_ids": [
+      "pkg:appworld"
+     ],
+     "version": "0.1.3.post1"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "An error-driven prompt optimization pipeline that clusters erroneous arithmetic predictions and refines prompt rules iteratively.",
+     "evidence_ids": [
+      "paper:2512.13323"
+     ]
+    },
+    {
+     "text": "A synthetic reasoning data generator that combines natural language solution traces with Socratic-style cues and distractor contexts.",
+     "evidence_ids": [
+      "paper:2607.18266"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

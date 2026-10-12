@@ -1,0 +1,206 @@
+{
+ "rank": 9,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:random search",
+    "role": "Serves as a baseline comparison method to evaluate the efficiency and performance of optimization and search procedures.",
+    "evidence_ids": [
+     "patent:11494639"
+    ]
+   },
+   {
+    "term_id": "T:bayesian optimization",
+    "role": "Optimizes parameters or perturbations by using a Gaussian process model and an acquisition function to iteratively guide the search process.",
+    "evidence_ids": [
+     "patent:11494639"
+    ]
+   },
+   {
+    "term_id": "T:prediction",
+    "role": "Provides output predictions from a neural network classifier that are used within the optimization loop to evaluate candidate inputs.",
+    "evidence_ids": [
+     "patent:11494639"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Query-efficient black-box adversarial attacks on neural network classifiers.",
+   "evidence_ids": [
+    "patent:11494639"
+   ]
+  },
+  "limitation": {
+   "text": "Black-box attacks require querying the target classifier to obtain predictions, which can be inefficient when searching large input spaces without structured guidance.",
+   "evidence_ids": [
+    "patent:11494639"
+   ]
+  },
+  "combination": {
+   "text": "Inputs are randomly chosen from a search space to construct initial input-output pairs containing model prediction outputs, after which Bayesian optimization uses a Gaussian process to optimize an acquisition function and find effective perturbation inputs.",
+   "evidence_ids": [
+    "patent:11494639"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:random search",
+     "role": "Serves as a baseline comparison method to evaluate the efficiency and performance of optimization and search procedures.",
+     "evidence_ids": [
+      "patent:11494639"
+     ]
+    },
+    {
+     "term_id": "T:bayesian optimization",
+     "role": "Optimizes parameters or perturbations by using a Gaussian process model and an acquisition function to iteratively guide the search process.",
+     "evidence_ids": [
+      "patent:11494639"
+     ]
+    },
+    {
+     "term_id": "T:prediction",
+     "role": "Provides output predictions from a neural network classifier that are used within the optimization loop to evaluate candidate inputs.",
+     "evidence_ids": [
+      "patent:11494639"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Query-efficient black-box adversarial attacks on neural network classifiers.",
+    "evidence_ids": [
+     "patent:11494639"
+    ]
+   },
+   "limitation": {
+    "text": "Black-box attacks require querying the target classifier to obtain predictions, which can be inefficient when searching large input spaces without structured guidance.",
+    "evidence_ids": [
+     "patent:11494639"
+    ]
+   },
+   "combination": {
+    "text": "Inputs are randomly chosen from a search space to construct initial input-output pairs containing model prediction outputs, after which Bayesian optimization uses a Gaussian process to optimize an acquisition function and find effective perturbation inputs.",
+    "evidence_ids": [
+     "patent:11494639"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The combination integrates random search, Bayesian optimization, and prediction to perform query-efficient black-box adversarial attacks on neural network classifiers. Initial input-output pairs are randomly chosen from a search space, after which a Gaussian process and acquisition function optimize perturbation inputs based on model prediction outputs.",
+   "evidence_ids": [
+    "patent:11494639"
+   ]
+  },
+  "target_user": {
+   "text": "The target user includes companies and researchers performing query-efficient black-box adversarial attacks on neural network classifiers, as indicated by patent filings and open-source active fine-tuning packages.",
+   "evidence_ids": [
+    "patent:11494639",
+    "pkg:activeft",
+    "pkg:shadho",
+    "repo:jonhue/activeft"
+   ]
+  },
+  "jtbd": {
+   "text": "When evaluating the robustness of neural network classifiers under black-box settings, the user wants to efficiently find adversarial perturbations with minimal queries so that they can test model vulnerabilities without exhaustive random searching.",
+   "evidence_ids": [
+    "patent:11494639"
+   ]
+  },
+  "value_prop": {
+   "text": "By replacing unguided search with a Gaussian process model and an acquisition function, the system reduces the query budget required to discover successful adversarial perturbations against neural network classifiers.",
+   "evidence_ids": [
+    "patent:11494639"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The lowest-scoring DVF axis is Desirability (score 1.0) dvf:9. The riskiest assumption is that security practitioners and machine learning engineers will adopt a Bayesian-optimization-driven attack framework instead of relying on standard heuristic or random search methods for robustness testing.",
+   "evidence_ids": [
+    "dvf:9",
+    "patent:11494639"
+   ],
+   "axis": "D",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "To test the riskiest assumption on Desirability dvf:9, set up a demand landing page outlining the Bayesian-optimization-based adversarial testing framework and conduct structured problem interviews with machine learning security engineers.",
+   "evidence_ids": [
+    "dvf:9",
+    "patent:11494639"
+   ],
+   "type": "demand landing page and problem interviews"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 25 percent conversion on the demand landing page and confirm that a proposed threshold of 80 percent of interviewed engineers report query inefficiency as a primary bottleneck in current robustness evaluations.",
+   "evidence_ids": [
+    "dvf:9",
+    "patent:11494639"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "If fewer than a proposed threshold of 10 percent of landing page visitors register interest, or if more than a proposed threshold of 70 percent of interviewed engineers state they have no need for query-efficient black-box attack optimization, terminate the project.",
+    "evidence_ids": [
+     "dvf:9",
+     "patent:11494639"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:activeft",
+     "use": "Provides active fine-tuning routines and utilities to manage iterative query loops and data selection.",
+     "evidence_ids": [
+      "pkg:activeft",
+      "patent:11494639"
+     ],
+     "version": "0.1.1"
+    },
+    {
+     "id": "pkg:shadho",
+     "use": "Offers infrastructure for black-box optimization and hyperparameter search tasks.",
+     "evidence_ids": [
+      "pkg:shadho",
+      "patent:11494639"
+     ],
+     "version": "0.4.5"
+    },
+    {
+     "id": "repo:jonhue/activeft",
+     "use": "Supplies PyTorch libraries for active learning feedback loops during model evaluation.",
+     "evidence_ids": [
+      "repo:jonhue/activeft",
+      "patent:11494639"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A specialized Gaussian process acquisition loop that integrates random search initializers with upsampled perturbation generation for target classifier queries.",
+     "evidence_ids": [
+      "dvf:9",
+      "patent:11494639"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

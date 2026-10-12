@@ -1,0 +1,183 @@
+{
+ "rank": 5,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:proximal policy optimization",
+    "role": "Serves as the underlying policy optimization algorithm within an actor-critic model to generate adaptive phase durations for traffic signals.",
+    "evidence_ids": [
+     "patent:11783702"
+    ]
+   },
+   {
+    "term_id": "T:deep reinforcement learning",
+    "role": "Provides the broader learning framework used to drive the behavior of the controller based on environmental states and reward calculations.",
+    "evidence_ids": [
+     "patent:11783702"
+    ]
+   },
+   {
+    "term_id": "T:traffic signal control",
+    "role": "Acts as the target application domain where adaptive cycle-level signal control is optimized to manage traffic flow.",
+    "evidence_ids": [
+     "patent:11783702"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Adaptive cycle-level traffic signal control.",
+   "evidence_ids": [
+    "patent:11783702"
+   ]
+  },
+  "limitation": {
+   "text": "Conventional traffic control approaches often fail to adequately handle dynamic traffic patterns and maintain optimal flow.",
+   "evidence_ids": [
+    "patent:11783702"
+   ]
+  },
+  "combination": {
+   "text": "Proximal Policy Optimization is integrated as the underlying deep reinforcement learning algorithm within an adaptive cycle-level controller to generate continuous signal cycle phase durations based on traffic environment states.",
+   "evidence_ids": [
+    "patent:11783702"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:proximal policy optimization",
+     "role": "Serves as the underlying policy optimization algorithm within an actor-critic model to generate adaptive phase durations for traffic signals.",
+     "evidence_ids": [
+      "patent:11783702"
+     ]
+    },
+    {
+     "term_id": "T:deep reinforcement learning",
+     "role": "Provides the broader learning framework used to drive the behavior of the controller based on environmental states and reward calculations.",
+     "evidence_ids": [
+      "patent:11783702"
+     ]
+    },
+    {
+     "term_id": "T:traffic signal control",
+     "role": "Acts as the target application domain where adaptive cycle-level signal control is optimized to manage traffic flow.",
+     "evidence_ids": [
+      "patent:11783702"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Adaptive cycle-level traffic signal control.",
+    "evidence_ids": [
+     "patent:11783702"
+    ]
+   },
+   "limitation": {
+    "text": "Conventional traffic control approaches often fail to adequately handle dynamic traffic patterns and maintain optimal flow.",
+    "evidence_ids": [
+     "patent:11783702"
+    ]
+   },
+   "combination": {
+    "text": "Proximal Policy Optimization is integrated as the underlying deep reinforcement learning algorithm within an adaptive cycle-level controller to generate continuous signal cycle phase durations based on traffic environment states.",
+    "evidence_ids": [
+     "patent:11783702"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This briefing explores combining proximal policy optimization and deep reinforcement learning for traffic signal control. The approach integrates proximal policy optimization as the underlying policy optimization algorithm within an actor-critic model to generate adaptive phase durations for traffic signals. It addresses the limitation where conventional traffic control approaches often fail to adequately handle dynamic traffic patterns and maintain optimal flow.",
+   "evidence_ids": [
+    "patent:11783702",
+    "patent:20220092973"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is derived from company patent assignee categories and open source reinforcement learning research repositories, pointing toward traffic management companies and infrastructure operators.",
+   "evidence_ids": [
+    "patent:11783702",
+    "repo:cpwan/rlor"
+   ]
+  },
+  "jtbd": {
+   "text": "When municipal traffic operators manage dynamic urban congestion, they want to deploy adaptive cycle-level traffic signal control so that they can maintain optimal traffic flow under changing conditions.",
+   "evidence_ids": [
+    "patent:11783702"
+   ]
+  },
+  "value_prop": {
+   "text": "This combination uses proximal policy optimization within deep reinforcement learning to dynamically generate continuous signal cycle phase durations based on traffic environment states, directly addressing the limitations of conventional traffic control approaches.",
+   "evidence_ids": [
+    "patent:11783702"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is desirability (axis score 2.0): municipal traffic agencies will actively demand and adopt a learning-based continuous control system over established heuristic controllers.",
+   "evidence_ids": [
+    "dvf:5",
+    "patent:11783702"
+   ],
+   "axis": "D",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "The MVP is a demand landing page and problem interviews targeting municipal traffic engineers to test if agencies perceive dynamic cycle control as a high-priority solution.",
+   "evidence_ids": [
+    "dvf:5",
+    "patent:11783702"
+   ],
+   "type": "demand landing page and problem interviews"
+  },
+  "success_metric": {
+   "text": "Success is measured by a proposed threshold: at least 30 percent of interviewed traffic engineers expressing intent to pilot the system and a proposed threshold of 15 percent visitor conversion on the landing page.",
+   "evidence_ids": [
+    "dvf:5"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Kill the project if fewer than a proposed threshold of 5 percent of landing page visitors engage with the scheduling link or fewer than two out of ten interviewed traffic engineers report dynamic phase optimization as a primary operational pain point.",
+    "evidence_ids": [
+     "dvf:5"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:cpwan/rlor",
+     "use": "Serves as a reinforcement learning repository for operations research problems to help structure the training environment.",
+     "evidence_ids": [
+      "repo:cpwan/rlor"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Develop a continuous action space adaptive cycle-level controller interface that ingests current and past traffic environment states to compute rewards based on vehicle delay durations.",
+     "evidence_ids": [
+      "patent:11783702"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

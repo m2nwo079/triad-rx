@@ -1,0 +1,212 @@
+{
+ "rank": 18,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Serves as a probabilistic surrogate model or regressor to capture data distributions and provide prior knowledge or residual modeling.",
+    "evidence_ids": [
+     "paper:2307.05592",
+     "paper:2606.11240"
+    ]
+   },
+   {
+    "term_id": "M:pc",
+    "role": "Provides dimensionality reduction via principal components (or functional principal component analysis) to compress high-dimensional or time-dependent responses into lower-dimensional scores.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   {
+    "term_id": "T:uncertainty quantification",
+    "role": "The target task of quantifying prediction and model parameter uncertainties, particularly for inverse problems with transient or high-dimensional experimental data.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Bayesian inverse uncertainty quantification with time-dependent or transient experimental data.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "limitation": {
+   "text": "High-dimensional or infinite-dimensional responses (such as time-dependent transient profiles) make direct inverse uncertainty quantification computationally prohibitive and difficult to represent precisely.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "combination": {
+   "text": "Functional principal component analysis (PCA) is used to reduce the dimensionality of time-dependent quantities of interest while preserving their profile characteristics. Gaussian process-based or neural network surrogate models are then trained using the resulting principal component scores to facilitate efficient sampling and uncertainty propagation.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Serves as a probabilistic surrogate model or regressor to capture data distributions and provide prior knowledge or residual modeling.",
+     "evidence_ids": [
+      "paper:2307.05592",
+      "paper:2606.11240"
+     ]
+    },
+    {
+     "term_id": "M:pc",
+     "role": "Provides dimensionality reduction via principal components (or functional principal component analysis) to compress high-dimensional or time-dependent responses into lower-dimensional scores.",
+     "evidence_ids": [
+      "paper:2307.05592"
+     ]
+    },
+    {
+     "term_id": "T:uncertainty quantification",
+     "role": "The target task of quantifying prediction and model parameter uncertainties, particularly for inverse problems with transient or high-dimensional experimental data.",
+     "evidence_ids": [
+      "paper:2307.05592"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Bayesian inverse uncertainty quantification with time-dependent or transient experimental data.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   "limitation": {
+    "text": "High-dimensional or infinite-dimensional responses (such as time-dependent transient profiles) make direct inverse uncertainty quantification computationally prohibitive and difficult to represent precisely.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   },
+   "combination": {
+    "text": "Functional principal component analysis (PCA) is used to reduce the dimensionality of time-dependent quantities of interest while preserving their profile characteristics. Gaussian process-based or neural network surrogate models are then trained using the resulting principal component scores to facilitate efficient sampling and uncertainty propagation.",
+    "evidence_ids": [
+     "paper:2307.05592"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining Gaussian processes, principal component analysis, and uncertainty quantification to handle high-dimensional or infinite-dimensional transient responses. Specifically, functional principal component analysis reduces the dimension of time-dependent profiles while preserving their structural characteristics. Gaussian processes and surrogate models are subsequently trained on these principal component scores to facilitate efficient sampling and uncertainty propagation.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified due to a lack of patent assignee data, but packages and repositories in the bundle suggest users include practitioners working with modular machine learning libraries, uncertainty baselines, and geometric kernels.",
+   "evidence_ids": [
+    "repo:future-house/ldp",
+    "repo:geometric-kernels/geometrickernels",
+    "repo:google/uncertainty-baselines",
+    "repo:gpflow/geometrickernels",
+    "repo:leojklarner/gauche"
+   ]
+  },
+  "jtbd": {
+   "text": "Perform Bayesian inverse uncertainty quantification with time-dependent or transient experimental data by compressing high-dimensional responses into lower-dimensional scores.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "value_prop": {
+   "text": "It overcomes the computational bottlenecks of high-dimensional responses in inverse uncertainty quantification by leveraging functional principal component analysis for dimensionality reduction and Gaussian processes for probabilistic surrogate modeling.",
+   "evidence_ids": [
+    "paper:2307.05592"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The viability axis score was designated as the riskiest assumption because the evidence bundle contains no viability or commercialization evidence.",
+   "evidence_ids": [
+    "dvf:18"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and a price acceptance test with proposed threshold: 5 enterprise prospects willing to pay a proposed threshold: 5000 US dollars per month to validate commercial viability and willingness to pay for uncertainty quantification software.",
+   "evidence_ids": [
+    "dvf:18",
+    "paper:2307.05592"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold: 60 percent positive response rate in customer interviews regarding workflow utility and a proposed threshold: 40 percent agreement on the proposed subscription price during price acceptance testing.",
+   "evidence_ids": [
+    "dvf:18",
+    "paper:2307.05592"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold: 20 percent of interviewed prospects express active budget allocation for transient uncertainty quantification tools.",
+    "evidence_ids": [
+     "dvf:18",
+     "paper:2307.05592"
+    ]
+   },
+   {
+    "text": "Willingness to pay falls below a proposed threshold: 1000 US dollars per month across all interviewed customer segments.",
+    "evidence_ids": [
+     "dvf:18",
+     "paper:2307.05592"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:dgpsi",
+     "use": "Used as a package building block for deep Gaussian process emulation and sensitivity analysis.",
+     "evidence_ids": [
+      "pkg:dgpsi"
+     ],
+     "version": "2.6.0"
+    },
+    {
+     "id": "pkg:netcal",
+     "use": "Used as a package building block for evaluating and calibrating predictive uncertainty estimates.",
+     "evidence_ids": [
+      "pkg:netcal"
+     ],
+     "version": "1.4.0"
+    },
+    {
+     "id": "repo:google/uncertainty-baselines",
+     "use": "Used as a repository reference for standard uncertainty quantification baselines.",
+     "evidence_ids": [
+      "repo:google/uncertainty-baselines"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build an integrated pipeline combining functional principal component analysis preprocessing with Gaussian process surrogate training and uncertainty quantification metrics, as motivated by paper:2307.05592 and dvf:18.",
+     "evidence_ids": [
+      "dvf:18",
+      "paper:2307.05592"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

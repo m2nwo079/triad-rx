@@ -1,0 +1,199 @@
+{
+ "rank": 1,
+ "rep": 5,
+ "seed": 20261012,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:pc",
+    "role": "Serves as the constraint-based causal discovery algorithm that provides an initial skeleton or set of conditional independence tests.",
+    "evidence_ids": [
+     "paper:2608.27472",
+     "paper:2608.15332",
+     "paper:2607.12140"
+    ]
+   },
+   {
+    "term_id": "T:causal discovery",
+    "role": "Reconstructs the underlying structural interaction network or directed acyclic graph from observational data.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2608.27472"
+    ]
+   },
+   {
+    "term_id": "T:prediction",
+    "role": "Evaluates whether inferred causal relationships and network structures improve the forecasting of system dynamics or target outcomes.",
+    "evidence_ids": [
+     "paper:2608.17452"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Simultaneous causal network inference and forecasting for complex dynamical systems.",
+   "evidence_ids": [
+    "paper:2608.17452"
+   ]
+  },
+  "limitation": {
+   "text": "Existing approaches that combine causal discovery and prediction typically rely on a single global hyperparameter, such as a causal threshold or fixed neighborhood size, which fails to accurately recover the structure of heterogeneous systems.",
+   "evidence_ids": [
+    "paper:2608.17452"
+   ]
+  },
+  "combination": {
+   "text": "By integrating constraint-based causal discovery algorithms like PC to prune edge skeletons, predictive models can assess which interactions genuinely improve forecasting performance. This joint framework optimizes local neighborhoods for each node independently to simultaneously infer the causal network and forecast system dynamics near-optimally.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2608.27472"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:pc",
+     "role": "Serves as the constraint-based causal discovery algorithm that provides an initial skeleton or set of conditional independence tests.",
+     "evidence_ids": [
+      "paper:2608.27472",
+      "paper:2608.15332",
+      "paper:2607.12140"
+     ]
+    },
+    {
+     "term_id": "T:causal discovery",
+     "role": "Reconstructs the underlying structural interaction network or directed acyclic graph from observational data.",
+     "evidence_ids": [
+      "paper:2608.17452",
+      "paper:2608.27472"
+     ]
+    },
+    {
+     "term_id": "T:prediction",
+     "role": "Evaluates whether inferred causal relationships and network structures improve the forecasting of system dynamics or target outcomes.",
+     "evidence_ids": [
+      "paper:2608.17452"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Simultaneous causal network inference and forecasting for complex dynamical systems.",
+    "evidence_ids": [
+     "paper:2608.17452"
+    ]
+   },
+   "limitation": {
+    "text": "Existing approaches that combine causal discovery and prediction typically rely on a single global hyperparameter, such as a causal threshold or fixed neighborhood size, which fails to accurately recover the structure of heterogeneous systems.",
+    "evidence_ids": [
+     "paper:2608.17452"
+    ]
+   },
+   "combination": {
+    "text": "By integrating constraint-based causal discovery algorithms like PC to prune edge skeletons, predictive models can assess which interactions genuinely improve forecasting performance. This joint framework optimizes local neighborhoods for each node independently to simultaneously infer the causal network and forecast system dynamics near-optimally.",
+    "evidence_ids": [
+     "paper:2608.17452",
+     "paper:2608.27472"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining the PC algorithm with causal discovery and prediction for simultaneous causal network inference and forecasting. Existing methods rely on a single global hyperparameter or fixed neighborhood size that fails on heterogeneous systems. The proposed approach integrates constraint-based causal discovery with predictive evaluation to optimize local neighborhoods for each node independently.",
+   "evidence_ids": [
+    "paper:2608.17452",
+    "paper:2608.27472"
+   ]
+  },
+  "target_user": {
+   "text": "Academic researchers and technical practitioners working with complex observational panel data, time-series dynamics, and structural causal modeling, as indicated by academic patent assignee categories and open-source repositories.",
+   "evidence_ids": [
+    "patent:11913865",
+    "repo:bloomberg/causal-ts",
+    "repo:ilabcode/pyhgf",
+    "repo:jarrycyx/unn"
+   ]
+  },
+  "jtbd": {
+   "text": "When analyzing complex dynamical systems from observational data, researchers want to simultaneously infer the underlying causal interaction network and forecast system dynamics near-optimally, so they can explain system behavior without being limited by global hyperparameters.",
+   "evidence_ids": [
+    "paper:2608.17452"
+   ]
+  },
+  "value_prop": {
+   "text": "By replacing global hyperparameters with independent local neighborhood optimization per node, the framework recovers heterogeneous network structures with high fidelity while maintaining forecast performance on par with models supplied with true networks.",
+   "evidence_ids": [
+    "paper:2608.17452"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Based on a viability score of 1.0 (dvf:1), the riskiest assumption is that commercial buyers will pay for an integrated causal discovery and forecasting tool rather than using existing free open-source packages.",
+   "evidence_ids": [
+    "dvf:1"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "Conduct customer interviews combined with a price acceptance test targeting data science teams to determine willingness to pay for a commercial simultaneous causal network inference and forecasting platform, addressing the viability score of 1.0 (dvf:1).",
+   "evidence_ids": [
+    "dvf:1"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "A proposed threshold of at least 40 percent of interviewed prospective customers confirming willingness to adopt and pay a commercial subscription fee for the integrated tool.",
+   "evidence_ids": [
+    "dvf:1"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Less than a proposed threshold of 15 percent of interviewed customers expressing any willingness to pay for the commercial platform.",
+    "evidence_ids": [
+     "dvf:1"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:bloomberg/causal-ts",
+     "use": "Provides time-series causal discovery capabilities to support initial network inference.",
+     "evidence_ids": [
+      "repo:bloomberg/causal-ts"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:causalts",
+     "use": "Offers Python package functions for analyzing time-series causal structures.",
+     "evidence_ids": [
+      "pkg:causalts"
+     ],
+     "version": "0.27.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A localized neighborhood optimization engine that dynamically determines node-specific subsets for simultaneous forecasting and causal inference.",
+     "evidence_ids": [
+      "paper:2608.17452"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

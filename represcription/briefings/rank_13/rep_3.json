@@ -1,0 +1,233 @@
+{
+ "rank": 13,
+ "rep": 3,
+ "seed": 20261010,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:gaussian process",
+    "role": "Serves as a probabilistic surrogate model or kernel-based regression component to capture functional relationships and uncertainties.",
+    "evidence_ids": [
+     "paper:2503.03178",
+     "paper:2404.03099"
+    ]
+   },
+   {
+    "term_id": "T:bayesian optimization",
+    "role": "Provides the sequential decision-making framework and acquisition strategies to guide data collection and optimize objectives over function spaces.",
+    "evidence_ids": [
+     "paper:2503.03178",
+     "paper:2404.03099"
+    ]
+   },
+   {
+    "term_id": "T:operator learning",
+    "role": "Acts as the underlying modeling paradigm that maps inputs to infinite-dimensional function spaces or outputs trajectories.",
+    "evidence_ids": [
+     "paper:2503.03178",
+     "paper:2404.03099"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Outer-loop optimization and composite Bayesian optimization procedures involving expensive-to-evaluate systems governed by operator mappings.",
+   "evidence_ids": [
+    "paper:2503.03178",
+    "paper:2404.03099"
+   ]
+  },
+  "limitation": {
+   "text": "Conventional uncertainty quantification frameworks or surrogate approaches for operator networks can incur prohibitive computational costs during training and inference when applied to sequential decision-making tasks.",
+   "evidence_ids": [
+    "paper:2503.03178",
+    "paper:2404.03099"
+   ]
+  },
+  "combination": {
+   "text": "Uncertainty estimates derived from operator learning models (such as predictive uncertainties or epistemic operator network backbones) are integrated into Bayesian optimization routines and active learning loops to improve data-efficiency and guide sample selection without excessive computational overhead.",
+   "evidence_ids": [
+    "paper:2503.03178",
+    "paper:2404.03099"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:gaussian process",
+     "role": "Serves as a probabilistic surrogate model or kernel-based regression component to capture functional relationships and uncertainties.",
+     "evidence_ids": [
+      "paper:2503.03178",
+      "paper:2404.03099"
+     ]
+    },
+    {
+     "term_id": "T:bayesian optimization",
+     "role": "Provides the sequential decision-making framework and acquisition strategies to guide data collection and optimize objectives over function spaces.",
+     "evidence_ids": [
+      "paper:2503.03178",
+      "paper:2404.03099"
+     ]
+    },
+    {
+     "term_id": "T:operator learning",
+     "role": "Acts as the underlying modeling paradigm that maps inputs to infinite-dimensional function spaces or outputs trajectories.",
+     "evidence_ids": [
+      "paper:2503.03178",
+      "paper:2404.03099"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Outer-loop optimization and composite Bayesian optimization procedures involving expensive-to-evaluate systems governed by operator mappings.",
+    "evidence_ids": [
+     "paper:2503.03178",
+     "paper:2404.03099"
+    ]
+   },
+   "limitation": {
+    "text": "Conventional uncertainty quantification frameworks or surrogate approaches for operator networks can incur prohibitive computational costs during training and inference when applied to sequential decision-making tasks.",
+    "evidence_ids": [
+     "paper:2503.03178",
+     "paper:2404.03099"
+    ]
+   },
+   "combination": {
+    "text": "Uncertainty estimates derived from operator learning models (such as predictive uncertainties or epistemic operator network backbones) are integrated into Bayesian optimization routines and active learning loops to improve data-efficiency and guide sample selection without excessive computational overhead.",
+    "evidence_ids": [
+     "paper:2503.03178",
+     "paper:2404.03099"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores the integration of Gaussian processes, Bayesian optimization, and operator learning for outer-loop optimization procedures and composite Bayesian optimization tasks. The approach leverages uncertainty estimates from operator networks within Bayesian optimization loops to improve data efficiency and guide sample selection without high computational costs. Evidence indicates that combining these techniques can mitigate computational bottlenecks in systems governed by operator mappings. (paper:2503.03178, paper:2404.03099)",
+   "evidence_ids": [
+    "paper:2503.03178",
+    "paper:2404.03099"
+   ]
+  },
+  "target_user": {
+   "text": "The target user includes enterprise organizations and engineering teams utilizing black-box optimization, cloud computing environments, or simulation models, as indicated by patent assignee categories and open-source optimization frameworks. (patent:11494639, patent:11734561, patent:11757732, patent:11842279, patent:11927927, repo:google/vizier, pkg:google-vizier, pkg:smt)",
+   "evidence_ids": [
+    "patent:11494639",
+    "patent:11734561",
+    "patent:11757732",
+    "patent:11842279",
+    "patent:11927927",
+    "pkg:google-vizier",
+    "pkg:smt",
+    "repo:google/vizier"
+   ]
+  },
+  "jtbd": {
+   "text": "When performing outer-loop optimization or exploring expensive-to-evaluate systems governed by operator mappings, the user wants to efficiently guide data collection and optimize objectives over function spaces, so that they can minimize costly function evaluations while maintaining calibrated uncertainty estimates. (paper:2503.03178, paper:2404.03099)",
+   "evidence_ids": [
+    "paper:2503.03178",
+    "paper:2404.03099"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrating operator learning uncertainty estimates into Bayesian optimization workflows avoids the prohibitive computational costs of traditional ensembles while improving sample data-efficiency in complex scientific and engineering applications. (paper:2503.03178, paper:2404.03099)",
+   "evidence_ids": [
+    "paper:2503.03178",
+    "paper:2404.03099"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "Based on the F axis score of 2.0, the riskiest assumption is that predictive uncertainty estimates generated by lightweight operator networks can be stably integrated into sequential Bayesian optimization loops without numerical degradation or prohibitive inference overhead across high-dimensional function spaces. (dvf:13, paper:2503.03178, paper:2404.03099)",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2503.03178",
+    "paper:2404.03099"
+   ],
+   "axis": "F",
+   "designated_by_missing_evidence": false
+  },
+  "mvp": {
+   "text": "To test the riskiest assumption, build a technical proof of concept using existing packages by linking a lightweight operator network package with Gaussian process and Bayesian optimization libraries to execute an active learning loop on a benchmark partial differential equation task. (dvf:13, pkg:google-vizier, pkg:smt, pkg:trieste, repo:google/vizier)",
+   "evidence_ids": [
+    "dvf:13",
+    "pkg:google-vizier",
+    "pkg:smt",
+    "pkg:trieste",
+    "repo:google/vizier"
+   ],
+   "type": "technical proof of concept from existing packages"
+  },
+  "success_metric": {
+   "text": "The MVP will be considered successful if the combined active learning pipeline achieves a proposed threshold of at least a 20 percent reduction in required high-fidelity evaluations compared to single-fidelity baselines while maintaining valid uncertainty coverage. (dvf:13, paper:2503.03178)",
+   "evidence_ids": [
+    "dvf:13",
+    "paper:2503.03178"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The experiment is killed if integrating operator-derived uncertainties into the optimization loop increases total inference and training evaluation time by a proposed threshold of over 50 percent compared to standard Gaussian process surrogates. (dvf:13, paper:2503.03178)",
+    "evidence_ids": [
+     "dvf:13",
+     "paper:2503.03178"
+    ]
+   },
+   {
+    "text": "The experiment is killed if the optimization routine fails to converge to a valid minimum within a proposed threshold of 100 iterations on standard benchmark problems. (dvf:13, paper:2404.03099)",
+    "evidence_ids": [
+     "dvf:13",
+     "paper:2404.03099"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "pkg:google-vizier",
+     "use": "Serves as the foundational Bayesian optimization and black-box optimization framework to drive sample selection.",
+     "evidence_ids": [
+      "pkg:google-vizier"
+     ],
+     "version": "0.1.24"
+    },
+    {
+     "id": "pkg:trieste",
+     "use": "Provides Bayesian optimization tools built on TensorFlow for managing surrogate models and acquisition functions.",
+     "evidence_ids": [
+      "pkg:trieste"
+     ],
+     "version": "4.6.0"
+    },
+    {
+     "id": "pkg:smt",
+     "use": "Supplies surrogate modeling techniques and experimental design utilities for building regression models.",
+     "evidence_ids": [
+      "pkg:smt"
+     ],
+     "version": "2.15.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "An adapter module that translates predictive uncertainty outputs from operator learning networks into compatible prior inputs for Bayesian optimization acquisition functions. (paper:2503.03178, paper:2404.03099)",
+     "evidence_ids": [
+      "paper:2503.03178",
+      "paper:2404.03099"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

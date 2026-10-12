@@ -1,0 +1,218 @@
+{
+ "rank": 15,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Models expressive probability distributions and complex dependencies to enable scalable density estimation and capture multi-modal posterior structures.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2605.09718"
+    ]
+   },
+   {
+    "term_id": "T:density estimation",
+    "role": "Provides the foundational likelihood or probabilistic representation of data features or latent parameters.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2605.09718"
+    ]
+   },
+   {
+    "term_id": "T:uncertainty quantification",
+    "role": "Evaluates epistemic and aleatoric uncertainties by leveraging the learned probabilistic distributions.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2605.09718"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Bayesian inference, causal discovery, and stochastic multiscale modeling requiring robust estimation of distributions and associated confidences.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2605.09718"
+   ]
+  },
+  "limitation": {
+   "text": "Existing approaches often fail to capture complex dependencies between variables, cannot easily scale to complex probability spaces, or lack principled ways to quantify epistemic and parametric uncertainty.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2605.09718"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are used to model complex dependencies and parameter distributions within a density estimation framework, which in turn supports Bayesian variational inference or posterior learning for uncertainty quantification.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2605.09718"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Models expressive probability distributions and complex dependencies to enable scalable density estimation and capture multi-modal posterior structures.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2605.09718"
+     ]
+    },
+    {
+     "term_id": "T:density estimation",
+     "role": "Provides the foundational likelihood or probabilistic representation of data features or latent parameters.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2605.09718"
+     ]
+    },
+    {
+     "term_id": "T:uncertainty quantification",
+     "role": "Evaluates epistemic and aleatoric uncertainties by leveraging the learned probabilistic distributions.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "paper:2605.09718"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Bayesian inference, causal discovery, and stochastic multiscale modeling requiring robust estimation of distributions and associated confidences.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2605.09718"
+    ]
+   },
+   "limitation": {
+    "text": "Existing approaches often fail to capture complex dependencies between variables, cannot easily scale to complex probability spaces, or lack principled ways to quantify epistemic and parametric uncertainty.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2605.09718"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are used to model complex dependencies and parameter distributions within a density estimation framework, which in turn supports Bayesian variational inference or posterior learning for uncertainty quantification.",
+    "evidence_ids": [
+     "paper:2608.04930",
+     "paper:2605.09718"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores combining normalizing flows, density estimation, and uncertainty quantification to improve Bayesian inference, causal discovery, and stochastic multiscale modeling. The bundle indicates an axis D score of 2.0 and an axis F score of 3.0. Repository and package items like repo:d3-ai/orion and pkg:lf2i provide relevant structural foundations.",
+   "evidence_ids": [
+    "dvf:15",
+    "paper:2608.04930",
+    "paper:2605.09718",
+    "repo:d3-ai/orion",
+    "pkg:lf2i"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified based on the available bundle metadata, though developers and researchers utilizing repositories such as repo:d3-ai/orion, repo:signals-dev/orion, and pkg:lf2i are implied.",
+   "evidence_ids": [
+    "dvf:15",
+    "repo:d3-ai/orion",
+    "repo:signals-dev/orion",
+    "pkg:lf2i"
+   ]
+  },
+  "jtbd": {
+   "text": "Perform Bayesian inference, causal discovery, and stochastic multiscale modeling requiring robust estimation of distributions and associated confidences.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2605.09718"
+   ]
+  },
+  "value_prop": {
+   "text": "Addresses limitations where existing approaches fail to capture complex dependencies between variables, cannot easily scale to complex probability spaces, or lack principled ways to quantify epistemic and parametric uncertainty.",
+   "evidence_ids": [
+    "paper:2608.04930",
+    "paper:2605.09718"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is designated due to missing evidence on axis V (viability). We assume that commercial customers will pay for a software solution combining normalizing flows with uncertainty quantification.",
+   "evidence_ids": [
+    "dvf:15"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "Conduct customer interviews and price acceptance tests with 10 prospective data science teams to test the commercial viability and willingness to pay for the proposed uncertainty quantification framework, motivated by the missing viability score on axis V.",
+   "evidence_ids": [
+    "dvf:15"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Achieve a proposed threshold of 40 percent positive willingness-to-pay responses during customer interviews, supported by the commercial viability goals of axis V.",
+   "evidence_ids": [
+    "dvf:15"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Fewer than a proposed threshold of 10 percent of interviewed prospective users express any willingness to pay or budget allocation for the tool, as evaluated against axis V requirements.",
+    "evidence_ids": [
+     "dvf:15"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:d3-ai/orion",
+     "use": "Used as an unsupervised time series anomaly detection library to support pattern recognition and baseline evaluation.",
+     "evidence_ids": [
+      "repo:d3-ai/orion"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:lf2i",
+     "use": "Used for likelihood-free inference tasks to assist with probabilistic modeling workflows.",
+     "evidence_ids": [
+      "pkg:lf2i"
+     ],
+     "version": "0.3.1"
+    },
+    {
+     "id": "repo:apple/ml-tarflow",
+     "use": "Used to explore normalizing flow architectures and baseline implementations.",
+     "evidence_ids": [
+      "repo:apple/ml-tarflow"
+     ],
+     "version": null
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build a unified pipeline integrating normalizing flow density estimators with automated Bayesian variational inference modules, addressing gaps not covered by repo:d3-ai/orion or pkg:lf2i.",
+     "evidence_ids": [
+      "paper:2608.04930",
+      "pkg:lf2i",
+      "repo:d3-ai/orion"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

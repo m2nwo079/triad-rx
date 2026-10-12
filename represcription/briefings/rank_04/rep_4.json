@@ -1,0 +1,210 @@
+{
+ "rank": 4,
+ "rep": 4,
+ "seed": 20261011,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "components": [
+   {
+    "term_id": "M:rag",
+    "role": "Serves as the overarching framework that incorporates document retrieval components to fetch relevant evidence for generation.",
+    "evidence_ids": [
+     "paper:2609.28048"
+    ]
+   },
+   {
+    "term_id": "T:information retrieval",
+    "role": "Defines the broader retrieval methodology and task space that surfaces relevant documents and content for queries.",
+    "evidence_ids": [
+     "paper:2609.28048"
+    ]
+   },
+   {
+    "term_id": "T:text retrieval",
+    "role": "Provides the textual search and matching mechanism that connects queries to candidate textual documents within the pipeline.",
+    "evidence_ids": [
+     "paper:2609.28048"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "The target task is retrieving documents that are relevant to a query using text retrieval and information retrieval components within a retrieval-augmented generation pipeline.",
+   "evidence_ids": [
+    "paper:2609.28048"
+   ]
+  },
+  "limitation": {
+   "text": "Dense retrievers and retrieval-augmented generation pipelines often match queries to documents well on topic but poorly on time, leading them to surface content that is on-topic yet temporally incorrect.",
+   "evidence_ids": [
+    "paper:2609.28048"
+   ]
+  },
+  "combination": {
+   "text": "The combination integrates a temporal branch into semantic text retrieval and information retrieval pipelines to supervise and score text documents, which are then used in retrieval-augmented generation. Specifically, the system resolves temporal expressions and fuses the temporal score with the semantic text retrieval score during inference.",
+   "evidence_ids": [
+    "paper:2609.28048"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "components": [
+    {
+     "term_id": "M:rag",
+     "role": "Serves as the overarching framework that incorporates document retrieval components to fetch relevant evidence for generation.",
+     "evidence_ids": [
+      "paper:2609.28048"
+     ]
+    },
+    {
+     "term_id": "T:information retrieval",
+     "role": "Defines the broader retrieval methodology and task space that surfaces relevant documents and content for queries.",
+     "evidence_ids": [
+      "paper:2609.28048"
+     ]
+    },
+    {
+     "term_id": "T:text retrieval",
+     "role": "Provides the textual search and matching mechanism that connects queries to candidate textual documents within the pipeline.",
+     "evidence_ids": [
+      "paper:2609.28048"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "The target task is retrieving documents that are relevant to a query using text retrieval and information retrieval components within a retrieval-augmented generation pipeline.",
+    "evidence_ids": [
+     "paper:2609.28048"
+    ]
+   },
+   "limitation": {
+    "text": "Dense retrievers and retrieval-augmented generation pipelines often match queries to documents well on topic but poorly on time, leading them to surface content that is on-topic yet temporally incorrect.",
+    "evidence_ids": [
+     "paper:2609.28048"
+    ]
+   },
+   "combination": {
+    "text": "The combination integrates a temporal branch into semantic text retrieval and information retrieval pipelines to supervise and score text documents, which are then used in retrieval-augmented generation. Specifically, the system resolves temporal expressions and fuses the temporal score with the semantic text retrieval score during inference.",
+    "evidence_ids": [
+     "paper:2609.28048"
+    ]
+   }
+  },
+  "summary": {
+   "text": "The proposed opportunity combines retrieval-augmented generation (RAG) with information retrieval and text retrieval components to address the limitation where standard dense retrievers match queries well on topic but poorly on time. By integrating a modular temporal branch into semantic text retrieval and information retrieval pipelines, the system resolves temporal expressions and fuses temporal scores with semantic text retrieval scores during inference. This integration improves retrieval relevance for information needs that depend on when an event occurred.",
+   "evidence_ids": [
+    "paper:2609.28048"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified based on the available bundle evidence, as there are no patent assignee categories, repositories, or packages that directly define a commercial user profile.",
+   "evidence_ids": [
+    "repo:hkuds/lightrag",
+    "repo:deep-polyu/awesome-graphrag",
+    "repo:alipay/agentuniverse",
+    "repo:medicinetoken/medical-graph-rag",
+    "repo:teddy-xionggz/medrag",
+    "pkg:lightrag-hku",
+    "pkg:agentuniverse",
+    "pkg:rankify",
+    "pkg:scrydb",
+    "pkg:lightrag-dembrane"
+   ]
+  },
+  "jtbd": {
+   "text": "When users execute queries in clinical, journalistic, or legal search within retrieval-augmented generation pipelines, they want to surface documents that match both semantic topics and precise temporal constraints so they can avoid temporally incorrect evidence.",
+   "evidence_ids": [
+    "paper:2609.28048"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrating a temporal branch into semantic text retrieval and information retrieval pipelines allows retrieval-augmented generation systems to resolve anchored temporal expressions and moment-match them to a Gaussian distribution. This approach fuses temporal scores with semantic scores to improve retrieval accuracy and overcome the limitation of matching on topic alone.",
+   "evidence_ids": [
+    "paper:2609.28048"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence in the bundle. We assume that enterprise users will pay for a temporally-aware retrieval-augmented generation pipeline that fuses temporal scores with semantic text retrieval.",
+   "evidence_ids": [
+    "dvf:4",
+    "paper:2609.28048"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "The MVP is customer interviews and price acceptance tests conducted with legal, clinical, or journalistic search professionals to validate viability and willingness to pay for temporally-enhanced text retrieval.",
+   "evidence_ids": [
+    "dvf:4",
+    "paper:2609.28048"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "The proposed success metric is a conversion rate of at least a proposed threshold: 25 percent of interviewed enterprise stakeholders expressing positive willingness to pay or committing to a paid pilot for the temporally-enhanced retrieval pipeline.",
+   "evidence_ids": [
+    "dvf:4",
+    "paper:2609.28048"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "The opportunity is killed if fewer than a proposed threshold: 10 percent of interviewed prospective users confirm a high urgency need for temporal filtering in their text retrieval workflows.",
+    "evidence_ids": [
+     "dvf:4",
+     "paper:2609.28048"
+    ]
+   },
+   {
+    "text": "The opportunity is killed if price acceptance testing shows that maximum willingness to pay remains below a proposed threshold: 500 dollars per month for enterprise deployment.",
+    "evidence_ids": [
+     "dvf:4",
+     "paper:2609.28048"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:hkuds/lightrag",
+     "use": "Will be used as the core retrieval-augmented generation pipeline foundation for simple and fast retrieval operations.",
+     "evidence_ids": [
+      "repo:hkuds/lightrag"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:scrydb",
+     "use": "Will be used to support lexical, semantic, and hybrid search operations within SQLite for text retrieval.",
+     "evidence_ids": [
+      "paper:2608.24060",
+      "pkg:scrydb"
+     ],
+     "version": "0.2.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "A modular temporal scoring branch that resolves anchored temporal expressions to intervals and applies moment-matched Gaussian-KL distributional embedding supervision.",
+     "evidence_ids": [
+      "paper:2609.28048"
+     ]
+    },
+    {
+     "text": "An inference-time score fusion module that combines semantic text retrieval scores with temporal similarity scores.",
+     "evidence_ids": [
+      "paper:2609.28048"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

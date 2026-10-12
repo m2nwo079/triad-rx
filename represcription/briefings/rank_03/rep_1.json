@@ -1,0 +1,232 @@
+{
+ "rank": 3,
+ "rep": 1,
+ "seed": 20261008,
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "v3",
+ "reliability_flag": null,
+ "concept_frame": {
+  "status": "complete",
+  "insufficient_reason": "none",
+  "insufficient_explanation": "",
+  "insufficient_evidence_ids": [],
+  "components": [
+   {
+    "term_id": "M:normalizing flows",
+    "role": "Parametrizes flexible conditional density distributions and transition densities to capture complex multi-modal or hierarchical structures.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2606.01346"
+    ]
+   },
+   {
+    "term_id": "T:bayesian inference",
+    "role": "Provides calibrated uncertainty estimation and posterior parameter distributions over statistical and regression models.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2605.29373"
+    ]
+   },
+   {
+    "term_id": "T:regression",
+    "role": "Serves as the underlying predictive modeling task whose complex conditional label distributions and multi-modalities are learned by the system.",
+    "evidence_ids": [
+     "paper:2606.01346"
+    ]
+   }
+  ],
+  "target_task": {
+   "text": "Bayesian inference and probabilistic regression for complex or multi-modal conditional distributions.",
+   "evidence_ids": [
+    "paper:2606.01346",
+    "paper:2609.24422"
+   ]
+  },
+  "limitation": {
+   "text": "Standard Bayesian inference and regression techniques often fail or struggle under multi-modal label distributions, expensive sampling bottlenecks, and complex non-Gaussian posteriors.",
+   "evidence_ids": [
+    "paper:2605.29373",
+    "paper:2606.01346"
+   ]
+  },
+  "combination": {
+   "text": "Normalizing flows are integrated into Bayesian regression and inference frameworks to parameterize complex conditional or posterior densities, enabling efficient likelihood-based estimation and amortized posterior sampling.",
+   "evidence_ids": [
+    "paper:2609.24422",
+    "paper:2606.01346"
+   ]
+  }
+ },
+ "frame_valid": true,
+ "briefing": {
+  "concept_frame": {
+   "status": "complete",
+   "insufficient_reason": "none",
+   "insufficient_explanation": "",
+   "insufficient_evidence_ids": [],
+   "components": [
+    {
+     "term_id": "M:normalizing flows",
+     "role": "Parametrizes flexible conditional density distributions and transition densities to capture complex multi-modal or hierarchical structures.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2606.01346"
+     ]
+    },
+    {
+     "term_id": "T:bayesian inference",
+     "role": "Provides calibrated uncertainty estimation and posterior parameter distributions over statistical and regression models.",
+     "evidence_ids": [
+      "paper:2609.24422",
+      "paper:2605.29373"
+     ]
+    },
+    {
+     "term_id": "T:regression",
+     "role": "Serves as the underlying predictive modeling task whose complex conditional label distributions and multi-modalities are learned by the system.",
+     "evidence_ids": [
+      "paper:2606.01346"
+     ]
+    }
+   ],
+   "target_task": {
+    "text": "Bayesian inference and probabilistic regression for complex or multi-modal conditional distributions.",
+    "evidence_ids": [
+     "paper:2606.01346",
+     "paper:2609.24422"
+    ]
+   },
+   "limitation": {
+    "text": "Standard Bayesian inference and regression techniques often fail or struggle under multi-modal label distributions, expensive sampling bottlenecks, and complex non-Gaussian posteriors.",
+    "evidence_ids": [
+     "paper:2605.29373",
+     "paper:2606.01346"
+    ]
+   },
+   "combination": {
+    "text": "Normalizing flows are integrated into Bayesian regression and inference frameworks to parameterize complex conditional or posterior densities, enabling efficient likelihood-based estimation and amortized posterior sampling.",
+    "evidence_ids": [
+     "paper:2609.24422",
+     "paper:2606.01346"
+    ]
+   }
+  },
+  "summary": {
+   "text": "This opportunity briefing explores the integration of normalizing flows, Bayesian inference, and regression for probabilistic modeling of complex multi-modal distributions. Normalizing flows parameterize flexible conditional densities and posterior distributions, while Bayesian inference and regression handle uncertainty estimation and predictive tasks. According to the DVF evaluation, the desirability score is 3.0 and feasibility score is 4.0, while viability is missing.",
+   "evidence_ids": [
+    "dvf:3",
+    "paper:2606.01346",
+    "paper:2609.24422"
+   ]
+  },
+  "target_user": {
+   "text": "The target user is unverified as there are no direct patent assignees, but open-source repositories and packages such as repo:atong01/conditional-flow-matching, pkg:torchcfm, pkg:lightgbmlss, and pkg:xgboostlss indicate a user base of machine learning engineers, statistical modelers, and data scientists.",
+   "evidence_ids": [
+    "pkg:lightgbmlss",
+    "pkg:torchcfm",
+    "pkg:xgboostlss",
+    "repo:atong01/conditional-flow-matching"
+   ]
+  },
+  "jtbd": {
+   "text": "When data scientists and quantitative researchers perform regression and uncertainty quantification tasks under complex or multi-modal conditional distributions, they want to obtain calibrated posterior distributions and accurate density estimates without incurring prohibitive MCMC sampling bottlenecks, so that they can make reliable and robust predictions.",
+   "evidence_ids": [
+    "paper:2605.29373",
+    "paper:2606.01346",
+    "paper:2609.24422"
+   ]
+  },
+  "value_prop": {
+   "text": "Integrating normalizing flows with Bayesian regression and inference frameworks enables flexible modeling of multi-modal label distributions and amortized posterior sampling. This approach overcomes the limitations of standard regression and expensive MCMC sampling, offering efficient and statistically rigorous uncertainty estimation.",
+   "evidence_ids": [
+    "paper:2605.29373",
+    "paper:2606.01346",
+    "paper:2609.24422"
+   ]
+  },
+  "riskiest_assumption": {
+   "text": "The riskiest assumption is axis V (viability), which was designated due to missing evidence in the bundle. We assume that enterprise customers and quantitative data teams are willing to pay for a specialized probabilistic regression library that combines normalizing flows and Bayesian inference.",
+   "evidence_ids": [
+    "dvf:3"
+   ],
+   "axis": "V",
+   "designated_by_missing_evidence": true
+  },
+  "mvp": {
+   "text": "The MVP type is customer interviews and price acceptance test. We will conduct structured customer interviews and present pricing tiers to prospective users to test the viability and price acceptance of a combined flow-based Bayesian regression toolkit, using a proposed threshold of 30 percent conversion intent from interviewed prospects as validation.",
+   "evidence_ids": [
+    "dvf:3"
+   ],
+   "type": "customer interviews and price acceptance test"
+  },
+  "success_metric": {
+   "text": "Success will be measured by a proposed threshold of at least 40 percent of interviewed enterprise data science leads expressing strong purchase intent or willingness to adopt the commercialized framework during price acceptance testing, as motivated by the missing viability axis.",
+   "evidence_ids": [
+    "dvf:3"
+   ]
+  },
+  "kill_criteria": [
+   {
+    "text": "Kill the project if fewer than a proposed threshold of 15 percent of interviewed prospective users confirm a willingness to pay for or adopt the combined framework during price acceptance tests, as motivated by the missing viability axis.",
+    "evidence_ids": [
+     "dvf:3"
+    ]
+   }
+  ],
+  "building_blocks": {
+   "open_source": [
+    {
+     "id": "repo:atong01/conditional-flow-matching",
+     "use": "Used to provide conditional flow matching capabilities for learning complex conditional distributions.",
+     "evidence_ids": [
+      "repo:atong01/conditional-flow-matching"
+     ],
+     "version": null
+    },
+    {
+     "id": "pkg:torchcfm",
+     "use": "Used as the underlying conditional flow matching library for model training and simulation.",
+     "evidence_ids": [
+      "pkg:torchcfm"
+     ],
+     "version": "1.0.7"
+    },
+    {
+     "id": "pkg:lightgbmlss",
+     "use": "Used to extend gradient boosting to probabilistic modeling for comparison and baseline regression tasks.",
+     "evidence_ids": [
+      "pkg:lightgbmlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:xgboostlss",
+     "use": "Used to provide probabilistic tree-based modeling features for evaluating distributional regression performance.",
+     "evidence_ids": [
+      "pkg:xgboostlss"
+     ],
+     "version": "0.6.1"
+    },
+    {
+     "id": "pkg:margarine",
+     "use": "Used for computing evidence and managing samples in Bayesian inference workflows.",
+     "evidence_ids": [
+      "pkg:margarine"
+     ],
+     "version": "2.2.0"
+    }
+   ],
+   "to_build": [
+    {
+     "text": "Build a unified pipeline wrapper that connects normalizing flow density estimators directly with Bayesian regression backends to automate posterior sampling and uncertainty quantification, as motivated by the integration needs in paper:2606.01346 and paper:2609.24422.",
+     "evidence_ids": [
+      "dvf:3",
+      "paper:2606.01346",
+      "paper:2609.24422"
+     ]
+    }
+   ]
+  }
+ },
+ "briefing_valid": true
+}

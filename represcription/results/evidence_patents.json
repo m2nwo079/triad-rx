@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "step": "evidence_patents",
+    "created": "2026-10-11",
+    "git_commit": "1549bed972c367a5501bb702a2eb6815802fe19c",
+    "data_cutoff": "2026-09-24T17:59:54+00:00",
+    "window": [
+      "2021-09-24T17:59:54+00:00",
+      "2026-09-24T17:59:54+00:00"
+    ],
+    "window_rule": "build_window",
+    "cpc_subclass": "G06N",
+    "release_date": "2026-04-10",
+    "inventory_sha256": "9ad5c494135448641c526386d7792223519feb881ba2c946023a58a51145a1f2",
+    "vocab_sha256": "b90fcd78264a33e2d3dc30be26b579fd7864ab967211c8db1bcba15f6325deb0",
+    "final_terms": 3132,
+    "ambiguous_surfaces": {
+      "ci": 0,
+      "cs": 0
+    },
+    "patents_parquet_sha256": "ff8292a71f4f2c56ed710a77cea99d10c69e2d2cd0ddd1aefea12407a3536169",
+    "assignees_parquet_sha256": "5cd70007ef33e8bb318bf16565abe17b3d87fe4317eb545c2841db5a2de9d4df",
+    "matching": {
+      "vocabulary": "vocab/timepoints/applied_v3_final.json",
+      "vocabulary_sha256": "1bea22b3569578f0c7983d787cef7e401b210ecec4ceec79b0b88065f8ee9e5b",
+      "rule": "third-study refined matching (triadrx.text.refined_spans)",
+      "terms": 3132
+    }
+  },
+  "stats": {
+    "steps": {
+      "grant": {
+        "rows": 9454161,
+        "utility": 8531961,
+        "not_withdrawn": 8512858,
+        "g06n": 81810,
+        "in_window": 56005,
+        "max_date_all_utility": "2025-12-30",
+        "with_abstract": 56005,
+        "matched": 20736
+      },
+      "pgpub": {
+        "rows": 8402596,
+        "utility": 7634909,
+        "not_withdrawn": 7634909,
+        "g06n": 113264,
+        "in_window": 60342,
+        "max_date_all_utility": "2025-12-25",
+        "with_abstract": 60342,
+        "matched": 23931
+      }
+    },
+    "documents": 44667,
+    "inventions": 34646,
+    "inventions_with_grant_and_pgpub": 9952,
+    "grants_without_crosswalk": 0,
+    "pgpub_applications": 23862,
+    "pgpub_applications_in_crosswalk": 23862,
+    "grants_with_several_applications": 0,
+    "documents_without_assignee": 16848,
+    "matched_terms": 1444,
+    "matched_terms_by_type": {
+      "M": 293,
+      "T": 1151
+    }
+  }
+}

@@ -21,3 +21,10 @@ CLAUDE.local.md
 kaggle/step4/kernel-metadata.json
 kaggle/relation/kernel-metadata.json
 represcription/data/
+represcription/scripts
+represcription/prompts
+represcription/templates
+represcription/vocab
+represcription/.env
+represcription/results/arxiv_filter_*.json
+represcription/results/patent_files.json
