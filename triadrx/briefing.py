@@ -75,7 +75,22 @@ def frame_schema(bundle: dict) -> dict:
     }
 
 
-def briefing_schema(bundle: dict) -> dict:
+# Business fields that carry a basis when the prompt asks for it (design 21, briefing prompt v4)
+BUSINESS_FIELDS = ("target_user", "jtbd", "value_prop")
+BASIS_VALUES = ["evidence", "hypothesis"]
+
+
+def _business(allowed: list[str]) -> dict:
+    """A business field with its basis: evidence, or a hypothesis to test when the bundle has no evidence."""
+    field = _text(allowed)
+    field["properties"] = {"basis": {"type": "STRING", "enum": BASIS_VALUES}, **field["properties"]}
+    field["required"] = ["basis", *field["required"]]
+    field["propertyOrdering"] = ["basis", *field["propertyOrdering"]]
+    return field
+
+
+def briefing_schema(bundle: dict, business_basis: bool = False) -> dict:
+    """Output schema of the briefing stage; business_basis adds the basis of the business fields (prompt v4)."""
     allowed = bundle_ids(bundle, include_dvf=True)
     blocks = sorted([r["id"] for r in bundle["repositories"]] + [k["id"] for k in bundle["packages"]])
     open_item = {
@@ -90,9 +105,9 @@ def briefing_schema(bundle: dict) -> dict:
     }
     properties = {
         "summary": _text(allowed),
-        "target_user": _text(allowed),
-        "jtbd": _text(allowed),
-        "value_prop": _text(allowed),
+        "target_user": _business(allowed) if business_basis else _text(allowed),
+        "jtbd": _business(allowed) if business_basis else _text(allowed),
+        "value_prop": _business(allowed) if business_basis else _text(allowed),
         "riskiest_assumption": _text(allowed),
         "mvp": _text(allowed),
         "success_metric": _text(allowed),

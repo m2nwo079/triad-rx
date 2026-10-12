@@ -190,7 +190,7 @@ def main() -> None:
                 body2 = {
                     "systemInstruction": {"parts": [{"text": instruction}]},
                     "contents": [{"role": "user", "parts": [{"text": user}]}],
-                    "generationConfig": {**config, "responseSchema": br.briefing_schema(bundle)},
+                    "generationConfig": {**config, "responseSchema": br.briefing_schema(bundle, gen.get("business_basis", False))},
                 }
                 rec2 = run_stage(RAW_DIR / f"rank_{rank:02d}_rep_{rep}_briefing_{gen['prompt_version']}.json", model, body2, key, gen["pause_seconds"])
                 run["briefing_http"] = rec2["http_status"]

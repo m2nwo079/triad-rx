@@ -3,7 +3,7 @@
   {
    "file": "config",
    "path": "design_version",
-   "text": "v0.6.1"
+   "text": "v0.7.0"
   },
   {
    "file": "applied_main",
@@ -2695,7 +2695,7 @@
   {
    "file": "config",
    "path": "design_version",
-   "text": "v0.6.1"
+   "text": "v0.7.0"
   },
   {
    "file": "applied_main",

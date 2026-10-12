@@ -40,6 +40,11 @@ def wilson(k: int, n: int) -> tuple[float, float]:
     return centre - margin, centre + margin
 
 
+def is_hypothesis(field: dict) -> bool:
+    """True for a business field whose basis is a hypothesis; outputs without a basis are evidential as before."""
+    return field.get("basis") == "hypothesis"
+
+
 def evidential_items(output: dict) -> list[dict]:
     """(field, text, evidence_ids) of the evidential fields of one generated output."""
     items = []
@@ -58,6 +63,9 @@ def evidential_items(output: dict) -> list[dict]:
     briefing = output.get("briefing") if output.get("briefing_valid") else None
     if briefing:
         for name in ("summary", "target_user", "jtbd", "value_prop"):
+            # A business field marked as a hypothesis (briefing prompt v4) is prescriptive, not evidential
+            if is_hypothesis(briefing[name]):
+                continue
             items.append({"field": name, "text": briefing[name]["text"], "evidence_ids": briefing[name]["evidence_ids"]})
         for item in briefing["building_blocks"]["open_source"]:
             items.append({"field": f"building_blocks.open_source[{item['id']}].use", "text": item["use"],
@@ -70,6 +78,9 @@ def prescriptive_items(output: dict) -> list[dict]:
     if not briefing:
         return []
     items = []
+    for name in ("target_user", "jtbd", "value_prop"):
+        if is_hypothesis(briefing[name]):
+            items.append({"field": f"{name}.hypothesis", "text": briefing[name]["text"], "evidence_ids": briefing[name]["evidence_ids"]})
     for name in ("riskiest_assumption", "mvp", "success_metric"):
         items.append({"field": name, "text": briefing[name]["text"], "evidence_ids": briefing[name]["evidence_ids"]})
     for i, item in enumerate(briefing["kill_criteria"]):

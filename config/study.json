@@ -1,5 +1,5 @@
 {
-  "design_version": "v0.6.1",
+  "design_version": "v0.7.0",
   "design_section": "10.2",
   "arxiv_categories": [
     "cs.LG",
@@ -725,6 +725,18 @@
       "calibration": {"method": "platt", "fit_on": "out-of-fold engine scores of the training timepoints", "metrics": ["brier", "reliability_curve"], "role": "secondary"},
       "power_result": {"file": "results/engine_power.json", "sha256": "d4838302fa0ba635e85e2c1959929a073073fe880f0bb4732af8d03b6cc13181"}
     }
+  },
+  "faithfulness": {
+    "prereg_file": "preregistration_faithfulness.md",
+    "run_dir": "faithfulness",
+    "base_run": "represcription",
+    "generation": {"prompt_version": "v4", "business_basis": true,
+                   "unchanged": "model, temperature, repetitions, seed_base and pause of the base run"},
+    "q1": {"seed": 20261201, "n_sentences": 100, "population": "evidential_fields", "judging": "cited_evidence_only"},
+    "decision": {"statistic": "Q1 Wilson 95% lower bound", "threshold": "Q1 point estimate of the base run",
+                 "rule": "improved only if the lower bound exceeds the threshold"},
+    "business_fields": ["target_user", "jtbd", "value_prop"],
+    "evidential_fields_without_business": ["concept_frame", "summary", "building_blocks"]
   },
   "represcription": {
     "prereg_file": "preregistration_represcription.md",
