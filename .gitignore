@@ -37,3 +37,7 @@ faithfulness/.env
 faithfulness/results/briefing_bundles.json
 faithfulness/results/arxiv_filter_*.json
 !figures/data/
+
+# Local only (not published)
+CLAUDE.md
+external/tod/
