@@ -1,0 +1,102 @@
+{
+ "meta": {
+  "step": "figure_hypergraph_example",
+  "rank": 4,
+  "score": 0.3790458956058157,
+  "build_sha256": "3c657f0968fba1efa1a1ffa2b73e5f5da6f8290efdf314fd8dc1a7fd9af15147"
+ },
+ "triad": [
+  "M:rag",
+  "T:information retrieval",
+  "T:text retrieval"
+ ],
+ "pairs": {
+  "M:rag|T:information retrieval": {
+   "papers": 236,
+   "examples": [
+    {
+     "paper_id": "2203.16714",
+     "other_terms": [
+      "M:bart",
+      "M:seq2seq",
+      "M:transformer",
+      "T:question answering",
+      "T:table retrieval"
+     ]
+    },
+    {
+     "paper_id": "2304.14732",
+     "other_terms": [
+      "T:fact checking",
+      "T:large language model",
+      "T:slot filling"
+     ]
+    },
+    {
+     "paper_id": "2310.06225",
+     "other_terms": [
+      "M:gpt",
+      "M:gpt 4",
+      "T:natural language understanding"
+     ]
+    }
+   ]
+  },
+  "M:rag|T:text retrieval": {
+   "papers": 23,
+   "examples": [
+    {
+     "paper_id": "2404.07221",
+     "other_terms": [
+      "T:chunking",
+      "T:question answering",
+      "T:re ranking",
+      "T:retrieval"
+     ]
+    },
+    {
+     "paper_id": "2409.07691",
+     "other_terms": [
+      "M:attention",
+      "T:question answering"
+     ]
+    },
+    {
+     "paper_id": "2410.21943",
+     "other_terms": [
+      "T:image retrieval",
+      "T:retrieval"
+     ]
+    }
+   ]
+  },
+  "T:information retrieval|T:text retrieval": {
+   "papers": 19,
+   "examples": [
+    {
+     "paper_id": "2110.01529",
+     "other_terms": [
+      "T:retrieval",
+      "T:sentence similarity"
+     ]
+    },
+    {
+     "paper_id": "2301.13081",
+     "other_terms": [
+      "M:align"
+     ]
+    },
+    {
+     "paper_id": "2303.16766",
+     "other_terms": [
+      "T:classification",
+      "T:clustering",
+      "T:distributed computing"
+     ]
+    }
+   ]
+  }
+ },
+ "papers_with_all_three": 0,
+ "papers_in_window": 357966
+}
